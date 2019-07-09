@@ -1,0 +1,26 @@
+{
+  "name": "betomic",
+  "version": "0.1.0-beta.0",
+  "description": "A React-based UI toolkit",
+  "author": "Bedu Engineering <engineering@bedu.org>",
+  "scripts": {
+    "start": "npm run build -- -w",
+    "build": "tsc -p .",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExponentialEducation/betomic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ExponentialEducation/betomic/issues"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.23",
+    "react": "^16.8.6",
+    "typescript": "^3.5.3"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0"
+  }
+}
