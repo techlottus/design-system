@@ -5,6 +5,7 @@
   "author": "Bedu Engineering <engineering@bedu.org>",
   "scripts": {
     "start": "npm run build -- -w",
+    "test": "jest",
     "build": "tsc -p .",
     "prepare": "npm run build"
   },
@@ -16,8 +17,16 @@
     "url": "https://github.com/ExponentialEducation/betomic/issues"
   },
   "devDependencies": {
+    "@types/enzyme": "^3.10.1",
+    "@types/jest": "^24.0.15",
     "@types/react": "^16.8.23",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.3.5",
+    "jest": "^24.8.0",
     "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "ts-jest": "^24.0.2",
     "typescript": "^3.5.3"
   },
   "peerDependencies": {
