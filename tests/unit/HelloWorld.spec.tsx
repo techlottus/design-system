@@ -1,10 +1,10 @@
-import * as React from "react";
+import * as React from 'react';
 import { shallow } from 'enzyme';
-import {HelloWorld} from '../packages';
+import HelloWorld from '../../packages/HelloWorld/index';
 
-test('Create HelloWorld component', () => {
-  const component = shallow(
-    <HelloWorld message="Hello everybody!"  />,
-  );
-  expect(component).toMatchSnapshot();
+describe('HelloWorld.tsx', () => {
+  it('should match the snapshot', () => {
+    const vm = shallow(<HelloWorld message="Hello everybody!" />);
+    expect(vm).toMatchSnapshot();
+  });
 });

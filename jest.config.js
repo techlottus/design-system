@@ -7,13 +7,13 @@ module.exports = {
     }
   },
   "roots": [
-    "<rootDir>/tests"
+    "<rootDir>/tests/unit"
   ],
   "transform": {
     "^.+\\.tsx?$": "ts-jest"
   },
   "snapshotSerializers": ["enzyme-to-json/serializer"],
-  "setupFilesAfterEnv": ["<rootDir>/src/setupEnzyme.ts"],
+  "setupFilesAfterEnv": ["<rootDir>/tests/setupEnzyme.ts"],
   "transformIgnorePatterns": [
     '/node_modules/',
   ],
