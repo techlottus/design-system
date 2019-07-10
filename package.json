@@ -8,7 +8,9 @@
     "test": "jest",
     "build": "tsc -p .",
     "lint": "tslint -p .",
-    "prepare": "npm run lint && npm run test && npm run build"
+    "prepare": "npm run lint && npm run test && npm run build",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build"
   },
   "repository": {
     "type": "git",
