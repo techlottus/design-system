@@ -2,7 +2,7 @@ import * as React from 'react';
 
 // HelloWorld Props
 interface HelloWorldProps {
-  message: String
+  message: string;
 }
 
 const HelloWorld: React.SFC<HelloWorldProps> = ({ message }) => <h1>{message}</h1>;
