@@ -3,6 +3,10 @@
   "version": "0.1.0-beta.0",
   "description": "A React-based UI toolkit",
   "author": "Bedu Engineering <engineering@bedu.org>",
+  "style":"lib/main.min.css",
+  "files":[
+    "lib"
+  ],
   "scripts": {
     "tailwind:css": "postcss packages/css/tailwind.css -o lib/main.min.css",
     "start": "npm run build -- -w",
