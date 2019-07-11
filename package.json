@@ -11,9 +11,8 @@
     "tailwind:css": "postcss packages/css/tailwind.css -o lib/main.min.css",
     "start": "npm run build -- -w",
     "test": "jest",
-    "build": "tsc -p .",
     "lint": "tslint -p .",
-    "prepare": "npm run lint && npm run test && npm run build && npm run tailwind:css",
+    "build": "npm run lint && npm run test && npm run build && npm run tailwind:css",
     "docz:dev": "docz dev",
     "docz:build": "docz build"
   },
