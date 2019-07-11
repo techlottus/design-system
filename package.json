@@ -3,10 +3,19 @@
   "version": "0.1.0-beta.0",
   "description": "A React-based UI toolkit",
   "author": "Bedu Engineering <engineering@bedu.org>",
+  "style":"lib/main.min.css",
+  "files":[
+    "lib"
+  ],
   "scripts": {
+    "tailwind:css": "postcss packages/css/tailwind.css -o lib/main.min.css",
     "start": "npm run build -- -w",
+    "test": "jest",
     "build": "tsc -p .",
-    "prepare": "npm run build"
+    "lint": "tslint -p .",
+    "prepare": "npm run lint && npm run test && npm run build && npm run tailwind:css",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build"
   },
   "repository": {
     "type": "git",
@@ -16,8 +25,22 @@
     "url": "https://github.com/ExponentialEducation/betomic/issues"
   },
   "devDependencies": {
+    "@types/enzyme": "^3.10.1",
+    "@types/jest": "^24.0.15",
     "@types/react": "^16.8.23",
+    "cssnano": "^4.1.10",
+    "docz": "^1.2.0",
+    "docz-theme-default": "^1.2.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.3.5",
+    "jest": "^24.8.0",
+    "postcss-cli": "^6.1.3",
     "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "tailwindcss": "^1.0.4",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.18.0",
     "typescript": "^3.5.3"
   },
   "peerDependencies": {
