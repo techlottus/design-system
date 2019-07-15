@@ -1,7 +1,7 @@
 module.exports = {
   theme: {
-    colors:{
-      surface:{
+    colors: {
+      surface: {
         "50":"#F0F1F2",
         "100":"#E2E3E5",
         "200":"#C5C7CB",
@@ -14,7 +14,7 @@ module.exports = {
         "900":"#3D3E40",
         "950":"#363738"
       },
-      primary:{
+      primary: {
         "100":"#FAA8AE",
         "200":"#F77D86",
         "300":"#F5525E",
@@ -25,7 +25,7 @@ module.exports = {
         "800":"#A42A33",
         "900":"#7E2C32",
       },
-      secondary:{
+      secondary: {
         "100":"#A8C1FA",
         "200":"#7DA2F7",
         "300":"#5283F5",
@@ -36,7 +36,7 @@ module.exports = {
         "800":"#2A4FA4",
         "900":"#2C457E",
       },
-      techology:{
+      technology: {
         "100":"#B7A6FA",
         "200":"#937AF8",
         "300":"#6F4EF6",
@@ -47,7 +47,7 @@ module.exports = {
         "800":"#4027A5",
         "900":"#3B2A7E",
       },
-      english:{
+      english: {
         "100":"#B1E7E2",
         "200":"#8BDBD3",
         "300":"#64CFC5",
@@ -58,7 +58,7 @@ module.exports = {
         "800":"#388880",
         "900":"#356B66",
       },
-      business:{
+      business: {
         "100":"#F7F0DC",
         "200":"#EEDEB2",
         "300":"#E8D398",
@@ -69,7 +69,7 @@ module.exports = {
         "800":"#9B8B5F",
         "900":"#776D4F",
       },
-      prepa:{
+      prepa: {
         "100":"#D0E1E7",
         "200":"#C0D7DF",
         "300":"#A2C3CF",
