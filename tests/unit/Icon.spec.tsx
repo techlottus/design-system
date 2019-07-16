@@ -10,6 +10,5 @@ describe('Icon.tsx', () => {
     expect(vm.find('i').hasClass('fab fa-amazon text-warning')).toBe(false);
     expect(vm.props().children.props.className).toEqual('fab fa-amazon text-neutral');
     expect(vm.props().children.props.style).toEqual({fontSize: '14px'});
-    console.log('props: ', vm.props());
   });
 });
