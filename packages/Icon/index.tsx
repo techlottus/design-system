@@ -1,12 +1,12 @@
 import * as React from 'react';
 
 // Icon Props
-interface BetomiconProps {
+interface IconProps {
   size?: string;
   className?: string;
 }
 
-const Icon: React.SFC<BetomiconProps> = ({ size, className }: BetomiconProps) => {
+const Icon: React.SFC<IconProps> = ({ size, className }: IconProps) => {
   return(
     <div>
       <i style={{ fontSize: size }} className={className}></i>
