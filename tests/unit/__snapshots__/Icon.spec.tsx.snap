@@ -3,10 +3,10 @@
 exports[`Icon.tsx should match the snapshot 1`] = `
 <div>
   <i
-    className="fab fa-amazon text-neutral"
+    className=" text-neutral fab fa-amazon"
     style={
       Object {
-        "fontSize": "14px",
+        "fontSize": "12px",
       }
     }
   />
