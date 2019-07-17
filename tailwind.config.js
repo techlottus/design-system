@@ -79,7 +79,13 @@ module.exports = {
         "700":"#799AA6",
         "800":"#667F88",
         "900":"#54656B",
-      }
+      },
+      neutral: '#312F2F',
+      active: '#75C945',
+      warning: '#FFBD2F',
+      alert: '#FF2F2F',
+      disabled: '#B1B1B1',
+    }
     },
     fontFamily: {
       'montserrat': ['Montserrat', 'sans-serif'],
@@ -94,7 +100,6 @@ module.exports = {
       '5xl': '3rem',
       '6xl': '4rem',
     },
-  },
   variants: {},
   plugins: [
     require('tailwindcss-grid')({
