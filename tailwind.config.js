@@ -86,7 +86,20 @@ module.exports = {
       alert: '#FF2F2F',
       disabled: '#B1B1B1',
     }
-  },
+    },
+    fontFamily: {
+      'montserrat': ['Montserrat', 'sans-serif'],
+      'rubik': ['Rubik', 'sans-serif'],
+    },
+    fontSize: {
+      xs: '0.75rem',
+      base: '1rem',
+      lg: '1.125rem',
+      xl: '1.25rem',
+      '3xl': '1.875rem',
+      '5xl': '3rem',
+      '6xl': '4rem',
+    },
   variants: {},
   plugins: [
     require('tailwindcss-grid')({
