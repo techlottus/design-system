@@ -85,7 +85,12 @@ module.exports = {
       warning: '#FFBD2F',
       alert: '#FF2F2F',
       disabled: '#B1B1B1',
-    }
+      white: '#FFFFFF',
+      black: '#000000',
+    },
+    borderRadius: {
+      'none': '0',
+      default: '4px',
     },
     fontFamily: {
       'montserrat': ['Montserrat', 'sans-serif'],
@@ -100,6 +105,7 @@ module.exports = {
       '5xl': '3rem',
       '6xl': '4rem',
     },
+  },
   variants: {},
   plugins: [
     require('tailwindcss-grid')({
