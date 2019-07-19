@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Icon from '../Icon';
 
 // Button Props
 const sizes = {
@@ -13,9 +12,12 @@ const buttonVariant = {
   primary: `
     bg-primary-400
     hover:bg-primary-700
+    rounded
+    focus:outline-none
+    focus:shadow-primary-200
+    focus:bg-primary-700
     inline-flex
     items-center
-    rounded
     text-white
     font-bold
     font-montserrat
@@ -23,9 +25,12 @@ const buttonVariant = {
   secondary: `
     bg-surface-500
     hover:bg-surface-800
+    rounded
+    focus:outline-none
+    focus:shadow-secondary-200
+    focus:bg-surface-800
     inline-flex
     items-center
-    rounded
     text-white
     font-bold
     font-montserrat
@@ -34,6 +39,10 @@ const buttonVariant = {
     bg-transparent
     hover:bg-surface-400
     hover:text-white
+    focus:outline-none
+    focus:shadow-secondary-200
+    focus:bg-surface-400
+    focus:text-white
     border-2
     border-surface-400
     rounded
@@ -44,6 +53,7 @@ const buttonVariant = {
   `,
   disabled: `
     bg-surface-100
+    focus:outline-none
     rounded
     text-surface-300
     font-bold
