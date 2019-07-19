@@ -11,42 +11,50 @@ const sizes = {
 
 const buttonVariant = {
   primary: `
-    bg-primary-500
+    bg-primary-400
     hover:bg-primary-700
-    font-bold
-    text-white
-    rounded
     inline-flex
     items-center
+    rounded
+    text-white
+    font-bold
     font-montserrat
   `,
   secondary: `
     bg-surface-500
     hover:bg-surface-800
-    font-bold
-    text-white
-    rounded
     inline-flex
     items-center
+    rounded
+    text-white
+    font-bold
     font-montserrat
   `,
   terciary: `
-    font-bold
     bg-transparent
-    border-2
-    border-surface-400
     hover:bg-surface-400
     hover:text-white
+    border-2
+    border-surface-400
     rounded
     inline-flex
     items-center
+    font-bold
     font-montserrat
+  `,
+  disabled: `
+    bg-surface-100
+    rounded
+    text-surface-300
+    font-bold
+    font-montserrat
+    cursor-not-allowed
   `,
 };
 
 interface ButtonProps {
   size: 'xs'|'sm'|'md'|'lg';
-  variant: 'primary'|'secondary'|'terciary';
+  variant: 'primary'|'secondary'|'terciary'|'disabled';
   children: any;
   className?: string;
 }
