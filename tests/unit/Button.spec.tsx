@@ -26,7 +26,6 @@ describe('Button.tsx', () => {
           Button <Icon icon='fab fa-amazon'/>
         </Button>);
       expect(typeof vm.props().children).toBe('object');
-      console.log(vm.props());
     });
   });
 });
