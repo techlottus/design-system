@@ -19,5 +19,14 @@ describe('Button.tsx', () => {
       const vm = shallow(<Button variant='primary' size='md'>Button</Button>);
       expect(typeof vm.props().children).toBe('string');
     });
+
+    it('the prop children accepts an Icon component as children', () => {
+      const vm = shallow(
+        <Button variant='secondary' size='md'>
+          Button <Icon icon='fab fa-amazon'/>
+        </Button>);
+      expect(typeof vm.props().children).toBe('object');
+      console.log(vm.props());
+    });
   });
 });
