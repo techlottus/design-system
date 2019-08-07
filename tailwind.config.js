@@ -90,6 +90,7 @@ module.exports = {
     },
     borderRadius: {
       'none': '0',
+      'card': '4px 4px 0 0',
       default: '4px',
     },
     fontFamily: {
