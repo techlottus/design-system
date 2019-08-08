@@ -32,6 +32,6 @@ You'll notice that we used an HTML-like syntax; we call it JSX. JSX is not requi
 # Contributing
 All feedback and suggestions are welcome!
 
-Read our [contributing guide](https://github.com/ExponentialEducation/betomic/CONTRIBUTING.md) to learn about our development process, how to propose bugfixes and improvements.
+Read our [contributing guide](https://github.com/ExponentialEducation/betomic/blob/develop/CONTRIBUTING.md) to learn about our development process, how to propose bugfixes and improvements.
 
 **Bedu Engineering** @ 2019
