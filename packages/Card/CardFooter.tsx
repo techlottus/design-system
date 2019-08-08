@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 interface CardFooterProps {
-  children: any;
+  children: React.ReactNode;
   className?: string;
 }
 

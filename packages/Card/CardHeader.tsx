@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 interface CardHeaderProps {
-  children: any;
+  children: React.ReactNode;
 }
 
 const CardHeader: React.SFC<CardHeaderProps> = ({ children }: CardHeaderProps) => (

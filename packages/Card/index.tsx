@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 interface CardProps {
-  children: any;
+  children: React.ReactNode;
   bordered?: boolean;
   variant?: string;
   variantAs?: string;
