@@ -8,6 +8,7 @@ exports[`ProgressBar.tsx Should match the snapshot 1`] = `
     className="h-full rounded bg-primary-200"
     style={
       Object {
+        "maxWidth": "100%",
         "width": "25%",
       }
     }
