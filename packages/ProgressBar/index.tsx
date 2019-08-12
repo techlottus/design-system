@@ -33,7 +33,7 @@ const variantIntensity = {
 const ProgressBar: React.SFC<ProgressBarProps> = ({percentage, variant, variantAs}: ProgressBarProps) => {
   return (
     <div className='w-full h-2 bg-surface-100 rounded'>
-      <div className={`h-full rounded bg-${variantName[variant]}-${variantIntensity[variantAs]}`} style={{width: `${percentage}%`}}></div>
+      <div className={`h-full rounded bg-${variantName[variant]}-${variantIntensity[variantAs]}`} style={{width: `${percentage}%`, maxWidth: '100%'}}></div>
     </div>
   );
 };
