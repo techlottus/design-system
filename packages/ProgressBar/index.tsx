@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 interface ProgressBarProps {
-  percentage: number;
+  value: number;
   variant?: string;
   variantAs?: string;
 }
@@ -30,19 +30,19 @@ const variantIntensity = {
   950: '950',
 };
 
-const ProgressBar: React.SFC<ProgressBarProps> = ({percentage, variant, variantAs}: ProgressBarProps) => {
+const ProgressBar: React.SFC<ProgressBarProps> = ({value, variant, variantAs}: ProgressBarProps) => {
   return (
     <div className='w-full h-2 bg-surface-100 rounded'>
       <div
         className={`h-full rounded bg-${variantName[variant]}-${variantIntensity[variantAs]}`}
-        style={{width: `${percentage}%`, maxWidth: '100%'}}>
+        style={{width: `${value}%`, maxWidth: '100%'}}>
       </div>
     </div>
   );
 };
 
 ProgressBar.defaultProps = {
-  percentage: 0,
+  value: 0,
   variant: 'primary',
   variantAs: '200',
 };
