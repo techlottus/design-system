@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressBar.tsx Should match the snapshot 1`] = `
+<div
+  className="w-full h-2 bg-surface-100 rounded"
+>
+  <div
+    className="h-full rounded bg-primary-200"
+    style={
+      Object {
+        "maxWidth": "100%",
+        "width": "25%",
+      }
+    }
+  />
+</div>
+`;
