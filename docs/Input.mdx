@@ -1,0 +1,104 @@
+---
+name: Input
+menu: Components
+---
+
+import { Playground, Props } from 'docz'
+import Input from '../packages/Input'
+import FormGroup from '../packages/FormGroup'
+import Label from '../packages/Label'
+import Icon from '../packages/Icon'
+
+# Input
+
+Button component docs 📄
+
+<Props of={Input} />
+
+## Standard
+
+<Playground>
+  <Input
+		
+  />
+</Playground>
+
+## Standard + Icon Helper
+
+<Playground>
+	<FormGroup className='w-1/3'>
+		<div className="flex flex mb-3 justify-between items-center">
+			<Label
+				htmlFor='name'
+				label='Name'
+			/>
+			<Icon
+				icon={'fab fa-amazon'}
+				size={'16px'}
+				state={'text-neutral'}
+				className={''}
+			/>
+		</div>
+		<Input
+			htmlId='name'
+		/>
+	</FormGroup>
+</Playground>
+
+## Icon Inside
+
+<Playground>
+  <Input
+		type={'password'}
+  />
+</Playground>
+
+## Required
+
+<Playground>
+	<Label
+		htmlFor='lastname'
+		label='Last Name'
+		required
+	/>
+  <Input
+		htmlId='lastname'
+		required
+	/>
+</Playground>
+
+## Warning and success
+
+<Playground>
+	<div className="flex flex-col w-1/2">
+		<div>
+			<Label
+				htmlFor='warning'
+				label='Warning label'
+				required
+			/>
+			<Input
+				htmlId='warning'
+				type='email'
+				required
+				value='daniela'
+				error='Wrong data'
+			/>
+		</div>
+		<div className='mt-4'>
+			<Label
+				htmlFor='success'
+				label='Success label'
+				required
+			/>
+			<Input
+				htmlId='success'
+				required
+				type='email'
+				value='daniela@gmail.com'
+				success
+			/>
+		</div>
+	</div>
+</Playground>
+
