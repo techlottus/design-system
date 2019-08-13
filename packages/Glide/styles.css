@@ -1,0 +1,26 @@
+.glide__bullets {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 34px;
+  bottom: 0;
+}
+
+.glide__bullet {
+  background-color: #A9AEB8;
+}
+
+.glide__bullet:hover {
+  background-color: #293348;
+  border: 2px solid #A9AEB8;
+}
+
+.glide__bullet:focus {
+  background-color: #293348;
+  border: 2px solid #293348;
+}
+
+.glide__bullet--active {
+  background-color: #293348;
+}
