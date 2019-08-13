@@ -48,5 +48,8 @@
   },
   "peerDependencies": {
     "react": ">=16.0.0"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.3.0"
   }
 }
