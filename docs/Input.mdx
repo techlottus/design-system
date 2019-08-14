@@ -51,9 +51,22 @@ Button component docs 📄
 ## Icon Inside
 
 <Playground>
-  <Input
-		type={'password'}
-  />
+  <FormGroup className='w-1/3 relative flex items-center'>
+		<Input
+      value={'daniela@test.com'}
+      htmlId= 'with-icon'
+      type= 'password'
+      name= 'with-icon'
+      placeholder= 'Test success input...'
+      disabled= {true}
+      readOnly= {true}
+      required= {false}
+      className= {``} >
+      <div className='absolute right-0 mr-2'>
+        <Icon icon={'fab fa-amazon'} size={'16px'} state={'text-active'} />
+      </div>
+    </Input>
+	</FormGroup>
 </Playground>
 
 ## Required
@@ -70,42 +83,8 @@ Button component docs 📄
 	/>
 </Playground>
 
-## Warning and success
-
-<Playground>
-	<div className="flex flex-col w-1/2">
-		<div>
-			<Label
-				htmlFor='warning'
-				label='Warning label'
-				required
-			/>
-			<Input
-				htmlId='warning'
-				type='email'
-				required
-				value='daniela'
-				error='Wrong data'
-			/>
-		</div>
-		<div className='mt-4'>
-			<Label
-				htmlFor='success'
-				label='Success label'
-				required
-			/>
-			<Input
-				htmlId='success'
-				required
-				type='email'
-				value='daniela@gmail.com'
-				success
-			/>
-		</div>
-	</div>
-</Playground>
-
-## How to use
+## Warning/Success
+## Show/Hide Password
 
 <Playground>
 	<InputVariant />
