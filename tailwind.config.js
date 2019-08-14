@@ -3,7 +3,7 @@ module.exports = {
     colors: {
       surface: {
         "50":"#F4F4F5",
-        "100":"#D4D6DB",
+        "100":"#EAEBED",
         "200":"#A9AEB8",
         "300":"#7E8594",
         "400":"#535D71",
@@ -87,6 +87,7 @@ module.exports = {
       disabled: '#B1B1B1',
       white: '#FFFFFF',
       black: '#000000',
+      success: '#17BF9D'
     },
     borderRadius: {
       'none': '0',
@@ -142,7 +143,9 @@ module.exports = {
       '64': '256px',
     },
   },
-  variants: {},
+  variants: {
+    borderWidth: ['responsive', 'hover', 'focus'],
+  },
   plugins: [
     require('tailwindcss-grid')({
       grids: [2, 3, 5, 6, 8, 10, 12],
