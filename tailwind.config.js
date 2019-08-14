@@ -87,6 +87,7 @@ module.exports = {
       disabled: '#B1B1B1',
       white: '#FFFFFF',
       black: '#000000',
+      success: '#17BF9D'
     },
     borderRadius: {
       'none': '0',
