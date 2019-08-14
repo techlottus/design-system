@@ -1,20 +1,19 @@
 import * as React from 'react';
-import Icon from '../Icon';
 
 interface InputProps {
   htmlId: string;
   type: 'text'|'email'|'password';
   name: string;
   value?: string;
-  placeholder: string;
-  disabled: boolean;
-  readOnly: boolean;
-  required: boolean;
-  error: string | boolean;
-  success: boolean;
-  callback?: () => {};
+  placeholder?: string;
+  disabled?: boolean;
+  readOnly?: boolean;
+  required?: boolean;
+  error?: string | boolean;
+  success?: boolean;
+  callback?: (event: any) => any;
   className?: string;
-  children: any;
+  children?: React.ReactNode | React.ReactNode[];
 }
 
 const Input = ({
@@ -26,13 +25,13 @@ const Input = ({
   disabled= false,
   readOnly= false,
   required = false,
-  callback= (e) => {console.log(e.target.value); },
+  callback= (e: any) => {console.log(e.target.value); },
   className,
   children,
-}) => {
+}: InputProps) => {
 
   return(
-    <div>
+    <React.Fragment>
       <input
         id={htmlId}
         type={type}
@@ -47,19 +46,20 @@ const Input = ({
           relative
           w-full
           bg-surface-100
-          text-surface-500
+          rounded
+          p-3
           font-rubik
-          font-base
+          text-surface-500
+          text-base
+          h-10
           focus:border-2
           focus:border-surface-200
           focus:bg-white
-          h-10
-          p-3
-          rounded
-          focus:outline-none ${className}`}
+          focus:outline-none
+          ${className}`}
       />
       {children}
-    </div>
+    </React.Fragment>
   );
 };
 
