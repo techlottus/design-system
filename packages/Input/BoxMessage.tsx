@@ -7,7 +7,7 @@ interface BoxMessageProps {
 
 const messageType = {
   error: 'bg-primary-100 text-primary-700',
-  success: 'bg-primary-500',
+  success: 'bg-success',
 };
 
 const BoxMessage = ({message = 'Your message alert', type= 'error'}: BoxMessageProps) => {

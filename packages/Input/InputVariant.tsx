@@ -73,10 +73,10 @@ const InputVariant = () => {
             disabled= {false}
             readOnly= {true}
             required= {false}
-            className= {`${success && 'border-english-500 border-2 focus:border-english-200'}`}
+            className= {`${success && 'border-success border-2 focus:border-success'}`}
             >
             {success && <div className='absolute right-0 mr-2'>
-              <Icon icon={'fab fa-amazon'} size={'16px'} state={'text-active'} />
+              <Icon icon={'fab fa-amazon'} size={'16px'} state={'text-active'} className='text-success'/>
             </div>}
           </Input>
         </div>
