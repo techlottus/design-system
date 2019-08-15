@@ -1,7 +1,5 @@
 import * as React from 'react';
 import Glide from '@glidejs/glide';
-import '@glidejs/glide/dist/css/glide.theme.min.css';
-import '@glidejs/glide/dist/css/glide.core.min.css';
 import GlideItem from './GlideItem';
 import './styles.css';
 
@@ -26,7 +24,25 @@ interface GlideContainerProps {
 }
 
 class GlideContainer extends React.Component<GlideContainerProps> {
-  static defaultProps: GlideContainerProps;
+  static defaultProps: GlideContainerProps = {
+    element: 'custom',
+    type: 'carousel',
+    startAt: 0,
+    perView: 1,
+    focusAt: 0,
+    gap: 10,
+    autoplay: false,
+    hoverpause: true,
+    keyboard: true,
+    bound: true,
+    swipeThreshold: 80,
+    animationDuration: 400,
+    rewind: true,
+    rewindDuration: 800,
+    dots: true,
+    breakpoints: {},
+  };
+
   constructor(props: GlideContainerProps) {
     super(props);
   }
@@ -112,24 +128,4 @@ class GlideContainer extends React.Component<GlideContainerProps> {
     );
   }
 }
-
-GlideContainer.defaultProps = {
-  element: 'custom',
-  type: 'carousel',
-  startAt: 0,
-  perView: 1,
-  focusAt: 0,
-  gap: 10,
-  autoplay: false,
-  hoverpause: true,
-  keyboard: true,
-  bound: true,
-  swipeThreshold: 80,
-  animationDuration: 400,
-  rewind: true,
-  rewindDuration: 800,
-  dots: true,
-  breakpoints: {},
-};
-
 export default GlideContainer;
