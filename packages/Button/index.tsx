@@ -17,6 +17,7 @@ const buttonVariant = {
     focus:shadow-primary-200
     focus:bg-primary-700
     inline-flex
+    justify-center
     items-center
     text-white
     font-bold
@@ -30,6 +31,7 @@ const buttonVariant = {
     focus:shadow-secondary-200
     focus:bg-surface-800
     inline-flex
+    justify-center
     items-center
     text-white
     font-bold
@@ -47,6 +49,7 @@ const buttonVariant = {
     border-surface-400
     rounded
     inline-flex
+    justify-center
     items-center
     font-bold
     font-montserrat
@@ -55,6 +58,9 @@ const buttonVariant = {
     bg-surface-100
     focus:outline-none
     rounded
+    inline-flex
+    justify-center
+    items-center
     text-surface-300
     font-bold
     font-montserrat
@@ -62,15 +68,20 @@ const buttonVariant = {
   `,
 };
 
-interface ButtonProps {
+interface IButton {
   size: 'xs'|'sm'|'md'|'lg';
   variant: 'primary'|'secondary'|'terciary'|'disabled';
   children: any;
   className?: string;
+  onClick?: () => void;
 }
 
-const Button: React.SFC<ButtonProps> = ({ size, variant, children, className }: ButtonProps) => (
-  <button className={`${className} ${sizes[size]} ${buttonVariant[variant]}`}>{children}</button>
+const Button: React.SFC<IButton> = ({ size, variant, children, className, onClick }: IButton) => (
+  <button
+    onClick={onClick}
+    className={`${className} ${sizes[size]} ${buttonVariant[variant]}`}>
+    {children}
+  </button>
 );
 
 Button.defaultProps = {
