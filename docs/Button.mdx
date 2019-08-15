@@ -5,6 +5,7 @@ menu: Components
 
 import { Playground, Props } from 'docz'
 import Button from '../packages/Button'
+import Icon from '../packages/Icon'
 
 # Button
 
@@ -14,9 +15,41 @@ Button component docs 📄
 
 ## Basic Usage
 
-<Playground>
+<div className='flex flex-wrap justify-between'>
   <Button>Primary btn</Button>
   <Button variant='secondary'>Secondary btn</Button>
   <Button variant='terciary'>Terciary btn</Button>
   <Button variant='disabled'>Disabled btn</Button>
-</Playground>
+</div>
+
+## With Icon
+
+<div className='flex flex-wrap justify-between'>
+  <Button>
+    Primary btn
+    <Icon icon={'fab fa-amazon'} size={'16px'} className='ml-2 text-white' />
+  </Button>
+  <Button variant='secondary'>
+    Secondary btn
+    <Icon icon={'fab fa-amazon'} size={'16px'} className='ml-2 text-white' />
+  </Button>
+  <Button variant='terciary'>
+    Terciary btn
+    <Icon icon={'fab fa-amazon'} size={'16px'} className='ml-2' />
+  </Button>
+  <Button variant='disabled'>
+    Disabled btn
+    <Icon icon={'fab fa-amazon'} size={'16px'} className='ml-2' />
+  </Button>
+</div>
+
+## With onClick method
+
+<Button onClick={() => alert('onClick method')}>
+  Primary btn
+  <Icon
+    icon={'fab fa-amazon'}
+    size={'16px'}
+    state={'text-neutral'}
+    className='ml-2 text-white' />
+</Button>
