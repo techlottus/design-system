@@ -18,6 +18,7 @@ const Icon: React.SFC<IconProps> = ({ size, state, className, icon }: IconProps)
 
 Icon.defaultProps = {
   size: '12px',
+  state: 'text-neutral',
   className: '',
 };
 
