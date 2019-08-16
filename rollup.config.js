@@ -1,5 +1,6 @@
 import TypescriptPlugin from 'rollup-plugin-typescript2';
 import PostCssPlugin from 'rollup-plugin-postcss';
+import NodeResolve from 'rollup-plugin-node-resolve';
 import { terser } from 'rollup-plugin-terser';
 
 const config = [
@@ -21,6 +22,7 @@ const config = [
         extract: false,
         inject: false,
       }),
+      NodeResolve(),
     ],
   },
   // CommonJs
@@ -41,6 +43,7 @@ const config = [
         extract: false,
         inject: false,
       }),
+      NodeResolve(),
     ],
   },
   // Browser build
@@ -64,6 +67,7 @@ const config = [
       TypescriptPlugin(),
       PostCssPlugin({ extract: true }),
       terser(),
+      NodeResolve(),
     ],
   },
 ]
