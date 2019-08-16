@@ -10,9 +10,14 @@ export default {
   ],
   wrapper: 'docs/wrapper.tsx',
   modifyBundlerConfig: (config) => {
-    // Adding custom-rules for `.pcss` and `.module.pcss` files using the `poscss-loader`
-    config.module.rules.push({ test: /\.pcss$/, use: ['postcss-loader'] });
-    config.module.rules.push({ test: /\.module.pcss$/, use: ['postcss-loader'] });
+    // Adding custom-rules for `.pcss` and `.module.pcss` files using the `poscss-loader` with support
+    // for `style-loader` and `css-loader`.
+    config.module.rules.push({ test: /(\.module)?\.pcss$/, use: ['style-loader', {
+      loader: 'css-loader',
+      options: {
+        modules: true,
+      },
+    }, 'postcss-loader'] });
     return config;
   },
 };
