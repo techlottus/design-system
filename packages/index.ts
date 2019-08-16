@@ -1,4 +1,4 @@
-import './tailwind.pcss';
+import './tailwind.css';
 
 export { default as Button } from './Button';
 export { default as Card } from './Card';
