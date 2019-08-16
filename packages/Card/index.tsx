@@ -22,7 +22,7 @@ class Card extends React.Component<ICardProps> {
   public render() {
     const { children, bordered, variant, variantAs } = this.props;
     const classes = classNames(
-      styles.card__bordered,
+      styles.cardBordered,
       `border-${variantName[variant]}-${variantIntensity[variantAs]}`,
     );
 
