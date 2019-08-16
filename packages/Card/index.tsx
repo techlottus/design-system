@@ -17,7 +17,7 @@ class Card extends React.Component<ICardProps> {
   public static Header = CardHeader;
   public static Content = CardContent;
   public static Footer = CardFooter;
-  static defaultProps: { bordered: boolean; variant: string; variantAs: string; };
+  static defaultProps: ICardProps = { bordered: false, variant: 'surface', variantAs: '500' };
 
   public render() {
     const { children, bordered, variant, variantAs } = this.props;
@@ -34,11 +34,5 @@ class Card extends React.Component<ICardProps> {
     );
   }
 }
-
-Card.defaultProps = {
-  bordered: false,
-  variant: 'surface',
-  variantAs: '500',
-};
 
 export default Card;
