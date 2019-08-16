@@ -1,10 +1,10 @@
 import * as React from 'react';
 
-interface CardHeaderProps {
-  children: React.ReactNode;
+export interface ICardHeader {
+  children?: React.ReactNode;
 }
 
-const CardHeader: React.SFC<CardHeaderProps> = ({ children }: CardHeaderProps) => (
+const CardHeader: React.SFC<ICardHeader> = ({ children }: ICardHeader) => (
   <React.Fragment>{children}</React.Fragment>
 );
 
