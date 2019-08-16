@@ -1,10 +1,10 @@
 import * as React from 'react';
-import classNames from 'classnames';
+import classNames from '../common/classnames';
 import { variantIntensity, variantName } from '../common/constants';
 import CardHeader from './CardHeader';
 import CardContent from './CardContent';
 import CardFooter from './CardFooter';
-import * as styles from './card.module.pcss';
+import styles from './card.module.pcss';
 
 export interface ICardProps {
   children?: React.ReactNode;
