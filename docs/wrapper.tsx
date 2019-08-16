@@ -1,7 +1,7 @@
 import * as React from 'react';
-import '../packages/tailwind.css';
+import '../packages/tailwind.pcss';
 
-const Wrapper = ({ children }) => <div className="docz-wrapper">
+const Wrapper = ({ children }) => <div className='docz-wrapper'>
   {children}
 </div>;
 
