@@ -8,9 +8,6 @@ export default {
   plugins: [
     css({ preprocessor: 'postcss', loaderOpts: postcssConfig }),
   ],
-  themeConfig: {
-    mode: 'dark',
-  },
   wrapper: 'docs/wrapper.tsx',
   modifyBundlerConfig: (config) => {
     // Adding custom-rules for `.pcss` and `.module.pcss` files using the `poscss-loader` with support
