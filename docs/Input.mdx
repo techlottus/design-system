@@ -1,0 +1,68 @@
+---
+name: Input
+menu: Components
+---
+
+import { Playground, Props } from 'docz'
+import Input from '../packages/Input'
+import Label from '../packages/Label'
+import Icon from '../packages/Icon'
+import FormGroup from '../packages/FormGroup'
+import InputExamples from './examples/InputExamples'
+
+# Input
+
+Input component docs 📄
+
+<Props of={Input} />
+
+## Standard
+
+<div>
+  <Input />
+
+  <h2>Helper</h2>
+
+  <FormGroup className='w-1/3'>
+			<Label
+				htmlFor='name'
+				label='Name'
+			>
+				<Icon
+					icon={'betomic icon-user'}
+					size={'16px'}
+					state={'text-neutral'}
+					className={''}
+				/>
+			</Label>
+		<Input
+			htmlId='name'
+		/>
+	</FormGroup>
+
+	<h2>Icon Inside</h2>
+	
+	<FormGroup className='w-1/3 relative flex items-center'>
+		<Input
+      value={'daniela@test.com'}
+      htmlId= 'with-icon'
+      type= 'password'
+      name= 'with-icon'
+      placeholder= 'Test success input...'
+      disabled= {true}
+      readOnly= {true}
+      required= {false}>
+				<div className='absolute right-0 mr-2'>
+					<Icon icon={'betomic icon-case'} size={'16px'} state={'text-active'} />
+				</div>
+    </Input>
+	</FormGroup>
+
+	<h2>Required</h2>
+
+	<Label htmlFor='lastname' label='Last Name' required />
+  <Input htmlId='lastname' required />
+
+	<h2>Examples</h2>
+	<InputExamples />
+</div>
