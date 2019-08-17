@@ -1,4 +1,5 @@
 module.exports = {
+  important: true,
   theme: {
     colors: {
       transparent: 'transparent',
@@ -159,5 +160,8 @@ module.exports = {
   },
   variants: {
     borderWidth: ['responsive', 'hover', 'focus'],
+    zIndex: {
+      '9999': '9999',
+    },
   },
 };
