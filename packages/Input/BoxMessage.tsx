@@ -1,6 +1,7 @@
 import * as React from 'react';
+import styles from './input.module.pcss';
 
-interface BoxMessageProps {
+export interface IBoxMessageProps {
   message: string;
   type: 'error' | 'success';
 }
@@ -10,12 +11,17 @@ const messageType = {
   success: 'bg-success',
 };
 
-const BoxMessage = ({message = 'Your message alert', type= 'error'}: BoxMessageProps) => {
+const BoxMessage: React.SFC<IBoxMessageProps> = ({ message, type }: IBoxMessageProps) => {
   return(
-    <div className={`w-full flex items-center h-8 font-rubik p-2 rounded mt-2 ${messageType[type]}`} role='alert'>
+    <div className={`${styles.boxMessage} ${messageType[type]}`} role='alert'>
         <span>{message}</span>
     </div>
   );
+};
+
+BoxMessage.defaultProps = {
+  message: 'Your message alert',
+  type: 'error',
 };
 
 export default BoxMessage;
