@@ -4,9 +4,9 @@ import classNames from '../common/classnames';
 import style from './icon.module.pcss';
 
 export interface IIconProps extends IProps {
-  size: number;
-  gap: number;
-  icon: string;
+  size?: number;
+  gap?: number;
+  icon?: string;
 }
 
 const Icon: React.SFC<IIconProps> = ({ size, gap, className, icon }) => {

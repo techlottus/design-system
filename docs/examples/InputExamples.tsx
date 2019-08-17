@@ -75,7 +75,7 @@ const InputVariant = () => {
             success= {success}
             >
             {success && <div className='absolute right-0 mr-2'>
-              <Icon icon={'betomic icon-facebook'} size={'16px'} state={'text-active'} className='text-success'/>
+              <Icon icon='icon-facebook' size={16} className='text-active text-success'/>
             </div>}
           </Input>
         </div>
@@ -97,7 +97,7 @@ const InputVariant = () => {
             >
             <div className='absolute right-0 mr-2'>
               <button className='focus:outline-none' onClick={() => setShown(!shown)}>
-                <Icon icon={'betomic icon-clock'} size={'16px'} state={'text-neutral'} />
+                <Icon icon='icon-clock' size={16} className='text-neutral' />
               </button>
             </div>
           </Input>

@@ -156,12 +156,12 @@ module.exports = {
       '80': '.8',
       '90': '.9',
       '100': '1',
-    }
-  },
-  variants: {
-    borderWidth: ['responsive', 'hover', 'focus'],
+    },
     zIndex: {
       '9999': '9999',
     },
+  },
+  variants: {
+    borderWidth: ['responsive', 'hover', 'focus'],
   },
 };
