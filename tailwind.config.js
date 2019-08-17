@@ -1,4 +1,5 @@
 module.exports = {
+  important: true,
   theme: {
     colors: {
       transparent: 'transparent',
@@ -141,6 +142,9 @@ module.exports = {
       '48': '192px',
       '56': '224px',
       '64': '256px',
+    },
+    zIndex: {
+      '9999': '9999',
     },
   },
   variants: {},
