@@ -4,7 +4,7 @@ module.exports = {
       transparent: 'transparent',
       surface: {
         "50":"#F4F4F5",
-        "100":"#D4D6DB",
+        "100":"#EAEBED",
         "200":"#A9AEB8",
         "300":"#7E8594",
         "400":"#535D71",
@@ -88,6 +88,7 @@ module.exports = {
       disabled: '#B1B1B1',
       white: '#FFFFFF',
       black: '#000000',
+      success: '#17BF9D'
     },
     borderRadius: {
       'none': '0',
@@ -142,6 +143,21 @@ module.exports = {
       '56': '224px',
       '64': '256px',
     },
+    opacity: {
+      '0': '0',
+      '10': '.1',
+      '20': '.2',
+      '30': '.3',
+      '40': '.4',
+      '50': '.5',
+      '60': '.6',
+      '70': '.7',
+      '80': '.8',
+      '90': '.9',
+      '100': '1',
+    }
   },
-  variants: {},
+  variants: {
+    borderWidth: ['responsive', 'hover', 'focus'],
+  },
 };
