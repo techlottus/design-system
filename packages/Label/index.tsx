@@ -1,18 +1,28 @@
 import * as React from 'react';
+import styles from './label.module.pcss';
 
-interface LabelProps {
+interface ILabelProps {
   htmlFor: string;
   label: string;
   required?: boolean;
-  className?: string;
+  children?: React.ReactNode;
 }
 
-const Label = ({htmlFor = 'labeldemo', label = 'Your label', required = false, className= ''}: LabelProps) => {
+const Label = ({ htmlFor, label, required, children }: ILabelProps) => {
   return(
-    <label className={`block font-rubik font-base text-surface-500 mb-3 ${className}`} htmlFor={htmlFor}>
-      {label} { required && <span className='text-primary-400'> *</span> }
-    </label>
+    <div className={styles.label}>
+      <label className={styles.labelText} htmlFor={htmlFor}>
+        {label} { required && <span className={styles.labelRequired}> *</span> }
+      </label>
+      {children}
+    </div>
   );
+};
+
+Label.defaultProps = {
+  htmlFor: 'labeldemo',
+  label: 'Your label',
+  required: false,
 };
 
 export default Label;
