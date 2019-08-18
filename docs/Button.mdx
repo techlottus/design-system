@@ -14,42 +14,60 @@ Button component docs 📄
 <Props of={Button} />
 
 ## Basic Usage
+```jsx
+<Button size='md' variant='primary'>Primary btn</Button>
+<Button size='md' variant='secondary'>Secondary btn</Button>
+<Button size='md' variant='terciary'>Terciary btn</Button>
+<Button size='md' variant='disabled'>Disabled btn</Button>
+```
+<div className='flex flex-wrap justify-between items-center'>
+  <Button size='md' variant='primary'>Primary btn</Button>
+  <Button size='md' variant='secondary'>Secondary btn</Button>
+  <Button size='md' variant='terciary'>Terciary btn</Button>
+  <Button size='md' variant='disabled'>Disabled btn</Button>
+</div>
 
-<div className='flex flex-wrap justify-between'>
-  <Button>Primary btn</Button>
-  <Button variant='secondary'>Secondary btn</Button>
-  <Button variant='terciary'>Terciary btn</Button>
-  <Button variant='disabled'>Disabled btn</Button>
+```jsx
+<Button size='lg' variant='primary'>Primary btn</Button>
+<Button size='lg' variant='secondary'>Secondary btn</Button>
+<Button size='lg' variant='terciary'>Terciary btn</Button>
+<Button size='lg' variant='disabled'>Disabled btn</Button>
+```
+<div className='flex flex-wrap justify-between items-center'>
+  <Button size='lg' variant='primary'>Primary btn</Button>
+  <Button size='lg' variant='secondary'>Secondary btn</Button>
+  <Button size='lg' variant='terciary'>Terciary btn</Button>
+  <Button size='lg' variant='disabled'>Disabled btn</Button>
 </div>
 
 ## With Icon
+```jsx
+<Button size='md' variant='secondary'>
+  Secondary btn <Icon className='ml-4' size={16} gap={6} icon='icon-arrow-right' />
+</Button>
+```
+<Button size='md' variant='secondary'>
+  Secondary btn <Icon className='ml-4' size={16} gap={6} icon='icon-arrow-right' />
+</Button>
 
-<div className='flex flex-wrap justify-between'>
-  <Button>
-    Primary btn
-    <Icon icon={'fab fa-amazon'} size={'16px'} className='ml-2 text-white' />
-  </Button>
-  <Button variant='secondary'>
-    Secondary btn
-    <Icon icon={'fab fa-amazon'} size={'16px'} className='ml-2 text-white' />
-  </Button>
-  <Button variant='terciary'>
-    Terciary btn
-    <Icon icon={'fab fa-amazon'} size={'16px'} className='ml-2' />
-  </Button>
-  <Button variant='disabled'>
-    Disabled btn
-    <Icon icon={'fab fa-amazon'} size={'16px'} className='ml-2' />
-  </Button>
-</div>
 
 ## With onClick method
-
-<Button onClick={() => alert('onClick method')}>
+```jsx
+<Button variant='primary' size='md' onClick={() => alert('onClick method')}>
   Primary btn
   <Icon
-    icon={'fab fa-amazon'}
-    size={'16px'}
-    state={'text-neutral'}
-    className='ml-2 text-white' />
+    size={16}
+    gap={6}
+    icon='icon-arrow-right'
+    className='ml-2' />
+</Button>
+```
+
+<Button variant='primary' size='md' onClick={() => alert('onClick method')}>
+  Primary btn
+  <Icon
+    size={16}
+    gap={6}
+    icon='icon-arrow-right'
+    className='ml-4' />
 </Button>
