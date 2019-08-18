@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { IProps } from '../common/props';
+import classNames from '../common/classnames';
 import style from './button.module.pcss';
 
 // Button Props
@@ -24,16 +25,18 @@ export interface IButton extends IProps {
   variant: Variant;
   children: React.ReactNode;
   onClick?: () => void;
-  className?: string;
 }
 
-const Button: React.SFC<IButton> = ({ children, onClick, size, variant, className }: IButton) => (
-  <button
-    onClick={onClick}
-    className={`${Sizes[size]} ${Variants[variant]} ${className}`}>
-    {children}
-  </button>
-);
+const Button: React.SFC<IButton> = ({ children, onClick, size, variant, className }: IButton) => {
+  const classes = classNames(className);
+  return (
+    <button
+      onClick={onClick}
+      className={`${Sizes[size]} ${Variants[variant]} ${classes}`}>
+      {children}
+    </button>
+  );
+};
 
 Button.defaultProps = {
   size: 'md',
