@@ -3,7 +3,7 @@ import Glide from '@glidejs/glide';
 import GlideItem from './GlideItem';
 import './styles.css';
 
-interface GlideContainerProps {
+interface IGlideContainerProps {
   children?: any;
   element: string;
   type: 'carousel' | 'slider';
@@ -23,8 +23,8 @@ interface GlideContainerProps {
   breakpoints?: object;
 }
 
-class GlideContainer extends React.Component<GlideContainerProps> {
-  static defaultProps: GlideContainerProps = {
+class GlideContainer extends React.Component<IGlideContainerProps> {
+  static defaultProps: IGlideContainerProps = {
     element: 'custom',
     type: 'carousel',
     startAt: 0,
@@ -43,7 +43,7 @@ class GlideContainer extends React.Component<GlideContainerProps> {
     breakpoints: {},
   };
 
-  constructor(props: GlideContainerProps) {
+  constructor(props: IGlideContainerProps) {
     super(props);
   }
 
