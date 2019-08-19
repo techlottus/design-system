@@ -4,7 +4,8 @@
     "moduleResolution": "node",
     "outDir": "./dist",
     "target": "es5",
-    "jsx": "react"
+    "jsx": "react",
+    "declaration": true,
   },
   "include": [
     "packages"
