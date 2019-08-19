@@ -28,11 +28,15 @@ export interface IButton extends IProps {
 }
 
 const Button: React.SFC<IButton> = ({ children, onClick, size, variant, className }: IButton) => {
-  const classes = classNames(className);
+  const classes = classNames(
+    className,
+    Sizes[size],
+    Variants[variant],
+  );
   return (
     <button
       onClick={onClick}
-      className={`${Sizes[size]} ${Variants[variant]} ${classes}`}>
+      className={classes}>
       {children}
     </button>
   );
