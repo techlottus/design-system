@@ -30,8 +30,8 @@ export interface IButton extends IProps {
 
 const Button: React.SFC<IButton> = ({ children, onClick, size, variant, className, disabled, block }: IButton) => {
 
-  const isDisabled = disabled === true ? style.btnDisabled : '';
-  const isBlock = block === true ? style.btnBlock : '';
+  const isDisabled = disabled === true ? style.btnDisabled : null;
+  const isBlock = block === true ? style.btnBlock : null;
 
   const classes = classNames(
     className,
