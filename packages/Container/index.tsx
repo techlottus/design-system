@@ -15,7 +15,7 @@ class Container extends React.PureComponent<IContainer, {}> {
   public render() {
     const { children, className, fluid } = this.props;
     const isFluid = !fluid ? style.containerCentered : null;
-    const classes = classNames(style.container, className, isFluid);
+    const classes = classNames(style.container, 'container', className, isFluid);
     return (
     <div className={classes}>{children}</div>
     );
