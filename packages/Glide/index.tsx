@@ -13,7 +13,6 @@ interface IGlideContainerProps {
   gap?: number;
   autoplay?: number | boolean;
   hoverpause?: boolean;
-  keyboard?: boolean;
   bound?: boolean;
   swipeThreshold?: number | boolean;
   animationDuration?: number;
@@ -33,7 +32,6 @@ class GlideContainer extends React.Component<IGlideContainerProps> {
     gap: 10,
     autoplay: false,
     hoverpause: true,
-    keyboard: true,
     bound: true,
     swipeThreshold: 80,
     animationDuration: 400,
@@ -61,7 +59,6 @@ class GlideContainer extends React.Component<IGlideContainerProps> {
       gap,
       autoplay,
       hoverpause,
-      keyboard,
       bound,
       swipeThreshold,
       animationDuration,
@@ -78,7 +75,7 @@ class GlideContainer extends React.Component<IGlideContainerProps> {
       gap,
       autoplay,
       hoverpause,
-      keyboard,
+      keyboard: false,
       bound,
       swipeThreshold,
       animationDuration,

@@ -92,7 +92,6 @@ const GlideExample = () => {
       gap={25}
       autoplay={false}
       hoverpause={false}
-      keyboard={true}
       bound={true}
       rewind={true}
       dots
