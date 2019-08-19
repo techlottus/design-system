@@ -1,6 +1,6 @@
 import * as React from 'react';
 import BoxMessage from './BoxMessage';
-import classNames from '../common/classnames';
+import classNames from 'classnames';
 import styles from './input.module.pcss';
 
 interface IInputProps {

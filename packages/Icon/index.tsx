@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { IProps } from '../common/props';
-import classNames from '../common/classnames';
+import classNames from 'classnames';
 import style from './icon.module.pcss';
 
 export interface IIconProps extends IProps {
