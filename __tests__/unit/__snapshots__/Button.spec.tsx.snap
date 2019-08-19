@@ -10,6 +10,7 @@ exports[`Button.tsx should match the snapshot 1`] = `
     focus:shadow-primary-200
     focus:bg-primary-700
     inline-flex
+    justify-center
     items-center
     text-white
     font-bold

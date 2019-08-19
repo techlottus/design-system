@@ -27,5 +27,15 @@ describe('Button.tsx', () => {
         </Button>);
       expect(typeof vm.props().children).toBe('object');
     });
+
+    it('test click event', () => {
+      const mockCallBack = jest.fn();
+      const vm = shallow(
+      <Button variant='secondary' size='md' onClick={mockCallBack}>
+        Click!
+      </Button>);
+      vm.find('button').simulate('click');
+      expect(mockCallBack.mock.calls.length).toEqual(1);
+    });
   });
 });

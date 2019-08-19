@@ -1,0 +1,43 @@
+/* Button Variants */
+.btnPrimary {
+  @apply bg-primary-400 text-white;
+  @apply rounded flex justify-center items-center;
+  @apply font-bold font-montserrat;
+  &:hover { @apply bg-primary-700; }
+  &:focus { @apply outline-none shadow-primary-200; }
+}
+
+.btnSecondary {
+  @apply bg-surface-500 text-white;
+  @apply rounded flex justify-center items-center;
+  @apply font-bold font-montserrat;
+  &:hover { @apply bg-surface-800; }
+  &:focus { @apply outline-none shadow-secondary-200 bg-surface-800 }
+}
+
+.btnTerciary {
+  @apply bg-transparent border-2 border-surface-400;
+  @apply rounded flex justify-center items-center;
+  @apply font-bold font-montserrat;
+  &:hover { @apply bg-surface-400 text-white; }
+  &:focus { @apply outline-none shadow-secondary-200 bg-surface-400 }
+}
+
+.btnDisabled {
+  @apply bg-surface-100 text-surface-300;
+  @apply rounded flex justify-center items-center;
+  @apply font-bold font-montserrat;
+  @apply cursor-not-allowed;
+  &:focus { @apply outline-none; }
+}
+
+/* Button Sizes */
+.btnMedium {
+  @apply px-8 py-3;
+  @apply text-base;
+}
+
+.btnLarge {
+  @apply px-10 py-5;
+  @apply text-xl;
+}

@@ -1,0 +1,73 @@
+---
+name: Button
+menu: Components
+---
+
+import { Playground, Props } from 'docz'
+import Button from '../packages/Button'
+import Icon from '../packages/Icon'
+
+# Button
+
+Button component docs 📄
+
+<Props of={Button} />
+
+## Basic Usage
+```jsx
+<Button size='md' variant='primary'>Primary btn</Button>
+<Button size='md' variant='secondary'>Secondary btn</Button>
+<Button size='md' variant='terciary'>Terciary btn</Button>
+<Button size='md' variant='disabled'>Disabled btn</Button>
+```
+<div className='flex flex-wrap justify-between items-center'>
+  <Button size='md' variant='primary'>Primary btn</Button>
+  <Button size='md' variant='secondary'>Secondary btn</Button>
+  <Button size='md' variant='terciary'>Terciary btn</Button>
+  <Button size='md' variant='disabled'>Disabled btn</Button>
+</div>
+
+```jsx
+<Button size='lg' variant='primary'>Primary btn</Button>
+<Button size='lg' variant='secondary'>Secondary btn</Button>
+<Button size='lg' variant='terciary'>Terciary btn</Button>
+<Button size='lg' variant='disabled'>Disabled btn</Button>
+```
+<div className='flex flex-wrap justify-between items-center'>
+  <Button size='lg' variant='primary'>Primary btn</Button>
+  <Button size='lg' variant='secondary'>Secondary btn</Button>
+  <Button size='lg' variant='terciary'>Terciary btn</Button>
+  <Button size='lg' variant='disabled'>Disabled btn</Button>
+</div>
+
+## With Icon
+```jsx
+<Button size='md' variant='secondary'>
+  Secondary btn <Icon className='ml-4' size={16} gap={6} icon='icon-arrow-right' />
+</Button>
+```
+<Button size='md' variant='secondary'>
+  Secondary btn <Icon className='ml-4' size={16} gap={6} icon='icon-arrow-right' />
+</Button>
+
+
+## With onClick method
+```jsx
+<Button variant='primary' size='md' onClick={() => alert('onClick method')}>
+  Primary btn
+  <Icon
+    size={16}
+    gap={6}
+    icon='icon-arrow-right'
+    className='ml-2' />
+</Button>
+```
+
+<Button variant='primary' size='md' onClick={() => alert('onClick method')}>
+  Primary btn
+  <Icon
+    size={16}
+    gap={6}
+    icon='icon-arrow-right'
+    className='ml-4' />
+</Button>
