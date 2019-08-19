@@ -11,23 +11,24 @@ export interface ICardProps {
   bordered?: boolean;
   variant?: string;
   variantAs?: string;
+  className?: string;
 }
 
 class Card extends React.Component<ICardProps> {
   public static Header = CardHeader;
   public static Content = CardContent;
   public static Footer = CardFooter;
-  static defaultProps: ICardProps = { bordered: false, variant: 'surface', variantAs: '500' };
+  static defaultProps: ICardProps = { bordered: false, variant: 'surface', variantAs: '500', className: 'max-w-sm' };
 
   public render() {
-    const { children, bordered, variant, variantAs } = this.props;
+    const { children, bordered, variant, variantAs, className } = this.props;
     const classes = classNames(
       styles.cardBordered,
       `border-${variantName[variant]}-${variantIntensity[variantAs]}`,
     );
 
     return(
-      <div className={styles.card}>
+      <div className={`${styles.card} ${className}`}>
         {bordered && <div className={classes} />}
         {children}
       </div>
