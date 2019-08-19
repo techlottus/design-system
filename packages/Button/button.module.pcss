@@ -28,6 +28,7 @@
   @apply rounded flex justify-center items-center;
   @apply font-bold font-montserrat;
   @apply cursor-not-allowed;
+  &:hover { @apply bg-surface-100 }
   &:focus { @apply outline-none; }
 }
 
@@ -40,4 +41,9 @@
 .btnLarge {
   @apply px-10 py-5;
   @apply text-xl;
+}
+
+/* Button width */
+.btnBlock {
+  @apply w-full;
 }

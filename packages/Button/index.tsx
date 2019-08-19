@@ -15,7 +15,6 @@ const Variants = {
   primary: style.btnPrimary,
   secondary: style.btnSecondary,
   terciary: style.btnTerciary,
-  disabled: style.btnDisabled,
 };
 
 type Variant = typeof Variants[keyof typeof Variants];
@@ -23,13 +22,21 @@ type Variant = typeof Variants[keyof typeof Variants];
 export interface IButton extends IProps {
   size: Size;
   variant: Variant;
+  disabled: boolean;
+  block: boolean;
   children: React.ReactNode;
   onClick?: () => void;
 }
 
-const Button: React.SFC<IButton> = ({ children, onClick, size, variant, className }: IButton) => {
+const Button: React.SFC<IButton> = ({ children, onClick, size, variant, className, disabled, block }: IButton) => {
+
+  const isDisabled = disabled === true ? style.btnDisabled : null;
+  const isBlock = block === true ? style.btnBlock : null;
+
   const classes = classNames(
     className,
+    isDisabled,
+    isBlock,
     Sizes[size],
     Variants[variant],
   );

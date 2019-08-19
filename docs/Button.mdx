@@ -18,26 +18,26 @@ Button component docs 📄
 <Button size='md' variant='primary'>Primary btn</Button>
 <Button size='md' variant='secondary'>Secondary btn</Button>
 <Button size='md' variant='terciary'>Terciary btn</Button>
-<Button size='md' variant='disabled'>Disabled btn</Button>
+<Button size='md' disabled>Disabled btn</Button>
 ```
 <div className='flex flex-wrap justify-between items-center'>
   <Button size='md' variant='primary'>Primary btn</Button>
   <Button size='md' variant='secondary'>Secondary btn</Button>
   <Button size='md' variant='terciary'>Terciary btn</Button>
-  <Button size='md' variant='disabled'>Disabled btn</Button>
+  <Button size='md' disabled>Disabled btn</Button>
 </div>
 
 ```jsx
 <Button size='lg' variant='primary'>Primary btn</Button>
 <Button size='lg' variant='secondary'>Secondary btn</Button>
 <Button size='lg' variant='terciary'>Terciary btn</Button>
-<Button size='lg' variant='disabled'>Disabled btn</Button>
+<Button size='lg' disabled>Disabled btn</Button>
 ```
 <div className='flex flex-wrap justify-between items-center'>
   <Button size='lg' variant='primary'>Primary btn</Button>
   <Button size='lg' variant='secondary'>Secondary btn</Button>
   <Button size='lg' variant='terciary'>Terciary btn</Button>
-  <Button size='lg' variant='disabled'>Disabled btn</Button>
+  <Button size='lg' disabled>Disabled btn</Button>
 </div>
 
 ## With Icon
@@ -50,6 +50,19 @@ Button component docs 📄
   Secondary btn <Icon className='ml-4' size={16} gap={6} icon='icon-arrow-right' />
 </Button>
 
+## Block buttons
+```jsx
+<Button size='md' variant='primary'>Primary btn</Button>
+<Button size='md' variant='secondary'>Secondary btn</Button>
+<Button size='md' variant='terciary'>Terciary btn</Button>
+<Button size='md' disabled>Disabled btn</Button>
+```
+<div className='flex flex-wrap justify-between items-center'>
+  <Button className='mb-3' block size='md' variant='primary'>Primary btn</Button>
+  <Button className='mb-3' block size='md' variant='secondary'>Secondary btn</Button>
+  <Button className='mb-3' block size='md' variant='terciary'>Terciary btn</Button>
+  <Button block size='md' disabled>Disabled btn</Button>
+</div>
 
 ## With onClick method
 ```jsx
