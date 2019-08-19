@@ -11,6 +11,12 @@
     "lint": "tslint -p .",
     "test": "jest --verbose"
   },
+  "style": "dist/betomic.css",
+  "main": "dist/betomic.cjs.js",
+  "module": "dist/betomic.esm.js",
+  "unpkg": "dist/betomic.js",
+  "jsdelivr": "dist/betomic.js",
+  "cdn": "dist/betomic.js",
   "files": [
     "dist"
   ],
