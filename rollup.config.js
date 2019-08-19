@@ -1,6 +1,7 @@
 import TypescriptPlugin from 'rollup-plugin-typescript2';
 import PostCssPlugin from 'rollup-plugin-postcss';
 import NodeResolve from 'rollup-plugin-node-resolve';
+import CommonJs from 'rollup-plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
 
 const config = [
@@ -23,6 +24,11 @@ const config = [
         inject: false,
       }),
       NodeResolve(),
+      CommonJs({
+        namedExports: {
+          'node_modules/classnames/index.js': ['classNames'],
+        },
+      })
     ],
   },
   // CommonJs
@@ -44,6 +50,11 @@ const config = [
         inject: false,
       }),
       NodeResolve(),
+      CommonJs({
+        namedExports: {
+          'node_modules/classnames/index.js': ['classNames'],
+        },
+      }),
     ],
   },
   // Browser build
@@ -68,6 +79,11 @@ const config = [
       PostCssPlugin({ extract: true }),
       terser(),
       NodeResolve(),
+      CommonJs({
+        namedExports: {
+          'node_modules/classnames/index.js': ['classNames'],
+        },
+      }),
     ],
   },
 ]

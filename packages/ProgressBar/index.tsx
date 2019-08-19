@@ -1,5 +1,5 @@
 import * as React from 'react';
-import classNames from '../common/classnames';
+import classNames from 'classnames';
 import { variantIntensity, variantName } from '../common/constants';
 import style from './progressbar.module.pcss';
 

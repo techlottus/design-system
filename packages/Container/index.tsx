@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { IProps } from '../common/props';
-import classNames from '../common/classnames';
+import classNames from 'classnames';
 import style from './container.module.pcss';
 
 export interface IContainer extends IProps {
@@ -15,7 +15,7 @@ class Container extends React.PureComponent<IContainer, {}> {
   public render() {
     const { children, className, fluid } = this.props;
     const isFluid = !fluid ? style.containerCentered : null;
-    const classes = classNames(style.container, className, isFluid);
+    const classes = classNames(style.container, 'container', className, isFluid);
     return (
     <div className={classes}>{children}</div>
     );

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import classNames from '../common/classnames';
+import classNames from 'classnames';
 import { IProps } from '../common/props';
 import style from './nav.module.pcss';
 import NavItem from './NavItem';
