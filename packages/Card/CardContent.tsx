@@ -1,11 +1,11 @@
 import * as React from 'react';
 
-interface CardContentProps {
-  children: React.ReactNode;
-  className: string;
+export interface ICardContent {
+  children?: React.ReactNode;
+  className?: string;
 }
 
-const CardContent: React.SFC<CardContentProps> = ({ children, className }: CardContentProps) => (
+const CardContent: React.SFC<ICardContent> = ({ children, className }: ICardContent) => (
   <div className={`${className}`}>{children}</div>
 );
 

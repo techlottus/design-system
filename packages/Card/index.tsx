@@ -1,47 +1,39 @@
 import * as React from 'react';
+import classNames from '../common/classnames';
+import { variantIntensity, variantName } from '../common/constants';
+import CardHeader from './CardHeader';
+import CardContent from './CardContent';
+import CardFooter from './CardFooter';
+import styles from './card.module.pcss';
 
-interface CardProps {
-  children: React.ReactNode;
+export interface ICardProps {
+  children?: React.ReactNode;
   bordered?: boolean;
   variant?: string;
   variantAs?: string;
+  className?: string;
 }
 
-const variantName = {
-  surface: 'surface',
-  primary: 'primary',
-  secondary: 'secondary',
-  technology: 'technology',
-  english: 'english',
-  business: 'business',
-  prepa: 'prepa',
-};
+class Card extends React.Component<ICardProps> {
+  public static Header = CardHeader;
+  public static Content = CardContent;
+  public static Footer = CardFooter;
+  static defaultProps: ICardProps = { bordered: false, variant: 'surface', variantAs: '500', className: 'max-w-sm' };
 
-const variantIntensity = {
-  50: '50',
-  100: '100',
-  200: '200',
-  300: '300',
-  400: '400',
-  500: '500',
-  600: '600',
-  700: '700',
-  800: '800',
-  900: '900',
-  950: '950',
-};
+  public render() {
+    const { children, bordered, variant, variantAs, className } = this.props;
+    const classes = classNames(
+      styles.cardBordered,
+      `border-${variantName[variant]}-${variantIntensity[variantAs]}`,
+    );
 
-const CardMeta: React.SFC<CardProps> = ({ children, bordered, variant, variantAs }: CardProps) => (
-  <div className={`max-w-sm rounded overflow-hidden shadow-up-box mx-auto`}>
-    {bordered && <div className={`border-t-8 rounded-card border-${variantName[variant]}-${variantIntensity[variantAs]}`} />}
-    {children}
-  </div>
-);
+    return(
+      <div className={`${styles.card} ${className}`}>
+        {bordered && <div className={classes} />}
+        {children}
+      </div>
+    );
+  }
+}
 
-CardMeta.defaultProps = {
-  bordered: false,
-  variant: 'surface',
-  variantAs: '500',
-};
-
-export default CardMeta;
+export default Card;

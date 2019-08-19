@@ -2,22 +2,53 @@
 name: Icon
 menu: Components
 ---
+import Icon from '../packages/Icon';
+import Nav from '../packages/Nav';
 
-import { Playground, Props } from 'docz'
-import Icon from '../packages/Icon'
 
 # Icon
+Icon component docs
 
-Icon component docs 📄
+## Basic
+```jsx
+<Icon size={32} icon="icon-twitter" />
+<Icon size={32} icon="icon-facebook" />
+<Icon size={32} icon="icon-linkedin" />
+<Icon size={32} icon="icon-instagram" />
+```
+<Nav>
+  <Nav.Item>
+    <Icon size={32} icon="icon-twitter" />
+  </Nav.Item>
+  <Nav.Item>
+    <Icon size={32} icon="icon-facebook" />
+  </Nav.Item>
+  <Nav.Item>
+    <Icon size={32} icon="icon-linkedin" />
+  </Nav.Item>
+  <Nav.Item>
+    <Icon size={32} icon="icon-instagram-glyph" />
+  </Nav.Item>
+</Nav>
 
-<Props of={Icon} />
-
-## Basic Usage
-
-<Playground>
-  <Icon icon={'fab fa-amazon'} size={'18px'} state={'text-neutral'} className={''} />
-  <Icon icon={'fab fa-amazon'} size={'18px'} state={'text-active'} className={''} />
-  <Icon icon={'fab fa-amazon'} size={'18px'} state={'text-warning'} className={''} />
-  <Icon icon={'fab fa-amazon'} size={'18px'} state={'text-alert'} className={''} />
-  <Icon icon={'fab fa-amazon'} size={'18px'} state={'text-disabled'} className={''} />
-</Playground>
+## With gap
+```jsx
+<Icon size={32} gap={2} icon="icon-arrows" />
+<Icon size={32} gap={4} icon="icon-flag" />
+<Icon size={32} gap={6} icon="icon-money" />
+<Icon size={32} gap={8} icon="icon-cart" />
+```
+<Nav>
+  <Nav.Item>
+    <Icon size={32} gap={2} icon="icon-arrows" />
+  </Nav.Item>
+  <Nav.Item>
+    <Icon size={32} gap={4} icon="icon-flag" />
+  </Nav.Item>
+  <Nav.Item>
+    <Icon size={32} gap={6} icon="icon-money" />
+  </Nav.Item>
+  <Nav.Item>
+    <Icon size={32} gap={8} icon="icon-cart" />
+  </Nav.Item>
+</Nav>

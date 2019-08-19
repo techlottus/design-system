@@ -5,9 +5,6 @@ menu: Components
 
 import { Playground, Props } from 'docz'
 import Card from '../packages/Card'
-import CardHeader from '../packages/Card/CardHeader'
-import CardContent from '../packages/Card/CardContent'
-import CardFooter from '../packages/Card/CardFooter'
 import Button from '../packages/Button';
 
 # Card
@@ -18,61 +15,57 @@ Card component docs 📄
 
 ## Basic
 
-<Playground>
+<div>
   <Card>
-    <CardHeader>
+    <Card.Header>
       <img
       className="rounded-lg shadow-xl h-56 w-full object-fit object-center"
       src="https://bedu.org/wp-content/uploads/Bedu07_ux_frontend.png" />
-    </CardHeader>
-    <CardContent>
+    </Card.Header>
+    <Card.Content>
       <div className="text-xl font-montserrat font-bold text-surface-900 mb-2">
         Fullstack JavaScript
       </div>
       <p className="font-base text-surface-700">
         Aprende a desarrollar web apps de forma fluida y autónoma con el ecosistema tecnológico más popular.
       </p>
-    </CardContent>
-    <CardFooter>
+    </Card.Content>
+    <Card.Footer>
       <Button>Ver más</Button>
-    </CardFooter>
+    </Card.Footer>
   </Card>
-</Playground>
 
-## With Border
+  <h2>With Border</h2>
 
-<Playground>
   <Card bordered>
-    <CardHeader>
+    <Card.Header>
       <img
       className="rounded-lg shadow-xl h-56 w-full object-fit object-center"
       src="https://bedu.org/wp-content/uploads/Bedu07_ux_frontend.png" />
-    </CardHeader>
-    <CardContent>
+    </Card.Header>
+    <Card.Content>
       <div className="text-xl font-montserrat font-bold text-surface-900 mb-2">
         Fullstack JavaScript
       </div>
       <p className="font-base text-surface-700">
         Aprende a desarrollar web apps de forma fluida y autónoma con el ecosistema tecnológico más popular.
       </p>
-    </CardContent>
-    <CardFooter>
+    </Card.Content>
+    <Card.Footer>
       <Button>Ver más</Button>
-    </CardFooter>
+    </Card.Footer>
   </Card>
-</Playground>
 
-## Without Header/Footer
+  <h2>Without Header/Footer</h2>
 
-<Playground>
   <Card bordered variant="english" variantAs="500">  
-    <CardContent>
+    <Card.Content>
       <div className="text-xl font-montserrat font-bold text-surface-900 mb-2">
         Fullstack JavaScript
       </div>
       <p className="font-base text-surface-700">
         Aprende a desarrollar web apps de forma fluida y autónoma con el ecosistema tecnológico más popular.
       </p>
-    </CardContent>
+    </Card.Content>
   </Card>
-</Playground>
+</div>

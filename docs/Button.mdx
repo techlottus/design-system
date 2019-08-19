@@ -5,6 +5,7 @@ menu: Components
 
 import { Playground, Props } from 'docz'
 import Button from '../packages/Button'
+import Icon from '../packages/Icon'
 
 # Button
 
@@ -13,10 +14,73 @@ Button component docs 📄
 <Props of={Button} />
 
 ## Basic Usage
+```jsx
+<Button size='md' variant='primary'>Primary btn</Button>
+<Button size='md' variant='secondary'>Secondary btn</Button>
+<Button size='md' variant='terciary'>Terciary btn</Button>
+<Button size='md' disabled>Disabled btn</Button>
+```
+<div className='flex flex-wrap justify-between items-center'>
+  <Button size='md' variant='primary'>Primary btn</Button>
+  <Button size='md' variant='secondary'>Secondary btn</Button>
+  <Button size='md' variant='terciary'>Terciary btn</Button>
+  <Button size='md' disabled>Disabled btn</Button>
+</div>
 
-<Playground>
-  <Button>Primary btn</Button>
-  <Button variant='secondary'>Secondary btn</Button>
-  <Button variant='terciary'>Terciary btn</Button>
-  <Button variant='disabled'>Disabled btn</Button>
-</Playground>
+```jsx
+<Button size='lg' variant='primary'>Primary btn</Button>
+<Button size='lg' variant='secondary'>Secondary btn</Button>
+<Button size='lg' variant='terciary'>Terciary btn</Button>
+<Button size='lg' disabled>Disabled btn</Button>
+```
+<div className='flex flex-wrap justify-between items-center'>
+  <Button size='lg' variant='primary'>Primary btn</Button>
+  <Button size='lg' variant='secondary'>Secondary btn</Button>
+  <Button size='lg' variant='terciary'>Terciary btn</Button>
+  <Button size='lg' disabled>Disabled btn</Button>
+</div>
+
+## With Icon
+```jsx
+<Button size='md' variant='secondary'>
+  Secondary btn <Icon className='ml-4' size={16} gap={6} icon='icon-arrow-right' />
+</Button>
+```
+<Button size='md' variant='secondary'>
+  Secondary btn <Icon className='ml-4' size={16} gap={6} icon='icon-arrow-right' />
+</Button>
+
+## Block buttons
+```jsx
+<Button size='md' variant='primary'>Primary btn</Button>
+<Button size='md' variant='secondary'>Secondary btn</Button>
+<Button size='md' variant='terciary'>Terciary btn</Button>
+<Button size='md' disabled>Disabled btn</Button>
+```
+<div className='flex flex-wrap justify-between items-center'>
+  <Button className='mb-3' block size='md' variant='primary'>Primary btn</Button>
+  <Button className='mb-3' block size='md' variant='secondary'>Secondary btn</Button>
+  <Button className='mb-3' block size='md' variant='terciary'>Terciary btn</Button>
+  <Button block size='md' disabled>Disabled btn</Button>
+</div>
+
+## With onClick method
+```jsx
+<Button variant='primary' size='md' onClick={() => alert('onClick method')}>
+  Primary btn
+  <Icon
+    size={16}
+    gap={6}
+    icon='icon-arrow-right'
+    className='ml-2' />
+</Button>
+```
+
+<Button variant='primary' size='md' onClick={() => alert('onClick method')}>
+  Primary btn
+  <Icon
+    size={16}
+    gap={6}
+    icon='icon-arrow-right'
+    className='ml-4' />
+</Button>

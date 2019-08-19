@@ -1,11 +1,9 @@
 import * as React from 'react';
 import Glide from '@glidejs/glide';
-import '@glidejs/glide/dist/css/glide.theme.min.css';
-import '@glidejs/glide/dist/css/glide.core.min.css';
 import GlideItem from './GlideItem';
 import './styles.css';
 
-interface GlideContainerProps {
+interface IGlideContainerProps {
   children?: any;
   element: string;
   type: 'carousel' | 'slider';
@@ -15,7 +13,6 @@ interface GlideContainerProps {
   gap?: number;
   autoplay?: number | boolean;
   hoverpause?: boolean;
-  keyboard?: boolean;
   bound?: boolean;
   swipeThreshold?: number | boolean;
   animationDuration?: number;
@@ -25,9 +22,26 @@ interface GlideContainerProps {
   breakpoints?: object;
 }
 
-class GlideContainer extends React.Component<GlideContainerProps> {
-  static defaultProps: GlideContainerProps;
-  constructor(props: GlideContainerProps) {
+class GlideContainer extends React.Component<IGlideContainerProps> {
+  static defaultProps: IGlideContainerProps = {
+    element: 'custom',
+    type: 'carousel',
+    startAt: 0,
+    perView: 1,
+    focusAt: 0,
+    gap: 10,
+    autoplay: false,
+    hoverpause: true,
+    bound: true,
+    swipeThreshold: 80,
+    animationDuration: 400,
+    rewind: true,
+    rewindDuration: 800,
+    dots: true,
+    breakpoints: {},
+  };
+
+  constructor(props: IGlideContainerProps) {
     super(props);
   }
 
@@ -45,7 +59,6 @@ class GlideContainer extends React.Component<GlideContainerProps> {
       gap,
       autoplay,
       hoverpause,
-      keyboard,
       bound,
       swipeThreshold,
       animationDuration,
@@ -62,7 +75,7 @@ class GlideContainer extends React.Component<GlideContainerProps> {
       gap,
       autoplay,
       hoverpause,
-      keyboard,
+      keyboard: false,
       bound,
       swipeThreshold,
       animationDuration,
@@ -112,24 +125,4 @@ class GlideContainer extends React.Component<GlideContainerProps> {
     );
   }
 }
-
-GlideContainer.defaultProps = {
-  element: 'custom',
-  type: 'carousel',
-  startAt: 0,
-  perView: 1,
-  focusAt: 0,
-  gap: 10,
-  autoplay: false,
-  hoverpause: true,
-  keyboard: true,
-  bound: true,
-  swipeThreshold: 80,
-  animationDuration: 400,
-  rewind: true,
-  rewindDuration: 800,
-  dots: true,
-  breakpoints: {},
-};
-
 export default GlideContainer;

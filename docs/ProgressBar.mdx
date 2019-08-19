@@ -3,15 +3,21 @@ name: ProgressBar
 menu: Components
 ---
 
-import { Playground, Props } from 'docz'
-import ProgressBar from '../packages/ProgressBar'
+import ProgressBar from '../packages/ProgressBar';
+import ProgressBarExample from './examples/ProgressBarExamples.tsx'
+
 
 # ProgressBar
 
-ProgressBar component docz 📄
+ProgressBar component docs 📄
+
+<Props of={ProgressBar} />
 
 ## Basic Usage
+```jsx
+<ProgressBar value={30} variant='technology' variantAs='300'/>
+```
+<ProgressBar value={30} variant='technology' variantAs='300'/>
 
-<Playground>
-  <ProgressBar value={25} variant='prepa' variantAs='500' />
-</Playground>
+## Example
+<ProgressBarExample />

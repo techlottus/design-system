@@ -1,6 +1,8 @@
 module.exports = {
+  important: true,
   theme: {
     colors: {
+      transparent: 'transparent',
       surface: {
         "50":"#F4F4F5",
         "100":"#EAEBED",
@@ -141,20 +143,26 @@ module.exports = {
       '48': '192px',
       '56': '224px',
       '64': '256px',
+      '74': '294px',
+    },
+    opacity: {
+      '0': '0',
+      '10': '.1',
+      '20': '.2',
+      '30': '.3',
+      '40': '.4',
+      '50': '.5',
+      '60': '.6',
+      '70': '.7',
+      '80': '.8',
+      '90': '.9',
+      '100': '1',
+    },
+    zIndex: {
+      '9999': '9999',
     },
   },
   variants: {
     borderWidth: ['responsive', 'hover', 'focus'],
   },
-  plugins: [
-    require('tailwindcss-grid')({
-      grids: [2, 3, 5, 6, 8, 10, 12],
-      gaps: {
-        0: '0',
-        4: '1rem',
-        8: '2rem',
-      },
-      variants: ['responsive'],
-    }),
-  ],
-}
+};
