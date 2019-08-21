@@ -3,10 +3,23 @@
 
 :root { --grid-gap: 15px; }
 .grid-container { display: grid; grid-gap: var(--grid-gap); }
-.grid { display: grid; }
-.sm\:grid { display: grid !important; }
-.md\:grid { display: grid !important; }
-.lg\:grid { display: grid !important; }
-.xl\:grid { display: grid !important; }
+.grid { display: grid !important; }
 
 @tailwind utilities;
+@tailwind screens;
+
+@screen sm {
+  .sm\:grid { display: grid !important; }
+}
+
+@screen md {
+  .md\:grid { display: grid !important; }
+}
+
+@screen lg {
+  .lg\:grid { display: grid !important; }
+}
+
+@screen xl {
+  .xl\:grid { display: grid !important; }
+}
