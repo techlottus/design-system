@@ -96,6 +96,7 @@ module.exports = {
       'none': '0',
       'card': '4px 4px 0 0',
       default: '4px',
+      'full': '50%',
     },
     fontFamily: {
       'montserrat': ['Montserrat', 'sans-serif'],
@@ -155,6 +156,7 @@ module.exports = {
       '33': '132px',
       '35': '140px',
       '40': '160px',
+      '47': '188px',
       '48': '192px',
       '55': '220px',
       '56': '224px',

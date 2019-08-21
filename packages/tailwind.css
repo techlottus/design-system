@@ -1,8 +1,8 @@
-:root { --grid-gap: 15px; }
-
 @tailwind base;
 @tailwind components;
 
+:root { --grid-gap: 15px; }
 .grid-container { display: grid; grid-gap: var(--grid-gap); }
+.grid { display: grid; }
 
 @tailwind utilities;
