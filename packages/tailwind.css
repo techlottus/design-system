@@ -4,5 +4,9 @@
 :root { --grid-gap: 15px; }
 .grid-container { display: grid; grid-gap: var(--grid-gap); }
 .grid { display: grid; }
+.sm\:grid { display: grid !important; }
+.md\:grid { display: grid !important; }
+.lg\:grid { display: grid !important; }
+.xl\:grid { display: grid !important; }
 
 @tailwind utilities;
