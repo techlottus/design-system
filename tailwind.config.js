@@ -4,7 +4,7 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       surface: {
-        "50":"#F4F4F5",
+        "50":"#F0F1F2",
         "100":"#EAEBED",
         "200":"#A9AEB8",
         "300":"#7E8594",
@@ -89,7 +89,8 @@ module.exports = {
       disabled: '#B1B1B1',
       white: '#FFFFFF',
       black: '#000000',
-      success: '#17BF9D'
+      success: '#17BF9D',
+      butterscotch: '#FCC43F',
     },
     borderRadius: {
       'none': '0',
@@ -101,13 +102,16 @@ module.exports = {
       'rubik': ['Rubik', 'sans-serif'],
     },
     fontSize: {
-      xs: '0.75rem',
-      base: '1rem',
-      lg: '1.125rem',
-      xl: '1.25rem',
-      '3xl': '1.875rem',
-      '5xl': '3rem',
-      '6xl': '4rem',
+      xs: '12px',
+      base: '16px',
+      lg: '18px',
+      xl: '20px',
+      '24': '24px',
+      '2xl': '28px',
+      '3xl': '30px',
+      '4xl': '36px',
+      '5xl': '48px',
+      '6xl': '64px',
     },
     boxShadow: {
       default: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
@@ -138,6 +142,7 @@ module.exports = {
       '16': '64px',
       '20': '80px',
       '24': '96px',
+      '25': '100px',
       '32': '128px',
       '40': '160px',
       '48': '192px',
