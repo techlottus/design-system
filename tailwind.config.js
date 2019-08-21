@@ -129,7 +129,9 @@ module.exports = {
       'down-box': '0 2px 2px 0 rgba(224,230,234,0.8)',
     },
     spacing: {
+      npx: '-1px',
       px: '1px',
+      '2px': '2px',
       '0': '0px',
       '1': '4px',
       '2': '8px',
