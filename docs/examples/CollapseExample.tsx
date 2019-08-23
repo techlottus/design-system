@@ -20,14 +20,11 @@ class CollapseExample extends React.PureComponent<{}, ICollapseExampleState> {
   public render() {
     return (
       <>
-        <Collapse title='Cuánto tiempo dura?' isOpen={this.state.isOpen} icon={{
-          opened: <button className='flex' onClick={this.toggleCollapse}>
-            <Icon size={24} icon='icon-minus' />
-          </button>,
-          closed: <button className='flex' onClick={this.toggleCollapse}>
-            <Icon size={24} icon='icon-plus' />
-          </button>,
-        }}>
+        <Collapse title='Cuánto tiempo dura?' isOpen={this.state.isOpen} icon={
+          <button className='flex' onClick={this.toggleCollapse}>
+            {this.state.isOpen ? <Icon size={24} icon='icon-minus' /> : <Icon size={24} icon='icon-plus' />}
+          </button>
+        }>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nostrum eum officiis,
           nihil adipisci deserunt perspiciatis officia sed quos sapiente recusandae distinctio
           maxime architecto nesciunt amet repudiandae iure praesentium minus?

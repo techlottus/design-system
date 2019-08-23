@@ -3,15 +3,10 @@ import classNames from 'classnames';
 import { IProps } from '../common/props';
 import style from './collapse.module.pcss';
 
-interface Icons {
-  opened: React.ReactNode;
-  closed: React.ReactNode;
-}
-
 export interface ICollapse extends IProps {
   children?: React.ReactNode;
   title?: string;
-  icon?: Icons;
+  icon?: React.ReactNode;
   isOpen?: boolean;
 }
 
@@ -25,7 +20,7 @@ class Collapse extends React.PureComponent<ICollapse, {}> {
         <div className={style.collapseHeading}>
           <div className={style.collapseTitle}>{title}</div>
           <div className={style.collapseIcon}>
-            {icon && isOpen ? icon.opened : icon.closed}
+            {icon && icon}
           </div>
         </div>
         {isOpen && <div className={style.collapseContent}>

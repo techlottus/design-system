@@ -14,22 +14,17 @@ Collapse component docs
 
 ## Usage
 ```jsx
-<Collapse
-  title="¿Cuánto tiempo dura?"
-  isOpen
-  icon={{
-    opened: <Icon size={24} icon='icon-plus' />,
-    closed: <Icon size={24} icon='icon-minus' />,
-  }}>
+<Collapse title="¿Cuánto tiempo dura?" icon={
+  <Icon size={24} icon='icon-plus' />
+}>
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nostrum eum officiis,
   nihil adipisci deserunt perspiciatis officia sed quos sapiente recusandae distinctio
   maxime architecto nesciunt amet repudiandae iure praesentium minus?  
 </Collapse>
 ```
-<Collapse title="¿Cuánto tiempo dura?" isOpen icon={{
-  opened: <Icon size={24} icon='icon-plus' />,
-  closed: <Icon size={24} icon='icon-minus' />,
-}}>
+<Collapse title="¿Cuánto tiempo dura?" icon={
+  <Icon size={24} icon='icon-plus' />
+}>
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nostrum eum officiis,
   nihil adipisci deserunt perspiciatis officia sed quos sapiente recusandae distinctio
   maxime architecto nesciunt amet repudiandae iure praesentium minus?  
@@ -59,14 +54,11 @@ class CollapseExample extends React.PureComponent<{}, ICollapseExampleState> {
   public render() {
     return (
       <>
-        <Collapse title='Cuánto tiempo dura?' isOpen={this.state.isOpen} icon={{
-          opened: <button className='flex' onClick={this.toggleCollapse}>
-            <Icon size={24} icon='icon-plus' />
-          </button>,
-          closed: <button className='flex' onClick={this.toggleCollapse}>
-            <Icon size={24} icon='icon-minus' />
-          </button>,
-        }}>
+        <Collapse title='Cuánto tiempo dura?' isOpen={this.state.isOpen} icon={
+          <button className='flex' onClick={this.toggleCollapse}>
+            {this.state.isOpen ? <Icon size={24} icon='icon-minus' /> : <Icon size={24} icon='icon-plus' />}
+          </button>
+        }>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nostrum eum officiis,
           nihil adipisci deserunt perspiciatis officia sed quos sapiente recusandae distinctio
           maxime architecto nesciunt amet repudiandae iure praesentium minus?
