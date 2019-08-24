@@ -125,6 +125,7 @@ module.exports = {
       none: 'none',
       'primary-200': '0 0 0 3px #F77D86',
       'secondary-200': '0 0 0 3px #7DA2F7',
+      'box': '0 0 10px 0 rgba(38,39,41,0.2)',
       'up-box': '0 10px 10px 0 rgba(224,230,234,0.8)',
       'down-box': '0 2px 2px 0 rgba(224,230,234,0.8)',
     },
