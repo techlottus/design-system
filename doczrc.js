@@ -5,6 +5,8 @@ export default {
   title: 'Betomic',
   codeSandbox: false,
   typescript: true,
+  filterComponents: (files) =>
+    files.filter(filepath => /[w-]*.(js|jsx|ts|tsx)$/.test(filepath)),
   htmlContext: {
     head: {
       links: [
