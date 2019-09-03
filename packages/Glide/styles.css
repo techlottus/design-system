@@ -8,7 +8,7 @@
 }
 
 .glide__bullet:hover {
-  @apply bg-surface-600 !important;
+  @apply bg-surface-600 border-0 !important;
 }
 
 .glide__bullet:focus {
