@@ -7,6 +7,7 @@
 
 @tailwind utilities;
 @tailwind screens;
+@import "./Glide/styles.css";
 
 @screen sm {
   .sm\:grid { display: grid !important; }
