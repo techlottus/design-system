@@ -115,7 +115,7 @@ class GlideContainer extends React.Component<IGlideContainerProps> {
         </div>
 
         {children && children.length > 0 && dots ?
-          <div className='glide__bullets' data-glide-el='controls[nav]'>
+          <div className='glide__bullets mt-3' data-glide-el='controls[nav]'>
             {children.map((_, index) => {
               return <button key={index} className='glide__bullet' data-glide-dir={`=${index}`} />;
             })}
