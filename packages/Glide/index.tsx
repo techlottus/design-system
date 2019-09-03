@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Glide from '@glidejs/glide';
 import GlideItem from './GlideItem';
-import './styles.css';
 
 interface IGlideContainerProps {
   children?: any;
