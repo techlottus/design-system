@@ -4,6 +4,7 @@
 
 .glide__bullet {
   @apply bg-surface-200 !important;
+  @apply h-3 w-3 !important;
 }
 
 .glide__bullet:hover {
@@ -18,4 +19,5 @@
 
 .glide__bullet--active {
   @apply bg-surface-600 !important;
+  @apply h-14px w-14px !important;
 }
