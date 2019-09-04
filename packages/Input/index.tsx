@@ -47,9 +47,11 @@ class Input extends React.Component<IInputProps> {
       children,
       error,
       success,
+      className,
     } = this.props;
 
     const classes = classNames(
+      className,
       styles.standardInput, {
         [styles.standardInputError]: error,
         [styles.standardInputSucces]: success,
