@@ -1,0 +1,36 @@
+---
+name: Modal
+menu: Components
+---
+
+import { Props } from 'docz'
+import Modal from '../packages/Modal'
+import ModalExample from './examples/ModalExample';
+
+# Modal
+
+Modal component docs
+
+## Props
+<Props of={Modal} />
+
+## Usage
+
+```jsx
+
+const FooterContent = <button>Hello</button>;
+const ModalContent = <p>Your content!</p>;
+
+<Modal
+  isVisible={isModal}
+  title='¡Descarga el temario completo!'
+  subtitle='Compártenos tus datos para agendar tu clase muestra.'
+  content={ModalContent}
+  footer={FooterContent}
+  onClose={() => setModal(false)}
+/>
+```
+
+<div>
+  <ModalExample />
+</div>
