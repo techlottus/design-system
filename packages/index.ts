@@ -13,3 +13,6 @@ export { default as Navbar } from './Navbar';
 export { default as Container } from './Container';
 export { default as Avatar } from './Avatar';
 export { default as Collapse } from './Collapse';
+export { default as Drawer } from './Drawer';
+export { default as Modal } from './Modal';
+export { default as Badge } from './Badge';
