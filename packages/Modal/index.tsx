@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { IProps } from '../common/props';
 import Icon from '../Icon/index';
-import styles from './styles.pcss';
+import styles from './styles.module.pcss';
 
 interface IModalProps extends IProps {
   isVisible?: boolean;
