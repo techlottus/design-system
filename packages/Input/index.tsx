@@ -6,7 +6,6 @@ import styles from './input.module.pcss';
 
 interface IInputProps extends HTMLInputProps, IProps {
   htmlId: string;
-  type: 'text' | 'email' | 'password';
   name: string;
   value?: string;
   placeholder?: string;
@@ -15,14 +14,13 @@ interface IInputProps extends HTMLInputProps, IProps {
   required?: boolean;
   error?: string | boolean;
   success?: boolean;
-  callback?: (event: any) => any;
+  callback?: (event: React.FormEvent<HTMLInputElement>) => void;
   children?: React.ReactNode | React.ReactNode[];
 }
 
 class Input extends React.Component<IInputProps> {
   static defaultProps: IInputProps = {
     htmlId: 'labeldemo',
-    type: 'text',
     name: 'Input name',
     placeholder: 'Insert some text...',
     disabled: false,
@@ -35,7 +33,6 @@ class Input extends React.Component<IInputProps> {
   render() {
     const {
       htmlId,
-      type,
       name,
       value,
       required,
@@ -61,7 +58,6 @@ class Input extends React.Component<IInputProps> {
       <React.Fragment>
         <input
           id={htmlId}
-          type={type}
           name={name}
           value={value}
           required={required}
