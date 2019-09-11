@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { HTMLInputProps } from '../common/props';
+import { HTMLInputProps, IProps } from '../common/props';
 import BoxMessage from './BoxMessage';
 import classNames from 'classnames';
 import styles from './input.module.pcss';
 
-interface IInputProps extends HTMLInputProps {
+interface IInputProps extends HTMLInputProps, IProps {
   htmlId: string;
   type: 'text' | 'email' | 'password';
   name: string;
@@ -16,7 +16,6 @@ interface IInputProps extends HTMLInputProps {
   error?: string | boolean;
   success?: boolean;
   callback?: (event: any) => any;
-  className?: string;
   children?: React.ReactNode | React.ReactNode[];
 }
 
