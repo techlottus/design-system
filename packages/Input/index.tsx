@@ -1,9 +1,10 @@
 import * as React from 'react';
+import { HTMLInputProps, IProps } from '../common/props';
 import BoxMessage from './BoxMessage';
 import classNames from 'classnames';
 import styles from './input.module.pcss';
 
-interface IInputProps {
+interface IInputProps extends HTMLInputProps, IProps {
   htmlId: string;
   type: 'text' | 'email' | 'password';
   name: string;
@@ -15,7 +16,6 @@ interface IInputProps {
   error?: string | boolean;
   success?: boolean;
   callback?: (event: any) => any;
-  className?: string;
   children?: React.ReactNode | React.ReactNode[];
 }
 
@@ -28,7 +28,6 @@ class Input extends React.Component<IInputProps> {
     disabled: false,
     readOnly: false,
     required: false,
-    callback: (e: any) => { console.log(e.target.value); },
     error: false,
     success: false,
   };
@@ -48,6 +47,7 @@ class Input extends React.Component<IInputProps> {
       error,
       success,
       className,
+      ...htmlProps
     } = this.props;
 
     const classes = classNames(
@@ -70,6 +70,7 @@ class Input extends React.Component<IInputProps> {
           placeholder={placeholder}
           onChange={callback}
           className={classes}
+          {...htmlProps}
         />
         {children}
       </React.Fragment>
