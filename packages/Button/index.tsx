@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { IProps } from '../common/props';
+import { IProps, HTMLButtonProps } from '../common/props';
 import classNames from 'classnames';
 import style from './button.module.pcss';
 
@@ -19,7 +19,7 @@ const Variants = {
 
 type Variant = typeof Variants[keyof typeof Variants];
 
-export interface IButton extends IProps {
+export interface IButton extends IProps, HTMLButtonProps {
   size: Size;
   variant: Variant;
   disabled: boolean;
@@ -28,7 +28,7 @@ export interface IButton extends IProps {
   onClick?: () => void;
 }
 
-const Button: React.SFC<IButton> = ({ children, onClick, size, variant, className, disabled, block }: IButton) => {
+const Button: React.SFC<IButton> = ({ children, onClick, size, variant, className, disabled, block, ...props }: IButton) => {
 
   const isDisabled = disabled === true ? style.btnDisabled : null;
   const isBlock = block === true ? style.btnBlock : null;
@@ -43,7 +43,8 @@ const Button: React.SFC<IButton> = ({ children, onClick, size, variant, classNam
   return (
     <button
       onClick={onClick}
-      className={classes}>
+      className={classes}
+      {...props}>
       {children}
     </button>
   );

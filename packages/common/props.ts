@@ -5,6 +5,7 @@ import * as React from 'react';
  * Does not include React's `ref` or `key`.
  */
 export type HTMLDivProps = React.HTMLAttributes<HTMLDivElement>;
+export type HTMLButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 /**
  * A shared base interface for all component props.
