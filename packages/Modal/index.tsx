@@ -24,8 +24,8 @@ const Modal: React.SFC<IModalProps> = ({ isVisible, children, onClose }: IModalP
     }
   }
 
-  return !isVisible ? null : (
-    <div className={styles.modal} onClick={onClose}>
+  return (
+    <div className={`${styles.modal} ${!isVisible ? 'hidden' : 'flex' }`} onClick={onClose}>
       <div className={styles.modalDialog} onClick={e => e.stopPropagation()}>
         <button className={styles.modalClose} onClick={onClose}>
           <Icon className='text-surface-700' icon='icon-close' />
