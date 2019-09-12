@@ -1,4 +1,5 @@
 import * as React from 'react';
+import classNames from 'classnames';
 import { IProps } from '../common/props';
 import Icon from '../Icon/index';
 import styles from './styles.module.pcss';
@@ -9,7 +10,13 @@ interface IModalProps extends IProps {
   onClose?: () => void;
 }
 
-const Modal: React.SFC<IModalProps> = ({ isVisible, children, onClose }: IModalProps) => {
+const Modal: React.SFC<IModalProps> = ({ isVisible, children, onClose, className }: IModalProps) => {
+  const classes = classNames(
+    className,
+    styles.modal, {
+      ['hidden']: !isVisible,
+    },
+  );
   React.useEffect(() => {
     document.addEventListener('keydown', keydownHandler);
     return () => document.removeEventListener('keydown', keydownHandler);
@@ -25,7 +32,7 @@ const Modal: React.SFC<IModalProps> = ({ isVisible, children, onClose }: IModalP
   }
 
   return (
-    <div className={`${styles.modal} ${!isVisible ? 'hidden' : 'flex' }`} onClick={onClose}>
+    <div className={classes} onClick={onClose}>
       <div className={styles.modalDialog} onClick={e => e.stopPropagation()}>
         <button className={styles.modalClose} onClick={onClose}>
           <Icon className='text-surface-700' icon='icon-close' />
