@@ -19,7 +19,7 @@ interface IDrawerProps extends IProps {
   position?: Position;
 }
 
-const Drawer: React.SFC<IDrawerProps> = ({ isVisible, children, onClose, position }: IDrawerProps ) => {
+const Drawer: React.SFC<IDrawerProps> = ({ isVisible, children, onClose, position, className }: IDrawerProps ) => {
   React.useEffect(() => {
     document.addEventListener('keydown', keydownHandler);
     return () => document.removeEventListener('keydown', keydownHandler);
@@ -37,6 +37,7 @@ const Drawer: React.SFC<IDrawerProps> = ({ isVisible, children, onClose, positio
   const clasess = classNames (
     styles.drawerDialog,
     Positions[position],
+    className,
   );
 
   return !isVisible ? null : (
