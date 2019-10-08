@@ -3,7 +3,11 @@ import Modal from '../../packages/Modal';
 import Button from '../../packages/Button';
 import Input from '../../packages/Input';
 
-const ModalExample = () => {
+interface IModalExampleProps {
+  noEscape?: boolean;
+}
+
+const ModalExample = ({noEscape}: IModalExampleProps) => {
   const [isModal, setModal] = React.useState(false);
 
   return (
@@ -11,7 +15,8 @@ const ModalExample = () => {
       <Button size='md' variant='terciary' disabled={false} block={false} onClick={() => setModal(true)}>Show Modal</Button>
       <Modal
         isVisible={isModal}
-        onClose={() => setModal(false)}
+        onClose={!noEscape ? () => setModal(false) : null}
+        noEscape={noEscape ? noEscape : null}
       >
         <div className='flex flex-col items-start'>
           <h3 className='mt-4 font-montserrat font-bold text-xl md:text-3xl'>¡Descarga el temario completo!</h3>
