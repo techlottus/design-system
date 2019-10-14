@@ -13,6 +13,7 @@ interface IModalProps extends IProps {
 
 const Modal: React.SFC<IModalProps> = ({ isVisible, noEscape, children, onClose, className }: IModalProps) => {
   const classes = classNames(
+    'md:items-center',
     className,
     styles.modal, {
       ['hidden']: !isVisible,
