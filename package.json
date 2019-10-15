@@ -11,6 +11,9 @@
     "lint": "tslint -p .",
     "test": "jest --verbose"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "style": "dist/betomic.css",
   "main": "dist/betomic.cjs.js",
   "module": "dist/betomic.esm.js",
