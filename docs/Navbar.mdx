@@ -1,0 +1,68 @@
+---
+name: Navbar
+menu: Components
+---
+
+import { Props } from 'docz';
+import { Nav, Navbar } from '../packages';
+import Logotype from './assets/logotype.svg';
+import IconMenu from './assets/icon-menu.svg';
+
+# Navbar
+
+Navbar component docs
+
+## Props
+<Props of={Navbar} />
+
+## Basic Usage
+```jsx
+<Navbar className="bg-white">
+  <Navbar.Brand className="justify-center">
+    <a href="#">
+      <img src={Logotype} width="120" />
+    </a>
+  </Navbar.Brand>
+  <Nav className="hidden lg:flex" align="right">
+    <Nav.Item>
+      <a href="#">Inicio</a>
+    </Nav.Item>
+    <Nav.Item>
+      <a href="#">Cursos</a>
+    </Nav.Item>
+    <Nav.Item>
+      <a href="#">Expertos</a>
+    </Nav.Item>
+    <Nav.Item>
+      <a href="#">Nosotros</a>
+    </Nav.Item>
+  </Nav>
+  <a className="lg:hidden flex flex-1 justify-end px-3" href="#">
+    <img src={IconMenu} width="32" />
+  </a>
+</Navbar>
+```
+<Navbar className="bg-white">
+  <Navbar.Brand className="justify-center">
+    <a href="#">
+      <img src={Logotype} width="120" />
+    </a>
+  </Navbar.Brand>
+  <Nav className="hidden lg:flex" align="right">
+    <Nav.Item>
+      <a href="#">Inicio</a>
+    </Nav.Item>
+    <Nav.Item>
+      <a href="#">Cursos</a>
+    </Nav.Item>
+    <Nav.Item>
+      <a href="#">Expertos</a>
+    </Nav.Item>
+    <Nav.Item>
+      <a href="#">Nosotros</a>
+    </Nav.Item>
+  </Nav>
+  <a className="lg:hidden flex flex-1 justify-end px-3" href="#">
+    <img src={IconMenu} width="32" />
+  </a>
+</Navbar>

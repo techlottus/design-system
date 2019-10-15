@@ -1,13 +1,16 @@
 {
   "compilerOptions": {
-    "sourceMap": true,
-    "target": "es2015",
+    "module": "es6",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "target": "es5",
     "jsx": "react",
     "declaration": true,
-    "outDir": "lib",
-    "moduleResolution": "node"
   },
   "include": [
     "packages"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }

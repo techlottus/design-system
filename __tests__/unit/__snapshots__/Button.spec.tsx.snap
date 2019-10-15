@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button.tsx should match the snapshot 1`] = `
+<button
+  className=" px-8 py-3 text-base 
+    bg-primary-400
+    hover:bg-primary-700
+    rounded
+    focus:outline-none
+    focus:shadow-primary-200
+    focus:bg-primary-700
+    inline-flex
+    justify-center
+    items-center
+    text-white
+    font-bold
+    font-montserrat
+  "
+>
+  Button
+</button>
+`;
