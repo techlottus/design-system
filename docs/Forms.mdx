@@ -1,0 +1,170 @@
+---
+name: Forms
+menu: Components
+---
+import { Playground, Props } from 'docz'
+import FormGroup from '../packages/Forms/FormGroup'
+import InputGroup from '../packages/Forms/InputGroup'
+import Icon from '../packages/Icon';
+import InputGroupHandlerExample from './examples/FormExamples';
+
+# Forms
+Form components docs
+
+## Basic
+<div>
+  <FormGroup
+    label={
+      <div>Email Address <span className="text-primary-500">*</span></div>
+    }
+    helperText="This email address is used for send important emails">
+    <InputGroup
+      type="email"
+      placeholder="Enter your email" />
+  </FormGroup>
+  <FormGroup
+    className="pt-4"
+    label={
+      <div>Password <span className="text-primary-500">*</span></div>
+    }>
+    <InputGroup
+      type="password" />
+  </FormGroup>
+</div>
+
+```js
+<div>
+  <FormGroup
+    label={
+      <div>Email Address <span className="text-primary-500">*</span></div>
+    }
+    helperText="This email address is used for send important emails">
+    <InputGroup
+      type="email"
+      placeholder="Enter your email" />
+  </FormGroup>
+  <FormGroup
+    className="pt-4"
+    label={
+      <div>Password <span className="text-primary-500">*</span></div>
+    }>
+    <InputGroup
+      type="password" />
+  </FormGroup>
+</div>
+```
+
+## With validation
+<div>
+  <FormGroup
+    label={
+      <div>Email Address <span className="text-primary-500">*</span></div>
+    }
+    helperText="This email address is used for send important emails">
+    <InputGroup
+      type="email"
+      isValid={true}
+      placeholder="Enter your email" />
+  </FormGroup>
+  <FormGroup
+    className="pt-4"
+    label={
+      <div>Password <span className="text-primary-500">*</span></div>
+    }>
+    <InputGroup
+      isValid={false}
+      type="password" />
+  </FormGroup>
+</div>
+
+```js
+<div>
+  <FormGroup
+    label={
+      <div>Email Address <span className="text-primary-500">*</span></div>
+    }
+    helperText="This email address is used for send important emails">
+    <InputGroup
+      type="email"
+      isValid={true}
+      placeholder="Enter your email" />
+  </FormGroup>
+  <FormGroup
+    className="pt-4"
+    label={
+      <div>Password <span className="text-primary-500">*</span></div>
+    }>
+    <InputGroup
+      isValid={false}
+      type="password" />
+  </FormGroup>
+</div>
+```
+
+## With Icons
+<div>
+  <FormGroup
+    label={
+      <div>Email Address <span className="text-primary-500">*</span></div>
+    }
+    helperText="This email address is used for send important emails">
+    <InputGroup
+      type="email"
+      placeholder="Enter your email"
+      leftElement={
+        <Icon size={16} icon='icon-calendar' />
+      }
+      rightElement={
+        <Icon size={14} gap={1} icon='icon-arrow-right' />
+      } />
+  </FormGroup>
+  <FormGroup
+    className="pt-4"
+    label={
+      <div>Password <span className="text-primary-500">*</span></div>
+    }>
+    <InputGroup
+      type="password"
+      rightElement={
+        <Icon size={14} gap={1} icon='icon-eye' />
+      } />
+  </FormGroup>
+</div>
+
+```js
+<div>
+  <FormGroup
+    label={
+      <div>Email Address <span className="text-primary-500">*</span></div>
+    }
+    helperText="This email address is used for send important emails">
+    <InputGroup
+      type="email"
+      placeholder="Enter your email"
+      leftElement={
+        <Icon size={14} gap={1} icon='icon-calendar' />
+      }
+      rightElement={
+        <Icon size={14} gap={1} icon='icon-arrow-right' />
+      } />
+  </FormGroup>
+  <FormGroup
+    className="pt-4"
+    label={
+      <div>Password <span className="text-primary-500">*</span></div>
+    }>
+    <InputGroup
+      type="password"
+      rightElement={
+        <Icon size={14} gap={1} icon='icon-eye' />
+      } />
+  </FormGroup>
+</div>
+```
+
+## With Handler
+You can use an element inside input for handle action for example in this input, we can click over icon and show the password.
+
+<div>
+  <InputGroupHandlerExample />
+</div>

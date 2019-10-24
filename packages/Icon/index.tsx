@@ -10,15 +10,16 @@ export interface IIconProps extends IProps {
 }
 
 const Icon: React.SFC<IIconProps> = ({ size, gap, className, icon }) => {
-  const classes = classNames(className, 'betomic', icon);
-  return (<div className={style.iconWrapper} style={{
+  const iconWrapper = classNames(style.iconWrapper, 'betomic-icon');
+  const iconClasses = classNames(className, 'betomic', icon);
+  return (<div className={iconWrapper} style={{
     width: size,
     height: size,
     padding: gap,
   }}>
     <i style={{
       fontSize: (size - gap),
-    }} className={classes}></i>
+    }} className={iconClasses}></i>
   </div>);
 };
 

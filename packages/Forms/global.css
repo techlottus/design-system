@@ -1,0 +1,15 @@
+.input-group .left-element > .betomic-icon {
+  margin: 13px;
+}
+
+.input-group .right-element > .betomic-icon {
+  margin: 13px;
+}
+
+.input-group .left-element > button, .btn {
+  margin: 0;
+}
+
+.input-group .right-element > button, .btn {
+  margin: 0;
+}
