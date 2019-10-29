@@ -23,17 +23,16 @@ class Message extends React.PureComponent<IMessageProps, {}> {
   };
 
   render() {
-    const { type, children, className } = this.props;
+    const { type, show, children, className } = this.props;
     const classes = classNames(
       'box__message',
       className,
       messageColorTypes[type],
     );
-    return (
+    return show ?
       <div className={classes}>
         {children}
-      </div>
-    );
+      </div> : null;
   }
 }
 
