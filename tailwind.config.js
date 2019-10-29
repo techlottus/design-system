@@ -26,6 +26,7 @@ module.exports = {
         "700":"#CC2935",
         "800":"#A42A33",
         "900":"#7E2C32",
+        "alert": "#DB324B",
       },
       secondary: {
         "100":"#A8C1FA",

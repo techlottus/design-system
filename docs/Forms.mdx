@@ -65,6 +65,10 @@ Form components docs
       type="email"
       isValid={true}
       placeholder="Enter your email" />
+      <FormGroup.Message
+        type="success"
+        show={false}
+        className="mt-1">Congratulations!!</FormGroup.Message>
   </FormGroup>
   <FormGroup
     className="pt-4"
@@ -74,6 +78,9 @@ Form components docs
     <InputGroup
       isValid={false}
       type="password" />
+    <FormGroup.Message
+      type="error"
+      className="mt-1">Please verify your credentials</FormGroup.Message>
   </FormGroup>
 </div>
 
@@ -88,6 +95,9 @@ Form components docs
       type="email"
       isValid={true}
       placeholder="Enter your email" />
+      <FormGroup.Message
+        type="success"
+        className="mt-1">Congratulations!!</FormGroup.Message>
   </FormGroup>
   <FormGroup
     className="pt-4"
@@ -97,6 +107,9 @@ Form components docs
     <InputGroup
       isValid={false}
       type="password" />
+    <FormGroup.Message
+      type="error"
+      className="mt-1">Please verify your credentials</FormGroup.Message>
   </FormGroup>
 </div>
 ```
