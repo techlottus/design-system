@@ -20,7 +20,7 @@ class InputGroup extends React.PureComponent<IInputGroupProps, {}> {
   };
 
   public render() {
-    const { className, leftElement, rightElement, isValid } = this.props;
+    const { className, leftElement, rightElement, isValid, inputRef } = this.props;
     const classes = classNames(
       'input-group',
       styles.inputGroup,
@@ -42,6 +42,7 @@ class InputGroup extends React.PureComponent<IInputGroupProps, {}> {
         <input
           type='text'
           {...removeNonHTMLProps(this.props)}
+          ref={inputRef}
           className={inputClasses} />
         {this.maybeRenderRightElement()}
       </div>
