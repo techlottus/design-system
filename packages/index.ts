@@ -16,3 +16,5 @@ export { default as Collapse } from './Collapse';
 export { default as Drawer } from './Drawer';
 export { default as Modal } from './Modal';
 export { default as Badge } from './Badge';
+export { default as Alert } from './Alert';
+export { default as InputGroup } from './Forms/InputGroup';
