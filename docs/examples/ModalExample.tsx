@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from '../../packages/Modal';
 import Button from '../../packages/Button';
-import Input from '../../packages/Input';
+import Input from '../../packages/Forms/InputGroup';
 
 interface IModalExampleProps {
   noEscape?: boolean;
