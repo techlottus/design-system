@@ -24,7 +24,6 @@ class InputGroup extends React.PureComponent<IInputGroupProps, {}> {
     const classes = classNames(
       'input-group',
       styles.inputGroup,
-      className,
     );
     const inputClasses = classNames(
       styles.inputControl,
@@ -34,6 +33,7 @@ class InputGroup extends React.PureComponent<IInputGroupProps, {}> {
         [styles.inputControlIsValid]: (isValid !== null && isValid),
         [styles.inputControlNotValid]: (isValid !== null && !isValid),
       },
+      className,
     );
 
     return (
