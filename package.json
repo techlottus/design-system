@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@glidejs/glide": "^3.3.0",
+    "@tailwindcss/custom-forms": "^0.2.1",
     "@types/classnames": "^2.2.9",
     "@types/enzyme": "^3.10.3",
     "@types/glidejs": "^1.0.30",
