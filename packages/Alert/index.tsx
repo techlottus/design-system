@@ -42,7 +42,7 @@ class Alert extends React.PureComponent<IAlertProps, IAlertState> {
   }
 
   render() {
-    const { className, type, children, closable } = this.props;
+    const { className, type, children, closable, style } = this.props;
     const classes = classNames(
       styles.alert,
       className,
@@ -53,7 +53,7 @@ class Alert extends React.PureComponent<IAlertProps, IAlertState> {
     );
 
     return (
-      !this.state.closed ? <div className={classes}>
+      !this.state.closed ? <div className={classes} style={style}>
         {children}
         { closable ? <button onClick={this.onCloseHandler}>
           <Icon className={styles.alertIcon} size={20} icon='icon-close' />
