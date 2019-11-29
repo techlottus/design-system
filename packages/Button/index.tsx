@@ -21,7 +21,7 @@ type Variant = typeof Variants[keyof typeof Variants];
 
 export interface IButton extends IProps, HTMLButtonProps {
   size: Size;
-  variant: Variant;
+  variant?: Variant;
   disabled: boolean;
   block: boolean;
   children: React.ReactNode;
@@ -52,7 +52,6 @@ const Button: React.SFC<IButton> = ({ children, onClick, size, variant, classNam
 
 Button.defaultProps = {
   size: 'md',
-  variant: 'primary',
 };
 
 export default Button;
