@@ -1,0 +1,52 @@
+---
+name: Dropdown
+menu: Components
+---
+
+import { Props } from 'docz'
+import Dropdown from '../packages/Dropdown'
+import DropdownExample from '../docs/examples/DropdownExample'
+
+# Dropdown
+Dropdown component docs
+
+## Props
+<Props of={Dropdown} />
+
+## Basic
+
+<DropdownExample />
+
+```jsx
+<Dropdown
+  title='GDL'
+  position='bottom-start'
+  className='mr-2'
+>
+  <ContentMenu />
+</Dropdown>
+
+<Dropdown
+title='Colima'
+position='right'
+className='mr-2'
+>
+  <ContentMenu />
+</Dropdown>
+
+<Dropdown
+title='CDMX'
+position='top'
+className='mr-2'
+>
+  <ContentMenu />
+</Dropdown>
+
+<Dropdown
+title='Monterrey'
+position='left'
+className='mr-2'
+>
+  <ContentMenu />
+</Dropdown>
+```
