@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { IControlledProps, IProps, removeNonHTMLProps } from '../common/props';
+import { IControlledProps, IProps } from '../common/props';
 import classNames from 'classnames';
 import styles from './input-group.module.pcss';
 import './global.css';
@@ -20,11 +20,10 @@ class InputGroup extends React.PureComponent<IInputGroupProps, {}> {
   };
 
   public render() {
-    const { className, leftElement, rightElement, isValid } = this.props;
+    const { className, leftElement, rightElement, isValid, inputRef, ...props } = this.props;
     const classes = classNames(
       'input-group',
       styles.inputGroup,
-      className,
     );
     const inputClasses = classNames(
       styles.inputControl,
@@ -34,6 +33,7 @@ class InputGroup extends React.PureComponent<IInputGroupProps, {}> {
         [styles.inputControlIsValid]: (isValid !== null && isValid),
         [styles.inputControlNotValid]: (isValid !== null && !isValid),
       },
+      className,
     );
 
     return (
@@ -41,7 +41,8 @@ class InputGroup extends React.PureComponent<IInputGroupProps, {}> {
         {this.maybeRenderLeftElement()}
         <input
           type='text'
-          {...removeNonHTMLProps(this.props)}
+          {...props}
+          ref={inputRef}
           className={inputClasses} />
         {this.maybeRenderRightElement()}
       </div>
