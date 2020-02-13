@@ -12,7 +12,7 @@ export default {
       links: [
         {
           rel: 'stylesheet',
-          href: 'https://cdn-bedu.netlify.com/css/style.css'
+          href: 'https://cdn-bedu.netlify.com/style.css'
         },
         {
           rel: 'stylesheet',
