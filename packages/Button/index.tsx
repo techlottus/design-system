@@ -22,13 +22,13 @@ type Variant = typeof Variants[keyof typeof Variants];
 export interface IButton extends IProps, HTMLButtonProps {
   size: Size;
   variant?: Variant;
-  disabled: boolean;
-  block: boolean;
+  disabled?: boolean;
+  block?: boolean;
   children: React.ReactNode;
   onClick?: () => void;
 }
 
-const Button: React.SFC<IButton> = ({ children, onClick, size, variant, className, disabled, block, ...props }: IButton) => {
+const Button: React.SFC<IButton> = ({ children, onClick, size, variant, className, disabled = false, block = false, ...props }: IButton) => {
 
   const isDisabled = disabled === true ? style.btnDisabled : null;
   const isBlock = block === true ? style.btnBlock : null;
