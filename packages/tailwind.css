@@ -3,7 +3,6 @@
 
 :root { --grid-gap: 15px; }
 .grid-container { display: grid; grid-gap: var(--grid-gap); }
-.grid { display: grid !important; }
 .glide__bullets {
   @apply relative flex justify-center items-center bottom-0 h-8 !important;
 }
@@ -29,19 +28,3 @@
 
 @tailwind utilities;
 @tailwind screens;
-
-@screen sm {
-  .sm\:grid { display: grid !important; }
-}
-
-@screen md {
-  .md\:grid { display: grid !important; }
-}
-
-@screen lg {
-  .lg\:grid { display: grid !important; }
-}
-
-@screen xl {
-  .xl\:grid { display: grid !important; }
-}
