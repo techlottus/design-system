@@ -8,7 +8,7 @@ import Icon from '../../packages/Icon';
 
 const data = [
   {
-    img: 'https://bedu.org/wp-content/uploads/Bedu07_ux_frontend.png',
+    img: 'https://ucarecdn.com/6db0d613-ea78-4417-9aa8-22075bb08f99/-/scale_crop/320x210/smart/-/format/webp/',
     title: 'UX & Front end',
     description: 'Comienza tu camino en la programación y aprende los pilares del desarrollo web para construir web apps desde cero.',
     button: true,
@@ -17,7 +17,7 @@ const data = [
     newCourse: true,
   },
   {
-    img: 'https://bedu.org/wp-content/uploads/Bedu07_ux_frontend.png',
+    img: 'https://ucarecdn.com/6db0d613-ea78-4417-9aa8-22075bb08f99/-/scale_crop/320x210/smart/-/format/webp/',
     title: 'Back-end Python',
     description: 'Comienza tu camino en la programación y aprende los pilares del desarrollo web para construir web apps desde cero.',
     button: true,
@@ -26,7 +26,7 @@ const data = [
     newCourse: false,
   },
   {
-    img: 'https://bedu.org/wp-content/uploads/Bedu07_ux_frontend.png',
+    img: 'https://ucarecdn.com/6db0d613-ea78-4417-9aa8-22075bb08f99/-/scale_crop/320x210/smart/-/format/webp/',
     title: 'Fullstack',
     description: 'Comienza tu camino en la programación y aprende los pilares del desarrollo web para construir web apps desde cero.',
     button: true,
@@ -35,7 +35,7 @@ const data = [
     newCourse: false,
   },
   {
-    img: 'https://bedu.org/wp-content/uploads/Bedu07_ux_frontend.png',
+    img: 'https://ucarecdn.com/6db0d613-ea78-4417-9aa8-22075bb08f99/-/scale_crop/320x210/smart/-/format/webp/',
     title: 'Escala',
     description: 'Comienza tu camino en la programación y aprende los pilares del desarrollo web para construir web apps desde cero.',
     button: true,
@@ -44,7 +44,7 @@ const data = [
     newCourse: false,
   },
   {
-    img: 'https://bedu.org/wp-content/uploads/Bedu07_ux_frontend.png',
+    img: 'https://ucarecdn.com/6db0d613-ea78-4417-9aa8-22075bb08f99/-/scale_crop/320x210/smart/-/format/webp/',
     title: 'Emprende',
     description: 'Comienza tu camino en la programación y aprende los pilares del desarrollo web para construir web apps desde cero.',
     button: true,
@@ -53,7 +53,7 @@ const data = [
     newCourse: false,
   },
   {
-    img: 'https://bedu.org/wp-content/uploads/Bedu07_ux_frontend.png',
+    img: 'https://ucarecdn.com/6db0d613-ea78-4417-9aa8-22075bb08f99/-/scale_crop/320x210/smart/-/format/webp/',
     title: 'Emprende',
     description: 'Comienza tu camino en la programación y aprende los pilares del desarrollo web para construir web apps desde cero.',
     button: true,
@@ -62,7 +62,7 @@ const data = [
     newCourse: false,
   },
   {
-    img: 'https://bedu.org/wp-content/uploads/Bedu07_ux_frontend.png',
+    img: 'https://ucarecdn.com/6db0d613-ea78-4417-9aa8-22075bb08f99/-/scale_crop/320x210/smart/-/format/webp/',
     title: 'Emprende',
     description: 'Comienza tu camino en la programación y aprende los pilares del desarrollo web para construir web apps desde cero.',
     button: true,
@@ -71,7 +71,7 @@ const data = [
     newCourse: false,
   },
   {
-    img: 'https://bedu.org/wp-content/uploads/Bedu07_ux_frontend.png',
+    img: 'https://ucarecdn.com/6db0d613-ea78-4417-9aa8-22075bb08f99/-/scale_crop/320x210/smart/-/format/webp/',
     title: 'Emprende',
     description: 'Comienza tu camino en la programación y aprende los pilares del desarrollo web para construir web apps desde cero.',
     button: true,
