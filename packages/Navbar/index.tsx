@@ -2,7 +2,6 @@ import * as React from 'react';
 import classNames from 'classnames';
 import { IProps, HTMLDivProps } from '../common/props';
 import NavbarBrand from './NavbarBrand';
-import style from './navbar.module.pcss';
 
 export interface INavbarProps extends IProps, HTMLDivProps {
   fixedToTop?: boolean;
@@ -14,8 +13,10 @@ class Navbar extends React.PureComponent<INavbarProps, {}> {
 
   public render() {
     const { children, className, fixedToTop, transparent, ...htmlProps } = this.props;
-    const classes = classNames(style.navbar, className, {
-      [style.navbarSticky]: fixedToTop,
+    const classes = classNames(
+      'bg-white py-7 flex items-center',
+      className, {
+      ['z-9999 inset-x-0 top-0 w-full fixed']: fixedToTop,
       ['bg-transparent']: transparent,
     });
 

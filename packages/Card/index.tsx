@@ -4,7 +4,6 @@ import { variantIntensity, variantName } from '../common/constants';
 import CardHeader from './CardHeader';
 import CardContent from './CardContent';
 import CardFooter from './CardFooter';
-import styles from './card.module.pcss';
 
 export interface ICardProps {
   children?: React.ReactNode;
@@ -23,12 +22,12 @@ class Card extends React.Component<ICardProps> {
   public render() {
     const { children, bordered, variant, variantAs, className } = this.props;
     const classes = classNames(
-      styles.cardBordered,
+      'border-t-8 rounded-card',
       `border-${variantName[variant]}-${variantIntensity[variantAs]}`,
     );
 
     return(
-      <div className={`${styles.card} ${className}`}>
+      <div className={`bg-white rounded overflow-hidden shadow-up-box ${className}`}>
         {bordered && <div className={classes} />}
         {children}
       </div>

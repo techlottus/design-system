@@ -2,7 +2,6 @@ import * as React from 'react';
 import { Manager, Popper, Reference } from 'react-popper';
 import Icon from '../Icon/index';
 import classNames from 'classnames';
-import style from './dropdown.module.pcss';
 
 interface IDropdownProps {
   title?: string;
@@ -97,12 +96,14 @@ class Dropdown extends React.Component<IDropdownProps, IDropdownState> {
     const {children, title, position, className} = this.props;
     const { isOpen } = this.state;
     const btnClasses = classNames(
-      style.btnDropdown,
+      'flex justify-between items-center outline-none py-1 px-3 w-full',
+      'font-bold font-montserrat',
+      'hover:bg-surface-800 focus:outline-none focus:shadow-secondary-200 focus:bg-surface-800'
     );
 
     const dropdownContainer = classNames(
       className,
-      style.dropdownContainer,
+      'w-full rounded bg-surface-500 text-white',
     );
 
     const dropdownBody = classNames(

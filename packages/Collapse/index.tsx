@@ -1,7 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import { IProps } from '../common/props';
-import style from './collapse.module.pcss';
 import Icon from '../Icon/index';
 
 export interface ICollapse extends IProps {
@@ -53,17 +52,20 @@ class Collapse extends React.PureComponent<ICollapse, ICollapseState> {
 
   public render() {
     const { children, title, className } = this.props;
-    const classes = classNames(style.collapse, className);
+    const classes = classNames(
+      'bg-white shadow-box px-4 py-7 rounded',
+      className
+    );
 
     return (
       <div className={classes}>
-        <div className={style.collapseHeading}>
-          <div className={style.collapseTitle}>{title}</div>
-          <div className={style.collapseIcon}>
+        <div className='flex items-center'>
+          <div className='flex-1 text-base font-bold font-montserrat text-surface-700'>{title}</div>
+          <div className='text-right'>
             {this.handlerElement()}
           </div>
         </div>
-        {this.state.isOpen && <div className={style.collapseContent}>
+        {this.state.isOpen && <div className='pt-6 text-surface-700'>
           {children}
         </div>}
       </div>

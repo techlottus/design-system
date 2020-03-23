@@ -1,7 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import { variantIntensity, variantName } from '../common/constants';
-import style from './progressbar.module.pcss';
 
 interface IProgressBarProps {
   value: number;
@@ -11,11 +10,11 @@ interface IProgressBarProps {
 
 const ProgressBar: React.SFC<IProgressBarProps> = ({value, variant, variantAs}: IProgressBarProps) => {
   const classes = classNames(
-    style.progressBar,
+    'h-full rounded',
     `bg-${variantName[variant]}-${variantIntensity[variantAs]}`,
   );
   return (
-    <div className={style.progress}>
+    <div className='w-full h-2 bg-surface-100 rounded'>
       <div
         className={classes}
         style={{width: `${value}%`, maxWidth: '100%'}}>

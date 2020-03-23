@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { IProps } from '../common/props';
 import classNames from 'classnames';
-import style from './icon.module.pcss';
 
 export interface IIconProps extends IProps {
   size?: number;
@@ -10,7 +9,7 @@ export interface IIconProps extends IProps {
 }
 
 const Icon: React.SFC<IIconProps> = ({ size, gap, className, icon }) => {
-  const iconWrapper = classNames(style.iconWrapper, 'betomic-icon');
+  const iconWrapper = classNames('flex justify-center items-center', 'betomic-icon');
   const iconClasses = classNames(className, 'betomic', icon);
   return (<div className={iconWrapper} style={{
     width: size,
