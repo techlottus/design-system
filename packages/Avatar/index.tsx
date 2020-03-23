@@ -14,17 +14,22 @@ const Sizes = {
 type Size = typeof Sizes[keyof typeof Sizes];
 
 export interface IAvatar extends IProps {
-  children?: React.ReactNode;
-  src?: string;
+  children?: React.ReactElement;
   size?: Size;
 }
 
-const Avatar: React.SFC<IAvatar> = ({ size, src, className }: IAvatar) => {
+const Avatar: React.SFC<IAvatar> = ({ size, children, className }: IAvatar) => {
   const classes = classNames('relative', className, Sizes[size]);
 
   return (
     <figure className={classes}>
-      <img src={src} className='w-full h-full relative rounded' />
+      {React.cloneElement(
+        children,
+        {
+          className:'rounded',
+        },
+        null
+      )}
     </figure>
   );
 };
