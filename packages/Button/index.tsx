@@ -16,7 +16,7 @@ const commonClasses = classNames('rounded', 'flex', 'justify-center', 'items-cen
 const Variants = {
   primary: classNames('bg-primary-400', 'text-white', 'hover:bg-primary-700', 'focus:shadow-primary-200', commonClasses),
   secondary: classNames('bg-surface-500', 'text-white', 'hover:bg-surface-800', 'focus:shadow-secondary-200', 'focus:bg-surface-800', commonClasses),
-  terciary: classNames('bg-transparent border-2 border-surface-400', 'hover:bg-surface-400', 'hover:text-white', 'focus:shadow-secondary-200', 'focus:bg-surface-400', 'focus:tet-white'),
+  terciary: classNames('bg-transparent border-2 border-surface-400', 'hover:bg-surface-400', 'hover:text-white', 'focus:shadow-secondary-200', 'focus:bg-surface-400', 'focus:tet-white', commonClasses),
 };
 
 type Variant = typeof Variants[keyof typeof Variants];
