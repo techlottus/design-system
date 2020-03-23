@@ -1,7 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import { IProps } from '../common/props';
-import styles from './alert.module.pcss';
 import Icon from '../Icon';
 
 interface IAlertProps extends IProps {
@@ -43,20 +42,20 @@ class Alert extends React.PureComponent<IAlertProps, IAlertState> {
 
   render() {
     const { className, type, children, closable, style } = this.props;
-    const classes = classNames(
-      styles.alert,
+    const alertClasses = classNames(
+      'flex', 'px-4', 'py-2', 'rounded', 'items-center',
       className,
       messageColorTypes[type],
       {
-        [styles.alertWithIcon]: closable,
+        'justify-between': closable,
       },
     );
 
     return (
-      !this.state.closed ? <div className={classes} style={style}>
+      !this.state.closed ? <div className={alertClasses} style={style}>
         {children}
         { closable ? <button onClick={this.onCloseHandler}>
-          <Icon className={styles.alertIcon} size={20} icon='icon-close' />
+          <Icon className='opacity-90' size={20} icon='icon-close' />
         </button> : null }
       </div> : null
     );

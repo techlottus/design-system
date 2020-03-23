@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { IProps } from '../common/props';
 import classNames from 'classnames';
-import styles from './form-group.module.pcss';
 import Message from './Message';
 
 interface IFormGroupProps extends IProps {
@@ -17,18 +16,17 @@ class FormGroup extends React.PureComponent<IFormGroupProps, {}> {
     const { children, className, helperText, label, labelFor } = this.props;
     const classes = classNames(
       'form-group',
-      styles.formGroup,
       className,
     );
 
     return (
       <div className={classes}>
-        { label && <label className={styles.formGroupLabel} htmlFor={labelFor}>
+        { label && <label className='text-base font-rubik' htmlFor={labelFor}>
           {label}
         </label>}
-        <div className={styles.formGroupContent}>
+        <div className='mt-1'>
           {children}
-          { helperText && <div className={styles.formGroupHelperText}>{helperText}</div>}
+          { helperText && <div className='pt-1 text-xs'>{helperText}</div>}
         </div>
       </div>
     );

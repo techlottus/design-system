@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { IControlledProps, IProps } from '../common/props';
 import classNames from 'classnames';
-import styles from './input-group.module.pcss';
 import './global.css';
 
 interface IInputGroupProps extends IControlledProps, IProps {
@@ -23,15 +22,17 @@ class InputGroup extends React.PureComponent<IInputGroupProps, {}> {
     const { className, leftElement, rightElement, isValid, inputRef, ...props } = this.props;
     const classes = classNames(
       'input-group',
-      styles.inputGroup,
+      'relative',
     );
     const inputClasses = classNames(
-      styles.inputControl,
+      'relative w-full rounded p-3 h-10',
+      'font-rubik text-base text-surface-700 bg-surface-100',
+      'focus:border-2 focus:border-surface-200 focus:bg-white focus:outline-none',
       {
-        [styles.inputControlLeftIcon]: (leftElement !== undefined),
-        [styles.inputControlRightIcon]: (rightElement !== undefined),
-        [styles.inputControlIsValid]: (isValid !== null && isValid),
-        [styles.inputControlNotValid]: (isValid !== null && !isValid),
+        ['pl-10']: (leftElement !== undefined),
+        ['pr-9']: (rightElement !== undefined),
+        ['border-success border-2 bg-white focus:border-success']: (isValid !== null && isValid),
+        ['border-primary-500 border-2 bg-white shadow-none focus:border-primary-500']: (isValid !== null && !isValid),
       },
       className,
     );
@@ -53,8 +54,8 @@ class InputGroup extends React.PureComponent<IInputGroupProps, {}> {
     const { leftElement } = this.props;
     const classesIcon = classNames(
       'left-element',
-      styles.inputGroupAction,
-      styles.inputGroupActionLeft,
+      'absolute top-0 z-1',
+      'left-0',
     );
     if (leftElement == null) {
       return undefined;
@@ -71,8 +72,8 @@ class InputGroup extends React.PureComponent<IInputGroupProps, {}> {
     const { rightElement } = this.props;
     const classesIcon = classNames(
       'right-element',
-      styles.inputGroupAction,
-      styles.inputGroupActionRight,
+      'absolute top-0 z-1',
+      'right-0',
     );
     if (rightElement == null) {
       return undefined;

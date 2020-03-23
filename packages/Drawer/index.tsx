@@ -2,12 +2,11 @@ import * as React from 'react';
 import { IProps } from '../common/props';
 import classNames from 'classnames';
 import Icon from '../Icon/index';
-import styles from './drawer.module.pcss';
 
 const Positions = {
-  left: styles.drawerDialogLeft,
-  right: styles.drawerDialogRight,
-  bottom: styles.drawerDialogBottom,
+  left: 'inset-y-0 left-0',
+  right: 'inset-y-0 right-0',
+  bottom: 'inset-x-0 bottom-0 max-w-full h-78',
 };
 
 type Position = typeof Positions[keyof typeof Positions];
@@ -35,15 +34,16 @@ const Drawer: React.SFC<IDrawerProps> = ({ isVisible, children, onClose, positio
   }
 
   const clasess = classNames (
-    styles.drawerDialog,
+    'bg-white w-full absolute max-w-md text-left flex flex-col overflow-hidden rounded p-6 max-h-full',
     Positions[position],
     className,
   );
 
   return !isVisible ? null : (
-    <div className={styles.drawer} onClick={onClose}>
+    <div className='fixed w-full inset-0 z-9999 flex items-center justify-center'
+    onClick={onClose} style={{backgroundColor: 'rgba(0, 0, 0, 0.25)'}} >
       <div className={clasess} onClick={e => e.stopPropagation()}>
-        <button className={styles.drawerClose} onClick={onClose}>
+        <button className='top-0 right-0 cursor-pointer absolute mt-7 mr-7 focus:outline-none' onClick={onClose}>
           <Icon className='text-surface-700' icon='icon-close' />
         </button>
         {children}

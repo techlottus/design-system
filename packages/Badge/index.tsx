@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { IProps } from '../common/props';
 import classNames from 'classnames';
-import style from './badge.module.pcss';
 
 export interface IBadge extends IProps {
   content?: string;
@@ -9,10 +8,11 @@ export interface IBadge extends IProps {
 }
 
 const Badge: React.SFC<IBadge> = ({ className, content, roundedFull }: IBadge) => {
+  const fullBadgeClasses = classNames('flex justify-center items-center rounded-full h-9 w-9');
   const classes = classNames(
-    style.badge,
+    'inline-block px-2 py-1 rounded bg-primary-500 text-white text-xs font-rubik',
     className,
-    { [style.badgeFull]: roundedFull },
+    { [fullBadgeClasses]: roundedFull },
   );
   return (
     <span

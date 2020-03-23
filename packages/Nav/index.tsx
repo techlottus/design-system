@@ -1,7 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import { IProps } from '../common/props';
-import style from './nav.module.pcss';
 import NavItem from './NavItem';
 
 const Alignment = {
@@ -39,9 +38,9 @@ class Nav extends React.PureComponent<INavProps, {}> {
 
   public render() {
     const { children, align, vertical, className } = this.props;
-    const isVertical = (vertical) ? style.navVertical : null;
+    const isVertical = (vertical) ? 'flex-col' : null;
     const classes = classNames(
-      style.nav,
+      'flex flex-wrap flex-1',
       className,
       isVertical,
       alignmentClass(align),

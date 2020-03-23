@@ -1,30 +1,4 @@
 @tailwind base;
 @tailwind components;
 
-:root { --grid-gap: 15px; }
-.grid-container { display: grid; grid-gap: var(--grid-gap); }
-.glide__bullets {
-  @apply relative flex justify-center items-center bottom-0 h-8 !important;
-}
-
-.glide__bullet {
-  @apply bg-surface-200 !important;
-  @apply h-3 w-3 !important;
-  @apply border-0 !important;
-}
-
-.glide__bullet:hover {
-  @apply bg-surface-600 !important;
-}
-
-.glide__bullet:focus {
-  @apply bg-surface-600 !important;
-}
-
-.glide__bullet--active {
-  @apply bg-surface-600 !important;
-  @apply h-14px w-14px !important;
-}
-
 @tailwind utilities;
-@tailwind screens;

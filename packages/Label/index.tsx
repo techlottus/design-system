@@ -1,5 +1,4 @@
 import * as React from 'react';
-import styles from './label.module.pcss';
 
 interface ILabelProps {
   htmlFor: string;
@@ -10,9 +9,9 @@ interface ILabelProps {
 
 const Label = ({ htmlFor, label, required, children }: ILabelProps) => {
   return(
-    <div className={styles.label}>
-      <label className={styles.labelText} htmlFor={htmlFor}>
-        {label} { required && <span className={styles.labelRequired}> *</span> }
+    <div className='flex mb-3'>
+      <label className='flex items-center w-full font-rubik text-base text-surface-500' htmlFor={htmlFor}>
+        {label} { required && <span className='ml-1 text-primary-400'> *</span> }
       </label>
       {children}
     </div>
