@@ -102,8 +102,8 @@ class GlideContainer extends React.Component<IGlideContainerProps , any> {
     slider.destroy();
   }
 
-  HtmlFix = (Glide, Components, Events) => {
-    const HtmlFix = Html(Glide, Components, Events);
+  HtmlFix = (CustomGlide: any, Components: any, Events: any) => {
+    const HtmlFix = Html(CustomGlide, Components, Events);
     Events.on('update', () => {
         HtmlFix.mount();
     });
