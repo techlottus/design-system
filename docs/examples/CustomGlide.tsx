@@ -6,86 +6,102 @@ import Card from '../../packages/Card';
 import Button from '../../packages/Button';
 import Icon from '../../packages/Icon';
 
-const data = [
-  {
-    img: 'https://ucarecdn.com/6db0d613-ea78-4417-9aa8-22075bb08f99/-/scale_crop/320x210/smart/-/format/webp/',
-    title: 'UX & Front end',
-    description: 'Comienza tu camino en la programación y aprende los pilares del desarrollo web para construir web apps desde cero.',
-    button: true,
-    difficulty: 'Básico',
-    months: '6',
-    newCourse: true,
-  },
-  {
-    img: 'https://ucarecdn.com/6db0d613-ea78-4417-9aa8-22075bb08f99/-/scale_crop/320x210/smart/-/format/webp/',
-    title: 'Back-end Python',
-    description: 'Comienza tu camino en la programación y aprende los pilares del desarrollo web para construir web apps desde cero.',
-    button: true,
-    difficulty: 'Medio',
-    months: '6',
-    newCourse: false,
-  },
-  {
-    img: 'https://ucarecdn.com/6db0d613-ea78-4417-9aa8-22075bb08f99/-/scale_crop/320x210/smart/-/format/webp/',
-    title: 'Fullstack',
-    description: 'Comienza tu camino en la programación y aprende los pilares del desarrollo web para construir web apps desde cero.',
-    button: true,
-    difficulty: 'Avanzado',
-    months: '6',
-    newCourse: false,
-  },
-  {
-    img: 'https://ucarecdn.com/6db0d613-ea78-4417-9aa8-22075bb08f99/-/scale_crop/320x210/smart/-/format/webp/',
-    title: 'Escala',
-    description: 'Comienza tu camino en la programación y aprende los pilares del desarrollo web para construir web apps desde cero.',
-    button: true,
-    difficulty: 'Medio',
-    months: '6',
-    newCourse: false,
-  },
-  {
-    img: 'https://ucarecdn.com/6db0d613-ea78-4417-9aa8-22075bb08f99/-/scale_crop/320x210/smart/-/format/webp/',
-    title: 'Emprende',
-    description: 'Comienza tu camino en la programación y aprende los pilares del desarrollo web para construir web apps desde cero.',
-    button: true,
-    difficulty: 'Avanzado',
-    months: '6',
-    newCourse: false,
-  },
-  {
-    img: 'https://ucarecdn.com/6db0d613-ea78-4417-9aa8-22075bb08f99/-/scale_crop/320x210/smart/-/format/webp/',
-    title: 'Emprende',
-    description: 'Comienza tu camino en la programación y aprende los pilares del desarrollo web para construir web apps desde cero.',
-    button: true,
-    difficulty: 'Avanzado',
-    months: '6',
-    newCourse: false,
-  },
-  {
-    img: 'https://ucarecdn.com/6db0d613-ea78-4417-9aa8-22075bb08f99/-/scale_crop/320x210/smart/-/format/webp/',
-    title: 'Emprende',
-    description: 'Comienza tu camino en la programación y aprende los pilares del desarrollo web para construir web apps desde cero.',
-    button: true,
-    difficulty: 'Avanzado',
-    months: '6',
-    newCourse: false,
-  },
-  {
-    img: 'https://ucarecdn.com/6db0d613-ea78-4417-9aa8-22075bb08f99/-/scale_crop/320x210/smart/-/format/webp/',
-    title: 'Emprende',
-    description: 'Comienza tu camino en la programación y aprende los pilares del desarrollo web para construir web apps desde cero.',
-    button: true,
-    difficulty: 'Avanzado',
-    months: '6',
-    newCourse: false,
-  },
-];
+const data = {
+  mx: [
+    {
+      img: 'https://ucarecdn.com/6db0d613-ea78-4417-9aa8-22075bb08f99/-/scale_crop/320x210/smart/-/format/webp/',
+      title: 'UX & Front end',
+      description: 'Comienza tu camino en la programación y aprende los pilares del desarrollo web para construir web apps desde cero.',
+      button: true,
+      difficulty: 'Básico',
+      months: '6',
+      newCourse: true,
+    },
+    {
+      img: 'https://ucarecdn.com/6db0d613-ea78-4417-9aa8-22075bb08f99/-/scale_crop/320x210/smart/-/format/webp/',
+      title: 'Back-end Python',
+      description: 'Comienza tu camino en la programación y aprende los pilares del desarrollo web para construir web apps desde cero.',
+      button: true,
+      difficulty: 'Medio',
+      months: '6',
+      newCourse: false,
+    },
+    {
+      img: 'https://ucarecdn.com/6db0d613-ea78-4417-9aa8-22075bb08f99/-/scale_crop/320x210/smart/-/format/webp/',
+      title: 'Fullstack',
+      description: 'Comienza tu camino en la programación y aprende los pilares del desarrollo web para construir web apps desde cero.',
+      button: true,
+      difficulty: 'Avanzado',
+      months: '6',
+      newCourse: false,
+    },
+    {
+      img: 'https://ucarecdn.com/6db0d613-ea78-4417-9aa8-22075bb08f99/-/scale_crop/320x210/smart/-/format/webp/',
+      title: 'Escala',
+      description: 'Comienza tu camino en la programación y aprende los pilares del desarrollo web para construir web apps desde cero.',
+      button: true,
+      difficulty: 'Medio',
+      months: '6',
+      newCourse: false,
+    },
+    {
+      img: 'https://ucarecdn.com/6db0d613-ea78-4417-9aa8-22075bb08f99/-/scale_crop/320x210/smart/-/format/webp/',
+      title: 'Emprende',
+      description: 'Comienza tu camino en la programación y aprende los pilares del desarrollo web para construir web apps desde cero.',
+      button: true,
+      difficulty: 'Avanzado',
+      months: '6',
+      newCourse: false,
+    },
+    {
+      img: 'https://ucarecdn.com/6db0d613-ea78-4417-9aa8-22075bb08f99/-/scale_crop/320x210/smart/-/format/webp/',
+      title: 'Emprende',
+      description: 'Comienza tu camino en la programación y aprende los pilares del desarrollo web para construir web apps desde cero.',
+      button: true,
+      difficulty: 'Avanzado',
+      months: '6',
+      newCourse: false,
+    },
+    {
+      img: 'https://ucarecdn.com/6db0d613-ea78-4417-9aa8-22075bb08f99/-/scale_crop/320x210/smart/-/format/webp/',
+      title: 'Emprende',
+      description: 'Comienza tu camino en la programación y aprende los pilares del desarrollo web para construir web apps desde cero.',
+      button: true,
+      difficulty: 'Avanzado',
+      months: '6',
+      newCourse: false,
+    },
+    {
+      img: 'https://ucarecdn.com/6db0d613-ea78-4417-9aa8-22075bb08f99/-/scale_crop/320x210/smart/-/format/webp/',
+      title: 'Emprende',
+      description: 'Comienza tu camino en la programación y aprende los pilares del desarrollo web para construir web apps desde cero.',
+      button: true,
+      difficulty: 'Avanzado',
+      months: '6',
+      newCourse: false,
+    },
+  ],
+  mty: [
+    {
+      img: 'https://ucarecdn.com/6db0d613-ea78-4417-9aa8-22075bb08f99/-/scale_crop/320x210/smart/-/format/webp/',
+      title: 'MONTERREY',
+      description: 'Comienza tu camino en la programación y aprende los pilares del desarrollo web para construir web apps desde cero.',
+      button: true,
+      difficulty: 'Básico',
+      months: '6',
+      newCourse: true,
+    },
+  ]
+};
 
-class CustomGlide extends React.Component {
+class CustomGlide extends React.Component<any, { city: string }> {
   myRef: any;
   constructor(props) {
     super(props);
     this.myRef = React.createRef();
+    this.state = {
+      city: 'mx',
+    }
   }
   next = () => {
     this.myRef.current.goNext();
@@ -93,6 +109,11 @@ class CustomGlide extends React.Component {
   prev = () => {
     this.myRef.current.goPrev();
   }
+
+  handleChange = (event: any) => {
+    this.setState({ city: event.target.value });
+  }
+
   render() {
 
     return (
@@ -100,25 +121,46 @@ class CustomGlide extends React.Component {
         <div className='mb-2'>
           <button className='bg-english-500 py-2 px-4 rounded mr-2' onClick={this.prev}>Prev</button>
           <button className='bg-english-500 py-2 px-4 rounded' onClick={this.next}>Next</button>
+          <select value={this.state.city} onChange={this.handleChange} className='ml-3'>
+            <option value='mx'>Ciudad de México</option>
+            <option value='mty'>Monterrey</option>
+          </select>
         </div>
         <GlideContainer ref={this.myRef}
-          perView={2}
-          breakpoints={{
-            750: {
-              perView: 1.6,
-            },
-            650: {
-              perView: 1.4,
-            },
-            550: {
-              perView: 1.2,
-            },
-          }}
+          element='super-glide'
           dots={false}
+          startAt={0}
+          perView={3}
+          gap={32}
+          breakpoints={
+            {
+              550: {
+                perView: 1,
+                peek: {
+                  before: 20,
+                  after: 60
+                },
+              },
+              700: {
+                perView: 1,
+                peek: {
+                  before: 20,
+                  after: 80
+                },
+              },
+              1024: {
+                perView: 2,
+                peek: {
+                  before: 20,
+                  after: 80
+                },
+              },
+            }
+          }
         >
-          {data.map(({ img, title, description, button, difficulty, months, newCourse }, index) => {
+          {data[`${this.state.city}`].map(({ img, title, description, button, difficulty, months, newCourse }, index) => {
             return (
-              <Card key={index} bordered variant='english' variantAs='800' className='w-74'>
+              <Card key={index} bordered variant='english' variantAs='800'>
                 <Card.Header>
                   <img
                     className='relative rounded-lg h-32 w-full object-fit object-center'

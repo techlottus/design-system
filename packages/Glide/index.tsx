@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Glide from '@glidejs/glide';
+import Html from '@glidejs/glide/src/components/html';
 import GlideItem from './GlideItem';
 
 interface IGlideContainerProps {
@@ -12,80 +13,101 @@ interface IGlideContainerProps {
   gap?: number;
   autoplay?: number | boolean;
   hoverpause?: boolean;
+  keyboard?: boolean;
   bound?: boolean;
   swipeThreshold?: number | boolean;
+  dragThreshold?: number | boolean;
+  perTouch?: number | boolean;
+  touchRatio?: number;
+  touchAngle?: number;
   animationDuration?: number;
   rewind?: boolean;
   rewindDuration?: number;
-  dots?: boolean;
+  direction?: 'ltr' | 'rtl';
+  peek?: number | object;
   breakpoints?: object;
+  dots?: boolean;
 }
 
-class GlideContainer extends React.Component<IGlideContainerProps> {
+class GlideContainer extends React.Component<IGlideContainerProps , any> {
   static defaultProps: IGlideContainerProps = {
     element: 'custom',
-    type: 'carousel',
+    type: 'slider',
     startAt: 0,
     perView: 1,
     focusAt: 0,
     gap: 10,
     autoplay: false,
     hoverpause: true,
-    bound: true,
+    keyboard: false,
+    bound: false,
     swipeThreshold: 80,
+    dragThreshold: 120,
+    perTouch: false,
+    touchRatio: 0.5,
+    touchAngle: 45,
     animationDuration: 400,
     rewind: true,
     rewindDuration: 800,
-    dots: true,
+    direction: 'ltr',
+    peek: 0,
     breakpoints: {},
+    dots: true,
   };
 
   constructor(props: IGlideContainerProps) {
     super(props);
+    this.state = {
+      slider: new Glide(`.${props.element}`, {
+        type: props.type,
+        startAt: props.startAt,
+        perView: props.perView,
+        focusAt: props.focusAt,
+        gap: props.gap,
+        autoplay: props.autoplay,
+        hoverpause: props.hoverpause,
+        keyboard: props.keyboard,
+        bound: props.bound,
+        swipeThreshold: props.swipeThreshold,
+        dragThreshold: props.dragThreshold,
+        perTouch: props.perTouch,
+        touchRatio: props.touchRatio,
+        touchAngle: props.touchAngle,
+        animationDuration: props.animationDuration,
+        rewind: props.rewind,
+        rewindDuration: props.rewindDuration,
+        direction: props.direction,
+        peek: props.peek,
+        breakpoints: props.breakpoints,
+      }),
+    };
   }
 
-  state = {
-    slider: null,
-  };
-
   componentDidMount() {
-    const {
-      element,
-      type,
-      startAt,
-      perView,
-      focusAt,
-      gap,
-      autoplay,
-      hoverpause,
-      bound,
-      swipeThreshold,
-      animationDuration,
-      rewind,
-      rewindDuration,
-      breakpoints,
-    } = this.props;
-
-    const glide = new Glide(`.${element}`, {
-      type,
-      startAt,
-      perView,
-      focusAt,
-      gap,
-      autoplay,
-      hoverpause,
-      keyboard: false,
-      bound,
-      swipeThreshold,
-      animationDuration,
-      rewind,
-      rewindDuration,
-      breakpoints,
-    }).mount();
-
-    this.setState({
-      slider: glide,
+    const {slider} = this.state;
+    slider.mount({
+      Html: this.HtmlFix
     });
+  }
+
+  componentDidUpdate(prevProps) {
+    if(prevProps.children.length !== this.props.children.length) {
+      this.state.slider.update({
+        startAt: 0,
+      });
+    }
+  }
+  componentWillUnmount() {
+    const {slider} = this.state;
+    slider.destroy();
+  }
+
+  HtmlFix = (CustomGlide: any, Components: any, Events: any) => {
+    const HtmlFix = Html(CustomGlide, Components, Events);
+    Events.on('update', () => {
+        HtmlFix.mount();
+    });
+    return HtmlFix;
   }
 
   goNext = () => {
@@ -98,12 +120,8 @@ class GlideContainer extends React.Component<IGlideContainerProps> {
     slider.go('<');
   }
 
-  componentWillUnmount() {
-    this.state.slider.destroy();
-  }
-
   render() {
-    const { children, dots, element } = this.props;
+    const { dots, children, element } = this.props;
     return (
       <div className={element}>
         <div className='glide__track' data-glide-el='track'>
@@ -117,7 +135,7 @@ class GlideContainer extends React.Component<IGlideContainerProps> {
         {children && children.length > 0 && dots ?
           <div className='glide__bullets mt-3' data-glide-el='controls[nav]'>
             {children.map((_, index) => {
-              return <button key={index} className='glide__bullet' aria-label='Bullet' data-glide-dir={`=${index}`} />;
+              return <button key={index} className='glide__bullet ml-3 h-4 w-4' aria-label='Bullet' data-glide-dir={`=${index}`} />;
             })}
           </div> : false}
       </div>
