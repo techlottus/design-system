@@ -6,7 +6,9 @@
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap --use-workspaces",
-    "clean": "lerna run --parallel clean"
+    "clean": "lerna run --parallel clean",
+    "compile:betomic": "lerna run compile --scope @exponentialeducation/betomic",
+    "docs:dev": "lerna run dev --scope @exponentialeducation/docs"
   },
   "dependencies": {
     "@types/react": "^17.0.20",
