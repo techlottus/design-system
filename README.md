@@ -1,4 +1,8 @@
+
+# Betomic
 A React-based UI toolkit.
+
+![Betomic UI](./betomic-ui.png)
 
 # Installation
 
