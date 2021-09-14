@@ -1,0 +1,23 @@
+{
+  "name": "@exponentialeducation/betomic",
+  "version": "0.2.0-beta.0",
+  "description": "Core components",
+  "author": "Bedu Engineering <engineering@bedu.org>",
+  "license": "ISC",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "esnext": "lib/esnext/index.js",
+  "typings": "lib/esm/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bedu-hq/betomic.git",
+    "directory": "packages/betomic"
+  },
+  "scripts": {
+    "clean": "rm -rf dist/* && rm -rf lib/*",
+    "compile": "npm run clean && npm run compile:esm && npm run compile:cjs && npm run compile:esnext",
+    "compile:esm": "tsc -p ./src",
+    "compile:cjs": "tsc -p ./src -m commonjs --outDir lib/cjs",
+    "compile:esnext": "tsc -p ./src -t esnext --outDir lib/esnext"
+  }
+}
