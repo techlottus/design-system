@@ -1,7 +1,10 @@
-node_modules/
-dist/
-.docz/
-.rpt2_cache/
+node_modules
+dist
+.rpt2_cache
 .DS_Store
 yarn-error.log
 package-lock.json
+lib
+.DS_Store
+.next
+build

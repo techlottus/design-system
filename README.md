@@ -1,12 +1,8 @@
-# [Betomic](https://betomic.bedu.org/) &middot; [![Netlify Status](https://api.netlify.com/api/v1/badges/c677b73b-bfff-4d64-b767-d4244828f2fd/deploy-status)](https://app.netlify.com/sites/betomic/deploys)
 A React-based UI toolkit.
 
 # Installation
-```sh
-$ yarn add betomic
-# or
-$ npm i --save betomic
-```
+
+TODO
 
 # Documentation 
 You can find the Betomic documentation [on the website](https://betomic.bedu.org). Checkout the getting started page for quick overview and how to use.
@@ -15,7 +11,7 @@ You can find the Betomic documentation [on the website](https://betomic.bedu.org
 We have several examples [on the website](https://betomic.bedu.org). Here is the first one to get you started:
 
 ```js
-import { HelloWorld } from 'betomic';
+import { HelloWorld } from '@exponentialeducation/betomic';
 
 const ExampleComponent = () => 
   <>
