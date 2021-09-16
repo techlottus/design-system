@@ -15,6 +15,7 @@
     "directory": "packages/iconography"
   },
   "scripts": {
+    "prepublishOnly": "npm run build",
     "build": "npm run build-icons & ts-node ./scripts/build.ts",
     "build-icons": "rimraf ./optimized && cp -R ./src ./optimized && svgo -qr -f ./optimized"
   },
