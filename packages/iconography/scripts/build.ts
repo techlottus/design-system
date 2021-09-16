@@ -59,7 +59,8 @@ async function buildIcons(format: BuildFormat) {
   }
 
   await mkdir(outDir, { recursive: true })
-  const icons = await getIcons();
+  const icons = (await getIcons())
+    .filter((v,i,a)=>a.findIndex(t=>(t.componentName === v.componentName))===i);
 
   await Promise.all(
     icons.flatMap(async ({ componentName, svg }) => {
