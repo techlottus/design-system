@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   purge: [
     './pages/**/*.{js,ts,tsx,mdx}',
@@ -10,5 +12,15 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ addUtilities }) {
+      const filterUtilities = {
+        '.grid p:not(:first-child), .grid p': {
+          margin: 0,
+        },
+      }
+
+      addUtilities(filterUtilities, ['responsive', 'hover'])
+    }),
+  ],
 };
