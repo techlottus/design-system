@@ -1,5 +1,7 @@
+import "tailwindcss/tailwind.css";
 import 'nextra-theme-docs/style.css';
+import type { AppProps } from "next/app";
 
-export default function Betomic({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />
 }
