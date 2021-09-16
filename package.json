@@ -8,7 +8,8 @@
     "bootstrap": "lerna bootstrap --use-workspaces",
     "clean": "lerna run --parallel clean",
     "compile:betomic": "lerna run compile --scope @exponentialeducation/betomic",
-    "docs:dev": "lerna run dev --scope @exponentialeducation/docs",
+    "build:icons": "lerna run build --scope @exponentialeducation/iconography",
+    "docs:dev": "yarn build:icons & lerna run dev --scope @exponentialeducation/docs",
     "test": "lerna run --parallel test"
   },
   "dependencies": {
