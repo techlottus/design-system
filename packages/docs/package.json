@@ -18,5 +18,10 @@
     "next": "^11.1.2",
     "nextra": "^1.1.0",
     "nextra-theme-docs": "^1.2.6"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.4",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.15"
   }
 }
