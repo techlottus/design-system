@@ -29,5 +29,8 @@
     "jest": "^27.2.0",
     "ts-jest": "^27.0.5",
     "ts-node": "^10.2.1"
+  },
+  "peerDependencies": {
+    "react": ">= 16"
   }
 }
