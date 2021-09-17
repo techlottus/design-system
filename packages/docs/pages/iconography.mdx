@@ -1,6 +1,28 @@
-import ArrowIcons from "../components/ArrowIcons";
+import Callout from 'nextra-theme-docs/callout'
+import ArrowIcons from '../components/ArrowIcons'
 
 # Iconography
+<Callout emoji="💡">
+  If you want to use `@exponentialeducation/iconography` you must have a latest version from `react`
+</Callout>
+
+## Installation
+```sh
+yarn add @exponentialeducation/iconography
+```
+
+## Quick start
+```jsx
+import { ArrowIcon } from "@exponentialeducation/iconography"
+
+const SinglePage = () => {
+  return (
+    <div>
+      <ArrowIcon className="w-5 h-5" />
+    </div>
+  );
+}
+```
 
 ## Arrows
 <ArrowIcons />
