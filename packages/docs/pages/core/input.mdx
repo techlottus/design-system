@@ -18,27 +18,15 @@ yarn add @exponentialeducation/betomic
 
 A user input is needed.
 
-```jsx highlight=1,20
+```jsx highlight=1,8
 import { Input } from '@exponentialeducation/betomic';
-import cn from "classnames";
-
-const inputDefaultClasses = cn(
-  "rounded p-3 h-10 w-full",
-  "font-rubik font-normal text-base text-surface-700 bg-surface-100 placeholder-surface-400",
-  "border-2 border-transparent focus:outline-none focus:bg-white",
-  "hover:border-surface-200",
-);
 
 function IndexPage() {
-  const defaultClasses = cn(
-    inputDefaultClasses,
-    "focus:ring-primary-500 focus:ring-opacity-40 focus:ring-2 focus:border-primary-500"
-  )
   return (
     <main>
       {/* ... */}
 
-      <Input className={defaultClasses} placeholder="Placeholder" />
+      <Input placeholder="Placeholder" />
 
       {/* ... */}
     </main>
@@ -50,33 +38,19 @@ function IndexPage() {
 
 <InputExample />
 
-## Valid styles
+## Valid input
 
-```jsx highlight=15-18,24
+```jsx highlight=10
 import { Input } from '@exponentialeducation/betomic';
-import cn from "classnames";
-
-const inputDefaultClasses = cn(
-  "rounded p-3 h-10 w-full",
-  "font-rubik font-normal text-base text-surface-700 bg-surface-100 placeholder-surface-400",
-  "border-2 border-transparent focus:outline-none focus:bg-white",
-  "hover:border-surface-200",
-);
 
 function IndexPage() {
   const [isValid, setIsValid] = useState(true);
-  const validInput = cn(
-    inputDefaultClasses,
-    {
-      ["border-success-400 bg-white hover:border-success-400"]: isValid,
-      ["border-error-400 bg-white hover:border-error-400"]: !isValid,
-    }
-  )
+
   return (
     <main>
       {/* ... */}
 
-      <Input className={validInput} />
+      <Input isValid={isValid} />
 
       {/* ... */}
     </main>
@@ -88,25 +62,17 @@ function IndexPage() {
 
 ## Disabled
 
-```jsx highlight=14,18
+```jsx highlight=8
 import { Input } from '@exponentialeducation/betomic';
-import cn from "classnames";
-
-const inputDefaultClasses = cn(
-  "rounded p-3 h-10 w-full",
-  "font-rubik font-normal text-base text-surface-700 bg-surface-100 placeholder-surface-400",
-  "border-2 border-transparent focus:outline-none focus:bg-white",
-  "hover:border-surface-200",
-);
 
 function IndexPage() {
-  const defaultClasses = cn(
-    inputDefaultClasses,
-    "bg-surface-100 pointer-events-none"
-  )
   return (
     <div className="w-full mt-5">
-      <Input disabled className={defaultClasses} />
+      {/* ... */}
+
+      <Input disabled />
+
+      {/* ... */}
     </div>
   );
 }
@@ -132,18 +98,18 @@ Extends `HTMLInputElement`props
   <tbody className="divide-y divide-gray-200">
     <tr>
       <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
-        type?
+        isValid?
       </td>
       <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
-        `string` Defaults `text`
+        `boolean | null` Defaults `null` Add styles to validate an `input`
       </td>
     </tr>
     <tr>
       <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
-        className?
+        type?
       </td>
       <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
-        `string` Extend the styles applied to the component
+        `string` Defaults `text`
       </td>
     </tr>
   </tbody>
