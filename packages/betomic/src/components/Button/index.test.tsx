@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event"
 import Button from ".";
 
 describe("<Button />", () => {
@@ -288,5 +289,41 @@ describe("<Button />", () => {
     expect(
       screen.getByRole("button")
     ).toHaveClass("bg-info-500");
+  });
+
+  // Testing button onClick method
+  test("Click a button triggers an action", async () => {
+    let counter: number = 0;
+    
+    render(
+      <>
+        <Button onClick={() => counter++}>
+          Click me
+        </Button>
+      </>
+    );
+
+    const btn = screen.getByRole("button");
+    userEvent.click(btn);
+
+    expect(counter).toBe(1);
+  });
+  
+  // Testing button onClick method
+  test("Click a disabled button doesn't trigger any action", async () => {
+    let counter: number = 0;
+    
+    render(
+      <>
+        <Button disabled onClick={() => counter++}>
+          Click me
+        </Button>
+      </>
+    );
+
+    const btn = screen.getByRole("button");
+    userEvent.click(btn);
+
+    expect(counter).toBe(0);
   });
 });
