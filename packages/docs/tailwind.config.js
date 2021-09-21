@@ -113,7 +113,6 @@ module.exports = {
   },
   plugins: [
     require('./plugins/fonts'),
-    require('./plugins/base-colors'),
     plugin(function({ addUtilities }) {
       const filterUtilities = {
         '.grid p:not(:first-child), .grid p': {
