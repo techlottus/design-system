@@ -1,5 +1,5 @@
 
-import React, { ButtonHTMLAttributes } from "react";
+import React, { ButtonHTMLAttributes, MouseEvent } from "react";
 import cn from "classnames";
 
 const Sizes = {
@@ -37,7 +37,7 @@ interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   type?: "button" | "submit" | "reset";
   variant?: Variant;
   style?: React.CSSProperties;
-  onClick?: () => void;
+  onClick?: (event: MouseEvent<HTMLElement>) => void;
 };
 
 const Button: React.FC<IButton> = (props: IButton) => {
