@@ -13,6 +13,7 @@ const Input: React.FC<IInput> = (props) => {
     disabled = false,
     type = "text",
     style,
+    className,
     ...restProps
   } = props;
   const inputClasses = cn(
@@ -25,7 +26,8 @@ const Input: React.FC<IInput> = (props) => {
       ["border-error-400 bg-white hover:border-error-400"]: (isValid !== null && !isValid),
       ["focus:ring-primary-500 focus:ring-opacity-40 focus:ring-2 focus:border-primary-500"]: (isValid === null),
       ["bg-surface-100 pointer-events-none"]: disabled
-    }
+    },
+    className
   );
 
   return <input className={inputClasses} type={type} {...restProps} />
