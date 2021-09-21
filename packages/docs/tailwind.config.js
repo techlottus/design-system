@@ -2,9 +2,10 @@ const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   purge: [
-    './pages/**/*.{js,ts,tsx,mdx}',
-    './components/**/*.{js,ts,tsx}',
-  ],
+      './pages/**/*.{js,ts,tsx,mdx}',
+      './components/**/*.{js,ts,tsx}',
+      '../../node_modules/@exponentialeducation/betomic/src//**/*.{js,ts,tsx}'
+    ],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
