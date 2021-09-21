@@ -15,7 +15,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "classnames": "^2.3.1",
     "next": "^11.1.2",
     "nextra": "^1.1.0",
     "nextra-theme-docs": "^1.2.6"
