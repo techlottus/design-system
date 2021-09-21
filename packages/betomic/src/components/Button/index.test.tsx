@@ -182,4 +182,111 @@ describe("<Button />", () => {
       screen.getByRole("button")
     ).not.toHaveClass("px-5 py-3 text-base");
   });
+
+  // Testing other button props
+  test("Render disabled button", () => {
+    render(
+      <Button disabled>
+        Disabled button
+      </Button>
+    );
+
+    expect(
+      screen.getByRole("button")
+    ).not.toBeEnabled();
+
+    expect(
+      screen.getByRole("button")
+    ).toBeDisabled();
+
+    expect(
+      screen.getByRole("button")
+    ).toHaveProperty("disabled");
+  });
+
+  test("Render block button", () => {
+    render(
+      <Button block>
+        Block button
+      </Button>
+    );
+
+    expect(
+      screen.getByRole("button")
+    ).toHaveClass("w-full");
+  });
+
+  //Testing button types
+  test("Render common button", () => {
+    render(
+      <Button type="button">
+        Common button
+      </Button>
+    );
+
+    expect(
+      screen.getByRole("button")
+    ).toHaveProperty("type", "button");
+
+    expect(
+      screen.queryByRole("button")
+    ).not.toHaveProperty("type", "submit");
+
+    expect(
+      screen.queryByRole("button")
+    ).not.toHaveProperty("type", "reset");
+  });
+  
+  test("Render submit button", () => {
+    render(
+      <Button type="submit">
+        Submit button
+      </Button>
+    );
+
+    expect(
+      screen.getByRole("button")
+    ).toHaveProperty("type", "submit");
+
+    expect(
+      screen.queryByRole("button")
+    ).not.toHaveProperty("type", "button");
+
+    expect(
+      screen.queryByRole("button")
+    ).not.toHaveProperty("type", "reset");
+  });
+
+  test("Render reset button", () => {
+    render(
+      <Button type="reset">
+        Submit button
+      </Button>
+    );
+
+    expect(
+      screen.getByRole("button")
+    ).toHaveProperty("type", "reset");
+
+    expect(
+      screen.queryByRole("button")
+    ).not.toHaveProperty("type", "submit");
+
+    expect(
+      screen.queryByRole("button")
+    ).not.toHaveProperty("type", "button");
+  });
+
+  // Testing className prop
+  test("Render button withClassName", () => {
+    render(
+      <Button className="bg-info-500">
+        Success button
+      </Button>
+    );
+
+    expect(
+      screen.getByRole("button")
+    ).toHaveClass("bg-info-500");
+  });
 });
