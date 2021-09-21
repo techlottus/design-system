@@ -115,4 +115,71 @@ describe("<Button />", () => {
       screen.getByRole("button")
     ).not.toHaveClass("bg-surface-600 hover:bg-surface-900 focus:bg-surface-900");
   });
+
+  //Testing button sizes
+  test("Render small button", () => {
+    render(
+      <Button size="sm">
+        Small button
+      </Button>
+    );
+
+    expect(
+      screen.getByRole("button")
+    ).toHaveClass("px-4 py-1.5 text-sm");
+
+    // Not medium
+    expect(
+      screen.getByRole("button")
+    ).not.toHaveClass("px-5 py-3 text-base");
+
+    // Not large
+    expect(
+      screen.getByRole("button")
+    ).not.toHaveClass("px-6 py-4 text-xl");
+  });
+
+  test("Render regular button", () => {
+    render(
+      <Button size="md">
+        Medium/Regular button
+      </Button>
+    );
+
+    expect(
+      screen.getByRole("button")
+    ).toHaveClass("px-5 py-3 text-base");
+
+    // Not small
+    expect(
+      screen.getByRole("button")
+    ).not.toHaveClass("px-4 py-1.5 text-sm");
+
+    // Not large
+    expect(
+      screen.getByRole("button")
+    ).not.toHaveClass("px-6 py-4 text-xl");
+  });
+
+  test("Render large button", () => {
+    render(
+      <Button size="lg">
+        Large button
+      </Button>
+    );
+
+    expect(
+      screen.getByRole("button")
+    ).toHaveClass("px-6 py-4 text-xl");
+
+    // Not small
+    expect(
+      screen.getByRole("button")
+    ).not.toHaveClass("px-4 py-1.5 text-sm");
+
+    // Not medium
+    expect(
+      screen.getByRole("button")
+    ).not.toHaveClass("px-5 py-3 text-base");
+  });
 });
