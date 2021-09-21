@@ -1,0 +1,261 @@
+import { Button } from "@exponentialeducation/betomic/src";
+import { ArrowRightIcon } from "@exponentialeducation/iconography/icons/esm";
+
+# Button
+
+Documentation of the `<Button />` component. Learn how to use it and its available props.
+
+## Installation
+
+To get started, install `@exponentialeducation/betomic` via yarn:
+
+```bash
+# Yarn
+yarn add @exponentialeducation/betomic
+```
+
+## Use of Button
+
+Button is used by users to trigger action and operations when clicked.
+
+```jsx
+import { Button } from '@exponentialeducation/betomic';
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      <Button>
+        Click me!
+      </Button>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+The previous example describes the simplest way of using the Button component, it uses default `props` and renders a button like the following:
+
+<Button>Click me!</Button>
+
+## Sizes & variants
+
+Betomic comes with three different sizes as well as variants for buttons.  
+Primary and secondary button variants indicate main and secondary actions respectivelly.  
+Tertiary variant also handles dark mode. Disabled buttons are non-interactive.
+
+#### Small
+
+| Primary | Secondary | Tertiary | Disabled |
+| :------ | :-------- | :------- | :------- |
+| <Button size="sm">Small button</Button> | <Button size="sm" variant="secondary">Small button</Button> | <Button size="sm" variant="tertiary">Small button</Button> | <Button size="sm" disabled>Small button</Button> |
+
+#### Medium
+
+| Primary | Secondary | Tertiary | Disabled |
+| :------ | :-------- | :------- | :------- |
+| <Button size="md">Medium btn</Button> | <Button size="md" variant="secondary">Medium btn</Button> | <Button size="md" variant="tertiary">Medium btn</Button> | <Button size="md" disabled>Medium btn</Button> |
+
+#### Large
+
+| Primary | Secondary | Tertiary | Disabled |
+| :------ | :-------- | :------- | :------- |
+| <Button size="lg">Large btn</Button> | <Button size="lg" variant="secondary">Large btn</Button> | <Button size="lg" variant="tertiary">Large btn</Button> | <Button size="lg" disabled>Large btn</Button> |
+
+Some examples of button sizes, variants and props:
+
+```jsx
+import { Button } from '@exponentialeducation/betomic';
+
+function IndexPage() {
+  return (
+    <main>
+      {/* ... */}
+
+      <Button size="sm" variant="primary">
+        Small primary button
+      </Button>
+
+      <Button variant="secondary">
+        Secondary button
+      </Button>
+
+      <Button variant="tertiary" disabled>
+        Tertiary button disabled
+      </Button>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+## Wrapping styles
+
+Buttons handle two different wrapping styles, also known as constraints: Fill container and Hug contents.
+
+#### Hug contents
+
+Hug contents constraint keeps the size of the button bounded to its content. It means that the button will adapt its size according to the elements that it holds.
+
+| Text | Text + icon fixed | Text + icon extended |
+| :--- | :---------------- | :------------------- |
+| <Button>Primary button</Button> | <Button>Primary button <ArrowRightIcon className="ml-4 w-6 h-6"/></Button> | <Button block className="justify-between">Primary button <ArrowRightIcon className="w-6 h-6"/></Button> |
+
+#### Fill container
+
+Fill container constraint resizes the button to fill the width of its direct container.
+
+| Text | Text + icon fixed |
+| :--- | :---------------- |
+| <Button block variant="secondary">Primary button</Button> | <Button block variant="secondary">Primary button <ArrowRightIcon className="ml-4 w-6 h-6"/></Button> |
+
+#### Icon
+
+Icon style adjusts button paddings to keep a 1:1 square aspect ratio.
+
+| Small | Medium | Large |
+| :---- | :----- | :---- |
+| <Button icon size="sm"><ArrowRightIcon className="w-5 h-5"/></Button> | <Button icon size="md" variant="secondary"><ArrowRightIcon className="w-5 h-5"/></Button> | <Button icon size="lg" variant="tertiary"><ArrowRightIcon className="w-6 h-6"/></Button> |
+
+Some examples of button wrapping styles and props:
+
+```jsx
+import { Button } from '@exponentialeducation/betomic';
+
+function IndexPage() {
+  return (
+    <main>
+      {/* ... */}
+
+      <Button>
+        Hug contents button
+      </Button>
+
+      <Button block className="justify-between">
+        Fill container button <ArrowRightIcon />
+      </Button>
+
+      <Button icon size="lg">
+        <ArrowRightIcon />
+      </Button>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+## Props
+
+Extends `ButtonHTMLAttributes`props
+
+<table className="min-w-full divide-y divide-gray-200">
+  <thead>
+    <tr>
+      <th scope="col" className="border-l-0 border-r-0 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        prop
+      </th>
+      <th scope="col" className="border-l-0 border-r-0 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        description
+      </th>
+    </tr>
+  </thead>
+  <tbody className="divide-y divide-gray-200">
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `block?`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **boolean** *= false*<br/>
+        Wheter this button should fill container.<br/>
+        If not set to `true`, button hugs content.
+      </td>
+    </tr>
+
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `className?`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **string**<br/>
+        A list of CSS classes (e.g. `TailwindCSS`) to display and extend styles along with current button classes.
+      </td>
+    </tr>
+
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `disabled?`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **boolean** *= false*<br/>
+        Whether this button should be disabled, display disabled styles and be non-interactive.
+      </td>
+    </tr>
+
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `icon?`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **boolean** *= false*<br/>
+        Whether this button should display only an icon.<br/>
+        If set to `true`, button aspect ratio becomes a square to hold an icon.
+      </td>
+    </tr>
+
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `size?`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **"sm"** | **"md"** | **"lg"** *= "md"*<br/>
+        Whether this button should display button small, medium or large size styles.
+      </td>
+    </tr>
+
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `type?`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **"button"** | **"reset"** | **"submit"** *= "button"*<br/>
+        Sets the **type** attribute of button element.
+      </td>
+    </tr>
+
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `variant?`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **"primary"** | **"secondary"** | **"tertiary"** *= "primary"*<br/>
+        Whether this button should display button primary, secondary or tertiary styles.
+      </td>
+    </tr>
+
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `style?`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **CSSProperties**<br/>
+        A set of native CSS properties.
+      </td>
+    </tr>
+
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `onClick?`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **(event: MouseEvent<HTMLElement>) => void**<br/>
+        Click event handler.
+      </td>
+    </tr>
+
+  </tbody>
+</table>
