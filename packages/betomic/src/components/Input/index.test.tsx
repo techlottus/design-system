@@ -54,4 +54,37 @@ describe("<Input />", () => {
     ).toHaveValue("Welcome to test input")
   });
 
+  it("render <Input /> isValid prop", () => {
+    render(
+      <Input isValid data-testid="test-input" />
+    )
+    const inputEl = screen.getByTestId("test-input");
+
+    expect(
+      inputEl
+    ).toHaveClass("border-success-400 bg-white hover:border-success-400")
+  });
+
+  it("render <Input /> !isValid prop", () => {
+    render(
+      <Input isValid={false} data-testid="test-input" />
+    )
+    const inputEl = screen.getByTestId("test-input");
+
+    expect(
+      inputEl
+    ).toHaveClass("border-error-400 bg-white hover:border-error-400")
+  });
+
+  it("render <Input /> disabled prop", () => {
+    render(
+      <Input disabled data-testid="test-input" />
+    )
+    const inputEl = screen.getByTestId("test-input");
+
+    expect(
+      inputEl
+    ).toHaveClass("bg-surface-100 pointer-events-none")
+  });
+
 });
