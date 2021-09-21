@@ -5,7 +5,7 @@ module.exports = {
       './pages/**/*.{js,ts,tsx,mdx}',
       './components/**/*.{js,ts,tsx}',
       '../../node_modules/@exponentialeducation/betomic/src/**/*.{js,ts,tsx}'
-    ],
+  ],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
@@ -108,7 +108,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      borderWidth: ["hover", "focus"],
+    },
   },
   plugins: [
     require('./plugins/fonts'),
