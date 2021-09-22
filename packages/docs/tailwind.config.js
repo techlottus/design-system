@@ -1,26 +1,26 @@
-const plugin = require('tailwindcss/plugin');
+const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   purge: [
-      './pages/**/*.{js,ts,tsx,mdx}',
-      './components/**/*.{js,ts,tsx}',
-      '../../node_modules/@exponentialeducation/betomic/src/**/*.{js,ts,tsx}'
+      "./pages/**/*.{js,ts,tsx,mdx}",
+      "./components/**/*.{js,ts,tsx}",
+      "../../node_modules/@exponentialeducation/betomic/src/**/*.{js,ts,tsx}"
   ],
-  darkMode: 'class', // or 'media' or 'class'
+  darkMode: "class", // or "media" or "class"
   theme: {
     extend: {
       fontFamily: {
-        'montserrat': ['Montserrat', 'sans-serif'],
-        'rubik': ['Rubik', 'sans-serif'],
+        "montserrat": ["Montserrat", "sans-serif"],
+        "rubik": ["Rubik", "sans-serif"],
       },
       colors: {
-        transparent: 'transparent',
-        current: 'currentColor',
+        transparent: "transparent",
+        current: "currentColor",
         white: {
           DEFAULT: "#FFFFFF",
           "10": "rgba(255, 255, 255, 0.1)"
         },
-        black: '#000000',
+        black: "#000000",
         surface: {
           "50": "#F1F6FA",
           "100": "#E7EEF4",
@@ -105,6 +105,9 @@ module.exports = {
           "800": "#A31228"
         },
       },
+      spacing: {
+        "18": "4.5rem",
+      }
     },
   },
   variants: {
@@ -113,32 +116,32 @@ module.exports = {
     },
   },
   plugins: [
-    require('./plugins/fonts'),
+    require("./plugins/fonts"),
     plugin(function({ addUtilities }) {
       const filterUtilities = {
-        '.grid p:not(:first-child), .grid p': {
+        ".grid p:not(:first-child), .grid p": {
           margin: 0,
         },
       }
 
-      addUtilities(filterUtilities, ['responsive', 'hover'])
+      addUtilities(filterUtilities, ["responsive", "hover"])
     }),
     plugin(function({ addBase, theme }) {
       addBase({
         table: {
-          width: theme('width.full'),
+          width: theme("width.full"),
         },
-        'table tbody tr:nth-child(2n)': {
-          backgroundColor: 'inherit'
+        "table tbody tr:nth-child(2n)": {
+          backgroundColor: "inherit"
         },
-        '.dark table tbody tr:nth-child(2n)': {
-          backgroundColor: '#111111'
+        ".dark table tbody tr:nth-child(2n)": {
+          backgroundColor: "#111111"
         },
-        'table thead': {
-          backgroundColor: '#f7fafc'
+        "table thead": {
+          backgroundColor: "#f7fafc"
         },
-        '.dark table thead': {
-          backgroundColor: '#1a202c'
+        ".dark table thead": {
+          backgroundColor: "#1a202c"
         },
       })
     })
