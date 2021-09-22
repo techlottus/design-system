@@ -1,15 +1,10 @@
-import { InputGroup, Input } from "@exponentialeducation/betomic/src";
+import { InputGroup } from "@exponentialeducation/betomic/src";
 import { CheckIcon, EyeIcon, SearchIcon } from "@exponentialeducation/iconography/icons/esm";
 
 const InputGroupBasicExample = () => {
   return (
     <section className="mt-5">
-      <InputGroup>
-        <InputGroup.Decoration position="right">
-          <EyeIcon className="w-4 h-full" />
-        </InputGroup.Decoration>
-        <Input type="password" className="pr-10" placeholder="Right decoration" />
-      </InputGroup>
+      <InputGroup placeholder="Basic example" />
     </section>
   );
 }
@@ -17,12 +12,21 @@ const InputGroupBasicExample = () => {
 const InputGroupLeftExample = () => {
   return (
     <section className="mt-5">
-      <InputGroup>
-        <InputGroup.Decoration>
-          <CheckIcon className="w-4 h-full" />
-        </InputGroup.Decoration>
-        <Input type="text" className="pl-10" placeholder="Left decoration" />
-      </InputGroup>
+      <InputGroup
+        placeholder="Left decoration"
+        leftElement={<EyeIcon className="w-4" />}
+      />
+    </section>
+  );
+}
+
+const InputGroupRightExample = () => {
+  return (
+    <section className="mt-5">
+      <InputGroup
+        placeholder="Right decoration"
+        rightElement={<EyeIcon className="w-4" />}
+      />
     </section>
   );
 }
@@ -30,19 +34,15 @@ const InputGroupLeftExample = () => {
 const InputGroupComplexExample = () => {
   return (
     <section className="mt-5">
-      <InputGroup>
-        <InputGroup.Decoration position="left">
-          <span className="text-surface-300">
-            http://
-          </span>
-        </InputGroup.Decoration>
-        <Input placeholder="Example" className="px-18" />
-        <InputGroup.Decoration position="right">
-          <span className="text-surface-300">
-            .bedu.org
-          </span>
-        </InputGroup.Decoration>
-      </InputGroup>
+      <InputGroup
+        className="pl-18 pr-20"
+        leftElement={
+          <span className=" text-surface-300 select-none">https://</span>
+        }
+        rightElement={
+          <span className="text-surface-300 select-none">.bedu.org</span>
+        }
+      />
     </section>
   );
 }
@@ -50,12 +50,30 @@ const InputGroupComplexExample = () => {
 const InputGroupSearchExample = () => {
   return (
     <section className="mt-5">
-      <InputGroup>
-        <InputGroup.Decoration>
-          <SearchIcon className="w-4 text-surface-700"/>
-        </InputGroup.Decoration>
-        <Input type="search" className="pl-10" placeholder="Search example..." />
-      </InputGroup>
+      <InputGroup
+        type="search"
+        placeholder="Search example..."
+        leftElement={
+          <SearchIcon className="w-4" />
+        }
+      />
+    </section>
+  );
+}
+
+const InputGroupValidationExample = () => {
+  return (
+    <section className="mt-5 grid gap-5">
+      <InputGroup
+        isValid={false}
+        placeholder="Valid false example"
+        rightElement={<EyeIcon className="w-4" />}
+      />
+      <InputGroup
+        isValid
+        placeholder="Valid example"
+        rightElement={<CheckIcon className="w-4" />}
+      />
     </section>
   );
 }
@@ -63,6 +81,8 @@ const InputGroupSearchExample = () => {
 export {
   InputGroupBasicExample,
   InputGroupLeftExample,
+  InputGroupRightExample,
   InputGroupComplexExample,
-  InputGroupSearchExample
+  InputGroupSearchExample,
+  InputGroupValidationExample
 }
