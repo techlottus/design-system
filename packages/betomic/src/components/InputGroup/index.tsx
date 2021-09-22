@@ -1,71 +1,88 @@
-import React, { Children } from "react";
-import type { ReactNode, FC } from "react";
-import Input from "../Input";
+import React from "react";
+import type { InputHTMLAttributes } from "react";
 import cn from "classnames";
 
-type DecorationProps = {
-  children: React.ReactNode;
-  className?: string;
-  position?: Position;
+interface IInput extends InputHTMLAttributes<HTMLInputElement> {
+  type?: string;
+  isValid?: boolean | null;
+  leftElement?: JSX.Element;
+  rightElement?: JSX.Element;
 }
 
-type InputGroupComposition = {
-  Decoration: React.FC<DecorationProps>
-}
-
-type InputGroupProps = {
-  children: ReactNode;
-  className?: string;
-}
-
-const Positions = {
-  left: cn("left-0 pl-3"),
-  right: cn("right-0 pr-3"),
-};
-
-type Position = keyof typeof Positions
-
-const Decoration: React.FC<DecorationProps> = (props) => {
+const Input = React.forwardRef((props: IInput, ref: React.Ref<HTMLInputElement>) => {
   const {
+    isValid = null,
+    disabled = false,
+    type = "text",
+    style,
     className,
-    children,
-    position = "left"
+    leftElement,
+    rightElement,
+    ...restProps
   } = props;
-  
-  const decorationClasses = cn(
-    "absolute inset-y-0 flex items-center",
-    Positions[position],
+  const inputClasses = cn(
+    "rounded p-3 h-10 w-full",
+    "font-rubik font-normal text-base text-surface-700 bg-surface-100 placeholder-surface-400",
+    "border-2 border-transparent focus:outline-none focus:bg-white",
+    "hover:border-surface-200",
+    {
+      ["pl-10"]: (leftElement !== undefined),
+      ["pr-10"]: (rightElement !== undefined),
+      ["border-success-400 bg-white hover:border-success-400"]: (isValid !== null && isValid),
+      ["border-error-400 bg-white hover:border-error-400"]: (isValid !== null && !isValid),
+      ["focus:ring-primary-500 focus:ring-opacity-40 focus:ring-2 focus:border-primary-500"]: (isValid === null),
+      ["bg-surface-100 pointer-events-none"]: disabled
+    },
     className
   );
-  return (
-    <div className={decorationClasses}>{children}</div>
-  )
-}
 
-const InputGroup: FC<InputGroupProps> & InputGroupComposition = (props) => {
-  const {
-    children,
-    className,
-  } = props;
-  const inputGroupClasses = cn(
-    "input-group",
-    "relative",
-    className,
-  );
-  return (
-    <div className={inputGroupClasses}>
+  const maybeRenderLeftElement = () => {
+    const classesIcon = cn(
+      "left-element",
+      "absolute inset-y-0 flex items-center",
+      "left-0 pl-3"
+    );
+    if(!leftElement) {
+      return;
+    }
+    return (
+      <div className={classesIcon}>
+        {leftElement}
+      </div>
+    );
+  };
+
+  const maybeRenderRightElement = () => {
+    const classesIcon = cn(
+      "right-element",
+      "absolute inset-y-0 flex items-center",
+      "right-0 pr-3",
       {
-        Children.map(children, (child) => {
-          if(React.isValidElement(child) && (child.type === Decoration || child.type === Input)) {
-            return child;
-          }
-          return;
-        })
+        ["text-error-400"]: (isValid !== null && !isValid),
+        ["text-success-400"]: (isValid !== null && isValid),
       }
+    );
+    if(!rightElement) {
+      return;
+    }
+    return (
+      <div className={classesIcon}>
+        {rightElement}
+      </div>
+    );
+  };
+
+  return (
+    <div className="input-group relative">
+      {maybeRenderLeftElement()}
+      <input
+        className={inputClasses}
+        ref={ref}
+        type={type}
+        {...restProps} />
+      {maybeRenderRightElement()}
     </div>
-  );
-}
+  )
+})
 
-InputGroup.Decoration = Decoration;
-
-export default InputGroup;
+export default Input;
