@@ -74,6 +74,16 @@ const InputGroupValidationExample = () => {
         placeholder="Valid example"
         rightElement={<CheckIcon className="w-4" />}
       />
+      <InputGroup
+        isValid={false}
+        placeholder="Valid false example"
+        leftElement={<EyeIcon className="w-4" />}
+      />
+      <InputGroup
+        isValid
+        placeholder="Valid example"
+        leftElement={<CheckIcon className="w-4" />}
+      />
     </section>
   );
 }

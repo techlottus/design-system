@@ -40,7 +40,11 @@ const Input = React.forwardRef((props: IInput, ref: React.Ref<HTMLInputElement>)
     const classesIcon = cn(
       "left-element",
       "absolute inset-y-0 flex items-center",
-      "left-0 pl-3"
+      "left-0 pl-3",
+      {
+        ["text-error-400"]: (isValid !== null && !isValid),
+        ["text-success-400"]: (isValid !== null && isValid),
+      }
     );
     if(!leftElement) {
       return;
