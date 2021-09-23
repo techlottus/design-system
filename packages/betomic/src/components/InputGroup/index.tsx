@@ -80,6 +80,7 @@ const Input = React.forwardRef((props: IInput, ref: React.Ref<HTMLInputElement>)
     <div className="input-group relative">
       {maybeRenderLeftElement()}
       <input
+        disabled={disabled}
         className={inputClasses}
         ref={ref}
         type={type}
