@@ -207,7 +207,7 @@ describe("<Pagination />", () => {
 
     allButtons = screen.getAllByRole("button");
     paginationButtonDots = screen.queryAllByText("...");
-    
+
     // Arrow right navigation button now should be disabled
     expect(
       allButtons[allButtons.length - 1]
@@ -228,6 +228,20 @@ describe("<Pagination />", () => {
 
     const paginationListEl = screen.queryByRole("list");
     
+    expect(
+      paginationListEl
+    ).not.toBeInTheDocument();
+  });
+
+  test("Render <Pagination /> with a result of just one total page", () => {
+    const myFunction = (currentPageData: any) => { console.log(currentPageData) }
+    
+    render(
+      <Pagination pageLimit={5} totalRecords={5} onPageChanged={myFunction} />
+    );
+
+    const paginationListEl = screen.queryByRole("list");
+
     expect(
       paginationListEl
     ).not.toBeInTheDocument();
