@@ -86,4 +86,23 @@ describe("<Pagination />", () => {
       buttonDots
     ).not.toBeInTheDocument();
   });
+
+  test("Render <Pagination /> with 0 page neighbours", () => {
+    const myFunction = (currentPageData: any) => console.log(currentPageData);
+    
+    render(
+      <Pagination totalRecords={12} pageLimit={2} pageNeighbours={0} onPageChanged={myFunction} />
+    );
+
+    const buttonDots = screen.getByText("...");
+    const button4 = screen.queryByText("4");
+
+    expect(
+      buttonDots
+    ).toBeInTheDocument();
+
+    expect(
+      button4
+    ).not.toBeInTheDocument();
+  });
 });
