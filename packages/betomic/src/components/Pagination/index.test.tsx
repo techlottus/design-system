@@ -218,4 +218,18 @@ describe("<Pagination />", () => {
       paginationButtonDots.length
     ).toBe(1);
   });
+
+  test("Render <Pagination /> with no records", () => {
+    const myFunction = (currentPageData: any) => { console.log(currentPageData) }
+    
+    render(
+      <Pagination pageLimit={5} totalRecords={0} onPageChanged={myFunction} />
+    );
+
+    const paginationListEl = screen.queryByRole("list");
+    
+    expect(
+      paginationListEl
+    ).not.toBeInTheDocument();
+  });
 });
