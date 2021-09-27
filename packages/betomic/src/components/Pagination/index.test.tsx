@@ -72,4 +72,18 @@ describe("<Pagination />", () => {
       paginationButtons[0]
     ).toBeDisabled();
   });
+
+  test("Render <Pagination /> without dots button", () => {
+    const myFunction = (currentPageData: any) => console.log(currentPageData);
+    
+    render(
+      <Pagination totalRecords={10} pageLimit={2} pageNeighbours={0} onPageChanged={myFunction} />
+    );
+    
+    const buttonDots = screen.queryByText("...");
+
+    expect(
+      buttonDots
+    ).not.toBeInTheDocument();
+  });
 });
