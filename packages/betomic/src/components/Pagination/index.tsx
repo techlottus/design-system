@@ -20,12 +20,12 @@ const Pagination: React.FC<IPagination> = (props: IPagination) => {
 
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
-  const [pageNeighboursCalc, setPageNeighboursCalc] = useState(0);
+  const [extraNeighbourPages, setExtraNeighbourPages] = useState(0);
 
   const { totalRecords = 0, pageLimit = 30, pageNeighbours = 0, onPageChanged = f => f } = props;
 
   useEffect(() => {
-    setPageNeighboursCalc(Math.max(0, Math.min(pageNeighbours, 2))); //pageNeighbours can be: 0, 1 or 2
+    setExtraNeighbourPages(Math.max(0, Math.min(pageNeighbours, 2)));
     setTotalPages(Math.ceil(totalRecords / pageLimit));
     gotoPage(1);
   }, [totalRecords, pageLimit, pageNeighbours]);
@@ -47,13 +47,13 @@ const Pagination: React.FC<IPagination> = (props: IPagination) => {
   };
 
   const fetchPageNumbers = () => {
-    const pageNeighbours: number = pageNeighboursCalc;
+    const pageNeighbours: number = extraNeighbourPages;
 
     /**
      * totalNumbers: the total page numbers to show on the control
      * totalBlocks: totalNumbers + 2 to cover for the left(...) and right(...) indicators
      */
-    const totalNumbers = (pageNeighboursCalc * 2) + 3;
+    const totalNumbers = (extraNeighbourPages * 2) + 3;
     const totalBlocks = totalNumbers + 2;
 
     if (totalPages > totalBlocks) {
@@ -118,12 +118,12 @@ const Pagination: React.FC<IPagination> = (props: IPagination) => {
 
   const handleMoveLeft = (evt: MouseEvent) => {
     evt.preventDefault();
-    gotoPage(currentPage - (pageNeighboursCalc * 2) - 1);
+    gotoPage(currentPage - (extraNeighbourPages * 2) - 1);
   };
 
   const handleMoveRight = (evt: MouseEvent) => {
     evt.preventDefault();
-    gotoPage(currentPage + (pageNeighboursCalc * 2) + 1);
+    gotoPage(currentPage + (extraNeighbourPages * 2) + 1);
   };
 
   const pages: (string | number)[] = fetchPageNumbers();
