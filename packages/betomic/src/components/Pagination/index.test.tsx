@@ -105,4 +105,52 @@ describe("<Pagination />", () => {
       button4
     ).not.toBeInTheDocument();
   });
+
+  test("Render <Pagination /> with 1 page neighbours", () => {
+    const myFunction = (currentPageData: any) => console.log(currentPageData);
+    
+    render(
+      <Pagination totalRecords={20} pageLimit={2} pageNeighbours={1} onPageChanged={myFunction} />
+    );
+
+    const buttonDots = screen.getByText("...");
+    const button5 = screen.getByText("5");
+    const button6 = screen.queryByText("6");
+
+    expect(
+      buttonDots
+    ).toBeInTheDocument();
+
+    expect(
+      button5
+    ).toBeInTheDocument();
+
+    expect(
+      button6
+    ).not.toBeInTheDocument();
+  });
+
+  test("Render <Pagination /> with 2 page neighbours", () => {
+    const myFunction = (currentPageData: any) => console.log(currentPageData);
+    
+    render(
+      <Pagination totalRecords={20} pageLimit={2} pageNeighbours={2} onPageChanged={myFunction} />
+    );
+
+    const buttonDots = screen.getByText("...");
+    const button7 = screen.getByText("7");
+    const button8 = screen.queryByText("8");
+
+    expect(
+      buttonDots
+    ).toBeInTheDocument();
+
+    expect(
+      button7
+    ).toBeInTheDocument();
+
+    expect(
+      button8
+    ).not.toBeInTheDocument();
+  });
 });
