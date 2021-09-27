@@ -48,4 +48,28 @@ describe("<Pagination />", () => {
     ).not.toBeInTheDocument();
   });
 
+  test("Render <Pagination /> with a dots button", () => {
+    const myFunction = (currentPageData: any) => {
+      console.log("currentPageData: ", currentPageData);
+    } 
+    
+    render(
+      <Pagination pageLimit={3} totalRecords={50} onPageChanged={myFunction} />
+    );
+
+    const paginationButtons = screen.getAllByRole("button");
+    const paginationButtonDots = screen.getByText("...");
+    
+    expect(
+      paginationButtonDots
+    ).toBeInTheDocument();
+
+    expect(
+      paginationButtonDots
+    ).toHaveClass("bg-white text-surface-600 border-2 border-surface-500 hover:bg-surface-500 hover:text-white focus:bg-surface-500 focus:text-white");
+
+    expect(
+      paginationButtons[0]
+    ).toBeDisabled();
+  });
 });
