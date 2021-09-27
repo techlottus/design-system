@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import Pagination from ".";
 
 describe("<Pagination />", () => {
@@ -148,5 +149,73 @@ describe("<Pagination />", () => {
     expect(
       button8
     ).not.toBeInTheDocument();
+  });
+
+  test("Render <Pagination /> and navigate through pages using buttons", () => {
+    const myFunction = (currentPageData: any) => { console.log(currentPageData) }
+    
+    render(
+      <Pagination pageLimit={1} totalRecords={23} onPageChanged={myFunction} />
+    );
+
+    const paginationListEl = screen.getByRole("list");
+    let allButtons = screen.getAllByRole("button");
+    const paginationButton3 = screen.getByText("3");
+    let paginationButtonDots = screen.queryAllByText("...");
+    
+    expect(
+      paginationListEl
+    ).toBeInTheDocument();
+
+    // Arrow left icon button should be disabled
+    expect(
+      allButtons[0]
+    ).toBeDisabled();
+
+    // Initially, there should be one dots (ellipsis) button
+    expect(
+      paginationButtonDots.length
+    ).toBe(1);
+
+    expect(
+      paginationButtonDots[0]
+    ).toBeInTheDocument();
+
+    // Button with text "3" should be the one next to the dots button
+    expect(
+      paginationButton3
+    ).toBeInTheDocument();
+
+    // Click button with text "3" to start navigation
+    userEvent.click(paginationButton3);
+
+    allButtons = screen.getAllByRole("button");
+    paginationButtonDots = screen.queryAllByText("...");
+
+    // After click & start navigation, arrow left button should be enabled
+    expect(
+      allButtons[0]
+    ).not.toBeDisabled();
+
+    // After click, it should be two dots (ellipsis) buttons
+    expect(
+      paginationButtonDots.length
+    ).toBe(2);
+
+    // Click the last clickable number icon
+    userEvent.click(allButtons[allButtons.length - 2]);
+
+    allButtons = screen.getAllByRole("button");
+    paginationButtonDots = screen.queryAllByText("...");
+    
+    // Arrow right navigation button now should be disabled
+    expect(
+      allButtons[allButtons.length - 1]
+    ).toBeDisabled();
+
+    // It should be now again only one dots (ellipsis) button
+    expect(
+      paginationButtonDots.length
+    ).toBe(1);
   });
 });
