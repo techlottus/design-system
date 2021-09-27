@@ -118,12 +118,12 @@ const Pagination: React.FC<IPagination> = (props: IPagination) => {
 
   const handleMoveLeft = (evt: MouseEvent) => {
     evt.preventDefault();
-    gotoPage(currentPage - 1);
+    gotoPage(currentPage - (pageNeighboursCalc * 2) - 1);
   };
 
   const handleMoveRight = (evt: MouseEvent) => {
     evt.preventDefault();
-    gotoPage(currentPage + 1);
+    gotoPage(currentPage + (pageNeighboursCalc * 2) + 1);
   };
 
   const pages: (string | number)[] = fetchPageNumbers();
@@ -141,7 +141,7 @@ const Pagination: React.FC<IPagination> = (props: IPagination) => {
             icon
             variant="tertiary"
             disabled={currentPage <= 1}
-            onClick={handleMoveLeft}
+            onClick={() => gotoPage(currentPage - 1)}
           >
             <ArrowLeftIcon className="w-5 h-5" />
           </Button>
@@ -153,6 +153,11 @@ const Pagination: React.FC<IPagination> = (props: IPagination) => {
               <Button
                 icon
                 variant="tertiary"
+                onClick={
+                  page === LEFT_DOTS ?
+                    handleMoveLeft :
+                    handleMoveRight
+                }
               >
                 ...
               </Button>
@@ -177,7 +182,7 @@ const Pagination: React.FC<IPagination> = (props: IPagination) => {
             icon
             variant="tertiary"
             disabled={currentPage >= totalPages}
-            onClick={handleMoveRight}
+            onClick={() => gotoPage(currentPage + 1)}
           >
             <ArrowRightIcon className="w-5 h-5" />
           </Button>
