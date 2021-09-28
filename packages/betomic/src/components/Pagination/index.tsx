@@ -123,7 +123,7 @@ const Pagination: React.FC<IPagination> = (props: IPagination) => {
   const pages: (string | number)[] = fetchPageNumbers();
   
   // No need to display pagination buttons since it's only one page
-  if (!totalRecords || totalPages === 1) return null;
+  if (!totalRecords) return null;
 
   const commonClasses = cn("list-none flex items-center justify-center gap-3");
 
