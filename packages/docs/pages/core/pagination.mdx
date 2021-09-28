@@ -1,0 +1,304 @@
+import { Pagination } from "@exponentialeducation/betomic/src";
+
+# Pagination
+
+Documentation of the `<Pagination />` component. Learn how to use it and its available props.
+
+## Installation
+
+To get started, install `@exponentialeducation/betomic` via yarn:
+
+```bash
+# Yarn
+yarn add @exponentialeducation/betomic
+```
+
+## Basic example
+
+A long list or sets of data can be split into several pages using Pagination.
+Pagination works well when the size of the dataset is already know (the total number of records).
+
+```jsx highlight=14
+import { Pagination } from "@exponentialeducation/betomic";
+
+function IndexPage() {
+
+  onPageChanged = (data) => {
+    const { currentPage, totalPages, pageLimit } = data;
+    /* ... */
+  }
+
+  return (
+    <main>
+      {/* ... */}
+
+      <Pagination totalRecords={200} onPageChanged={onPageChanged} />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+The previous example describes the simplest way of using the Pagination component, it uses default `props` and renders a component like the following:
+
+<Pagination totalRecords={200} />
+
+## Default page
+
+In some cases, it is necessary to show the initial pagination on a different page. The `defaultPage` prop indicates in which number pagination starts.
+
+<Pagination totalRecords={250} defaultPage={5} />
+
+If the `defaultPage` value is greater than the pagination `totalPages` value, `defaultPage` will be set to 1.
+
+<Pagination totalRecords={250} defaultPage={10} />
+
+The above examples of `defaultPage` prop are described as following:
+
+```jsx highlight=14,17
+import { Pagination } from "@exponentialeducation/betomic";
+
+function IndexPage() {
+  onPageChanged = (data) => {
+    const { currentPage, totalPages, pageLimit } = data;
+    /* ... */
+  }
+
+  return (
+    <main>
+      {/* ... */}
+
+      {/* Pagination starts at page 5 */}
+      <Pagination totalRecords={250} defaultPage={5} />
+
+      {/* totalPages = 9 so defaultPage is set to 1 */}
+      <Pagination totalRecords={250} defaultPage={10} />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+## Page limit & total records
+
+#### No additional pages
+
+Pagination determines whether is necessary or not to display an additional pages indicator button.
+
+<Pagination pageLimit={2} totalRecords={8} />
+
+#### Additional pages indicator
+
+When several pages are needed to display the data, an ellipsis (...) button indicator is shown.
+
+<Pagination pageLimit={1} totalRecords={23} />
+
+Some examples of the pagination pageLimit and previous records:
+
+```jsx highlight=14,15,20,21
+import { Pagination } from "@exponentialeducation/betomic";
+
+function IndexPage() {
+  onPageChanged = (data) => {
+    const { currentPage, totalPages, pageLimit } = data;
+    /* ... */
+  }
+
+  return (
+    <main>
+      {/* ... */}
+
+      <Pagination
+        pageLimit={2}
+        totalRecords={8}
+        onPageChanged={onPageChanged}
+      />
+
+      <Pagination
+        pageLimit={1}
+        totalRecords={23}
+        onPageChanged={onPageChanged}
+      />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+#### One page pagination
+
+If the result of the page limit with the total amount is determined in one page, meaning `totalPages = 1`, the Pagination component will render like so:
+
+<Pagination pageLimit={5} totalRecords={5} />
+
+The following example describes this:
+
+```jsx highlight=9
+import { Pagination } from "@exponentialeducation/betomic";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* totalPages will equal to 1 */}
+
+      <Pagination pageLimit={5} totalRecords={5} />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+#### No records
+
+If `totalRecords` value isn't provided or is set to 0, meaning `!totalRecords`, the Pagination component won't render anything since it is not necesary to paginate.
+As shown in the following example:
+
+```jsx highlight=9
+import { Pagination } from "@exponentialeducation/betomic";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* totalPages will equal to 1 */}
+
+      <Pagination totalRecords={0} />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+## Page neighbours
+
+The number of additional page-number buttons to display on each side of the current-page button can be configured using the `pageNeighbours` prop.
+The maximum number of neighbours that a pagination can have is two.
+
+#### pageNeighbours = 0
+
+This is the `pageNeighbours` default value.
+
+<Pagination pageLimit={1} totalRecords={23} defaultPage={3} />
+
+#### pageNeighbours = 1
+
+<Pagination pageLimit={1} pageNeighbours={1} totalRecords={23} defaultPage={4} />
+
+#### pageNeighbours = 2
+
+<Pagination pageLimit={1} pageNeighbours={2} totalRecords={23} defaultPage={5} />
+
+The above examples are described as follows:
+
+```jsx highlight=21,28
+import { Pagination } from "@exponentialeducation/betomic";
+
+function IndexPage() {
+  onPageChanged = (data) => {
+    const { currentPage, totalPages, pageLimit } = data;
+    /* ... */
+  }
+
+  return (
+    <main>
+      {/* ... */}
+
+      <Pagination
+        pageLimit={1}
+        totalRecords={23}
+        onPageChanged={onPageChanged}
+      />
+
+      <Pagination
+        pageLimit={1}
+        pageNeighbours={1}
+        totalRecords={23}
+        onPageChanged={onPageChanged}
+      />
+
+      <Pagination
+        pageLimit={1}
+        pageNeighbours={2}
+        totalRecords={23}
+        onPageChanged={onPageChanged}
+      />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+## Props
+
+<table className="min-w-full divide-y divide-gray-200">
+  <thead>
+    <tr>
+      <th scope="col" className="border-l-0 border-r-0 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        prop
+      </th>
+      <th scope="col" className="border-l-0 border-r-0 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        description
+      </th>
+    </tr>
+  </thead>
+  <tbody className="divide-y divide-gray-200">
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `defaultPage?`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **number** *= 1*<br/>
+        The page number in which the pagination starts.<br/>
+        If `defaultPage` value is greater than the total number of pages, it will be set to 1.
+      </td>
+    </tr>
+
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `pageLimit?`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **number** *= 30*<br/>
+        The amount of records to be shown on each page.
+      </td>
+    </tr>
+
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `pageNeighbours?`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **number** *= 0*<br/>
+        The number of additional page-number buttons to display on each side of the current-page button. Minimum value = 0, maximum value = 2.
+      </td>
+    </tr>
+
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `totalRecords`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **number**<br/>
+        The total number of records to be paginated.
+      </td>
+    </tr>
+
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `onPageChanged`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **(paginationData: PaginationData) => void**<br/>
+        A function triggered when the current page changes. It includes the data of the current pagination state.
+      </td>
+    </tr>
+
+  </tbody>
+</table>

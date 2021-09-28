@@ -11,9 +11,9 @@ const Sizes = {
 type Size = keyof typeof Sizes;
 
 const SizesIcon = {
-  sm: cn("p-1.5"),
-  md: cn("p-3.5"),
-  lg: cn("p-4")
+  sm: cn("p-1.5 w-8 h-8"),
+  md: cn("p-3.5 w-12 h-12"),
+  lg: cn("p-4 w-15 h-15")
 };
 
 const commonClasses = cn("rounded", "flex", "justify-center", "items-center", "font-montserrat", "font-bold", "focus:outline-none", "focus:border-primary-500", "focus:ring-2", "focus:ring-primary-200");

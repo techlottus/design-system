@@ -111,9 +111,7 @@ module.exports = {
     },
   },
   variants: {
-    extend: {
-      borderWidth: ["hover", "focus"],
-    },
+    extend: {},
   },
   plugins: [
     require("./plugins/fonts"),
