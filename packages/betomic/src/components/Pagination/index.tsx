@@ -70,27 +70,21 @@ const Pagination: React.FC<IPagination> = (props: IPagination) => {
       const hasRightSpill = (totalPages - endPage) > 1;
       const spillOffset = totalNumbers - (pages.length + 1);
 
-      switch (true) {
         // handle: (1) ... {5 6} [7] {8 9} (10)
-        case (hasLeftSpill && !hasRightSpill): {
+      if (hasLeftSpill && !hasRightSpill) {
           const extraPages = range(startPage - spillOffset, startPage - 1);
           pages = [LEFT_DOTS, ...extraPages, ...pages];
-          break;
         }
 
         // handle: (1) {2 3} [4] {5 6} ... (10)
-        case (!hasLeftSpill && hasRightSpill): {
+      if (!hasLeftSpill && hasRightSpill) {
           const extraPages = range(endPage + 1, endPage + spillOffset);
           pages = [...pages, ...extraPages, RIGHT_DOTS];
-          break;
         }
 
         // handle: (1) ... {4 5} [6] {7 8} ... (10)
-        case (hasLeftSpill && hasRightSpill):
-        default: {
+      if (hasLeftSpill && hasRightSpill) {
           pages = [LEFT_DOTS, ...pages, RIGHT_DOTS];
-          break;
-        }
       }
 
       return [1, ...pages, totalPages];
