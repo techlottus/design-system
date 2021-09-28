@@ -241,6 +241,25 @@ describe("<Pagination />", () => {
     );
 
     const paginationListEl = screen.queryByRole("list");
+    const paginationButtons = screen.queryAllByRole("button");
+
+    expect(
+      paginationListEl
+    ).toBeInTheDocument();
+
+    expect(
+      paginationButtons.length
+    ).toBe(3);
+  });
+
+  test("Render <Pagination /> without records", () => {
+    const myFunction = (currentPageData: any) => { console.log(currentPageData) }
+    
+    render(
+      <Pagination totalRecords={0} onPageChanged={myFunction} />
+    );
+
+    const paginationListEl = screen.queryByRole("list");
 
     expect(
       paginationListEl
