@@ -10,10 +10,11 @@ interface PaginationData {
 };
 
 interface IPagination {
-  onPageChanged: (data: PaginationData) => void;
+  defaultPage?: number;
   pageLimit?: number;
-  pageNeighbours?: number,
+  pageNeighbours?: 0 | 1 | 2,
   totalRecords: number;
+  onPageChanged: (data: PaginationData) => void;
 };
 
 const Pagination: React.FC<IPagination> = (props: IPagination) => {
@@ -22,14 +23,23 @@ const Pagination: React.FC<IPagination> = (props: IPagination) => {
   const [totalPages, setTotalPages] = useState(0);
   const [extraNeighbourPages, setExtraNeighbourPages] = useState(0);
 
-  const { totalRecords = 0, pageLimit = 30, pageNeighbours = 0, onPageChanged = f => f } = props;
+  const { defaultPage = 1, pageLimit = 30, pageNeighbours = 0, totalRecords = 0, onPageChanged = f => f } = props;
 
   useEffect(() => {
     setExtraNeighbourPages(Math.max(0, Math.min(pageNeighbours, 2)));
-    setTotalPages(Math.ceil(totalRecords / pageLimit));
-    gotoPage(1);
-  }, [totalRecords, pageLimit, pageNeighbours]);
+    if (pageNeighbours > 2) {
+      console.warn("The maximum allowed value for 'pageNeighbours' is 2.");
+    }
 
+    setTotalPages(Math.ceil(totalRecords / pageLimit));
+
+    if (totalPages && defaultPage > totalPages) {
+      console.warn("currentPage was set to 1 because 'page' cannot be greater than the total amount of pages.");
+      gotoPage(1);
+    } else {
+      gotoPage(defaultPage);
+    }
+  }, [defaultPage, pageNeighbours, totalRecords, totalPages]);
 
   const LEFT_DOTS = "LEFT";
   const RIGHT_DOTS = "RIGHT";
@@ -70,21 +80,21 @@ const Pagination: React.FC<IPagination> = (props: IPagination) => {
       const hasRightSpill = (totalPages - endPage) > 1;
       const spillOffset = totalNumbers - (pages.length + 1);
 
-        // handle: (1) ... {5 6} [7] {8 9} (10)
+      // handle: (1) ... {5 6} [7] {8 9} (10)
       if (hasLeftSpill && !hasRightSpill) {
-          const extraPages = range(startPage - spillOffset, startPage - 1);
-          pages = [LEFT_DOTS, ...extraPages, ...pages];
-        }
-
-        // handle: (1) {2 3} [4] {5 6} ... (10)
+        const extraPages = range(startPage - spillOffset, startPage - 1);
+        pages = [LEFT_DOTS, ...extraPages, ...pages];
+      } 
+      
+      // handle: (1) {2 3} [4] {5 6} ... (10)
       if (!hasLeftSpill && hasRightSpill) {
-          const extraPages = range(endPage + 1, endPage + spillOffset);
-          pages = [...pages, ...extraPages, RIGHT_DOTS];
-        }
+        const extraPages = range(endPage + 1, endPage + spillOffset);
+        pages = [...pages, ...extraPages, RIGHT_DOTS];
+      }
 
-        // handle: (1) ... {4 5} [6] {7 8} ... (10)
+      // handle: (1) ... {4 5} [6] {7 8} ... (10)
       if (hasLeftSpill && hasRightSpill) {
-          pages = [LEFT_DOTS, ...pages, RIGHT_DOTS];
+        pages = [LEFT_DOTS, ...pages, RIGHT_DOTS];
       }
 
       return [1, ...pages, totalPages];
