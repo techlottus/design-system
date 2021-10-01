@@ -10,6 +10,10 @@ module.exports = {
   darkMode: "class", // or "media" or "class"
   theme: {
     extend: {
+      maxWidth: {
+        "68": "272px",
+        "110": "440px"
+      },
       fontFamily: {
         "montserrat": ["Montserrat", "sans-serif"],
         "rubik": ["Rubik", "sans-serif"],
