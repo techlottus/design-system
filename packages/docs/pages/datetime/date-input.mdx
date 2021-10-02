@@ -1,4 +1,10 @@
 import { DateInput } from "@exponentialeducation/datetime/src";
+import {
+  DateInputDefaultValueExample,
+  DateInputInitialMonthExample,
+  DateInputMinDateExample,
+  DateInputMaxDateExample
+} from "../../components/DateInputExample";
 
 # Date Picker
 
@@ -39,6 +45,392 @@ The previous example describes the simplest way of using the DateInput component
 
 <DateInput />
 
+## DateInput with FormGroup
+
+#### Adding label
+
+<DateInput
+  label="Label"
+  labelFor="date-picker-form-1"
+/>
+
+```jsx highlight=9-12
+import { DateInput } from "@exponentialeducation/datetime";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      <DateInput
+        label="Label"
+        labelFor="date-picker-form-1"
+      />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+#### Required
+
+<DateInput
+  label="Label"
+  labelFor="date-picker-form-2"
+  required
+/>
+
+```jsx highlight=9-13
+import { DateInput } from "@exponentialeducation/datetime";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      <DateInput
+        label="Label"
+        labelFor="date-picker-form-2"
+        required
+      />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+#### With helper icon
+
+<DateInput
+  label="Label"
+  labelFor="date-picker-form-3"
+  labelHelper={true}
+/>
+
+```jsx highlight=9-13
+import { DateInput } from "@exponentialeducation/datetime";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      <DateInput
+        label="Label"
+        labelFor="date-picker-form-3"
+        labelHelper={true}
+      />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+#### Disabled
+
+<DateInput
+  label="Label"
+  labelFor="date-picker-form-3"
+  disabled
+/>
+
+```jsx highlight=9-13
+import { DateInput } from "@exponentialeducation/datetime";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      <DateInput
+        label="Label"
+        labelFor="date-picker-form-3"
+        disabled
+      />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+## Selected date value
+
+#### Default value
+
+Initial day the calendar will display as selected. Example October 24th, 2021.
+
+<DateInput
+  label="Label"
+  labelFor="date-picker-default-1"
+/>
+
+```jsx highlight=9-12
+import { DateInput } from "@exponentialeducation/datetime";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      <DateInput
+        label="Label"
+        labelFor="date-picker-default-1"
+      />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+#### Provided value
+
+<DateInputDefaultValueExample />
+
+```jsx highlight=9-13
+import { DateInput } from "@exponentialeducation/datetime";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      <DateInput
+        label="Label"
+        labelFor="date-picker-default-2"
+        defaultValue={new Date(2021, 9, 24)}
+      />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+## Calendar navigation
+
+#### Hide outside days
+
+<DateInput
+  label="Label"
+  labelFor="date-picker-nav-1"
+  showOutsideDays={false}
+/>
+
+```jsx highlight=9-13
+import { DateInput } from "@exponentialeducation/datetime";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      <DateInput
+        label="Label"
+        labelFor="date-picker-nav-1"
+        showOutsideDays={false}
+      />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+#### Prevent month navigation
+
+<DateInput
+  label="Label"
+  labelFor="date-picker-nav-2"
+  canChangeMonth={false}
+/>
+
+```jsx highlight=9-13
+import { DateInput } from "@exponentialeducation/datetime";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      <DateInput
+        label="Label"
+        labelFor="date-picker-nav-2"
+        canChangeMonth={false}
+      />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+#### Set the initial month
+
+<DateInputInitialMonthExample />
+
+```jsx highlight=9-13
+import { DateInput } from "@exponentialeducation/datetime";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      <DateInput
+        label="Label"
+        labelFor="date-picker-nav-4"
+        initialMonth={new Date(2022, 0)}
+      />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+#### Set the starting point
+
+<DateInputMinDateExample />
+
+```jsx highlight=9-13
+import { DateInput } from "@exponentialeducation/datetime";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      <DateInput
+        label="Label"
+        labelFor="date-picker-nav-5"
+        minDate={new Date()}
+      />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+#### Set the latest point
+
+<DateInputMaxDateExample />
+
+```jsx highlight=9-14
+import { DateInput } from "@exponentialeducation/datetime";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      <DateInput
+        label="Label"
+        labelFor="date-picker-nav-6"
+        minDate={new Date()}
+        maxDate={new Date(2022, 2, 15)}
+      />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+## Date formats
+
+#### The `format` prop
+
+DD/MM/YYYY
+
+<DateInput
+  label="Label"
+  labelFor="date-picker-format-1"
+  format="L"
+/>
+
+D/M/YYYY
+
+<DateInput
+  label="Label"
+  labelFor="date-picker-format-2"
+  format="l"
+/>
+
+Day of the month of the year
+
+<DateInput
+  label="Label"
+  labelFor="date-picker-format-3"
+  format="LL"
+/>
+
+Day of the month of the year v2
+
+<DateInput
+  label="Label"
+  labelFor="date-picker-format-4"
+  format="ll"
+/>
+
+```jsx highlight=10-14,17-21,24-28,31-35
+import { DateInput } from "@exponentialeducation/datetime";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      {/* DD/MM/YYYY */}
+      <DateInput
+        label="Label"
+        labelFor="date-picker-format-1"
+        format="L"
+      />
+
+      {/* D/M/YYYY */}
+      <DateInput
+        label="Label"
+        labelFor="date-picker-format-2"
+        format="l"
+      />
+
+      {/* day of month of year */}
+      <DateInput
+        label="Label"
+        labelFor="date-picker-format-3"
+        format="LL"
+      />
+
+      {/* day of month of year (short) */}
+      <DateInput
+        label="Label"
+        labelFor="date-picker-format-4"
+        format="ll"
+      />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
 
 ## Props
 
