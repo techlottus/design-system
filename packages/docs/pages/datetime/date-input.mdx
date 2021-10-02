@@ -1,0 +1,41 @@
+import { DateInput } from "@exponentialeducation/datetime/src";
+
+# Date Picker
+
+Documentation of the `<DateInput />` component. Learn how to use it and its available props.
+
+## Installation
+
+To get started, install `@exponentialeducation/betomic` via yarn:
+
+```bash
+# Yarn
+yarn add @exponentialeducation/datetime
+```
+
+## Basic example
+
+The DateInput allows users to enter a date either through an input field, or by choosing a single date from a monthly calendar overlay.
+`DateInput` is built on top of the `react-day-picker` library.
+
+```jsx highlight=9
+import { DateInput } from "@exponentialeducation/datetime";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      <DateInput />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+The previous example describes the simplest way of using the DateInput component, it uses default `props` and renders a component like the following:
+
+<DateInput />
+
