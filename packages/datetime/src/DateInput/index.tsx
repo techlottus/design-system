@@ -234,50 +234,22 @@ const DateInput: React.FC<IDateInput> = (props: IDateInput) => {
   );
 };
 
-const DayPickerInputComponent = React.forwardRef((props: { dayPickerInputProps: DayPickerInputProps } | IDateInput | any, ref: React.Ref<HTMLInputElement>) => {
+const DayPickerInputComponent = React.forwardRef((props: any, ref: React.Ref<HTMLInputElement>) => {
 
   const {
-    dayPickerInputProps,
-    disabled = false,
     isValidDay,
-    isDisabled,
-    isEmpty,
-    label,
-    labelFor,
-    labelHelper = false,
-    required = false,
-    selectedDay,
+    ...dayPickerInputProps
   } = props;
 
   return (
-    <FormGroup
-      disabled={disabled}
-      label={label}
-      labelFor={label && labelFor}
-      required={required}
-      rightElement={
-        labelHelper ?
-          <HelperIcon className="w-4" />
-          : undefined
-      }
-    >
       <InputGroup
-        id={label && labelFor}
-        isValid={selectedDay && isValidDay}
-        disabled={isDisabled}
-        ref={ref}
+      isValid={isValidDay}
         rightElement={
           <CalendarIcon className="w-6 h-6" />
         }
+      ref={ref}
         {...dayPickerInputProps}
       />
-      {
-        selectedDay && !isValidDay ?
-          <FormGroup.Message type="error" message="Este campo es inválido" />
-          : (!selectedDay && isEmpty && required) &&
-          <FormGroup.Message type="error" message="Este campo es requerido" />
-      }
-    </FormGroup>
   );
 });
 
