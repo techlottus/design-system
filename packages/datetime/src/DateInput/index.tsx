@@ -1,43 +1,53 @@
 import React, { useEffect, useRef, useState } from "react";
 import DayPickerInput from "react-day-picker/DayPickerInput";
 import MomentLocaleUtils from "react-day-picker/moment";
-import { InputGroup, FormGroup } from "@exponentialeducation/betomic/src";
+import { InputGroup } from "@exponentialeducation/betomic/src";
 import {
   CaretLeftIcon,
   CaretRightIcon,
-  HelperIcon,
   CalendarIcon
 } from "@exponentialeducation/iconography/icons";
 import {
   DayPickerInputProps,
   NavbarElementProps,
   WeekdayElementProps,
-  Modifier
+  Modifier,
+  DayPickerProps,
+  Modifiers,
 } from "react-day-picker";
 import cn from "classnames";
 import "moment/locale/es-mx";
 
 interface IDateInput {
   canChangeMonth?: boolean;
+  dayPickerProps?: DayPickerProps;
   defaultValue?: Date;
-  disabled?: boolean;
-  disabledDates?: Date | Date[];
+  disabledDates?: Modifier | Modifier[];
   format?: "L" | "l" | "LL" | "ll";
   id?: string;
+  initialMonth?: Date;
+  locale?: string;
+  maxDate?: Date;
+  minDate?: Date;
+  modifiers?: Partial<Modifiers>;
+  onChange?: (selectedDate: Date) => void;
   showOutsideDays?: boolean;
 };
 
 const DateInput: React.FC<IDateInput> = (props: IDateInput) => {
 
   const {
-    minDate,
-    maxDate,
     canChangeMonth = true,
+    dayPickerProps,
     defaultValue,
     disabledDates,
     format = "L",
     id,
     initialMonth,
+    locale = "es-mx",
+    minDate,
+    maxDate,
+    modifiers,
     onChange = f => f,
     showOutsideDays = true,
   } = props;
@@ -51,35 +61,7 @@ const DateInput: React.FC<IDateInput> = (props: IDateInput) => {
     if (defaultValue) {
       setInitialSelectedDay(defaultValue);
     }
-    setDisabledDates();
   }, [props]);
-
-  const setDisabledDates = () => {
-    if (minDate && maxDate) {
-      setDisabledDays({
-        ...disabledDates,
-        before: minDate,
-        after: maxDate
-      });
-      return;
-    }
-
-    if (minDate) {
-      setDisabledDays({
-        ...disabledDates,
-        before: minDate,
-      });
-      return;
-    }
-
-    if (maxDate) {
-      setDisabledDays({
-        ...disabledDates,
-        after: maxDate
-      })
-      return;
-    }
-  };
 
   const setInitialSelectedDay = (defaultValue: Date) => {
 
@@ -161,7 +143,7 @@ const DateInput: React.FC<IDateInput> = (props: IDateInput) => {
     months: cn("flex flex-wrap justify-center px-3 pb-3"), // Container of the months table
     month: cn("table my-0 font-bold text-center capitalize select-none border-collapse"), // The month's main table
     caption: cn("table-caption py-2 px-2 text-center rounded-t"), // The caption element: "", containing the current month's name and year
-    weekdays: cn("table-header-group font-bold text-sm"), // Table header displaying the weekdays names
+    weekdays: cn("table-header-group font-bold text-sm uppercase"), // Table header displaying the weekdays names
     weekdaysRow: cn("table-row"), // Table row displaying the weekdays names
     weekday: cn("table-cell w-8 p-2 text-surface-600 text-center text-sm"), // Cell displaying the weekday name
     body: cn("table-row-group mx-5 mb-5 font-rubik font-normal text-xs leading-6.5"), // Table's body with the weeks
@@ -184,19 +166,20 @@ const DateInput: React.FC<IDateInput> = (props: IDateInput) => {
     overlayWrapper: cn("flex justify-center w-full")
   };
 
-  const dayPickerProps = {
-    disabledDays: disabledDays,
+  const _dayPickerProps: DayPickerProps = {
+    disabledDays: disabledDates,
     canChangeMonth: canChangeMonth,
     month: initialMonth,
     fromMonth: minDate,
     toMonth: maxDate,
     classNames: dayPickerClassNames,
-    locale: "es-mx",
+    locale: locale,
     localeUtils: MomentLocaleUtils,
-    navbarElement: <Navbar />,
-    numberOfMonths: 1,
+    modifiers: modifiers,
+    navbarElement: (navbarElementProps: NavbarElementProps) => <Navbar {...navbarElementProps} />,
     showOutsideDays: showOutsideDays && canChangeMonth,
-    weekdayElement: <Weekday />,
+    weekdayElement: (weekDayElementProps: WeekdayElementProps) => <Weekday {...weekDayElementProps} />,
+    ...dayPickerProps
   };
 
   return (
@@ -205,19 +188,19 @@ const DateInput: React.FC<IDateInput> = (props: IDateInput) => {
       component={
         React.forwardRef(
           (props: DayPickerInputProps, ref: React.Ref<HTMLInputElement>) =>
-        <DayPickerInputComponent
-          isValidDay={isValidDay}
+            <DayPickerInputComponent
+              isValidDay={isValidDay}
               ref={ref}
-          {...props}
-        />
+              {...props}
+            />
         )
       }
-      dayPickerProps={dayPickerProps}
+      dayPickerProps={_dayPickerProps}
       format={format}
       formatDate={formatDate}
       parseDate={parseDate}
       placeholder={
-        `${formatDate(selectedDay || getInputPlaceholder(), format, "es-mx")}`
+        `${formatDate(selectedDay || getInputPlaceholder(), format, locale)}`
       }
       inputProps={{
         id: id,
@@ -237,14 +220,14 @@ const DayPickerInputComponent = React.forwardRef((props: any, ref: React.Ref<HTM
   } = props;
 
   return (
-      <InputGroup
+    <InputGroup
       isValid={isValidDay}
-        rightElement={
-          <CalendarIcon className="w-6 h-6" />
-        }
+      rightElement={
+        <CalendarIcon className="w-6 h-6" />
+      }
       ref={ref}
-        {...dayPickerInputProps}
-      />
+      {...dayPickerInputProps}
+    />
   );
 });
 
