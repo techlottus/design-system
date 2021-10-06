@@ -6,11 +6,16 @@ module.exports = {
       "./components/**/*.{js,ts,tsx}",
       "../../node_modules/@exponentialeducation/betomic/src/**/*.{js,ts,tsx}",
       "../../node_modules/@exponentialeducation/datetime/src/**/*.{js,ts,tsx}",
-      "../../node_modules/@exponentialeducation/tooltip/src/**/*.{js,ts,tsx}"
+      "../../node_modules/@exponentialeducation/tooltip/src/**/*.{js,ts,tsx}",
+      "../../node_modules/@exponentialeducation/toast/src/**/*.{js,ts,tsx}"
   ],
   darkMode: "class", // or "media" or "class"
   theme: {
     extend: {
+      maxWidth: {
+        "68": "272px",
+        "110": "440px"
+      },
       fontFamily: {
         "montserrat": ["Montserrat", "sans-serif"],
         "rubik": ["Rubik", "sans-serif"],
