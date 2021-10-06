@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import DayPickerInput from "react-day-picker/DayPickerInput";
 import MomentLocaleUtils from "react-day-picker/moment";
 import { InputGroup, FormGroup } from "@exponentialeducation/betomic/src";
@@ -23,14 +23,7 @@ interface IDateInput {
   disabled?: boolean;
   disabledDates?: Date | Date[];
   format?: "L" | "l" | "LL" | "ll";
-  initialMonth?: Date,
-  label?: string;
-  labelFor?: string;
-  labelHelper?: boolean;
-  minDate?: Date,
-  maxDate?: Date,
-  onChange?: (selectedDate: Date) => void,
-  required?: boolean;
+  id?: string;
   showOutsideDays?: boolean;
 };
 
@@ -43,16 +36,16 @@ const DateInput: React.FC<IDateInput> = (props: IDateInput) => {
     defaultValue,
     disabledDates,
     format = "L",
+    id,
     initialMonth,
     onChange = f => f,
     showOutsideDays = true,
   } = props;
 
   const [selectedDay, setSelectedDay] = useState<Date | undefined>(undefined);
-  const [isValidDay, setIsValidDay] = useState(true);
-  const [isEmpty, setIsEmpty] = useState(true);
-  const [isDisabled, setIsDisabled] = useState(false);
-  const [disabledDays, setDisabledDays] = useState<Modifier>(undefined);
+  const [isValidDay, setIsValidDay] = useState<boolean | null>(null);
+
+  const dateInputRef: React.Ref<HTMLInputElement> = useRef(null);
 
   useEffect(() => {
     if (defaultValue) {
@@ -133,14 +126,12 @@ const DateInput: React.FC<IDateInput> = (props: IDateInput) => {
 
   const { formatDate, parseDate } = MomentLocaleUtils;
 
-  const handleDayChange = (selectedDay: Date, modifiers: any, dayPickerInput: DayPickerInput) => {
-    const input = dayPickerInput.getInput();
+  const handleDayChange = async (selectedDay: Date) => {
     const isValidDay = checkIsValidDay(selectedDay);
 
     setIsValidDay(isValidDay);
-    setSelectedDay(selectedDay);
-    setIsEmpty(!input?.value?.trim());
-    setIsDisabled(modifiers?.disabled === true);
+    await setSelectedDay(selectedDay);
+    dateInputRef.current?.focus()
 
     onChange(selectedDay);
   }
@@ -211,15 +202,15 @@ const DateInput: React.FC<IDateInput> = (props: IDateInput) => {
   return (
     <DayPickerInput
       classNames={dayPickerInputClasses}
-      component={(dayPickerInputProps: DayPickerInputProps) =>
+      component={
+        React.forwardRef(
+          (props: DayPickerInputProps, ref: React.Ref<HTMLInputElement>) =>
         <DayPickerInputComponent
-          dayPickerInputProps={dayPickerInputProps}
-          isDisabled={isDisabled}
-          isEmpty={isEmpty}
           isValidDay={isValidDay}
-          selectedDay={selectedDay} å
+              ref={ref}
           {...props}
         />
+        )
       }
       dayPickerProps={dayPickerProps}
       format={format}
@@ -228,6 +219,10 @@ const DateInput: React.FC<IDateInput> = (props: IDateInput) => {
       placeholder={
         `${formatDate(selectedDay || getInputPlaceholder(), format, "es-mx")}`
       }
+      inputProps={{
+        id: id,
+        ref: dateInputRef
+      }}
       onDayChange={handleDayChange}
       value={selectedDay}
     />
