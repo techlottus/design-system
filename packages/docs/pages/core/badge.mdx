@@ -1,0 +1,257 @@
+import { Badge } from "@exponentialeducation/betomic/src";
+import {
+  BadgeCommonExample,
+  CustomizeBadgeExample,
+  BadgeIntentsExample,
+  OvalBadgeExample
+} from "../../components/BadgeExample";
+
+# Badge
+
+Documentation of the `<Badge />` component. Learn how to use it and its available props.
+
+## Installation
+
+To get started, install `@exponentialeducation/betomic` via yarn:
+
+```bash
+# Yarn
+yarn add @exponentialeducation/betomic
+```
+
+## Basic example
+
+Badges are small numerical values or status that describes UI elements. It consists of either a small circle or other set of characters.
+
+```jsx highlight=9-12
+import { Pagination } from "@exponentialeducation/betomic";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      <Badge
+        content="I'm a badge"
+      />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+The previous example describes a way of using the Badge component, it renders a component like the following:<br/><br/>
+
+<BadgeCommonExample />
+
+The prop `content` allows the user to specify the text or numerical values that will be display with the badge.
+
+## Badge customization
+
+Badges can be customized through the `className` prop to provide it with styles. The prop `disabled` also gives disabled styles and no-interaction to it.
+
+<br />
+
+<CustomizeBadgeExample />
+
+```jsx highlight=9-12,14-17,19-22,24-27,29-32
+import { Pagination } from "@exponentialeducation/betomic";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      <Badge
+        content="Course"
+        className="bg-surface-500"
+      />
+
+      <Badge
+        content="Module"
+        className="bg-surface-200 text-secondary-900"
+      />
+
+      <Badge
+        content="Quiz Status"
+        className="bg-blue-200 text-blue-900"
+      />
+
+      <Badge
+        content="Inactive"
+        className="bg-surface-400"
+      />
+
+      <Badge
+        content="Disable"
+        disabled
+      />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+## Badge intents
+
+The Badge component comes with intents out of the box. The prop `intent` accepts the following intents and gives the badge styles accordingly.
+
+<br />
+
+<BadgeIntentsExample />
+
+```jsx highlight=9-12,14-17,19-22,24-27
+import { Pagination } from "@exponentialeducation/betomic";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      <Badge
+        content="Success"
+        intent="success"
+      />
+
+      <Badge
+        content="Warning"
+        intent="warning"
+      />
+
+      <Badge
+        content="Error"
+        intent="error"
+      />
+
+      <Badge
+        content="Information"
+        intent="info"
+      />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+## Oval
+
+The prop `roundedFull` sets a full rounded badge, giving it a circle or oval appearance.
+
+<br />
+
+<OvalBadgeExample />
+
+```jsx highlight=9-12,14-18,20-24
+import { Pagination } from "@exponentialeducation/betomic";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      <Badge
+        roundedFull
+        className="bg-primary-500 font-bold"
+      />
+      
+      <Badge
+        roundedFull
+        content="1"
+        className="bg-surface-600 font-bold"
+      />
+
+      <Badge
+        roundedFull
+        content="1"
+        className="bg-primary-500 font-bold"
+      />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+## Props
+
+<table className="min-w-full divide-y divide-gray-200">
+  <thead>
+    <tr>
+      <th scope="col" className="border-l-0 border-r-0 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        prop
+      </th>
+      <th scope="col" className="border-l-0 border-r-0 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        description
+      </th>
+    </tr>
+  </thead>
+  <tbody className="divide-y divide-gray-200">
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `className?`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **string**<br/>
+        A list of CSS classes (e.g. `TailwindCSS`) to display and extend styles along with current badge classes.
+      </td>
+    </tr>
+
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `content?`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **string**<br/>
+        The text content displayed inside the badge.
+      </td>
+    </tr>
+
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `disabled?`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **boolean** *= false*<br/>
+        Whether this badge should display disabled styles and be non-interactive.
+      </td>
+    </tr>
+
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `intent?`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **"success" | "warning" | "error" | "info"**<br/>
+        Visual intent color to apply to element. It defines whether this button should display badge success, warning, error or info styles.
+      </td>
+    </tr>
+
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `roundedFull?`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **boolean** *= false*<br/>
+        Whether this badge should be displayed as a circle/oval.
+      </td>
+    </tr>
+
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `style?`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **React.CSSProperties*<br/>
+        A set of native CSS properties.
+      </td>
+    </tr>
+
+  </tbody>
+</table>
