@@ -1,0 +1,152 @@
+import { Container } from "@exponentialeducation/betomic/src";
+
+# Container
+
+Documentation for the `<Container />` component. Learn about the available props and how to use it.
+
+## Installation
+
+To get started, install `@exponentialeducation/betomic` via `yarn`:
+
+```bash
+# Yarn
+
+yarn add @exponentialeducation/betomic
+```
+
+## Basic Example
+
+A `Container` are used to pad the content inside of them.
+
+```jsx highlight=3,10,16
+ {/* ... */}
+
+import { Container } from '@exponentialeducation/betomic';
+
+function IndexPage() {
+  return (
+    <main>
+      {/* ... */}
+
+      <Container>
+        <p>...</p>
+        <p>...</p>
+        <p>...</p>
+        <p>...</p>
+        <p>...</p>
+      </Container>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+<Container>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Pellentesque vel finibus nisl. Duis a nunc finibus,
+    faucibus sem ac, accumsan quam. Nullam quis finibus felis.
+    Vivamus porttitor bibendum leo, nec ornare augue laoreet maximus.
+    Nulla nec lacus lobortis, tempor augue eget, auctor tortor. Morbi nibh dolor,
+    pharetra convallis justo et, porta tristique sapien. Aliquam luctus turpis ut
+    ex ultricies, non mattis diam egestas. In maximus libero a mauris porttitor vestibulum.
+    Phasellus condimentum urna quis metus fermentum facilisis. Vestibulum lacinia enim
+    tellus, vitae porttitor risus accumsan a.
+  </p>
+  <p>
+    Pellentesque fringilla elit erat, sit amet fermentum magna sollicitudin nec.
+    Proin vel eros facilisis, tristique lectus id, dignissim nibh. Vivamus lacus
+    nisi, rhoncus eget tortor ac, dictum ultricies justo. Mauris tincidunt urna ac
+    libero gravida ultrices. Duis aliquam euismod eleifend. Mauris justo lacus,
+    pretium vitae imperdiet in, vulputate vel lacus. Proin hendrerit quis nisl
+    et condimentum. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+    Curabitur tempor mattis sem et sodales. Ut vitae purus ut nisi convallis
+    lacinia. Nullam in sagittis eros. Fusce a risus sem.
+  </p>
+</Container>
+
+## Fluid
+
+Five sizes are available.
+
+```jsx highlight=3,10,16
+ {/* ... */}
+
+import { Container } from '@exponentialeducation/betomic';
+
+function IndexPage() {
+  return (
+    <main>
+      {/* ... */}
+
+      <Container fluid>
+        <p>...</p>
+        <p>...</p>
+        <p>...</p>
+        <p>...</p>
+        <p>...</p>
+      </Container>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+<Container fluid>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Pellentesque vel finibus nisl. Duis a nunc finibus,
+    faucibus sem ac, accumsan quam. Nullam quis finibus felis.
+    Vivamus porttitor bibendum leo, nec ornare augue laoreet maximus.
+    Nulla nec lacus lobortis, tempor augue eget, auctor tortor. Morbi nibh dolor,
+    pharetra convallis justo et, porta tristique sapien. Aliquam luctus turpis ut
+    ex ultricies, non mattis diam egestas. In maximus libero a mauris porttitor vestibulum.
+    Phasellus condimentum urna quis metus fermentum facilisis. Vestibulum lacinia enim
+    tellus, vitae porttitor risus accumsan a.
+  </p>
+  <p>
+    Pellentesque fringilla elit erat, sit amet fermentum magna sollicitudin nec.
+    Proin vel eros facilisis, tristique lectus id, dignissim nibh. Vivamus lacus
+    nisi, rhoncus eget tortor ac, dictum ultricies justo. Mauris tincidunt urna ac
+    libero gravida ultrices. Duis aliquam euismod eleifend. Mauris justo lacus,
+    pretium vitae imperdiet in, vulputate vel lacus. Proin hendrerit quis nisl
+    et condimentum. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+    Curabitur tempor mattis sem et sodales. Ut vitae purus ut nisi convallis
+    lacinia. Nullam in sagittis eros. Fusce a risus sem.
+  </p>
+</Container>
+
+## Props
+
+<table className="min-w-full divide-y divide-gray-200">
+  <thead>
+    <tr>
+      <th scope="col" className="border-l-0 border-r-0 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        prop
+      </th>
+      <th scope="col" className="border-l-0 border-r-0 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        description
+      </th>
+    </tr>
+  </thead>
+  <tbody className="divide-y divide-gray-200">
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        children?
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `node` <span className="block">Content will be render</span>
+      </td>
+    </tr>
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        fluid?
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `boolean` *= false* <span className="block">Classes to provides a full width container</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
