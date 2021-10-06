@@ -304,12 +304,11 @@ const Navbar = (props: NavbarElementProps | any) => {
   );
 }
 
-const Weekday = ({ weekday, className, localeUtils, locale }: WeekdayElementProps | any) => {
+const Weekday = ({ weekday, localeUtils, className, locale }: WeekdayElementProps) => {
   const weekdayName = localeUtils.formatWeekdayLong(weekday, locale);
-  const commonClasses = cn("uppercase", className)
 
   return (
-    <div className={commonClasses} title={weekdayName}>
+    <div className={className} title={weekdayName}>
       {weekdayName.slice(0, 1)}
     </div>
   );
