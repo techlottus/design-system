@@ -281,7 +281,7 @@ const DayPickerInputComponent = React.forwardRef((props: { dayPickerInputProps: 
   );
 });
 
-const Navbar = (props: NavbarElementProps | any) => {
+const Navbar = (props: NavbarElementProps) => {
   const { onPreviousClick, onNextClick, className, showPreviousButton, showNextButton } = props;
 
   const btnHiddenClasses = cn("opacity-0 cursor-default");
