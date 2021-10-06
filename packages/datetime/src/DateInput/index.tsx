@@ -8,7 +8,6 @@ import {
   CalendarIcon
 } from "@exponentialeducation/iconography/icons";
 import {
-  DayPickerInputProps,
   NavbarElementProps,
   WeekdayElementProps,
   Modifier,
@@ -191,9 +190,12 @@ const DateInput: React.FC<IDateInput> = (props: IDateInput) => {
       classNames={dayPickerInputClasses}
       component={
         React.forwardRef(
-          (props: DayPickerInputProps, ref: React.Ref<HTMLInputElement>) =>
-            <DayPickerInputComponent
-              isValidDay={isValidDay}
+          (props: any, ref: React.Ref<HTMLInputElement>) =>
+            <InputGroup
+              isValid={isValidDay}
+              rightElement={
+                <CalendarIcon className="w-6 h-6" />
+              }
               ref={ref}
               {...props}
             />
@@ -215,25 +217,6 @@ const DateInput: React.FC<IDateInput> = (props: IDateInput) => {
     />
   );
 };
-
-const DayPickerInputComponent = React.forwardRef((props: any, ref: React.Ref<HTMLInputElement>) => {
-
-  const {
-    isValidDay,
-    ...dayPickerInputProps
-  } = props;
-
-  return (
-    <InputGroup
-      isValid={isValidDay}
-      rightElement={
-        <CalendarIcon className="w-6 h-6" />
-      }
-      ref={ref}
-      {...dayPickerInputProps}
-    />
-  );
-});
 
 const Navbar = (props: any) => {
   const { onPreviousClick, onNextClick, className, showPreviousButton, showNextButton, focusStartInput } = props;
