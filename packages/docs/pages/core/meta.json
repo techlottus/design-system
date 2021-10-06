@@ -1,6 +1,8 @@
 {
   "avatar": "Avatar",
+  "badge": "Badge",
   "button": "Button",
   "form-group": "Form Group",
-  "input-group": "Input Group"
+  "input-group": "Input Group",
+  "pagination": "Pagination"
 }
