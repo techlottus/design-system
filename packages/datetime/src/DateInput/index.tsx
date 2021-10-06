@@ -108,12 +108,16 @@ const DateInput: React.FC<IDateInput> = (props: IDateInput) => {
 
   const { formatDate, parseDate } = MomentLocaleUtils;
 
+  const focusStartInput = () => {
+    dateInputRef.current?.focus()
+  }
+
   const handleDayChange = async (selectedDay: Date) => {
     const isValidDay = checkIsValidDay(selectedDay);
 
     setIsValidDay(isValidDay);
     await setSelectedDay(selectedDay);
-    dateInputRef.current?.focus()
+    focusStartInput();
 
     onChange(selectedDay);
   }
@@ -176,7 +180,7 @@ const DateInput: React.FC<IDateInput> = (props: IDateInput) => {
     locale: locale,
     localeUtils: MomentLocaleUtils,
     modifiers: modifiers,
-    navbarElement: (navbarElementProps: NavbarElementProps) => <Navbar {...navbarElementProps} />,
+    navbarElement: (navbarElementProps: NavbarElementProps) => <Navbar focusStartInput={focusStartInput} {...navbarElementProps} />,
     showOutsideDays: showOutsideDays && canChangeMonth,
     weekdayElement: (weekDayElementProps: WeekdayElementProps) => <Weekday {...weekDayElementProps} />,
     ...dayPickerProps
@@ -231,8 +235,8 @@ const DayPickerInputComponent = React.forwardRef((props: any, ref: React.Ref<HTM
   );
 });
 
-const Navbar = (props: NavbarElementProps) => {
-  const { onPreviousClick, onNextClick, className, showPreviousButton, showNextButton } = props;
+const Navbar = (props: any) => {
+  const { onPreviousClick, onNextClick, className, showPreviousButton, showNextButton, focusStartInput } = props;
 
   const btnHiddenClasses = cn("opacity-0 cursor-default");
 
@@ -240,13 +244,13 @@ const Navbar = (props: NavbarElementProps) => {
     <div className={className}>
       <button
         className={cn({ [btnHiddenClasses]: !showPreviousButton })}
-        onClick={() => onPreviousClick()}
+        onClick={() => onPreviousClick(focusStartInput)}
       >
         <CaretLeftIcon className="w-4 h-4" />
       </button>
       <button
         className={cn({ [btnHiddenClasses]: !showNextButton })}
-        onClick={() => onNextClick()}
+        onClick={() => onNextClick(focusStartInput)}
       >
         <CaretRightIcon className="w-4 h-4" />
       </button>
