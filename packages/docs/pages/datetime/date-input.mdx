@@ -1,18 +1,28 @@
 import { DateInput } from "@exponentialeducation/datetime/src";
+import { FormGroup } from "@exponentialeducation/betomic/src";
 import {
+  DateInputLabelExample,
+  DateInputRequiredExample,
+  DateInputRightElExample,
+  DateInputLabelHelperTextExample,
+  DateInputDisabledExample,
+  DateInputOnChangeExample,
   DateInputDefaultValueExample,
   DateInputInitialMonthExample,
   DateInputMinDateExample,
-  DateInputMaxDateExample
+  DateInputMaxDateExample,
+  DateInputDisabledDatesExample,
+  DateInputDisabledSpecificExample,
+  DateInputDisableWeekendExample,
 } from "../../components/DateInputExample";
 
-# Date Picker
+# Date Input
 
 Documentation of the `<DateInput />` component. Learn how to use it and its available props.
 
 ## Installation
 
-To get started, install `@exponentialeducation/betomic` via yarn:
+To get started, install `@exponentialeducation/datetime` via yarn:
 
 ```bash
 # Yarn
@@ -43,19 +53,27 @@ function IndexPage() {
 
 The previous example describes the simplest way of using the DateInput component, it uses default `props` and renders a component like the following:
 
+<br/>
+
 <DateInput />
+
+As already mentioned, the DateInput component allows entering a date through an input field, this can be done using the `DD / MM / YYYY` format. Where `DD` represents the day, `MM` represents the month and `YYYY` represents the year. By doing this, the calendar will automatically set the specified date, otherwise if the entered format or date is invalid.
 
 ## DateInput with FormGroup
 
+`<FormGroup />` can also be added by wrapping `<DateInput />` component; including labels, helpers and status like required or disabled.
+
 #### Adding label
 
-<DateInput
-  label="Label"
-  labelFor="date-picker-form-1"
-/>
+In order to attach a label to a `<DateInput />`, it is necessary to define a `labelFor` prop in the wrapping component along with prop `id` on it to match them. 
 
-```jsx highlight=9-12
+<br/>
+
+<DateInputLabelExample />
+
+```jsx highlight=11,12,14
 import { DateInput } from "@exponentialeducation/datetime";
+import { FormGroup } from "@exponentialeducation/betomic";
 
 function IndexPage() {
 
@@ -63,10 +81,12 @@ function IndexPage() {
     <main>
       {/* ... */}
 
-      <DateInput
+      <FormGroup
         label="Label"
-        labelFor="date-picker-form-1"
-      />
+        labelFor="label-date-input-example"
+      >
+        <DateInput id="label-date-input-example" />
+      </FormGroup>
 
       {/* ... */}
     </main>
@@ -76,14 +96,15 @@ function IndexPage() {
 
 #### Required
 
-<DateInput
-  label="Label"
-  labelFor="date-picker-form-2"
-  required
-/>
+Sometimes, some fields may be required, a decorator indicator can be added with the prop `required` in order to indicate that the field cannot be empty.
 
-```jsx highlight=9-13
+<br/>
+
+<DateInputRequiredExample />
+
+```jsx highlight=13
 import { DateInput } from "@exponentialeducation/datetime";
+import { FormGroup } from "@exponentialeducation/betomic";
 
 function IndexPage() {
 
@@ -91,11 +112,13 @@ function IndexPage() {
     <main>
       {/* ... */}
 
-      <DateInput
+      <FormGroup
         label="Label"
-        labelFor="date-picker-form-2"
+        labelFor="label-required-example"
         required
-      />
+      >
+        <DateInput id="label-required-example" />
+      </FormGroup>
 
       {/* ... */}
     </main>
@@ -103,16 +126,17 @@ function IndexPage() {
 }
 ```
 
-#### With helper icon
+#### Right element
 
-<DateInput
-  label="Label"
-  labelFor="date-picker-form-3"
-  labelHelper={true}
-/>
+Sometimes, the purpose of the `<DateInput />` field may be confusing. In this cases, an icon helper can be added to describe what this input is intended for. This can be done through the prop `rightElement`. The value of `rightElement` can consist of an icon, for example, or another JSX element.
 
-```jsx highlight=9-13
+<br />
+
+<DateInputRightElExample />
+
+```jsx highlight=13-15
 import { DateInput } from "@exponentialeducation/datetime";
+import { FormGroup } from "@exponentialeducation/betomic";
 
 function IndexPage() {
 
@@ -120,11 +144,52 @@ function IndexPage() {
     <main>
       {/* ... */}
 
-      <DateInput
+      <FormGroup
         label="Label"
-        labelFor="date-picker-form-3"
-        labelHelper={true}
-      />
+        labelFor="label-right-element-example"
+        rightElement={
+          <HelperIcon className="w-4" />
+        }
+        required
+      >
+        <DateInput id="label-right-element-example" />
+      </FormGroup>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+#### Right element with helper
+
+With the previous example, there could also be necessary to provide a helper text or sentence to clarify the intention, use, or purpose of the `<DateInput />` field.
+
+<br />
+
+<DateInputLabelHelperTextExample />
+
+```jsx highlight=13-16
+import { DateInput } from "@exponentialeducation/datetime";
+import { FormGroup } from "@exponentialeducation/betomic";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      <FormGroup
+        label="Label"
+        labelFor="label-helper-text-example"
+        helperText="This is a helper text example"
+        rightElement={
+          <HelperIcon className="w-4" />
+        }
+        required
+      >
+        <DateInput id="label-helper-text-example" />
+      </FormGroup>
 
       {/* ... */}
     </main>
@@ -134,14 +199,15 @@ function IndexPage() {
 
 #### Disabled
 
-<DateInput
-  label="Label"
-  labelFor="date-picker-form-3"
-  disabled
-/>
+The prop `disabled` prevents the interaction with the component.
 
-```jsx highlight=9-13
+<br />
+
+<DateInputDisabledExample />
+
+```jsx highlight=11
 import { DateInput } from "@exponentialeducation/datetime";
+import { FormGroup } from "@exponentialeducation/betomic";
 
 function IndexPage() {
 
@@ -149,11 +215,18 @@ function IndexPage() {
     <main>
       {/* ... */}
 
-      <DateInput
-        label="Label"
-        labelFor="date-picker-form-3"
+      <FormGroup
         disabled
-      />
+        label="Label"
+        labelFor="label-disabled-example"
+        helperText="This is a helper text example"
+        rightElement={
+          <HelperIcon className="w-4" />
+        }
+        required
+      >
+        <DateInput id="label-disabled-example" />
+      </FormGroup>
 
       {/* ... */}
     </main>
@@ -163,16 +236,17 @@ function IndexPage() {
 
 ## Selected date value
 
+DateInput allows the user to provide or not a date through the `defaultValue` prop, which will be selected in the DateInput's calendar overlay.
+
 #### Default value
 
-Initial day the calendar will display as selected. Example October 24th, 2021.
+By default DateInput has no default value, in addition, a `defaultValue` is optional. However, when no value is provided the placeholder displays the current date, meaning today's date.
 
-<DateInput
-  label="Label"
-  labelFor="date-picker-default-1"
-/>
+<br />
 
-```jsx highlight=9-12
+<DateInput />
+
+```jsx highlight=9
 import { DateInput } from "@exponentialeducation/datetime";
 
 function IndexPage() {
@@ -181,10 +255,7 @@ function IndexPage() {
     <main>
       {/* ... */}
 
-      <DateInput
-        label="Label"
-        labelFor="date-picker-default-1"
-      />
+      <DateInput />
 
       {/* ... */}
     </main>
@@ -194,9 +265,13 @@ function IndexPage() {
 
 #### Provided value
 
+In the following example the `defaultValue` prop is set to October 24th, 2021.
+
+<br />
+
 <DateInputDefaultValueExample />
 
-```jsx highlight=9-13
+```jsx highlight=9-11
 import { DateInput } from "@exponentialeducation/datetime";
 
 function IndexPage() {
@@ -206,9 +281,38 @@ function IndexPage() {
       {/* ... */}
 
       <DateInput
-        label="Label"
-        labelFor="date-picker-default-2"
         defaultValue={new Date(2021, 9, 24)}
+      />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+#### Changing selected date
+
+When changing the selected day by either entering the date in the input field or selecting in in the calendar overlay, the `onChange` prop can be used to listen for changes to the selected day.
+
+<br />
+
+<DateInputOnChangeExample />
+
+```jsx highlight=5-7,14
+import { DateInput } from "@exponentialeducation/datetime";
+
+function IndexPage() {
+
+  const myMethod = (selectedDate: Date) => {
+    alert(selectedDate);
+  }
+
+  return (
+    <main>
+      {/* ... */}
+
+      <DateInput
+        onChange={myMethod}
       />
 
       {/* ... */}
@@ -219,15 +323,19 @@ function IndexPage() {
 
 ## Calendar navigation
 
+Sometimes, it could be necessary to customize, prevent or restrict the calendar overlay navigation. DateInput comes with the necessary props to do so.
+
 #### Hide outside days
 
+The prop `showOutsideDays` hides the days that don't belong to the current month and disables them for selection.
+
+<br/>
+
 <DateInput
-  label="Label"
-  labelFor="date-picker-nav-1"
   showOutsideDays={false}
 />
 
-```jsx highlight=9-13
+```jsx highlight=9-11
 import { DateInput } from "@exponentialeducation/datetime";
 
 function IndexPage() {
@@ -237,8 +345,6 @@ function IndexPage() {
       {/* ... */}
 
       <DateInput
-        label="Label"
-        labelFor="date-picker-nav-1"
         showOutsideDays={false}
       />
 
@@ -250,13 +356,17 @@ function IndexPage() {
 
 #### Prevent month navigation
 
+In some cases, it is necessary to allow the user to select a date only from the current month. This can be achieved through the prop `canChangeMonth`.
+
+<br />
+
 <DateInput
   label="Label"
   labelFor="date-picker-nav-2"
   canChangeMonth={false}
 />
 
-```jsx highlight=9-13
+```jsx highlight=9-11
 import { DateInput } from "@exponentialeducation/datetime";
 
 function IndexPage() {
@@ -266,8 +376,6 @@ function IndexPage() {
       {/* ... */}
 
       <DateInput
-        label="Label"
-        labelFor="date-picker-nav-2"
         canChangeMonth={false}
       />
 
@@ -279,9 +387,15 @@ function IndexPage() {
 
 #### Set the initial month
 
+In other cases, due to different reasons such as a starting date of an event, for example, the user should select a date from an initial month. The following example describes the use of `initialMonth` which displays the calendar overlay starting from that month. In this case, starting at January 2022:
+
+<br />
+
 <DateInputInitialMonthExample />
 
-```jsx highlight=9-13
+Notice how the DateInput placeholder also displays a date according to the `initialMonth` prop.
+
+```jsx highlight=9-11
 import { DateInput } from "@exponentialeducation/datetime";
 
 function IndexPage() {
@@ -291,8 +405,6 @@ function IndexPage() {
       {/* ... */}
 
       <DateInput
-        label="Label"
-        labelFor="date-picker-nav-4"
         initialMonth={new Date(2022, 0)}
       />
 
@@ -304,9 +416,13 @@ function IndexPage() {
 
 #### Set the starting point
 
+There is also a scenario where the user must choose a date starting from a specific point and not before. For example, select a day from the current day (today). The prop `minDate` defines the initial date in which a user can choose. If the user selects a date before the `minDate`, the DateInput would be considered as invalid.
+
+<br />
+
 <DateInputMinDateExample />
 
-```jsx highlight=9-13
+```jsx highlight=9-11
 import { DateInput } from "@exponentialeducation/datetime";
 
 function IndexPage() {
@@ -316,8 +432,6 @@ function IndexPage() {
       {/* ... */}
 
       <DateInput
-        label="Label"
-        labelFor="date-picker-nav-5"
         minDate={new Date()}
       />
 
@@ -329,9 +443,16 @@ function IndexPage() {
 
 #### Set the latest point
 
+The prop `maxDate` does something similar to the `minDate` but the other way around. With this prop, the user can choose until a certain date. If the user selects a date after the `maxDate`, the DateInput would be considered as invalid.<br /><br />
+The props `minDate` and `maxDate` can be used together to specify a limited and controlled range in which a user can select a date.<br />
+
+The following example describes a selection range starting from today until March 15th, 2020:
+
+<br />
+
 <DateInputMaxDateExample />
 
-```jsx highlight=9-14
+```jsx highlight=9-12
 import { DateInput } from "@exponentialeducation/datetime";
 
 function IndexPage() {
@@ -341,8 +462,6 @@ function IndexPage() {
       {/* ... */}
 
       <DateInput
-        label="Label"
-        labelFor="date-picker-nav-6"
         minDate={new Date()}
         maxDate={new Date(2022, 2, 15)}
       />
@@ -353,43 +472,174 @@ function IndexPage() {
 }
 ```
 
-## Date formats
+## Disabling dates
 
-#### The `format` prop
+#### Disable before `minDate` & after `maxDate`
 
-DD/MM/YYYY
+Taking the previous example, the DateInput component allows the user to prevent dates selection. For instance, with the prop `disabledDates`, the modifiers `before` and `after` can be used to disable the selection of all the dates before minDate and after maxDate respectivelly. This gives the user more control and makes the date selection less prone to error or invalid dates.
+
+<br />
+
+<DateInputDisabledDatesExample />
+
+```jsx highlight=9-16
+import { DateInput } from "@exponentialeducation/datetime";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      <DateInput
+        minDate={new Date()}
+        maxDate={new Date(2022, 2, 15)}
+        disabledDates={{
+          before: new Date(),
+          after: new Date(2022, 2, 15)
+        }}
+      />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+#### Display days as disabled
+
+The `disabledDates` prop can also be used to display specific days as disabled.<br />
+The following example disables the following dates:
+- October 12th 2021.
+- Novembre 2nd 2021.
+- The range between December 20th 2021 and January 1st 2021 using the `{ from, to }` modifiers.
+
+<br />
+
+<DateInputDisabledSpecificExample />
+
+```jsx highlight=9-18
+import { DateInput } from "@exponentialeducation/datetime";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      <DateInput
+        disabledDates={[
+          new Date(2021, 9, 12),
+          new Date(2021, 10, 2),
+          {
+            from: new Date(2021, 11, 20),
+            to: new Date(2022, 0, 1)
+          }
+        ]}
+      />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+#### Disable weekends & more
+
+The prop `disabledDates` can also disable specific days of the week, for example, the first and last one, meaning Sundays and Saturdays. To achieve this the modifier `{ daysOfWeek }` must be attached to the `disabledDates` prop.<br />
+The following example disables weekends:
+
+<br />
+
+<DateInputDisableWeekendExample />
+
+```jsx highlight=9-13
+import { DateInput } from "@exponentialeducation/datetime";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      <DateInput
+        disabledDates={[
+          { daysOfWeek: [0, 6] }
+        ]}
+      />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+## Modifiers
+
+Modifiers apply styles to days in the DateInput calendary overlay. Modifiers are a **react-day-picker** concept and are documented in full in the [react-day-picker documentation](https://react-day-picker.js.org/docs/matching-days/).
+
+## Localization
+
+Localization allows the user to custom the date formats in which DateInput dates are parsed and formated. It takes advantage of the current Localization features of [react-day-picker and moment.js](http://react-day-picker.js.org/docs/localization).
+
+#### Date format
+
+The prop `format` defines in which format the date should be parsed and formated along with the `locale` specification. By default the format for all dates is `es-mx` which describes dates for the Mexican calendar.
+According to the rules of the spanish specification of calendar: the day goes first, followed by the month and finally the year, having: *day/month/year* or *day of the month of the year*.
+
+##### Format "L" or DD/MM/YYYY
+
+This format consists of an uppercase "L" letter and defines the date like the following:
+
+<br />
 
 <DateInput
-  label="Label"
-  labelFor="date-picker-format-1"
   format="L"
+  locale="en-us"
 />
 
-D/M/YYYY
+##### Format "l" or D/M/YYYY
+
+This format consists of a lowercase "l" letter and defines the date like the following:
+
+<br />
 
 <DateInput
-  label="Label"
-  labelFor="date-picker-format-2"
   format="l"
 />
 
-Day of the month of the year
+##### Full date transcript
+
+This format consists of two uppercase "L" letters and define the date like the following:
+
+<br />
 
 <DateInput
-  label="Label"
-  labelFor="date-picker-format-3"
   format="LL"
 />
 
-Day of the month of the year v2
+##### Full date transcript (short)
+
+This format consists of two lowercase "L" letters and define the date like the following:
+
+<br />
 
 <DateInput
-  label="Label"
-  labelFor="date-picker-format-4"
   format="ll"
 />
 
-```jsx highlight=10-14,17-21,24-28,31-35
+##### English US locale
+
+With the `locale` prop, another ways of parsing as well as formatting date can be achieved. Notice how the calendar overlay also adjusts to the corresponding locale:
+
+<br />
+
+<DateInput
+  format="L"
+  locale="en-us"
+/>
+
+```jsx highlight=10-12,15-17,20-22,25-27,30-33
 import { DateInput } from "@exponentialeducation/datetime";
 
 function IndexPage() {
@@ -400,30 +650,28 @@ function IndexPage() {
 
       {/* DD/MM/YYYY */}
       <DateInput
-        label="Label"
-        labelFor="date-picker-format-1"
         format="L"
       />
 
       {/* D/M/YYYY */}
       <DateInput
-        label="Label"
-        labelFor="date-picker-format-2"
         format="l"
       />
 
       {/* day of month of year */}
       <DateInput
-        label="Label"
-        labelFor="date-picker-format-3"
         format="LL"
       />
 
       {/* day of month of year (short) */}
       <DateInput
-        label="Label"
-        labelFor="date-picker-format-4"
         format="ll"
+      />
+
+      {/* MM/DD/YYYY according to 'en' locale */}
+      <DateInput
+        format="L"
+        locale="en-us"
       />
 
       {/* ... */}
@@ -459,6 +707,17 @@ function IndexPage() {
 
     <tr>
       <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `dayPickerProps?`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **DayPickerProps**<br/>
+        Props to pass to ReactDayPicker. See API documentation [here](http://react-day-picker.js.org/api/DayPicker/).<br />
+        The following props are managed by the component and cannot be configured: <small>**canChangeMonth**, **fromMonth** (use **minDate**), **month** (use **initialMonth**), **toMonth** (use **maxDate**)</small>.
+      </td>
+    </tr>
+
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
         `defaultValue?`
       </td>
       <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
@@ -469,21 +728,12 @@ function IndexPage() {
 
     <tr>
       <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
-        `disabled?`
-      </td>
-      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
-        **boolean** *= false*<br/>
-        Defines if the date input is non-interactive.
-      </td>
-    </tr>
-
-    <tr>
-      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
         `disabledDates?`
       </td>
       <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
-        **Date | Date[]**<br/>
-        Date(s) that should appear as disabled.
+        **[Modifier | Modifier[]](https://react-day-picker.js.org/docs/matching-days/)**<br/>
+        Date(s) that should appear as disabled.<br />
+        Modifier is a **react-day-picker** type for dates. See API documentation [here](https://react-day-picker.js.org/docs/matching-days/).
       </td>
     </tr>
 
@@ -500,6 +750,16 @@ function IndexPage() {
 
     <tr>
       <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `id?`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **string**<br/>
+        Identifier for the `<InputGroup />` component of DateInput. It is recommended to use this prop along with `labelFor` when wrapping DateInput inside a `<FormGroup />` component.
+      </td>
+    </tr>
+
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
         `initialMonth?`
       </td>
       <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
@@ -510,31 +770,11 @@ function IndexPage() {
 
     <tr>
       <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
-        `label?`
+        `locale?`
       </td>
       <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
-        **string**<br/>
-        Label of the DateInput FormGroup.
-      </td>
-    </tr>
-
-    <tr>
-      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
-        `labelFor?`
-      </td>
-      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
-        **string**<br/>
-        Sets the `for` attribute of the DateInput FormGroup and the `id` attribute of its corresponding DateInput Input.
-      </td>
-    </tr>
-
-    <tr>
-      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
-        `labelHelper?`
-      </td>
-      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
-        **boolean** *= false*<br/>
-        Shows a FormGroup JSX `rightElement` that consists of a `<HelperIcon />` rendered on the right side.
+        **string** *= "es-mx"*<br/>
+        The locale name, which is passed to the functions in localeUtils (and formatDate and parseDate if supported). See documentation [here](http://react-day-picker.js.org/docs/localization).
       </td>
     </tr>
 
@@ -545,7 +785,7 @@ function IndexPage() {
       <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
         **Date**<br/>
         The latest date the user can select.<br/>
-        User cannot navigate after this date in the calendar, and dates after this one are disabled, meaning non-selectable.
+        If used with the modifier `after` in `disabledDates` prop, User cannot navigate after this date in the calendar, and dates after this one are disabled, meaning non-selectable.
       </td>
     </tr>
 
@@ -556,7 +796,17 @@ function IndexPage() {
       <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
         **Date**<br/>
         The earliest date the user can select.<br/>
-        User cannot navigate before this date in the calendar, and dates before this one are disabled, meaning non-selectable.
+        If used with the modifier `before` in `disabledDates` prop, user cannot navigate before this date in the calendar, and dates before this one are disabled, meaning non-selectable.
+      </td>
+    </tr>
+
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `modifiers?`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **[Modifiers](http://react-day-picker.js.org/api/ModifiersUtils)**<br/>
+        Collection of functions that determine which modifier classes get applied to which days. Each function should accept a Date and return a boolean. See the [react-day-picker documentation](http://react-day-picker.js.org/api/ModifiersUtils) to learn more.
       </td>
     </tr>
 
@@ -565,18 +815,8 @@ function IndexPage() {
         `onChange?`
       </td>
       <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
-        **(selectedDate: Date) => void**<br/>
-        Called when the user selects a day in the calendar.
-      </td>
-    </tr>
-
-    <tr>
-      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
-        `required?`
-      </td>
-      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
-        **boolean** *= false*<br/>
-        A `*` decoration for the DateInput FormGroup label. Use it along with `label` prop.
+        **(selectedDate: Date) => void | undefined**<br/>
+        Called when the user selects a day in the calendar or by typing in the input.
       </td>
     </tr>
 
