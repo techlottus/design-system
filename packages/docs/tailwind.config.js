@@ -15,6 +15,9 @@ module.exports = {
         "68": "272px",
         "110": "440px"
       },
+      maxHeight: {
+        "78": "312px",
+      },
       fontFamily: {
         "montserrat": ["Montserrat", "sans-serif"],
         "rubik": ["Rubik", "sans-serif"],
@@ -133,6 +136,14 @@ module.exports = {
       }
 
       addUtilities(filterUtilities, ["responsive", "hover"])
+    }),
+    plugin(function({ addBase, theme }) {
+      addBase({
+        ".drawer-open": {
+          overflow: "hidden",
+          paddingRight: "15px",
+        }
+      })
     }),
     plugin(function({ addBase, theme }) {
       addBase({
