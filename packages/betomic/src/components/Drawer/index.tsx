@@ -35,7 +35,6 @@ const Drawer: React.FC<DrawerProps> = (props) => {
   );
 
   function keyDownHandler(event: KeyboardEvent) {
-    console.log("EVENT", event.key)
     if(event.key === "Escape") {
       if(onClose) {
         onClose();
