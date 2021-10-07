@@ -2,5 +2,7 @@
   "index": "Introduction",
   "getting-started": "Getting Started",
   "component-template": "Template docs",
-  "core": "Core"
+  "core": "Core",
+  "iconography": "Iconography",
+  "tabs": "Tabs"
 }
