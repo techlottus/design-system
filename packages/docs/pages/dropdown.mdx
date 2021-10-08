@@ -1,0 +1,130 @@
+import {
+  DropdownBasicExample,
+  DropdownLightTextExample,
+  DropdownLightIconExample,
+  DropdownOutlineTextExample,
+  DropdownOutlineIconExample,
+  DropdownDarkTextExample,
+  DropdownDarkIconExample,
+  DropdownTextOnlyExample,
+  DropdownIconLeadExample,
+  DropdownSelectionExample,
+  DropdownDisabledExample
+} from "../components/DropdownExample";
+
+# Dropdown
+
+Documentation for the `<Menu />` dropdown component. Learn about the available props and their use.
+
+## Installation
+
+[Menu (Dropdown)](https://headlessui.dev/react/menu) is part of a set of unstyled and fully accessible components created by Headless UI.<br/>
+See the [Headless UI documentation](https://headlessui.dev/) to learn more.<br/>
+
+To get started, install Headless UI via `yarn`.
+
+```bash
+# Yarn
+
+yarn add @headlessui/react
+```
+
+## Basic Example
+
+Dropdowns display a list of choices and allow users to make a selection from multiple options.
+
+According to Headless UI, Menu Buttons are built using the `Menu`, `Menu.Button`, `Menu.Items`, and `Menu.Item` components.<br />
+The `Menu.Button` automatically opens/closes the `Menu.Items` when clicked. The list of items receives focus and is navigable via the keyboard when the menu is open.
+
+```jsx
+import { Menu } from "@headlessui/react";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      <Menu>
+        <Menu.Button>More</Menu.Button>
+        <Menu.Items>
+          <Menu.Item>
+            {({ active }) => (
+              <a
+                className={`${active && "bg-surface-300"}`}
+                href="#"
+              >
+                Account settings
+              </a>
+            )}
+          </Menu.Item>
+          {/* ... */}
+          <Menu.Item disabled>
+            <span className="opacity-75">Invite a friend (coming soon!)</span>
+          </Menu.Item>
+        </Menu.Items>
+      </Menu>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+The previous example describes the simplest way of using the Menu (Dropdown) component, it uses default `props` and renders a component like the following:<br/><br/>
+
+<DropdownBasicExample />
+
+## Dropdown menu button
+
+#### Light
+
+##### Icon off
+
+<DropdownLightTextExample />
+
+<br/>
+
+##### Icon on
+
+<DropdownLightIconExample />
+
+#### Outline
+
+##### Icon off
+
+<DropdownOutlineTextExample />
+
+##### Icon on
+
+<DropdownOutlineIconExample />
+
+#### Dark
+
+##### Icon off
+
+<DropdownDarkTextExample />
+
+##### Icon on
+
+<DropdownDarkIconExample />
+
+## Dropdown menu items
+
+#### Text only
+
+<DropdownTextOnlyExample />
+
+#### Icon lead
+
+<DropdownIconLeadExample />
+
+#### With selection
+
+<DropdownSelectionExample />
+
+#### Disabled
+
+<DropdownDisabledExample />
+
+To customize and learn about the Menu (Dropdown) component see the [Headless UI documentation](https://headlessui.dev/).
