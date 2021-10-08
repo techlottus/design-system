@@ -46,7 +46,9 @@ const DropdownLightTextExample = () => {
           <>
             <Menu.Button
               className={cn(
-                "inline-flex justify-between items-center w-full h-10 px-3 py-2 font-montserrat font-bold text-base leading-6 border border-transparent rounded focus:bg-surface-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-200", {
+                "inline-flex justify-between items-center w-full h-10 px-3 py-2",
+                "font-montserrat font-bold text-base leading-6 border border-transparent rounded",
+                "focus:bg-surface-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-200", {
                 ["text-white bg-surface-600 hover:bg-surface-800"]: !open,
                 ["text-surface-600 bg-surface-200 border-primary-500 ring-2 ring-primary-200 hover:bg-surface-200"]: open
               }
@@ -55,7 +57,9 @@ const DropdownLightTextExample = () => {
               <span className="mr-3">Label</span>
               <CaretDownIcon className="w-5 h-5" />
             </Menu.Button>
-            <Menu.Items className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none">
+            <Menu.Items
+              className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none"
+            >
               <Menu.Item>
                 {({ active }) => (
                   <button
@@ -111,7 +115,9 @@ const DropdownLightIconExample = () => {
           <>
             <Menu.Button
               className={cn(
-                "inline-flex justify-between items-center w-full h-10 px-3 py-2 font-montserrat font-bold text-base leading-6 border border-transparent rounded focus:bg-surface-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-200", {
+                "inline-flex justify-between items-center w-full h-10 px-3 py-2",
+                "font-montserrat font-bold text-base leading-6 border border-transparent rounded",
+                "focus:bg-surface-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-200", {
                 ["text-white bg-surface-600 hover:bg-surface-800"]: !open,
                 ["text-surface-600 bg-surface-200 border-primary-500 ring-2 ring-primary-200 hover:bg-surface-200"]: open
               }
@@ -123,7 +129,9 @@ const DropdownLightIconExample = () => {
               </div>
               <CaretDownIcon className="w-5 h-5" />
             </Menu.Button>
-            <Menu.Items className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none">
+            <Menu.Items
+              className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none"
+            >
               <Menu.Item>
                 {({ active }) => (
                   <button
@@ -179,7 +187,10 @@ const DropdownOutlineTextExample = () => {
           <>
             <Menu.Button
               className={cn(
-                "inline-flex justify-between items-center w-full h-10 px-3 py-2 font-montserrat font-bold text-base leading-6 border-2 border-surface-500 rounded hover:text-white hover:bg-surface-500 focus:bg-surface-500 focus:text-white focus:border focus:border-primary-500 focus:ring-2 focus:ring-primary-200", {
+                "inline-flex justify-between items-center w-full h-10 px-3 py-2",
+                "font-montserrat font-bold text-base leading-6 border-2 border-surface-500 rounded",
+                "hover:text-white hover:bg-surface-500 focus:bg-surface-500 focus:text-white focus:border",
+                "focus:border-primary-500 focus:ring-2 focus:ring-primary-200", {
                 ["text-surface-600 bg-transparent"]: !open,
                 ["text-white bg-surface-500 border-primary-500 ring-2 ring-primary-200"]: open
               }
@@ -188,7 +199,9 @@ const DropdownOutlineTextExample = () => {
               <span className="mr-3">Label</span>
               <CaretDownIcon className="w-5 h-5" />
             </Menu.Button>
-            <Menu.Items className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none">
+            <Menu.Items
+              className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none"
+            >
               <Menu.Item>
                 {({ active }) => (
                   <button
@@ -244,7 +257,10 @@ const DropdownOutlineIconExample = () => {
           <>
             <Menu.Button
               className={cn(
-                "inline-flex justify-between items-center w-full h-10 px-3 py-2 font-montserrat font-bold text-base leading-6 border-2 border-surface-500 rounded hover:text-white hover:bg-surface-500 focus:bg-surface-500 focus:text-white focus:border focus:border-primary-500 focus:ring-2 focus:ring-primary-200", {
+                "inline-flex justify-between items-center w-full h-10 px-3 py-2",
+                "font-montserrat font-bold text-base leading-6 border-2 border-surface-500 rounded",
+                "hover:text-white hover:bg-surface-500 focus:bg-surface-500 focus:text-white",
+                "focus:border focus:border-primary-500 focus:ring-2 focus:ring-primary-200", {
                 ["text-surface-600 bg-transparent"]: !open,
                 ["text-white bg-surface-500 border-primary-500 ring-2 ring-primary-200"]: open
               }
@@ -256,7 +272,9 @@ const DropdownOutlineIconExample = () => {
               </div>
               <CaretDownIcon className="w-5 h-5" />
             </Menu.Button>
-            <Menu.Items className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none">
+            <Menu.Items
+              className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none"
+            >
               <Menu.Item>
                 {({ active }) => (
                   <button
@@ -312,7 +330,8 @@ const DropdownDarkTextExample = () => {
           <>
             <Menu.Button
               className={cn(
-                "inline-flex justify-between items-center w-full h-10 px-3 py-2 font-montserrat font-bold text-base leading-6 border border-transparent rounded focus:bg-surface-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:bg-surface-200", {
+                "inline-flex justify-between items-center w-full h-10 px-3 py-2 font-montserrat font-bold text-base leading-6 border border-transparent",
+                "rounded focus:bg-surface-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:bg-surface-200", {
                 ["text-white bg-surface-600 hover:bg-surface-800 dark:text-surface-600 dark:bg-surface-100 dark:hover:bg-surface-200"]: !open,
                 ["text-surface-600 bg-surface-200 border-primary-500 ring-2 ring-primary-200 dark:bg-surface-200 hover:bg-surface-200"]: open
               }
@@ -321,7 +340,9 @@ const DropdownDarkTextExample = () => {
               <span className="mr-3">Label</span>
               <CaretDownIcon className="w-5 h-5" />
             </Menu.Button>
-            <Menu.Items className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none">
+            <Menu.Items
+              className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none"
+            >
               <Menu.Item>
                 {({ active }) => (
                   <button
@@ -377,7 +398,8 @@ const DropdownDarkIconExample = () => {
           <>
             <Menu.Button
               className={cn(
-                "inline-flex justify-between items-center w-full h-10 px-3 py-2 font-montserrat font-bold text-base leading-6 border border-transparent rounded focus:bg-surface-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:bg-surface-200", {
+                "inline-flex justify-between items-center w-full h-10 px-3 py-2 font-montserrat font-bold text-base leading-6 border border-transparent",
+                "rounded focus:bg-surface-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:bg-surface-200", {
                 ["text-white bg-surface-600 hover:bg-surface-800 dark:text-surface-600 dark:bg-surface-100 dark:hover:bg-surface-200"]: !open,
                 ["text-surface-600 bg-surface-200 border-primary-500 ring-2 ring-primary-200 dark:bg-surface-200 hover:bg-surface-200"]: open
               }
@@ -389,7 +411,9 @@ const DropdownDarkIconExample = () => {
               </div>
               <CaretDownIcon className="w-5 h-5" />
             </Menu.Button>
-            <Menu.Items className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none">
+            <Menu.Items
+              className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none"
+            >
               <Menu.Item>
                 {({ active }) => (
                   <button
@@ -445,7 +469,8 @@ const DropdownTextOnlyExample = () => {
           <>
             <Menu.Button
               className={cn(
-                "inline-flex justify-between items-center w-full h-10 px-3 py-2 font-montserrat font-bold text-base leading-6 border border-transparent rounded focus:bg-surface-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:bg-surface-200", {
+                "inline-flex justify-between items-center w-full h-10 px-3 py-2 font-montserrat font-bold text-base leading-6 border border-transparent",
+                "rounded focus:bg-surface-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:bg-surface-200", {
                 ["text-white bg-surface-600 hover:bg-surface-800 dark:text-surface-600 dark:bg-surface-100 dark:hover:bg-surface-200"]: !open,
                 ["text-surface-600 bg-surface-200 border-primary-500 ring-2 ring-primary-200 dark:bg-surface-200 hover:bg-surface-200"]: open
               }
@@ -454,7 +479,9 @@ const DropdownTextOnlyExample = () => {
               <span className="mr-3">Label</span>
               <CaretDownIcon className="w-5 h-5" />
             </Menu.Button>
-            <Menu.Items className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none">
+            <Menu.Items
+              className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none"
+            >
               <Menu.Item>
                 {({ active }) => (
                   <button
@@ -510,7 +537,8 @@ const DropdownIconLeadExample = () => {
           <>
             <Menu.Button
               className={cn(
-                "inline-flex justify-between items-center w-full h-10 px-3 py-2 font-montserrat font-bold text-base leading-6 border border-transparent rounded focus:bg-surface-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:bg-surface-200", {
+                "inline-flex justify-between items-center w-full h-10 px-3 py-2 font-montserrat font-bold text-base leading-6 border border-transparent",
+                "rounded focus:bg-surface-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:bg-surface-200", {
                 ["text-white bg-surface-600 hover:bg-surface-800 dark:text-surface-600 dark:bg-surface-100 dark:hover:bg-surface-200"]: !open,
                 ["text-surface-600 bg-surface-200 border-primary-500 ring-2 ring-primary-200 dark:bg-surface-200 hover:bg-surface-200"]: open
               }
@@ -519,7 +547,9 @@ const DropdownIconLeadExample = () => {
               <span className="mr-3">Label</span>
               <CaretDownIcon className="w-5 h-5" />
             </Menu.Button>
-            <Menu.Items className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none">
+            <Menu.Items
+              className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none"
+            >
               <Menu.Item>
                 {({ active }) => (
                   <button
@@ -578,7 +608,8 @@ const DropdownSelectionExample = () => {
           <>
             <Menu.Button
               className={cn(
-                "inline-flex justify-between items-center w-full h-10 px-3 py-2 font-montserrat font-bold text-base leading-6 border border-transparent rounded focus:bg-surface-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:bg-surface-200", {
+                "inline-flex justify-between items-center w-full h-10 px-3 py-2 font-montserrat font-bold text-base leading-6 border border-transparent",
+                "rounded focus:bg-surface-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:bg-surface-200", {
                 ["text-white bg-surface-600 hover:bg-surface-800 dark:text-surface-600 dark:bg-surface-100 dark:hover:bg-surface-200"]: !open,
                 ["text-surface-600 bg-surface-200 border-primary-500 ring-2 ring-primary-200 dark:bg-surface-200 hover:bg-surface-200"]: open
               }
@@ -587,7 +618,9 @@ const DropdownSelectionExample = () => {
               <span className="mr-3">Label</span>
               <CaretDownIcon className="w-5 h-5" />
             </Menu.Button>
-            <Menu.Items className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none">
+            <Menu.Items
+              className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none"
+            >
               <Menu.Item>
                 {({ active }) => (
                   <button
@@ -670,7 +703,8 @@ const DropdownDisabledExample = () => {
             <Menu.Button
               disabled={disabled}
               className={cn(
-                "inline-flex justify-between items-center w-full h-10 px-3 py-2 font-montserrat font-bold text-base leading-6 border border-transparent rounded focus:bg-surface-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:bg-surface-200", {
+                "inline-flex justify-between items-center w-full h-10 px-3 py-2 font-montserrat font-bold text-base leading-6 border border-transparent rounded",
+                "focus:bg-surface-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:bg-surface-200", {
                 ["text-white bg-surface-600 hover:bg-surface-800 dark:text-surface-600 dark:bg-surface-100 dark:hover:bg-surface-200"]: !open && !disabled,
                 ["text-surface-600 bg-surface-200 border-primary-500 ring-2 ring-primary-200 dark:bg-surface-200 hover:bg-surface-200"]: open && !disabled,
                 ["text-surface-300 bg-surface-100 cursor-not-allowed"]: disabled
@@ -680,7 +714,9 @@ const DropdownDisabledExample = () => {
               <span className="mr-3">Label</span>
               <CaretDownIcon className="w-5 h-5" />
             </Menu.Button>
-            <Menu.Items className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none">
+            <Menu.Items
+              className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none"
+            >
               <Menu.Item disabled>
                 {({ active }) => (
                   <button
