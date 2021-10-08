@@ -4,8 +4,8 @@ import Pagination from ".";
 
 describe("<Pagination />", () => {
   test("Render <Pagination /> component", () => {
-    const myFunction = (currentPageData: any) => { console.log(currentPageData); }; 
-    
+    const myFunction = jest.fn();
+
     render(
       <Pagination pageLimit={5} totalRecords={10} onPageChanged={myFunction} />
     );
@@ -48,7 +48,7 @@ describe("<Pagination />", () => {
   });
 
   test("Render <Pagination /> with a dots button", () => {
-    const myFunction = (currentPageData: any) => { console.log(currentPageData); };
+    const myFunction = jest.fn();
     
     render(
       <Pagination pageLimit={3} totalRecords={50} onPageChanged={myFunction} />
@@ -71,7 +71,7 @@ describe("<Pagination />", () => {
   });
 
   test("Render <Pagination /> without dots button", () => {
-    const myFunction = (currentPageData: any) => { console.log(currentPageData); };
+    const myFunction = jest.fn();
     
     render(
       <Pagination totalRecords={10} pageLimit={2} pageNeighbours={0} onPageChanged={myFunction} />
@@ -85,7 +85,7 @@ describe("<Pagination />", () => {
   });
 
   test("Render <Pagination /> with 0 page neighbours", () => {
-    const myFunction = (currentPageData: any) => { console.log(currentPageData); };
+    const myFunction = jest.fn();
     
     render(
       <Pagination totalRecords={12} pageLimit={2} pageNeighbours={0} onPageChanged={myFunction} />
@@ -104,7 +104,7 @@ describe("<Pagination />", () => {
   });
 
   test("Render <Pagination /> with 1 page neighbours", () => {
-    const myFunction = (currentPageData: any) => { console.log(currentPageData); };
+    const myFunction = jest.fn();
     
     render(
       <Pagination totalRecords={20} pageLimit={2} pageNeighbours={1} onPageChanged={myFunction} />
@@ -128,7 +128,7 @@ describe("<Pagination />", () => {
   });
 
   test("Render <Pagination /> with 2 page neighbours", () => {
-    const myFunction = (currentPageData: any) => { console.log(currentPageData); };
+    const myFunction = jest.fn();
     
     render(
       <Pagination totalRecords={20} pageLimit={2} pageNeighbours={2} onPageChanged={myFunction} />
@@ -152,7 +152,7 @@ describe("<Pagination />", () => {
   });
 
   test("Render <Pagination /> and navigate through pages using buttons", () => {
-    const myFunction = (currentPageData: any) => { console.log(currentPageData) }
+    const myFunction = jest.fn();
     
     render(
       <Pagination pageLimit={1} totalRecords={23} onPageChanged={myFunction} />
@@ -220,7 +220,7 @@ describe("<Pagination />", () => {
   });
 
   test("Render <Pagination /> with no records", () => {
-    const myFunction = (currentPageData: any) => { console.log(currentPageData) }
+    const myFunction = jest.fn();
     
     render(
       <Pagination pageLimit={5} totalRecords={0} onPageChanged={myFunction} />
@@ -234,7 +234,7 @@ describe("<Pagination />", () => {
   });
 
   test("Render <Pagination /> with a result of just one total page", () => {
-    const myFunction = (currentPageData: any) => { console.log(currentPageData) }
+    const myFunction = jest.fn();
     
     render(
       <Pagination pageLimit={5} totalRecords={5} onPageChanged={myFunction} />
@@ -253,7 +253,7 @@ describe("<Pagination />", () => {
   });
 
   test("Render <Pagination /> without records", () => {
-    const myFunction = (currentPageData: any) => { console.log(currentPageData) }
+    const myFunction = jest.fn();
     
     render(
       <Pagination totalRecords={0} onPageChanged={myFunction} />
