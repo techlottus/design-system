@@ -75,56 +75,589 @@ The previous example describes the simplest way of using the Menu (Dropdown) com
 
 <DropdownBasicExample />
 
-## Dropdown menu button
+## Dropdown menu button 
 
-#### Light
+Menu (Dropdown) component implements the `Menu.Button` child component, which can be customized in several styles.<br/>
+There are three main styles; Light, Outline and Dark.
+Each one comes with two variants; icon on and off.
+
+#### Light styling
+
+Light style, as its name suggests, it's appropriate to use in light mode.
 
 ##### Icon off
 
+"Icon off variant" means that no icon is added to the left side of the `Menu.Button` content.<br/><br/>
+
 <DropdownLightTextExample />
 
-<br/>
+```jsx highlight=14-26
+import { Menu } from "@headlessui/react";
+
+function IndexPage() {
+
+  const menuItemCommonClasses = "flex items-center w-full p-4 rounded font-rubik text-base text-surface-600 leading-5";
+
+  return (
+    <main>
+      {/* ... */}
+
+      <Menu as="div" className="relative inline-block text-left">
+        {({ open }) => (
+          <>
+            <Menu.Button
+              className={cn(
+                "inline-flex justify-between items-center w-full h-10 px-3 py-2",
+                "font-montserrat font-bold text-base leading-6 border border-transparent rounded",
+                "focus:bg-surface-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-200", {
+                ["text-white bg-surface-600 hover:bg-surface-800"]: !open,
+                ["text-surface-600 bg-surface-200 border-primary-500 ring-2 ring-primary-200 hover:bg-surface-200"]: open
+              }
+              )}
+            >
+              <span className="mr-3">Label</span>
+              <CaretDownIcon className="w-5 h-5" />
+            </Menu.Button>
+            <Menu.Items
+              className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none"
+            >
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={cn(menuItemCommonClasses, { ["bg-surface-50"]: active })}
+                  >
+                    Item
+                  </button>
+                )}
+              </Menu.Item>
+              {/* Menu items here ... */}
+            </Menu.Items>
+          </>
+        )}
+      </Menu>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
 
 ##### Icon on
 
+"Icon on variant" means that an icon is added to the left side of the `Menu.Button` content.<br/><br/>
+
 <DropdownLightIconExample />
 
-#### Outline
+```jsx highlight=14-29
+import { Menu } from "@headlessui/react";
+
+function IndexPage() {
+
+  const menuItemCommonClasses = "flex items-center w-full p-4 rounded font-rubik text-base text-surface-600 leading-5";
+
+  return (
+    <main>
+      {/* ... */}
+
+      <Menu as="div" className="relative inline-block text-left">
+        {({ open }) => (
+          <>
+            <Menu.Button
+              className={cn(
+                "inline-flex justify-between items-center w-full h-10 px-3 py-2",
+                "font-montserrat font-bold text-base leading-6 border border-transparent rounded",
+                "focus:bg-surface-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-200", {
+                ["text-white bg-surface-600 hover:bg-surface-800"]: !open,
+                ["text-surface-600 bg-surface-200 border-primary-500 ring-2 ring-primary-200 hover:bg-surface-200"]: open
+              }
+              )}
+            >
+              <div className="flex items-center w-full mr-3">
+                <AdvancedLevelIcon className="w-5 h-5 mr-2" />
+                <span>Label</span>
+              </div>
+              <CaretDownIcon className="w-5 h-5" />
+            </Menu.Button>
+            <Menu.Items
+              className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none"
+            >
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={cn(menuItemCommonClasses, { ["bg-surface-50"]: active })}
+                  >
+                    Item
+                  </button>
+                )}
+              </Menu.Item>
+              {/* Menu items here ... */}
+            </Menu.Items>
+          </>
+        )}
+      </Menu>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+#### Outline styling
+
+At first sight, outline styles defines a Menu (Dropdown) with a `Menu.Button` without background, but its border highlighted.
 
 ##### Icon off
 
 <DropdownOutlineTextExample />
 
+```jsx highlight=14-27
+import { Menu } from "@headlessui/react";
+
+function IndexPage() {
+
+  const menuItemCommonClasses = "flex items-center w-full p-4 rounded font-rubik text-base text-surface-600 leading-5";
+
+  return (
+    <main>
+      {/* ... */}
+
+      <Menu as="div" className="relative inline-block text-left">
+        {({ open }) => (
+          <>
+            <Menu.Button
+              className={cn(
+                "inline-flex justify-between items-center w-full h-10 px-3 py-2",
+                "font-montserrat font-bold text-base leading-6 border-2 border-surface-500 rounded",
+                "hover:text-white hover:bg-surface-500 focus:bg-surface-500 focus:text-white focus:border",
+                "focus:border-primary-500 focus:ring-2 focus:ring-primary-200", {
+                ["text-surface-600 bg-transparent"]: !open,
+                ["text-white bg-surface-500 border-primary-500 ring-2 ring-primary-200"]: open
+              }
+              )}
+            >
+              <span className="mr-3">Label</span>
+              <CaretDownIcon className="w-5 h-5" />
+            </Menu.Button>
+            <Menu.Items
+              className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none"
+            >
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={cn(menuItemCommonClasses, { ["bg-surface-50"]: active })}
+                  >
+                    Item
+                  </button>
+                )}
+              </Menu.Item>
+              {/* Menu items here ... */}
+            </Menu.Items>
+          </>
+        )}
+      </Menu>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
 ##### Icon on
 
 <DropdownOutlineIconExample />
 
-#### Dark
+```jsx highlight=14-30
+import { Menu } from "@headlessui/react";
+
+function IndexPage() {
+
+  const menuItemCommonClasses = "flex items-center w-full p-4 rounded font-rubik text-base text-surface-600 leading-5";
+
+  return (
+    <main>
+      {/* ... */}
+
+      <Menu as="div" className="relative inline-block text-left">
+        {({ open }) => (
+          <>
+            <Menu.Button
+              className={cn(
+                "inline-flex justify-between items-center w-full h-10 px-3 py-2",
+                "font-montserrat font-bold text-base leading-6 border-2 border-surface-500 rounded",
+                "hover:text-white hover:bg-surface-500 focus:bg-surface-500 focus:text-white",
+                "focus:border focus:border-primary-500 focus:ring-2 focus:ring-primary-200", {
+                ["text-surface-600 bg-transparent"]: !open,
+                ["text-white bg-surface-500 border-primary-500 ring-2 ring-primary-200"]: open
+              }
+              )}
+            >
+              <div className="flex items-center w-full mr-3">
+                <AdvancedLevelIcon className="w-5 h-5 mr-2" />
+                <span>Label</span>
+              </div>
+              <CaretDownIcon className="w-5 h-5" />
+            </Menu.Button>
+            <Menu.Items
+              className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none"
+            >
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={cn(menuItemCommonClasses, { ["bg-surface-50"]: active})}
+                  >
+                    Item
+                  </button>
+                )}
+              </Menu.Item>
+              {/* Menu items here ... */}
+            </Menu.Items>
+          </>
+        )}
+      </Menu>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+#### Dark styling
+
+Dark style implements all the light styles with a plus, when the current page's theme is changed to dark mode, the style of the Menu (Dropdown) adjusts to it accordingly.
 
 ##### Icon off
 
+A user can change the theme to `dark mode` and `Menu.Button` styles will change too.<br/><br/>
+
 <DropdownDarkTextExample />
+
+```jsx highlight=14-25
+import { Menu } from "@headlessui/react";
+
+function IndexPage() {
+
+  const menuItemCommonClasses = "flex items-center w-full p-4 rounded font-rubik text-base text-surface-600 leading-5";
+
+  return (
+    <main>
+      {/* ... */}
+
+      <Menu as="div" className="relative inline-block text-left">
+        {({ open }) => (
+          <>
+            <Menu.Button
+              className={cn(
+                "inline-flex justify-between items-center w-full h-10 px-3 py-2 font-montserrat font-bold text-base leading-6 border border-transparent",
+                "rounded focus:bg-surface-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:bg-surface-200", {
+                ["text-white bg-surface-600 hover:bg-surface-800 dark:text-surface-600 dark:bg-surface-100 dark:hover:bg-surface-200"]: !open,
+                ["text-surface-600 bg-surface-200 border-primary-500 ring-2 ring-primary-200 dark:bg-surface-200 hover:bg-surface-200"]: open
+              }
+              )}
+            >
+              <span className="mr-3">Label</span>
+              <CaretDownIcon className="w-5 h-5" />
+            </Menu.Button>
+            <Menu.Items
+              className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none"
+            >
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={cn(menuItemCommonClasses, { ["bg-surface-50"]: active })}
+                  >
+                    Item
+                  </button>
+                )}
+              </Menu.Item>
+              {/* Menu items here ... */}
+            </Menu.Items>
+          </>
+        )}
+      </Menu>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
 
 ##### Icon on
 
+A user can change the theme to `dark mode` and `Menu.Button` styles will change too, this variant includes an icon at the left side of the `Menu.Button` content.<br/><br/>
+
 <DropdownDarkIconExample />
+
+```jsx highlight=14-28
+import { Menu } from "@headlessui/react";
+
+function IndexPage() {
+
+  const menuItemCommonClasses = "flex items-center w-full p-4 rounded font-rubik text-base text-surface-600 leading-5";
+
+  return (
+    <main>
+      {/* ... */}
+
+      <Menu as="div" className="relative inline-block text-left">
+        {({ open }) => (
+          <>
+            <Menu.Button
+              className={cn(
+                "inline-flex justify-between items-center w-full h-10 px-3 py-2 font-montserrat font-bold text-base leading-6 border border-transparent",
+                "rounded focus:bg-surface-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:bg-surface-200", {
+                ["text-white bg-surface-600 hover:bg-surface-800 dark:text-surface-600 dark:bg-surface-100 dark:hover:bg-surface-200"]: !open,
+                ["text-surface-600 bg-surface-200 border-primary-500 ring-2 ring-primary-200 dark:bg-surface-200 hover:bg-surface-200"]: open
+              }
+              )}
+            >
+              <div className="flex items-center w-full mr-3">
+                <AdvancedLevelIcon className="w-5 h-5 mr-2" />
+                <span>Label</span>
+              </div>
+              <CaretDownIcon className="w-5 h-5" />
+            </Menu.Button>
+            <Menu.Items
+              className="absolute left-0 w-36 mt-2 origin-top-left bg-white rounded shadow-sm z-10 focus:outline-none"
+            >
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={cn(menuItemCommonClasses, { ["bg-surface-50"]: active })}
+                  >
+                    Item
+                  </button>
+                )}
+              </Menu.Item>
+              {/* Menu items here ... */}
+            </Menu.Items>
+          </>
+        )}
+      </Menu>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
 
 ## Dropdown menu items
 
-#### Text only
+Menu (Dropdown) implements the `Menu.Items` and `Menu.Item` child components, which can be fully customized. The following examples describe three different styles for the dropdown items. 
+
+#### Text only styling
+
+Text only menu items render text in the corresponding place for each menu item an nothing else.<br/><br/>
 
 <DropdownTextOnlyExample />
 
-#### Icon lead
+```jsx highlight=23-31
+import { Menu } from "@headlessui/react";
+
+function IndexPage() {
+
+  const menuItemCommonClasses = "flex items-center w-full p-4 rounded font-rubik text-base text-surface-600 leading-5";
+
+  return (
+    <main>
+      {/* ... */}
+
+      <Menu as="div" className="relative inline-block text-left">
+        {({ open }) => (
+          <>
+            <Menu.Button
+              className={/* classes here */}
+            >
+              <span className="mr-3">Label</span>
+              <CaretDownIcon className="w-5 h-5" />
+            </Menu.Button>
+            <Menu.Items
+              className={/* classes here */}
+            >
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={cn(menuItemCommonClasses, { ["bg-surface-50"]: active })}
+                  >
+                    Item
+                  </button>
+                )}
+              </Menu.Item>
+              {/* Menu items here ... */}
+            </Menu.Items>
+          </>
+        )}
+      </Menu>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+#### Icon lead styling
+
+Icon lead menu items render an icon next to the left side of the menu item text content.<br/><br/>
 
 <DropdownIconLeadExample />
 
-#### With selection
+```jsx highlight=23-32
+import { Menu } from "@headlessui/react";
+
+function IndexPage() {
+
+  const menuItemCommonClasses = "flex items-center w-full p-4 rounded font-rubik text-base text-surface-600 leading-5";
+
+  return (
+    <main>
+      {/* ... */}
+
+      <Menu as="div" className="relative inline-block text-left">
+        {({ open }) => (
+          <>
+            <Menu.Button
+              className={/* classes here */}
+            >
+              <span className="mr-3">Label</span>
+              <CaretDownIcon className="w-5 h-5" />
+            </Menu.Button>
+            <Menu.Items
+              className={/* classes here */}
+            >
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={cn(menuItemCommonClasses, { ["bg-surface-50"]: active })}
+                  >
+                    <EditIcon className="w-4 h-4 mr-2" />
+                    Item
+                  </button>
+                )}
+              </Menu.Item>
+              {/* Menu items here ... */}
+            </Menu.Items>
+          </>
+        )}
+      </Menu>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+#### With selection styling
+
+Selection menu items render a check icon next to the right side of the menu item text content and it's displayed only when the menu item is active.<br/><br/>
 
 <DropdownSelectionExample />
 
+```jsx highlight=23-43
+import { Menu } from "@headlessui/react";
+
+function IndexPage() {
+
+  const menuItemCommonClasses = "flex items-center w-full p-4 rounded font-rubik text-base text-surface-600 leading-5";
+
+  return (
+    <main>
+      {/* ... */}
+
+      <Menu as="div" className="relative inline-block text-left">
+        {({ open }) => (
+          <>
+            <Menu.Button
+              className={/* classes here */}
+            >
+              <span className="mr-3">Label</span>
+              <CaretDownIcon className="w-5 h-5" />
+            </Menu.Button>
+            <Menu.Items
+              className={/* classes here */}
+            >
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={cn(
+                      "justify-between",
+                      menuItemCommonClasses, {
+                      ["bg-surface-50"]: active,
+                    }
+                    )}
+                  >
+                    <div className="flex items-center">
+                      <EditIcon className="w-4 h-4 mr-2" />
+                      Item
+                    </div>
+                    {
+                      active &&
+                      <CheckIcon className="text-primary-500 w-4 h-4" />
+                    }
+                  </button>
+                )}
+              </Menu.Item>
+              {/* Menu items here ... */}
+            </Menu.Items>
+          </>
+        )}
+      </Menu>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
 #### Disabled
 
+Menu (Dropdown) can also be customized to be disabled; either the whole interaction by adding the `disable` prop in the `Menu.Button` component or by disabling menu items individually with the `disabled` prop in the `Menu.Item` component.<br/><br/>
+
 <DropdownDisabledExample />
+
+```jsx highlight=7,17,26
+import { Menu } from "@headlessui/react";
+
+function IndexPage() {
+
+  const menuItemCommonClasses = "flex items-center w-full p-4 rounded font-rubik text-base text-surface-600 leading-5";
+
+  const disabled = true;
+
+  return (
+    <main>
+      {/* ... */}
+
+      <Menu as="div" className="relative inline-block text-left">
+        {({ open }) => (
+          <>
+            <Menu.Button
+              disabled={disabled}
+              className={/* classes here */}
+            >
+              <span className="mr-3">Label</span>
+              <CaretDownIcon className="w-5 h-5" />
+            </Menu.Button>
+            <Menu.Items
+              className={/* classes here */}
+            >
+              <Menu.Item disabled>
+                {({ active }) => (
+                  <button
+                    className={/* classes here */}
+                  >
+                    Item
+                  </button>
+                )}
+              </Menu.Item>
+              {/* Menu items here ... */}
+            </Menu.Items>
+          </>
+        )}
+      </Menu>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
 
 To customize and learn about the Menu (Dropdown) component see the [Headless UI documentation](https://headlessui.dev/).
