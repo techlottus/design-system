@@ -3,5 +3,7 @@
   "getting-started": "Getting Started",
   "component-template": "Template docs",
   "core": "Core",
-  "dropdown": "Dropdown"
+  "dropdown": "Dropdown",
+  "iconography": "Iconography",
+  "tabs": "Tabs"
 }
