@@ -1,15 +1,18 @@
 import { DateInput } from "@exponentialeducation/datetime/src";
 import { FormGroup } from "@exponentialeducation/betomic/src";
 import { HelperIcon } from "@exponentialeducation/iconography";
+import { useState, useEffect } from "react";
 
 const DateInputLabelExample = () => {
   return (
+    <>
     <FormGroup
       label="Label"
-      labelFor="label-date-input-example"
+      labelFor="label-example"
     >
-      <DateInput id="label-date-input-example" />
+      <DateInput id="label-example" />
     </FormGroup>
+    </>
   )
 }
 
@@ -58,6 +61,12 @@ const DateInputLabelHelperTextExample = () => {
 
 const DateInputDisabledExample = () => {
   return (
+    <DateInput disabled />
+  );
+}
+
+const DateInputFormGroupDisabledExample = () => {
+  return (
     <FormGroup
       disabled
       label="Label"
@@ -74,7 +83,6 @@ const DateInputDisabledExample = () => {
 }
 
 const DateInputOnChangeExample = () => {
-
   const myMethod = (selectedDate: Date) => {
     alert(`Selected date: ${selectedDate}`);
   }
@@ -115,7 +123,48 @@ const DateInputMaxDateExample = () => {
   return (
     <DateInput
       minDate={new Date()}
+      maxDate={new Date(2022, 2, 31)}
+    />
+  );
+}
+
+const DateInputValidationExample = () => {
+
+  const minDate = new Date();
+  const maxDate = new Date(2022, 2, 15);
+
+  const [date, setDate] = useState(new Date());
+  const [isValid, setIsValid] = useState<boolean>();
+
+  useEffect(() => {
+    const example = validateDay(date);
+    setIsValid(example);
+  }, [date]);
+
+  function validateDay(selectedDate?: Date) {
+    let example = true;
+    if(
+        !selectedDate ||
+        selectedDate.getTime() > maxDate.getTime() ||
+        selectedDate.getTime() < minDate.getTime()
+      ) {
+      example = false;
+    }
+
+    return example;
+  }
+
+  function myMethod(selectedDate?: Date) {
+    setDate(selectedDate);
+  }
+
+  return (
+    <DateInput
+      defaultValue={date}
+      minDate={new Date()}
       maxDate={new Date(2022, 2, 15)}
+      onChange={myMethod}
+      valid={isValid}
     />
   );
 }
@@ -164,11 +213,13 @@ export {
   DateInputRightElExample,
   DateInputLabelHelperTextExample,
   DateInputDisabledExample,
+  DateInputFormGroupDisabledExample,
   DateInputOnChangeExample,
   DateInputDefaultValueExample,
   DateInputInitialMonthExample,
   DateInputMinDateExample,
   DateInputMaxDateExample,
+  DateInputValidationExample,
   DateInputDisabledDatesExample,
   DateInputDisabledSpecificExample,
   DateInputDisableWeekendExample
