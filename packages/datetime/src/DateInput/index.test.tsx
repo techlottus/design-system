@@ -10,7 +10,7 @@ describe("<DateInput />", () => {
     );
 
     const dateInputEl = screen.queryByRole("textbox");
-    const dateInputByPlaceholder = screen.queryByPlaceholderText("12/10/2021");
+    const dateInputByPlaceholder = screen.queryByPlaceholderText("DD/MM/YYYY");
 
     expect(
       dateInputEl
@@ -43,7 +43,7 @@ describe("<DateInput />", () => {
     );
 
     const dateInputEl = screen.getByRole("textbox");
-    const dateInputByPlaceholder = screen.queryByPlaceholderText("12/10/2021");
+    const dateInputByPlaceholder = screen.queryByPlaceholderText("DD/MM/YYYY");
     const helperElement = screen.getByText("This is a date input");
     const requiredElement = screen.getByText("*");
 
@@ -71,23 +71,12 @@ describe("<DateInput />", () => {
 
   test("Render <DateInput /> without default value", () => {
 
-    const getFormattedDate = (date: Date) => {
-      let day = date.getDate();
-      let month = date.getMonth();
-      const year = date.getFullYear();
-
-      return `${day}/${month + 1}/${year}`;
-    }
-
     render(
-      <DateInput format="l" />
+      <DateInput placeholder="Fecha de inicio" />
     );
 
-    const today = new Date();
-    const placeholderValue = getFormattedDate(today);
-
     const dateInputEl = screen.getByRole("textbox");
-    const dateInputByPlaceholder = screen.queryByPlaceholderText(placeholderValue);
+    const dateInputByText = screen.getByPlaceholderText("Fecha de inicio");
 
     expect(
       dateInputEl
@@ -98,7 +87,7 @@ describe("<DateInput />", () => {
     ).toHaveAttribute("type", "text");
 
     expect(
-      dateInputByPlaceholder
+      dateInputByText
     ).toBeInTheDocument();
 
   });
@@ -112,7 +101,7 @@ describe("<DateInput />", () => {
     );
 
     const dateInputEl = screen.getByRole("textbox");
-    const dateInputByPlaceholder = screen.queryByPlaceholderText("01/01/2022");
+    const dateInputByPlaceholder = screen.queryByPlaceholderText("DD/MM/YYYY");
 
     expect(
       dateInputEl
@@ -126,58 +115,6 @@ describe("<DateInput />", () => {
       dateInputByPlaceholder
     ).toBeInTheDocument();
 
-  });
-
-  test("Render <DateInput /> with 'en' localization format L", () => {
-
-    render(
-      <DateInput
-        locale="en-us"
-        format="L"
-        initialMonth={new Date(2021, 11, 24)}
-      />
-    );
-
-    const dateInputEl = screen.getByRole("textbox");
-    const dateInputByPlaceholder = screen.queryByPlaceholderText("12/24/2021");
-
-    expect(
-      dateInputEl
-    ).toBeInTheDocument();
-
-    expect(
-      dateInputEl
-    ).toHaveAttribute("type", "text");
-
-    expect(
-      dateInputByPlaceholder
-    ).toBeInTheDocument();
-
-  });
-
-  test("Render <DateInput /> with format LL", () => {
-
-    render(
-      <DateInput
-        format="LL"
-        initialMonth={new Date(2022, 0)}
-      />
-    );
-
-    const dateInputEl = screen.getByRole("textbox");
-    const dateInputByPlaceholder = screen.queryByPlaceholderText("1 de enero de 2022");
-
-    expect(
-      dateInputEl
-    ).toBeInTheDocument();
-
-    expect(
-      dateInputEl
-    ).toHaveAttribute("type", "text");
-
-    expect(
-      dateInputByPlaceholder
-    ).toBeInTheDocument();
   });
 
 });
