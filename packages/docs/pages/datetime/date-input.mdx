@@ -6,11 +6,13 @@ import {
   DateInputRightElExample,
   DateInputLabelHelperTextExample,
   DateInputDisabledExample,
+  DateInputFormGroupDisabledExample,
   DateInputOnChangeExample,
   DateInputDefaultValueExample,
   DateInputInitialMonthExample,
   DateInputMinDateExample,
   DateInputMaxDateExample,
+  DateInputValidationExample,
   DateInputDisabledDatesExample,
   DateInputDisabledSpecificExample,
   DateInputDisableWeekendExample,
@@ -197,13 +199,34 @@ function IndexPage() {
 }
 ```
 
-#### Disabled
+#### Disabling styles
 
-The prop `disabled` prevents the interaction with the component.
+There are two ways of preventing the interaction with the DateInput component through the prop `disabled`.
 
-<br />
+When using `<DateInput />` component without any wrapper such as the `<FormGroup />` component, the prop `disabled` displays disabled styles and makes the input non-interactive.<br/><br/>
 
 <DateInputDisabledExample />
+
+```jsx highlight=9
+import { DateInput } from "@exponentialeducation/datetime";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      <DateInput disabled />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+When using `<FormGroup />` component the prop `disabled` must be define at the wrapper component level, meaning the `<FormGroup />` component, as follows:<br/><br/>
+
+<DateInputFormGroupDisabledExample />
 
 ```jsx highlight=11
 import { DateInput } from "@exponentialeducation/datetime";
@@ -234,13 +257,36 @@ function IndexPage() {
 }
 ```
 
+**NOTE:** If the prop `disabled` is provided to the `<DateInput />` component when using the wrapper `<FormGroup />`, the disabled styles and non-interaction won't work. This is because in this case the wrapper or parent level component leads the disabled state.
+
+```jsx highlight=11
+import { DateInput } from "@exponentialeducation/datetime";
+import { FormGroup } from "@exponentialeducation/betomic";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      <FormGroup>  {/* disabled prop should live at this level */}
+        <DateInput disabled />
+        {/* disabled prop here won't apply corresponding styles */}
+      </FormGroup>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
 ## Selected date value
 
 DateInput allows the user to provide or not a date through the `defaultValue` prop, which will be selected in the DateInput's calendar overlay.
 
 #### Default value
 
-By default DateInput has no default value, in addition, a `defaultValue` is optional. However, when no value is provided the placeholder displays the current date, meaning today's date.
+By default DateInput has no default value, in addition, a `defaultValue` is optional. However, when no value is provided the placeholder displays the "DD/MM/YYYY" date format suggestion.
 
 <br />
 
@@ -256,6 +302,31 @@ function IndexPage() {
       {/* ... */}
 
       <DateInput />
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+#### Placeholder
+
+The `placeholder` prop, allows the user to display a custom message inside the DateInput container to give a hint to the user about the purpose of the DateInput.
+
+<br />
+
+<DateInput placeholder="Start date" />
+
+```jsx highlight=9
+import { DateInput } from "@exponentialeducation/datetime";
+
+function IndexPage() {
+
+  return (
+    <main>
+      {/* ... */}
+
+      <DateInput placeholder="Start date" />
 
       {/* ... */}
     </main>
@@ -446,7 +517,7 @@ function IndexPage() {
 The prop `maxDate` does something similar to the `minDate` but the other way around. With this prop, the user can choose until a certain date. If the user selects a date after the `maxDate`, the DateInput would be considered as invalid.<br /><br />
 The props `minDate` and `maxDate` can be used together to specify a limited and controlled range in which a user can select a date.<br />
 
-The following example describes a selection range starting from today until March 15th, 2020:
+The following example describes a selection range starting from today until March 2022:
 
 <br />
 
@@ -463,7 +534,7 @@ function IndexPage() {
 
       <DateInput
         minDate={new Date()}
-        maxDate={new Date(2022, 2, 15)}
+        maxDate={new Date(2022, 2, 31)}
       />
 
       {/* ... */}
@@ -574,104 +645,57 @@ function IndexPage() {
 }
 ```
 
-## Modifiers
+## Customize validation
 
-Modifiers apply styles to days in the DateInput calendary overlay. Modifiers are a **react-day-picker** concept and are documented in full in the [react-day-picker documentation](https://react-day-picker.js.org/docs/matching-days/).
+Through the `valid` prop, users can define logic and conditions according to the selected date to decide whether it is valid or not according to specific use cases.
 
-## Localization
+In the following example, there's a logic that validates that the selected date is between the range from a minimum and maximum date.
 
-Localization allows the user to custom the date formats in which DateInput dates are parsed and formated. It takes advantage of the current Localization features of [react-day-picker and moment.js](http://react-day-picker.js.org/docs/localization).
+<br/>
 
-#### Date format
+<DateInputValidationExample />
 
-The prop `format` defines in which format the date should be parsed and formated along with the `locale` specification. By default the format for all dates is `es-mx` which describes dates for the Mexican calendar.
-According to the rules of the spanish specification of calendar: the day goes first, followed by the month and finally the year, having: *day/month/year* or *day of the month of the year*.
-
-##### Format "L" or DD/MM/YYYY
-
-This format consists of an uppercase "L" letter and defines the date like the following:
-
-<br />
-
-<DateInput
-  format="L"
-  locale="en-us"
-/>
-
-##### Format "l" or D/M/YYYY
-
-This format consists of a lowercase "l" letter and defines the date like the following:
-
-<br />
-
-<DateInput
-  format="l"
-/>
-
-##### Full date transcript
-
-This format consists of two uppercase "L" letters and define the date like the following:
-
-<br />
-
-<DateInput
-  format="LL"
-/>
-
-##### Full date transcript (short)
-
-This format consists of two lowercase "l" letters and define the date like the following:
-
-<br />
-
-<DateInput
-  format="ll"
-/>
-
-##### English US locale
-
-With the `locale` prop, another ways of parsing as well as formatting date can be achieved. Notice how the calendar overlay also adjusts to the corresponding locale:
-
-<br />
-
-<DateInput
-  format="L"
-  locale="en-us"
-/>
-
-```jsx highlight=10-12,15-17,20-22,25-27,30-33
+```jsx highlight=17-24,36,37,39
+import { useEffect, useState } from "react";
 import { DateInput } from "@exponentialeducation/datetime";
 
 function IndexPage() {
+
+  const minDate = new Date();
+  const maxDate = new Date(2022, 2, 15);
+
+  const [date, setDate] = useState(new Date());
+  const [isValid, setIsValid] = useState<boolean>();
+
+  useEffect(() => {
+    const example = validateDay(date);
+    setIsValid(example);
+  }, [date]);
+
+  function validateDay(selectedDate?: Date) {
+    {/* ... */}
+    if(
+      !selectedDate ||
+      selectedDate.getTime() > maxDate.getTime() ||
+      selectedDate.getTime() < minDate.getTime()
+    ) 
+    {/* ... */}
+  }
+
+  function myMethod(selectedDate?: Date) {
+    setDate(selectedDate);
+  }
 
   return (
     <main>
       {/* ... */}
 
-      {/* DD/MM/YYYY */}
       <DateInput
-        format="L"
-      />
-
-      {/* D/M/YYYY */}
-      <DateInput
-        format="l"
-      />
-
-      {/* day of month of year */}
-      <DateInput
-        format="LL"
-      />
-
-      {/* day of month of year (short) */}
-      <DateInput
-        format="ll"
-      />
-
-      {/* MM/DD/YYYY according to 'en' locale */}
-      <DateInput
-        format="L"
-        locale="en-us"
+        defaultValue={date}
+        minDate={minDate}
+        maxDate={maxDate}
+        onChange={myMethod}
+        valid={isValid}
       />
 
       {/* ... */}
@@ -679,6 +703,10 @@ function IndexPage() {
   )
 }
 ```
+
+## Modifiers
+
+Modifiers apply styles to days in the DateInput calendary overlay. Modifiers are a **react-day-picker** concept and are documented in full in the [react-day-picker documentation](https://react-day-picker.js.org/docs/matching-days/).
 
 ## Props
 
@@ -728,23 +756,22 @@ function IndexPage() {
 
     <tr>
       <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `disabled?`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **boolean** *= false*<br/>
+        Whether date input should be disabled, display disabled styles and be non-interactive.
+      </td>
+    </tr>
+
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
         `disabledDates?`
       </td>
       <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
         **[Modifier | Modifier[]](https://react-day-picker.js.org/docs/matching-days/)**<br/>
         Date(s) that should appear as disabled.<br />
         Modifier is a **react-day-picker** type for dates. See API documentation [here](https://react-day-picker.js.org/docs/matching-days/).
-      </td>
-    </tr>
-
-    <tr>
-      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
-        `format?`
-      </td>
-      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
-        **"L" | "l" | "LL" | "ll"** *= "L"*<br/>
-        Defines how the date will be formtated and parsed. It follows the *Multiple Locale Support* convention by [moment.js](https://momentjs.com/).
-        It accepts formats for date selection, not time.
       </td>
     </tr>
 
@@ -765,16 +792,6 @@ function IndexPage() {
       <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
         **Date**<br/>
         The initial month the calendar displays.
-      </td>
-    </tr>
-
-    <tr>
-      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
-        `locale?`
-      </td>
-      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
-        **string** *= "es-mx"*<br/>
-        The locale name, which is passed to the functions in localeUtils (and formatDate and parseDate if supported). See documentation [here](http://react-day-picker.js.org/docs/localization).
       </td>
     </tr>
 
@@ -822,11 +839,31 @@ function IndexPage() {
 
     <tr>
       <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `placeholder?`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **string** *= "DD/MM/YYYY"*<br/>
+        Placeholder text to display in empty input fields.
+      </td>
+    </tr>
+
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
         `showOutsideDays?`
       </td>
       <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
         **boolean** *= true*<br/>
         Display the days falling outside the current month. These days are selectable unless `minDate` or `maxDate` props are set.
+      </td>
+    </tr>
+
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `valid?`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **boolean**<br/>
+        Wheter the date input is valid and apply valid or unvalid styles.
       </td>
     </tr>
 
