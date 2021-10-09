@@ -1,0 +1,135 @@
+import { Avatar } from "@exponentialeducation/betomic/src";
+
+# Avatar
+
+Documentation for the `<Avatar />` component. Learn about the available props and how to use it.
+
+## Installation
+
+To get started, install `@exponentialeducation/betomic` via `yarn`:
+
+```bash
+# Yarn
+
+yarn add @exponentialeducation/betomic
+```
+
+## Basic Example
+
+An `Avatar` can be used to represent people or objects.
+
+```jsx highlight=3,10-14
+ {/* ... */}
+
+import { Avatar } from '@exponentialeducation/betomic';
+
+function IndexPage() {
+  return (
+    <main>
+      {/* ... */}
+
+      <Avatar>
+        <img
+          src="https://picturepan2.github.io/spectre/img/avatar-1.png"
+          alt="Imaginary Friend"/>
+      </Avatar>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+<div className="mt-5 flex justify-center">
+  <Avatar>
+    <img
+      src="https://picturepan2.github.io/spectre/img/avatar-1.png"
+      alt="Imaginary Friend"/>
+  </Avatar>
+</div>
+
+## Sizes
+
+Five sizes are available.
+
+```jsx highlight=3,10
+ {/* ... */}
+
+import { Avatar } from '@exponentialeducation/betomic';
+
+function IndexPage() {
+  return (
+    <main>
+      {/* ... */}
+
+      <Avatar size="xs">
+        <img
+          src="https://picturepan2.github.io/spectre/img/avatar-1.png"
+          alt="Imaginary Friend"/>
+      </Avatar>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+<div className="mt-5 flex justify-center">
+  <Avatar size="xs">
+    <img
+      src="https://picturepan2.github.io/spectre/img/avatar-1.png"
+      alt="Imaginary Friend"/>
+  </Avatar>
+  <Avatar size="sm">
+    <img
+      src="https://picturepan2.github.io/spectre/img/avatar-2.png"
+      alt="Imaginary Friend"/>
+  </Avatar>
+  <Avatar size="md">
+    <img
+      src="https://picturepan2.github.io/spectre/img/avatar-3.png"
+      alt="Imaginary Friend"/>
+  </Avatar>
+  <Avatar size="lg">
+    <img
+      src="https://picturepan2.github.io/spectre/img/avatar-4.png"
+      alt="Imaginary Friend"/>
+  </Avatar>
+  <Avatar size="xl">
+    <img
+      src="https://picturepan2.github.io/spectre/img/avatar-5.png"
+      alt="Imaginary Friend"/>
+  </Avatar>
+</div>
+
+## Props
+
+<table className="min-w-full divide-y divide-gray-200">
+  <thead>
+    <tr>
+      <th scope="col" className="border-l-0 border-r-0 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        prop
+      </th>
+      <th scope="col" className="border-l-0 border-r-0 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        description
+      </th>
+    </tr>
+  </thead>
+  <tbody className="divide-y divide-gray-200">
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        children
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `node` <span className="block">Content will be render</span>
+      </td>
+    </tr>
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        size?
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `"xs" | "sm" | "md" | "lg" | "xl"` *= md* <span className="block">Visual styles to apply to `Avatar`</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
