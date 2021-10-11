@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import DateInput from ".";
 import FormGroup from "@exponentialeducation/betomic/src/components/FormGroup";
+import userEvent from "@testing-library/user-event";
 
 describe("<DateInput />", () => {
   test("Render <DateInput /> component", () => {
@@ -19,6 +20,10 @@ describe("<DateInput />", () => {
     expect(
       dateInputEl
     ).toHaveAttribute("type", "text");
+
+    expect(
+      dateInputEl
+    ).toHaveValue("12/10/2021");
 
     expect(
       dateInputByPlaceholder
@@ -56,6 +61,10 @@ describe("<DateInput />", () => {
     ).toHaveAttribute("type", "text");
 
     expect(
+      dateInputEl
+    ).toHaveValue("12/10/2021");
+
+    expect(
       helperElement
     ).toBeInTheDocument();
 
@@ -87,12 +96,16 @@ describe("<DateInput />", () => {
     ).toHaveAttribute("type", "text");
 
     expect(
+      dateInputEl
+    ).toHaveValue("");
+
+    expect(
       dateInputByText
     ).toBeInTheDocument();
 
   });
 
-  test("Render <DateInput /> with initial month", () => {
+  test("Render <DateInput /> with initial month & calendar overlay", () => {
 
     render(
       <DateInput
@@ -101,7 +114,6 @@ describe("<DateInput />", () => {
     );
 
     const dateInputEl = screen.getByRole("textbox");
-    const dateInputByPlaceholder = screen.queryByPlaceholderText("DD/MM/YYYY");
 
     expect(
       dateInputEl
@@ -111,8 +123,12 @@ describe("<DateInput />", () => {
       dateInputEl
     ).toHaveAttribute("type", "text");
 
+    userEvent.click(dateInputEl);
+
+    const calendarOverlayText = screen.queryByText("enero 2022");
+
     expect(
-      dateInputByPlaceholder
+      calendarOverlayText
     ).toBeInTheDocument();
 
   });
