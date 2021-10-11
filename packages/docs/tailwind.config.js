@@ -16,6 +16,9 @@ module.exports = {
         "68": "272px",
         "110": "440px"
       },
+      maxHeight: {
+        "78": "312px",
+      },
       fontFamily: {
         "montserrat": ["Montserrat", "sans-serif"],
         "rubik": ["Rubik", "sans-serif"],
@@ -113,7 +116,11 @@ module.exports = {
         },
       },
       spacing: {
+        "17": "4.25rem",
         "18": "4.5rem",
+        "65": "16.25rem",
+        "49": "12.25rem",
+        "30": "7.5rem",
       }
     },
   },
@@ -130,6 +137,14 @@ module.exports = {
       }
 
       addUtilities(filterUtilities, ["responsive", "hover"])
+    }),
+    plugin(function({ addBase, theme }) {
+      addBase({
+        ".drawer-open": {
+          overflow: "hidden",
+          paddingRight: "15px",
+        }
+      })
     }),
     plugin(function({ addBase, theme }) {
       addBase({

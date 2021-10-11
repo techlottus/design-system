@@ -1,0 +1,128 @@
+import {
+  BasicDrawer,
+  PositionsDrawer
+  } from "../../components/DrawerExample";
+
+# Drawer
+
+Documentation for the `<Drawer />` component. Learn about the available props and how to use it.
+
+## Installation
+
+To get started, install `@exponentialeducation/betomic` via `yarn`:
+
+```bash
+# Yarn
+
+yarn add @exponentialeducation/betomic
+```
+
+## Basic Example
+
+A `Drawer` is a panel that is typically overlaid on top of a page.
+
+```jsx highlight=3,6,11-17
+ {/* ... */}
+
+import { Drawer } from '@exponentialeducation/betomic';
+
+function IndexPage() {
+  const [open, setOpen] = useState<boolean>(false);
+  return (
+    <main>
+      {/* ... */}
+
+      <Drawer
+        open={open}
+        onClose={() => setOpen(false)}
+      >
+        <p>...</p>
+        <p>...</p>
+      </Drawer>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+<BasicDrawer />
+
+## Placements
+
+Three placements are available.
+
+```jsx highlight=3,11
+ {/* ... */}
+
+import { Drawer } from '@exponentialeducation/betomic';
+
+function IndexPage() {
+  return (
+    <main>
+      {/* ... */}
+
+      <Drawer
+        position="right"
+        open={open}
+        onClose={() => setOpen(false)}
+      >
+        <p>...</p>
+        <p>...</p>
+      </Drawer>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+<PositionsDrawer />
+
+## Props
+
+<table className="min-w-full divide-y divide-gray-200">
+  <thead>
+    <tr>
+      <th scope="col" className="border-l-0 border-r-0 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        prop
+      </th>
+      <th scope="col" className="border-l-0 border-r-0 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        description
+      </th>
+    </tr>
+  </thead>
+  <tbody className="divide-y divide-gray-200">
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        children
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `node` <span className="block">Content will be render</span>
+      </td>
+    </tr>
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        onClose?
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `function` <span className="block">Specify a callback that will be called when a user clicks mask or close button</span>
+      </td>
+    </tr>
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        open?
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `boolean` *= false* <span className="block">Whether the Drawer dialog is visible or not</span>
+      </td>
+    </tr>
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        position?
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `"left" | "right" | "bottom"` *= right* <span className="block">The Drawer can appear from three edges of the screen.</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
