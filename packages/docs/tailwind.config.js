@@ -5,6 +5,7 @@ module.exports = {
       "./pages/**/*.{js,ts,tsx,mdx}",
       "./components/**/*.{js,ts,tsx}",
       "../../node_modules/@exponentialeducation/betomic/src/**/*.{js,ts,tsx}",
+      "../../node_modules/@exponentialeducation/datetime/src/**/*.{js,ts,tsx}",
       "../../node_modules/@exponentialeducation/tooltip/src/**/*.{js,ts,tsx}",
       "../../node_modules/@exponentialeducation/toast/src/**/*.{js,ts,tsx}"
   ],
