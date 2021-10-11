@@ -8,3 +8,4 @@ export { default as Alert } from "./Alert";
 export { default as Avatar } from "./Avatar";
 export { default as Container } from "./Container";
 export { default as Drawer } from "./Drawer";
+export { default as Navbar } from "./Navbar";
