@@ -1,14 +1,21 @@
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
-  purge: [
+  purge: {
+    content: [
       "./pages/**/*.{js,ts,tsx,mdx}",
       "./components/**/*.{js,ts,tsx}",
       "../../node_modules/@exponentialeducation/betomic/src/**/*.{js,ts,tsx}",
       "../../node_modules/@exponentialeducation/datetime/src/**/*.{js,ts,tsx}",
       "../../node_modules/@exponentialeducation/tooltip/src/**/*.{js,ts,tsx}",
       "../../node_modules/@exponentialeducation/toast/src/**/*.{js,ts,tsx}"
-  ],
+    ],
+    options: {
+      safelist: [
+        "nextra-container"
+      ]
+    }
+  },
   darkMode: "class", // or "media" or "class"
   theme: {
     extend: {
@@ -241,8 +248,10 @@ module.exports = {
         table: {
           width: theme("width.full"),
         },
-        ".nextra-container nav": {
-          boxShadow: "none !important"
+        ".nextra-container": {
+          "nav": {
+            boxShadow: "none !important"
+          }
         },
         "table tbody tr:nth-child(2n)": {
           backgroundColor: "inherit"
