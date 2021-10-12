@@ -1,0 +1,628 @@
+import {
+  SelectBasicExample,
+  SelectCustomExample,
+  SelectStandardExample,
+  SelectStandardLabelExample,
+  SelectLeadIconExample,
+  SelectHelperIconExample,
+  SelectInvalidExample,
+  SelectDisabledExample
+} from "../components/SelectExample";
+
+# Select
+
+Documentation for the `<Listbox />` select component. Learn about the available props and how to use them.
+
+## Installation
+
+[Listbox (Select)](https://headlessui.dev/react/listbox) is part of a set of unstyled and fully accessible components created by Headless UI.<br/>
+See the [Headless UI documentation](https://headlessui.dev/) to learn more.<br/>
+
+To get started, install Headless UI via `yarn`.
+
+```bash
+# Yarn
+
+yarn add @headlessui/react
+```
+
+## Basic Example
+
+```jsx highlight=20-32
+import React, { useState } from "react";
+import { Listbox } from "@headlessui/react";
+import { CheckIcon, CaretDownIcon } from "@exponentialeducation/iconography";
+
+function IndexPage() {
+
+  const [selectedItem, setSelectedItem] = useState(items[0]);
+
+  const items = [
+    { id: 1, name: "Item 1", unavailable: false },
+    { id: 2, name: "Item 2", unavailable: false },
+    { id: 3, name: "Item 3", unavailable: false },
+    { id: 4, name: "Item 4", unavailable: true },
+  ];
+
+  return (
+    <main>
+      {/* ... */}
+
+      <Listbox value={selectedItem} onChange={setSelectedItem}>
+        <Listbox.Button>{selectedItem.name}</Listbox.Button>
+        <Listbox.Options>
+          {items.map((item) => (
+            <Listbox.Option
+              key={item.id}
+              value={item}
+              disabled={item.unavailable}
+            >
+              {item.name}
+            </Listbox.Option>
+          ))}
+        </Listbox.Options>
+      </Listbox>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+The previous code snippet describes the simplets way of using the `<Listbox />` component, the result of that is like the following:<br/><br/>
+
+<SelectBasicExample />
+
+## Customization
+
+`Listbox.Button`, `Listbox.Options` as well as `Listbox.Option` can be customized using classes CSS (e.g. Tailwind CSS). They can also take into account the values of `open`, `active` and `selected` values to style accordingly.<br/><br/>
+
+<SelectCustomExample />
+
+```jsx highlight=24-43,49-68
+import React, { Fragment, useState } from "react";
+import { Listbox } from "@headlessui/react";
+import { CheckIcon, CaretDownIcon } from "@exponentialeducation/iconography";
+import cn from "classnames";
+
+function IndexPage() {
+
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const items = [
+    { id: 1, name: "Item 1", unavailable: false },
+    { id: 2, name: "Item 2", unavailable: false },
+    { id: 3, name: "Item 3", unavailable: false },
+    { id: 4, name: "Item 4", unavailable: true },
+  ];
+
+  return (
+    <main>
+      {/* ... */}
+
+      <Listbox value={selectedItem} onChange={setSelectedItem}>
+        {({ open }) => (
+          <div className="relative">
+            <Listbox.Button
+              className={cn(
+                "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2",
+                "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent",
+                "h-10 hover:border-surface-200 focus:outline-none focus:border focus:border-primary-500",
+                "focus:ring-2 focus:ring-primary-200", {
+                  ["bg-surface-100"]: !selectedItem,
+                  ["bg-white border-surface-200"]: selectedItem,
+                  ["border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open
+                }
+              )}
+            >
+              <span className="block truncate">
+                {selectedItem ? selectedItem.name : "Seleccionar"}
+              </span>
+              <span className="w-5">
+                <CaretDownIcon className="w-5 h-5" />
+              </span>
+            </Listbox.Button>
+            <Listbox.Options className="ml-0 absolute w-full mt-1 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
+              {items.map((item) => (
+                /* Use the `active` state to conditionally style the active option. */
+                /* Use the `selected` state to conditionally style the selected option. */
+                <Listbox.Option key={item.id} value={item} as={Fragment}>
+                  {({ active, selected }) => (
+                    <li
+                      className={cn(
+                        "flex justify-between items-center p-4 m-0 h-12",
+                        "font-rubik text-base text-surface-600 leading-6",
+                        "rounded cursor-default select-none", {
+                          ["bg-surface-50"]: active,
+                          ["font-bold text-primary-500"]: selected
+                        }
+                      )}
+                    >
+                      <span className="block truncate">
+                        {item.name}
+                      </span>
+                      {
+                        selected &&
+                        <span className="flex items-center w-4 pointer-events-none">
+                          <CheckIcon className="w-4 h-4" />
+                        </span>
+                      }
+                    </li>
+                  )}
+                </Listbox.Option>
+              ))}
+            </Listbox.Options>
+          </div>
+        )}
+      </Listbox>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+## Variants
+
+Different variants for the Listbox (Select) component are described below; they include states like hover, focus, invalid, disabled, etc.
+
+#### Standard
+
+Standard style consists of a Label, that can indicate whether the value is required or not, as well as the Listbox component itself. This example makes use of the `<FormGroup />` which comes with customized values like `label`, `required` and `labelFor` out of the box.<br/><br/>
+
+<SelectStandardExample />
+
+```jsx highlight=22-26,62
+import React, { Fragment, useState } from "react";
+import { Listbox } from "@headlessui/react";
+import { FormGroup } from "@exponentialeducation/betomic/src";
+import { CheckIcon, CaretDownIcon } from "@exponentialeducation/iconography";
+import cn from "classnames";
+
+function IndexPage() {
+
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const items = [
+    { id: 1, name: "Item 1", unavailable: false },
+    { id: 2, name: "Item 2", unavailable: false },
+    { id: 3, name: "Item 3", unavailable: false },
+    { id: 4, name: "Item 4", unavailable: true },
+  ];
+
+  return (
+    <main>
+      {/* ... */}
+
+      <FormGroup
+        label="Label"
+        labelFor="select-standard"
+        required
+      >
+        <Listbox value={selectedItem} onChange={setSelectedItem}>
+          {({ open }) => (
+            <div className="relative">
+              <Listbox.Button
+                id="select-standard"
+                className={cn(
+                  "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2",
+                  "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent",
+                  "h-10 hover:border-surface-200 focus:outline-none focus:border focus:border-primary-500",
+                  "focus:ring-2 focus:ring-primary-200", {
+                  ["bg-surface-100"]: !selectedItem,
+                  ["bg-white border-surface-200"]: selectedItem,
+                  ["border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open
+                }
+                )}
+              >
+                <span className="block truncate">
+                  {selectedItem ? selectedItem.name : "Seleccionar"}
+                </span>
+                <span className="w-5">
+                  <CaretDownIcon className="w-5 h-5" />
+                </span>
+              </Listbox.Button>
+              <Listbox.Options className="ml-0 absolute w-full mt-1 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
+                {items.map((item) => (
+                  /* Use the `active` state to conditionally style the active option. */
+                  /* Use the `selected` state to conditionally style the selected option. */
+                  <Listbox.Option key={item.id} value={item} as={Fragment}>
+                    {/* ... */}
+                  </Listbox.Option>
+                ))}
+              </Listbox.Options>
+            </div>
+          )}
+        </Listbox>
+      </FormGroup>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+**NOTE:** Currently, using the a label with the `<FormGroup />` component doesn't not support label and select button binding, which means, clicking on the label won't trigger the Listbox focusing.<br/><br/>
+The next example uses the Headless UI approach to achieve this behaviour.
+
+#### Standard with `Listbox.Label`
+
+The `<Listbox />` component provides a `<Listbox.Label />` which allows the user to display and customize a label that will be bounded to the Listbox button itself. This means, clicking on the label will focus the Listbox button, as opposed to the previous example approach.<br/>
+
+According to Headless UI, a `Listbox.Label` can be used for more control over the text that the Listbox will announce to screenreaders. Its `id` attribute will be automatically generated and linked to the root Listbox component via the aria-labelledby attribute.<br/><br/>
+
+<SelectStandardLabelExample />
+
+```jsx highlight=19-30
+import React, { Fragment, useState } from "react";
+import { Listbox } from "@headlessui/react";
+import { CaretDownIcon } from "@exponentialeducation/iconography";
+import cn from "classnames";
+
+function IndexPage() {
+
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const items = [];
+
+  return (
+    <main>
+      {/* ... */}
+
+      <Listbox value={selectedItem} onChange={setSelectedItem}>
+        {({ open }) => (
+          <div className="relative">
+            <Listbox.Label
+              className="font-normal font-rubik text-base text-surface-600 mb-1 leading-7"
+            >
+              Label
+              <span
+                className={cn("pl-1  font-normal", {
+                  ["text-error-300"]: true
+                })}
+              >
+                *
+              </span>
+            </Listbox.Label>
+            <Listbox.Button
+              className={cn(
+                "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2",
+                "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent",
+                "h-10 hover:border-surface-200 focus:outline-none focus:border focus:border-primary-500",
+                "focus:ring-2 focus:ring-primary-200", {
+                ["bg-surface-100"]: !selectedItem,
+                ["bg-white border-surface-200"]: selectedItem,
+                ["border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open
+              }
+              )}
+            >
+              <span className="block truncate">
+                {selectedItem ? selectedItem.name : "Seleccionar"}
+              </span>
+              <span className="w-5">
+                <CaretDownIcon className="w-5 h-5" />
+              </span>
+            </Listbox.Button>
+            <Listbox.Options className="ml-0 absolute w-full mt-1 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
+              {items.map((item) => (
+                /* Use the `active` state to conditionally style the active option. */
+                /* Use the `selected` state to conditionally style the selected option. */
+                <Listbox.Option key={item.id} value={item} as={Fragment}>
+                  {/* ... */}
+                </Listbox.Option>
+              ))}
+            </Listbox.Options>
+          </div>
+        )}
+      </Listbox>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+#### Lead icon
+
+The lead icon style takes into account the previous example (Standard with Listbox label) to customize it, and add a left icon indicator. `Listbox.Label` gives the user full control over its customization.<br/><br/>
+
+<SelectLeadIconExample />
+
+```jsx highlight=19-33
+import React, { Fragment, useState } from "react";
+import { Listbox } from "@headlessui/react";
+import { Calendar, CaretDownIcon } from "@exponentialeducation/iconography";
+import cn from "classnames";
+
+function IndexPage() {
+
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const items = [];
+
+  return (
+    <main>
+      {/* ... */}
+
+      <Listbox value={selectedItem} onChange={setSelectedItem}>
+        {({ open }) => (
+          <div className="relative">
+            <Listbox.Label
+              className="flex items-center font-normal font-rubik text-base text-surface-600 mb-1 leading-7"
+            >
+              <CalendarIcon className="text-primary-500 w-5 h-5 mr-1" />
+              <span>
+                Label
+              </span>
+              <span
+                className={cn("pl-1  font-normal", {
+                  ["text-error-300"]: true
+                })}
+              >
+                *
+              </span>
+            </Listbox.Label>
+            <Listbox.Button
+              className={cn(
+                "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2",
+                "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent",
+                "h-10 hover:border-surface-200 focus:outline-none focus:border focus:border-primary-500",
+                "focus:ring-2 focus:ring-primary-200", {
+                ["bg-surface-100"]: !selectedItem,
+                ["bg-white border-surface-200"]: selectedItem,
+                ["border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open
+              }
+              )}
+            >
+              <span className="block truncate">
+                {selectedItem ? selectedItem.name : "Seleccionar"}
+              </span>
+              <span className="w-5">
+                <CaretDownIcon className="w-5 h-5" />
+              </span>
+            </Listbox.Button>
+            <Listbox.Options className="ml-0 absolute w-full mt-1 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
+              {items.map((item) => (
+                /* Use the `active` state to conditionally style the active option. */
+                /* Use the `selected` state to conditionally style the selected option. */
+                <Listbox.Option key={item.id} value={item} as={Fragment}>
+                  {/* ... */}
+                </Listbox.Option>
+              ))}
+            </Listbox.Options>
+          </div>
+        )}
+      </Listbox>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+#### Helper icon
+
+Again, the `<FormGroup />` component wrapper already provides a set of props to customize what is around the children component, meaning, the Listbox (Select) component. So, using the `rightElement` prop, allows the user to define a custom icon to show as a helper for the label or Listbox itself.<br/><br/>
+
+<SelectHelperIconExample />
+
+```jsx highlight=21-23
+import React, { Fragment, useState } from "react";
+import { Listbox } from "@headlessui/react";
+import { FormGroup } from "@exponentialeducation/betomic/src";
+import { CaretDownIcon, HelperIcon } from "@exponentialeducation/iconography";
+import cn from "classnames";
+
+function IndexPage() {
+
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const items = [];
+
+  return (
+    <main>
+      {/* ... */}
+
+      <FormGroup
+        label="Label"
+        labelFor="select-standard"
+        required
+        rightElement={
+          <HelperIcon />
+        }
+      >
+        <Listbox value={selectedItem} onChange={setSelectedItem}>
+          {({ open }) => (
+            <div className="relative">
+              <Listbox.Button>
+                <span>
+                  {selectedItem ? selectedItem.name : "Seleccionar"}
+                </span>
+                <span className="w-5">
+                  <CaretDownIcon />
+                </span>
+              </Listbox.Button>
+              <Listbox.Options>
+                {items.map((item) => (
+                  <Listbox.Option key={item.id} value={item} as={Fragment}>
+                    {/* ... */}
+                  </Listbox.Option>
+                ))}
+              </Listbox.Options>
+            </div>
+          )}
+        </Listbox>
+      </FormGroup>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+#### Invalid
+
+Different logic and custom validations methods can be used to determine whether the selected value from the Listbox is valid or not, as well as validating if an item from the list was even selected. As in some previous examples, `<FormGroup />`component is handy in order to use its `<FormGroup.Message />` to indicate the result of that validation.<br/><br/>
+
+<SelectInvalidExample />
+
+```jsx highlight=10,38,59
+import React, { Fragment, useState } from "react";
+import { Listbox } from "@headlessui/react";
+import { FormGroup } from "@exponentialeducation/betomic/src";
+import { CaretDownIcon, HelperIcon } from "@exponentialeducation/iconography";
+import cn from "classnames";
+
+function IndexPage() {
+
+  const [selectedItem, setSelectedItem] = useState(null);
+  const isValid = false;
+
+  const items = [];
+
+  return (
+    <main>
+      {/* ... */}
+
+      <FormGroup
+        label="Label"
+        labelFor="select-standard"
+        required
+        rightElement={
+          <HelperIcon />
+        }
+      >
+        <Listbox value={selectedItem} onChange={setSelectedItem}>
+          {({ open }) => (
+            <div className="relative">
+              <Listbox.Button
+                className={cn(
+                    "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2",
+                    "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent",
+                    "h-10 hover:border-surface-200 focus:outline-none focus:border focus:border-primary-500",
+                    "focus:ring-2 focus:ring-primary-200", {
+                    ["bg-surface-100"]: !selectedItem,
+                    ["bg-white border-surface-200"]: selectedItem,
+                    ["border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open,
+                    ["bg-white border-error-400 hover:border-error-400"]: !isValid
+                  }
+                )}
+              >
+                <span>
+                  {selectedItem ? selectedItem.name : "Seleccionar"}
+                </span>
+                <span>
+                  <CaretDownIcon />
+                </span>
+              </Listbox.Button>
+              <Listbox.Options>
+                {items.map((item) => (
+                  <Listbox.Option key={item.id} value={item} as={Fragment}>
+                    {/* ... */}
+                  </Listbox.Option>
+                  ))}
+              </Listbox.Options>
+            </div>
+          )}
+        </Listbox>
+        <FormGroup.Message type="error" message="Este campo es requerido" />
+      </FormGroup>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+#### Disabled
+
+The `<Listbox />` component comes with a `disabled` prop that can be used to not allow user interaction with it. In addition, adding logic and validation methods to determine if the component should be rendered as disabled allows the user to define styles according to this state.<br/><br/>
+
+<SelectDisabledExample />
+
+```jsx highlight=16,18-22,28,34,35,45,57
+import React, { Fragment, useState } from "react";
+import { Listbox } from "@headlessui/react";
+import { Calendar, CheckIcon, CaretDownIcon } from "@exponentialeducation/iconography";
+import cn from "classnames";
+
+function IndexPage() {
+
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const items = [];
+
+  return (
+    <main>
+      {/* ... */}
+
+      <Listbox value={selectedItem} onChange={setSelectedItem} disabled={disabled}>
+        {({ open }) => (
+          <div
+            className={cn(
+              "relative",
+              { ["cursor-not-allowed"]: disabled }
+            )}
+          >
+            <Listbox.Label
+              className={cn(
+                "flex items-center font-normal font-rubik text-base",
+                "text-surface-300 mb-1 leading-7",
+                { ["text-surface-300"]: disabled }
+              )}
+            >
+              <CalendarIcon
+                className={cn(
+                  "w-5 h-5 mr-1", {
+                    ["text-primary-500"]: !disabled,
+                    ["text-surface-300"]: disabled
+                  }
+                )}
+              />
+              <span>
+                Label
+              </span>
+              <span
+                className={cn("pl-1  font-normal", {
+                  ["text-error-300"]: false,
+                  ["text-surface-300"]: disabled
+                })}
+              >
+                *
+              </span>
+            </Listbox.Label>
+            <Listbox.Button
+              className={cn(
+                "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2",
+                "font-rubik text-base  leading-6 rounded border-2 border-transparent",
+                "h-10  focus:outline-none focus:border", {
+                  ["text-surface-600 hover:border-surface-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200"]: !disabled,
+                  ["text-surface-300 bg-surface-100 cursor-not-allowed"]: disabled
+                }
+              )}
+            >
+              <span>
+                {selectedItem ? selectedItem.name : "Seleccionar"}
+              </span>
+              <span>
+                <CaretDownIcon />
+              </span>
+            </Listbox.Button>
+            <Listbox.Options>
+              {items.map((item) => (
+                <Listbox.Option key={item.id} value={item} as={Fragment}>
+                  {/* ... */}
+                </Listbox.Option>
+              ))}
+            </Listbox.Options>
+          </div>
+        )}
+      </Listbox>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+To customize and learn about the Listbox (Select) component see the [Headless UI documentation](https://headlessui.dev/).
