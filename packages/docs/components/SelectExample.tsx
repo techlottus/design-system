@@ -64,7 +64,7 @@ const SelectCustomExample = () => {
                   <CaretDownIcon className="w-5 h-5" />
                 </span>
               </Listbox.Button>
-              <Listbox.Options className="ml-0 absolute w-full mt-1 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
+              <Listbox.Options className="ml-0 absolute w-full mt-4 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
                 {items.map((item) => (
                   /* Use the `active` state to conditionally style the active option. */
                   /* Use the `selected` state to conditionally style the selected option. */
@@ -138,7 +138,7 @@ const SelectStandardExample = () => {
                     <CaretDownIcon className="w-5 h-5" />
                   </span>
                 </Listbox.Button>
-                <Listbox.Options className="ml-0 absolute w-full mt-1 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
+                <Listbox.Options className="ml-0 absolute w-full mt-4 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
                   {items.map((item) => (
                     /* Use the `active` state to conditionally style the active option. */
                     /* Use the `selected` state to conditionally style the selected option. */
@@ -218,7 +218,7 @@ const SelectStandardLabelExample = () => {
                   <CaretDownIcon className="w-5 h-5" />
                 </span>
               </Listbox.Button>
-              <Listbox.Options className="ml-0 absolute w-full mt-1 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
+              <Listbox.Options className="ml-0 absolute w-full mt-4 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
                 {items.map((item) => (
                   /* Use the `active` state to conditionally style the active option. */
                   /* Use the `selected` state to conditionally style the selected option. */
@@ -300,7 +300,7 @@ const SelectLeadIconExample = () => {
                   <CaretDownIcon className="w-5 h-5" />
                 </span>
               </Listbox.Button>
-              <Listbox.Options className="ml-0 absolute w-full mt-1 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
+              <Listbox.Options className="ml-0 absolute w-full mt-4 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
                 {items.map((item) => (
                   /* Use the `active` state to conditionally style the active option. */
                   /* Use the `selected` state to conditionally style the selected option. */
@@ -375,7 +375,7 @@ const SelectHelperIconExample = () => {
                     <CaretDownIcon className="w-5 h-5" />
                   </span>
                 </Listbox.Button>
-                <Listbox.Options className="ml-0 absolute w-full mt-1 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
+                <Listbox.Options className="ml-0 absolute w-full mt-4 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
                   {items.map((item) => (
                     /* Use the `active` state to conditionally style the active option. */
                     /* Use the `selected` state to conditionally style the selected option. */
@@ -453,7 +453,7 @@ const SelectInvalidExample = () => {
                     <CaretDownIcon className="w-5 h-5" />
                   </span>
                 </Listbox.Button>
-                <Listbox.Options className="ml-0 absolute w-full mt-1 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
+                <Listbox.Options className="ml-0 absolute w-full mt-4 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
                   {items.map((item) => (
                     /* Use the `active` state to conditionally style the active option. */
                     /* Use the `selected` state to conditionally style the selected option. */
@@ -553,7 +553,7 @@ const SelectDisabledExample = () => {
                   <CaretDownIcon className="w-5 h-5" />
                 </span>
               </Listbox.Button>
-              <Listbox.Options className="ml-0 absolute w-full mt-1 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
+              <Listbox.Options className="ml-0 absolute w-full mt-4 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
                 {items.map((item) => (
                   /* Use the `active` state to conditionally style the active option. */
                   /* Use the `selected` state to conditionally style the selected option. */
