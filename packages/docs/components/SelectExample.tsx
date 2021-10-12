@@ -49,11 +49,11 @@ const SelectCustomExample = () => {
                 className={cn(
                   "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2",
                   "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent",
-                  "h-10 hover:border-surface-200 focus:outline-none focus:border focus:border-primary-500",
+                  "h-10 hover:border-surface-200 focus:bg-white focus:outline-none focus:border focus:border-primary-500",
                   "focus:ring-2 focus:ring-primary-200", {
                   ["bg-surface-100"]: !selectedItem,
                   ["bg-white border-surface-200"]: selectedItem,
-                  ["border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open
+                  ["bg-white border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open
                 }
                 )}
               >
@@ -123,11 +123,11 @@ const SelectStandardExample = () => {
                   className={cn(
                     "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2",
                     "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent",
-                    "h-10 hover:border-surface-200 focus:outline-none focus:border focus:border-primary-500",
+                    "h-10 hover:border-surface-200 focus:bg-white focus:outline-none focus:border focus:border-primary-500",
                     "focus:ring-2 focus:ring-primary-200", {
                     ["bg-surface-100"]: !selectedItem,
                     ["bg-white border-surface-200"]: selectedItem,
-                    ["border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open
+                    ["bg-white border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open
                   }
                   )}
                 >
@@ -203,11 +203,11 @@ const SelectStandardLabelExample = () => {
                 className={cn(
                   "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2",
                   "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent",
-                  "h-10 hover:border-surface-200 focus:outline-none focus:border focus:border-primary-500",
+                  "h-10 hover:border-surface-200 focus:bg-white focus:outline-none focus:border focus:border-primary-500",
                   "focus:ring-2 focus:ring-primary-200", {
                   ["bg-surface-100"]: !selectedItem,
                   ["bg-white border-surface-200"]: selectedItem,
-                  ["border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open
+                  ["bg-white border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open
                 }
                 )}
               >
@@ -285,11 +285,11 @@ const SelectLeadIconExample = () => {
                 className={cn(
                   "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2",
                   "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent",
-                  "h-10 hover:border-surface-200 focus:outline-none focus:border focus:border-primary-500",
+                  "h-10 hover:border-surface-200 focus:bg-white focus:outline-none focus:border focus:border-primary-500",
                   "focus:ring-2 focus:ring-primary-200", {
                   ["bg-surface-100"]: !selectedItem,
                   ["bg-white border-surface-200"]: selectedItem,
-                  ["border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open
+                  ["bg-white border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open
                 }
                 )}
               >
@@ -360,11 +360,11 @@ const SelectHelperIconExample = () => {
                   className={cn(
                     "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2",
                     "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent",
-                    "h-10 hover:border-surface-200 focus:outline-none focus:border focus:border-primary-500",
+                    "h-10 hover:border-surface-200 focus:bg-white focus:outline-none focus:border focus:border-primary-500",
                     "focus:ring-2 focus:ring-primary-200", {
                     ["bg-surface-100"]: !selectedItem,
                     ["bg-white border-surface-200"]: selectedItem,
-                    ["border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open
+                    ["bg-white border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open
                   }
                   )}
                 >
@@ -437,11 +437,11 @@ const SelectInvalidExample = () => {
                   className={cn(
                     "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2",
                     "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent",
-                    "h-10 hover:border-surface-200 focus:outline-none focus:border focus:border-primary-500",
+                    "h-10 hover:border-surface-200 focus:bg-white focus:outline-none focus:border focus:border-primary-500",
                     "focus:ring-2 focus:ring-primary-200", {
                     ["bg-surface-100"]: !selectedItem,
                     ["bg-white border-surface-200"]: selectedItem,
-                    ["border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open,
+                    ["bg-white border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open,
                     ["bg-white border-error-400 hover:border-error-400"]: !isValid
                   }
                   )}
