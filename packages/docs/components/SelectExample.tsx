@@ -74,7 +74,7 @@ const SelectCustomExample = () => {
                         className={cn(
                           "flex justify-between items-center p-4 m-0 h-12",
                           "font-rubik text-base text-surface-600 leading-6",
-                          "rounded cursor-default select-none", {
+                          "rounded cursor-pointer select-none", {
                           ["bg-surface-50"]: active,
                           ["font-bold text-primary-500"]: selected
                         }
@@ -148,7 +148,7 @@ const SelectStandardExample = () => {
                           className={cn(
                             "flex justify-between items-center p-4 m-0 h-12",
                             "font-rubik text-base text-surface-600 leading-6",
-                            "rounded cursor-default select-none", {
+                            "rounded cursor-pointer select-none", {
                             ["bg-surface-50"]: active,
                             ["font-bold text-primary-500"]: selected
                           }
@@ -228,7 +228,7 @@ const SelectStandardLabelExample = () => {
                         className={cn(
                           "flex justify-between items-center p-4 m-0 h-12",
                           "font-rubik text-base text-surface-600 leading-6",
-                          "rounded cursor-default select-none", {
+                          "rounded cursor-pointer select-none", {
                           ["bg-surface-50"]: active,
                           ["font-bold text-primary-500"]: selected
                         }
@@ -310,7 +310,7 @@ const SelectLeadIconExample = () => {
                         className={cn(
                           "flex justify-between items-center p-4 m-0 h-12",
                           "font-rubik text-base text-surface-600 leading-6",
-                          "rounded cursor-default select-none", {
+                          "rounded cursor-pointer select-none", {
                           ["bg-surface-50"]: active,
                           ["font-bold text-primary-500"]: selected
                         }
@@ -385,7 +385,7 @@ const SelectHelperIconExample = () => {
                           className={cn(
                             "flex justify-between items-center p-4 m-0 h-12",
                             "font-rubik text-base text-surface-600 leading-6",
-                            "rounded cursor-default select-none", {
+                            "rounded cursor-pointer select-none", {
                             ["bg-surface-50"]: active,
                             ["font-bold text-primary-500"]: selected
                           }
@@ -463,7 +463,7 @@ const SelectInvalidExample = () => {
                           className={cn(
                             "flex justify-between items-center p-4 m-0 h-12",
                             "font-rubik text-base text-surface-600 leading-6",
-                            "rounded cursor-default select-none", {
+                            "rounded cursor-pointer select-none", {
                             ["bg-surface-50"]: active,
                             ["font-bold text-primary-500"]: selected
                           }
@@ -563,7 +563,7 @@ const SelectDisabledExample = () => {
                         className={cn(
                           "flex justify-between items-center p-4 m-0 h-12",
                           "font-rubik text-base text-surface-600 leading-6",
-                          "rounded cursor-default select-none", {
+                          "rounded cursor-pointer select-none", {
                           ["bg-surface-50"]: active,
                           ["font-bold text-primary-500"]: selected
                         }
