@@ -1,6 +1,10 @@
 import React, { MouseEvent, useEffect, useState } from "react";
 import cn from "classnames";
-import { ArrowLeftIcon, ArrowRightIcon } from "@exponentialeducation/iconography/icons";
+// @TODO
+// After `iconography` package will be published we need to enable it
+// add dependency to `package.json`.
+// 
+// import { ArrowLeftIcon, ArrowRightIcon } from "@exponentialeducation/iconography";
 import { Button } from "..";
 
 interface PaginationData {
@@ -147,7 +151,8 @@ const Pagination: React.FC<IPagination> = (props: IPagination) => {
             disabled={currentPage <= 1}
             onClick={() => gotoPage(currentPage - 1)}
           >
-            <ArrowLeftIcon className="w-5 h-5" />
+            {/* <ArrowLeftIcon className="w-5 h-5" /> */}
+            <svg className="w-5 h-5" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25.879 12.879a3 3 0 1 1 4.242 4.242L18.243 29H53a3 3 0 1 1 0 6H18.243L30.12 46.879a3 3 0 1 1-4.242 4.242l-17-17A2.99 2.99 0 0 1 8 32a2.99 2.99 0 0 1 .879-2.121l17-17Z" fill="currentColor"/></svg>
           </Button>
         </li>
         { pages.map((page, index) => {
@@ -188,7 +193,10 @@ const Pagination: React.FC<IPagination> = (props: IPagination) => {
             disabled={currentPage >= totalPages}
             onClick={() => gotoPage(currentPage + 1)}
           >
-            <ArrowRightIcon className="w-5 h-5" />
+            {/* <ArrowRightIcon className="w-5 h-5" /> */}
+            <svg className="w-5 h-5"  viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M38.1213 12.8787C36.9497 11.7071 35.0503 11.7071 33.8787 12.8787C32.7071 14.0503 32.7071 15.9497 33.8787 17.1213L45.7574 29H11C9.34315 29 8 30.3431 8 32C8 33.6569 9.34315 35 11 35H45.7574L33.8787 46.8787C32.7071 48.0502 32.7071 49.9497 33.8787 51.1213C35.0503 52.2929 36.9497 52.2929 38.1213 51.1213L55.1213 34.1213C55.7071 33.5355 56 32.7678 56 32C56 31.5932 55.919 31.2054 55.7724 30.8516C55.626 30.4978 55.409 30.1663 55.1213 29.8787L38.1213 12.8787Z" fill="currentColor"/>
+            </svg>
           </Button>
         </li>
       </ul>
