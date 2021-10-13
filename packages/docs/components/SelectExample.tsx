@@ -46,15 +46,11 @@ const SelectCustomExample = () => {
           {({ open }) => (
             <div className="relative">
               <Listbox.Button
+                id="select-standard"
                 className={cn(
-                  "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2",
-                  "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent",
-                  "h-10 hover:border-surface-200 focus:bg-white focus:outline-none focus:border focus:border-primary-500",
-                  "focus:ring-2 focus:ring-primary-200", {
-                  ["bg-surface-100"]: !selectedItem,
-                  ["bg-white border-surface-200"]: selectedItem,
-                  ["bg-white border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open
-                }
+                  "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2 ring-2 ring-transparent",
+                  "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent h-10",
+                  "hover:border-surface-200 focus:bg-white focus:outline-none focus:border-primary-500 focus:ring-primary-200"
                 )}
               >
                 <span className="block truncate">
@@ -64,7 +60,72 @@ const SelectCustomExample = () => {
                   <CaretDownIcon className="w-5 h-5" />
                 </span>
               </Listbox.Button>
-              <Listbox.Options className="ml-0 absolute w-full mt-4 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
+              <Listbox.Options className="ml-0 absolute w-full mt-1 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
+                {items.map((item) => (
+                  /* Use the `active` state to conditionally style the active option. */
+                  /* Use the `selected` state to conditionally style the selected option. */
+                  <Listbox.Option key={item.id} value={item} as={Fragment}>
+                    {({ active, selected }) => (
+                      <li
+                        className={cn(
+                          "flex justify-between items-center p-4 m-0 h-12",
+                          "font-rubik text-base text-surface-600 leading-6",
+                          "rounded cursor-pointer select-none", {
+                          ["bg-surface-50"]: active,
+                          ["font-bold text-primary-500"]: selected
+                        }
+                        )}
+                      >
+                        <span className="block truncate">
+                          {item.name}
+                        </span>
+                        {
+                          selected &&
+                          <span className="flex items-center w-4 pointer-events-none">
+                            <CheckIcon className="w-4 h-4" />
+                          </span>
+                        }
+                      </li>
+                    )}
+                  </Listbox.Option>
+                ))}
+              </Listbox.Options>
+            </div>
+          )}
+        </Listbox>
+      </div>
+    </div>
+  );
+}
+
+const SelectItemSelectedExample = () => {
+
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  return (
+    <div className="flex justify-center">
+      <div className="w-80">
+        <Listbox value={selectedItem} onChange={setSelectedItem}>
+          {({ open }) => (
+            <div className="relative">
+              <Listbox.Button
+                className={cn(
+                  "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2 ring-2 ring-transparent",
+                  "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent h-10",
+                  "hover:border-surface-200 focus:bg-white focus:outline-none focus:border-primary-500 focus:ring-primary-200", {
+                    ["bg-white border-surface-200"]: selectedItem,
+                    ["bg-surface-100"]: !selectedItem,
+                  }
+                )}
+              >
+                <span className="block truncate">
+                  {selectedItem ? selectedItem.name : "Seleccionar"}
+                </span>
+                <span className="w-5">
+                  <CaretDownIcon className="w-5 h-5" />
+                </span>
+              </Listbox.Button>
+              <Listbox.Options className="ml-0 absolute w-full mt-1 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
                 {items.map((item) => (
                   /* Use the `active` state to conditionally style the active option. */
                   /* Use the `selected` state to conditionally style the selected option. */
@@ -121,14 +182,9 @@ const SelectStandardExample = () => {
                 <Listbox.Button
                   id="select-standard"
                   className={cn(
-                    "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2",
-                    "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent",
-                    "h-10 hover:border-surface-200 focus:bg-white focus:outline-none focus:border focus:border-primary-500",
-                    "focus:ring-2 focus:ring-primary-200", {
-                    ["bg-surface-100"]: !selectedItem,
-                    ["bg-white border-surface-200"]: selectedItem,
-                    ["bg-white border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open
-                  }
+                    "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2 ring-2 ring-transparent",
+                    "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent h-10",
+                    "hover:border-surface-200 focus:bg-white focus:outline-none focus:border-primary-500 focus:ring-primary-200"
                   )}
                 >
                   <span className="block truncate">
@@ -138,7 +194,7 @@ const SelectStandardExample = () => {
                     <CaretDownIcon className="w-5 h-5" />
                   </span>
                 </Listbox.Button>
-                <Listbox.Options className="ml-0 absolute w-full mt-4 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
+                <Listbox.Options className="ml-0 absolute w-full mt-1 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
                   {items.map((item) => (
                     /* Use the `active` state to conditionally style the active option. */
                     /* Use the `selected` state to conditionally style the selected option. */
@@ -201,14 +257,9 @@ const SelectStandardLabelExample = () => {
               </Listbox.Label>
               <Listbox.Button
                 className={cn(
-                  "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2",
-                  "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent",
-                  "h-10 hover:border-surface-200 focus:bg-white focus:outline-none focus:border focus:border-primary-500",
-                  "focus:ring-2 focus:ring-primary-200", {
-                  ["bg-surface-100"]: !selectedItem,
-                  ["bg-white border-surface-200"]: selectedItem,
-                  ["bg-white border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open
-                }
+                  "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2 ring-2 ring-transparent",
+                  "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent h-10",
+                  "hover:border-surface-200 focus:bg-white focus:outline-none focus:border-primary-500 focus:ring-primary-200"
                 )}
               >
                 <span className="block truncate">
@@ -218,7 +269,7 @@ const SelectStandardLabelExample = () => {
                   <CaretDownIcon className="w-5 h-5" />
                 </span>
               </Listbox.Button>
-              <Listbox.Options className="ml-0 absolute w-full mt-4 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
+              <Listbox.Options className="ml-0 absolute w-full mt-1 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
                 {items.map((item) => (
                   /* Use the `active` state to conditionally style the active option. */
                   /* Use the `selected` state to conditionally style the selected option. */
@@ -283,14 +334,9 @@ const SelectLeadIconExample = () => {
               </Listbox.Label>
               <Listbox.Button
                 className={cn(
-                  "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2",
-                  "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent",
-                  "h-10 hover:border-surface-200 focus:bg-white focus:outline-none focus:border focus:border-primary-500",
-                  "focus:ring-2 focus:ring-primary-200", {
-                  ["bg-surface-100"]: !selectedItem,
-                  ["bg-white border-surface-200"]: selectedItem,
-                  ["bg-white border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open
-                }
+                  "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2 ring-2 ring-transparent",
+                  "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent h-10",
+                  "hover:border-surface-200 focus:bg-white focus:outline-none focus:border-primary-500 focus:ring-primary-200"
                 )}
               >
                 <span className="block truncate">
@@ -300,7 +346,7 @@ const SelectLeadIconExample = () => {
                   <CaretDownIcon className="w-5 h-5" />
                 </span>
               </Listbox.Button>
-              <Listbox.Options className="ml-0 absolute w-full mt-4 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
+              <Listbox.Options className="ml-0 absolute w-full mt-1 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
                 {items.map((item) => (
                   /* Use the `active` state to conditionally style the active option. */
                   /* Use the `selected` state to conditionally style the selected option. */
@@ -358,14 +404,9 @@ const SelectHelperIconExample = () => {
                 <Listbox.Button
                   id="select-standard"
                   className={cn(
-                    "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2",
-                    "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent",
-                    "h-10 hover:border-surface-200 focus:bg-white focus:outline-none focus:border focus:border-primary-500",
-                    "focus:ring-2 focus:ring-primary-200", {
-                    ["bg-surface-100"]: !selectedItem,
-                    ["bg-white border-surface-200"]: selectedItem,
-                    ["bg-white border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open
-                  }
+                    "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2 ring-2 ring-transparent",
+                    "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent h-10",
+                    "hover:border-surface-200 focus:bg-white focus:outline-none focus:border-primary-500 focus:ring-primary-200"
                   )}
                 >
                   <span className="block truncate">
@@ -375,7 +416,7 @@ const SelectHelperIconExample = () => {
                     <CaretDownIcon className="w-5 h-5" />
                   </span>
                 </Listbox.Button>
-                <Listbox.Options className="ml-0 absolute w-full mt-4 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
+                <Listbox.Options className="ml-0 absolute w-full mt-1 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
                   {items.map((item) => (
                     /* Use the `active` state to conditionally style the active option. */
                     /* Use the `selected` state to conditionally style the selected option. */
@@ -435,13 +476,9 @@ const SelectInvalidExample = () => {
                 <Listbox.Button
                   id="select-standard"
                   className={cn(
-                    "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2",
-                    "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent",
-                    "h-10 hover:border-surface-200 focus:bg-white focus:outline-none focus:border focus:border-primary-500",
-                    "focus:ring-2 focus:ring-primary-200", {
-                    ["bg-surface-100"]: !selectedItem,
-                    ["bg-white border-surface-200"]: selectedItem,
-                    ["bg-white border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open,
+                    "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2 ring-2 ring-transparent",
+                    "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent h-10",
+                    "hover:border-surface-200 focus:bg-white focus:outline-none", {
                     ["bg-white border-error-400 hover:border-error-400"]: !isValid
                   }
                   )}
@@ -453,7 +490,7 @@ const SelectInvalidExample = () => {
                     <CaretDownIcon className="w-5 h-5" />
                   </span>
                 </Listbox.Button>
-                <Listbox.Options className="ml-0 absolute w-full mt-4 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
+                <Listbox.Options className="ml-0 absolute w-full mt-1 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
                   {items.map((item) => (
                     /* Use the `active` state to conditionally style the active option. */
                     /* Use the `selected` state to conditionally style the selected option. */
@@ -519,9 +556,9 @@ const SelectDisabledExample = () => {
                 <CalendarIcon
                   className={cn(
                     "w-5 h-5 mr-1", {
-                      ["text-primary-500"]: !disabled,
-                      ["text-surface-300"]: disabled
-                    }
+                    ["text-primary-500"]: !disabled,
+                    ["text-surface-300"]: disabled
+                  }
                   )}
                 />
                 <span>
@@ -541,9 +578,9 @@ const SelectDisabledExample = () => {
                   "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2",
                   "font-rubik text-base  leading-6 rounded border-2 border-transparent",
                   "h-10  focus:outline-none focus:border", {
-                    ["text-surface-600 hover:border-surface-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200"]: !disabled,
-                    ["text-surface-300 bg-surface-100 cursor-not-allowed"]: disabled
-                  }
+                  ["text-surface-600 hover:border-surface-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200"]: !disabled,
+                  ["text-surface-300 bg-surface-100 cursor-not-allowed"]: disabled
+                }
                 )}
               >
                 <span className="block truncate">
@@ -553,7 +590,7 @@ const SelectDisabledExample = () => {
                   <CaretDownIcon className="w-5 h-5" />
                 </span>
               </Listbox.Button>
-              <Listbox.Options className="ml-0 absolute w-full mt-4 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
+              <Listbox.Options className="ml-0 absolute w-full mt-1 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
                 {items.map((item) => (
                   /* Use the `active` state to conditionally style the active option. */
                   /* Use the `selected` state to conditionally style the selected option. */
@@ -594,6 +631,7 @@ const SelectDisabledExample = () => {
 export {
   SelectBasicExample,
   SelectCustomExample,
+  SelectItemSelectedExample,
   SelectStandardExample,
   SelectStandardLabelExample,
   SelectLeadIconExample,
