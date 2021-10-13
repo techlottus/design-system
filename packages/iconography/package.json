@@ -1,6 +1,6 @@
 {
   "name": "@exponentialeducation/iconography",
-  "version": "0.1.0-beta.0",
+  "version": "0.1.0-canary.0",
   "description": "A set of SVG icons for UI development",
   "author": "Bedu Engineering <it@bedu.org>",
   "files": [
@@ -16,7 +16,7 @@
   },
   "scripts": {
     "prepublishOnly": "npm run build",
-    "build": "npm run build-icons && ts-node ./scripts/build.ts",
+    "compile": "npm run build-icons && ts-node ./scripts/build.ts",
     "build-icons": "rimraf ./optimized && cp -R ./src ./optimized && svgo -qr -f ./optimized"
   },
   "bugs": {

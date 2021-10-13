@@ -1,8 +1,8 @@
 import {
   PlusIcon,
   MinusIcon,
-  Plus1Icon,
-  Minus1Icon,
+  PlusCircleIcon,
+  MinusCircleIcon,
   TableIcon,
  } from "@exponentialeducation/iconography/icons/esm/index";
  
@@ -18,12 +18,12 @@ import {
          <span className="text-xs text-gray-600">MinusIcon</span>
        </div>
        <div className="flex flex-col items-center space-y-2">
-         <Plus1Icon className="w-8 h-8" />
-         <span className="text-xs text-gray-600">Plus1Icon</span>
+         <PlusCircleIcon className="w-8 h-8" />
+         <span className="text-xs text-gray-600">PlusCircleIcon</span>
        </div>
        <div className="flex flex-col items-center space-y-2">
-         <Minus1Icon className="w-8 h-8" />
-         <span className="text-xs text-gray-600">Minus1Icon</span>
+         <MinusCircleIcon className="w-8 h-8" />
+         <span className="text-xs text-gray-600">MinusCircleIcon</span>
        </div>
        <div className="flex flex-col items-center space-y-2">
          <TableIcon className="w-8 h-8" />
