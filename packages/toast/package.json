@@ -1,6 +1,6 @@
 {
   "name": "@exponentialeducation/toast",
-  "version": "0.1.0-beta.0",
+  "version": "0.1.0-canary.0",
   "description": "A React Toast component",
   "author": "Bedu Engineering <it@bedu.org>",
   "main": "lib/cjs/index.js",
