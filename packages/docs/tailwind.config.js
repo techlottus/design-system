@@ -135,9 +135,7 @@ module.exports = {
     },
   },
   variants: {
-    extend: {
-      borderWidth: ['focus'],
-    },
+    extend: {},
   },
   plugins: [
     require("./plugins/fonts"),
