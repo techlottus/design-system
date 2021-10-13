@@ -1,6 +1,7 @@
 import {
   SelectBasicExample,
   SelectCustomExample,
+  SelectItemSelectedExample,
   SelectStandardExample,
   SelectStandardLabelExample,
   SelectLeadIconExample,
@@ -79,7 +80,94 @@ The previous code snippet describes the simplets way of using the `<Listbox />` 
 
 <SelectCustomExample />
 
-```jsx highlight=24-43,49-68
+This example also makes use of the value of `selectedItem` to style the `Listbox.Button`, and give a hint to the user that an item from the list was already selected.<br/>
+
+```jsx highlight=24-39,45-64
+import React, { Fragment, useState } from "react";
+import { Listbox } from "@headlessui/react";
+import { CheckIcon, CaretDownIcon } from "@exponentialeducation/iconography";
+import cn from "classnames";
+
+function IndexPage() {
+
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const items = [
+    { id: 1, name: "Item 1", unavailable: false },
+    { id: 2, name: "Item 2", unavailable: false },
+    { id: 3, name: "Item 3", unavailable: false },
+    { id: 4, name: "Item 4", unavailable: true },
+  ];
+
+  return (
+    <main>
+      {/* ... */}
+
+      <Listbox value={selectedItem} onChange={setSelectedItem}>
+        {({ open }) => (
+          <div className="relative">
+            <Listbox.Button
+              id="select-standard"
+              className={cn(
+                "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2 ring-2 ring-transparent",
+                "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent h-10",
+                "hover:border-surface-200 focus:bg-white focus:outline-none focus:border-primary-500 focus:ring-primary-200"
+              )}
+            >
+              <span className="block truncate">
+                {selectedItem ? selectedItem.name : "Seleccionar"}
+              </span>
+              <span className="w-5">
+                <CaretDownIcon className="w-5 h-5" />
+              </span>
+            </Listbox.Button>
+            <Listbox.Options className="ml-0 absolute w-full mt-1 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
+              {items.map((item) => (
+                /* Use the `active` state to conditionally style the active option. */
+                /* Use the `selected` state to conditionally style the selected option. */
+                <Listbox.Option key={item.id} value={item} as={Fragment}>
+                  {({ active, selected }) => (
+                    <li
+                      className={cn(
+                        "flex justify-between items-center p-4 m-0 h-12",
+                        "font-rubik text-base text-surface-600 leading-6",
+                        "rounded cursor-pointer select-none", {
+                        ["bg-surface-50"]: active,
+                        ["font-bold text-primary-500"]: selected
+                      }
+                      )}
+                    >
+                      <span className="block truncate">
+                        {item.name}
+                      </span>
+                      {
+                        selected &&
+                        <span className="flex items-center w-4 pointer-events-none">
+                          <CheckIcon className="w-4 h-4" />
+                        </span>
+                      }
+                    </li>
+                  )}
+                </Listbox.Option>
+              ))}
+            </Listbox.Options>
+          </div>
+        )}
+      </Listbox>
+
+      {/* ... */}
+    </main>
+  )
+}
+```
+
+#### Selected item customization
+
+This example also makes use of the value of `selectedItem` to style the `Listbox.Button`, and give a hint to the user that an item from the list was already selected.<br/><br/>
+
+<SelectItemSelectedExample />
+
+```jsx highlight=24-41,47-66
 import React, { Fragment, useState } from "react";
 import { Listbox } from "@headlessui/react";
 import { CheckIcon, CaretDownIcon } from "@exponentialeducation/iconography";
@@ -105,13 +193,11 @@ function IndexPage() {
           <div className="relative">
             <Listbox.Button
               className={cn(
-                "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2",
-                "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent",
-                "h-10 hover:border-surface-200 focus:outline-none focus:border focus:border-primary-500",
-                "focus:ring-2 focus:ring-primary-200", {
-                  ["bg-surface-100"]: !selectedItem,
+                "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2 ring-2 ring-transparent",
+                "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent h-10",
+                "hover:border-surface-200 focus:bg-white focus:outline-none focus:border-primary-500 focus:ring-primary-200", {
                   ["bg-white border-surface-200"]: selectedItem,
-                  ["bg-white border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open
+                  ["bg-surface-100"]: !selectedItem,
                 }
               )}
             >
@@ -122,7 +208,7 @@ function IndexPage() {
                 <CaretDownIcon className="w-5 h-5" />
               </span>
             </Listbox.Button>
-            <Listbox.Options className="ml-0 absolute w-full mt-4 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
+            <Listbox.Options className="ml-0 absolute w-full mt-1 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
               {items.map((item) => (
                 /* Use the `active` state to conditionally style the active option. */
                 /* Use the `selected` state to conditionally style the selected option. */
@@ -172,7 +258,7 @@ Standard style consists of a Label, that can indicate whether the value is requi
 
 <SelectStandardExample />
 
-```jsx highlight=22-26,62
+```jsx highlight=22-26,57
 import React, { Fragment, useState } from "react";
 import { Listbox } from "@headlessui/react";
 import { FormGroup } from "@exponentialeducation/betomic/src";
@@ -205,14 +291,9 @@ function IndexPage() {
               <Listbox.Button
                 id="select-standard"
                 className={cn(
-                  "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2",
-                  "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent",
-                  "h-10 hover:border-surface-200 focus:outline-none focus:border focus:border-primary-500",
-                  "focus:ring-2 focus:ring-primary-200", {
-                  ["bg-surface-100"]: !selectedItem,
-                  ["bg-white border-surface-200"]: selectedItem,
-                  ["bg-white border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open
-                }
+                  "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2 ring-2 ring-transparent",
+                  "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent h-10",
+                  "hover:border-surface-200 focus:bg-white focus:outline-none focus:border-primary-500 focus:ring-primary-200"
                 )}
               >
                 <span className="block truncate">
@@ -222,7 +303,7 @@ function IndexPage() {
                   <CaretDownIcon className="w-5 h-5" />
                 </span>
               </Listbox.Button>
-              <Listbox.Options className="ml-0 absolute w-full mt-4 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
+              <Listbox.Options className="ml-0 absolute w-full mt-1 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
                 {items.map((item) => (
                   /* Use the `active` state to conditionally style the active option. */
                   /* Use the `selected` state to conditionally style the selected option. */
@@ -286,14 +367,9 @@ function IndexPage() {
             </Listbox.Label>
             <Listbox.Button
               className={cn(
-                "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2",
-                "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent",
-                "h-10 hover:border-surface-200 focus:outline-none focus:border focus:border-primary-500",
-                "focus:ring-2 focus:ring-primary-200", {
-                ["bg-surface-100"]: !selectedItem,
-                ["bg-white border-surface-200"]: selectedItem,
-                ["bg-white border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open
-              }
+                "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2 ring-2 ring-transparent",
+                "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent h-10",
+                "hover:border-surface-200 focus:bg-white focus:outline-none focus:border-primary-500 focus:ring-primary-200"
               )}
             >
               <span className="block truncate">
@@ -303,7 +379,7 @@ function IndexPage() {
                 <CaretDownIcon className="w-5 h-5" />
               </span>
             </Listbox.Button>
-            <Listbox.Options className="ml-0 absolute w-full mt-4 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
+            <Listbox.Options className="ml-0 absolute w-full mt-1 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
               {items.map((item) => (
                 /* Use the `active` state to conditionally style the active option. */
                 /* Use the `selected` state to conditionally style the selected option. */
@@ -364,14 +440,9 @@ function IndexPage() {
             </Listbox.Label>
             <Listbox.Button
               className={cn(
-                "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2",
-                "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent",
-                "h-10 hover:border-surface-200 focus:outline-none focus:border focus:border-primary-500",
-                "focus:ring-2 focus:ring-primary-200", {
-                ["bg-surface-100"]: !selectedItem,
-                ["bg-white border-surface-200"]: selectedItem,
-                ["bg-white border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open
-              }
+                "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2 ring-2 ring-transparent",
+                "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent h-10",
+                "hover:border-surface-200 focus:bg-white focus:outline-none focus:border-primary-500 focus:ring-primary-200"
               )}
             >
               <span className="block truncate">
@@ -381,7 +452,7 @@ function IndexPage() {
                 <CaretDownIcon className="w-5 h-5" />
               </span>
             </Listbox.Button>
-            <Listbox.Options className="ml-0 absolute w-full mt-4 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
+            <Listbox.Options className="ml-0 absolute w-full mt-1 overflow-auto text-base bg-white rounded shadow max-h-52 focus:outline-none">
               {items.map((item) => (
                 /* Use the `active` state to conditionally style the active option. */
                 /* Use the `selected` state to conditionally style the selected option. */
@@ -496,16 +567,13 @@ function IndexPage() {
           {({ open }) => (
             <div className="relative">
               <Listbox.Button
+                id="select-standard"
                 className={cn(
-                    "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2",
-                    "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent",
-                    "h-10 hover:border-surface-200 focus:outline-none focus:border focus:border-primary-500",
-                    "focus:ring-2 focus:ring-primary-200", {
-                    ["bg-surface-100"]: !selectedItem,
-                    ["bg-white border-surface-200"]: selectedItem,
-                    ["bg-white border border-primary-500 ring-2 ring-primary-200 hover:border-primary-500"]: open,
-                    ["bg-white border-error-400 hover:border-error-400"]: !isValid
-                  }
+                  "relative w-full flex justify-between items-center gap-3 bg-surface-100 px-3 py-2 ring-2 ring-transparent",
+                  "font-rubik text-base text-surface-600 leading-6 rounded border-2 border-transparent h-10",
+                  "hover:border-surface-200 focus:bg-white focus:outline-none", {
+                  ["bg-white border-error-400 hover:border-error-400"]: !isValid
+                }
                 )}
               >
                 <span>
