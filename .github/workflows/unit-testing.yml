@@ -15,5 +15,5 @@ jobs:
           node-version: '12.x'
       - name: Install dependencies
         run: yarn install
-      - run: yarn compile --if-present
+      - run: yarn compile
       - run: yarn test
