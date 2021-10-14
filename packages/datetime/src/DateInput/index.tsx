@@ -1,7 +1,6 @@
-import React from "react";
+import React, { InputHTMLAttributes } from "react";
 import DayPickerInput from "react-day-picker/DayPickerInput";
 import MomentLocaleUtils from "react-day-picker/moment";
-import { InputGroup } from "@exponentialeducation/betomic/src";
 import {
   NavbarElementProps,
   WeekdayElementProps,
@@ -27,6 +26,11 @@ interface IDateInput {
   placeholder?: string;
   showOutsideDays?: boolean;
   valid?: boolean;
+};
+
+interface IInput extends InputHTMLAttributes<HTMLInputElement> {
+  disabled?: boolean;
+  isValid?: boolean | null;
 };
 
 const DateInput: React.FC<IDateInput> = (props: IDateInput) => {
@@ -123,14 +127,55 @@ const DateInput: React.FC<IDateInput> = (props: IDateInput) => {
 };
 
 const DatePickerCustomInput = React.forwardRef(
-  (props, ref: React.Ref<HTMLInputElement>) =>
-    <InputGroup
-      rightElement={
-        <svg className="w-6 h-6" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clipRule="evenodd" d="M46 6a2 2 0 1 0-4 0v2H22V6a2 2 0 1 0-4 0v2h-6a4 4 0 0 0-4 4v40a4 4 0 0 0 4 4h40a4 4 0 0 0 4-4V12a4 4 0 0 0-4-4h-6V6Zm6 6h-6v2a2 2 0 1 1-4 0v-2H22v2a2 2 0 1 1-4 0v-2h-6v8h40v-8ZM12 24h40v28H12V24Zm9 8a2 2 0 0 1 2-2h7a2 2 0 0 1 1.562 3.248l-2.216 2.77a5.999 5.999 0 1 1-7.586 9.226 2 2 0 0 1 2.827-2.83A2 2 0 1 0 26 39a2 2 0 0 1-1.562-3.25l1.4-1.75H23a2 2 0 0 1-2-2Zm21 0a2 2 0 0 0-3.2-1.6l-4 3a2 2 0 1 0 2.4 3.2l.8-.6v9a2 2 0 0 0 4 0V32Z" fill="currentColor"/></svg>
+  (props: IInput, ref: React.Ref<HTMLInputElement>) => {
+    const {
+      disabled = false,
+      isValid = null,
+      ...restProps
+    } = props;
+
+    const inputClasses = cn(
+      "rounded p-3 h-10 w-full",
+      "font-rubik font-normal text-base text-surface-700 bg-surface-100 placeholder-surface-400",
+      "border-2 border-transparent focus:outline-none focus:bg-white",
+      "hover:border-surface-200 pr-10",
+      {
+        ["border-success-400 bg-white hover:border-success-400"]: (isValid !== null && isValid),
+        ["border-error-400 bg-white hover:border-error-400"]: (isValid !== null && !isValid),
+        ["focus:ring-primary-500 focus:ring-opacity-40 focus:ring-2 focus:border-primary-500"]: (isValid === null),
+        ["bg-surface-100 pointer-events-none"]: disabled
       }
-      ref={ref}
-      {...props}
-    />
+    );
+
+    const rightElement = () => {
+      const classesIcon = cn(
+        "right-element",
+        "absolute inset-y-0 flex items-center",
+        "right-0 pr-3",
+        {
+          ["text-error-400"]: (isValid !== null && !isValid),
+          ["text-success-400"]: (isValid !== null && isValid),
+        }
+      );
+      return (
+        <div className={classesIcon}>
+          <svg className="w-6 h-6" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clipRule="evenodd" d="M46 6a2 2 0 1 0-4 0v2H22V6a2 2 0 1 0-4 0v2h-6a4 4 0 0 0-4 4v40a4 4 0 0 0 4 4h40a4 4 0 0 0 4-4V12a4 4 0 0 0-4-4h-6V6Zm6 6h-6v2a2 2 0 1 1-4 0v-2H22v2a2 2 0 1 1-4 0v-2h-6v8h40v-8ZM12 24h40v28H12V24Zm9 8a2 2 0 0 1 2-2h7a2 2 0 0 1 1.562 3.248l-2.216 2.77a5.999 5.999 0 1 1-7.586 9.226 2 2 0 0 1 2.827-2.83A2 2 0 1 0 26 39a2 2 0 0 1-1.562-3.25l1.4-1.75H23a2 2 0 0 1-2-2Zm21 0a2 2 0 0 0-3.2-1.6l-4 3a2 2 0 1 0 2.4 3.2l.8-.6v9a2 2 0 0 0 4 0V32Z" fill="currentColor"/></svg>
+        </div>
+      );
+    };
+
+    return (
+      <div className="input-group relative">
+        <input
+          disabled={disabled}
+          className={inputClasses}
+          ref={ref}
+          type="text"
+          {...restProps} />
+        {rightElement()}
+      </div>
+    )
+  }
 )
 
 const Navbar = (props: NavbarElementProps) => {
