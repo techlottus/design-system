@@ -2,7 +2,19 @@
   "packages": [
     "packages/*"
   ],
-  "version": "independent",
+  "command": {
+    "version": {
+      "exact": true
+    },
+    "publish": {
+      "npmClient": "npm",
+      "allowBranch": [
+        "main",
+        "develop"
+      ],
+      "registry": "https://registry.npmjs.org/"
+    }
+  },
   "npmClient": "yarn",
   "useWorkspaces": true
 }
