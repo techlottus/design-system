@@ -34,6 +34,9 @@
   "peerDependencies": {
     "react": ">= 16"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "classnames": "^2.3.1",
     "moment": "^2.29.1",
