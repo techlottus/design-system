@@ -3,9 +3,6 @@
     "packages/*"
   ],
   "command": {
-    "version": {
-      "exact": true
-    },
     "publish": {
       "npmClient": "npm",
       "allowBranch": [
@@ -15,6 +12,7 @@
       "registry": "https://registry.npmjs.org/"
     }
   },
+  "version": "independent",
   "npmClient": "yarn",
   "useWorkspaces": true
 }
