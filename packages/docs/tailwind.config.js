@@ -25,6 +25,9 @@ const nextraTheme = {
     extend: {},
   },
   plugins: [
+    require("@exponentialeducation/betomic/src/tailwind/plugins/drawer"),
+    require("@exponentialeducation/betomic/src/tailwind/plugins/navigation"),
+    require("@exponentialeducation/betomic/src/tailwind/plugins/tooltip"),
     require("./plugins/fonts"),
     plugin(function({ addUtilities }) {
       const filterUtilities = {
