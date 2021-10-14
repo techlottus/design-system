@@ -3,8 +3,8 @@
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
+    "experimentalDecorators": false,
+    "importHelpers": false,
     "jsx": "preserve",
     "lib": [
       "dom",
