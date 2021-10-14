@@ -123,9 +123,4 @@ module.exports = {
       }
     }
   },
-  plugins: [
-    require("./plugins/tooltip"),
-    require("./plugins/navigation"),
-    require("./plugins/drawer"),
-  ]
 }

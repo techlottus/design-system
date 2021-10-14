@@ -1,6 +1,4 @@
-const plugin = require("tailwindcss/plugin");
-
-module.exports = plugin(function ({ addBase, theme }) {
+module.exports = function ({ theme, addBase }) {
   addBase({
     ".navigation-header": {
       "ul": {
@@ -49,7 +47,6 @@ module.exports = plugin(function ({ addBase, theme }) {
         }
       }
     },
-
     ".navigation-header.dark": {
       backgroundColor: theme("colors.surface.800"),
       "ul": {
@@ -79,4 +76,4 @@ module.exports = plugin(function ({ addBase, theme }) {
       }
     },
   })
-});
+};
