@@ -1,4 +1,6 @@
-module.exports = function ({ theme, addBase }) {
+import plugin from "tailwindcss/plugin";
+
+export default plugin(({ theme, addBase }) => {
   addBase({
     ".navigation-header": {
       "ul": {
@@ -45,35 +47,35 @@ module.exports = function ({ theme, addBase }) {
             }
           }
         }
-      }
-    },
-    ".navigation-header.dark": {
-      backgroundColor: theme("colors.surface.800"),
-      "ul": {
-        "li": {
-          "a, button": {
-            color: theme("colors.white.DEFAULT"),
-            "&.active": {
-              color: theme("colors.primary.500"),
-              "&::after": {
-                backgroundColor: theme("colors.primary.500"),
-              },
-              "&:hover": {
+      },
+      "&.dark": {
+        backgroundColor: theme("colors.surface.800"),
+        "ul": {
+          "li": {
+            "a, button": {
+              color: theme("colors.white"),
+              "&.active": {
                 color: theme("colors.primary.500"),
                 "&::after": {
-                  backgroundColor: theme("colors.primary.500")
-                }
+                  backgroundColor: theme("colors.primary.500"),
+                },
+                "&:hover": {
+                  color: theme("colors.primary.500"),
+                  "&::after": {
+                    backgroundColor: theme("colors.primary.500")
+                  }
+                },
               },
-            },
-            "&:hover": {
-              color: theme("colors.white.DEFAULT"),
-              "&::after": {
-                backgroundColor: theme("colors.surface.500")
+              "&:hover": {
+                color: theme("colors.white"),
+                "&::after": {
+                  backgroundColor: theme("colors.surface.500")
+                }
               }
             }
           }
         }
       }
     },
-  })
-};
+  });
+});

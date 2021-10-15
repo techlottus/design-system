@@ -2,7 +2,7 @@ const plugin = require("tailwindcss/plugin");
 
 const nextraTheme = {
   presets: [
-    require("@exponentialeducation/betomic/src/tailwind/base"),
+    require("@exponentialeducation/tailwind-base/lib/tailwind-base").default,
   ],
   purge: {
     content: [
@@ -25,9 +25,6 @@ const nextraTheme = {
     extend: {},
   },
   plugins: [
-    require("@exponentialeducation/betomic/src/tailwind/plugins/drawer"),
-    require("@exponentialeducation/betomic/src/tailwind/plugins/navigation"),
-    require("@exponentialeducation/betomic/src/tailwind/plugins/tooltip"),
     require("./plugins/fonts"),
     plugin(function({ addUtilities }) {
       const filterUtilities = {

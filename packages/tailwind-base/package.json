@@ -1,0 +1,49 @@
+{
+  "name": "@exponentialeducation/tailwind-base",
+  "version": "0.1.0-canary.0",
+  "description": "A set of overrides and extensions for TailwindCSS based on Bedu's Design System",
+  "main": "lib/tailwind-base.js",
+  "module": "lib/esm/tailwind-base.js",
+  "esnext": "lib/esnext/tailwind-base.js",
+  "types": "lib/tailwind-base.d.ts",
+  "scripts": {
+    "clean": "rm -rf lib/*",
+    "compile": "npm run clean && npm run compile:esm && npm run compile:cjs && npm run compile:esnext",
+    "compile:esm": "tsc -p ./src --outDir lib/esm",
+    "compile:cjs": "tsc -p ./src -m commonjs --outDir lib/",
+    "compile:esnext": "tsc -p ./src -t esnext --outDir lib/esnext"
+  },
+  "keywords": [
+    "tailwind"
+  ],
+  "author": "Bedu Engineering <it@bedu.org>",
+  "homepage": "https://github.com/bedu-hq/betomic#readme",
+  "license": "UNLICENSED",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib/"
+  ],
+  "dependencies": {
+    "tailwindcss": "^2.2.17"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "typescript": "^4.4.4"
+  },
+  "peerDependencies": {
+    "tailwindcss": ">=2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bedu-hq/betomic.git",
+    "directory": "packages/tailwind-base"
+  },
+  "bugs": {
+    "url": "https://github.com/bedu-hq/betomic/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

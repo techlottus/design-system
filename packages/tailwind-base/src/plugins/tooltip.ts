@@ -1,4 +1,6 @@
-module.exports = function ({ addBase, theme }) {
+import plugin from "tailwindcss/plugin";
+
+export default plugin(({ theme, addBase }) => {
   addBase({
     ".tooltip": {
       "&:after": {
@@ -107,4 +109,4 @@ module.exports = function ({ addBase, theme }) {
       },
     }
   });
-};
+});
