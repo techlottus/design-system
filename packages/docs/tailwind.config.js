@@ -2,7 +2,7 @@ const plugin = require('tailwindcss/plugin');
 
 const nextraTheme = {
   presets: [
-    require('@exponentialeducation/tailwind-base').default,
+    require('@exponentialeducation/tailwind-base/lib/tailwind-base').default,
   ],
   purge: {
     content: [
