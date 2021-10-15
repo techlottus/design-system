@@ -9,6 +9,16 @@ export default {
     "./layouts/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    boxShadow: {
+      sm: "0px 2px 8px rgba(15, 21, 25, 0.12)",
+      DEFAULT: "0px 4px 12px rgba(15, 21, 25, 0.12)",
+      md: "0px 8px 16px rgba(15, 21, 25, 0.12)",
+      lg: "0px 12px 24px 4px rgba(15, 21, 25, 0.12)",
+      xl: "0px 16px 28px 8px rgba(15, 21, 25, 0.12)",
+      '2xl': "0px 24px 32px 12px rgba(15, 21, 25, 0.12)",
+      inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+      none: 'none',
+    },
     colors: {
       transparent: "transparent",
       current: "currentColor",
