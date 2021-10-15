@@ -7,12 +7,13 @@
   "scripts": {
     "bootstrap": "lerna bootstrap --use-workspaces",
     "clean": "lerna run --parallel clean",
+    "compile:tailwind-base": "lerna run compile --scope @exponentialeducation/tailwind-base",
     "compile:betomic": "lerna run compile --scope @exponentialeducation/betomic",
     "compile:tooltip": "lerna run compile --scope @exponentialeducation/tooltip",
     "compile:datetime": "lerna run compile --scope @exponentialeducation/datetime",
     "compile:toast": "lerna run compile --scope @exponentialeducation/toast",
     "build:icons": "lerna run compile --scope @exponentialeducation/iconography",
-    "docs:dev": "yarn build:icons && lerna run dev --scope @exponentialeducation/docs",
+    "docs:dev": "yarn compile:tailwind-base && yarn build:icons && lerna run dev --scope @exponentialeducation/docs",
     "docs:build": "yarn build:icons && lerna run build --scope @exponentialeducation/docs",
     "compile": "lerna run --parallel compile",
     "test": "lerna run --parallel test"
