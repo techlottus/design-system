@@ -8,6 +8,7 @@
   "types": "lib/tailwind-base.d.ts",
   "scripts": {
     "clean": "rm -rf lib/*",
+    "prepublishOnly": "npm run compile",
     "compile": "npm run clean && npm run compile:esm && npm run compile:cjs && npm run compile:esnext",
     "compile:esm": "tsc -p ./src --outDir lib/esm",
     "compile:cjs": "tsc -p ./src -m commonjs --outDir lib/",
