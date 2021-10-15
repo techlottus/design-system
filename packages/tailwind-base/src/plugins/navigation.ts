@@ -54,7 +54,7 @@ export default plugin(({ theme, addBase }) => {
       "ul": {
         "li": {
           "a, button": {
-            color: theme("colors.white.DEFAULT"),
+            color: theme("colors.white"),
             "&.active": {
               color: theme("colors.primary.500"),
               "&::after": {
@@ -68,7 +68,7 @@ export default plugin(({ theme, addBase }) => {
               },
             },
             "&:hover": {
-              color: theme("colors.white.DEFAULT"),
+              color: theme("colors.white"),
               "&::after": {
                 backgroundColor: theme("colors.surface.500")
               }
