@@ -37,7 +37,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bedu-hq/betomic.git"
+    "url": "git+https://github.com/bedu-hq/betomic.git",
+    "directory": "packages/tailwind-base"
   },
   "bugs": {
     "url": "https://github.com/bedu-hq/betomic/issues"
