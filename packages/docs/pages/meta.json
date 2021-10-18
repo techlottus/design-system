@@ -1,7 +1,7 @@
 {
   "index": "Introduction",
   "getting-started": "Getting Started",
-  "component-template": "Template docs",
+  "tailwind-preset": "Tailwind Preset",
   "core": "Core",
   "collapse": "Collapse",
   "datetime": "Datetime",
