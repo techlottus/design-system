@@ -24,6 +24,7 @@ export default {
       current: "currentColor",
       white: "#FFFFFF",
       black: "#000000",
+      link: "#2765F3",
       surface: {
         50: "#F1F6FA",
         100: "#E7EEF4",
