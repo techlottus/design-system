@@ -8,12 +8,12 @@ const Palette = () => {
     for (const key in colors) {
       elems.push(
         <div className="flex flex-col space-y-1">
-          <div style={{ 'backgroundColor': colors[key] }} className="w-14 h-14 rounded" />
+          <div style={{ 'backgroundColor': colors[key] }} className="w-14 h-20 rounded" />
           <span className="text-sm">{key}</span>
         </div>
       );
     }
-    return <div className="flex space-x-2">
+    return <div className="flex space-x-3">
       {elems}
     </div>;
   }
@@ -46,6 +46,14 @@ const Palette = () => {
     <div className="flex flex-col space-y-2">
       <h4 className="font-bold">Error</h4>
       <PaletteItems colors={colors.error} />
+    </div>
+    <div className="flex flex-col space-y-2">
+      <h4 className="font-bold">Misc</h4>
+      <PaletteItems colors={{
+        white: colors.white,
+        black: colors.black,
+        link: colors.link,
+      }} />
     </div>
   </div>
 };
