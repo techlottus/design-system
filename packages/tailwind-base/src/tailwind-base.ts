@@ -1,6 +1,7 @@
 import Drawer from "./plugins/drawer";
 import Navigation from "./plugins/navigation";
 import Tooltip from "./plugins/tooltip";
+import Miscelaneous from "./plugins/misc";
 
 export default {
   purge: [
@@ -134,5 +135,6 @@ export default {
     Drawer,
     Navigation,
     Tooltip,
+    Miscelaneous,
   ],
 };
