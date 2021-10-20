@@ -265,4 +265,48 @@ describe("<Pagination />", () => {
       paginationListEl
     ).not.toBeInTheDocument();
   });
+
+  test("Render <Pagination /> with default alignment", () => {
+    const myFunction = jest.fn();
+    
+    render(
+      <Pagination totalRecords={200} onPageChanged={myFunction} />
+    );
+
+    const paginationListEl = screen.queryByRole("navigation");
+
+    expect(
+      paginationListEl
+    ).toBeInTheDocument();
+
+    expect(
+      paginationListEl
+    ).toHaveClass("justify-end");
+
+    expect(
+      paginationListEl
+    ).not.toHaveClass("justify-start");
+  });
+
+  test("Render <Pagination /> with alignment", () => {
+    const myFunction = jest.fn();
+    
+    render(
+      <Pagination align="center" totalRecords={200} onPageChanged={myFunction} />
+    );
+
+    const paginationListEl = screen.queryByRole("navigation");
+
+    expect(
+      paginationListEl
+    ).toBeInTheDocument();
+
+    expect(
+      paginationListEl
+    ).toHaveClass("justify-center");
+
+    expect(
+      paginationListEl
+    ).not.toHaveClass("justify-end");
+  });
 });
