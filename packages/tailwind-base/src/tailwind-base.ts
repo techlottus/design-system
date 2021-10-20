@@ -1,6 +1,7 @@
 import Drawer from "./plugins/drawer";
 import Navigation from "./plugins/navigation";
 import Tooltip from "./plugins/tooltip";
+import Miscelaneous from "./plugins/misc";
 
 export default {
   purge: [
@@ -24,6 +25,7 @@ export default {
       current: "currentColor",
       white: "#FFFFFF",
       black: "#000000",
+      link: "#2765F3",
       surface: {
         50: "#F1F6FA",
         100: "#E7EEF4",
@@ -133,5 +135,6 @@ export default {
     Drawer,
     Navigation,
     Tooltip,
+    Miscelaneous,
   ],
 };
