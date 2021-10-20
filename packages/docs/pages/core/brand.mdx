@@ -1,0 +1,68 @@
+import LogotypeExamples from "../../components/LogotypeExamples";
+
+# Brand
+Documentation of the available brand logos. Learn how to use it and its available props.
+
+## Installation
+To get started, install `@exponentialeducation/betomic` via yarn:
+
+```bash
+# Yarn
+yarn add @exponentialeducation/betomic
+```
+
+## Basic example
+Using the base logotype in light/dark mode:
+<LogotypeExamples />
+
+## How to use
+```jsx highlight=6,9,14,17
+import { Logotype } from "@exponentialeducation/betomic";
+
+const LogotypeExample = () => {
+  return (
+    <>
+      <div className="grid gap-5 py-4">
+        <div className="bg-surface-50 flex items-center justify-center py-8 rounded-md">
+          <Logotype className="text-surface-950" />
+        </div>
+        <div className="bg-surface-700 flex items-center justify-center py-8 rounded-md">
+          <Logotype className="text-white" />
+        </div>
+      </div>
+      <div className="flex justify-between space-x-5">
+        <div className="w-full bg-surface-50 flex items-center justify-center p-10 rounded-md">
+          <Logotype.Isotype className="text-surface-950" />
+        </div>
+        <div className="w-full bg-surface-700 flex items-center justify-center p-10 rounded-md">
+          <Logotype.Isotype className="text-white" />
+        </div>
+      </div>
+    </>
+  );
+}
+```
+
+## Props
+<table className="min-w-full divide-y divide-gray-200">
+  <thead>
+    <tr>
+      <th scope="col" className="border-l-0 border-r-0 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        prop
+      </th>
+      <th scope="col" className="border-l-0 border-r-0 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        description
+      </th>
+    </tr>
+  </thead>
+  <tbody className="divide-y divide-gray-200">
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        className?
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        Prop to add your custom classes
+      </td>
+    </tr>
+  </tbody>
+</table>
