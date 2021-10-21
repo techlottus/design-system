@@ -9,6 +9,20 @@ type NavbarComposition = {
   Brand: React.FC<BrandProps>
 }
 
+const sizes = [
+  "sm",
+  "lg"
+] as const;
+
+type Size = (typeof sizes)[number];
+
+const NavbarSizes: {
+  [key: string]: string
+} = {
+  sm: "py-2",
+  lg: "py-4 md:py-8",
+}
+
 const Brand: React.FC<BrandProps> = (props) => {
   const {
     children
@@ -22,6 +36,7 @@ type NavbarProps = {
   className?: string;
   fixedToTop?: boolean;
   shadow?: boolean;
+  size?: Size;
 }
 
 const Navbar: React.FC<NavbarProps> & NavbarComposition = (props) => {
@@ -30,9 +45,12 @@ const Navbar: React.FC<NavbarProps> & NavbarComposition = (props) => {
     className = "bg-white",
     fixedToTop,
     shadow = false,
+    size = "lg"
   } = props;
+  // validate size
+  const validSize = sizes.includes(size) ? size : "lg";
   const classes = cn(
-    "py-4 md:py-8",
+    NavbarSizes[validSize],
     className,
     {
       ["z-50 fixed fixed top-0 left-0 right-0 min-w-full"]: fixedToTop,
