@@ -139,10 +139,10 @@ const Pagination: React.FC<IPagination> = (props: IPagination) => {
   // No need to display pagination buttons since it's only one page
   if (!totalRecords) return null;
 
-  const commonClasses = cn("list-none flex items-center justify-center gap-3");
+  const commonClasses = cn("list-none flex items-center gap-3");
 
   return (
-    <nav className="container mx-auto">
+    <nav>
       <ul className={commonClasses}>
         <li>
           <Button
