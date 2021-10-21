@@ -42,17 +42,63 @@ function IndexPage() {
 
 The previous example describes the simplest way of using the Pagination component, it uses default `props` and renders a component like the following:
 
-<Pagination totalRecords={200} />
+<div className="flex justify-center">
+  <Pagination totalRecords={200} />
+</div>
+
+## Alignment
+
+To provide an alignment for where the <Pagination /> component is located, a wrapper can be implemented to achieve this. The following examples describes so:
+
+<div className="flex justify-start">
+  <Pagination totalRecords={200} />
+</div>
+
+<div className="flex justify-center">
+  <Pagination totalRecords={200} />
+</div>
+
+<div className="flex justify-end">
+  <Pagination totalRecords={200} />
+</div>
+
+```jsx highlight=7,9,11,13,15,17
+import { Pagination } from "@exponentialeducation/betomic";
+
+function IndexPage() {
+  return (
+    <main>
+      {/* ... */}
+      <div className="flex justify-start">
+        <Pagination totalRecords={200} />
+      </div>
+      
+      <div className="flex justify-center">
+        <Pagination totalRecords={200} />
+      </div>
+
+      <div className="flex justify-end">
+        <Pagination totalRecords={200} />
+      </div>
+      {/* ... */}
+    </main>
+  )
+}
+```
 
 ## Default page
 
 In some cases, it is necessary to show the initial pagination on a different page. The `defaultPage` prop indicates in which number pagination starts.
 
-<Pagination totalRecords={250} defaultPage={5} />
+<div className="flex justify-center">
+  <Pagination totalRecords={250} defaultPage={5} />
+</div>
 
 If the `defaultPage` value is greater than the pagination `totalPages` value, `defaultPage` will be set to 1.
 
-<Pagination totalRecords={250} defaultPage={10} />
+<div className="flex justify-center">
+  <Pagination totalRecords={250} defaultPage={10} />
+</div>
 
 The above examples of `defaultPage` prop are described as following:
 
@@ -87,13 +133,17 @@ function IndexPage() {
 
 Pagination determines whether is necessary or not to display an additional pages indicator button.
 
-<Pagination pageLimit={2} totalRecords={8} />
+<div className="flex justify-center">
+  <Pagination pageLimit={2} totalRecords={8} />
+</div>
 
 #### Additional pages indicator
 
 When several pages are needed to display the data, an ellipsis (...) button indicator is shown.
 
-<Pagination pageLimit={1} totalRecords={23} />
+<div className="flex justify-center">
+  <Pagination pageLimit={1} totalRecords={23} />
+</div>
 
 Some examples of the pagination pageLimit and previous records:
 
@@ -132,7 +182,9 @@ function IndexPage() {
 
 If the result of the page limit with the total amount is determined in one page, meaning `totalPages = 1`, the Pagination component will render like so:
 
-<Pagination pageLimit={5} totalRecords={5} />
+<div className="flex justify-center">
+  <Pagination pageLimit={5} totalRecords={5} />
+</div>
 
 The following example describes this:
 
@@ -184,15 +236,21 @@ The maximum number of neighbours that a pagination can have is two.
 
 This is the `pageNeighbours` default value.
 
-<Pagination pageLimit={1} totalRecords={23} defaultPage={3} />
+<div className="flex justify-center">
+  <Pagination pageLimit={1} totalRecords={23} defaultPage={3} />
+</div>
 
 #### pageNeighbours = 1
 
-<Pagination pageLimit={1} pageNeighbours={1} totalRecords={23} defaultPage={4} />
+<div className="flex justify-center">
+  <Pagination pageLimit={1} pageNeighbours={1} totalRecords={23} defaultPage={4} />
+</div>
 
 #### pageNeighbours = 2
 
-<Pagination pageLimit={1} pageNeighbours={2} totalRecords={23} defaultPage={5} />
+<div className="flex justify-center">
+  <Pagination pageLimit={1} pageNeighbours={2} totalRecords={23} defaultPage={5} />
+</div>
 
 The above examples are described as follows:
 
