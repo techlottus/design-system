@@ -14,7 +14,6 @@ interface PaginationData {
 };
 
 interface IPagination {
-  align?: "left" | "center" | "right";
   defaultPage?: number;
   pageLimit?: number;
   pageNeighbours?: 0 | 1 | 2,
@@ -28,14 +27,7 @@ const Pagination: React.FC<IPagination> = (props: IPagination) => {
   const [totalPages, setTotalPages] = useState(0);
   const [extraNeighbourPages, setExtraNeighbourPages] = useState(0);
 
-  const {
-    align = "right",
-    defaultPage = 1,
-    pageLimit = 30,
-    pageNeighbours = 0,
-    totalRecords = 0,
-    onPageChanged = f => f
-  } = props;
+  const { defaultPage = 1, pageLimit = 30, pageNeighbours = 0, totalRecords = 0, onPageChanged = f => f } = props;
 
   useEffect(() => {
     setExtraNeighbourPages(Math.max(0, Math.min(pageNeighbours, 2)));
@@ -148,15 +140,9 @@ const Pagination: React.FC<IPagination> = (props: IPagination) => {
   if (!totalRecords) return null;
 
   const commonClasses = cn("list-none flex items-center justify-center gap-3");
-  
-  const alignmentClasses = cn("flex",{
-    ["justify-start"]: align === "left",
-    ["justify-center"]: align === "center",
-    ["justify-end"]: align === "right"
-  });
 
   return (
-    <nav className={alignmentClasses}>
+    <nav className="container mx-auto">
       <ul className={commonClasses}>
         <li>
           <Button
