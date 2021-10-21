@@ -1,8 +1,13 @@
 {
+  "alert": "Alert",
   "avatar": "Avatar",
   "badge": "Badge",
   "button": "Button",
+  "container": "Container",
+  "drawer": "Drawer",
   "form-group": "Form Group",
   "input-group": "Input Group",
+  "nav": "Nav",
+  "navbar": "Navbar",
   "pagination": "Pagination"
 }
