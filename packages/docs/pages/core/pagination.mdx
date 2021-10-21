@@ -42,66 +42,17 @@ function IndexPage() {
 
 The previous example describes the simplest way of using the Pagination component, it uses default `props` and renders a component like the following:
 
-<Pagination align="center" totalRecords={200} />
-
-## Alignment
-
-By default, the `<Pagination />` is displayed to the right side of the page row, following the most common design practices for paginations. Nonetheless, through the prop `align`, which is optional, and receives three possible string values "left", "center", or "right" the position of the component can be adjusted accordingly.
-
-<Pagination align="left" totalRecords={200} />
-
-<Pagination align="center" totalRecords={200} />
-
-<Pagination align="right" totalRecords={200} />
-
-```jsx highlight=15,21,28
-import { Pagination } from "@exponentialeducation/betomic";
-
-function IndexPage() {
-
-  onPageChanged = (data) => {
-    const { currentPage, totalPages, pageLimit } = data;
-    /* ... */
-  }
-
-  return (
-    <main>
-      {/* ... */}
-
-      <Pagination
-        align="left"
-        totalRecords={200}
-        onPageChanged={onPageChanged}
-      />
-
-      <Pagination
-        align="center"
-        totalRecords={200}
-        onPageChanged={onPageChanged}
-      />
-
-      {/* Default behaviour */}
-      <Pagination
-        align="right"
-        totalRecords={200}
-        onPageChanged={onPageChanged}
-      />
-
-      {/* ... */}
-    </main>
-  )
-}
-```
+<Pagination totalRecords={200} />
 
 ## Default page
 
 In some cases, it is necessary to show the initial pagination on a different page. The `defaultPage` prop indicates in which number pagination starts.
 
-<Pagination align="center" totalRecords={250} defaultPage={5} />
+<Pagination totalRecords={250} defaultPage={5} />
 
 If the `defaultPage` value is greater than the pagination `totalPages` value, `defaultPage` will be set to 1.
 
-<Pagination align="center" totalRecords={250} defaultPage={10} />
+<Pagination totalRecords={250} defaultPage={10} />
 
 The above examples of `defaultPage` prop are described as following:
 
@@ -136,13 +87,13 @@ function IndexPage() {
 
 Pagination determines whether is necessary or not to display an additional pages indicator button.
 
-<Pagination align="center" pageLimit={2} totalRecords={8} />
+<Pagination pageLimit={2} totalRecords={8} />
 
 #### Additional pages indicator
 
 When several pages are needed to display the data, an ellipsis (...) button indicator is shown.
 
-<Pagination align="center" pageLimit={1} totalRecords={23} />
+<Pagination pageLimit={1} totalRecords={23} />
 
 Some examples of the pagination pageLimit and previous records:
 
@@ -181,7 +132,7 @@ function IndexPage() {
 
 If the result of the page limit with the total amount is determined in one page, meaning `totalPages = 1`, the Pagination component will render like so:
 
-<Pagination align="center" pageLimit={5} totalRecords={5} />
+<Pagination pageLimit={5} totalRecords={5} />
 
 The following example describes this:
 
@@ -233,15 +184,15 @@ The maximum number of neighbours that a pagination can have is two.
 
 This is the `pageNeighbours` default value.
 
-<Pagination align="center" pageLimit={1} totalRecords={23} defaultPage={3} />
+<Pagination pageLimit={1} totalRecords={23} defaultPage={3} />
 
 #### pageNeighbours = 1
 
-<Pagination align="center" pageLimit={1} pageNeighbours={1} totalRecords={23} defaultPage={4} />
+<Pagination pageLimit={1} pageNeighbours={1} totalRecords={23} defaultPage={4} />
 
 #### pageNeighbours = 2
 
-<Pagination align="center" pageLimit={1} pageNeighbours={2} totalRecords={23} defaultPage={5} />
+<Pagination pageLimit={1} pageNeighbours={2} totalRecords={23} defaultPage={5} />
 
 The above examples are described as follows:
 
@@ -298,16 +249,6 @@ function IndexPage() {
     </tr>
   </thead>
   <tbody className="divide-y divide-gray-200">
-    <tr>
-      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
-        `align?`
-      </td>
-      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
-        **"left" | "center" | "right"** *= "right"*<br/>
-        Whether the pagination component should be displayed to the left, center, or right side of the page row.<br/>
-      </td>
-    </tr>
-
     <tr>
       <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
         `defaultPage?`
