@@ -101,4 +101,27 @@ describe("<Navbar />", () => {
 
   });
 
+  it("render a <Navbar /> with size: 'sm'", async () => {
+    const { container } = render(
+      <Navbar shadow size="sm">
+        Lorem ipsum dolor sit amet.
+      </Navbar>
+    );
+
+    const containerEl = container.firstChild;
+
+    expect(
+      containerEl
+    ).toBeInTheDocument();
+
+    expect(
+      containerEl
+    ).toHaveClass("py-2 bg-white shadow");
+
+    expect(
+      screen.getByText("Lorem ipsum dolor sit amet.")
+    ).toBeInTheDocument();
+
+  });
+
 });
