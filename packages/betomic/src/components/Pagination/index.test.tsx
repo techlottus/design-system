@@ -24,7 +24,7 @@ describe("<Pagination />", () => {
     
     expect(
       paginationListEl
-    ).toHaveClass("list-none flex items-center justify-center gap-3");
+    ).toHaveClass("list-none flex items-center gap-3");
     
     // Query first arrow button
     expect(
