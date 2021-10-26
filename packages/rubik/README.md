@@ -4,7 +4,7 @@ The CSS and web font files to easily self-host the "Rubik" font.
 ## Quick installation
 This package has only the fonts variety available in Bedu's Design System, you can import the CSS, such as using a bundler like Webpack.
 ```sh
-$ yarn add @exponentialeducation/rubik
+$ yarn add @exponentialeducation/rubik // npm i @exponentialeducation/rubik
 ```
 
 Within your app entry file or site component, import it in.
