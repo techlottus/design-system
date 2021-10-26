@@ -24,6 +24,12 @@ body {
 }
 ```
 
+This package allows you to selecty weights and even individual styles, allowing you to cut down on payload sizes to the last byte!
+```js
+import "@exponentialeducation/rubik/600.css"; // Weight 600.
+import "@exponentialeducation/rubik/700.css"; // Weight 700.
+```
+
 ## Licensing
 It is important to always read the license for every font that you use. Most of the fonts in the collection use the SIL Open Font License, v1.1. Some fonts use the Apache 2 license. The Ubuntu fonts use the Ubuntu Font License v1.0.
 
