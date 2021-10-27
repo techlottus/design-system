@@ -88,11 +88,27 @@ const InputGroupValidationExample = () => {
   );
 }
 
+const InputGroupDarkExample = () => {
+  return (
+    <section className="mt-5 px-3 py-4 bg-surface-600 rounded dark">
+      <InputGroup
+        type="search"
+        className="h-12"
+        placeholder="Search example..."
+        leftElement={
+          <SearchIcon className="w-4 dark:text-white" />
+        }
+      />
+    </section>
+  );
+}
+
 export {
   InputGroupBasicExample,
   InputGroupLeftExample,
   InputGroupRightExample,
   InputGroupComplexExample,
   InputGroupSearchExample,
-  InputGroupValidationExample
+  InputGroupValidationExample,
+  InputGroupDarkExample
 }
