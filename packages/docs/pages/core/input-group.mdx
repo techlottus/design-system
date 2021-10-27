@@ -1,4 +1,4 @@
-import { InputGroupValidationExample, InputGroupRightExample, InputGroupBasicExample, InputGroupLeftExample, InputGroupComplexExample, InputGroupSearchExample } from "../../components/InputGroupExample";
+import { InputGroupValidationExample, InputGroupRightExample, InputGroupBasicExample, InputGroupLeftExample, InputGroupComplexExample, InputGroupSearchExample, InputGroupDarkExample } from "../../components/InputGroupExample";
 
 # Input Group
 
@@ -175,6 +175,35 @@ function IndexPage() {
 ```
 
 <InputGroupSearchExample />
+
+## Dark mode
+
+By enabling dark mode in an app that implements an `<InputGroup />` or by using the TailwindCSS `dark` class directly on its container as well in the right/left elements, the component styles accordingly.<br/>
+
+```jsx highlight=1,5,8-15
+import { InputGroup } from '@exponentialeducation/betomic';
+
+function IndexPage() {
+  return (
+    <div className="w-full mt-5 dark">
+      {/* ... */}
+
+      <InputGroup
+        type="search"
+        className="h-12"
+        placeholder="Search example..."
+        leftElement={
+          <SearchIcon className="w-4" />
+        }
+      />
+
+      {/* ... */}
+    </div>
+  );
+}
+```
+
+<InputGroupDarkExample />
 
 ## Props
 
