@@ -25,12 +25,14 @@ const Input = React.forwardRef((props: IInput, ref: React.Ref<HTMLInputElement>)
     "font-rubik font-normal text-base text-surface-700 bg-surface-100 placeholder-surface-400",
     "border-2 border-transparent focus:outline-none focus:bg-white",
     "hover:border-surface-200",
+    "dark:bg-transparent dark:text-white dark:border-2 dark:border-surface-200 dark:hover:bg-surface-500",
+    "dark:focus:border-primary-500 dark:focus:bg-surface-500",
     {
       ["pl-10"]: (leftElement !== undefined),
       ["pr-10"]: (rightElement !== undefined),
       ["border-success-400 bg-white hover:border-success-400"]: (isValid !== null && isValid),
       ["border-error-400 bg-white hover:border-error-400"]: (isValid !== null && !isValid),
-      ["focus:ring-primary-500 focus:ring-opacity-40 focus:ring-2 focus:border-primary-500"]: (isValid === null),
+      ["focus:ring-primary-200 focus:ring-2 focus:border-primary-500"]: (isValid === null),
       ["bg-surface-100 pointer-events-none"]: disabled
     },
     className
