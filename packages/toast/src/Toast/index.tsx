@@ -68,7 +68,7 @@ export const toast = (content: JSX.Element | string | null, options?: ToastOptio
   return handler.custom(
     (t) => (
       <div className={cn(
-        "max-w-68 md:max-w-110",
+        "max-w-68 lg:max-w-110",
         "w-full border",
         "rounded pointer-events-auto overflow-hidden",
         Variants[validVariant].wrapper,
@@ -82,17 +82,17 @@ export const toast = (content: JSX.Element | string | null, options?: ToastOptio
             <div className="flex-shrink-0">
               {Variants[validVariant].icon}
             </div>
-            <div className="ml-3 md:ml-4 w-0 flex-1">
+            <div className="ml-3 lg:ml-4 w-0 flex-1">
               {content && typeof content === "string" ? (
                 <p className={cn(
-                  "text-sm md:text-base font-base font-normal leading-5",
+                  "text-sm lg:text-base font-base font-normal lg:leading-5",
                   Variants[validVariant].text,
                 )}>{content}</p>
               ): content}
             </div>
 
             {closable && (
-              <div className="ml-3 md:ml-4 flex-shrink-0 flex">
+              <div className="ml-3 lg:ml-4 flex-shrink-0 flex">
                 <button
                   onClick={() => handler.dismiss(t.id)}
                   className={cn(
@@ -102,7 +102,7 @@ export const toast = (content: JSX.Element | string | null, options?: ToastOptio
                   )
                   }>
                   <span className="sr-only" >Close</span>
-                  <svg className="h-4 w-4 md:h-5 md:w-5" aria-hidden="true" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clipRule="evenodd" d="M51.121 17.121a3 3 0 1 0-4.242-4.242L32 27.757 17.121 12.88a3 3 0 1 0-4.242 4.242L27.757 32 12.88 46.879a3 3 0 1 0 4.242 4.242L32 36.243 46.879 51.12a3 3 0 1 0 4.242-4.242L36.243 32 51.12 17.121Z" fill="currentColor"/></svg>
+                  <svg className="h-4 w-4 lg:h-5 lg:w-5" aria-hidden="true" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clipRule="evenodd" d="M51.121 17.121a3 3 0 1 0-4.242-4.242L32 27.757 17.121 12.88a3 3 0 1 0-4.242 4.242L27.757 32 12.88 46.879a3 3 0 1 0 4.242 4.242L32 36.243 46.879 51.12a3 3 0 1 0 4.242-4.242L36.243 32 51.12 17.121Z" fill="currentColor"/></svg>
                 </button>
               </div>
             )}
