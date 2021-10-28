@@ -60,7 +60,7 @@ export const toast = (content: JSX.Element | string | null, options?: ToastOptio
     position: "top-right",
     duration: 4000,
     variant: "success",
-    closable: false,
+    closable: true,
   }
   const { closable, duration, position, variant } = Object.assign({}, initOptions, options);
   const validVariant = availableVariants.includes(variant) ? variant : "top-right";
