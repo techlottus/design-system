@@ -15,7 +15,10 @@
     "compile": "npm run clean && npm run compile:esm && npm run compile:cjs && npm run compile:esnext && cp slider.css lib/",
     "compile:esm": "tsc -p ./src",
     "compile:cjs": "tsc -p ./src -m commonjs --outDir lib/cjs",
-    "compile:esnext": "tsc -p ./src -t esnext --outDir lib/esnext"
+    "compile:esnext": "tsc -p ./src -t esnext --outDir lib/esnext",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "jest:clearcache": "jest --clearCache"
   },
   "dependencies": {
     "classnames": "^2.3.1",
@@ -45,6 +48,13 @@
     "slider"
   ],
   "devDependencies": {
-    "@types/classnames": "^2.3.1"
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/classnames": "^2.3.1",
+    "@types/jest": "^27.0.2",
+    "jest": "^27.3.1",
+    "ts-jest": "^27.0.7",
+    "ts-node": "^10.4.0"
   }
 }
