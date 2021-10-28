@@ -12,7 +12,7 @@
   "scripts": {
     "clean": "rm -rf dist/* && rm -rf lib/*",
     "prepublishOnly": "npm run compile",
-    "compile": "npm run clean && npm run compile:esm && npm run compile:cjs && npm run compile:esnext",
+    "compile": "npm run clean && npm run compile:esm && npm run compile:cjs && npm run compile:esnext && cp slider.css lib/",
     "compile:esm": "tsc -p ./src",
     "compile:cjs": "tsc -p ./src -m commonjs --outDir lib/cjs",
     "compile:esnext": "tsc -p ./src -t esnext --outDir lib/esnext"
