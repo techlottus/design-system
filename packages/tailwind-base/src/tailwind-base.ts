@@ -111,24 +111,35 @@ export default {
       },
     },
     fontFamily: {
-      "display": ["Montserrat", "sans-serif"],
-      "base": ["Rubik", "sans-serif"],
+      display: ["Montserrat", "sans-serif"],
+      base: ["Rubik", "sans-serif"],
+    },
+    fontSize: {
+      xs: '0.75rem',
+      sm: '0.875rem',
+      base: '1rem',
+      lg: '1.125rem',
+      xl: '1.25rem',
+      '2xl': ['1.5rem', '32px'],
+      '3xl': ['1.875rem', '40px'],
+      '4xl': ['2.25rem', '44px'],
+      '5xl': ['3rem', '56px'],
     },
     extend: {
       maxWidth: {
-        "68": "272px",
-        "110": "440px"
+        68: "272px",
+        110: "440px"
       },
       maxHeight: {
-        "78": "312px",
+        78: "312px",
       },
       spacing: {
-        "17": "4.25rem",
-        "18": "4.5rem",
-        "65": "16.25rem",
-        "49": "12.25rem",
-        "30": "7.5rem",
-      }
+        17: "4.25rem",
+        18: "4.5rem",
+        65: "16.25rem",
+        49: "12.25rem",
+        30: "7.5rem",
+      },
     },
   },
   plugins: [
