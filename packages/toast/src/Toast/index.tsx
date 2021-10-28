@@ -85,7 +85,7 @@ export const toast = (content: JSX.Element | string | null, options?: ToastOptio
             <div className="ml-3 lg:ml-4 w-0 flex-1">
               {content && typeof content === "string" ? (
                 <p className={cn(
-                  "text-sm lg:text-base font-base font-normal lg:leading-5",
+                  "text-sm lg:text-base font-base font-normal leading-4 lg:leading-5",
                   Variants[validVariant].text,
                 )}>{content}</p>
               ): content}
