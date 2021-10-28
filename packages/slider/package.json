@@ -1,0 +1,46 @@
+{
+  "name": "@exponentialeducation/slider",
+  "version": "0.1.0-canary.1",
+  "description": "A React slider component based on Keen Slider",
+  "author": "Bedu Engineering <it@bedu.org>",
+  "homepage": "https://github.com/bedu-hq/betomic#readme",
+  "license": "UNLICENSED",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "esnext": "lib/esnext/index.js",
+  "typings": "lib/esm/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf dist/* && rm -rf lib/*",
+    "prepublishOnly": "npm run compile",
+    "compile": "npm run clean && npm run compile:esm && npm run compile:cjs && npm run compile:esnext",
+    "compile:esm": "tsc -p ./src",
+    "compile:cjs": "tsc -p ./src -m commonjs --outDir lib/cjs",
+    "compile:esnext": "tsc -p ./src -t esnext --outDir lib/esnext"
+  },
+  "dependencies": {
+    "keen-slider": "^5.5.1"
+  },
+  "peerDependencies": {
+    "react": ">= 16"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bedu-hq/betomic.git",
+    "directory": "packages/slider"
+  },
+  "bugs": {
+    "url": "https://github.com/bedu-hq/betomic/issues"
+  },
+  "keywords": [
+    "react",
+    "react component",
+    "slider"
+  ]
+}
