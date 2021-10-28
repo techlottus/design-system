@@ -60,7 +60,7 @@ export const toast = (content: JSX.Element | string | null, options?: ToastOptio
     position: "top-right",
     duration: 4000,
     variant: "success",
-    closable: false,
+    closable: true,
   }
   const { closable, duration, position, variant } = Object.assign({}, initOptions, options);
   const validVariant = availableVariants.includes(variant) ? variant : "top-right";
@@ -82,17 +82,17 @@ export const toast = (content: JSX.Element | string | null, options?: ToastOptio
             <div className="flex-shrink-0">
               {Variants[validVariant].icon}
             </div>
-            <div className="ml-3 w-0 flex-1 pt-0.5">
+            <div className="ml-3 lg:ml-4 w-0 flex-1">
               {content && typeof content === "string" ? (
                 <p className={cn(
-                  "text-sm lg:text-base font-rubik font-normal",
+                  "text-sm lg:text-base font-base font-normal leading-4 lg:leading-5",
                   Variants[validVariant].text,
                 )}>{content}</p>
               ): content}
             </div>
 
-            {closable ? null : (
-              <div className="lg:ml-5 flex-shrink-0 flex">
+            {closable && (
+              <div className="ml-3 lg:ml-4 flex-shrink-0 flex">
                 <button
                   onClick={() => handler.dismiss(t.id)}
                   className={cn(
