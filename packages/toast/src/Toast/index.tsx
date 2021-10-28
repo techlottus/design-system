@@ -91,7 +91,7 @@ export const toast = (content: JSX.Element | string | null, options?: ToastOptio
               ): content}
             </div>
 
-            {closable ? null : (
+            {closable && (
               <div className="lg:ml-5 flex-shrink-0 flex">
                 <button
                   onClick={() => handler.dismiss(t.id)}
