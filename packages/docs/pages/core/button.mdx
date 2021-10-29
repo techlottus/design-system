@@ -121,6 +121,13 @@ Icon style adjusts button paddings to keep a 1:1 square aspect ratio.
 | :---- | :----- | :---- |
 | <Button icon size="sm"><ArrowRightIcon className="w-5 h-5"/></Button> | <Button icon size="md" variant="secondary"><ArrowRightIcon className="w-5 h-5"/></Button> | <Button icon size="lg" variant="tertiary"><ArrowRightIcon className="w-6 h-6"/></Button> |
 
+#### Loading
+Icon style adjusts button paddings to keep a 1:1 square aspect ratio.
+
+| Small | Medium | Large |
+| :---- | :----- | :---- |
+| <Button icon size="sm" loading><ArrowRightIcon className="w-5 h-5"/></Button> | <Button icon size="md" variant="secondary" loading><ArrowRightIcon className="w-5 h-5"/></Button> | <Button icon size="lg" variant="tertiary" loading><ArrowRightIcon className="w-6 h-6"/></Button> |
+
 Some examples of button wrapping styles and props:
 
 ```jsx
@@ -140,6 +147,10 @@ function IndexPage() {
       </Button>
 
       <Button icon size="lg">
+        <ArrowRightIcon />
+      </Button>
+
+       <Button icon loading>
         <ArrowRightIcon />
       </Button>
 
@@ -244,6 +255,16 @@ Extends `ButtonHTMLAttributes`props
       <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
         **CSSProperties**<br/>
         A set of native CSS properties.
+      </td>
+    </tr>
+
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `loading?`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **boolean? default=false**<br/>
+        If set to `true`, the button will display a centered loading spinner instead of its contents, and the button will be disabled. The width of the button is not affected by the value of this prop.
       </td>
     </tr>
 
