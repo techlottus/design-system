@@ -16,7 +16,7 @@ yarn add @exponentialeducation/slider // npm i @exponentialeducation/slider
 ```
 
 ## How to use
-This package provides everything you need to built a new Slider fastly. The `Slider` component automatically create a new instance of `keen-slider` with all the required functionality. Also, the `Slider.Item` isolate the required component structure to define the slide item, making it easy to package up a set of customatizations that you'd like inside of them.
+This package provides everything you need to built a new Slider fastly. The `Slider` component automatically create a new instance of `keen-slider` with all the required functionality. Also, the `Slider.Item` isolate the required component structure to define the slide item, making it easy to package up a set of customizations that you'd like inside of them.
 
 ```tsx
 import { Slider } from "@exponentialeducation/slider";
@@ -28,6 +28,18 @@ const Example = () => {
     </Slider>
   );
 }
+```
+
+This component requires a set of styles, it's as simple as importing it globally into `_app`.jsx or `_app.tsx`. Alternatively, you could choose to import it into a page component, however, the CSS will only be present within the page and not globally.
+
+```jsx
+import "@exponentialeducation/slider/slider.css";
+
+function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />;
+}
+
+export default MyApp;
 ```
 
 ## Configuring your slider
