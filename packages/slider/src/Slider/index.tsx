@@ -20,7 +20,6 @@ type SliderRef = {
 
 type SliderProps = {
   children?: React.ReactNode;
-  dots?: boolean;
   options?: SliderOptions;
 }
 

@@ -12,7 +12,7 @@ const SliderExample = () => {
             spacing: 0,
           },
         },
-      }} dots>
+      }}>
         <Slider.Item className="flex items-center justify-center font-bold text-2xl text-white bg-primary-500 rounded w-full h-32 md:h-44">1</Slider.Item>
         <Slider.Item className="flex items-center justify-center font-bold text-2xl text-white bg-surface-500 rounded w-full h-32 md:h-44">2</Slider.Item>
         <Slider.Item className="flex items-center justify-center font-bold text-2xl text-white bg-warning-500 rounded w-full h-32 md:h-44">3</Slider.Item>
