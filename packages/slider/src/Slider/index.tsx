@@ -10,7 +10,7 @@ type SliderItemProps = {
 }
 
 const SliderItem: React.FC<SliderItemProps> = ({ children, className })=> 
-  <div className={cn("keen-slider__slide", className)}>{children}</div>
+  <div className={cn("keen-slider__slide", className)} role="slider__item">{children}</div>
 
 // ---
 type SliderRef = {
@@ -38,7 +38,7 @@ const SliderRoot = forwardRef(({
   });
 
   return (
-    <div ref={internalRef} className="keen-slider">
+    <div ref={internalRef} className="keen-slider" role="slider">
       {children}
     </div>
   );
