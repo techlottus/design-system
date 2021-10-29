@@ -49,7 +49,7 @@ describe("<Toast />", () => {
     ).toBeInTheDocument()
     expect(
       toastEl
-    ).toHaveClass("text-sm lg:text-base font-rubik font-normal text-surface-600")
+    ).toHaveClass("text-sm lg:text-base font-base font-normal leading-4 lg:leading-5 text-surface-600")
 
   });
 

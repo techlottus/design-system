@@ -31,6 +31,13 @@ interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   block?: boolean;
   children: React.ReactNode;
   className?: string;
+  /**
+   * If set to `true`, the button will display a centered loading spinner instead of its contents, and the button will be disabled.
+   * The width of the button is not affected by the value of this prop.
+   *
+   * @default false
+   */
+  loading?: boolean;
   disabled?: boolean;
   icon?: boolean;
   size?: Size;
@@ -41,28 +48,44 @@ interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
 };
 
 const Button: React.FC<IButton> = (props: IButton) => {
-
   const { 
     block = false,
     children,
     className,
     disabled = false,
+    loading = false,
     icon = false,
     size = "md",
     type,
     variant = "primary",
-    onClick, 
+    onClick,
     ...restProps 
   } = props;
+  const isDisabled = disabled || loading;
 
-  const buttonDisabledClasses = cn("bg-surface-50", "text-surface-300", "cursor-not-allowed", "hover:bg-surface-50", "focus:bg-surface-50", commonClasses);
+  const buttonDisabledClasses = cn("bg-surface-50", "border", "border-transparent", "text-surface-300", "cursor-not-allowed", "hover:bg-surface-50", "focus:bg-surface-50", commonClasses);
+
+  const renderChildren = () => {
+    const sizes = {
+      sm: 'h-4 w-4',
+      md: 'h-5 w-5',
+      lg: 'h-7 w-7'
+    };
+    return [
+      loading && <svg className={cn("animate-spin text-surface-400", sizes[size])} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+      </svg>,
+      !loading && children,
+    ];
+  }
 
   const buttonClasses = cn(
     className, {
       [Sizes[size]]: !icon,
       [SizesIcon[size]]: icon,
-      [Variants[variant]]: !disabled,
-      [buttonDisabledClasses]: disabled,
+      [Variants[variant]]: !isDisabled,
+      [buttonDisabledClasses]: isDisabled,
       ["w-full"]: block,
     }
   );
@@ -75,7 +98,7 @@ const Button: React.FC<IButton> = (props: IButton) => {
       onClick={onClick}
       {...restProps}
     >
-      {children}
+      {renderChildren()}
     </button>
   );
 }
