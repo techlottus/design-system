@@ -6,6 +6,12 @@ const SliderExample = () => {
       <Slider options={{
         slidesPerView: 2,
         spacing: 20,
+        breakpoints: {
+          '(max-width: 640px)': {
+            slidesPerView: 1,
+            spacing: 0,
+          },
+        },
       }} dots>
         <Slider.Item className="flex items-center justify-center font-bold text-2xl text-white bg-primary-500 rounded w-full h-32 md:h-44">1</Slider.Item>
         <Slider.Item className="flex items-center justify-center font-bold text-2xl text-white bg-surface-500 rounded w-full h-32 md:h-44">2</Slider.Item>

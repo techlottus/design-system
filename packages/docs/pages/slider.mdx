@@ -1,6 +1,240 @@
-import SliderExample from "../components/SliderExample";
+import Callout from 'nextra-theme-docs/callout';
+import SliderExample from '../components/SliderExample';
 
 # Slider
 Documentation for the `<Slider />` component. Learn about the available props and how to use it.
 
+#### What is `keen-slider`?
+`keen-slider` is a free library agnostic touch slider with native touch/swipe behavior and great performance. It comes with no dependencies, typescript support, multitouch support and is compatible with all common browsers including IE 10.
+
 <SliderExample />
+
+## Installation
+These components was built on top of `keen-slider` and can be used in every JavaScript and TypeScript project. Can easily be installed over Yarn or NPM.
+```js
+yarn add @exponentialeducation/slider // npm i @exponentialeducation/slider
+```
+
+## How to use
+This package provides everything you need to built a new Slider fastly. The `Slider` component automatically create a new instance of `keen-slider` with all the required functionality. Also, the `Slider.Item` isolate the required component structure to define the slide item, making it easy to package up a set of customatizations that you'd like inside of them.
+
+```tsx
+import { Slider } from "@exponentialeducation/slider";
+
+const Example = () => {
+  return (
+    <Slider>
+      <Slider.Item>1</Slider.Item>
+    </Slider>
+  );
+}
+```
+
+## Configuring your slider
+`keen-slider` has a very smooth and natural touch feeling and wants to enable you to build all kinds of sliders. However, it should not be easy to destroy the slider by a wrong configuration. Therefore the API remains small and simple.
+<Callout emoji="⚠️">
+  Currently, we have omitted some fields within the config, if you need them, you can send a PR with your changes or create a issue in the `betomic` repository.
+</Callout>
+
+```tsx highlight=6,7,8
+import { Slider } from "@exponentialeducation/slider";
+
+const Example = () => {
+  return (
+    <Slider options={{
+      slidesPerView: 2,
+      initial: 2,
+      spacing: 20,
+    }}>
+      <Slider.Item>1</Slider.Item>
+      <Slider.Item>2</Slider.Item>
+      <Slider.Item>3</Slider.Item>
+      <Slider.Item>4</Slider.Item>
+    </Slider>
+  );
+}
+```
+
+The `options` prop has to be from type `object` with options from the [API reference](https://keen-slider.io/api/#api), if you need know more about the available options in the `keen-slider` component you can visit the docs.
+
+## Controlling the slide
+In some scenarios, we will need to control the behaviour of our `Slider` from another components. For example, in the **website** project, we have the `arrows` controls for moving to the next or previous slide outside of the `Slider` component.
+
+![Testimonials Block](/images/slider-example.png)
+
+For this case, we would have a structure similar to the example shown below:
+```jsx highlight=15,16,17,18,19,20,25,26,27,28,29
+import { Slider } from "@exponentialeducation/slider";
+
+const ControllingSlideExample = () => {
+  return (
+    <section className="bg-surface-800 pt-24 pb-16">
+      <Container className="relative max-w-screen-xl">
+        <div className="flex justify-between space-x-4">
+          <div className="flex flex-col space-y-4">
+            <span className="tracking-wider text-surface-300 uppercase">...</span>
+            <h2 className="text-4xl text-white font-display font-bold">...</h2>
+            <span className="tracking-wider text-surface-300 uppercase">...</span>
+          </div>
+          <div className="relative flex items-end dark">
+            <div className="inline-flex space-x-3 pb-6">
+              <Button variant="tertiary" icon size="md">
+                <ArrowLeftIcon />
+              </Button>
+              <Button variant="tertiary" icon size="md">
+                <ArrowRightIcon />
+              </Button>
+            </div>
+          </div>
+        </div>
+        <div className="relative">
+          <Slider options={{ ... }}>
+            <Slider.Item>...</Slider.Item>
+            <Slider.Item>...</Slider.Item>
+            <Slider.Item>...</Slider.Item>
+          </Slider>
+        </div>
+      </Container>
+    </section>
+  )
+}
+```
+
+Considering the previous code, you can see that we need to indicate our `<Slider />` through an action to move it according to the user interaction. To achieve this approach, we add the ability to reference the component using `ref` (learn more about to `ref` in the [React docs](https://reactjs.org/docs/refs-and-the-dom.html)).
+
+The first step is to create a `ref` with React:
+```js
+const sliderRef = useRef();
+```
+if you are using `TypeScript` you need to keep typed your code for prevent possible errors in production, you can use the `type` provided from the `Slider` package which provides you the set of available `methods` to exposed from the package for use:
+```ts
+import type { SliderRef } from "@exponentialeducation/slider";
+// ...
+const sliderRef = useRef<SliderRef>();
+```
+
+Finally, we just need to put our `ref` to the slider:
+```tsx
+import { Slider } from "@exponentialeducation/slider";
+import type { SliderRef } from "@exponentialeducation/slider";
+
+// ...
+const sliderRef = useRef<SliderRef>();
+
+// ...
+<Slider ref={sliderRef} />
+```
+
+Below, you will find the complete example with the previous exercise:
+```jsx highlight=1,3,6,25
+import { useRef } from "react";
+import { Slider } from "@exponentialeducation/slider";
+import type { SliderRef } from "@exponentialeducation/slider";
+
+const ControllingSlideExample = () => {
+  const sliderRef = useRef<SliderRef>();
+
+  return (
+    <section className="bg-surface-800 pt-24 pb-16">
+      <Container className="relative max-w-screen-xl">
+        <div className="flex justify-between space-x-4">
+          <div className="flex flex-col space-y-4">...</div>
+          <div className="relative flex items-end dark">
+            <div className="inline-flex space-x-3 pb-6">
+              <Button variant="tertiary" icon size="md">
+                <ArrowLeftIcon />
+              </Button>
+              <Button variant="tertiary" icon size="md">
+                <ArrowRightIcon />
+              </Button>
+            </div>
+          </div>
+        </div>
+        <div className="relative">
+          <Slider ref={sliderRef} options={{ ... }}>
+            <Slider.Item>...</Slider.Item>
+            <Slider.Item>...</Slider.Item>
+            <Slider.Item>...</Slider.Item>
+          </Slider>
+        </div>
+      </Container>
+    </section>
+  )
+}
+```
+
+Now, we only have to use the `ref` to make use of the methods to go to the next or previous slide.
+
+```jsx highlight=15,18
+import { useRef } from "react";
+import { Slider } from "@exponentialeducation/slider";
+import type { SliderRef } from "@exponentialeducation/slider";
+
+const ControllingSlideExample = () => {
+  const sliderRef = useRef<SliderRef>();
+
+  return (
+    <section className="bg-surface-800 pt-24 pb-16">
+      <Container className="relative max-w-screen-xl">
+        <div className="flex justify-between space-x-4">
+          <div className="flex flex-col space-y-4">...</div>
+          <div className="relative flex items-end dark">
+            <div className="inline-flex space-x-3 pb-6">
+              <Button onClick={() => sliderRef.current.prev()} ...>
+                <ArrowLeftIcon />
+              </Button>
+              <Button onClick={() => sliderRef.current.next()} ...>
+                <ArrowRightIcon />
+              </Button>
+            </div>
+          </div>
+        </div>
+        <div className="relative">
+          <Slider ref={sliderRef} options={{ ... }}>
+            <Slider.Item>...</Slider.Item>
+            <Slider.Item>...</Slider.Item>
+            <Slider.Item>...</Slider.Item>
+          </Slider>
+        </div>
+      </Container>
+    </section>
+  )
+}
+```
+
+### Properties availables using `ref` from `<Slider />`
+<table className="min-w-full divide-y divide-gray-200">
+  <thead>
+    <tr>
+      <th scope="col" className="border-l-0 border-r-0 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        property
+      </th>
+      <th scope="col" className="border-l-0 border-r-0 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        description
+      </th>
+    </tr>
+  </thead>
+  <tbody className="divide-y divide-gray-200">
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `prev`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **() => void**<br/>
+        Move to previous slide
+      </td>
+    </tr>
+
+    <tr>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        `next`
+      </td>
+      <td className="border-l-0 border-r-0 px-6 py-4 text-sm font-medium text-gray-500">
+        **() => void**<br/>
+        Move to next slide
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+If you want to know more about to `keen-slider` you can visit the [docs page](https://keen-slider.io/).
