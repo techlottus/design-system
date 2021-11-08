@@ -15,7 +15,7 @@
     "build:icons": "lerna run compile --scope @exponentialeducation/iconography",
     "build:illustrations": "lerna run compile --scope @exponentialeducation/illustrations",
     "docs:dev": "yarn compile:tailwind-base && yarn build:icons && yarn build:illustrations && lerna run dev --scope @exponentialeducation/docs",
-    "docs:build": "yarn compile:tailwind-base && yarn build:icons && build:illustrations && lerna run build --scope @exponentialeducation/docs",
+    "docs:build": "yarn compile:tailwind-base && yarn build:icons && yarn build:illustrations && lerna run build --scope @exponentialeducation/docs",
     "compile": "lerna run --parallel compile",
     "test": "lerna run --parallel test"
   },
