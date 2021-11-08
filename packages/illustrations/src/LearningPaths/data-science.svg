@@ -1,0 +1,29 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_634:30998)">
+<rect width="100" height="100" fill="white"/>
+<rect x="35" y="36" width="25" height="28" fill="currentColor"/>
+<path d="M64.2964 60C64.2964 62.2091 62.5055 64 60.2964 64L39.2593 64C37.0502 64 35.2593 62.2091 35.2593 60L35.2593 54.6667L64.2964 54.6667L64.2964 60Z" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M47.1855 59.3333L60.1484 59.3333" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40.3472 59.3333L42.9722 59.3333" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="64.2964" y="54.6667" width="29.037" height="9.33333" transform="rotate(-180 64.2964 54.6667)" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M47.1855 50L60.1484 50" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40.3472 50L42.9722 50" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M64.2964 45.3333L35.2593 45.3332L35.2593 39.9999C35.2593 37.7908 37.0502 35.9999 39.2593 35.9999L60.2964 35.9999C62.5055 35.9999 64.2964 37.7908 64.2964 39.9999L64.2964 45.3333Z" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M47.1855 40.6665L60.1484 40.6665" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40.3472 40.6665L42.9722 40.6665" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="49.5" cy="50" rx="43" ry="25.5" transform="rotate(-90 49.5 50)" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="49.5838" cy="49.5109" rx="43" ry="25.5" transform="rotate(-30 49.5838 49.5109)" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse rx="43" ry="25.5" transform="matrix(-0.866025 -0.5 -0.5 0.866025 49.4162 49.5109)" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M69 10H77" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M73 14L73 6" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20 89H28" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24 93L24 85" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="12" cy="27" r="5" fill="currentColor"/>
+<circle cx="87" cy="69" r="5" fill="currentColor"/>
+</g>
+<defs>
+<clipPath id="clip0_634:30998">
+<rect width="100" height="100" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,13 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="100" height="100" fill="white"/>
+<path d="M38 56C38 55.4477 38.4477 55 39 55H51C51.5523 55 52 55.4477 52 56V81C52 81.5523 51.5523 82 51 82H39C38.4477 82 38 81.5523 38 81V56Z" fill="currentColor"/>
+<rect x="54" y="37" width="14" height="45" rx="1" fill="currentColor"/>
+<path d="M23 74C23 73.4477 23.4477 73 24 73H35C35.5523 73 36 73.4477 36 74V81C36 81.5523 35.5523 82 35 82H24C23.4477 82 23 81.5523 23 81V74Z" fill="currentColor"/>
+<path d="M72 82H18V37" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="53.6982" cy="48.6985" r="21" transform="rotate(45 53.6982 48.6985)" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="69.2546" y1="63.5479" x2="80.5683" y2="74.8616" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M23 27H31" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M27 31L27 23" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M80 60H88" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M84 64L84 56" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

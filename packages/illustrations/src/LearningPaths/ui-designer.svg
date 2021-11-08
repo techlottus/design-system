@@ -1,0 +1,24 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="100" height="100" fill="white"/>
+<rect x="30" y="28" width="35.8696" height="41.3043" rx="1" fill="currentColor"/>
+<path d="M65.6054 23.4348H38.5151C36.0215 23.4348 34 25.4563 34 27.9499V77.6154C34 80.109 36.0215 82.1305 38.5151 82.1305H65.6054C68.0989 82.1305 70.1204 80.109 70.1204 77.6154V27.9499C70.1204 25.4563 68.0989 23.4348 65.6054 23.4348Z" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M34 32.4648H70.1204" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M34 73.1003H70.1204" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="52.4781" cy="27.7828" r="1.08696"/>
+<rect x="15" y="15" width="29" height="24" fill="white" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21 22L38 22" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21 27L38 27" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21 32L28 32" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="60" y="28" width="25" height="37" fill="white" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M72.5 49C76.6421 49 80 45.6421 80 41.5C80 37.3579 76.6421 34 72.5 34C68.3579 34 65 37.3579 65 41.5C65 45.6421 68.3579 49 72.5 49Z" fill="currentColor" stroke="#384147" stroke-width="3" stroke-miterlimit="10"/>
+<path d="M72.5 44C73.8807 44 75 42.8807 75 41.5C75 40.1193 73.8807 39 72.5 39C71.1193 39 70 40.1193 70 41.5C70 42.8807 71.1193 44 72.5 44Z" stroke="#384147" stroke-width="3" stroke-miterlimit="10"/>
+<path d="M69 46C69.3285 45.3982 69.8294 44.8928 70.4471 44.5398C71.0648 44.1868 71.7753 44 72.5 44C73.2246 44 73.9352 44.1868 74.5529 44.5398C75.1706 44.8928 75.6715 45.3982 76 46" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M66 54L79 54" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M66 58L79 58" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="19" y="65" width="25" height="24" fill="white" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M36 77L28 72V82L36 77Z" fill="currentColor" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M76 15H84" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M80 19L80 11" stroke="#384147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M76 78H84" stroke="#FFA688" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M80 82L80 74" stroke="#FFA688" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
