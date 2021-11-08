@@ -19,8 +19,8 @@
   },
   "scripts": {
     "prepublishOnly": "npm run compile",
-    "compile": "npm run build-icons && ts-node ./scripts/build.ts",
-    "build-icons": "rimraf ./optimized && cp -R ./src ./optimized && svgo -qr -f ./optimized"
+    "compile": "npm run build-illustrations && ts-node ./scripts/build.ts",
+    "build-illustrations": "rimraf ./optimized && cp -R ./src ./optimized && svgo -qr -f ./optimized"
   },
   "bugs": {
     "url": "https://github.com/bedu-hq/betomic/issues"
