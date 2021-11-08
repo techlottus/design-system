@@ -13,8 +13,9 @@
     "compile:datetime": "lerna run compile --scope @exponentialeducation/datetime",
     "compile:toast": "lerna run compile --scope @exponentialeducation/toast",
     "build:icons": "lerna run compile --scope @exponentialeducation/iconography",
-    "docs:dev": "yarn compile:tailwind-base && yarn build:icons && lerna run dev --scope @exponentialeducation/docs",
-    "docs:build": "yarn compile:tailwind-base && yarn build:icons && lerna run build --scope @exponentialeducation/docs",
+    "build:illustrations": "lerna run compile --scope @exponentialeducation/illustrations",
+    "docs:dev": "yarn compile:tailwind-base && yarn build:icons && yarn build:illustrations && lerna run dev --scope @exponentialeducation/docs",
+    "docs:build": "yarn compile:tailwind-base && yarn build:icons && build:illustrations && lerna run build --scope @exponentialeducation/docs",
     "compile": "lerna run --parallel compile",
     "test": "lerna run --parallel test"
   },
