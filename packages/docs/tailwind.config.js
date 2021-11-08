@@ -19,7 +19,14 @@ const nextraTheme = {
       ]
     }
   },
-  theme: {},
+  theme: {
+    extend: {
+      fill: theme => ({
+        light: theme("colors.surface.500"),
+        dark: theme("colors.surface.50")
+      })
+    },
+  },
   darkMode: "class", // or "media" or "class"
   variants: {
     extend: {},
