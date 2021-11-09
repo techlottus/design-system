@@ -13,7 +13,6 @@ import {
   MasterClassIcon,
   IndividualMentoringIcon,
   GroupMentoringIcon,
-  SimulationDayIcon,
   TargetIcon,
   CommunityIcon,
   LearningIcon,
@@ -181,13 +180,6 @@ const GenericIllustrations = () => {
       <div className="flex flex-col">
         <span className="text-xs text-center text-gray-700">GroupMentoringIcon</span>
         <span className="text-xs text-center text-gray-500">Mentoría grupal</span>
-      </div>
-    </div>
-    <div className="flex flex-col items-center space-y-2">
-      <SimulationDayIcon className="w-24 h-24 text-primary-300 fill-light dark:fill-dark" />
-      <div className="flex flex-col">
-        <span className="text-xs text-center text-gray-700">SimulationDayIcon</span>
-        <span className="text-xs text-center text-gray-500">Simulation day</span>
       </div>
     </div>
     <div className="flex flex-col items-center space-y-2">
