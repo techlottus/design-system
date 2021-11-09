@@ -673,16 +673,16 @@ const DataAIIllustrations = () => {
 const CustomizedIllustrations = () => {
   return <div className="my-10 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-10">
     <div className="flex flex-col items-center space-y-2">
-      <BlendedIcon className="w-24 h-24 text-success-300 fill-light" />
+      <BlendedIcon className="w-24 h-24 text-success-300 fill-light dark:fill-dark" />
     </div>
     <div className="flex flex-col items-center space-y-2">
-      <BlendedIcon className="w-24 h-24 text-info-300 fill-light" />
+      <BlendedIcon className="w-24 h-24 text-info-300 fill-light dark:fill-dark" />
     </div>
     <div className="flex flex-col items-center space-y-2">
-      <BlendedIcon className="w-24 h-24 text-warning-300 fill-light" />
+      <BlendedIcon className="w-24 h-24 text-warning-300 fill-light dark:fill-dark" />
     </div>
     <div className="flex flex-col items-center space-y-2">
-      <BlendedIcon className="w-24 h-24 text-error-300 fill-light" />
+      <BlendedIcon className="w-24 h-24 text-error-300 fill-light dark:fill-dark" />
     </div>
   </div>;
 }
