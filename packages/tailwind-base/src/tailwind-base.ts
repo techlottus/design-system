@@ -126,6 +126,10 @@ export default {
       '5xl': ['3rem', '56px'],
     },
     extend: {
+      fill: (theme: (parameter: string) => string) => ({
+        light: theme("colors.surface.500"),
+        dark: theme("colors.surface.50")
+      }),
       maxWidth: {
         68: "272px",
         110: "440px"
@@ -140,6 +144,11 @@ export default {
         49: "12.25rem",
         30: "7.5rem",
       },
+    },
+  },
+  variants: {
+    extend: {
+      fill: ['dark'],
     },
   },
   plugins: [
