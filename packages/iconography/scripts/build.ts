@@ -33,12 +33,12 @@ async function transform(svg: string, componentName: string, format: BuildFormat
   });
 
   if (format === 'esm') {
-    return code
+    return code;
   }
 
   return code
     .replace('import * as React from "react"', 'const React = require("react")')
-    .replace('export default', 'module.exports =')
+    .replace('export default', 'module.exports =');
 }
 
 function exportAll(icons: Icon[], format: BuildFormat, extension: string) {
