@@ -38,7 +38,7 @@ import {
   CareerPathIcon,
   LocationComputerIcon,
   ExpertIcon,
-  AccordionFoldIcon,
+  AccordionIcon,
   AudioIcon,
   CodeIcon,
   ColumnsIcon,
@@ -46,7 +46,7 @@ import {
   ImageIcon,
   ImageTextIcon,
   LinkIcon,
-  QuizzIcon,
+  QuizIcon,
   QuoteIcon,
   SoundcloudIcon,
   TextIcon,
@@ -55,22 +55,22 @@ import {
   TitleIcon,
   VimeoIcon,
   YoutubeIcon,
-  SingleAnswerIcon,
-  MultipleAnswerIcon,
-  CardsSingleIcon,
-  CardsMultipleIcon,
-  InputSingleIcon,
-  InputMultipleIcon,
+  CardsIcon,
+  InputTextIcon,
   TrueFalseIcon,
   InteractiveContentIcon,
-  JsFrontendDeveloperIcon,
-  JsFullstackDeveloperIcon,
-  PythonBackendDeveloperIcon,
-  PythonDjangoFullstackDeveloperIcon,
-  UiWebDeveloperIcon,
-  JavaFullstackDeveloperIcon,
+  OpenQuestionIcon,
+  DragAndDropIcon,
+  SliderIcon,
+  JsFrontendDevIcon,
+  JsFullstackDevIcon,
+  PythonBackendDevIcon,
+  PythonDjangoFullstackDevIcon,
+  UiWebDevIcon,
+  JavaFullstackDevIcon,
   UxDesignerIcon,
   UiDesignerIcon,
+  ProductUiWebDevIcon,
   UxUiDesignerIcon,
   DesignConsultantIcon,
   DataAdministratorIcon,
@@ -120,7 +120,6 @@ const GenericIllustrations = () => {
         <span className="text-xs text-center text-gray-500">Carrito de compras</span>
       </div>
     </div>
-
     <div className="flex flex-col items-center space-y-2">
       <GratitudeIcon className="w-24 h-24 text-primary-300 fill-light" />
       <div className="flex flex-col">
@@ -156,7 +155,6 @@ const GenericIllustrations = () => {
         <span className="text-xs text-center text-gray-500">Experience</span>
       </div>
     </div>
-
     <div className="flex flex-col items-center space-y-2">
       <HappyCardIcon className="w-24 h-24 text-primary-300 fill-light" />
       <div className="flex flex-col">
@@ -192,7 +190,6 @@ const GenericIllustrations = () => {
         <span className="text-xs text-center text-gray-500">Simulation day</span>
       </div>
     </div>
-
     <div className="flex flex-col items-center space-y-2">
       <TargetIcon className="w-24 h-24 text-primary-300 fill-light" />
       <div className="flex flex-col">
@@ -228,7 +225,6 @@ const GenericIllustrations = () => {
         <span className="text-xs text-center text-gray-500">Capacitación</span>
       </div>
     </div>
-
     <div className="flex flex-col items-center space-y-2">
       <EmpathyIcon className="w-24 h-24 text-primary-300 fill-light" />
       <div className="flex flex-col">
@@ -264,7 +260,6 @@ const GenericIllustrations = () => {
         <span className="text-xs text-center text-gray-500">Responsabilidad</span>
       </div>
     </div>
-
     <div className="flex flex-col items-center space-y-2">
       <CalendarIcon className="w-24 h-24 text-primary-300 fill-light" />
       <div className="flex flex-col">
@@ -300,7 +295,6 @@ const GenericIllustrations = () => {
         <span className="text-xs text-center text-gray-500">Capacitacion de talento</span>
       </div>
     </div>
-
     <div className="flex flex-col items-center space-y-2">
       <AdvisoryIcon className="w-24 h-24 text-primary-300 fill-light" />
       <div className="flex flex-col">
@@ -336,7 +330,6 @@ const GenericIllustrations = () => {
         <span className="text-xs text-center text-gray-500">Recursos</span>
       </div>
     </div>
-
     <div className="flex flex-col items-center space-y-2">
       <LivesIcon className="w-24 h-24 text-primary-300 fill-light" />
       <div className="flex flex-col">
@@ -366,13 +359,12 @@ const GenericIllustrations = () => {
       </div>
     </div>
     <div className="flex flex-col items-center space-y-2">
-      <AccordionFoldIcon className="w-24 h-24 text-primary-300 fill-light" />
+      <AccordionIcon className="w-24 h-24 text-primary-300 fill-light" />
       <div className="flex flex-col">
-        <span className="text-xs text-center text-gray-700">AccordionFoldIcon</span>
+        <span className="text-xs text-center text-gray-700">AccordionIcon</span>
         <span className="text-xs text-center text-gray-500">Acordeón</span>
       </div>
     </div>
-
     <div className="flex flex-col items-center space-y-2">
       <AudioIcon className="w-24 h-24 text-primary-300 fill-light" />
       <div className="flex flex-col">
@@ -424,10 +416,10 @@ const GenericIllustrations = () => {
       </div>
     </div>
     <div className="flex flex-col items-center space-y-2">
-      <QuizzIcon className="w-24 h-24 text-primary-300 fill-light" />
+      <QuizIcon className="w-24 h-24 text-primary-300 fill-light" />
       <div className="flex flex-col">
-        <span className="text-xs text-center text-gray-700">QuizzIcon</span>
-        <span className="text-xs text-center text-gray-500">Quizz</span>
+        <span className="text-xs text-center text-gray-700">QuizIcon</span>
+        <span className="text-xs text-center text-gray-500">Quiz</span>
       </div>
     </div>
     <div className="flex flex-col items-center space-y-2">
@@ -444,7 +436,6 @@ const GenericIllustrations = () => {
         <span className="text-xs text-center text-gray-500">Soundcloud</span>
       </div>
     </div>
-
     <div className="flex flex-col items-center space-y-2">
       <TextIcon className="w-24 h-24 text-primary-300 fill-light" />
       <div className="flex flex-col">
@@ -480,7 +471,6 @@ const GenericIllustrations = () => {
         <span className="text-xs text-center text-gray-500">Vimeo</span>
       </div>
     </div>
-
     <div className="flex flex-col items-center space-y-2">
       <YoutubeIcon className="w-24 h-24 text-primary-300 fill-light" />
       <div className="flex flex-col">
@@ -489,46 +479,24 @@ const GenericIllustrations = () => {
       </div>
     </div>
     <div className="flex flex-col items-center space-y-2">
-      <SingleAnswerIcon className="w-24 h-24 text-primary-300 fill-light" />
+      <InteractiveContentIcon className="w-24 h-24 text-primary-300 fill-light" />
       <div className="flex flex-col">
-        <span className="text-xs text-center text-gray-700">SingleAnswerIcon</span>
-        <span className="text-xs text-center text-gray-500">Respuesta única</span>
+        <span className="text-xs text-center text-gray-700">InteractiveContentIcon</span>
+        <span className="text-xs text-center text-gray-500">Interactive content</span>
       </div>
     </div>
     <div className="flex flex-col items-center space-y-2">
-      <MultipleAnswerIcon className="w-24 h-24 text-primary-300 fill-light" />
+      <CardsIcon className="w-24 h-24 text-primary-300 fill-light" />
       <div className="flex flex-col">
-        <span className="text-xs text-center text-gray-700">MultipleAnswerIcon</span>
-        <span className="text-xs text-center text-gray-500">Respuesta múltiple</span>
+        <span className="text-xs text-center text-gray-700">CardsIcon</span>
+        <span className="text-xs text-center text-gray-500">Tarjetas</span>
       </div>
     </div>
     <div className="flex flex-col items-center space-y-2">
-      <CardsSingleIcon className="w-24 h-24 text-primary-300 fill-light" />
+      <InputTextIcon className="w-24 h-24 text-primary-300 fill-light" />
       <div className="flex flex-col">
-        <span className="text-xs text-center text-gray-700">CardsSingleIcon</span>
-        <span className="text-xs text-center text-gray-500">Tarjeta única</span>
-      </div>
-    </div>
-    <div className="flex flex-col items-center space-y-2">
-      <CardsMultipleIcon className="w-24 h-24 text-primary-300 fill-light" />
-      <div className="flex flex-col">
-        <span className="text-xs text-center text-gray-700">CardsMultipleIcon</span>
-        <span className="text-xs text-center text-gray-500">Tarjeta múltiple</span>
-      </div>
-    </div>
-
-    <div className="flex flex-col items-center space-y-2">
-      <InputSingleIcon className="w-24 h-24 text-primary-300 fill-light" />
-      <div className="flex flex-col">
-        <span className="text-xs text-center text-gray-700">InputSingleIcon</span>
-        <span className="text-xs text-center text-gray-500">Input único</span>
-      </div>
-    </div>
-    <div className="flex flex-col items-center space-y-2">
-      <InputMultipleIcon className="w-24 h-24 text-primary-300 fill-light" />
-      <div className="flex flex-col">
-        <span className="text-xs text-center text-gray-700">InputMultipleIcon</span>
-        <span className="text-xs text-center text-gray-500">Input múltiple</span>
+        <span className="text-xs text-center text-gray-700">InputTextIcon</span>
+        <span className="text-xs text-center text-gray-500">Input</span>
       </div>
     </div>
     <div className="flex flex-col items-center space-y-2">
@@ -539,10 +507,24 @@ const GenericIllustrations = () => {
       </div>
     </div>
     <div className="flex flex-col items-center space-y-2">
-      <InteractiveContentIcon className="w-24 h-24 text-primary-300 fill-light" />
+      <OpenQuestionIcon className="w-24 h-24 text-primary-300 fill-light" />
       <div className="flex flex-col">
-        <span className="text-xs text-center text-gray-700">InteractiveContentIcon</span>
-        <span className="text-xs text-center text-gray-500">Interactive content</span>
+        <span className="text-xs text-center text-gray-700">OpenQuestionIcon</span>
+        <span className="text-xs text-center text-gray-500">Open question</span>
+      </div>
+    </div>
+    <div className="flex flex-col items-center space-y-2">
+      <DragAndDropIcon className="w-24 h-24 text-primary-300 fill-light" />
+      <div className="flex flex-col">
+        <span className="text-xs text-center text-gray-700">DragAndDropIcon</span>
+        <span className="text-xs text-center text-gray-500">Drag and drop</span>
+      </div>
+    </div>
+    <div className="flex flex-col items-center space-y-2">
+      <SliderIcon className="w-24 h-24 text-primary-300 fill-light" />
+      <div className="flex flex-col">
+        <span className="text-xs text-center text-gray-700">SliderIcon</span>
+        <span className="text-xs text-center text-gray-500">Slider</span>
       </div>
     </div>
   </div>
@@ -551,44 +533,44 @@ const GenericIllustrations = () => {
 const WebDevelopmentIllustrations = () => {
   return <div className="my-10 grid grid-cols-2 lg:grid-cols-4 gap-10">
     <div className="flex flex-col items-center space-y-2">
-      <JsFrontendDeveloperIcon className="w-24 h-24 text-primary-300 fill-light" />
+      <JsFrontendDevIcon className="w-24 h-24 text-primary-300 fill-light" />
       <div className="flex flex-col">
-        <span className="text-xs text-center text-gray-700">JsFrontendDeveloperIcon</span>
+        <span className="text-xs text-center text-gray-700">JsFrontendDevIcon</span>
         <span className="text-xs text-center text-gray-500">JavaScript Front-end Developer</span>
       </div>
     </div>
     <div className="flex flex-col items-center space-y-2">
-      <JsFullstackDeveloperIcon className="w-24 h-24 text-primary-300 fill-light" />
+      <JsFullstackDevIcon className="w-24 h-24 text-primary-300 fill-light" />
       <div className="flex flex-col">
-        <span className="text-xs text-center text-gray-700">JsFullstackDeveloperIcon</span>
+        <span className="text-xs text-center text-gray-700">JsFullstackDevIcon</span>
         <span className="text-xs text-center text-gray-500">JavaScript FullStack Developer</span>
       </div>
     </div>
     <div className="flex flex-col items-center space-y-2">
-      <PythonBackendDeveloperIcon className="w-24 h-24 text-primary-300 fill-light" />
+      <PythonBackendDevIcon className="w-24 h-24 text-primary-300 fill-light" />
       <div className="flex flex-col">
-        <span className="text-xs text-center text-gray-700">PythonBackendDeveloperIcon</span>
+        <span className="text-xs text-center text-gray-700">PythonBackendDevIcon</span>
         <span className="text-xs text-center text-gray-500">Python Back-end Developer</span>
       </div>
     </div>
     <div className="flex flex-col items-center space-y-2">
-      <PythonDjangoFullstackDeveloperIcon className="w-24 h-24 text-primary-300 fill-light" />
+      <PythonDjangoFullstackDevIcon className="w-24 h-24 text-primary-300 fill-light" />
       <div className="flex flex-col">
-        <span className="text-xs text-center text-gray-700">PythonDjangoFullstackDeveloperIcon</span>
+        <span className="text-xs text-center text-gray-700">PythonDjangoFullstackDevIcon</span>
         <span className="text-xs text-center text-gray-500">Python / Django FullStack Developer</span>
       </div>
     </div>
     <div className="flex flex-col items-center space-y-2">
-      <UiWebDeveloperIcon className="w-24 h-24 text-primary-300 fill-light" />
+      <UiWebDevIcon className="w-24 h-24 text-primary-300 fill-light" />
       <div className="flex flex-col">
-        <span className="text-xs text-center text-gray-700">UiWebDeveloperIcon</span>
+        <span className="text-xs text-center text-gray-700">UiWebDevIcon</span>
         <span className="text-xs text-center text-gray-500">UI Web Developer</span>
       </div>
     </div>
     <div className="flex flex-col items-center space-y-2">
-      <JavaFullstackDeveloperIcon className="w-24 h-24 text-primary-300 fill-light" />
+      <JavaFullstackDevIcon className="w-24 h-24 text-primary-300 fill-light" />
       <div className="flex flex-col">
-        <span className="text-xs text-center text-gray-700">JavaFullstackDeveloperIcon</span>
+        <span className="text-xs text-center text-gray-700">JavaFullstackDevIcon</span>
         <span className="text-xs text-center text-gray-500">JAVA FullStack Developer</span>
       </div>
     </div>
@@ -612,9 +594,9 @@ const DigitalProductIllustrations = () => {
       </div>
     </div>
     <div className="flex flex-col items-center space-y-2">
-      <UiWebDeveloperIcon className="w-24 h-24 text-primary-300 fill-light" />
+      <ProductUiWebDevIcon className="w-24 h-24 text-primary-300 fill-light" />
       <div className="flex flex-col">
-        <span className="text-xs text-center text-gray-700">UiWebDeveloperIcon</span>
+        <span className="text-xs text-center text-gray-700">ProductUiWebDevIcon</span>
         <span className="text-xs text-center text-gray-500">UI Web Developer</span>
       </div>
     </div>
