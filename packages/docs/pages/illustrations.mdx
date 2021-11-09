@@ -1,0 +1,88 @@
+import Callout from 'nextra-theme-docs/callout'
+import {
+  GenericIllustrations,
+  WebDevelopmentIllustrations,
+  DigitalProductIllustrations,
+  DataAIIllustrations,
+  CustomizedIllustrations
+} from "../components/Illustrations";
+
+# Illustrations
+
+<Callout emoji="💡">
+  If you want to use `@exponentialeducation/betomic` you must have a latest version from `react`.
+</Callout>
+
+## Installation
+
+```sh
+yarn add @exponentialeducation/illustrations
+```
+
+## Quick start
+
+```jsx highlight=6
+import { BlendedIcon } from "@exponentialeducation/illustrations"
+
+const SinglePage = () => {
+  return (
+    <div>
+      <BlendedIcon className="w-24 h-24 text-primary-300 fill-light" />
+    </div>
+  );
+};
+```
+
+## Categories
+
+Illustrations come in two different categories; General ones as Generic and Learning paths, those last ones are also divided by learning path.
+
+### Generic
+
+<GenericIllustrations />
+
+### Learning Paths
+
+#### Web development
+
+<WebDevelopmentIllustrations />
+
+#### Digital Product
+
+<DigitalProductIllustrations />
+
+#### Data & AI
+
+<DataAIIllustrations />
+
+## Customization
+
+Illustrations can be customized since they have a main color associated with each one. This color can be changed according to a given color palette or cobranding.
+
+<CustomizedIllustrations />
+
+```jsx highlight=7,11,15,19
+import { BlendedIcon } from "@exponentialeducation/illustrations"
+
+const SinglePage = () => {
+  return (
+    <div>
+      <BlendedIcon
+        className="text-success-300 fill-light dark:fill-dark"
+      />
+
+      <BlendedIcon
+        className="text-info-300 fill-light dark:fill-dark"
+      />
+
+      <BlendedIcon
+        className="text-warning-300 fill-light dark:fill-dark"
+      />
+
+      <BlendedIcon
+        className="text-error-300 fill-light dark:fill-dark"
+      />
+    </div>
+  );
+};
+```
