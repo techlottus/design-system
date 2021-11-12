@@ -61,6 +61,10 @@ import {
   OpenQuestionIcon,
   DragAndDropIcon,
   SliderIcon,
+  DiagnosisIcon,
+  ProfileBasedIcon,
+  AssessmentIcon,
+  ReinforcementIcon,
   JsFrontendDevIcon,
   JsFullstackDevIcon,
   PythonBackendDevIcon,
@@ -517,6 +521,34 @@ const GenericIllustrations = () => {
       <div className="flex flex-col">
         <span className="text-xs text-center text-gray-700">SliderIcon</span>
         <span className="text-xs text-center text-gray-500">Slider</span>
+      </div>
+    </div>
+    <div className="flex flex-col items-center space-y-2">
+      <DiagnosisIcon className="w-24 h-24 text-primary-300 fill-light dark:fill-dark" />
+      <div className="flex flex-col">
+        <span className="text-xs text-center text-gray-700">DiagnosisIcon</span>
+        <span className="text-xs text-center text-gray-500">Diagnosis</span>
+      </div>
+    </div>
+    <div className="flex flex-col items-center space-y-2">
+      <ProfileBasedIcon className="w-24 h-24 text-primary-300 fill-light dark:fill-dark" />
+      <div className="flex flex-col">
+        <span className="text-xs text-center text-gray-700">ProfileBasedIcon</span>
+        <span className="text-xs text-center text-gray-500">Profile Based</span>
+      </div>
+    </div>
+    <div className="flex flex-col items-center space-y-2">
+      <AssessmentIcon className="w-24 h-24 text-primary-300 fill-light dark:fill-dark" />
+      <div className="flex flex-col">
+        <span className="text-xs text-center text-gray-700">AssessmentIcon</span>
+        <span className="text-xs text-center text-gray-500">Assessment</span>
+      </div>
+    </div>
+    <div className="flex flex-col items-center space-y-2">
+      <ReinforcementIcon className="w-24 h-24 text-primary-300 fill-light dark:fill-dark" />
+      <div className="flex flex-col">
+        <span className="text-xs text-center text-gray-700">ReinforcementIcon</span>
+        <span className="text-xs text-center text-gray-500">Reinforcement</span>
       </div>
     </div>
   </div>
