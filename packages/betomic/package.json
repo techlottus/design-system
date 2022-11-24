@@ -1,6 +1,6 @@
 {
   "name": "@exponentialeducation/betomic",
-  "version": "0.2.0-canary.11",
+  "version": "0.2.0-canary.12",
   "description": "Core components",
   "author": "Bedu Engineering <it@bedu.org>",
   "main": "lib/cjs/index.js",
