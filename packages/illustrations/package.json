@@ -42,5 +42,6 @@
     "svgo": "^2.6.1",
     "ts-node": "^10.2.1",
     "typescript": "^4.4.3"
-  }
+  },
+  "gitHead": "95f0d51e0fb6d52e5615cadd1e7ef5a557b3922a"
 }

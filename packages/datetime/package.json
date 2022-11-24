@@ -45,5 +45,6 @@
     "classnames": "^2.3.1",
     "moment": "^2.29.1",
     "react-day-picker": "^7.4.10"
-  }
+  },
+  "gitHead": "95f0d51e0fb6d52e5615cadd1e7ef5a557b3922a"
 }
