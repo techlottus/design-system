@@ -14,7 +14,7 @@ jobs:
           args: git submodule update --init --recursive
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 16
           registry-url: https://registry.npmjs.org/
       - run: npm i
       - run: npm publish
@@ -30,7 +30,7 @@ jobs:
           args: git submodule update --init --recursive
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 16
           registry-url: https://npm.pkg.github.com/
           scope: '@ExponentialEducation'
       - run: npm i
