@@ -9,9 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: srt32/git-actions@v0.0.3
-        with:
-          args: git submodule update --init --recursive
       - uses: actions/setup-node@v1
         with:
           node-version: 16
@@ -25,9 +22,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: srt32/git-actions@v0.0.3
-        with:
-          args: git submodule update --init --recursive
       - uses: actions/setup-node@v1
         with:
           node-version: 16
