@@ -1,6 +1,6 @@
 {
   "name": "@bedu-tmp/tailwind-base",
-  "version": "0.1.0-canary.0",
+  "version": "0.1.0-canary.1",
   "description": "A set of overrides and extensions for TailwindCSS based on Bedu's Design System",
   "main": "lib/tailwind-base.js",
   "module": "lib/esm/tailwind-base.js",
