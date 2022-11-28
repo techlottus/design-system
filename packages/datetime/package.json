@@ -1,6 +1,6 @@
 {
-  "name": "@exponentialeducation/datetime",
-  "version": "0.1.0-canary.8",
+  "name": "@bedu-tmp/datetime",
+  "version": "0.1.0-canary.0",
   "description": "Components for interacting with dates & time",
   "author": "Bedu Engineering <it@bedu.org>",
   "main": "lib/cjs/index.js",

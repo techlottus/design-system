@@ -1,5 +1,5 @@
 import React from "react";
-import { Badge } from "@exponentialeducation/betomic/src";
+import { Badge } from "@bedu-tmp/betomic/src";
 
 const BadgeCommonExample = () => {
   return (

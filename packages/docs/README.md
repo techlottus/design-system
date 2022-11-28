@@ -1,3 +1,3 @@
-# `@exponentialeducation/docs`
+# `@bedu-tmp/docs`
 
 > TODO: description

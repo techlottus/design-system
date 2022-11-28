@@ -1,11 +1,11 @@
-# `@exponentialeducation/toast`
+# `@bedu-tmp/toast`
 
 > TODO: description
 
 ## Usage
 
 ```
-const toast = require('@exponentialeducation/toast');
+const toast = require('@bedu-tmp/toast');
 
 // TODO: DEMONSTRATE API
 ```

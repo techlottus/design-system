@@ -1,5 +1,5 @@
 {
-  "name": "@exponentialeducation/betomic",
+  "name": "@bedu-tmp/betomic",
   "private": true,
   "workspaces": [
     "packages/*"
@@ -7,15 +7,15 @@
   "scripts": {
     "bootstrap": "lerna bootstrap --use-workspaces",
     "clean": "lerna run --parallel clean",
-    "compile:tailwind-base": "lerna run compile --scope @exponentialeducation/tailwind-base",
-    "compile:betomic": "lerna run compile --scope @exponentialeducation/betomic",
-    "compile:tooltip": "lerna run compile --scope @exponentialeducation/tooltip",
-    "compile:datetime": "lerna run compile --scope @exponentialeducation/datetime",
-    "compile:toast": "lerna run compile --scope @exponentialeducation/toast",
-    "build:icons": "lerna run compile --scope @exponentialeducation/iconography",
-    "build:illustrations": "lerna run compile --scope @exponentialeducation/illustrations",
-    "docs:dev": "yarn compile:tailwind-base && yarn build:icons && yarn build:illustrations && lerna run dev --scope @exponentialeducation/docs",
-    "docs:build": "yarn compile:tailwind-base && yarn build:icons && yarn build:illustrations && lerna run build --scope @exponentialeducation/docs",
+    "compile:tailwind-base": "lerna run compile --scope @bedu-tmp/tailwind-base",
+    "compile:betomic": "lerna run compile --scope @bedu-tmp/betomic",
+    "compile:tooltip": "lerna run compile --scope @bedu-tmp/tooltip",
+    "compile:datetime": "lerna run compile --scope @bedu-tmp/datetime",
+    "compile:toast": "lerna run compile --scope @bedu-tmp/toast",
+    "build:icons": "lerna run compile --scope @bedu-tmp/iconography",
+    "build:illustrations": "lerna run compile --scope @bedu-tmp/illustrations",
+    "docs:dev": "yarn compile:tailwind-base && yarn build:icons && yarn build:illustrations && lerna run dev --scope @bedu-tmp/docs",
+    "docs:build": "yarn compile:tailwind-base && yarn build:icons && yarn build:illustrations && lerna run build --scope @bedu-tmp/docs",
     "compile": "lerna run --parallel compile",
     "test": "lerna run --parallel test"
   },

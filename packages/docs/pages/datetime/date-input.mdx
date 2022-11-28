@@ -1,5 +1,5 @@
-import { DateInput } from "@exponentialeducation/datetime/src";
-import { FormGroup } from "@exponentialeducation/betomic/src";
+import { DateInput } from "@bedu-tmp/datetime/src";
+import { FormGroup } from "@bedu-tmp/betomic/src";
 import {
   DateInputLabelExample,
   DateInputRequiredExample,
@@ -24,11 +24,11 @@ Documentation of the `<DateInput />` component. Learn how to use it and its avai
 
 ## Installation
 
-To get started, install `@exponentialeducation/datetime` via yarn:
+To get started, install `@bedu-tmp/datetime` via yarn:
 
 ```bash
 # Yarn
-yarn add @exponentialeducation/datetime
+yarn add @bedu-tmp/datetime
 ```
 
 ## Basic example
@@ -37,7 +37,7 @@ The DateInput allows users to enter a date either through an input field, or by 
 `DateInput` is built on top of the `react-day-picker` library.
 
 ```jsx highlight=9
-import { DateInput } from "@exponentialeducation/datetime";
+import { DateInput } from "@bedu-tmp/datetime";
 
 function IndexPage() {
 
@@ -74,8 +74,8 @@ In order to attach a label to a `<DateInput />`, it is necessary to define a `la
 <DateInputLabelExample />
 
 ```jsx highlight=11,12,14
-import { DateInput } from "@exponentialeducation/datetime";
-import { FormGroup } from "@exponentialeducation/betomic";
+import { DateInput } from "@bedu-tmp/datetime";
+import { FormGroup } from "@bedu-tmp/betomic";
 
 function IndexPage() {
 
@@ -105,8 +105,8 @@ Sometimes, some fields may be required, a decorator indicator can be added with 
 <DateInputRequiredExample />
 
 ```jsx highlight=13
-import { DateInput } from "@exponentialeducation/datetime";
-import { FormGroup } from "@exponentialeducation/betomic";
+import { DateInput } from "@bedu-tmp/datetime";
+import { FormGroup } from "@bedu-tmp/betomic";
 
 function IndexPage() {
 
@@ -137,8 +137,8 @@ Sometimes, the purpose of the `<DateInput />` field may be confusing. In this ca
 <DateInputRightElExample />
 
 ```jsx highlight=13-15
-import { DateInput } from "@exponentialeducation/datetime";
-import { FormGroup } from "@exponentialeducation/betomic";
+import { DateInput } from "@bedu-tmp/datetime";
+import { FormGroup } from "@bedu-tmp/betomic";
 
 function IndexPage() {
 
@@ -172,8 +172,8 @@ With the previous example, there could also be necessary to provide a helper tex
 <DateInputLabelHelperTextExample />
 
 ```jsx highlight=13-16
-import { DateInput } from "@exponentialeducation/datetime";
-import { FormGroup } from "@exponentialeducation/betomic";
+import { DateInput } from "@bedu-tmp/datetime";
+import { FormGroup } from "@bedu-tmp/betomic";
 
 function IndexPage() {
 
@@ -208,7 +208,7 @@ When using `<DateInput />` component without any wrapper such as the `<FormGroup
 <DateInputDisabledExample />
 
 ```jsx highlight=9
-import { DateInput } from "@exponentialeducation/datetime";
+import { DateInput } from "@bedu-tmp/datetime";
 
 function IndexPage() {
 
@@ -229,8 +229,8 @@ When using `<FormGroup />` component the prop `disabled` must be define at the w
 <DateInputFormGroupDisabledExample />
 
 ```jsx highlight=11
-import { DateInput } from "@exponentialeducation/datetime";
-import { FormGroup } from "@exponentialeducation/betomic";
+import { DateInput } from "@bedu-tmp/datetime";
+import { FormGroup } from "@bedu-tmp/betomic";
 
 function IndexPage() {
 
@@ -260,8 +260,8 @@ function IndexPage() {
 **NOTE:** If the prop `disabled` is provided to the `<DateInput />` component when using the wrapper `<FormGroup />`, the disabled styles and non-interaction won't work. This is because in this case the wrapper or parent level component leads the disabled state.
 
 ```jsx highlight=11
-import { DateInput } from "@exponentialeducation/datetime";
-import { FormGroup } from "@exponentialeducation/betomic";
+import { DateInput } from "@bedu-tmp/datetime";
+import { FormGroup } from "@bedu-tmp/betomic";
 
 function IndexPage() {
 
@@ -293,7 +293,7 @@ By default DateInput has no default value, in addition, a `defaultValue` is opti
 <DateInput />
 
 ```jsx highlight=9
-import { DateInput } from "@exponentialeducation/datetime";
+import { DateInput } from "@bedu-tmp/datetime";
 
 function IndexPage() {
 
@@ -318,7 +318,7 @@ The `placeholder` prop, allows the user to display a custom message inside the D
 <DateInput placeholder="Start date" />
 
 ```jsx highlight=9
-import { DateInput } from "@exponentialeducation/datetime";
+import { DateInput } from "@bedu-tmp/datetime";
 
 function IndexPage() {
 
@@ -343,7 +343,7 @@ In the following example the `defaultValue` prop is set to October 24th, 2021.
 <DateInputDefaultValueExample />
 
 ```jsx highlight=9-11
-import { DateInput } from "@exponentialeducation/datetime";
+import { DateInput } from "@bedu-tmp/datetime";
 
 function IndexPage() {
 
@@ -370,7 +370,7 @@ When changing the selected day by either entering the date in the input field or
 <DateInputOnChangeExample />
 
 ```jsx highlight=5-7,14
-import { DateInput } from "@exponentialeducation/datetime";
+import { DateInput } from "@bedu-tmp/datetime";
 
 function IndexPage() {
 
@@ -407,7 +407,7 @@ The prop `showOutsideDays` hides the days that don't belong to the current month
 />
 
 ```jsx highlight=9-11
-import { DateInput } from "@exponentialeducation/datetime";
+import { DateInput } from "@bedu-tmp/datetime";
 
 function IndexPage() {
 
@@ -438,7 +438,7 @@ In some cases, it is necessary to allow the user to select a date only from the 
 />
 
 ```jsx highlight=9-11
-import { DateInput } from "@exponentialeducation/datetime";
+import { DateInput } from "@bedu-tmp/datetime";
 
 function IndexPage() {
 
@@ -467,7 +467,7 @@ In other cases, due to different reasons such as a starting date of an event, fo
 Notice how the DateInput placeholder also displays a date according to the `initialMonth` prop.
 
 ```jsx highlight=9-11
-import { DateInput } from "@exponentialeducation/datetime";
+import { DateInput } from "@bedu-tmp/datetime";
 
 function IndexPage() {
 
@@ -494,7 +494,7 @@ There is also a scenario where the user must choose a date starting from a speci
 <DateInputMinDateExample />
 
 ```jsx highlight=9-11
-import { DateInput } from "@exponentialeducation/datetime";
+import { DateInput } from "@bedu-tmp/datetime";
 
 function IndexPage() {
 
@@ -524,7 +524,7 @@ The following example describes a selection range starting from today until Marc
 <DateInputMaxDateExample />
 
 ```jsx highlight=9-12
-import { DateInput } from "@exponentialeducation/datetime";
+import { DateInput } from "@bedu-tmp/datetime";
 
 function IndexPage() {
 
@@ -554,7 +554,7 @@ Taking the previous example, the DateInput component allows the user to prevent 
 <DateInputDisabledDatesExample />
 
 ```jsx highlight=9-16
-import { DateInput } from "@exponentialeducation/datetime";
+import { DateInput } from "@bedu-tmp/datetime";
 
 function IndexPage() {
 
@@ -590,7 +590,7 @@ The following example disables the following dates:
 <DateInputDisabledSpecificExample />
 
 ```jsx highlight=9-18
-import { DateInput } from "@exponentialeducation/datetime";
+import { DateInput } from "@bedu-tmp/datetime";
 
 function IndexPage() {
 
@@ -625,7 +625,7 @@ The following example disables weekends:
 <DateInputDisableWeekendExample />
 
 ```jsx highlight=9-13
-import { DateInput } from "@exponentialeducation/datetime";
+import { DateInput } from "@bedu-tmp/datetime";
 
 function IndexPage() {
 
@@ -657,7 +657,7 @@ In the following example, there's a logic that validates that the selected date 
 
 ```jsx highlight=17-24,36,37,39
 import { useEffect, useState } from "react";
-import { DateInput } from "@exponentialeducation/datetime";
+import { DateInput } from "@bedu-tmp/datetime";
 
 function IndexPage() {
 

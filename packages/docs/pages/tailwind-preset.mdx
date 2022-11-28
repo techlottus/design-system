@@ -7,10 +7,10 @@ import Palette from '../components/Palette';
 Documentation of the `tailwind-base` preset based on Bedu's Design System. Learn how to use our own configurable preset in your TailwindCSS projects.
 
 ## Installation
-To get started, install `@exponentialeducation/tailwind-base` via `yarn`:
+To get started, install `@bedu-tmp/tailwind-base` via `yarn`:
 ```bash
 # Yarn
-yarn add @exponentialeducation/tailwind-base
+yarn add @bedu-tmp/tailwind-base
 ```
 
 ## How to use
@@ -22,7 +22,7 @@ The presets option lets you specify a different configuration to use as your bas
 // tailwind.config.js
 module.exports = {
   presets: [
-    require('@exponentialeducation/tailwind-base').default,
+    require('@bedu-tmp/tailwind-base').default,
   ],
   // ...
 }
@@ -39,7 +39,7 @@ If you want to add a missing spacing, shadows, borders, etc, you can define any 
 // tailwind.config.js
 module.exports = {
   presets: [
-    require('@exponentialeducation/tailwind-base').default,
+    require('@bedu-tmp/tailwind-base').default,
   ],
   purge: [],
   darkMode: false, // or 'media' or 'class'

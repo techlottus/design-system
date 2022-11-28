@@ -4,7 +4,7 @@ import {
   PlusCircleIcon,
   MinusCircleIcon,
   TableIcon,
- } from "@exponentialeducation/iconography/icons/esm/index";
+ } from "@bedu-tmp/iconography/icons/esm/index";
  
  export default function MathIcons() {
    return (

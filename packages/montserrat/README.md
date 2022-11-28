@@ -4,12 +4,12 @@ The CSS and web font files to easily self-host the "Montserrat" font.
 ## Quick installation
 This package has only the fonts variety available in Bedu's Design System, you can import the CSS, such as using a bundler like Webpack.
 ```sh
-$ yarn add @exponentialeducation/montserrat // npm i @exponentialeducation/montserrat
+$ yarn add @bedu-tmp/montserrat // npm i @bedu-tmp/montserrat
 ```
 
 Within your app entry file or site component, import it in.
 ```js
-import "@exponentialeducation/montserrat"; // Defaults to weight 400.
+import "@bedu-tmp/montserrat"; // Defaults to weight 400.
 ```
 
 Supported variables:
@@ -26,8 +26,8 @@ body {
 
 This package allows you to selecty weights and even individual styles, allowing you to cut down on payload sizes to the last byte!
 ```js
-import "@exponentialeducation/montserrat/600.css"; // Weight 600.
-import "@exponentialeducation/montserrat/700.css"; // Weight 700.
+import "@bedu-tmp/montserrat/600.css"; // Weight 600.
+import "@bedu-tmp/montserrat/700.css"; // Weight 700.
 ```
 
 ## Licensing

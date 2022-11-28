@@ -1,6 +1,6 @@
 import React from "react";
 import { Disclosure } from "@headlessui/react";
-import { CaretDownIcon, CaretRightIcon, UnionIcon } from "@exponentialeducation/iconography";
+import { CaretDownIcon, CaretRightIcon, UnionIcon } from "@bedu-tmp/iconography";
 
 const CollapseBasicExample = () => {
   return (

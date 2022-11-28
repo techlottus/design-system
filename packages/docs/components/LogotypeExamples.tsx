@@ -1,4 +1,4 @@
-import { Logotype } from "@exponentialeducation/betomic/src";
+import { Logotype } from "@bedu-tmp/betomic/src";
 
 const LogotypeExample = () => {
   return (
