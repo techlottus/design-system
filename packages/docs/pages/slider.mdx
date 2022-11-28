@@ -12,14 +12,14 @@ Documentation for the `<Slider />` component. Learn about the available props 
 ## Installation
 These components was built on top of `keen-slider` and can be used in every JavaScript and TypeScript project. Can easily be installed over Yarn or NPM.
 ```js
-yarn add @exponentialeducation/slider // npm i @exponentialeducation/slider
+yarn add @bedu-tmp/slider // npm i @bedu-tmp/slider
 ```
 
 ## How to use
 This package provides everything you need to built a new Slider fastly. The `Slider` component automatically create a new instance of `keen-slider` with all the required functionality. Also, the `Slider.Item` isolate the required component structure to define the slide item, making it easy to package up a set of customizations that you'd like inside of them.
 
 ```tsx
-import { Slider } from "@exponentialeducation/slider";
+import { Slider } from "@bedu-tmp/slider";
 
 const Example = () => {
   return (
@@ -33,7 +33,7 @@ const Example = () => {
 This component requires a set of styles, it's as simple as importing it globally into `_app`.jsx or `_app.tsx`. Alternatively, you could choose to import it into a page component, however, the CSS will only be present within the page and not globally.
 
 ```jsx
-import "@exponentialeducation/slider/slider.css";
+import "@bedu-tmp/slider/slider.css";
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
@@ -49,7 +49,7 @@ export default MyApp;
 </Callout>
 
 ```tsx highlight=6,7,8
-import { Slider } from "@exponentialeducation/slider";
+import { Slider } from "@bedu-tmp/slider";
 
 const Example = () => {
   return (
@@ -76,7 +76,7 @@ In some scenarios, we will need to control the behaviour of our `Slider` from an
 
 For this case, we would have a structure similar to the example shown below:
 ```jsx highlight=15,16,17,18,19,20,25,26,27,28,29
-import { Slider } from "@exponentialeducation/slider";
+import { Slider } from "@bedu-tmp/slider";
 
 const ControllingSlideExample = () => {
   return (
@@ -120,15 +120,15 @@ const sliderRef = useRef();
 ```
 if you are using `TypeScript` you need to keep typed your code for prevent possible errors in production, you can use the `type` provided from the `Slider` package which provides you the set of available `methods` to exposed from the package for use:
 ```ts
-import type { SliderRef } from "@exponentialeducation/slider";
+import type { SliderRef } from "@bedu-tmp/slider";
 // ...
 const sliderRef = useRef<SliderRef>();
 ```
 
 Finally, we just need to put our `ref` to the slider:
 ```tsx
-import { Slider } from "@exponentialeducation/slider";
-import type { SliderRef } from "@exponentialeducation/slider";
+import { Slider } from "@bedu-tmp/slider";
+import type { SliderRef } from "@bedu-tmp/slider";
 
 // ...
 const sliderRef = useRef<SliderRef>();
@@ -140,8 +140,8 @@ const sliderRef = useRef<SliderRef>();
 Below, you will find the complete example with the previous exercise:
 ```jsx highlight=1,3,6,25
 import { useRef } from "react";
-import { Slider } from "@exponentialeducation/slider";
-import type { SliderRef } from "@exponentialeducation/slider";
+import { Slider } from "@bedu-tmp/slider";
+import type { SliderRef } from "@bedu-tmp/slider";
 
 const ControllingSlideExample = () => {
   const sliderRef = useRef<SliderRef>();
@@ -179,8 +179,8 @@ Now, we only have to use the `ref` to make use of the methods to go to the next 
 
 ```jsx highlight=15,18
 import { useRef } from "react";
-import { Slider } from "@exponentialeducation/slider";
-import type { SliderRef } from "@exponentialeducation/slider";
+import { Slider } from "@bedu-tmp/slider";
+import type { SliderRef } from "@bedu-tmp/slider";
 
 const ControllingSlideExample = () => {
   const sliderRef = useRef<SliderRef>();

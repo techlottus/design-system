@@ -5,7 +5,7 @@ import {
   PaymentPartialIcon,
   LendingIcon,
   StoreIcon,
-} from "@exponentialeducation/iconography/icons/esm/index";
+} from "@bedu-tmp/iconography/icons/esm/index";
 
 const CommerceIcons = () => {
   return (

@@ -1,5 +1,5 @@
-import { InputGroup } from "@exponentialeducation/betomic/src";
-import { CheckIcon, EyeIcon, SearchIcon } from "@exponentialeducation/iconography/icons/esm";
+import { InputGroup } from "@bedu-tmp/betomic/src";
+import { CheckIcon, EyeIcon, SearchIcon } from "@bedu-tmp/iconography/icons/esm";
 
 const InputGroupBasicExample = () => {
   return (

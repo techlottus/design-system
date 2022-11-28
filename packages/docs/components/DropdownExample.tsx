@@ -1,6 +1,6 @@
 import React from "react";
 import { Menu } from "@headlessui/react";
-import { AdvancedLevelIcon, CaretDownIcon, CheckIcon, EditIcon } from "@exponentialeducation/iconography";
+import { AdvancedLevelIcon, CaretDownIcon, CheckIcon, EditIcon } from "@bedu-tmp/iconography";
 import cn from "classnames";
 
 const menuItemCommonClasses = "flex items-center w-full p-4 rounded font-rubik text-base text-surface-600 leading-5";
