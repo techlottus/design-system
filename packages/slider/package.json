@@ -1,6 +1,6 @@
 {
   "name": "@bedu-tmp/slider",
-  "version": "0.1.0-canary.3",
+  "version": "0.1.0-canary.4",
   "description": "A React slider component based on Keen Slider",
   "author": "Bedu Engineering <it@bedu.org>",
   "homepage": "https://github.com/bedu-hq/betomic#readme",
