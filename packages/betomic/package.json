@@ -1,6 +1,6 @@
 {
   "name": "@bedu-tmp/betomic",
-  "version": "0.2.0-canary.4",
+  "version": "0.2.0-canary.3",
   "description": "Core components",
   "author": "Bedu Engineering <it@bedu.org>",
   "main": "lib/cjs/index.js",
@@ -41,5 +41,8 @@
   "dependencies": {
     "classnames": "^2.3.1"
   },
-  "gitHead": "570be69297de49f9a92ce19b9df0f01ea3f0d648"
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "9a6452a9cf439f8548cfd0b3fec243ec58b5db66"
 }
