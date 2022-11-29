@@ -1,6 +1,6 @@
 {
   "name": "@bedu-tmp/betomic",
-  "version": "0.2.0-canary.2",
+  "version": "0.2.0-canary.3",
   "description": "Core components",
   "author": "Bedu Engineering <it@bedu.org>",
   "main": "lib/cjs/index.js",
