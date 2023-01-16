@@ -10,7 +10,7 @@
     "compile:tailwind-base": "lerna run compile --scope @bedu-tmp/tailwind-base",
     "compile:betomic": "lerna run compile --scope @bedu-tmp/betomic",
     "compile:tooltip": "lerna run compile --scope @bedu-tmp/tooltip",
-    "compile:datetime": "lerna run compile --scope @bedu-tmp/datetime",
+    "compile:datetime": "lerna run compile --scope @exponentialeducation/datetime",
     "compile:toast": "lerna run compile --scope @bedu-tmp/toast",
     "build:icons": "lerna run compile --scope @bedu-tmp/iconography",
     "build:illustrations": "lerna run compile --scope @bedu-tmp/illustrations",
