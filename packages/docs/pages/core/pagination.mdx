@@ -1,4 +1,4 @@
-import { Pagination } from "@bedu-tmp/betomic/src";
+import { Pagination } from "@exponentialeducation/betomic/src";
 
 # Pagination
 
@@ -6,11 +6,11 @@ Documentation of the `<Pagination />` component. Learn how to use it and its ava
 
 ## Installation
 
-To get started, install `@bedu-tmp/betomic` via yarn:
+To get started, install `@exponentialeducation/betomic` via yarn:
 
 ```bash
 # Yarn
-yarn add @bedu-tmp/betomic
+yarn add @exponentialeducation/betomic
 ```
 
 ## Basic example
@@ -19,7 +19,7 @@ A long list or sets of data can be split into several pages using Pagination.
 Pagination works well when the size of the dataset is already know (the total number of records).
 
 ```jsx highlight=14
-import { Pagination } from "@bedu-tmp/betomic";
+import { Pagination } from "@exponentialeducation/betomic";
 
 function IndexPage() {
 
@@ -63,7 +63,7 @@ To provide an alignment for where the <Pagination /> component is located, a wra
 </div>
 
 ```jsx highlight=7,9,11,13,15,17
-import { Pagination } from "@bedu-tmp/betomic";
+import { Pagination } from "@exponentialeducation/betomic";
 
 function IndexPage() {
   return (
@@ -103,7 +103,7 @@ If the `defaultPage` value is greater than the pagination `totalPages` value, `d
 The above examples of `defaultPage` prop are described as following:
 
 ```jsx highlight=14,17
-import { Pagination } from "@bedu-tmp/betomic";
+import { Pagination } from "@exponentialeducation/betomic";
 
 function IndexPage() {
   onPageChanged = (data) => {
@@ -148,7 +148,7 @@ When several pages are needed to display the data, an ellipsis (...) button indi
 Some examples of the pagination pageLimit and previous records:
 
 ```jsx highlight=14,15,20,21
-import { Pagination } from "@bedu-tmp/betomic";
+import { Pagination } from "@exponentialeducation/betomic";
 
 function IndexPage() {
   onPageChanged = (data) => {
@@ -189,7 +189,7 @@ If the result of the page limit with the total amount is determined in one page,
 The following example describes this:
 
 ```jsx highlight=9
-import { Pagination } from "@bedu-tmp/betomic";
+import { Pagination } from "@exponentialeducation/betomic";
 
 function IndexPage() {
 
@@ -211,7 +211,7 @@ If `totalRecords` value isn't provided or is set to 0, meaning `!totalRecords`, 
 As shown in the following example:
 
 ```jsx highlight=9
-import { Pagination } from "@bedu-tmp/betomic";
+import { Pagination } from "@exponentialeducation/betomic";
 
 function IndexPage() {
 
@@ -255,7 +255,7 @@ This is the `pageNeighbours` default value.
 The above examples are described as follows:
 
 ```jsx highlight=21,28
-import { Pagination } from "@bedu-tmp/betomic";
+import { Pagination } from "@exponentialeducation/betomic";
 
 function IndexPage() {
   onPageChanged = (data) => {

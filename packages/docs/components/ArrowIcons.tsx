@@ -23,7 +23,7 @@ import {
   RepeatIcon,
   LogOutIcon,
   ExitIcon,
-} from "@bedu-tmp/iconography/icons/esm/index";
+} from "@exponentialeducation/iconography/icons/esm/index";
 
 export default function ArrowIcons() {
   return <div className="my-10 grid grid-cols-6 gap-10">

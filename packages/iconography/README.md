@@ -4,7 +4,7 @@ A set of SVG icons for UI development.
 ## Usage
 ```jsx
 import React from "react";
-import { ArrowDown } from "@bedu-tmp/betomic";
+import { ArrowDown } from "@exponentialeducation/betomic";
 
 const Example = () => {
   return <ArrowDown />;

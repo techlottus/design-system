@@ -15,7 +15,7 @@ You can find the Betomic documentation [on the website](https://betomic.bedu.org
 We have several examples [on the website](https://betomic.bedu.org). Here is the first one to get you started:
 
 ```js
-import { HelloWorld } from '@bedu-tmp/betomic';
+import { HelloWorld } from '@exponentialeducation/betomic';
 
 const ExampleComponent = () => 
   <>

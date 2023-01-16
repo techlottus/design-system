@@ -2,7 +2,7 @@ import {
   TimeIcon,
   CalendarIcon,
   UpdateIcon,
- } from "@bedu-tmp/iconography/icons/esm/index";
+ } from "@exponentialeducation/iconography/icons/esm/index";
  
  export default function MathIcons() {
    return (

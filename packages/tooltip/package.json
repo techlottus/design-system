@@ -1,5 +1,5 @@
 {
-  "name": "@bedu-tmp/tooltip",
+  "name": "@exponentialeducation/tooltip",
   "version": "0.1.0-canary.4",
   "description": "A React tooltip component",
   "author": "Bedu Engineering <it@bedu.org>",

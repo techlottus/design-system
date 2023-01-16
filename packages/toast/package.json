@@ -1,5 +1,5 @@
 {
-  "name": "@bedu-tmp/toast",
+  "name": "@exponentialeducation/toast",
   "version": "0.1.0-canary.4",
   "description": "A React Toast component",
   "author": "Bedu Engineering <it@bedu.org>",

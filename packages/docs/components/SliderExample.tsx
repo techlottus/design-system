@@ -1,4 +1,4 @@
-import { Slider } from "@bedu-tmp/slider/src";
+import { Slider } from "@exponentialeducation/slider/src";
 
 const SliderExample = () => {
   return (

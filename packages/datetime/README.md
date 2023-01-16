@@ -1,11 +1,11 @@
-# `@bedu-tmp/datetime`
+# `@exponentialeducation/datetime`
 
 > TODO: description
 
 ## Usage
 
 ```
-const datetime = require('@bedu-tmp/datetime');
+const datetime = require('@exponentialeducation/datetime');
 
 // TODO: DEMONSTRATE API
 ```

@@ -1,4 +1,4 @@
-import { toast } from "@bedu-tmp/toast/src";
+import { toast } from "@exponentialeducation/toast/src";
 const ToastBasic = () => {
   return (
     <div className="mt-5">

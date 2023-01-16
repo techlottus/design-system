@@ -1,6 +1,6 @@
 import React from "react";
-import { Badge, Card } from "@bedu-tmp/betomic/src";
-import { BarcodeIcon, IdIcon, KebabIcon, UpdateIcon } from "@bedu-tmp/iconography/icons/esm/index";
+import { Badge, Card } from "@exponentialeducation/betomic/src";
+import { BarcodeIcon, IdIcon, KebabIcon, UpdateIcon } from "@exponentialeducation/iconography/icons/esm/index";
 
 const CardBasicExample = () => {
   return (

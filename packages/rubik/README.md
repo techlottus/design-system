@@ -4,12 +4,12 @@ The CSS and web font files to easily self-host the "Rubik" font.
 ## Quick installation
 This package has only the fonts variety available in Bedu's Design System, you can import the CSS, such as using a bundler like Webpack.
 ```sh
-$ yarn add @bedu-tmp/rubik // npm i @bedu-tmp/rubik
+$ yarn add @exponentialeducation/rubik // npm i @exponentialeducation/rubik
 ```
 
 Within your app entry file or site component, import it in.
 ```js
-import "@bedu-tmp/rubik"; // Defaults to weight 400.
+import "@exponentialeducation/rubik"; // Defaults to weight 400.
 ```
 
 Supported variables:
@@ -26,8 +26,8 @@ body {
 
 This package allows you to selecty weights and even individual styles, allowing you to cut down on payload sizes to the last byte!
 ```js
-import "@bedu-tmp/rubik/600.css"; // Weight 600.
-import "@bedu-tmp/rubik/700.css"; // Weight 700.
+import "@exponentialeducation/rubik/600.css"; // Weight 600.
+import "@exponentialeducation/rubik/700.css"; // Weight 700.
 ```
 
 ## Licensing

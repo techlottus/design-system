@@ -4,7 +4,7 @@ A set of SVG icons for UI development.
 ## Usage
 ```jsx
 import React from "react";
-import { BlendedIcon } from "@bedu-tmp/illustrations";
+import { BlendedIcon } from "@exponentialeducation/illustrations";
 
 const Example = () => {
   return <BlendedIcon />;

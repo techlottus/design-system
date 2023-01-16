@@ -1,4 +1,4 @@
-import { Nav, Navbar } from "@bedu-tmp/betomic/src";
+import { Nav, Navbar } from "@exponentialeducation/betomic/src";
 
 const BasicNav = () => {
   return (
