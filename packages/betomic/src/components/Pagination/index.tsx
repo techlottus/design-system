@@ -4,7 +4,7 @@ import cn from "classnames";
 // After `iconography` package will be published we need to enable it
 // add dependency to `package.json`.
 // 
-// import { ArrowLeftIcon, ArrowRightIcon } from "@bedu-tmp/iconography";
+// import { ArrowLeftIcon, ArrowRightIcon } from "@exponentialeducation/iconography";
 import { Button } from "..";
 
 interface PaginationData {

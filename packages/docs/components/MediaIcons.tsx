@@ -13,7 +13,7 @@ import {
   Columns4Icon,
   FilterIcon,
   LinkIcon,
- } from "@bedu-tmp/iconography/icons/esm/index";
+ } from "@exponentialeducation/iconography/icons/esm/index";
  
  export default function MediaIcons() {
    return (

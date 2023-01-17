@@ -1,6 +1,6 @@
-import { DateInput } from "@bedu-tmp/datetime/src";
-import { FormGroup } from "@bedu-tmp/betomic/src";
-import { HelperIcon } from "@bedu-tmp/iconography";
+import { DateInput } from "@exponentialeducation/datetime/src";
+import { FormGroup } from "@exponentialeducation/betomic/src";
+import { HelperIcon } from "@exponentialeducation/iconography";
 import { useState, useEffect } from "react";
 
 const DateInputLabelExample = () => {

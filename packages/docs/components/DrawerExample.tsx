@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Drawer } from "@bedu-tmp/betomic/src";
+import { Drawer } from "@exponentialeducation/betomic/src";
 
 const BasicDrawer = () => {
   const [open, setOpen] = useState<boolean>(false);

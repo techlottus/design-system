@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import DateInput from ".";
-import FormGroup from "@bedu-tmp/betomic/src/components/FormGroup";
+import FormGroup from "@exponentialeducation/betomic/src/components/FormGroup";
 import userEvent from "@testing-library/user-event";
 
 describe("<DateInput />", () => {

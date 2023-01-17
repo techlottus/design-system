@@ -84,7 +84,7 @@ import {
   DataStorytellerIcon,
   DataScientistManagerIcon,
   DataAnalystIcon
-} from "@bedu-tmp/illustrations/icons/esm/index";
+} from "@exponentialeducation/illustrations/icons/esm/index";
 
 const GenericIllustrations = () => {
   return <div className="my-10 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10">

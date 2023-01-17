@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import { Listbox } from "@headlessui/react";
-import { CalendarIcon, CheckIcon, CaretDownIcon, HelperIcon } from "@bedu-tmp/iconography";
-import { FormGroup } from "@bedu-tmp/betomic/src";
+import { CalendarIcon, CheckIcon, CaretDownIcon, HelperIcon } from "@exponentialeducation/iconography";
+import { FormGroup } from "@exponentialeducation/betomic/src";
 import cn from "classnames";
 
 const items = [

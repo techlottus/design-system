@@ -1,5 +1,5 @@
-import { InputGroup, FormGroup } from "@bedu-tmp/betomic/src";
-import { HelperIcon } from "@bedu-tmp/iconography/icons/esm";
+import { InputGroup, FormGroup } from "@exponentialeducation/betomic/src";
+import { HelperIcon } from "@exponentialeducation/iconography/icons/esm";
 
 const FormGroupExample = () => {
   return (

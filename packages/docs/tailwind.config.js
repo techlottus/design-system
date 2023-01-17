@@ -2,16 +2,16 @@ const plugin = require("tailwindcss/plugin");
 
 const nextraTheme = {
   presets: [
-    require("@bedu-tmp/tailwind-base/lib/tailwind-base").default,
+    require("@exponentialeducation/tailwind-base/lib/tailwind-base").default,
   ],
   purge: {
     content: [
       "./pages/**/*.{js,ts,tsx,mdx}",
       "./components/**/*.{js,ts,tsx}",
-      "../../node_modules/@bedu-tmp/betomic/src/**/*.{js,ts,tsx}",
-      "../../node_modules/@bedu-tmp/datetime/src/**/*.{js,ts,tsx}",
-      "../../node_modules/@bedu-tmp/tooltip/src/**/*.{js,ts,tsx}",
-      "../../node_modules/@bedu-tmp/toast/src/**/*.{js,ts,tsx}"
+      "../../node_modules/@exponentialeducation/betomic/src/**/*.{js,ts,tsx}",
+      "../../node_modules/@exponentialeducation/datetime/src/**/*.{js,ts,tsx}",
+      "../../node_modules/@exponentialeducation/tooltip/src/**/*.{js,ts,tsx}",
+      "../../node_modules/@exponentialeducation/toast/src/**/*.{js,ts,tsx}"
     ],
     options: {
       safelist: [

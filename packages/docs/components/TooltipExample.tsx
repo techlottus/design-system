@@ -1,4 +1,4 @@
-import { Tooltip } from "@bedu-tmp/tooltip/src";
+import { Tooltip } from "@exponentialeducation/tooltip/src";
 
 const TooltipBasic = () => {
   return (

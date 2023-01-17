@@ -6,24 +6,24 @@ This package has only the fonts variety available in Bedu's Design System, you c
 
 Using **Montserrat Web Font**
 ```js
-yarn add @bedu-tmp/montserrat // npm i @bedu-tmp/montserrat
+yarn add @exponentialeducation/montserrat // npm i @exponentialeducation/montserrat
 ```
 
 or **Rubik Web Font**,
 ```js
-yarn add @bedu-tmp/rubik // npm i @bedu-tmp/rubik
+yarn add @exponentialeducation/rubik // npm i @exponentialeducation/rubik
 ```
 
 Within your app entry file or site component, import it in.
 ```js
-import "@bedu-tmp/montserrat"; // Defaults to weight 400.
+import "@exponentialeducation/montserrat"; // Defaults to weight 400.
 ```
 
 ## How to use
 It's as simple as importing it globally into `_app`.jsx or `_app.tsx`. Alternatively, you could choose to import it into a page component, however, the CSS will only be present within the page and not globally.
 ```jsx
-import "@bedu-tmp/montserrat";
-import "@bedu-tmp/montserrat/700.css";
+import "@exponentialeducation/montserrat";
+import "@exponentialeducation/montserrat/700.css";
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
@@ -46,8 +46,8 @@ body {
 
 This packages allows you to selecty weights and even individual styles, allowing you to cut down on payload sizes to the last byte!
 ```js
-import "@bedu-tmp/montserrat/600.css"; // Weight 600.
-import "@bedu-tmp/rubik/700.css"; // Weight 700.
+import "@exponentialeducation/montserrat/600.css"; // Weight 600.
+import "@exponentialeducation/rubik/700.css"; // Weight 700.
 ```
 
 ## Licensing

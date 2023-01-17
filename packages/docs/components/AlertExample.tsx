@@ -1,4 +1,4 @@
-import { Alert } from "@bedu-tmp/betomic/src"
+import { Alert } from "@exponentialeducation/betomic/src"
 
 const BasicAlert = () => {
   return (
