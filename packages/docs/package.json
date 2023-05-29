@@ -1,8 +1,8 @@
 {
-  "name": "@exponentialeducation/docs",
+  "name": "@lottuseducation/docs",
   "version": "0.0.1-alpha.0",
   "description": "Components site",
-  "author": "Bedu Engineering <it@bedu.org>",
+  "author": "Lottus Engineering <dev.tech@lottuseducation.com>",
   "private": true,
   "repository": {
     "type": "git",

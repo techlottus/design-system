@@ -1,0 +1,5 @@
+npm ERR! code EINVALIDPACKAGENAME
+npm ERR! Invalid package name "@lottuseducation/" of package "@lottuseducation/@file:C:\Users\Maria Sanchez\Documents\techLottusDS\design-system\packages\betomic": name can only contain URL-friendly characters.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\Maria Sanchez\AppData\Local\npm-cache\_logs\2023-05-29T21_20_54_860Z-debug-0.log
