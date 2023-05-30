@@ -1,5 +1,5 @@
 {
-  "name": "@exponentialeducation/betomic",
+  "name": "@lottuseducation/betomic",
   "private": true,
   "workspaces": [
     "packages/*"
@@ -7,15 +7,15 @@
   "scripts": {
     "bootstrap": "lerna bootstrap --use-workspaces",
     "clean": "lerna run --parallel clean",
-    "compile:tailwind-base": "lerna run compile --scope @exponentialeducation/tailwind-base",
-    "compile:betomic": "lerna run compile --scope @exponentialeducation/betomic",
-    "compile:tooltip": "lerna run compile --scope @exponentialeducation/tooltip",
-    "compile:datetime": "lerna run compile --scope @exponentialeducation/datetime",
-    "compile:toast": "lerna run compile --scope @exponentialeducation/toast",
-    "build:icons": "lerna run compile --scope @exponentialeducation/iconography",
-    "build:illustrations": "lerna run compile --scope @exponentialeducation/illustrations",
-    "docs:dev": "yarn compile:tailwind-base && yarn build:icons && yarn build:illustrations && lerna run dev --scope @exponentialeducation/docs",
-    "docs:build": "yarn compile:tailwind-base && yarn build:icons && yarn build:illustrations && lerna run build --scope @exponentialeducation/docs",
+    "compile:tailwind-base": "lerna run compile --scope @lottuseducation/tailwind-base",
+    "compile:betomic": "lerna run compile --scope @lottuseducation/betomic",
+    "compile:tooltip": "lerna run compile --scope @lottuseducation/tooltip",
+    "compile:datetime": "lerna run compile --scope @lottuseducation/datetime",
+    "compile:toast": "lerna run compile --scope @lottuseducation/toast",
+    "build:icons": "lerna run compile --scope @lottuseducation/iconography",
+    "build:illustrations": "lerna run compile --scope @lottuseducation/illustrations",
+    "docs:dev": "yarn compile:tailwind-base && yarn build:icons && yarn build:illustrations && lerna run dev --scope @lottuseducation/docs",
+    "docs:build": "yarn compile:tailwind-base && yarn build:icons && yarn build:illustrations && lerna run build --scope @lottuseducation/docs",
     "compile": "lerna run --parallel compile",
     "test": "lerna run --parallel test"
   },
