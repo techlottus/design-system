@@ -1,6 +1,6 @@
 {
   "name": "@lottuseducation/design_system",
-  "version": "0.1.1-alpha.0",
+  "version": "0.1.0-alpha.0",
   "description": "Core components",
   "author": "Lottus Engineering <dev.tech@lottuseducation.com>",
   "main": "lib/cjs/index.js",
@@ -18,10 +18,9 @@
   "scripts": {
     "clean": "rm -rf dist/* && rm -rf lib/*",
     "prepublishOnly": "npm run compile",
-    "compile": "npm run clean && npm run compile:esm && npm run compile:cjs && npm run compile:esnext",
+    "compile": "npm run clean && npm run compile:esm && npm run compile:cjs",
     "compile:esm": "tsc -p ./src",
     "compile:cjs": "tsc -p ./src -m commonjs --outDir lib/cjs",
-    "compile:esnext": "tsc -p ./src -t esnext --outDir lib/esnext",
     "test": "jest",
     "test:watch": "jest --watch",
     "jest:clearcache": "jest --clearCache"
@@ -49,5 +48,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "9aee86c05c5c90515ab4c6a9e92c6b39dd7d2d26"
+  "gitHead": "6ed34545730646458f999e425acf93c55cbe7a4c"
 }
