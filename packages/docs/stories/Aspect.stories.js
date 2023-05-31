@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 import React from "react";
 
-import Aspect from "./Aspect";
+import Aspect from "../../portalverse/src/components/Aspect";
 export default {
   title: "Aspect",
   component: Aspect,

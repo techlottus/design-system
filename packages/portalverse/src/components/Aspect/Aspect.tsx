@@ -1,5 +1,4 @@
 import { calculateAspectRatioPercentage } from "../helpers/calculateAspectPer";
-import React from "react";
 
 const defaultRatioPercentage = "50%"; // 2:1
 const fractionRegex = /([1-9][0-9]*(.[0-9]*)?)\/[1-9][0-9]*(.[0-9]*)?/g;

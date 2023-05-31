@@ -1,4 +1,4 @@
-import Accordion from "../../betomic/src/components/Accordion";
+import Accordion from "../../portalverse/src/components/Accordion";
 export default {
   title: "Accordion",
   component: Accordion,

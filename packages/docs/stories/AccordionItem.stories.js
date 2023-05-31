@@ -1,4 +1,5 @@
-import AccordionItem from "./AccordionItem";
+import AccordionItem from "../../portalverse/src/components/AccordionItem/AccordionItem";
+
 export default {
   title: "AccordionItem",
   component: AccordionItem,

@@ -1,0 +1,142 @@
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+warning Pattern ["@babel/preset-env@^7.22.4"] is trying to unpack in the same destination "/home/alanllamas/.cache/yarn/v6/npm-@babel-preset-env-7.22.4-c86a82630f0e8c61d9bb9327b7b896732028cbed-integrity/node_modules/@babel/preset-env" as pattern ["@babel/preset-env@^7.21.5","@babel/preset-env@^7.20.2"]. This could result in non-deterministic behavior, skipping.
+warning Pattern ["@babel/preset-react@^7.22.3"] is trying to unpack in the same destination "/home/alanllamas/.cache/yarn/v6/npm-@babel-preset-react-7.22.3-2ec7f91d0c924fa2ea0c7cfbbf690bc62b79cd84-integrity/node_modules/@babel/preset-react" as pattern ["@babel/preset-react@^7.18.6","@babel/preset-react@^7.18.6"]. This could result in non-deterministic behavior, skipping.
+[3/4] Linking dependencies...
+warning " > @lottuseducation/design_system@0.0.0-beta-1" has unmet peer dependency "react@>= 16".
+warning " > @exponentialeducation/tailwind-base@0.2.0-canary.4" has unmet peer dependency "tailwindcss@>=2.0.0".
+warning "workspace-aggregator-0048c836-90ea-452d-b116-0fc7d3f2fff5 > @lottuseducation/design_system > @babel/preset-env@7.22.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-0048c836-90ea-452d-b116-0fc7d3f2fff5 > @lottuseducation/design_system > @babel/preset-react@7.22.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-0048c836-90ea-452d-b116-0fc7d3f2fff5 > @lottuseducation/design_system > ts-node@10.9.1" has unmet peer dependency "@types/node@*".
+warning "workspace-aggregator-0048c836-90ea-452d-b116-0fc7d3f2fff5 > @lottuseducation/docs > nextra > @mdx-js/loader@2.3.0" has unmet peer dependency "webpack@>=4".
+warning "workspace-aggregator-0048c836-90ea-452d-b116-0fc7d3f2fff5 > @lottuseducation/docs > nextra-theme-docs > @reach/skip-nav@0.11.2" has incorrect peer dependency "react@^16.8.0".
+warning "workspace-aggregator-0048c836-90ea-452d-b116-0fc7d3f2fff5 > @lottuseducation/docs > nextra-theme-docs > @reach/skip-nav@0.11.2" has incorrect peer dependency "react-dom@^16.8.0".
+warning "workspace-aggregator-0048c836-90ea-452d-b116-0fc7d3f2fff5 > @lottuseducation/docs > nextra-theme-docs > next-themes@0.0.8" has incorrect peer dependency "next@^9.5.5".
+warning "workspace-aggregator-0048c836-90ea-452d-b116-0fc7d3f2fff5 > @lottuseducation/docs > nextra-theme-docs > next-themes@0.0.8" has incorrect peer dependency "react@^16.13.1".
+warning "workspace-aggregator-0048c836-90ea-452d-b116-0fc7d3f2fff5 > @lottuseducation/docs > nextra-theme-docs > next-themes@0.0.8" has incorrect peer dependency "react-dom@^16.13.1".
+warning "@babel/preset-env > @babel/helper-compilation-targets@7.22.1" has unmet peer dependency "@babel/core@^7.0.0".
+warning "@babel/preset-env > @babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression@7.18.6" has unmet peer dependency "@babel/core@^7.0.0".
+warning "@babel/preset-env > @babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining@7.22.3" has unmet peer dependency "@babel/core@^7.13.0".
+warning "@babel/preset-env > @babel/plugin-proposal-private-property-in-object@7.21.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-syntax-async-generators@7.8.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-syntax-class-properties@7.12.13" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-syntax-class-static-block@7.14.5" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-syntax-dynamic-import@7.8.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-syntax-export-namespace-from@7.8.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-syntax-import-assertions@7.20.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-syntax-import-attributes@7.22.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-syntax-import-meta@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-syntax-json-strings@7.8.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-syntax-logical-assignment-operators@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-syntax-nullish-coalescing-operator@7.8.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-syntax-numeric-separator@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-syntax-object-rest-spread@7.8.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-syntax-optional-catch-binding@7.8.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-syntax-optional-chaining@7.8.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-syntax-private-property-in-object@7.14.5" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-syntax-top-level-await@7.14.5" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-syntax-unicode-sets-regex@7.18.6" has unmet peer dependency "@babel/core@^7.0.0".
+warning "@babel/preset-env > @babel/plugin-transform-arrow-functions@7.21.5" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-async-generator-functions@7.22.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-async-to-generator@7.20.7" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-block-scoped-functions@7.18.6" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-block-scoping@7.21.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-class-properties@7.22.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-class-static-block@7.22.3" has unmet peer dependency "@babel/core@^7.12.0".
+warning "@babel/preset-env > @babel/plugin-transform-classes@7.21.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-computed-properties@7.21.5" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-destructuring@7.21.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-dotall-regex@7.18.6" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-duplicate-keys@7.18.9" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-dynamic-import@7.22.1" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-exponentiation-operator@7.18.6" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-export-namespace-from@7.22.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-for-of@7.21.5" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-function-name@7.18.9" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-json-strings@7.22.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-literals@7.18.9" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-logical-assignment-operators@7.22.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-member-expression-literals@7.18.6" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-modules-amd@7.20.11" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-modules-commonjs@7.21.5" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-modules-systemjs@7.22.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-modules-umd@7.18.6" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-named-capturing-groups-regex@7.22.3" has unmet peer dependency "@babel/core@^7.0.0".
+warning "@babel/preset-env > @babel/plugin-transform-new-target@7.22.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-nullish-coalescing-operator@7.22.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-numeric-separator@7.22.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-object-rest-spread@7.22.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-object-super@7.18.6" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-optional-catch-binding@7.22.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-optional-chaining@7.22.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-parameters@7.22.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-private-methods@7.22.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-private-property-in-object@7.22.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-property-literals@7.18.6" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-regenerator@7.21.5" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-reserved-words@7.18.6" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-shorthand-properties@7.18.6" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-spread@7.20.7" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-sticky-regex@7.18.6" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-template-literals@7.18.9" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-typeof-symbol@7.18.9" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-unicode-escapes@7.21.5" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-unicode-property-regex@7.22.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-unicode-regex@7.18.6" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > @babel/plugin-transform-unicode-sets-regex@7.22.3" has unmet peer dependency "@babel/core@^7.0.0".
+warning "@babel/preset-env > @babel/preset-modules@0.1.5" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > babel-plugin-polyfill-corejs2@0.4.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > babel-plugin-polyfill-corejs3@0.8.1" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-env > babel-plugin-polyfill-regenerator@0.5.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-react > @babel/plugin-transform-react-display-name@7.18.6" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-react > @babel/plugin-transform-react-jsx@7.22.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-react > @babel/plugin-transform-react-jsx-development@7.18.6" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@babel/preset-react > @babel/plugin-transform-react-pure-annotations@7.18.6" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-0048c836-90ea-452d-b116-0fc7d3f2fff5 > @lottuseducation/docs > next > styled-jsx > @babel/plugin-syntax-jsx@7.14.5" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-0048c836-90ea-452d-b116-0fc7d3f2fff5 > @lottuseducation/docs > nextra-theme-docs > @reach/skip-nav > @reach/utils@0.11.2" has incorrect peer dependency "react@^16.8.0".
+warning "workspace-aggregator-0048c836-90ea-452d-b116-0fc7d3f2fff5 > @lottuseducation/docs > nextra-theme-docs > @reach/skip-nav > @reach/utils@0.11.2" has incorrect peer dependency "react-dom@^16.8.0".
+warning "workspace-aggregator-0048c836-90ea-452d-b116-0fc7d3f2fff5 > @lottuseducation/design_system > @babel/preset-env > @babel/plugin-proposal-private-property-in-object > @babel/helper-create-class-features-plugin@7.22.1" has unmet peer dependency "@babel/core@^7.0.0".
+warning "workspace-aggregator-0048c836-90ea-452d-b116-0fc7d3f2fff5 > @lottuseducation/design_system > @babel/preset-env > @babel/plugin-syntax-unicode-sets-regex > @babel/helper-create-regexp-features-plugin@7.22.1" has unmet peer dependency "@babel/core@^7.0.0".
+warning "workspace-aggregator-0048c836-90ea-452d-b116-0fc7d3f2fff5 > @lottuseducation/design_system > @babel/preset-env > @babel/plugin-transform-async-generator-functions > @babel/helper-remap-async-to-generator@7.18.9" has unmet peer dependency "@babel/core@^7.0.0".
+warning "workspace-aggregator-0048c836-90ea-452d-b116-0fc7d3f2fff5 > @lottuseducation/design_system > @babel/preset-env > @babel/preset-modules > @babel/plugin-proposal-unicode-property-regex@7.18.6" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-0048c836-90ea-452d-b116-0fc7d3f2fff5 > @lottuseducation/design_system > @babel/preset-env > babel-plugin-polyfill-corejs2 > @babel/helper-define-polyfill-provider@0.4.0" has unmet peer dependency "@babel/core@^7.4.0-0".
+warning "workspace-aggregator-0048c836-90ea-452d-b116-0fc7d3f2fff5 > @lottuseducation/design_system > @babel/preset-react > @babel/plugin-transform-react-jsx > @babel/plugin-syntax-jsx@7.21.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "@storybook/react-webpack5 > @storybook/preset-react-webpack > @babel/preset-flow@7.21.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning " > @storybook/react@7.0.18" has unmet peer dependency "react@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning " > @storybook/react@7.0.18" has unmet peer dependency "react-dom@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning "@storybook/react > react-element-to-jsx-string@15.0.0" has unmet peer dependency "react@^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1 || ^18.0.0".
+warning "@storybook/react > react-element-to-jsx-string@15.0.0" has unmet peer dependency "react-dom@^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1 || ^18.0.0".
+warning "@storybook/react > @storybook/react-dom-shim@7.0.18" has unmet peer dependency "react@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning "@storybook/react > @storybook/react-dom-shim@7.0.18" has unmet peer dependency "react-dom@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning " > @storybook/react-webpack5@7.0.18" has unmet peer dependency "react@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning " > @storybook/react-webpack5@7.0.18" has unmet peer dependency "react-dom@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning "@storybook/react-webpack5 > @storybook/preset-react-webpack@7.0.18" has unmet peer dependency "react@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning "@storybook/react-webpack5 > @storybook/preset-react-webpack@7.0.18" has unmet peer dependency "react-dom@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning "@storybook/react-webpack5 > @storybook/builder-webpack5@7.0.18" has unmet peer dependency "react@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning "@storybook/react-webpack5 > @storybook/builder-webpack5@7.0.18" has unmet peer dependency "react-dom@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning "@storybook/addon-links > @storybook/manager-api@7.0.18" has unmet peer dependency "react@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning "@storybook/addon-links > @storybook/manager-api@7.0.18" has unmet peer dependency "react-dom@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning "@storybook/react-webpack5 > @storybook/builder-webpack5 > @storybook/addons@7.0.18" has unmet peer dependency "react@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning "@storybook/react-webpack5 > @storybook/builder-webpack5 > @storybook/addons@7.0.18" has unmet peer dependency "react-dom@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning "@storybook/addon-interactions > @storybook/theming@7.0.18" has unmet peer dependency "react@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning "@storybook/addon-interactions > @storybook/theming@7.0.18" has unmet peer dependency "react-dom@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning "@storybook/addon-interactions > @storybook/components@7.0.18" has unmet peer dependency "react@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning "@storybook/addon-interactions > @storybook/components@7.0.18" has unmet peer dependency "react-dom@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning "@storybook/react-webpack5 > @storybook/builder-webpack5 > @storybook/theming > @emotion/use-insertion-effect-with-fallbacks@1.0.1" has unmet peer dependency "react@>=16.8.0".
+warning "@storybook/react-webpack5 > @storybook/builder-webpack5 > @storybook/components > use-resize-observer@9.1.0" has unmet peer dependency "react@16.8.0 - 18".
+warning "@storybook/react-webpack5 > @storybook/builder-webpack5 > @storybook/components > use-resize-observer@9.1.0" has unmet peer dependency "react-dom@16.8.0 - 18".
+warning "@storybook/addon-links > @storybook/router@7.0.18" has unmet peer dependency "react@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning "@storybook/addon-links > @storybook/router@7.0.18" has unmet peer dependency "react-dom@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning " > @storybook/addon-essentials@7.0.18" has unmet peer dependency "react@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning " > @storybook/addon-essentials@7.0.18" has unmet peer dependency "react-dom@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning "@storybook/addon-essentials > @storybook/addon-docs@7.0.18" has unmet peer dependency "react@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning "@storybook/addon-essentials > @storybook/addon-docs@7.0.18" has unmet peer dependency "react-dom@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning " > @storybook/blocks@7.0.18" has unmet peer dependency "react@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning " > @storybook/blocks@7.0.18" has unmet peer dependency "react-dom@^16.8.0 || ^17.0.0 || ^18.0.0".
+warning "@storybook/addon-essentials > @storybook/addon-docs > @mdx-js/react@2.3.0" has unmet peer dependency "react@>=16".
+warning "@storybook/addon-essentials > @storybook/addon-actions > react-inspector@6.0.1" has unmet peer dependency "react@^16.8.4 || ^17.0.0 || ^18.0.0".
+warning "@storybook/addon-essentials > @storybook/addon-docs > @storybook/blocks > markdown-to-jsx@7.2.0" has unmet peer dependency "react@>= 0.14.0".
+warning "@storybook/addon-essentials > @storybook/addon-docs > @storybook/blocks > react-colorful@5.6.1" has unmet peer dependency "react@>=16.8.0".
+warning "@storybook/addon-essentials > @storybook/addon-docs > @storybook/blocks > react-colorful@5.6.1" has unmet peer dependency "react-dom@>=16.8.0".
+warning " > @babel/preset-env@7.22.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning " > @babel/preset-react@7.22.3" has unmet peer dependency "@babel/core@^7.0.0-0".
