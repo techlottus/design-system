@@ -1,4 +1,4 @@
-import Footer from "../../portalverse/src/components/Footer";
+import Footer from "../../design-system/src/components/Footer";
 export default {
   title: "Footer",
   component: Footer,

@@ -1,4 +1,4 @@
-import TextLink from "../../portalverse/src/components/TextLink";
+import TextLink from "../../design-system/src/components/TextLink";
 export default {
   title: "TextLink",
   component: TextLink,

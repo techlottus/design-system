@@ -1,4 +1,4 @@
-import Icon from "../../portalverse/src/components/Icon";
+import Icon from "../../design-system/src/components/Icon";
 export default {
   title: "Icon",
   component: Icon,

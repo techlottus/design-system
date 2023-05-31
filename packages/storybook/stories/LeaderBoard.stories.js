@@ -1,4 +1,4 @@
-import LeaderBoard from "../../portalverse/src/components/LeaderBoard";
+import LeaderBoard from "../../design-system/src/components/LeaderBoard";
 export default {
   title: "LeaderBoard",
   component: LeaderBoard,

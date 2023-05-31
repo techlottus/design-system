@@ -1,4 +1,4 @@
-import Heading from "../../portalverse/src/components/Heading";
+import Heading from "../../design-system/src/components/Heading";
 export default {
   title: "Heading",
   component: Heading,
