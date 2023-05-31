@@ -1,4 +1,4 @@
-import Outstanding from "../../portalverse/src/components/Outstanding";
+import Outstanding from "../../design-system/src/components/Outstanding";
 export default {
   title: "Outstanding",
   component: Outstanding,

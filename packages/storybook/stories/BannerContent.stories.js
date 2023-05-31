@@ -1,4 +1,4 @@
-import BannerContent from "../../portalverse/src/components/BannerContent";
+import BannerContent from "../../design-system/src/components/BannerContent";
 export default {
   title: "BannerContent",
   component: BannerContent,

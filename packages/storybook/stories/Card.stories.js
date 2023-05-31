@@ -1,5 +1,5 @@
-import Card from "../../portalverse/src/components/Card";
-import Heading from "../../portalverse/src/components/Heading";
+import Card from "../../design-system/src/components/Card";
+import Heading from "../../design-system/src/components/Heading";
 export default {
   title: "Card",
   component: Card,

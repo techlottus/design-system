@@ -1,6 +1,3 @@
-import Drawer from "./plugins/drawer";
-import Navigation from "./plugins/navigation";
-import Tooltip from "./plugins/tooltip";
 import Miscelaneous from "./plugins/misc";
 
 export default {
@@ -68,5 +65,5 @@ export default {
       fill: ["dark"],
     },
   },
-  plugins: [Drawer, Navigation, Tooltip, Miscelaneous],
+  plugins: [ Miscelaneous ],
 };

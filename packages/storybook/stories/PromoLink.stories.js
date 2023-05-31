@@ -1,4 +1,4 @@
-import PromoLink from "../../portalverse/src/components/PromoLink";
+import PromoLink from "../../design-system/src/components/PromoLink";
 export default {
   title: "PromoLink",
   component: PromoLink,

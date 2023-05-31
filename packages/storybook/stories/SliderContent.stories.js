@@ -1,4 +1,4 @@
-import SliderContent from "../../portalverse/src/components/SliderContent";
+import SliderContent from "../../design-system/src/components/SliderContent";
 export default {
   title: "SliderContent",
   component: SliderContent,

@@ -1,4 +1,4 @@
-import Tabs from "../../portalverse/src/components/Tabs";
+import Tabs from "../../design-system/src/components/Tabs";
 export default {
   title: "Tabs",
   component: Tabs,

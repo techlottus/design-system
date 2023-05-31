@@ -1,4 +1,4 @@
-import SocialMedia from "../../portalverse/src/components/SocialMedia";
+import SocialMedia from "../../design-system/src/components/SocialMedia";
 export default {
   title: "SocialMedia",
   component: SocialMedia,

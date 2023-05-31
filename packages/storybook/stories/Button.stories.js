@@ -1,5 +1,5 @@
-import Heading from "../../portalverse/src/components/Heading/Heading";
-import Button from "../../portalverse/src/components/Button";
+import Heading from "../../design-system/src/components/Heading/Heading";
+import Button from "../../design-system/src/components/Button";
 export default {
   title: "Button",
   component: Button,
