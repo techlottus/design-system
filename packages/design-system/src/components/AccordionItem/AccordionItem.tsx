@@ -3,7 +3,7 @@ import Icon from "../Icon";
 import cn from "classnames";
 import { myhref } from "../helpers/myrefHelper";
 
-const AccordionItem = (props) => {
+const AccordionItem = (props: any) => {
   const {
     data,
     ColorClass = "",
@@ -57,7 +57,7 @@ const AccordionItem = (props) => {
           ["h-0 hidden"]: !open && !isOpen,
         })}
       >
-        {data?.content.map((item, index) => (
+        {data?.content.map((item: any, index: any) => (
           <div
             key={index}
             className={cn(

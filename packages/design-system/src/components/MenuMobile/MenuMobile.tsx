@@ -11,7 +11,7 @@ import PromoLink from "../PromoLink";
 import SocialMedia from "../SocialMedia";
 import cn from "classnames";
 
-const MenuMobile = (props) => {
+const MenuMobile = (props: any) => {
   const {
     submenuM = false,
     itemsData,

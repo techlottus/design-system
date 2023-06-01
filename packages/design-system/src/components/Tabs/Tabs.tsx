@@ -5,7 +5,7 @@ import cn from "classnames";
 const defaultValues = {
   className: "",
 };
-const Tabs = (props) => {
+const Tabs = (props: any) => {
   const { tabs, className = defaultValues.className } = props;
   return (
     <div className="overflow-hidden">

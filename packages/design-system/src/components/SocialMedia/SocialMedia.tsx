@@ -4,7 +4,7 @@ import SVGIcons from "../assets/SVGIcons";
 
 const smClass = cn("cursor-pointer ");
 
-const SocialMedia = (props) => {
+const SocialMedia = (props: any) => {
   const { className = "", socialMedia, svgClass = "" } = props;
   return (
     <div
@@ -13,7 +13,7 @@ const SocialMedia = (props) => {
         "flex px-10 py-10 w-full justify-center space-x-2 "
       )}
     >
-      {socialMedia?.map((sm, index) => (
+      {socialMedia?.map((sm: any, index: any) => (
         <div
           className={cn(smClass)}
           id={sm?.alt}

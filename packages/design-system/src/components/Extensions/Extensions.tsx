@@ -9,7 +9,7 @@ const defaultValues = {
   target: "_self",
 };
 
-const Extensions = (props) => {
+const Extensions = (props: any) => {
   const {
     type = "",
     value = "",

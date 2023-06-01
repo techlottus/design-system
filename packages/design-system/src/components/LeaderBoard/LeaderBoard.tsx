@@ -15,7 +15,7 @@ const variants = {
   dark: "text-neutral-900",
 };
 
-const LeaderBoard = (props) => {
+const LeaderBoard = (props: any) => {
   const {
     imgUrl = defaultValues.imgUrl,
     title = defaultValues.title,

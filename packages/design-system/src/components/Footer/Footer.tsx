@@ -12,7 +12,7 @@ const linksTitleSection = cn(
 );
 const textLinksClasses = cn("font-principal text-neutral-600 px-0 pb-4 pt-0");
 
-const Footer = (props) => {
+const Footer = (props: any) => {
   const {
     logoUrl,
     newsletter,
@@ -91,7 +91,7 @@ const Footer = (props) => {
           >
             {links?.deskLinks.map((l, indx) => (
               <div className="flex flex-col" key={indx}>
-                {l.map((link, index) => (
+                {l.map((link: any, index: any) => (
                   <div id="col1" className="flex flex-col pb-10" key={index}>
                     <div id="title-section1" className={linksTitleSection}>
                       {link?.titleSection}
@@ -150,7 +150,7 @@ const Footer = (props) => {
             {certificates?.title}
           </div>
           <div className="flex space-x-10">
-            {certificates?.logos.map((logo, index) => (
+            {certificates?.logos.map((logo: any, index: any) => (
               <img
                 src={logo?.url}
                 alt={logo?.alt}
@@ -225,7 +225,7 @@ const Footer = (props) => {
             {certificates?.title}
           </div>
           <div className="flex space-x-10 flex-wrap">
-            {certificates?.logos.map((logo, index) => (
+            {certificates?.logos.map((logo: any, index: any) => (
               <img
                 src={logo?.url}
                 alt={logo?.alt}

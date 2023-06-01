@@ -25,7 +25,7 @@ const colorsImg = {
   color7: "bg-neutral-900 ",
 };
 
-const PromoLink = (props) => {
+const PromoLink = (props: any) => {
   const {
     text,
     link,

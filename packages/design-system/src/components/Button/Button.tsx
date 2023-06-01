@@ -57,7 +57,7 @@ const isDisabled = {
   ),
 };
 
-const Button = (props) => {
+const Button = (props: any) => {
   const {
     id,
     label,

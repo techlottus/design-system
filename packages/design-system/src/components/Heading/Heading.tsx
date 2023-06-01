@@ -23,7 +23,7 @@ const defaultValues = {
   className: "",
 };
 
-const Heading = (props) => {
+const Heading = (props: any) => {
   const {
     title,
     type = defaultValues.type,

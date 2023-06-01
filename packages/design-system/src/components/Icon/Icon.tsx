@@ -1,6 +1,6 @@
 import cn from "classnames";
 
-const Icon = (props) => {
+const Icon = (props: any) => {
   const { iconName, className = "", type = "solid" } = props;
   return (
     <span

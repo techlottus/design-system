@@ -7,7 +7,7 @@ const iconPositions = {
   left: "flex flex-row-reverse",
 };
 
-const TextLink = (props) => {
+const TextLink = (props: any) => {
   const {
     target = "_self",
     className = "",

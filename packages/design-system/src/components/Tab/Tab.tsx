@@ -4,7 +4,7 @@ import Heading from "../Heading";
 import Icon from "../Icon";
 import SVGIcons from "../assets/SVGIcons";
 
-const Tab = (props) => {
+const Tab = (props: any) => {
   const {
     label,
     active = false,

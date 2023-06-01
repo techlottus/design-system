@@ -13,7 +13,7 @@ const defaultValues = {
   className: "",
 };
 
-const SliderContent = (props) => {
+const SliderContent = (props: any) => {
   const {
     title,
     text,

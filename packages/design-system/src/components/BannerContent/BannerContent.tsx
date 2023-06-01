@@ -7,7 +7,7 @@ import {
 } from "../helpers/classesHelper";
 import { getTextCount } from "../helpers/textHelper";
 
-const BannerContent = (props) => {
+const BannerContent = (props: any) => {
   const {
     title,
     text,

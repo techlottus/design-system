@@ -1,7 +1,7 @@
 export const calculateAspectRatioPercentage = (
-  ratio,
-  fractionRegex,
-  defaultRatioPercentage
+  ratio: any,
+  fractionRegex: any,
+  defaultRatioPercentage: any
 ) => {
   const containsValidFraction = fractionRegex.test(ratio);
 

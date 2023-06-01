@@ -51,7 +51,7 @@ const defaultValues = {
   className: "",
 };
 
-const Card = (props) => {
+const Card = (props: any) => {
   const {
     imageUrl,
     text,
@@ -72,7 +72,7 @@ const Card = (props) => {
     ["group hover:shadow-lg  cursor-pointer"]: link?.route,
   });
 
-  const handleOnClick = (e) => {
+  const handleOnClick = (e: any) => {
     if (link?.disabled) {
       e.stopPropagation();
     } else if (link?.route) {
@@ -85,7 +85,7 @@ const Card = (props) => {
   return (
     <div
       className={classCard}
-      onClick={(e) => {
+      onClick={(e: any) => {
         handleOnClick(e);
       }}
     >

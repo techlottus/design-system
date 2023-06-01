@@ -29,7 +29,7 @@ const colors = {
   color7: "bg-neutral-900",
 };
 
-const Outstanding = (props) => {
+const Outstanding = (props: any) => {
   const {
     imageUrl,
     title,

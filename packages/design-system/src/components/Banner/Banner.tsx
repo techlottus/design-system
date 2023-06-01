@@ -14,7 +14,7 @@ const defaultValues = {
   className: "",
 };
 const classBannerImage = cn("w-full h-full object-cover object-center");
-const Banner = (props) => {
+const Banner = (props: any) => {
   const {
     imageUrl,
     ratio = defaultValues.ratio,
