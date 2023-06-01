@@ -1,4 +1,3 @@
-import React from "react";
 import Tab from "../Tab";
 import cn from "classnames";
 
@@ -10,7 +9,7 @@ const Tabs = (props: any) => {
   return (
     <div className="overflow-hidden">
       <div className={cn(className, "flex justify-center overflow-auto")}>
-        {tabs.map((tab, indexTab) => (
+        {tabs.map((tab: any, indexTab: any) => (
           <Tab {...tab} key={indexTab} />
         ))}
       </div>

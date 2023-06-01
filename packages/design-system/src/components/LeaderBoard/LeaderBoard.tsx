@@ -1,4 +1,3 @@
-import React from "react";
 import Heading from "../Heading";
 import Extensions from "../Extensions";
 import cn from "classnames";
@@ -10,7 +9,7 @@ const defaultValues = {
   variant: "dark",
   links: {},
 };
-const variants = {
+const variants: any = {
   light: "text-neutral-100",
   dark: "text-neutral-900",
 };

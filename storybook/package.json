@@ -30,6 +30,7 @@
     "url": "https://github.com/techlottus/design-system/issues"
   },
   "dependencies": {
+    "@lottuseducation/design_system": "file:../packages/design-system/lottuseducation-design_system-1.0.0-alpha.0.tgz",
     "@storybook/addon-essentials": "^7.0.18",
     "@storybook/addon-interactions": "^7.0.18",
     "@storybook/addon-links": "^7.0.18",

@@ -9,7 +9,7 @@ export const getPositionContainerText = (potition: any) => {
     "w-full h-full",
     "hidden md:flex "
   );
-  const positions = {
+  const positions: any = {
     "center-top": "justify-center items-start text-center",
     "center-middle": "justify-center items-center text-center",
     "center-bottom": "justify-center items-end text-center",
@@ -22,7 +22,7 @@ export const getPositionContainerText = (potition: any) => {
   };
 
   const classesBannerImg = cn(commonClasses, {
-    [[positions[potition]]]: true,
+    [positions[potition]]: true,
   });
   return classesBannerImg;
 };
@@ -94,7 +94,7 @@ export const getPositionSliderContainerText = (potition: any) => {
     "w-full h-full",
     "hidden md:flex "
   );
-  const positions = {
+  const positions: any = {
     "center-top": "justify-center items-start text-center",
     "center-middle": "justify-center items-center text-center",
     "center-bottom": "justify-center items-end text-center",
@@ -107,7 +107,7 @@ export const getPositionSliderContainerText = (potition: any) => {
   };
 
   const classesBannerImg = cn(commonClasses, {
-    [[positions[potition]]]: true,
+    [positions[potition]]: true,
   });
   return classesBannerImg;
 };

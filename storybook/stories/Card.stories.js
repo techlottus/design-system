@@ -1,5 +1,5 @@
-import Card from "../../design-system/src/components/Card";
-import Heading from "../../design-system/src/components/Heading";
+import { Card } from "@lottuseducation/design_system";
+import { Heading } from "@lottuseducation/design_system";
 export default {
   title: "Card",
   component: Card,

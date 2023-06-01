@@ -1,4 +1,3 @@
-import React from "react";
 import cn from "classnames";
 import Heading from "../Heading";
 import Icon from "../Icon";

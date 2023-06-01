@@ -1,7 +1,6 @@
-import { Meta, StoryObj } from "@storybook/react";
 import React from "react";
 
-import Aspect from "../../design-system/src/components/Aspect";
+import { Aspect } from "@lottuseducation/design_system";
 export default {
   title: "Aspect",
   component: Aspect,

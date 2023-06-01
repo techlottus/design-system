@@ -1,4 +1,4 @@
-import PromoLink from "../../design-system/src/components/PromoLink";
+import { PromoLink } from "@lottuseducation/design_system";
 export default {
   title: "PromoLink",
   component: PromoLink,

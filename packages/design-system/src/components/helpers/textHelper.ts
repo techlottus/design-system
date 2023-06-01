@@ -12,6 +12,6 @@ export const getTextCount = (text: any, max: any) => {
         break;
       }
     }
-    return result;
   }
+  return result;
 };

@@ -1,13 +1,5 @@
-import React from "react";
 import Icon from "../Icon";
 import cn from "classnames";
-const defaultValues = {
-  type: "",
-  value: "",
-  text: "",
-  className: "",
-  target: "_self",
-};
 
 const Extensions = (props: any) => {
   const {

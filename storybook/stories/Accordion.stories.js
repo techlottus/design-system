@@ -1,4 +1,4 @@
-import Accordion from "../../design-system/src/components/Accordion";
+import {Accordion} from "@lottuseducation/design_system";
 export default {
   title: "Accordion",
   component: Accordion,

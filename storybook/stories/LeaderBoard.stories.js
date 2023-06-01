@@ -1,4 +1,4 @@
-import LeaderBoard from "../../design-system/src/components/LeaderBoard";
+import { LeaderBoard } from "@lottuseducation/design_system";
 export default {
   title: "LeaderBoard",
   component: LeaderBoard,

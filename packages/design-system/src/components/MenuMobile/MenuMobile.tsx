@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   getClassItemMobContainer,
   getClassIconMobContainer,
@@ -56,7 +56,7 @@ const MenuMobile = (props: any) => {
   const classesReverse = cn(
     "flex justify-end items-center p-1 border-b border-t w-full border-neutral-300 cursor-pointer flex-row-reverse"
   );
-  const ClassesMenuMobContainer = cn(
+  const ClassesMenuMobContainer: any = cn(
     "w-d:hidden w-full ",
     "bg-neutral-100",
     "border-t border-neutral-300",
@@ -72,7 +72,7 @@ const MenuMobile = (props: any) => {
     opacity: "1",
   };
 
-  const MenuMobStyles = {
+  const MenuMobStyles: any = {
     inactive: {
       transform: "translate3d(0,0,0)",
       msOverflowStyle: "none" /* IE and Edge */,
@@ -84,7 +84,7 @@ const MenuMobile = (props: any) => {
       msOverflowStyle: "none" /* IE and Edge */,
     },
   };
-  const commonClassesMenuMob = cn(
+  const commonClassesMenuMob: any = cn(
     "h-80 w-full",
     "overflow-y-scroll lg:hidden flex overscroll-contain",
     "pr-2",
@@ -94,9 +94,8 @@ const MenuMobile = (props: any) => {
     "w-full h-full top-2 left-0 absolute bg-neutral-100",
     "overflow-auto lg:hidden flex overscroll-contain"
   );
-  const stylesSubMenuMob = {
+  const stylesSubMenuMob: any = {
     msOverflowStyle: "none" /* IE and Edge */,
-    msOverflowStyle: "none",
     transform:
       sub === "principal" ? "translate3d(0, 0, 0)" : "translate3d(200%, 0, 0)",
     transition: "transform 0.5s, opacity 0.1s",
@@ -112,7 +111,7 @@ const MenuMobile = (props: any) => {
             style={MenuMobStyles[type]}
           >
             <div id="itemsContainer" className={ClassesItemsContainer}>
-              {itemsData.map((item, itemIndex) => {
+              {itemsData.map((item: any, itemIndex: any) => {
                 if (item.children.length) {
                   return (
                     <div key={itemIndex} className={classesItems}>
@@ -167,7 +166,7 @@ const MenuMobile = (props: any) => {
           >
             <div
               className={classesSubMenuContainer}
-              style={{ msOverflowStyle: "none", msOverflowStyle: "none" }}
+              style={{ msOverflowStyle: "none" }}
             >
               <div className={classesReverse}>
                 <TextLink
@@ -182,7 +181,7 @@ const MenuMobile = (props: any) => {
                   <Icon iconName={iconExpandLess} />
                 </div>
               </div>
-              {itemsData[index].children.map((item, itemIndex) => {
+              {itemsData[index].children.map((item: any, itemIndex: any) => {
                 if (item.principal) {
                   return (
                     <div

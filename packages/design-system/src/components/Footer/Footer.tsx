@@ -1,4 +1,3 @@
-import React from "react";
 import Button from "../Button";
 import TextLink from "../TextLink";
 import cn from "classnames";
@@ -89,14 +88,14 @@ const Footer = (props: any) => {
             id="links"
             className="border-t border-b border-neutral-400 flex justify-between py-10"
           >
-            {links?.deskLinks.map((l, indx) => (
+            {links?.deskLinks.map((l: any, indx: any) => (
               <div className="flex flex-col" key={indx}>
                 {l.map((link: any, index: any) => (
                   <div id="col1" className="flex flex-col pb-10" key={index}>
                     <div id="title-section1" className={linksTitleSection}>
                       {link?.titleSection}
                     </div>
-                    {link?.linktext?.map((lt, indxLt) => (
+                    {link?.linktext?.map((lt: any, indxLt: any) => (
                       <TextLink
                         {...lt}
                         key={indxLt}

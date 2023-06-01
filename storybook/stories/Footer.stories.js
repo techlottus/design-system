@@ -1,4 +1,4 @@
-import Footer from "../../design-system/src/components/Footer";
+import { Footer } from "@lottuseducation/design_system";
 export default {
   title: "Footer",
   component: Footer,

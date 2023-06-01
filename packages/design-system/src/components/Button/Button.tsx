@@ -1,15 +1,14 @@
 import cn from "classnames";
 import Icon from "../Icon";
-import React from "react";
 
-const sizes = {
+const sizes: { [key: string]: any } = {
   xsm: cn("px-4 py-3 text-sm rounded"),
   sm: cn("py-4 px-8 text-base rounded-lg"),
   md: cn("py-5 px-9 text-xl rounded-lg"),
   lg: cn("py-6 px-12 text-xl rounded-lg"),
 };
 
-const variants = {
+const variants: any = {
   primary: cn(
     "bg-neutral-900 hover:bg-neutral-800 focus:bg-neutral-600 active:bg-neutral-600",
     "text-neutral-100",
@@ -33,14 +32,14 @@ const variants = {
   ),
 };
 
-const commonClasses = cn(
+const commonClasses: any = cn(
   "flex",
   "relative",
   "min-w-40 max-w-full",
   "font-bold font-principal",
   "items-center justify-center"
 );
-const isDisabled = {
+const isDisabled: any = {
   primary: cn("cursor-not-allowed", "bg-neutral-400", "text-neutral-100"),
   text: cn("cursor-not-allowed text-neutral-400"),
   outlined: cn(
@@ -57,7 +56,16 @@ const isDisabled = {
   ),
 };
 
-const Button = (props: any) => {
+const Button = (props: {
+  id: string;
+  label: string;
+  className?: string;
+  disabled?: boolean;
+  iconName?: string;
+  size: string;
+  variant: "primary" | "secondary" | "outlined" | "outlined-negative";
+  onClick?: () => {};
+}) => {
   const {
     id,
     label,
@@ -68,19 +76,14 @@ const Button = (props: any) => {
     variant = "primary",
     onClick,
   } = props;
-  const buttonClasses = cn(commonClasses, className, {
-    [[sizes[size]]]: true,
-    [[variants[variant]]]: !disabled,
-    [[isDisabled[variant]]]: disabled,
+  const buttonClasses: string = cn(commonClasses, className, {
+    [sizes[size]]: true,
+    [variants[variant]]: !disabled,
+    [isDisabled[variant]]: disabled,
     ["cursor-pointer"]: !disabled,
   });
   return (
-    <button
-      id={id}
-      className={buttonClasses}
-      variant="button"
-      onClick={onClick}
-    >
+    <button id={id} className={buttonClasses} onClick={onClick}>
       {iconName ? (
         <span className={cn(" flex items-center", { ["space-x-2"]: label })}>
           <Icon iconName={iconName} /> <span>{label}</span>

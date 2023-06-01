@@ -1,20 +1,21 @@
-import Aspect from "../Aspect/Aspect";
+import { Aspect } from "@lottuseducation/design_system";
 import { useState } from "react";
 import cn from "classnames";
-import SliderContent from "../SliderContent/SliderContent";
+import SliderContent from "../SliderContent";
 
 import { useKeenSlider } from "keen-slider/react";
-const sliderImageStyles = {
+
+const sliderImageStyles: any = {
   dark: { filter: "brightness(0.5)" },
   light: { opacity: "0.5" },
 };
-const Slider = (props: any) => {
+const Slider: any = (props: any) => {
   const { slides } = props;
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [loaded, setLoaded] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const [loaded, setLoaded] = useState<boolean>(false);
   const stylesBaseControls =
     "material-icons select-none absolute top-[35%] p-1 rounded-lg text-[12px] w-p:hidden";
-  const [sliderRef, instanceRef] = useKeenSlider({
+  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     breakpoints: {
       "(min-width: 320px)": {
@@ -36,7 +37,7 @@ const Slider = (props: any) => {
     },
   });
 
-  const activeBulletSlide = (position) => {
+  const activeBulletSlide = (position: any) => {
     instanceRef.current?.moveToIdx(position);
   };
 
@@ -45,12 +46,12 @@ const Slider = (props: any) => {
       <section className="">
         {" "}
         <div ref={sliderRef} className="keen-slider">
-          {slides.map((slide, i) => (
+          {slides.map((slide: any, i: any) => (
             <section key={`card-item-${i}`}>
               <div className="keen-slider__slide">
                 <Aspect ratio="2/1">
                   <img
-                    style={sliderImageStyles?.[slide?.overlay]}
+                    style={sliderImageStyles[slide?.overlay]}
                     className="w-full h-full object-cover object-center"
                     src={slide?.url}
                     alt="slider-img"
@@ -96,7 +97,7 @@ const Slider = (props: any) => {
           >
             <span
               className="material-icons"
-              onClick={(e) => instanceRef.current?.next()}
+              onClick={() => instanceRef.current?.next()}
             >
               arrow_forward_ios
             </span>
@@ -106,7 +107,7 @@ const Slider = (props: any) => {
               "w-full flex justify-center gap-2 mt-6 dots absolute bottom-1 pb-10"
             )}
           >
-            {slides.map((_, i) => (
+            {slides.map((_: any, i: any) => (
               <div
                 key={`bullet-item-${i}`}
                 onClick={() => activeBulletSlide(i)}
