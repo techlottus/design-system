@@ -1,3 +1,0 @@
-# `@exponentialeducation/docs`
-
-> TODO: description
