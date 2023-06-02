@@ -1,0 +1,15 @@
+{
+  "alert": "Alert",
+  "avatar": "Avatar",
+  "badge": "Badge",
+  "brand": "Brand",
+  "button": "Button",
+  "card": "Card",
+  "container": "Container",
+  "drawer": "Drawer",
+  "form-group": "Form Group",
+  "input-group": "Input Group",
+  "nav": "Nav",
+  "navbar": "Navbar",
+  "pagination": "Pagination"
+}

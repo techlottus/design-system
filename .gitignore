@@ -8,4 +8,3 @@ lib
 .DS_Store
 .next
 build
-.env

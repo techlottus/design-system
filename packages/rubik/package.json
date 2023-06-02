@@ -1,0 +1,28 @@
+{
+  "name": "@exponentialeducation/rubik",
+  "version": "0.2.0-canary.4",
+  "description": "Self-hosted Rubik fonts",
+  "author": "Bedu Engineering <it@bedu.org>",
+  "homepage": "https://betomic.bedu.org/fonts/",
+  "license": "UNLICENSED",
+  "main": "index.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bedu-hq/betomic.git",
+    "directory": "packages/fonts"
+  },
+  "bugs": {
+    "url": "https://github.com/bedu-hq/betomic/issues"
+  },
+  "keywords": [
+    "fonts",
+    "font family",
+    "google fonts",
+    "rubik",
+    "Rubik"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "9aee86c05c5c90515ab4c6a9e92c6b39dd7d2d26"
+}
