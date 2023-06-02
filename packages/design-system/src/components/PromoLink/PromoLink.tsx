@@ -25,7 +25,14 @@ const colorsImg: any = {
 };
 
 const PromoLink = (props: any) => {
-  const { text, link, className = "", color = "color1", imgUrl } = props;
+  const {
+    text,
+    link,
+    className = "",
+    color = "color1",
+    imgUrl,
+    variant = "image",
+  } = props;
   const handleOnClick = (e: any) => {
     if (!link) {
       e.stopPropagation();
@@ -40,7 +47,7 @@ const PromoLink = (props: any) => {
       <div
         id="promo-link-shadow"
         className={cn(
-          "hidden",
+          { ["hidden"]: variant === "image" },
           "h-full w-full rounded border p-4  shadow-lb bg-neutral-100 cursor-pointer",
           className,
           [colors[color]]
@@ -58,6 +65,7 @@ const PromoLink = (props: any) => {
       </div>
       <div
         className={cn(
+          { ["hidden"]: variant === "shadow" },
           "h-fit w-full rounded mix-blend-multiply bg-blend-multiply flex  ",
           [colorsImg[color]]
         )}

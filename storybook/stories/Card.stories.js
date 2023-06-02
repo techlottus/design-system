@@ -75,7 +75,7 @@ const Row = (args1) => (
 );
 const Column = (args2) => (
   <div>
-    <div className="py-4">
+    <div className="py-4 bg-neutral-900">
       <Heading
         title="The Card component adapts its size depending on the width of the container."
         type="h-5"
