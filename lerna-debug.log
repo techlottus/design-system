@@ -1,7 +1,0 @@
-46 error Error: Command failed with exit code 128: git tag @lottuseducation/tailwind-base@0.0.1-alpha.0 -m @lottuseducation/tailwind-base@0.0.1-alpha.0
-46 error fatal: tag '@lottuseducation/tailwind-base@0.0.1-alpha.0' already exists
-46 error     at makeError (/home/alanllamas/.nvm/versions/node/v16.16.0/lib/node_modules/lerna/node_modules/execa/lib/error.js:59:11)
-46 error     at handlePromise (/home/alanllamas/.nvm/versions/node/v16.16.0/lib/node_modules/lerna/node_modules/execa/index.js:114:26)
-46 error     at processTicksAndRejections (node:internal/process/task_queues:96:5)
-46 error     at async Promise.all (index 1)
-46 error     at async Promise.all (index 0)

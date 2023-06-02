@@ -1,5 +1,5 @@
 {
-  "name": "@lottuseducation/design_system",
+  "name": "@exponentialeducation/betomic",
   "private": true,
   "workspaces": [
     "packages/*"
@@ -7,28 +7,35 @@
   "scripts": {
     "bootstrap": "lerna bootstrap --use-workspaces",
     "clean": "lerna run --parallel clean",
-    "compile:tailwind-base": "lerna run compile --scope @lottuseducation/tailwind-base",
-    "compile:portalverse": "lerna run compile --scope @lottuseducation/portalverse",
-    "docs:dev": "yarn compile:tailwind-base && lerna run dev --scope @lottuseducation/docs",
-    "docs:build": "yarn compile:tailwind-base && lerna run build --scope @lottuseducation/docs",
+    "compile:tailwind-base": "lerna run compile --scope @exponentialeducation/tailwind-base",
+    "compile:betomic": "lerna run compile --scope @exponentialeducation/betomic",
+    "compile:tooltip": "lerna run compile --scope @exponentialeducation/tooltip",
+    "compile:datetime": "lerna run compile --scope @exponentialeducation/datetime",
+    "compile:toast": "lerna run compile --scope @exponentialeducation/toast",
+    "build:icons": "lerna run compile --scope @exponentialeducation/iconography",
+    "build:illustrations": "lerna run compile --scope @exponentialeducation/illustrations",
+    "docs:dev": "yarn compile:tailwind-base && yarn build:icons && yarn build:illustrations && lerna run dev --scope @exponentialeducation/docs",
+    "docs:build": "yarn compile:tailwind-base && yarn build:icons && yarn build:illustrations && lerna run build --scope @exponentialeducation/docs",
     "compile": "lerna run --parallel compile",
     "test": "lerna run --parallel test"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "@types/react": "^17.0.20",
+    "@types/react-dom": "^17.0.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "typescript": "^4.4.3"
   },
   "devDependencies": {
     "lerna": "^4.0.0"
   },
   "description": "A React-based UI toolkit for web",
-  "author": "Lottus Engineering <dev.tech@lottuseducation.com>",
+  "author": "Bedu Engineering <it@bedu.org>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/techlottus/design-system.git"
+    "url": "git+https://github.com/bedu-hq/betomic.git"
   },
   "bugs": {
-    "url": "https://github.com/techlottus/design-system/issues"
+    "url": "https://github.com/bedu-hq/betomic/issues"
   }
 }
