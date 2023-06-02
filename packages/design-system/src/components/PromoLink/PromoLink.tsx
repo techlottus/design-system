@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import Icon from "../Icon";
 import cn from "classnames";
 import { myhref } from "../helpers/myrefHelper";
@@ -6,7 +5,7 @@ import { getTextCount } from "../helpers/textHelper";
 import Aspect from "../Aspect";
 import Heading from "../Heading";
 
-const colors = {
+const colors: any = {
   color1: "border-outstanding-100 shadow-outstanding-100",
   color2: "border-outstanding-200 shadow-outstanding-200",
   color3: "border-outstanding-300 shadow-outstanding-300",
@@ -15,7 +14,7 @@ const colors = {
   color6: "border-neutral-800 shadow-neutral-800",
   color7: "border-neutral-900 shadow-neutral-900",
 };
-const colorsImg = {
+const colorsImg: any = {
   color1: "bg-outstanding-100 ",
   color2: "bg-outstanding-200 ",
   color3: "bg-outstanding-300 ",
@@ -25,17 +24,16 @@ const colorsImg = {
   color7: "bg-neutral-900 ",
 };
 
-const PromoLink = (props) => {
+const PromoLink = (props: any) => {
   const {
     text,
     link,
-    variant,
     className = "",
     color = "color1",
-    onClick = () => {},
     imgUrl,
+    variant = "image",
   } = props;
-  const handleOnClick = (e) => {
+  const handleOnClick = (e: any) => {
     if (!link) {
       e.stopPropagation();
     } else if (link) {
@@ -49,7 +47,7 @@ const PromoLink = (props) => {
       <div
         id="promo-link-shadow"
         className={cn(
-          "hidden",
+          { ["hidden"]: variant === "image" },
           "h-full w-full rounded border p-4  shadow-lb bg-neutral-100 cursor-pointer",
           className,
           [colors[color]]
@@ -57,16 +55,17 @@ const PromoLink = (props) => {
         onClick={handleOnClick}
       >
         <div className="font-principal font-bold">
-          <span href={link}>{getTextCount(text, 52)}</span>
+          <span>{getTextCount(text, 52)}</span>
         </div>
         <div className=" w-full font-principal flex font-bold relative justify-end ">
-          <span href={link}>
+          <span>
             <Icon iconName="arrow_forward" />
           </span>
         </div>
       </div>
       <div
         className={cn(
+          { ["hidden"]: variant === "shadow" },
           "h-fit w-full rounded mix-blend-multiply bg-blend-multiply flex  ",
           [colorsImg[color]]
         )}
@@ -84,7 +83,7 @@ const PromoLink = (props) => {
               <Heading title={getTextCount(text, 52)} type="h-5" />
             </div>
             <div className=" w-full font-principal flex font-bold  justify-end ">
-              <span href={link} className="group-hover:animate-ping">
+              <span className="group-hover:animate-ping">
                 <Icon iconName="arrow_forward" />
               </span>
             </div>

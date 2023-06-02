@@ -1,4 +1,4 @@
-import PromoLink from "../../design-system/src/components/PromoLink";
+import { PromoLink } from "@lottuseducation/design_system";
 export default {
   title: "PromoLink",
   component: PromoLink,
@@ -10,6 +10,7 @@ export default {
       "https://bachilleratorapido.com/wp-content/uploads/2020/07/La-UANE-de-Saltillo-2.jpg",
     color: "color1",
     className: "",
+    variant: "image",
   },
 
   argTypes: {
@@ -23,6 +24,10 @@ export default {
         "color6",
         "color7",
       ],
+      control: { type: "select" },
+    },
+    variant: {
+      options: ["image", "shadow"],
       control: { type: "select" },
     },
   },

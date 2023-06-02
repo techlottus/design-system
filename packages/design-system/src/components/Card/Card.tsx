@@ -4,22 +4,22 @@ import Aspect from "../Aspect";
 import { myhref } from "../helpers/myrefHelper";
 import Heading from "../Heading";
 
-const types = {
+const types: any = {
   horizontal: "w-3/5",
   vertical: "h-full",
 };
 
-const display = {
+const display: any = {
   horizontal: "flex-row",
   vertical: "flex-col",
 };
-const classesContent = cn(
+const classesContent: any = cn(
   "flex flex-col",
   "relative",
   "justify-between",
   "p-4"
 );
-const classesSubTitle = cn(
+const classesSubTitle: any = cn(
   "flex",
   "pb-2",
   "font-bold font-principal text-neutral-500",
@@ -51,7 +51,7 @@ const defaultValues = {
   className: "",
 };
 
-const Card = (props) => {
+const Card = (props: any) => {
   const {
     imageUrl,
     text,
@@ -63,16 +63,16 @@ const Card = (props) => {
     className = defaultValues.className,
   } = props;
   const classText = cn(classesText, { ["hidden"]: !text });
-  const classContent = cn(classesContent, { [[types[type]]]: type });
+  const classContent = cn(classesContent, { [types[type]]: type });
   const classSubTitle = cn(classesSubTitle, { ["hidden"]: !subtitle });
   const classLink = cn(classesLink, { ["hidden"]: !link });
   const classTitle = cn("text-neutral-800 pb-2", { ["hidden"]: !title });
   const classCard = cn(classesCard, className, {
-    [[display?.[type]]]: type,
+    [display?.[type]]: type,
     ["group hover:shadow-lg  cursor-pointer"]: link?.route,
   });
 
-  const handleOnClick = (e) => {
+  const handleOnClick = (e: any) => {
     if (link?.disabled) {
       e.stopPropagation();
     } else if (link?.route) {
@@ -85,7 +85,7 @@ const Card = (props) => {
   return (
     <div
       className={classCard}
-      onClick={(e) => {
+      onClick={(e: any) => {
         handleOnClick(e);
       }}
     >

@@ -1,5 +1,5 @@
-import Card from "../../design-system/src/components/Card";
-import Heading from "../../design-system/src/components/Heading";
+import { Card } from "@lottuseducation/design_system";
+import { Heading } from "@lottuseducation/design_system";
 export default {
   title: "Card",
   component: Card,
@@ -75,7 +75,7 @@ const Row = (args1) => (
 );
 const Column = (args2) => (
   <div>
-    <div className="py-4">
+    <div className="py-4 bg-neutral-900">
       <Heading
         title="The Card component adapts its size depending on the width of the container."
         type="h-5"

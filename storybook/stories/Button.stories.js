@@ -1,5 +1,5 @@
-import Heading from "../../design-system/src/components/Heading/Heading";
-import Button from "../../design-system/src/components/Button";
+import { Heading } from "@lottuseducation/design_system";
+import { Button } from "@lottuseducation/design_system";
 export default {
   title: "Button",
   component: Button,

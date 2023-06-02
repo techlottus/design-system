@@ -1,4 +1,3 @@
-import React from "react";
 import Button from "../Button";
 import TextLink from "../TextLink";
 import cn from "classnames";
@@ -12,7 +11,7 @@ const linksTitleSection = cn(
 );
 const textLinksClasses = cn("font-principal text-neutral-600 px-0 pb-4 pt-0");
 
-const Footer = (props) => {
+const Footer = (props: any) => {
   const {
     logoUrl,
     newsletter,
@@ -89,14 +88,14 @@ const Footer = (props) => {
             id="links"
             className="border-t border-b border-neutral-400 flex justify-between py-10"
           >
-            {links?.deskLinks.map((l, indx) => (
+            {links?.deskLinks.map((l: any, indx: any) => (
               <div className="flex flex-col" key={indx}>
-                {l.map((link, index) => (
+                {l.map((link: any, index: any) => (
                   <div id="col1" className="flex flex-col pb-10" key={index}>
                     <div id="title-section1" className={linksTitleSection}>
                       {link?.titleSection}
                     </div>
-                    {link?.linktext?.map((lt, indxLt) => (
+                    {link?.linktext?.map((lt: any, indxLt: any) => (
                       <TextLink
                         {...lt}
                         key={indxLt}
@@ -150,7 +149,7 @@ const Footer = (props) => {
             {certificates?.title}
           </div>
           <div className="flex space-x-10">
-            {certificates?.logos.map((logo, index) => (
+            {certificates?.logos.map((logo: any, index: any) => (
               <img
                 src={logo?.url}
                 alt={logo?.alt}
@@ -225,7 +224,7 @@ const Footer = (props) => {
             {certificates?.title}
           </div>
           <div className="flex space-x-10 flex-wrap">
-            {certificates?.logos.map((logo, index) => (
+            {certificates?.logos.map((logo: any, index: any) => (
               <img
                 src={logo?.url}
                 alt={logo?.alt}

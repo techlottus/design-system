@@ -30,15 +30,36 @@
     "url": "https://github.com/techlottus/design-system/issues"
   },
   "dependencies": {
+    "@lottuseducation/design_system": "file:../packages/design-system/lottuseducation-design_system-1.0.0-alpha.0.tgz",
+    "@lottuseducation/tailwind-base": "file:../packages/tailwind-base/lottuseducation-tailwind-base-1.0.0-alpha.0.tgz",
     "@storybook/addon-essentials": "^7.0.18",
     "@storybook/addon-interactions": "^7.0.18",
     "@storybook/addon-links": "^7.0.18",
     "@storybook/react-webpack5": "^7.0.18",
+    "postcss": "^8.4.24",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^7.0.18"
   },
   "devDependencies": {
-    "landing": "^0.0.1"
+    "@babel/cli": "^7.21.0",
+    "@babel/plugin-transform-react-jsx": "^7.21.0",
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-react": "^7.18.6",
+    "@storybook/addon-essentials": "^7.0.7",
+    "@storybook/addon-interactions": "^7.0.7",
+    "@storybook/addon-links": "^7.0.7",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/addon-styling": "^1.0.8",
+    "@storybook/blocks": "^7.0.7",
+    "@storybook/preset-create-react-app": "^7.0.7",
+    "@storybook/react": "^7.0.7",
+    "@storybook/react-webpack5": "^7.0.7",
+    "@storybook/storybook-deployer": "^2.8.16",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "autoprefixer": "^10.4.14",
+    "babel-plugin-named-exports-order": "^0.0.2",
+    "landing": "^0.0.1",
+    "tailwindcss": "^3.3.2"
   }
 }

@@ -1,11 +1,11 @@
 import Aspect from "../Aspect";
 import BannerContent from "../BannerContent";
 import cn from "classnames";
-const bannerImageStyles = {
+const bannerImageStyles: any = {
   dark: { filter: "brightness(0.5)" },
   light: { opacity: "0.5" },
 };
-const defaultValues = {
+const defaultValues: any = {
   ratio: "2/1",
   overlay: "normal",
   contentVariant: "dark",
@@ -13,8 +13,9 @@ const defaultValues = {
   position: "left-top",
   className: "",
 };
-const classBannerImage = cn("w-full h-full object-cover object-center");
-const Banner = (props) => {
+const classBannerImage: any = cn("w-full h-full object-cover object-center");
+
+const Banner = (props: any) => {
   const {
     imageUrl,
     ratio = defaultValues.ratio,

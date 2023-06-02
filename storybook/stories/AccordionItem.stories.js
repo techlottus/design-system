@@ -1,4 +1,4 @@
-import AccordionItem from "../../design-system/src/components/AccordionItem/AccordionItem";
+import { AccordionItem } from "@lottuseducation/design_system";
 
 export default {
   title: "AccordionItem",

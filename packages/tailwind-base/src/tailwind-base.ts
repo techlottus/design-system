@@ -1,7 +1,5 @@
-import Miscelaneous from "./plugins/misc";
-
 export default {
-  purge: [
+  contents: [
     "./pages/**/*.{js,jsx,ts,tsx}",
     "./components/**/*.{js,jsx,ts,tsx}",
     "./layouts/**/*.{js,jsx,ts,tsx}",
@@ -65,5 +63,5 @@ export default {
       fill: ["dark"],
     },
   },
-  plugins: [ Miscelaneous ],
+  plugins: [],
 };

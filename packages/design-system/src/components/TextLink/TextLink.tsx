@@ -1,13 +1,13 @@
 import cn from "classnames";
 import Icon from "../Icon";
-import React, { useState } from "react";
+import { useState } from "react";
 
-const iconPositions = {
+const iconPositions: any = {
   right: "flex",
   left: "flex flex-row-reverse",
 };
 
-const TextLink = (props) => {
+const TextLink = (props: any) => {
   const {
     target = "_self",
     className = "",
@@ -16,6 +16,9 @@ const TextLink = (props) => {
     active = false,
     items = false,
     iconPosition = "right",
+    href,
+    text,
+    iconName,
   } = props;
   //expand icon state
   let iconExpandMore = "expand_more";

@@ -1,4 +1,4 @@
-import Banner from "../../design-system/src/components/Banner";
+import { Banner } from "@lottuseducation/design_system";
 export default {
   title: "Banner",
   component: Banner,

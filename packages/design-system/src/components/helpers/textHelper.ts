@@ -1,4 +1,4 @@
-export const getTextCount = (text, max) => {
+export const getTextCount = (text: any, max: any) => {
   let result = "";
   if (text != undefined) {
     const words = text.split(" ");
@@ -12,6 +12,6 @@ export const getTextCount = (text, max) => {
         break;
       }
     }
-    return result;
   }
+  return result;
 };

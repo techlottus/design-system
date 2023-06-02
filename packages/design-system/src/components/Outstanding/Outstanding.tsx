@@ -1,25 +1,24 @@
-import React from "react";
 import Aspect from "../Aspect";
 import Heading from "../Heading";
 import cn from "classnames";
 
-const position = {
+const position: any = {
   ["right"]: "flex-col-reverse md:flex-row-reverse md:pt-6  pt-4",
   ["left"]: "flex-col-reverse md:flex-row md:pt-6  pt-4",
 };
-const paddings = {
+const paddings: any = {
   ["right"]: "md:pl-8 md:pr-0 px-0",
   ["left"]: "md:pr-8 md:pl-0 px-0",
 };
-const paddingContent = {
+const paddingContent: any = {
   ["right"]: "md:pr-8 md:pl-0 px-4 ",
   ["left"]: "md:pl-8 md:pr-0 px-4 ",
 };
-const defaultValues = {
+const defaultValues: any = {
   imgPosition: "right",
   backgroundColor: "color1",
 };
-const colors = {
+const colors: any = {
   color1: "bg-outstanding-100",
   color2: "bg-outstanding-200",
   color3: "bg-outstanding-300",
@@ -29,7 +28,7 @@ const colors = {
   color7: "bg-neutral-900",
 };
 
-const Outstanding = (props) => {
+const Outstanding = (props: any) => {
   const {
     imageUrl,
     title,

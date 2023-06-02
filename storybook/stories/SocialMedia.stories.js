@@ -1,4 +1,4 @@
-import SocialMedia from "../../design-system/src/components/SocialMedia";
+import { SocialMedia } from "@lottuseducation/design_system";
 export default {
   title: "SocialMedia",
   component: SocialMedia,

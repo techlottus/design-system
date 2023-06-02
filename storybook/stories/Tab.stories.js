@@ -1,4 +1,4 @@
-import Tab from "../../design-system/src/components/Tab";
+import { Tab } from "@lottuseducation/design_system";
 export default {
   title: "Tab",
   component: Tab,

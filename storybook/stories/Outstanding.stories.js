@@ -1,4 +1,4 @@
-import Outstanding from "../../design-system/src/components/Outstanding";
+import { Outstanding } from "@lottuseducation/design_system";
 export default {
   title: "Outstanding",
   component: Outstanding,

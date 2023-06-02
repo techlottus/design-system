@@ -1,4 +1,4 @@
-import Icon from "../../design-system/src/components/Icon";
+import { Icon } from "@lottuseducation/design_system";
 export default {
   title: "Icon",
   component: Icon,
