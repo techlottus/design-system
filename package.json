@@ -1,0 +1,34 @@
+{
+  "name": "@lottuseducation/design_system",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "bootstrap": "lerna bootstrap --use-workspaces",
+    "clean": "lerna run --parallel clean",
+    "compile:tailwind-base": "lerna run compile --scope @lottuseducation/tailwind-base",
+    "compile:portalverse": "lerna run compile --scope @lottuseducation/portalverse",
+    "docs:dev": "yarn compile:tailwind-base && lerna run dev --scope @lottuseducation/docs",
+    "docs:build": "yarn compile:tailwind-base && lerna run build --scope @lottuseducation/docs",
+    "compile": "lerna run --parallel compile",
+    "test": "lerna run --parallel test"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.4.3"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "description": "A React-based UI toolkit for web",
+  "author": "Lottus Engineering <dev.tech@lottuseducation.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techlottus/design-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/techlottus/design-system/issues"
+  }
+}

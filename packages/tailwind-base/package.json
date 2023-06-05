@@ -1,0 +1,47 @@
+{
+  "name": "@lottuseducation/tailwind-base",
+  "version": "1.1.0-alpha.0",
+  "description": "A set of overrides and extensions for TailwindCSS based on Lottus's Design System",
+  "main": "lib/tailwind-base.js",
+  "module": "lib/esm/tailwind-base.js",
+  "esnext": "lib/esnext/tailwind-base.js",
+  "types": "lib/tailwind-base.d.ts",
+  "scripts": {
+    "clean": "rm -rf lib/*",
+    "prepublishOnly": "npm run compile",
+    "compile": "npm run clean && npm run compile:esm && npm run compile:cjs && npm run compile:esnext",
+    "compile:esm": "tsc -p ./src --outDir lib/esm",
+    "compile:cjs": "tsc -p ./src -m commonjs --outDir lib/",
+    "compile:esnext": "tsc -p ./src -t esnext --outDir lib/esnext"
+  },
+  "keywords": [
+    "tailwind"
+  ],
+  "author": "Lottus Engineering <dev.tech@lottuseducation.com>",
+  "homepage": "https://github.com/techlottus/design-system#readme",
+  "license": "UNLICENSED",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib/"
+  ],
+  "dependencies": {
+    "tailwindcss": "^3.3.2"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "typescript": "^4.4.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techlottus/design-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/techlottus/design-system/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "9aee86c05c5c90515ab4c6a9e92c6b39dd7d2d26"
+}
