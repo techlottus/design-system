@@ -17,35 +17,27 @@ const Slider = (props: any) => {
     "material-icons select-none absolute top-[35%] p-1 rounded-lg text-[12px] w-p:hidden";
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: true,
-    breakpoints: {
-      "(min-width: 320px)": {
-        slides: { perView: 1 },
-      },
-      "(min-width: 600px)": {
-        slides: { perView: 1 },
-      },
-      "(min-width: 1024px)": {
-        slides: { perView: 1 },
-      },
-    },
+    slidesPerView: 1,
     initial: 0,
     slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel);
+      console.log(slider);
+      
     },
     created() {
       setLoaded(true);
     },
   });
-
-  const activeBulletSlide = (position: any) => {
-    instanceRef.current?.moveToIdx(position);
+  
+  const activeBulletSlide = (position: number) => {
+    instanceRef.moveToSlide(position);
+    setCurrentSlide(position);
   };
 
   return (
     <section className="flex flex-col relative w-full my-6">
       <section className="">
         {" "}
-        <div ref={sliderRef} className="keen-slider">
+        <section ref={sliderRef} className="keen-slider">
           {slides.map((slide: any, i: any) => (
             <section key={`card-item-${i}`}>
               <div className="keen-slider__slide">
@@ -70,9 +62,9 @@ const Slider = (props: any) => {
               </div>
             </section>
           ))}{" "}
-        </div>
+        </section>
       </section>
-      {loaded && instanceRef.current && (
+      {loaded && instanceRef && (
         <>
           <div
             className={cn(
@@ -83,7 +75,7 @@ const Slider = (props: any) => {
             <span
               className="material-icons"
               onClick={() => {
-                instanceRef.current?.prev();
+                instanceRef?.prev();
               }}
             >
               arrow_back_ios
@@ -97,7 +89,7 @@ const Slider = (props: any) => {
           >
             <span
               className="material-icons"
-              onClick={() => instanceRef.current?.next()}
+              onClick={() => instanceRef.next()}
             >
               arrow_forward_ios
             </span>
