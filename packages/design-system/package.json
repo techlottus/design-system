@@ -13,12 +13,13 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/techlottus/design-system.git",
-    "directory": "packages/portalverse"
+    "directory": "packages/design-system"
   },
   "scripts": {
     "clean": "rm -rf dist/* && rm -rf lib/*",
     "prepublishOnly": "npm run compile",
-    "compile": "npm run clean && npm run compile:esm && npm run compile:cjs",
+    "compile": "npm run clean && npm run compile:esm && npm run compile:cjs && npm run compile:esnext",
+    "compile:esnext": "tsc -p ./src -t esnext --outDir lib/esnext",
     "compile:esm": "tsc -p ./src",
     "compile:cjs": "tsc -p ./src -m commonjs --outDir lib/cjs",
     "test": "jest",
@@ -34,11 +35,11 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "ts-jest": "^27.0.5",
-    "ts-node": "^10.2.1"
+    "ts-node": "^10.2.1",
+    "@types/react": "^18.2.7",
+    "@types/react-dom": "^18.2.4"
   },
   "dependencies": {
-    "@types/react": "^18.2.7",
-    "@types/react-dom": "^18.2.4",
     "classnames": "^2.3.1"
   },
   "publishConfig": {
