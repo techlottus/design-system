@@ -1270,6 +1270,14 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@lottuseducation/carousel@file:C:\\Users\\Maria Sanchez\\Documents\\techLottusDS\\design-system\\design-system\\packages\\carousel":
+  version "1.1.0-alpha.0"
+  resolved "file:packages/carousel"
+  dependencies:
+    "@lottuseducation/design_system" "^1.1.0-alpha.0"
+    classnames "^2.3.1"
+    keen-slider "^5.5.1"
+
 "@lottuseducation/design_system@^1.1.0-alpha.0", "@lottuseducation/design_system@file:C:\\Users\\Maria Sanchez\\Documents\\techLottusDS\\design-system\\design-system\\packages\\design-system":
   version "1.1.0-alpha.0"
   resolved "file:packages/design-system"
@@ -1278,14 +1286,12 @@
     "@types/react-dom" "^18.2.4"
     classnames "^2.3.1"
 
-"@lottuseducation/numbers@file:C:\\Users\\Maria Sanchez\\Documents\\techLottusDS\\design-system\\design-system\\packages\\numbers":
-  version "1.1.0-alpha.0"
-  resolved "file:packages/numbers"
+"@lottuseducation/design_system@^1.1.1-alpha.0":
+  version "1.1.1-alpha.0"
+  resolved "https://registry.npmjs.org/@lottuseducation/design_system/-/design_system-1.1.1-alpha.0.tgz"
+  integrity sha512-JUgOFjkRqXLgF+yMn6ZYjBswBMPqPnGOelW1IZ2t5ZEUqUz4OS604zAAou75J0I1Wic6G3cjUCgAXdrggxT8gQ==
   dependencies:
-    "@lottuseducation/design_system" "^1.1.0-alpha.0"
     classnames "^2.3.1"
-    react-countup "^6.4.2"
-    react-visibility-sensor "^5.1.1"
 
 "@lottuseducation/slider@file:C:\\Users\\Maria Sanchez\\Documents\\techLottusDS\\design-system\\design-system\\packages\\slider":
   version "1.1.0-alpha.0"
@@ -3107,12 +3113,7 @@ json5@^2.2.2, json5@2.x:
   resolved "https://registry.npmjs.org/json5/-/json5-2.2.3.tgz"
   integrity sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==
 
-keen-slider@^5.5.1:
-  version "5.5.1"
-  resolved "https://registry.npmjs.org/keen-slider/-/keen-slider-5.5.1.tgz"
-  integrity sha512-QXGZGt5Hbe0YufR/RYbOG03MmOk43RQEXqkkSvjr8ZS67sVR7LRp5RIvJALfjl+A7BnHNr1wd1QBOemwy65Lfw==
-
-keen-slider@^6.8.5:
+keen-slider@^5.5.1, keen-slider@^6.8.5:
   version "6.8.5"
   resolved "https://registry.npmjs.org/keen-slider/-/keen-slider-6.8.5.tgz"
   integrity sha512-9yoosfffgTCrkmbX8kCUMWsn9KDgPSkxBof5/0yXde001D1xao7i9ppfxQCCK0MLnoCa+Rdssby0jFbTTUM4rw==
@@ -3467,14 +3468,6 @@ querystringify@^2.1.1:
   resolved "https://registry.npmjs.org/querystringify/-/querystringify-2.2.0.tgz"
   integrity sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==
 
-react-countup@^6.4.2:
-  version "6.4.2"
-  resolved "https://registry.npmjs.org/react-countup/-/react-countup-6.4.2.tgz"
-  integrity sha512-wdDrNb2lPFGbLb+i0FTgswPbWziubS6KZRII8NRpXmUCoZsi15PFbIHgBz60Dyxd4KPuRvwsK5aawIU4OPP3jA==
-  dependencies:
-    "@rollup/plugin-babel" "^6.0.3"
-    countup.js "^2.5.0"
-
 react-dom@^18.2.0, react-dom@>=16.0.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
@@ -3492,13 +3485,6 @@ react-is@^17.0.1:
   version "17.0.2"
   resolved "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
-
-react-visibility-sensor@^5.1.1:
-  version "5.1.1"
-  resolved "https://registry.npmjs.org/react-visibility-sensor/-/react-visibility-sensor-5.1.1.tgz"
-  integrity sha512-cTUHqIK+zDYpeK19rzW6zF9YfT4486TIgizZW53wEZ+/GPBbK7cNS0EHyJVyHYacwFEvvHLEKfgJndbemWhB/w==
-  dependencies:
-    prop-types "^15.7.2"
 
 react@^18.2.0, "react@>= 16.3.0", react@>=16.0.0:
   version "18.2.0"
