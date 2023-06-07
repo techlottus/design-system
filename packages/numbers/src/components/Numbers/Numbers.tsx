@@ -49,14 +49,14 @@ const Numbers = (props: any) => {
     className = defaultValues.className,
     theme = defaultValues.theme,
   } = props;
-  const [finishedCount, setFinishedCount] = useState(false);
+  const [finishedCount, setFinishedCount] = useState<boolean>(false);
   return (
     <div
       id="Numbers-Container"
       className={cn(className, "flex flex-col bg-transparent ", {
-        [variants?.[variant]]: variant,
-        [themes?.[theme]]: theme,
-        [colors?.[color]]: color,
+        [variants[variant]]: variant,
+        [themes[theme]]: theme,
+        [colors[color]]: color,
       })}
     >
       <div
@@ -78,8 +78,8 @@ const Numbers = (props: any) => {
         >
           {({ countUpRef, start }) => (
             <VisibilitySensor
-              onChange={(isVisible: any) => {
-                if (!isVisible || finishedCount) return;
+              onChange={(isVisible: boolean) => {
+                if (isVisible! || finishedCount) return;
                 start();
               }}
               delayedCall
