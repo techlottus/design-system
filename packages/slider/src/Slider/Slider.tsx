@@ -16,23 +16,34 @@ const Slider = (props: any) => {
     "material-icons select-none absolute top-[35%] p-1 rounded-lg text-[12px] w-p:hidden";
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
+<<<<<<< HEAD
+=======
+    slidesPerView: 1,
+>>>>>>> 692b6766e82119a8c06ce6dc3c979ec5f015d915
     initial: 0,
     slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel);
+      console.log(slider);
+      
     },
     created() {
       setLoaded(true);
     },
   });
-
-  const activeBulletSlide = (position: any) => {
-    instanceRef.current?.moveToIdx(position);
+  
+  const activeBulletSlide = (position: number) => {
+    instanceRef.moveToSlide(position);
+    setCurrentSlide(position);
   };
 
   return (
     <section className="flex flex-col relative w-full my-6">
       <section className="">
+<<<<<<< HEAD
         <div ref={sliderRef} className="keen-slider">
+=======
+        {" "}
+        <section ref={sliderRef} className="keen-slider">
+>>>>>>> 692b6766e82119a8c06ce6dc3c979ec5f015d915
           {slides.map((slide: any, i: any) => (
             <section key={`card-item-${i}`}>
               <div className="keen-slider__slide">
@@ -57,9 +68,9 @@ const Slider = (props: any) => {
               </div>
             </section>
           ))}{" "}
-        </div>
+        </section>
       </section>
-      {loaded && instanceRef.current && (
+      {loaded && instanceRef && (
         <>
           <div
             className={cn(
@@ -70,7 +81,7 @@ const Slider = (props: any) => {
             <span
               className="material-icons"
               onClick={() => {
-                instanceRef.current?.prev();
+                instanceRef?.prev();
               }}
             >
               arrow_back_ios
@@ -84,7 +95,7 @@ const Slider = (props: any) => {
           >
             <span
               className="material-icons"
-              onClick={() => instanceRef.current?.next()}
+              onClick={() => instanceRef.next()}
             >
               arrow_forward_ios
             </span>
