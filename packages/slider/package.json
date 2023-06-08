@@ -1,13 +1,7 @@
 {
-<<<<<<< HEAD:packages/menu/package.json
-  "name": "@lottuseducation/menu",
-  "version": "1.1.0-alpha.0",
-  "description": "A React menu component",
-=======
-  "name": "@lottuseducation/carousel",
+  "name": "@lottuseducation/slider",
   "version": "1.0.0-alpha.0",
-  "description": "A React carousel component based on Keen Slider",
->>>>>>> develop:packages/carousel/package.json
+  "description": "A React slider component based on Keen Slider",
   "author": "Lottus Engineering <dev.tech@lottuseducation.com>",
   "homepage": "https://github.com/techlottus/design-system#readme",
   "license": "UNLICENSED",
@@ -18,7 +12,7 @@
   "scripts": {
     "clean": "rm -rf dist/* && rm -rf lib/*",
     "prepublishOnly": "npm run compile",
-    "compile": "npm run clean && npm run compile:esm && npm run compile:cjs && npm run compile:esnext ",
+    "compile": "npm run clean && npm run compile:esm && npm run compile:cjs && npm run compile:esnext && cp slider.css lib/",
     "compile:esm": "tsc -p ./src",
     "compile:cjs": "tsc -p ./src -m commonjs --outDir lib/cjs",
     "compile:esnext": "tsc -p ./src -t esnext --outDir lib/esnext",
@@ -29,11 +23,7 @@
   "dependencies": {
     "@lottuseducation/design_system": "^1.1.2-alpha.0",
     "classnames": "^2.3.1",
-<<<<<<< HEAD:packages/menu/package.json
-    "react-lottie-player": "^1.5.4"
-=======
     "keen-slider": "^6.8.5"
->>>>>>> develop:packages/carousel/package.json
   },
   "directories": {
     "lib": "lib",
@@ -53,7 +43,7 @@
   "keywords": [
     "react",
     "react component",
-    "menu"
+    "slider"
   ],
   "devDependencies": {
     "@types/classnames": "^2.3.1",

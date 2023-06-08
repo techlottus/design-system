@@ -1,5 +1,6 @@
 /** @type { import('@storybook/react').Preview } */
 import "../index.css";
+import "keen-slider/keen-slider.min.css";
 import "tailwindcss/tailwind.css";
 const preview = {
   parameters: {
