@@ -11,7 +11,7 @@ const Carousel = (props: any) => {
   const [loaded, setLoaded] = useState(false);
   const stylesBaseControls =
     "material-icons select-none absolute top-[35%] p-1 rounded-lg text-[12px] w-p:hidden";
-  const [sliderRef, instanceRef] = useKeenSlider({
+  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     breakpoints: {
       "(min-width: 320px)": {
@@ -27,6 +27,7 @@ const Carousel = (props: any) => {
     initial: 0,
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
+      console.log(slider);
     },
     created() {
       setLoaded(true);

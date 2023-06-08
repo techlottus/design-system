@@ -9,7 +9,7 @@ const Icon = (props: any) => {
         ["font-icons"]: type === "solid",
       })}
     >
-      {iconName}
+      <i>{iconName}</i>
     </span>
   );
 };
