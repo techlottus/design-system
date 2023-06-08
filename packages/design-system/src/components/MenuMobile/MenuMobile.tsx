@@ -252,8 +252,8 @@ const MenuMobile = (props: any) => {
               />
             </div>
             <div className="flex flex-row w-full rounded py-2 px-2">
-              <PromoLink text="link" route="/route" />
-              <PromoLink text="link2" route="/route" />
+              <PromoLink text="link" route="/route" variant="shadow" />
+              <PromoLink text="link2" route="/route" variant="shadow" />
             </div>
             <div>
               <SocialMedia

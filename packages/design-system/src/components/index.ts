@@ -25,4 +25,4 @@ export {
   getclassSubMenu,
 } from "./helpers/classesHelper";
 export { useScrollDirection } from "./hooks/useScrollDirection";
-export { animationData } from "./assets/lotties/menu.json";
+export { default as Menu } from "./Menu";

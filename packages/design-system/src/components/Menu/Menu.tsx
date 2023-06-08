@@ -1,13 +1,13 @@
 import { useState } from "react";
 import cn from "classnames";
-import { useScrollDirection } from "@lottuseducation/design_system";
-import { getClassItem, getclassSubMenu } from "@lottuseducation/design_system";
+import { useScrollDirection } from "../hooks/useScrollDirection";
+import { getClassItem, getclassSubMenu } from "../helpers/classesHelper";
 import Lottie from "react-lottie-player";
-import { animationData } from "@lottuseducation/design_system";
-import { TextLink } from "@lottuseducation/design_system";
-import { MenuMobile } from "@lottuseducation/design_system";
-import { Icon } from "@lottuseducation/design_system";
-import { Button } from "@lottuseducation/design_system";
+import TextLink from "../TextLink";
+import MenuMobile from "../MenuMobile";
+import Icon from "../Icon/Icon";
+import Button from "../Button/Button";
+import { menuAnimation } from "../assets/lotties/menu";
 
 const classesHeader = cn(
   "flex flex-1 hidden lg:flex min-[320px]:hidden",
@@ -98,23 +98,17 @@ const classesSearchMobile = cn(
 );
 const defaultValues = {
   languages: false,
-  className: "",
 };
 
 const Menu = (props: any) => {
-  const {
-    data,
-    languages = defaultValues.languages,
-    btn,
-    className = defaultValues.className,
-  } = props;
+  const { data, languages = defaultValues.languages, btn } = props;
   //hooks
-  const [submenu, setmenu] = useState(true);
-  const [submenuIn, setmenuIn] = useState(false);
-  const [submenuM, setmenuM] = useState(true);
-  const [index, setitem] = useState(0);
-  const [IconOpen, setIconOpen] = useState(false);
-  const [iconClose, setIconClose] = useState(false);
+  const [submenu, setmenu] = useState<boolean>(true);
+  const [submenuIn, setmenuIn] = useState<boolean>(false);
+  const [submenuM, setmenuM] = useState<boolean>(true);
+  const [index, setitem] = useState<number>(0);
+  const [IconOpen, setIconOpen] = useState<boolean>(false);
+  const [iconClose, setIconClose] = useState<boolean>(false);
   const scrollDirection = useScrollDirection();
 
   //function handlers
@@ -271,7 +265,7 @@ const Menu = (props: any) => {
               loop={false}
               direction={iconClose ? -1 : 1}
               speed={2}
-              animationData={animationData}
+              animationData={menuAnimation}
               style={{ width: 40, height: 40 }}
             />
           </div>

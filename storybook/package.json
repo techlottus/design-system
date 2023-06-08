@@ -31,7 +31,8 @@
   },
   "dependencies": {
     "@lottuseducation/carousel": "file:../packages/carousel/lottuseducation-carousel-1.1.0-alpha.0.tgz",
-    "@lottuseducation/design_system": "^1.1.0-alpha.0",
+    "@lottuseducation/design_system": "file:../packages/design-system/lottuseducation-design_system-1.1.2-alpha.0.tgz",
+    "@lottuseducation/menu": "file:../packages/menu/lottuseducation-menu-1.1.0-alpha.0.tgz",
     "@lottuseducation/slider": "file:../packages/slider/lottuseducation-slider-1.1.0-alpha.0.tgz",
     "@lottuseducation/tailwind-base": "^1.1.0-alpha.0",
     "@storybook/addon-essentials": "^7.0.18",
@@ -41,7 +42,8 @@
     "postcss": "^8.4.24",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storybook": "^7.0.18"
+    "storybook": "^7.0.18",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@babel/cli": "^7.21.0",
