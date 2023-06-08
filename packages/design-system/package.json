@@ -40,7 +40,8 @@
     "ts-node": "^10.2.1"
   },
   "dependencies": {
-    "classnames": "^2.3.1"
+    "classnames": "^2.3.1",
+    "react-lottie-player": "^1.5.4"
   },
   "publishConfig": {
     "access": "public"
