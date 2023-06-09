@@ -21,7 +21,6 @@ const Counter = ({ maxNumber }: any) => {
       }, 100);
     }
   };
-  // ref={containerRef}
   return (
     <span
       ref={containerRef}
