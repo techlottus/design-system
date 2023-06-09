@@ -26,8 +26,6 @@
     "strict": true,
     "stripInternal": true,
     "target": "es5",
-    "typeRoots": [
-      "../node_modules/@types"
-    ],
+    "typeRoots": ["../node_modules/@types"]
   }
 }

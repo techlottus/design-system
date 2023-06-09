@@ -1,6 +1,6 @@
 {
   "name": "@lottuseducation/carousel",
-  "version": "1.0.0-alpha.0",
+  "version": "0.0.0-alpha.0",
   "description": "A React carousel component based on Keen Slider",
   "author": "Lottus Engineering <dev.tech@lottuseducation.com>",
   "homepage": "https://github.com/techlottus/design-system#readme",
