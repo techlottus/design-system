@@ -1,6 +1,6 @@
 {
   "name": "@lottuseducation/numbers",
-  "version": "1.1.0-alpha.0",
+  "version": "0.0.0-alpha.0",
   "description": "A React numbers component",
   "author": "Lottus Engineering <dev.tech@lottuseducation.com>",
   "homepage": "https://github.com/techlottus/design-system#readme",
@@ -23,8 +23,7 @@
   "dependencies": {
     "@lottuseducation/design_system": "^1.1.0-alpha.0",
     "classnames": "^2.3.1",
-    "react-countup": "^6.4.2",
-    "react-visibility-sensor": "^5.1.1"
+    "react-countup": "^6.4.2"
   },
   "directories": {
     "lib": "lib",

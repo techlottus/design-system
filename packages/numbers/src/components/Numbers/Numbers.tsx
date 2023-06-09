@@ -1,9 +1,7 @@
-import { useState } from "react";
 import { Icon } from "@lottuseducation/design_system";
 import { Heading } from "@lottuseducation/design_system";
 import cn from "classnames";
-import CountUp from "react-countup";
-import VisibilitySensor from "react-visibility-sensor";
+import Counter from "../Counter/Counter";
 
 const defaultValues: any = {
   className: "",
@@ -49,7 +47,6 @@ const Numbers = (props: any) => {
     className = defaultValues.className,
     theme = defaultValues.theme,
   } = props;
-  const [finishedCount, setFinishedCount] = useState<boolean>(false);
   return (
     <div
       id="Numbers-Container"
@@ -70,27 +67,7 @@ const Numbers = (props: any) => {
         ) : (
           ""
         )}
-        <CountUp
-          separator=","
-          start={0}
-          end={number}
-          onEnd={() => setFinishedCount(true)}
-        >
-          {({ countUpRef, start }) => (
-            <VisibilitySensor
-              onChange={(isVisible: boolean) => {
-                if (isVisible! || finishedCount) return;
-                start();
-              }}
-              delayedCall
-            >
-              <span
-                className="font-secondary text-2xl lg:text-5xl md:text-3xl font-bold leading-[125%] "
-                ref={countUpRef}
-              />
-            </VisibilitySensor>
-          )}
-        </CountUp>
+        <Counter maxNumber={number} />
       </div>
       <div id="Numbers-title" className="pb-2">
         <Heading title={title} type="h-6" font="secondary" />
