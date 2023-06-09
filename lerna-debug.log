@@ -1,8 +1,218 @@
-73 warn complete Waiting for 4 child processes to exit. CTRL-C to exit immediately.
-74 error Error: Command failed with exit code 128: git tag @lottuseducation/carousel@1.5.0-alpha.0 -m @lottuseducation/carousel@1.5.0-alpha.0
-74 error fatal: tag '@lottuseducation/carousel@1.5.0-alpha.0' already exists
-74 error     at makeError (/home/alanllamas/.nvm/versions/node/v16.16.0/lib/node_modules/lerna/node_modules/execa/lib/error.js:59:11)
-74 error     at handlePromise (/home/alanllamas/.nvm/versions/node/v16.16.0/lib/node_modules/lerna/node_modules/execa/index.js:114:26)
-74 error     at processTicksAndRejections (node:internal/process/task_queues:96:5)
-74 error     at async Promise.all (index 0)
-74 error     at async Promise.all (index 0)
+0 silly argv {
+0 silly argv   _: [ 'publish' ],
+0 silly argv   'verify-access': false,
+0 silly argv   verifyAccess: false,
+0 silly argv   composed: 'publish',
+0 silly argv   lernaVersion: '6.6.2',
+0 silly argv   '$0': 'lerna'
+0 silly argv }
+1 notice cli v6.6.2
+2 verbose rootPath /home/alanllamas/Sites/design-system
+3 info versioning independent
+4 warn verify-access --verify-access=false and --no-verify-access are no longer needed, because the legacy preemptive access verification is now disabled by default. Requests will fail with appropriate errors when not authorized correctly.
+5 verbose session 5edc6e5416a58594
+6 verbose user-agent lerna/6.6.2/node@v16.16.0+x64 (linux)
+7 info publish rooted leaf detected, skipping synthetic root lifecycles
+8 silly argv {
+8 silly argv   _: [ 'publish' ],
+8 silly argv   'verify-access': false,
+8 silly argv   verifyAccess: false,
+8 silly argv   composed: 'publish',
+8 silly argv   lernaVersion: '6.6.2'
+8 silly argv }
+9 verbose rootPath /home/alanllamas/Sites/design-system
+10 silly isAnythingCommitted
+11 verbose isAnythingCommitted 1
+12 silly getCurrentBranch
+13 verbose currentBranch develop
+14 silly remoteBranchExists
+15 silly isBehindUpstream
+16 silly isBehindUpstream develop is behind origin/develop by 0 commit(s) and ahead by 0
+17 silly hasTags
+18 verbose hasTags true
+19 silly git-describe.sync "@lottuseducation/design_system@1.6.0-alpha.0-1-g50175e2" => {"lastTagName":"@lottuseducation/design_system@1.6.0-alpha.0","lastVersion":"1.6.0-alpha.0","refCount":"1","sha":"50175e2","isDirty":false}
+20 info Looking for changed packages since @lottuseducation/design_system@1.6.0-alpha.0
+21 silly checking diff packages/carousel
+22 silly found diff in packages/carousel/README.md
+23 verbose filtered diff [ 'packages/carousel/README.md' ]
+24 silly checking diff packages/design-system
+25 silly found diff in packages/design-system/README.md
+26 verbose filtered diff [ 'packages/design-system/README.md' ]
+27 silly checking diff packages/numbers
+28 silly found diff in packages/numbers/README.md
+29 verbose filtered diff [ 'packages/numbers/README.md' ]
+30 silly checking diff packages/slider
+31 silly found diff in packages/slider/README.md
+32 verbose filtered diff [ 'packages/slider/README.md' ]
+33 silly checking diff packages/tailwind-base
+34 silly found diff in packages/tailwind-base/README.md
+35 verbose filtered diff [ 'packages/tailwind-base/README.md' ]
+36 verbose updated @lottuseducation/carousel
+37 verbose updated @lottuseducation/design_system
+38 verbose updated @lottuseducation/numbers
+39 verbose updated @lottuseducation/slider
+40 verbose updated @lottuseducation/tailwind-base
+41 verbose git-describe undefined => "@lottuseducation/design_system@1.6.0-alpha.0-1-g50175e2"
+42 silly git-describe parsed => {"lastTagName":"@lottuseducation/design_system@1.6.0-alpha.0","lastVersion":"1.6.0-alpha.0","refCount":"1","sha":"50175e2","isDirty":false}
+43 info execute Skipping releases
+44 silly lifecycle No script for "preversion" in "@lottuseducation/design_system", continuing
+45 silly lifecycle No script for "preversion" in "@lottuseducation/numbers", continuing
+46 silly lifecycle No script for "preversion" in "@lottuseducation/tailwind-base", continuing
+47 verbose version @lottuseducation/numbers has no lockfile. Skipping lockfile update.
+48 verbose version @lottuseducation/design_system has no lockfile. Skipping lockfile update.
+49 verbose version @lottuseducation/tailwind-base has no lockfile. Skipping lockfile update.
+50 silly lifecycle No script for "version" in "@lottuseducation/numbers", continuing
+51 silly lifecycle No script for "version" in "@lottuseducation/design_system", continuing
+52 silly lifecycle No script for "preversion" in "@lottuseducation/carousel", continuing
+53 silly lifecycle No script for "preversion" in "@lottuseducation/slider", continuing
+54 silly lifecycle No script for "version" in "@lottuseducation/tailwind-base", continuing
+55 verbose version @lottuseducation/carousel has no lockfile. Skipping lockfile update.
+56 verbose version @lottuseducation/slider has no lockfile. Skipping lockfile update.
+57 silly lifecycle No script for "version" in "@lottuseducation/carousel", continuing
+58 silly lifecycle No script for "version" in "@lottuseducation/slider", continuing
+59 silly gitAdd [
+59 silly gitAdd   'packages/numbers/package.json',
+59 silly gitAdd   'packages/design-system/package.json',
+59 silly gitAdd   'packages/tailwind-base/package.json',
+59 silly gitAdd   'packages/carousel/package.json',
+59 silly gitAdd   'packages/slider/package.json'
+59 silly gitAdd ]
+60 silly gitCommit Publish
+60 silly gitCommit
+60 silly gitCommit  - @lottuseducation/carousel@1.6.0-alpha.0
+60 silly gitCommit  - @lottuseducation/design_system@1.7.0-alpha.0
+60 silly gitCommit  - @lottuseducation/numbers@1.5.0-alpha.0
+60 silly gitCommit  - @lottuseducation/slider@1.5.0-alpha.0
+60 silly gitCommit  - @lottuseducation/tailwind-base@1.7.0-alpha.0
+61 verbose git [
+61 verbose git   'commit',
+61 verbose git   '-F',
+61 verbose git   '/tmp/98858615-d03a-4bd0-938e-cfb0da0d10f7/lerna-commit.txt'
+61 verbose git ]
+62 silly gitTag @lottuseducation/carousel@1.6.0-alpha.0 git tag %s -m %s
+63 verbose git [
+63 verbose git   'tag',
+63 verbose git   '@lottuseducation/carousel@1.6.0-alpha.0',
+63 verbose git   '-m',
+63 verbose git   '@lottuseducation/carousel@1.6.0-alpha.0'
+63 verbose git ]
+64 silly gitTag @lottuseducation/design_system@1.7.0-alpha.0 git tag %s -m %s
+65 verbose git [
+65 verbose git   'tag',
+65 verbose git   '@lottuseducation/design_system@1.7.0-alpha.0',
+65 verbose git   '-m',
+65 verbose git   '@lottuseducation/design_system@1.7.0-alpha.0'
+65 verbose git ]
+66 silly gitTag @lottuseducation/numbers@1.5.0-alpha.0 git tag %s -m %s
+67 verbose git [
+67 verbose git   'tag',
+67 verbose git   '@lottuseducation/numbers@1.5.0-alpha.0',
+67 verbose git   '-m',
+67 verbose git   '@lottuseducation/numbers@1.5.0-alpha.0'
+67 verbose git ]
+68 silly gitTag @lottuseducation/slider@1.5.0-alpha.0 git tag %s -m %s
+69 verbose git [
+69 verbose git   'tag',
+69 verbose git   '@lottuseducation/slider@1.5.0-alpha.0',
+69 verbose git   '-m',
+69 verbose git   '@lottuseducation/slider@1.5.0-alpha.0'
+69 verbose git ]
+70 silly gitTag @lottuseducation/tailwind-base@1.7.0-alpha.0 git tag %s -m %s
+71 verbose git [
+71 verbose git   'tag',
+71 verbose git   '@lottuseducation/tailwind-base@1.7.0-alpha.0',
+71 verbose git   '-m',
+71 verbose git   '@lottuseducation/tailwind-base@1.7.0-alpha.0'
+71 verbose git ]
+72 silly lifecycle No script for "postversion" in "@lottuseducation/carousel", continuing
+73 silly lifecycle No script for "postversion" in "@lottuseducation/design_system", continuing
+74 silly lifecycle No script for "postversion" in "@lottuseducation/numbers", continuing
+75 silly lifecycle No script for "postversion" in "@lottuseducation/slider", continuing
+76 silly lifecycle No script for "postversion" in "@lottuseducation/tailwind-base", continuing
+77 info git Pushing tags...
+78 silly gitPush origin develop
+79 info publish Publishing packages to npm...
+80 warn ENOLICENSE Packages @lottuseducation/carousel, @lottuseducation/design_system, @lottuseducation/numbers, @lottuseducation/slider, and @lottuseducation/tailwind-base are missing a license.
+80 warn ENOLICENSE One way to fix this is to add a LICENSE.md file to the root of this repository.
+80 warn ENOLICENSE See https://choosealicense.com for additional guidance.
+81 silly getCurrentSHA
+82 verbose getCurrentSHA 851ee13752b6f3241e5693237fbac91928499b20
+83 verbose pack-directory packages/design-system
+84 verbose pack-directory packages/numbers
+85 verbose pack-directory packages/tailwind-base
+86 silly lifecycle No script for "prepublish" in "@lottuseducation/design_system", continuing
+87 silly lifecycle No script for "prepublish" in "@lottuseducation/numbers", continuing
+88 silly lifecycle No script for "prepublish" in "@lottuseducation/tailwind-base", continuing
+89 silly lifecycle No script for "prepare" in "@lottuseducation/design_system", continuing
+90 silly lifecycle No script for "prepare" in "@lottuseducation/numbers", continuing
+91 silly lifecycle No script for "prepare" in "@lottuseducation/tailwind-base", continuing
+92 silly lifecycle "prepublishOnly" starting in "@lottuseducation/tailwind-base"
+93 info lifecycle @lottuseducation/tailwind-base@1.7.0-alpha.0~prepublishOnly: @lottuseducation/tailwind-base@1.7.0-alpha.0
+94 silly lifecycle "prepublishOnly" starting in "@lottuseducation/design_system"
+95 info lifecycle @lottuseducation/design_system@1.7.0-alpha.0~prepublishOnly: @lottuseducation/design_system@1.7.0-alpha.0
+96 silly lifecycle "prepublishOnly" starting in "@lottuseducation/numbers"
+97 info lifecycle @lottuseducation/numbers@1.5.0-alpha.0~prepublishOnly: @lottuseducation/numbers@1.5.0-alpha.0
+98 silly lifecycle "prepublishOnly" finished in "@lottuseducation/tailwind-base"
+99 silly lifecycle No script for "prepack" in "@lottuseducation/tailwind-base", continuing
+100 silly lifecycle No script for "postpack" in "@lottuseducation/tailwind-base", continuing
+101 verbose packed packages/tailwind-base
+102 silly lifecycle "prepublishOnly" finished in "@lottuseducation/design_system"
+103 silly lifecycle No script for "prepack" in "@lottuseducation/design_system", continuing
+104 silly lifecycle No script for "postpack" in "@lottuseducation/design_system", continuing
+105 verbose packed packages/design-system
+106 verbose pack-directory packages/carousel
+107 verbose pack-directory packages/slider
+108 silly lifecycle No script for "prepublish" in "@lottuseducation/carousel", continuing
+109 silly lifecycle No script for "prepublish" in "@lottuseducation/slider", continuing
+110 silly lifecycle No script for "prepare" in "@lottuseducation/carousel", continuing
+111 silly lifecycle No script for "prepare" in "@lottuseducation/slider", continuing
+112 silly lifecycle "prepublishOnly" starting in "@lottuseducation/carousel"
+113 info lifecycle @lottuseducation/carousel@1.6.0-alpha.0~prepublishOnly: @lottuseducation/carousel@1.6.0-alpha.0
+114 silly lifecycle "prepublishOnly" starting in "@lottuseducation/slider"
+115 info lifecycle @lottuseducation/slider@1.5.0-alpha.0~prepublishOnly: @lottuseducation/slider@1.5.0-alpha.0
+116 silly lifecycle "prepublishOnly" finished in "@lottuseducation/numbers"
+117 silly lifecycle No script for "prepack" in "@lottuseducation/numbers", continuing
+118 silly lifecycle No script for "postpack" in "@lottuseducation/numbers", continuing
+119 verbose packed packages/numbers
+120 silly lifecycle "prepublishOnly" finished in "@lottuseducation/carousel"
+121 silly lifecycle No script for "prepack" in "@lottuseducation/carousel", continuing
+122 silly lifecycle No script for "postpack" in "@lottuseducation/carousel", continuing
+123 verbose packed packages/carousel
+124 silly lifecycle "prepublishOnly" finished in "@lottuseducation/slider"
+125 silly lifecycle No script for "prepack" in "@lottuseducation/slider", continuing
+126 silly lifecycle No script for "postpack" in "@lottuseducation/slider", continuing
+127 verbose packed packages/slider
+128 verbose publish @lottuseducation/design_system
+129 verbose publish @lottuseducation/numbers
+130 verbose publish @lottuseducation/tailwind-base
+131 silly FetchError: request to https://registry.npmjs.org/@lottuseducation%2ftailwind-base failed, reason: connect ETIMEDOUT 104.16.24.35:443
+131 silly     at ClientRequest.<anonymous> (/home/alanllamas/.nvm/versions/node/v16.16.0/lib/node_modules/lerna/node_modules/npm-registry-fetch/node_modules/minipass-fetch/lib/index.js:130:14)
+131 silly     at ClientRequest.emit (node:events:527:28)
+131 silly     at TLSSocket.socketErrorListener (node:_http_client:454:9)
+131 silly     at TLSSocket.emit (node:events:539:35)
+131 silly     at emitErrorNT (node:internal/streams/destroy:157:8)
+131 silly     at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+131 silly     at processTicksAndRejections (node:internal/process/task_queues:83:21)
+131 silly  FetchError: request to https://registry.npmjs.org/@lottuseducation%2ftailwind-base failed, reason: connect ETIMEDOUT 104.16.24.35:443
+131 silly     at ClientRequest.<anonymous> (/home/alanllamas/.nvm/versions/node/v16.16.0/lib/node_modules/lerna/node_modules/npm-registry-fetch/node_modules/minipass-fetch/lib/index.js:130:14)
+131 silly     at ClientRequest.emit (node:events:527:28)
+131 silly     at TLSSocket.socketErrorListener (node:_http_client:454:9)
+131 silly     at TLSSocket.emit (node:events:539:35)
+131 silly     at emitErrorNT (node:internal/streams/destroy:157:8)
+131 silly     at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+131 silly     at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+131 silly   code: 'ETIMEDOUT',
+131 silly   errno: 'ETIMEDOUT',
+131 silly   syscall: 'connect',
+131 silly   address: '104.16.24.35',
+131 silly   port: 443,
+131 silly   type: 'system'
+131 silly }
+132 error ETIMEDOUT request to https://registry.npmjs.org/@lottuseducation%2ftailwind-base failed, reason: connect ETIMEDOUT 104.16.24.35:443
+133 error FetchError: request to https://registry.npmjs.org/@lottuseducation%2ftailwind-base failed, reason: connect ETIMEDOUT 104.16.24.35:443
+133 error     at ClientRequest.<anonymous> (/home/alanllamas/.nvm/versions/node/v16.16.0/lib/node_modules/lerna/node_modules/npm-registry-fetch/node_modules/minipass-fetch/lib/index.js:130:14)
+133 error     at ClientRequest.emit (node:events:527:28)
+133 error     at TLSSocket.socketErrorListener (node:_http_client:454:9)
+133 error     at TLSSocket.emit (node:events:539:35)
+133 error     at emitErrorNT (node:internal/streams/destroy:157:8)
+133 error     at emitErrorCloseNT (node:internal/streams/destroy:122:3)
