@@ -6,9 +6,6 @@
   
 
 
-  
-
-
 ```
 const slider = require('slider');
 
