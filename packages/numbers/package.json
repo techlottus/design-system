@@ -35,7 +35,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/techlottus/design-system.gi",
+    "url": "git+https://github.com/techlottus/design-system.git",
     "directory": "packages/numbers"
   },
   "bugs": {
@@ -44,7 +44,7 @@
   "keywords": [
     "react",
     "react component",
-    "menu"
+    "numbers"
   ],
   "devDependencies": {
     "@types/classnames": "^2.3.1",
