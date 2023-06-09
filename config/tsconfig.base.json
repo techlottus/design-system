@@ -26,9 +26,6 @@
     "strict": true,
     "stripInternal": true,
     "target": "es5",
-    "typeRoots": [
-      "../node_modules/@types"
-    ],
-  },
-  "include": [ "../fixes.d.ts"]
+    "typeRoots": ["../node_modules/@types"]
+  }
 }
