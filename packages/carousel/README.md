@@ -4,7 +4,7 @@
 
 ## Usage
 
-
+    
 ```
 const slider = require('slider');
 

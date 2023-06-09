@@ -12,7 +12,7 @@
   "scripts": {
     "clean": "rm -rf dist/* && rm -rf lib/*",
     "prepublishOnly": "npm run compile",
-    "compile": "npm run clean && npm run compile:esm && npm run compile:cjs && npm run compile:esnext && cp slider.css lib/",
+    "compile": "npm run clean && npm run compile:esm && npm run compile:cjs && npm run compile:esnext",
     "compile:esm": "tsc -p ./src",
     "compile:cjs": "tsc -p ./src -m commonjs --outDir lib/cjs",
     "compile:esnext": "tsc -p ./src -t esnext --outDir lib/esnext",
@@ -57,5 +57,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "efb1f7ff1f66ad8bb18444647faa8974a3dbd4f5"
+  "gitHead": "d6ab68ee5abd6cba274b0f6a6bb59f5b630abefa"
 }
