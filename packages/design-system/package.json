@@ -1,6 +1,6 @@
 {
   "name": "@lottuseducation/design_system",
-  "version": "1.2.0-alpha.0",
+  "version": "1.8.0-alpha.0",
   "description": "Core components",
   "author": "Lottus Engineering <dev.tech@lottuseducation.com>",
   "main": "lib/cjs/index.js",
@@ -46,5 +46,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "6ed34545730646458f999e425acf93c55cbe7a4c"
+  "gitHead": "851ee13752b6f3241e5693237fbac91928499b20"
 }

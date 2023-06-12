@@ -3,7 +3,8 @@
 > TODO: description
 
 ## Usage
-  
+
+
    
 ```
 const slider = require('slider');

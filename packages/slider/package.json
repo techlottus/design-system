@@ -1,6 +1,6 @@
 {
   "name": "@lottuseducation/slider",
-  "version": "1.0.0-alpha.0",
+  "version": "1.6.0-alpha.0",
   "description": "A React slider component based on Keen Slider",
   "author": "Lottus Engineering <dev.tech@lottuseducation.com>",
   "homepage": "https://github.com/techlottus/design-system#readme",
@@ -12,7 +12,7 @@
   "scripts": {
     "clean": "rm -rf dist/* && rm -rf lib/*",
     "prepublishOnly": "npm run compile",
-    "compile": "npm run clean && npm run compile:esm && npm run compile:cjs && npm run compile:esnext && cp slider.css lib/",
+    "compile": "npm run clean && npm run compile:esm && npm run compile:cjs && npm run compile:esnext",
     "compile:esm": "tsc -p ./src",
     "compile:cjs": "tsc -p ./src -m commonjs --outDir lib/cjs",
     "compile:esnext": "tsc -p ./src -t esnext --outDir lib/esnext",
@@ -21,7 +21,7 @@
     "jest:clearcache": "jest --clearCache"
   },
   "dependencies": {
-    "@lottuseducation/design_system": "^1.2.0-alpha.0",
+    "@lottuseducation/design_system": "^1.1.2-alpha.0",
     "classnames": "^2.3.1",
     "keen-slider": "^6.8.5"
   },
@@ -57,5 +57,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "9aee86c05c5c90515ab4c6a9e92c6b39dd7d2d26"
+  "gitHead": "851ee13752b6f3241e5693237fbac91928499b20"
 }

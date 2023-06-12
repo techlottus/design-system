@@ -1,6 +1,6 @@
 {
   "name": "@lottuseducation/tailwind-base",
-  "version": "1.2.0-alpha.0",
+  "version": "1.8.0-alpha.0",
   "description": "A set of overrides and extensions for TailwindCSS based on Lottus's Design System",
   "main": "lib/tailwind-base.js",
   "module": "lib/esm/tailwind-base.js",
@@ -43,5 +43,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "9aee86c05c5c90515ab4c6a9e92c6b39dd7d2d26"
+  "gitHead": "851ee13752b6f3241e5693237fbac91928499b20"
 }
