@@ -6,7 +6,9 @@ const bannerImageStyles: any = {
   light: { opacity: "0.5" },
 };
 const defaultValues: any = {
-  ratio: "2/1",
+  desktopRatio: "7/2",
+  tabletRatio: "7/2",
+  mobileRatio: "4/3",
   overlay: "normal",
   contentVariant: "dark",
   size: "md",
@@ -18,7 +20,9 @@ const classBannerImage: any = cn("w-full h-full object-cover object-center");
 const Banner = (props: any) => {
   const {
     imageUrl,
-    ratio = defaultValues.ratio,
+    desktopRatio = defaultValues.desktopRatio,
+    mobileRatio = defaultValues.mobileRatio,
+    tabletRatio = defaultValues.tabletRatio,
     overlay = defaultValues.overlay,
     title,
     text,
@@ -30,8 +34,32 @@ const Banner = (props: any) => {
   } = props;
   return (
     <div className={className}>
-      <div className="hidden xl:block lg:block md:block  ">
-        <Aspect ratio={ratio}>
+      <div className="hidden xl:block lg:block ">
+        <Aspect ratio={desktopRatio}>
+          <img
+            className={classBannerImage}
+            style={bannerImageStyles?.[overlay]}
+            src={imageUrl}
+            alt="image Banner"
+          />
+          <BannerContent
+            title={title}
+            text={text}
+            btn={{
+              id: btn.id,
+              label: btn.label,
+              variant: contentVariant ? "outlined" : "primary",
+              iconName: btn?.iconName,
+            }}
+            contentVariant={contentVariant}
+            size={size}
+            position={position}
+            mobile={false}
+          />
+        </Aspect>
+      </div>
+      <div className="hidden xl:hidden lg:hidden md:block  ">
+        <Aspect ratio={tabletRatio}>
           <img
             className={classBannerImage}
             style={bannerImageStyles?.[overlay]}
@@ -56,7 +84,7 @@ const Banner = (props: any) => {
       </div>
       <div className="lg:hidden md:hidden flex flex-col space-x-1 ">
         <div className="w-full h-full flex relative ">
-          <Aspect ratio="4/3">
+          <Aspect ratio={mobileRatio}>
             <img
               src={imageUrl}
               className="w-full h-full object-cover object-center"
