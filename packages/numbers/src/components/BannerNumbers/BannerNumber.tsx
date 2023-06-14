@@ -25,13 +25,6 @@ const BannerNumber = (props: any) => {
     ["text-neutral-100"]: contentVariant === "light",
     ["text-neutral-800"]: contentVariant === "dark",
   });
-  const ratio = (numbersCount: any) => {
-    let aspect = "";
-    if (numbersCount > 2) {
-      aspect = "1/2";
-    } else aspect = "3/4";
-    return aspect;
-  };
   return (
     <div className="w-full">
       <div className="hidden lg:flex">
@@ -54,7 +47,7 @@ const BannerNumber = (props: any) => {
             <div className="w-1/2 font-secondary">
               <span className={fontColors}>{description}</span>
             </div>
-            <div className="grid grid-cols-4 gap-6 pt-10">
+            <div className="grid grid-cols-4 gap-6 pt-6">
               {numbers.map((number: any, numberindex: any) => (
                 <Numbers
                   number={number?.number}
@@ -111,7 +104,7 @@ const BannerNumber = (props: any) => {
         </Aspect>
       </div>
       <div className="flex md:hidden ">
-        <Aspect ratio={ratio(numbers.length)}>
+        <Aspect ratio="1/2">
           <img
             className={classBannerImage}
             style={bannerImageStyles?.[overlay]}
