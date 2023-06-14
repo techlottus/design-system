@@ -36,7 +36,7 @@ const BannerNumber = (props: any) => {
             alt="image Banner"
           />
           <div className="w-full h-full absolute top-0 left-0 flex flex-col p-10 ">
-            <div className="pb-2 w-1/2">
+            <div className="pb-2 w-1/2 leading-[125%]">
               <Heading
                 title={title}
                 type="h-3"
@@ -74,7 +74,7 @@ const BannerNumber = (props: any) => {
             alt="image Banner"
           />
           <div className="w-full h-full absolute top-0 left-0 flex flex-col p-10 ">
-            <div className="pb-2 w-4/5">
+            <div className="pb-2 w-4/5 leading-[125%]">
               <Heading
                 title={title}
                 type="h-3"
@@ -112,7 +112,7 @@ const BannerNumber = (props: any) => {
             alt="image Banner"
           />
           <div className="w-full h-full absolute top-0 left-0 flex flex-col p-6 ">
-            <div className="pb-2">
+            <div className="pb-2 leading-[125%]">
               <Heading
                 title={title}
                 type="h-3"

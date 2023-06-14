@@ -65,21 +65,23 @@ const Numbers = (props: any) => {
             <Icon
               iconName={iconName}
               type="outlined"
-              className="text-2xl lg:text-5xl md:text-3xl"
+              className="text-2xl lg:text-5xl md:text-3xl leading-[0]"
             />
           </span>
         ) : (
           ""
         )}
-        <span className="flex items-start">
+        <span className="flex items-start ">
           <Counter maxNumber={number} />
         </span>
       </div>
-      <div id="Numbers-title" className="pb-2 flex">
+      <div id="Numbers-title" className="py-2 flex">
         <Heading title={title} type="h-6" font="secondary" />
       </div>
       <div id="Numbers-description">
-        <span className="text-sm font-secondary flex">{description}</span>
+        <span className="text-sm font-secondary flex leading-[125%]">
+          {description}
+        </span>
       </div>
     </div>
   );
