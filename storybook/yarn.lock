@@ -1982,7 +1982,7 @@
 "@lottuseducation/numbers@file:../packages/numbers/lottuseducation-numbers-1.6.0-alpha.0.tgz":
   version "1.6.0-alpha.0"
   resolved "file:../packages/numbers/lottuseducation-numbers-1.6.0-alpha.0.tgz"
-  integrity sha512-+UksusCigXNg/vjpC2ixNp5CQPPuF7q4KiGkAwKEdTVdVHtpKvk75tZhCkG8J0nhg7MLcxzoBTCFqVex98/J0g==
+  integrity sha512-h+g3dqbT7xOMHPFGYZrnRVNkmfytVvP6WvWuvwUnExPRWQOZxTX4dIso9yM/5Op2Rz4U4iuhAxAMy/+P8/XYEA==
   dependencies:
     "@lottuseducation/design_system" "^1.1.0-alpha.0"
     classnames "^2.3.1"

@@ -44,7 +44,7 @@ const BannerNumber = (props: any) => {
                 className={fontColors}
               />
             </div>
-            <div className="w-1/2 font-secondary">
+            <div className="w-1/2 font-secondary leading-[125%]">
               <span className={fontColors}>{description}</span>
             </div>
             <div className="grid grid-cols-4 gap-6 pt-6">
@@ -82,7 +82,7 @@ const BannerNumber = (props: any) => {
                 className={fontColors}
               />
             </div>
-            <div className="w-4/5 font-secondary  md:text-base">
+            <div className="w-4/5 font-secondary  md:text-base leading-[125%]">
               <span className={fontColors}>{description}</span>
             </div>
             <div className="grid grid-cols-4 gap-6 pt-6">
@@ -120,19 +120,10 @@ const BannerNumber = (props: any) => {
                 className={fontColors}
               />
             </div>
-            <div
-              className={cn("font-secondary", {
-                ["text-xs min-[380px]:text-sm"]: numbers.length < 4,
-                ["text-sm"]: numbers.length > 2,
-              })}
-            >
+            <div className={cn("font-secondary leading-[125%]")}>
               <span className={fontColors}>{description}</span>
             </div>
-            <div
-              className={cn("flex flex-col pt-6 space-y-4", {
-                [" min-[380px]:space-y-6"]: numbers.length < 3,
-              })}
-            >
+            <div className={cn("flex flex-col pt-6 max-[380px]:gap-4 gap-6")}>
               {numbers.map((number: any, numberindex: any) => (
                 <Numbers
                   number={number?.number}
