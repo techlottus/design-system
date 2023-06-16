@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@lottuseducation/carousel": "file:../packages/carousel/lottuseducation-carousel-1.1.0-alpha.0.tgz",
-    "@lottuseducation/design_system": "file:../packages/design-system/lottuseducation-design_system-1.1.2-alpha.0.tgz",
+    "@lottuseducation/design_system": "file:../packages/design-system/lottuseducation-design_system-v1.8.0-alpha.0.tgz",
     "@lottuseducation/numbers": "file:../packages/numbers/lottuseducation-numbers-1.6.0-alpha.0.tgz",
     "@lottuseducation/slider": "file:../packages/slider/lottuseducation-slider-1.1.0-alpha.0.tgz",
     "@lottuseducation/tailwind-base": "^1.1.0-alpha.0",

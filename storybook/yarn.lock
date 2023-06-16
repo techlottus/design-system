@@ -1971,10 +1971,10 @@
   dependencies:
     classnames "^2.3.1"
 
-"@lottuseducation/design_system@file:../packages/design-system/lottuseducation-design_system-1.1.2-alpha.0.tgz":
-  version "1.1.2-alpha.0"
-  resolved "file:../packages/design-system/lottuseducation-design_system-1.1.2-alpha.0.tgz"
-  integrity sha512-i2wAbRE+Dv+l1VULVOYKEEiWoUDm1Bq8xsar1c6ivoEY6CzO3/N2wg0bFG/PaPliW1MWZkOu6xl9pjSi6x+N2g==
+"@lottuseducation/design_system@file:../packages/design-system/lottuseducation-design_system-v1.8.0-alpha.0.tgz":
+  version "1.8.0-alpha.0"
+  resolved "file:../packages/design-system/lottuseducation-design_system-v1.8.0-alpha.0.tgz"
+  integrity sha512-J571exkJ5v4p3vuG/5DcIhFSBbRpDw4NgDiRqTgFAQPBNYRyH8EpMrNOWQ7cpTSNJjCsnr60v4dgFKl/8SgupQ==
   dependencies:
     classnames "^2.3.1"
     react-lottie-player "^1.5.4"
