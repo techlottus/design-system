@@ -23,6 +23,7 @@ export default {
         "color5",
         "color6",
         "color7",
+        "transparent",
       ],
       control: { type: "select" },
     },

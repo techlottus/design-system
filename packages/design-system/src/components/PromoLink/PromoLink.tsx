@@ -6,6 +6,7 @@ import Aspect from "../Aspect";
 import Heading from "../Heading";
 
 const colors: any = {
+  transparent: "",
   color1: "border-outstanding-100 shadow-outstanding-100",
   color2: "border-outstanding-200 shadow-outstanding-200",
   color3: "border-outstanding-300 shadow-outstanding-300",
@@ -15,6 +16,7 @@ const colors: any = {
   color7: "border-neutral-900 shadow-neutral-900",
 };
 const colorsImg: any = {
+  transparent: "",
   color1: "bg-outstanding-100 ",
   color2: "bg-outstanding-200 ",
   color3: "bg-outstanding-300 ",
