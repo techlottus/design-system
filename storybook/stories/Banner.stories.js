@@ -7,7 +7,9 @@ export default {
     imageUrl: "https://wallpapercave.com/wp/wp2599594.jpg",
     title: "Demo Banner",
     text: "Demo Banner",
-    ratio: "4/3",
+    desktopRatio: "7/2",
+    tabletRatio: "7/2",
+    mobileRatio: "4/3",
     overlay: "dark",
     contentVariant: "dark",
     btn: {
