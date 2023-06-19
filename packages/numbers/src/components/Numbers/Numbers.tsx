@@ -58,22 +58,30 @@ const Numbers = (props: any) => {
     >
       <div
         id="Number-Icon"
-        className="flex align-center items-center space-x-1 pb-2"
+        className="flex align-center items-start space-x-1 pb-2"
       >
         {iconName ? (
-          <span className="text-2xl lg:text-5xl md:text-3xl">
-            <Icon iconName={iconName} type="outlined" />
+          <span className="flex text-2xl lg:text-5xl md:text-3xl">
+            <Icon
+              iconName={iconName}
+              type="outlined"
+              className="text-2xl lg:text-5xl md:text-3xl max-[380px]:leading-[0] leading-[125%]"
+            />
           </span>
         ) : (
           ""
         )}
-        <Counter maxNumber={number} />
+        <span className="flex items-start ">
+          <Counter maxNumber={number} />
+        </span>
       </div>
-      <div id="Numbers-title" className="pb-2">
+      <div id="Numbers-title" className="pb-2 max-[380px]:py-2  flex">
         <Heading title={title} type="h-6" font="secondary" />
       </div>
       <div id="Numbers-description">
-        <span className="text-sm font-secondary">{description}</span>
+        <span className="text-sm font-secondary flex leading-[125%]">
+          {description}
+        </span>
       </div>
     </div>
   );
