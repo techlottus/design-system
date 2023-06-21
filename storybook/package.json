@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@lottuseducation/carousel": "^1.6.0",
-    "@lottuseducation/design_system": "^1.8.0-alpha.0",
+    "@lottuseducation/design_system": "file:../packages/design-system/lottuseducation-design_system-v1.8.0-alpha.0.tgz",
     "@lottuseducation/numbers": "^1.6.0-alpha.0",
     "@lottuseducation/slider": "^1.6.0-alpha.0",
     "@lottuseducation/tailwind-base": "^1.1.0-alpha.0",
