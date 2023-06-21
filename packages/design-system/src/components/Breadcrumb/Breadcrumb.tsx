@@ -39,10 +39,10 @@ const Breadcrumb = ({
           { ["hidden"]: isExpand === false }
         )}
         onMouseEnter={(_) => {
-          if (links.lenght > 2) setExpand(true);
+          if (links.length) setExpand(true);
         }}
         onMouseLeave={(_) => {
-          if (links.lenght > 2) setExpand(false);
+          if (links.length) setExpand(false);
         }}
       >
         <li
@@ -90,7 +90,6 @@ const Breadcrumb = ({
         <li
           onClick={(_) => {
             myhref(homeIcon?.route);
-            console.log(isExpand);
           }}
         >
           <Icon
@@ -103,10 +102,10 @@ const Breadcrumb = ({
           <Icon iconName={separatorIcon} className="leading-[125%]" />
           <span
             onMouseEnter={(_) => {
-              if (links.lenght > 2) setExpand(true);
+              if (links.length) setExpand(true);
             }}
             onMouseLeave={(_) => {
-              if (links.lenght > 2) setExpand(false);
+              if (links.length) setExpand(false);
             }}
           >
             <Icon iconName={collapseIcon} className="leading-[125%]" />
@@ -127,14 +126,14 @@ const Breadcrumb = ({
       </ul>
       <div
         className={cn(
-          "rounded  border border-neutral-200 shadow shadow-neutral-200  min-[415px]:hidden",
+          "rounded  border border-neutral-200 shadow-2 shadow-neutral-200 drop-shadow min-[415px]:hidden font-principal",
           { ["hidden"]: isExpand === false }
         )}
         onMouseEnter={(_) => {
-          if (links.lenght > 2) setExpand(true);
+          if (links.length) setExpand(true);
         }}
         onMouseLeave={(_) => {
-          if (links.lenght > 2) setExpand(false);
+          if (links.length) setExpand(false);
         }}
       >
         <div className="flex-col min-[415px]:hidden ">

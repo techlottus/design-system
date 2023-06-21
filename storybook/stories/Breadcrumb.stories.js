@@ -10,6 +10,7 @@ export default {
     links: [
       { text: "pageLink1", route: "./pageLink" },
       { text: "pageLink2", route: "./pageLink2" },
+      { text: "pageLink2", route: "./pageLink3" },
     ],
     currentPageColor: "brand",
   },
