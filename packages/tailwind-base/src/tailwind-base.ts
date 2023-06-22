@@ -15,8 +15,8 @@ export default {
       icons: [
         "https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp",
       ],
-      iconsOutlined: ["Material Icons Outlined"],
-      iconSolid: ["Material Icons"],
+      "icons-outlined": ["Material Icons Outlined"],
+      "icons-solid": ["Material Icons"],
     },
     colors: {
       primary: {
