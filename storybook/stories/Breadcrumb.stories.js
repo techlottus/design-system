@@ -12,13 +12,8 @@ export default {
       { text: "pageLink2", route: "./pageLink2" },
       { text: "pageLink2", route: "./pageLink3" },
     ],
-    currentPageColor: "brand",
-  },
-  argTypes: {
-    currentPageColor: {
-      options: ["default", "brand"],
-      control: { type: "radio" },
-    },
+    classPageColor: "text-neutral-500",
+    collapseMin: 3,
   },
 };
 
