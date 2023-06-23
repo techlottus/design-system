@@ -1,4 +1,4 @@
-import {Slider} from "@lottuseducation/slider";
+import { Slider } from "@lottuseducation/slider";
 export default {
   title: "Slider",
   component: Slider,
@@ -24,7 +24,7 @@ export default {
       },
       {
         url: "https://st3.depositphotos.com/1010305/16498/i/950/depositphotos_164980550-stock-photo-tiger-in-forest-tiger-in.jpg",
-        title: "Conviértete en profesional a tu ritmo",
+        title: "Conviértete en profesional a tu ritmo 2",
         text: "Aprovecha la flexibilidad de estudiar una carrera profesional a tu propio ritmo y horario. Crea tu futuro con el control en tus manos.",
         btn: {
           id: "button",
@@ -36,6 +36,7 @@ export default {
           isExpand: false,
         },
         position: "left-middle",
+        overlay: "light",
       },
     ],
   },

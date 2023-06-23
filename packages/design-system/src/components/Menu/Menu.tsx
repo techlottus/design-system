@@ -10,7 +10,7 @@ import Button from "../Button/Button";
 import { menuAnimation } from "../assets/lotties/menu";
 
 const classesHeader = cn(
-  "flex flex-1 hidden lg:flex min-[320px]:hidden",
+  "flex flex-1 hidden lg:flex ",
   "p-1",
   "h-14 lg:h-auto",
   "shadow-lg",

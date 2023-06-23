@@ -57,7 +57,7 @@ const MenuMobile = (props: any) => {
     "flex justify-end items-center p-1 border-b border-t w-full border-neutral-300 cursor-pointer flex-row-reverse"
   );
   const ClassesMenuMobContainer: any = cn(
-    "w-d:hidden w-full ",
+    "lg:hidden w-full ",
     "bg-neutral-100",
     "border-t border-neutral-300",
     "p-2 top-12",

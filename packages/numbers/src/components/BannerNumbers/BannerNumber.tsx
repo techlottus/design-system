@@ -36,7 +36,7 @@ const BannerNumber = (props: any) => {
             alt="image Banner"
           />
           <div className="w-full h-full absolute top-0 left-0 flex flex-col p-10 ">
-            <div className="pb-2 w-1/2 leading-[125%]">
+            <div className="pb-2 w-1/2 leading-5">
               <Heading
                 title={title}
                 type="h-3"
@@ -44,7 +44,7 @@ const BannerNumber = (props: any) => {
                 className={fontColors}
               />
             </div>
-            <div className="w-1/2 font-secondary leading-[125%]">
+            <div className="w-1/2 font-secondary leading-5">
               <span className={fontColors}>{description}</span>
             </div>
             <div className="grid grid-cols-4 gap-6 pt-6">
@@ -74,7 +74,7 @@ const BannerNumber = (props: any) => {
             alt="image Banner"
           />
           <div className="w-full h-full absolute top-0 left-0 flex flex-col p-10 ">
-            <div className="pb-2 w-4/5 leading-[125%]">
+            <div className="pb-2 w-4/5 leading-5">
               <Heading
                 title={title}
                 type="h-3"
@@ -82,7 +82,7 @@ const BannerNumber = (props: any) => {
                 className={fontColors}
               />
             </div>
-            <div className="w-4/5 font-secondary  md:text-base leading-[125%]">
+            <div className="w-4/5 font-secondary  md:text-base leading-5">
               <span className={fontColors}>{description}</span>
             </div>
             <div className="grid grid-cols-4 gap-6 pt-6">
@@ -112,7 +112,7 @@ const BannerNumber = (props: any) => {
             alt="image Banner"
           />
           <div className="w-full h-full absolute top-0 left-0 flex flex-col p-6 ">
-            <div className="pb-2 leading-[125%]">
+            <div className="pb-2 leading-5">
               <Heading
                 title={title}
                 type="h-3"
@@ -120,10 +120,10 @@ const BannerNumber = (props: any) => {
                 className={fontColors}
               />
             </div>
-            <div className={cn("font-secondary leading-[125%]")}>
+            <div className={cn("font-secondary leading-5")}>
               <span className={fontColors}>{description}</span>
             </div>
-            <div className={cn("flex flex-col pt-6 max-[380px]:gap-4 gap-6")}>
+            <div className={cn("flex flex-col pt-6 gap-4 md:gap-6")}>
               {numbers.map((number: any, numberindex: any) => (
                 <Numbers
                   number={number?.number}

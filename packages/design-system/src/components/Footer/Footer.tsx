@@ -195,7 +195,7 @@ const Footer = (props: any) => {
             <div className="font-principal font-bold ">{contact?.text}</div>
             <div id="socialmedia" className="flex justify-start">
               <SocialMedia
-                className="  flex  py-4  min-[300px]:px-0 space-x-8 min-[300px]:justify-start  "
+                className="  flex  py-4  sm:px-0 space-x-8sm:justify-start  "
                 svgClass="h-5"
                 socialMedia={contact?.socialMedia}
               />

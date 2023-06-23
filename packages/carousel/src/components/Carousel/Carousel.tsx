@@ -10,7 +10,7 @@ const Carousel = (props: any) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const stylesBaseControls =
-    "material-icons select-none absolute top-[35%] p-1 rounded-lg text-[12px] w-p:hidden";
+    "select-none absolute top-[35%] p-4 rounded-lg text-sm sm:hidden";
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     breakpoints: {
@@ -27,7 +27,6 @@ const Carousel = (props: any) => {
     initial: 0,
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
-      console.log(slider);
     },
     created() {
       setLoaded(true);
@@ -75,7 +74,7 @@ const Carousel = (props: any) => {
         <>
           <div
             className={cn(
-              "z-20 left-0 w-p:invisible w-t:invisible cursor-pointer",
+              "z-20 left-0  md:block hidden cursor-pointer",
               stylesBaseControls
             )}
           >
@@ -90,7 +89,7 @@ const Carousel = (props: any) => {
           </div>
           <div
             className={cn(
-              "z-20 right-0 w-p:invisible w-t:invisible cursor-pointer",
+              "z-20 right-0  md:block hidden cursor-pointer",
               stylesBaseControls
             )}
           >
@@ -106,10 +105,13 @@ const Carousel = (props: any) => {
               <div
                 key={`bullet-item-${i}`}
                 onClick={() => activeBulletSlide(i)}
-                className={cn("h-4 bg-[#686868] rounded-full cursor-pointer", {
-                  "w-4": i !== currentSlide,
-                  "w-8": i === currentSlide,
-                })}
+                className={cn(
+                  "h-4 bg-neutral-600 rounded-full cursor-pointer",
+                  {
+                    "w-4": i !== currentSlide,
+                    "w-8": i === currentSlide,
+                  }
+                )}
               />
             ))}
           </div>

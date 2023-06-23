@@ -65,7 +65,7 @@ const Numbers = (props: any) => {
             <Icon
               iconName={iconName}
               type="outlined"
-              className="text-2xl lg:text-5xl md:text-3xl max-[380px]:leading-[0] leading-[125%]"
+              className="text-2xl lg:text-5xl md:text-3xl leading-4 sm:leading-5"
             />
           </span>
         ) : (
@@ -75,11 +75,11 @@ const Numbers = (props: any) => {
           <Counter maxNumber={number} />
         </span>
       </div>
-      <div id="Numbers-title" className="pb-2 max-[380px]:py-2  flex">
+      <div id="Numbers-title" className="pb-2 py-2 sm:py-1 flex">
         <Heading title={title} type="h-6" font="secondary" />
       </div>
       <div id="Numbers-description">
-        <span className="text-sm font-secondary flex leading-[125%]">
+        <span className="text-sm font-secondary flex leading-5">
           {description}
         </span>
       </div>

@@ -79,7 +79,7 @@ const AccordionItem = (props: any) => {
             <div className="w-full">{item?.text}</div>
             <div
               className={cn(
-                "text-neutral-700 font-bold text-2xl leading-0 flex items-start cursor-pointer",
+                "text-neutral-700 font-bold text-2xl flex items-start cursor-pointer",
                 { ["invisible"]: !item.iconHoriz }
               )}
             >

@@ -53,7 +53,7 @@ const LeaderBoard = (props: any) => {
             </span>
           </div>
         ) : (
-          <div className="flex md:flex-row md:space-x-4 flex-col max-[775px]:space-y-4">
+          <div className="flex md:flex-row md:space-x-4 flex-col space-y-4 md:space-y-1">
             <span className="flex flex-col space-y-4 font-principal">
               <Extensions {...links?.[0]} />
               <Extensions {...links?.[1]} />

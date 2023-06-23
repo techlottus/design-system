@@ -31,9 +31,9 @@ const Rainbow = (props: any) => {
                 type="h-3"
                 font="secondary"
                 variant="negative"
-                className="leading-[125%] pb-6"
+                className="leading-5 pb-6"
               />
-              <span className="flex items-start leading-[125%] text-neutral-100 font-principal pb-6 lg:pb-0 text-sm md:text-base lg:text-lg">
+              <span className="flex items-start leading-5 text-neutral-100 font-principal pb-6 lg:pb-0 text-sm md:text-base lg:text-lg">
                 {item?.description}
               </span>
             </div>
