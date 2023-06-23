@@ -27,3 +27,4 @@ export {
 export { useScrollDirection } from "./hooks/useScrollDirection";
 export { default as Menu } from "./Menu";
 export { default as Rainbow } from "./Rainbow";
+export { default as Breadcrumb } from "./Breadcrumb";
