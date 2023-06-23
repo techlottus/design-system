@@ -32,7 +32,7 @@ const Tab = (props: any) => {
         {iconName ? (
           <span
             className={cn(
-              " flex text-sm font-semibold leading-[125%] whitespace-nowrap items-center justify-center",
+              " flex text-sm font-semibold leading-5 whitespace-nowrap items-center justify-center",
               {
                 ["space-x-2"]: label,
               }
@@ -44,7 +44,7 @@ const Tab = (props: any) => {
               type="h-6"
               variant="negative"
               font="secondary"
-              className="text-sm font-semibold leading-[125%]"
+              className="text-sm font-semibold leading-5"
             />
           </span>
         ) : (
@@ -53,7 +53,7 @@ const Tab = (props: any) => {
             type="h-6"
             variant="negative"
             font="secondary"
-            className="text-sm font-semibold leading-[125%]"
+            className="text-sm font-semibold leading-5"
           />
         )}
       </div>

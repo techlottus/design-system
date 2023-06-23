@@ -64,6 +64,15 @@ export default {
       boxShadow: {
         lb: "4px 6px 0px 0px rgba(0, 0, 0, 1)",
       },
+      height: {
+        "9/10": "90%",
+      },
+      width: {
+        "22.5": "90px",
+      },
+      padding: {
+        "24.75": "99px",
+      },
     },
   },
   variants: {

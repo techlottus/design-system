@@ -15,6 +15,7 @@ export default {
     },
     position: "left-top",
     className: "",
+    size: "sm",
   },
   args1: {
     title: "Demo BannerContent",

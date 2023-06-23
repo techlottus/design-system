@@ -30,11 +30,11 @@
     "url": "https://github.com/techlottus/design-system/issues"
   },
   "dependencies": {
-    "@lottuseducation/carousel": "^1.6.0",
+    "@lottuseducation/carousel": "file:../packages/carousel/lottuseducation-carousel-v1.6.0.tgz",
     "@lottuseducation/design_system": "file:../packages/design-system/lottuseducation-design_system-v1.8.0-alpha.0.tgz",
     "@lottuseducation/numbers": "^1.6.0-alpha.0",
-    "@lottuseducation/slider": "^1.6.0-alpha.0",
-    "@lottuseducation/tailwind-base": "file:../packages/tailwind-base/lottuseducation-tailwind-base-v1.8.0-alpha.0.tgz",
+    "@lottuseducation/slider": "file:../packages/slider/lottuseducation-slider-v1.6.0-alpha.0.tgz",
+    "@lottuseducation/tailwind-base": "^1.1.0-alpha.0",
     "@storybook/addon-essentials": "^7.0.18",
     "@storybook/addon-interactions": "^7.0.18",
     "@storybook/addon-links": "^7.0.18",

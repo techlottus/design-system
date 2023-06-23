@@ -24,7 +24,7 @@ const Counter = ({ maxNumber }: any) => {
   return (
     <span
       ref={containerRef}
-      className="font-secondary text-2xl lg:text-5xl md:text-3xl font-bold max-[380px]:leading-[0] leading-[125%]"
+      className="font-secondary text-2xl lg:text-5xl md:text-3xl font-bold leading-4 sm:leading-5"
     >
       {count}
     </span>

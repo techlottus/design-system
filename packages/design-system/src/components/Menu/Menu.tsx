@@ -10,7 +10,7 @@ import Button from "../Button/Button";
 import { menuAnimation } from "../assets/lotties/menu";
 
 const classesHeader = cn(
-  "flex flex-1 hidden lg:flex min-[320px]:hidden",
+  "flex flex-1 hidden lg:flex ",
   "p-1",
   "h-14 lg:h-auto",
   "shadow-lg",
@@ -271,7 +271,7 @@ const Menu = (props: any) => {
           </div>
         </div>
         <div id="Logo" className={classesLogoMobile}>
-          <img src={data.logotype.src} alt="logo" className="w-[90px] h-10 " />
+          <img src={data.logotype.src} alt="logo" className="w-22.5 h-10 " />
         </div>
         <div id="search" className={classesSearchContainer}>
           <div className={classesSearchMobile}>
