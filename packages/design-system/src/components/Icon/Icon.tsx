@@ -5,8 +5,8 @@ const Icon = (props: any) => {
   return (
     <span
       className={cn("select-none leading-0", className, {
-        ["material-icons-outlined"]: type === "outlined",
-        ["font-icons"]: type === "solid",
+        ["font-icons-outlined"]: type === "outlined",
+        ["font-icons-solid"]: type === "solid",
       })}
     >
       <i>{iconName}</i>
