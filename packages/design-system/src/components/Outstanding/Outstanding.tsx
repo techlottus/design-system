@@ -1,4 +1,5 @@
 import Aspect from "../Aspect";
+import Button from "../Button/Button";
 import Heading from "../Heading";
 import cn from "classnames";
 
@@ -35,6 +36,7 @@ const Outstanding = (props: any) => {
     paragraph,
     imgPosition = defaultValues.imgPosition,
     backgroundColor = defaultValues.backgroundColor,
+    button,
   } = props;
   return (
     <div
@@ -59,8 +61,11 @@ const Outstanding = (props: any) => {
         })}
       >
         <Heading title={title} type="h-5" font="secondary" className="pb-4" />
-        <div className="text-neutral-100 font-secondary align-center md:pb-6 pb-4 md:text-base text-sm">
+        <div className="text-neutral-100 font-secondary align-center md:pb-4 pb-2 md:text-base text-sm">
           {paragraph}
+        </div>
+        <div className="pb-6">
+          <Button size="xsm" variant="outlined-negative" {...button} />
         </div>
       </div>
     </div>

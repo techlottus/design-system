@@ -67,9 +67,9 @@ const Button = (props: {
   onClick?: () => {};
 }) => {
   const {
-    id,
+    id = "btn",
     label,
-    className,
+    className = "",
     disabled = false,
     iconName,
     size = "md",

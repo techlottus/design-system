@@ -1964,10 +1964,18 @@
     "@types/react-dom" "^18.2.4"
     classnames "^2.3.1"
 
-"@lottuseducation/design_system@^1.8.0-alpha.0", "@lottuseducation/design_system@file:../packages/design-system/lottuseducation-design_system-v1.8.0-alpha.0.tgz":
+"@lottuseducation/design_system@^1.8.0-alpha.0":
   version "1.8.0-alpha.0"
-  resolved "file:../packages/design-system/lottuseducation-design_system-v1.8.0-alpha.0.tgz"
-  integrity sha512-Uca4UdzEPQVo70TSDPrrgnfuAylYWqfzR1mhRKEwQmrBdKZ0f0vc+wpbpQSTHGmBq6RsldaGoBKdfgyZX0lckA==
+  resolved "https://registry.npmjs.org/@lottuseducation/design_system/-/design_system-1.8.0-alpha.0.tgz"
+  integrity sha512-HPN/gkHnergbkuIPEf2LXDs0YqOSlH/LwxbhAiRkoJnTpnQPUlFxMpbeoFpUl5vOscLg3vIyxm5t25xdivH+LA==
+  dependencies:
+    classnames "^2.3.1"
+    react-lottie-player "^1.5.4"
+
+"@lottuseducation/design_system@file:../packages/design-system/lottuseducation-design_system-v1.9.0-alpha.0.tgz":
+  version "1.9.0-alpha.0"
+  resolved "file:../packages/design-system/lottuseducation-design_system-v1.9.0-alpha.0.tgz"
+  integrity sha512-tQr6BxnvJNGEqsRGTGPgUIA5593lMOUuhhOFzHN0Z8oqctH9oIb6Q3c5MLWyB9ZRRXyvqtZ84dCbQlZi9MgALg==
   dependencies:
     classnames "^2.3.1"
     react-lottie-player "^1.5.4"
@@ -1990,10 +1998,10 @@
     classnames "^2.3.1"
     keen-slider "^6.8.5"
 
-"@lottuseducation/tailwind-base@^1.1.0-alpha.0":
-  version "1.1.0-alpha.0"
-  resolved "https://registry.npmjs.org/@lottuseducation/tailwind-base/-/tailwind-base-1.1.0-alpha.0.tgz"
-  integrity sha512-bvT/GprTJNd16lNhw+G7r2ggxN3h8vGRcmZbY4cEFJwU8gs7Gys0wtvW45RrWj8zKMUZP5vXUDNmgbXCKcuUUg==
+"@lottuseducation/tailwind-base@file:../packages/tailwind-base/lottuseducation-tailwind-base-v1.9.0-alpha.0.tgz":
+  version "1.9.0-alpha.0"
+  resolved "file:../packages/tailwind-base/lottuseducation-tailwind-base-v1.9.0-alpha.0.tgz"
+  integrity sha512-h/D46/sBEJqgDqymidPHRvGlBDJqUfFlVJZwF3jJD3HsG5447Ypo/3jXo1s0PoKhK5mAIJlomdP7/V2gOfN3YQ==
   dependencies:
     tailwindcss "^3.3.2"
 
