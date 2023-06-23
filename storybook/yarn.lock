@@ -1941,10 +1941,15 @@
   resolved "https://registry.npmjs.org/@juggle/resize-observer/-/resize-observer-3.4.0.tgz"
   integrity sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==
 
-"@lottuseducation/carousel@^1.6.0":
+"@leichtgewicht/ip-codec@^2.0.1":
+  version "2.0.4"
+  resolved "https://registry.npmjs.org/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz"
+  integrity sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==
+
+"@lottuseducation/carousel@file:../packages/carousel/lottuseducation-carousel-v1.6.0.tgz":
   version "1.6.0"
-  resolved "https://registry.yarnpkg.com/@lottuseducation/carousel/-/carousel-1.6.0.tgz#01efbc387a04650ae938a92f22e5ebd89d1d48cd"
-  integrity sha512-0eUQqvup7DngaWoNZ0vDQMpRUB/4OrhJPdP8uPWm5qMMxalvVkBKOZnMBY2EkIqhUvD+w6J0riji107Ps4Wp1w==
+  resolved "file:../packages/carousel/lottuseducation-carousel-v1.6.0.tgz"
+  integrity sha512-Bukr3SfZtVPuwilAFp4/2mDtypKYtcWlzozVrq3EvXS9JliCSKCVw2iJuEAfMItwph/hVlSQZAUXHAlsEF2V1A==
   dependencies:
     "@lottuseducation/design_system" "^1.8.0-alpha.0"
     classnames "^2.3.1"
@@ -1961,8 +1966,8 @@
 
 "@lottuseducation/design_system@^1.8.0-alpha.0", "@lottuseducation/design_system@file:../packages/design-system/lottuseducation-design_system-v1.8.0-alpha.0.tgz":
   version "1.8.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/@lottuseducation/design_system/-/design_system-1.8.0-alpha.0.tgz#9266cf4da160d9bcc4e2e3ac0d38775539aacc9e"
-  integrity sha512-HPN/gkHnergbkuIPEf2LXDs0YqOSlH/LwxbhAiRkoJnTpnQPUlFxMpbeoFpUl5vOscLg3vIyxm5t25xdivH+LA==
+  resolved "file:../packages/design-system/lottuseducation-design_system-v1.8.0-alpha.0.tgz"
+  integrity sha512-Uca4UdzEPQVo70TSDPrrgnfuAylYWqfzR1mhRKEwQmrBdKZ0f0vc+wpbpQSTHGmBq6RsldaGoBKdfgyZX0lckA==
   dependencies:
     classnames "^2.3.1"
     react-lottie-player "^1.5.4"
@@ -1978,17 +1983,17 @@
 
 "@lottuseducation/slider@file:../packages/slider/lottuseducation-slider-v1.6.0-alpha.0.tgz":
   version "1.6.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/@lottuseducation/slider/-/slider-1.6.0-alpha.0.tgz#63b761504051a122350897dd252b2f57dfa31938"
-  integrity sha512-rPpHqxaQ6TvwK9ntsTb79NVOyfT7rjKcdKcd5r8yrn4mwUY7tTxwrf6z7I9sri0RP+/kLZ/lP126EPiqoV+vjg==
+  resolved "file:../packages/slider/lottuseducation-slider-v1.6.0-alpha.0.tgz"
+  integrity sha512-bHGf3IHyFP+NeE2gdi+IlGak5HIGY6UvSa+ZwduuOS7gUKC+MokwqsrBV+wjPFFvvMIepODkVDqLTBpo6d4faA==
   dependencies:
     "@lottuseducation/design_system" "^1.8.0-alpha.0"
     classnames "^2.3.1"
     keen-slider "^6.8.5"
 
-"@lottuseducation/tailwind-base@file:../packages/tailwind-base/lottuseducation-tailwind-base-v1.8.0-alpha.0.tgz":
-  version "1.8.0-alpha.0"
-  resolved "file:../packages/tailwind-base/lottuseducation-tailwind-base-v1.8.0-alpha.0.tgz"
-  integrity sha512-h9EiXik5Sq7hba8qnxvAxVNIz+EIjOBzx1a8K49mWB57KT/v2D2Va5kUlvr2y40HolpFATowtawfMIcdIY0IaQ==
+"@lottuseducation/tailwind-base@^1.1.0-alpha.0":
+  version "1.1.0-alpha.0"
+  resolved "https://registry.npmjs.org/@lottuseducation/tailwind-base/-/tailwind-base-1.1.0-alpha.0.tgz"
+  integrity sha512-bvT/GprTJNd16lNhw+G7r2ggxN3h8vGRcmZbY4cEFJwU8gs7Gys0wtvW45RrWj8zKMUZP5vXUDNmgbXCKcuUUg==
   dependencies:
     tailwindcss "^3.3.2"
 
