@@ -10,7 +10,7 @@ const Carousel = (props: any) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const stylesBaseControls =
-    "select-none absolute top-[35%] p-4 rounded-lg text-sm sm:hidden";
+    "select-none absolute top-1.5 p-4 rounded-lg text-sm sm:hidden";
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     breakpoints: {
@@ -39,7 +39,7 @@ const Carousel = (props: any) => {
 
   return (
     <section className="flex flex-col relative w-full my-6">
-      <section className="lg:w-[90%] md:w-[95%] sm:w-[90%] mx-auto">
+      <section className="lg:w-11/12 md:w-11/12 sm:w-full mx-auto">
         <div ref={sliderRef} className="keen-slider ">
           {data.map((card: any, i: any) => (
             <section key={`card-item-${i}`}>

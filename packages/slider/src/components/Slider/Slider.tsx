@@ -15,7 +15,7 @@ const Slider = (props: any) => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [loaded, setLoaded] = useState<boolean>(false);
   const stylesBaseControls =
-    "select-none absolute top-[35%] p-4 rounded-lg text-sm sm:hidden";
+    "select-none absolute top-1.5 p-4 rounded-lg text-sm sm:hidden";
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     breakpoints: {

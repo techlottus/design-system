@@ -271,7 +271,7 @@ const Menu = (props: any) => {
           </div>
         </div>
         <div id="Logo" className={classesLogoMobile}>
-          <img src={data.logotype.src} alt="logo" className="w-[90px] h-10 " />
+          <img src={data.logotype.src} alt="logo" className="w-22.5 h-10 " />
         </div>
         <div id="search" className={classesSearchContainer}>
           <div className={classesSearchMobile}>

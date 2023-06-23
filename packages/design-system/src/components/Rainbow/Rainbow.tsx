@@ -22,7 +22,7 @@ const Rainbow = (props: any) => {
       <div className="z-10 w-full  h-full left-0 top-0 py-12 lg:space-y-6 md:space-y-12 space-y-6">
         {items.map((item: any, i: any) => (
           <section
-            className="w-full flex flex-col lg:flex-row  lg:pl-[99px] pr-6 pl-6 lg:space-x-6 group"
+            className="w-full flex flex-col lg:flex-row  lg:pl-24.75 pr-6 pl-6 lg:space-x-6 group"
             key={i}
           >
             <div className="lg:w-1/2 w-full flex flex-col lg:align-middle">

@@ -40,7 +40,7 @@ const MenuMobile = (props: any) => {
   };
 
   const ClassesMenuContainer = cn(
-    " w-full bg-neutral-100 container overscroll-contain h-[90%] px-2 overflow-hidden",
+    " w-full bg-neutral-100 container overscroll-contain h-9/10 px-2 overflow-hidden",
     className
   );
   const ClassesItemsContainer = cn(
@@ -51,7 +51,7 @@ const MenuMobile = (props: any) => {
     "flex justify-between items-center p-1 h-full border-b border-neutral-300 cursor-pointer"
   );
   const classesSubMenuContainer = cn(
-    "w-full flex flex-col  py-1 z-20 overscroll-contain h-[90%] "
+    "w-full flex flex-col  py-1 z-20 overscroll-contain h-9/10 "
   );
   const classesReverse = cn(
     "flex justify-end items-center p-1 border-b border-t w-full border-neutral-300 cursor-pointer flex-row-reverse"

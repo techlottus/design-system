@@ -15,19 +15,19 @@ const Breadcrumb = ({
   const [isExpand, setExpand] = useState<boolean>(links?.length < collapseMin);
 
   const breandcrumbExpandStyles = cn(
-    "flex items-center align-center leading-[125%] space-x-2 max-[415px]:hidden ",
+    "md:flex items-center align-center leading-5 space-x-2 hidden ",
     {
       ["hidden"]: isExpand === false,
     }
   );
   const breandcrumbCollapseStyles = cn(
-    "flex items-center align-center leading-[125%] space-x-2 group",
+    "flex items-center align-center leading-5 space-x-2 group",
     {
       ["md:hidden"]: isExpand,
     }
   );
   const commonClasses =
-    "flex items-center align-center text-neutral-600 font-principal leading-[125%] space-x-2 font-bold";
+    "md:flex items-center align-center text-neutral-600 font-principal leading-5 space-x-2 font-bold";
 
   const handleOnHover = () => {
     if (links.length >= collapseMin) setExpand(true);
@@ -38,7 +38,7 @@ const Breadcrumb = ({
   return (
     <div>
       <ul
-        className={cn(commonClasses, "max-[415px]:hidden", {
+        className={cn(commonClasses, "hidden", {
           ["hidden"]: isExpand === false,
         })}
         onMouseEnter={handleOnHover}
@@ -52,12 +52,12 @@ const Breadcrumb = ({
           <Icon
             iconName={homeIcon?.iconName}
             type="outlined"
-            className="leading-[125%] "
+            className="leading-5 "
           />
         </li>
         {links.map((link: any, indexlink: any) => (
           <li key={"crumb-" + indexlink} className={breandcrumbExpandStyles}>
-            <Icon iconName={separatorIcon} className="leading-[125%]" />
+            <Icon iconName={separatorIcon} className="leading-5" />
             <TextLink
               text={link?.text}
               href={link?.route}
@@ -68,7 +68,7 @@ const Breadcrumb = ({
           </li>
         ))}
       </ul>
-      <ul className={cn(commonClasses, { ["min-[415px]:hidden"]: isExpand })}>
+      <ul className={cn(commonClasses, { ["md:hidden"]: isExpand })}>
         <li
           onClick={(_) => {
             myhref(homeIcon?.route);
@@ -77,21 +77,19 @@ const Breadcrumb = ({
           <Icon
             iconName={homeIcon?.iconName}
             type="outlined"
-            className="leading-[125%]"
+            className="leading-5"
           />
         </li>
         <li className={breandcrumbCollapseStyles}>
-          <Icon iconName={separatorIcon} className="leading-[125%]" />
+          <Icon iconName={separatorIcon} className="leading-5" />
           <span onMouseEnter={handleOnHover} onMouseLeave={handleOnLeave}>
-            <Icon iconName={collapseIcon} className="leading-[125%]" />
+            <Icon iconName={collapseIcon} className="leading-5" />
           </span>
         </li>
         <li
-          className={cn(
-            "flex items-center align-center leading-[125%] space-x-2"
-          )}
+          className={cn("flex items-center align-center leading-5 space-x-2")}
         >
-          <Icon iconName={separatorIcon} className="leading-[125%]" />
+          <Icon iconName={separatorIcon} className="leading-5" />
           <TextLink
             text={links[links.length - 1]?.text}
             href={links[links.length - 1]?.route}
@@ -101,13 +99,13 @@ const Breadcrumb = ({
       </ul>
       <div
         className={cn(
-          "rounded  border border-neutral-200 shadow-2 shadow-neutral-200 drop-shadow min-[415px]:hidden font-principal",
+          "rounded  border border-neutral-200 shadow-2 shadow-neutral-200 drop-shadow md:hidden font-principal",
           { ["hidden"]: isExpand === false }
         )}
         onMouseEnter={handleOnHover}
         onMouseLeave={handleOnLeave}
       >
-        <div className="flex-col min-[415px]:hidden ">
+        <div className="flex-col md:hidden ">
           {links?.map((link: any, linkIndex: any) => (
             <div
               className={cn(
