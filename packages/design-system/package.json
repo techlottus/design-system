@@ -1,6 +1,6 @@
 {
   "name": "@lottuseducation/design_system",
-  "version": "1.9.0-alpha.0",
+  "version": "1.10.0-alpha.0",
   "description": "Core components",
   "author": "Lottus Engineering <dev.tech@lottuseducation.com>",
   "main": "lib/cjs/index.js",
