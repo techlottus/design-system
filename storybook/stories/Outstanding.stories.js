@@ -9,6 +9,14 @@ export default {
     title: "Perfil de ingreso",
     imgPosition: "right",
     backgroundColor: "color1",
+    button: {
+      id: "cta-outstanding",
+      label: "cta2",
+      iconName: "home",
+      onClick: () => {
+        console.log("cta");
+      },
+    },
     paragraph:
       "Al ingresar a la Licenciatura en Administración el aspitante deberá tener una alta orientación a los negocios y las siguientes características: Pensamiento innovador y analítico enfocado a resultados. Adaptación a los cambios. Facilidad de palabra, liderazgo y gusto por formar y dirigir equipos de trabajo de alto desempeño. ",
   },
