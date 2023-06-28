@@ -2,6 +2,7 @@ import Aspect from "../Aspect";
 import Button from "../Button/Button";
 import Heading from "../Heading";
 import cn from "classnames";
+import Icon from "../Icon/Icon";
 
 const position: any = {
   ["right"]: "flex-col-reverse md:flex-row-reverse md:pt-6  pt-4",
@@ -65,7 +66,12 @@ const Outstanding = (props: any) => {
           {paragraph}
         </div>
         <div className="pb-6">
-          <Button size="xsm" variant="outlined-negative" {...button} />
+          <Button size="xsm" variant="outlined-negative" {...button}>
+            <span>
+              {button?.label}
+              <Icon iconName={button?.iconName} />
+            </span>
+          </Button>
         </div>
       </div>
     </div>

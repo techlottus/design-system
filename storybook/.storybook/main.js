@@ -1,10 +1,13 @@
 /** @type { import('@storybook/react-webpack5').StorybookConfig } */
 const config = {
-  stories: ["../stories/**/*.mdx", "../stories/*.stories.@(js|jsx|ts|tsx)"],
+  stories: ["../stories/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
     "@storybook/addon-links",
+    "@storybook/preset-typescript",
+    "@storybook/addon-knobs",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
+    "@storybook/addon-a11y",
     {
       name: "@storybook/addon-styling",
       options: {
@@ -20,6 +23,7 @@ const config = {
   },
   docs: {
     autodocs: "tag",
+    defaultName: "Documentation",
   },
 };
 export default config;

@@ -6,6 +6,7 @@ import {
   getClassBannerPositionButton,
 } from "../helpers/classesHelper";
 import { getTextCount } from "../helpers/textHelper";
+import Icon from "../Icon/Icon";
 
 const BannerContent = (props: any) => {
   const {
@@ -53,13 +54,17 @@ const BannerContent = (props: any) => {
             <div className={getClassBannerPositionButton(position)}>
               <Button
                 id={btn?.id}
-                label={btn?.label}
-                iconName={btn?.iconName}
                 variant={
                   contentVariant === "light" ? "outlined-negative" : "primary"
                 }
                 size={size === "lg" ? "md" : size === "md" ? "sm" : "xsm"}
-              />
+                {...btn}
+              >
+                <span>
+                  {btn?.label}
+                  <Icon iconName={btn?.iconName} />
+                </span>
+              </Button>
             </div>
           ) : (
             ""
@@ -80,13 +85,16 @@ const BannerContent = (props: any) => {
           <div className="pb-4 font-secondary">
             <Button
               id={btn?.id}
-              label={btn?.label}
               variant="primary"
               size="xsm"
-              iconName={btn?.iconName}
               className="min-w-full flex justify-center"
-              onClick={btn?.onClick}
-            />
+              {...btn}
+            >
+              <span>
+                {btn?.label}
+                <Icon iconName={btn?.iconName} />
+              </span>
+            </Button>
           </div>
         ) : (
           ""

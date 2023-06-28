@@ -49,25 +49,30 @@ const Footer = (props: any) => {
                 name={newsletter?.inputName}
                 className="flex bg-neutral-200  w-1/2 rounded-l-lg py-4 px-3 font-principal text-neutral-800"
               />
-
               <Button
                 id="btn-mail-subscribe"
-                label={newsletter.btn.label}
                 variant="primary"
                 size="md"
-                iconName={newsletter.btn?.iconName}
                 className="rounded-l-none hidden lg:flex"
-                onClick={newsletter.onClick}
-              />
+                {...newsletter?.btn}
+              >
+                <span>
+                  {newsletter.btn.label}
+                  <Icon iconName={newsletter.btn?.iconName} />
+                </span>
+              </Button>
               <Button
                 id="btn-mail-subscribe"
-                label={newsletter.btn.label}
                 variant="primary"
                 size="xsm"
-                iconName={newsletter.btn?.iconName}
                 className="rounded-l-none  lg:hidden"
-                onClick={newsletter.onClick}
-              />
+                {...newsletter?.btn}
+              >
+                <span>
+                  {newsletter.btn?.label}
+                  <Icon iconName={newsletter.btn?.iconName} />
+                </span>
+              </Button>
             </div>
           ) : (
             ""

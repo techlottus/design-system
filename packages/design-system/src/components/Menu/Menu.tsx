@@ -210,13 +210,17 @@ const Menu = (props: any) => {
             </div>
             <div id="btn" className={classButton}>
               <Button
-                id="btn menu"
-                label={btn?.label}
-                size="xsm"
+                id="btn-menu"
                 variant="primary"
-                iconName={btn?.iconName}
-                onClick={btn?.onClick}
-              />
+                size="xsm"
+                className="rounded-l-none  lg:hidden"
+                {...btn}
+              >
+                <span>
+                  {btn?.label}
+                  <Icon iconName={btn?.iconName} />
+                </span>
+              </Button>
             </div>
           </div>
         </div>

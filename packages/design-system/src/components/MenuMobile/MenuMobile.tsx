@@ -242,14 +242,15 @@ const MenuMobile = (props: any) => {
           >
             <div className="py-2 px-2">
               <Button
-                id={btn?.id}
-                label={btn?.label}
-                variant={btn?.variant}
                 size="sm"
-                iconName={btn?.iconName}
                 className="min-w-full flex justify-center"
-                onClick={btn?.onclick}
-              />
+                {...btn}
+              >
+                <span>
+                  {btn?.label}
+                  <Icon iconName={btn?.iconName} />
+                </span>
+              </Button>
             </div>
             <div className="flex flex-row w-full rounded py-2 px-2">
               <PromoLink text="link" route="/route" variant="shadow" />
