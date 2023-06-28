@@ -6,7 +6,7 @@
     "docs",
     "storybook"
   ],
-  "author": "alanllamas <alanllamasg@gmail.com>",
+  "author": "alanllamas <alanllamas@gmail.com>",
   "homepage": "https://github.com/techlottus/design-system#readme",
   "license": "ISC",
   "main": "lib/storybook.js",

@@ -1,4 +1,5 @@
 import { Button } from "@lottuseducation/design_system";
+import { Meta } from "@storybook/react";
 export default {
   title: "Button",
   tags: ["autodocs"],
@@ -10,14 +11,6 @@ export default {
     onClick: () => {},
     className: "",
   },
-  args2: {
-    id: "button",
-    variant: "primary",
-    size: "sm",
-    disabled: false,
-    onClick: () => {},
-    className: "w-full",
-  },
   argTypes: {
     variant: {
       options: ["primary", "outlined", "text", "outlined-negative"],
@@ -28,6 +21,13 @@ export default {
       control: { type: "select" },
     },
   },
-};
+} satisfies Meta<typeof Button>;
 
-export const Template = (args: any) => <Button {...args}>label</Button>;
+export const Template = (args: {
+  id: string;
+  variant: string;
+  size: "xsm" | "sm" | "md" | "lg";
+  disabled: boolean;
+  onClick: () => void;
+  className: string;
+}) => <Button {...args}>label</Button>;
