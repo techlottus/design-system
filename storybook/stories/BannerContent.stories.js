@@ -65,10 +65,10 @@ const Template2 = (args2) => (
       contentVariant: "dark",
       btn: {
         id: "banner-button",
-        label: "button",
         variant: "primary",
         size: "xsm",
       },
+      label: "button",
       position: "left-top",
       className: "",
     }}

@@ -13,6 +13,8 @@ const BannerContent = (props: any) => {
     title,
     text,
     btn,
+    label,
+    iconName,
     contentVariant = "dark",
     size = "lg",
     position = "left-top",
@@ -61,8 +63,8 @@ const BannerContent = (props: any) => {
                 {...btn}
               >
                 <span>
-                  {btn?.label}
-                  <Icon iconName={btn?.iconName} />
+                  {label ? label : ""}
+                  {iconName ? <Icon iconName={iconName} /> : ""}
                 </span>
               </Button>
             </div>
@@ -91,8 +93,8 @@ const BannerContent = (props: any) => {
               {...btn}
             >
               <span>
-                {btn?.label}
-                <Icon iconName={btn?.iconName} />
+                {label ? label : ""}
+                {iconName ? <Icon iconName={iconName} /> : ""}
               </span>
             </Button>
           </div>
