@@ -10,6 +10,7 @@ export default {
     disabled: false,
     onClick: () => {},
     className: "",
+    type: "button",
   },
   argTypes: {
     variant: {
@@ -20,12 +21,16 @@ export default {
       options: ["xsm", "sm", "md", "lg"],
       control: { type: "select" },
     },
+    type: {
+      options: ["button", "submit", "reset"],
+      control: { type: "select" },
+    },
   },
 } satisfies Meta<typeof Button>;
 
 export const Template = (args: {
   id: string;
-  variant: string;
+  variant: "primary" | "text" | "outlined" | "outlined-negative";
   size: "xsm" | "sm" | "md" | "lg";
   disabled: boolean;
   onClick: () => void;

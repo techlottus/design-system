@@ -9,7 +9,7 @@ const sizes = {
 };
 type Size = keyof typeof sizes;
 
-const variants: any = {
+const variants = {
   primary: cn(
     "bg-neutral-900 hover:bg-neutral-800 focus:bg-neutral-600 active:bg-neutral-600",
     "text-neutral-100",
