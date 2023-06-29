@@ -244,7 +244,7 @@ const MenuMobile = (props: any) => {
               <Button
                 size="sm"
                 className="min-w-full flex justify-center"
-                {...btn}
+                {...btn?.button}
               >
                 <span>
                   {btn?.label}

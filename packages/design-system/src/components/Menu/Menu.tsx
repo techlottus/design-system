@@ -214,7 +214,7 @@ const Menu = (props: any) => {
                 variant="primary"
                 size="xsm"
                 className="rounded-l-none  lg:hidden"
-                {...btn}
+                {...btn?.button}
               >
                 <span>
                   {btn?.label}

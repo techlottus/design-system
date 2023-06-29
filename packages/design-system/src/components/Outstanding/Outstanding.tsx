@@ -66,7 +66,7 @@ const Outstanding = (props: any) => {
           {paragraph}
         </div>
         <div className="pb-6">
-          <Button size="xsm" variant="outlined-negative" {...button}>
+          <Button size="xsm" variant="outlined-negative" {...button?.button}>
             <span>
               {button?.label}
               <Icon iconName={button?.iconName} />
