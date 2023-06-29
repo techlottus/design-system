@@ -37,7 +37,7 @@ const SliderContent = (props: any) => {
             <div className={textColor}>
               <Heading
                 title={getTextCount(title, 53)}
-                type="h-3"
+                variant="h-3"
                 font="secondary"
                 className="font-semibold"
               />
@@ -49,7 +49,7 @@ const SliderContent = (props: any) => {
             <div className={textColor}>
               <Heading
                 title={getTextCount(text, 132)}
-                type="h-6"
+                variant="h-6"
                 font="secondary"
               />
             </div>
@@ -76,10 +76,10 @@ const SliderContent = (props: any) => {
         className="w-full h-full flex flex-col md:hidden "
       >
         <div className="py-4 text-neutral-800">
-          <Heading title={title} type="h-3" font="secondary" />
+          <Heading title={title} variant="h-3" font="secondary" />
         </div>
         <div className="pb-4 text-neutral-800 font-secondary">
-          <Heading title={text} type="h-6" font="secondary" />
+          <Heading title={text} variant="h-6" font="secondary" />
         </div>
         {btn ? (
           <div className="pb-4 font-secondary">

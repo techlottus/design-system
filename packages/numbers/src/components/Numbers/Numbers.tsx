@@ -76,7 +76,7 @@ const Numbers = (props: any) => {
         </span>
       </div>
       <div id="Numbers-title" className="pb-2 py-2 sm:py-1 flex">
-        <Heading title={title} type="h-6" font="secondary" />
+        <Heading title={title} variant="h-6" font="secondary" />
       </div>
       <div id="Numbers-description">
         <span className="text-sm font-secondary flex leading-5">

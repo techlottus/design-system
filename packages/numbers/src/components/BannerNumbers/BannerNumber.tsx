@@ -39,7 +39,7 @@ const BannerNumber = (props: any) => {
             <div className="pb-2 w-1/2 leading-5">
               <Heading
                 title={title}
-                type="h-3"
+                variant="h-3"
                 font="secondary"
                 className={fontColors}
               />
@@ -77,7 +77,7 @@ const BannerNumber = (props: any) => {
             <div className="pb-2 w-4/5 leading-5">
               <Heading
                 title={title}
-                type="h-3"
+                variant="h-3"
                 font="secondary"
                 className={fontColors}
               />
@@ -115,7 +115,7 @@ const BannerNumber = (props: any) => {
             <div className="pb-2 leading-5">
               <Heading
                 title={title}
-                type="h-3"
+                variant="h-3"
                 font="secondary"
                 className={fontColors}
               />

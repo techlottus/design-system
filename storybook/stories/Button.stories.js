@@ -43,7 +43,7 @@ const ButtonExpand = (args2) => (
       <Heading
         title="To expand the button you just need to add the classname= w-full"
         font="principal"
-        type="h-5"
+        variant="h-5"
       />
     </div>
     <div className="w-full">

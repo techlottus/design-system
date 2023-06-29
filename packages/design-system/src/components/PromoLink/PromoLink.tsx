@@ -82,7 +82,7 @@ const PromoLink = (props: any) => {
             onClick={handleOnClick}
           >
             <div className="flex font-principal font-bold">
-              <Heading title={getTextCount(text, 52)} type="h-5" />
+              <Heading title={getTextCount(text, 52)} variant="h-5" />
             </div>
             <div className=" w-full font-principal flex font-bold  justify-end ">
               <span className="group-hover:animate-ping">

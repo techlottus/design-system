@@ -21,7 +21,7 @@
     "jest:clearcache": "jest --clearCache"
   },
   "dependencies": {
-    "@lottuseducation/design_system": "^1.10.0-alpha.0",
+    "@lottuseducation/design_system": "file:../design-system/lottuseducation-design_system-v1.10.0-alpha.0.tgz",
     "classnames": "^2.3.1",
     "keen-slider": "^6.8.5"
   },

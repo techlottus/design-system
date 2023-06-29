@@ -34,7 +34,7 @@ const BannerContent = (props: any) => {
             <div className={textColor}>
               <Heading
                 title={getTextCount(title, 53)}
-                type="h-3"
+                variant="h-3"
                 font="secondary"
               />
             </div>
@@ -71,7 +71,7 @@ const BannerContent = (props: any) => {
         className="w-full h-full flex flex-col md:hidden "
       >
         <div className="py-4 text-neutral-800">
-          <Heading title={title} type="h-3" font="secondary" />
+          <Heading title={title} variant="h-3" font="secondary" />
         </div>
         <div className="pb-4 text-neutral-800 font-secondary">
           <span dangerouslySetInnerHTML={{ __html: text }} />
