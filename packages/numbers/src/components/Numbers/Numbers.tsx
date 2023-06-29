@@ -64,7 +64,7 @@ const Numbers = (props: any) => {
           <span className="flex text-2xl lg:text-5xl md:text-3xl">
             <Icon
               iconName={iconName}
-              type="outlined"
+              variant="outlined"
               className="text-2xl lg:text-5xl md:text-3xl leading-4 sm:leading-5"
             />
           </span>

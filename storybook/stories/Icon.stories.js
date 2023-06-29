@@ -6,9 +6,10 @@ export default {
   args: {
     iconName: "home",
     className: "",
+    variant: "solid",
   },
   argTypes: {
-    type: {
+    variant: {
       options: ["solid", "outlined"],
       control: { type: "radio" },
     },

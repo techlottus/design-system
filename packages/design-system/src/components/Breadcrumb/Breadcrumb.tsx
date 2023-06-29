@@ -51,13 +51,17 @@ const Breadcrumb = ({
         >
           <Icon
             iconName={homeIcon?.iconName}
-            type="outlined"
+            variant="outlined"
             className="leading-5 "
           />
         </li>
         {links.map((link: any, indexlink: any) => (
           <li key={"crumb-" + indexlink} className={breandcrumbExpandStyles}>
-            <Icon iconName={separatorIcon} className="leading-5" />
+            <Icon
+              iconName={separatorIcon}
+              className="leading-5"
+              variant="solid"
+            />
             <TextLink
               text={link?.text}
               href={link?.route}
@@ -76,7 +80,7 @@ const Breadcrumb = ({
         >
           <Icon
             iconName={homeIcon?.iconName}
-            type="outlined"
+            variant="outlined"
             className="leading-5"
           />
         </li>

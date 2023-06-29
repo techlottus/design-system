@@ -47,6 +47,7 @@ const AccordionItem = (props: any) => {
             iconName={
               (oneItemOpen && open) || isOpen ? "expand_less" : "expand_more"
             }
+            variant="solid"
           />
         </span>
         <span>{data?.text}</span>
@@ -83,7 +84,7 @@ const AccordionItem = (props: any) => {
                 { ["invisible"]: !item.iconHoriz }
               )}
             >
-              <Icon iconName="more_horiz" />
+              <Icon iconName="more_horiz" variant="solid" />
             </div>
           </div>
         ))}
