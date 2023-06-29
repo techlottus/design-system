@@ -69,8 +69,8 @@ const Footer = (props: any) => {
                 {...newsletter?.btn}
               >
                 <span>
-                  {newsletter.btn?.label}
-                  <Icon iconName={newsletter.btn?.iconName} />
+                  {newsletter?.label}
+                  <Icon iconName={newsletter?.iconName} />
                 </span>
               </Button>
             </div>
