@@ -3,11 +3,7 @@ import { calculateAspectRatioPercentage } from "../helpers/calculateAspectPer";
 const defaultRatioPercentage = "50%"; // 2:1
 const fractionRegex = /([1-9][0-9]*(.[0-9]*)?)\/[1-9][0-9]*(.[0-9]*)?/g;
 
-type aspect = {
-  children: React.ReactNode;
-  ratio: string;
-};
-const Aspect = (props: aspect) => {
+const Aspect = (props: any) => {
   const { children, ratio = "1/2" } = props;
   const aspectRatioPercentage = calculateAspectRatioPercentage(
     ratio,
@@ -15,7 +11,7 @@ const Aspect = (props: aspect) => {
     defaultRatioPercentage
   );
 
-  const paddingStyles = {
+  const paddingStyles: any = {
     paddingTop: aspectRatioPercentage,
   };
   return (
