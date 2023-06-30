@@ -1,10 +1,8 @@
 /** @type { import('@storybook/react-webpack5').StorybookConfig } */
-import type { StorybookConfig } from "@storybook/react-webpack5";
-const config: StorybookConfig = {
+const config = {
   stories: ["../stories/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
     "@storybook/addon-links",
-    "@storybook/preset-typescript",
     "@storybook/addon-knobs",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
@@ -18,11 +16,6 @@ const config: StorybookConfig = {
       },
     },
   ],
-  typescript: {
-    reactDocgen: "react-docgen",
-    skipBabel: true,
-    check: false,
-  },
   framework: {
     name: "@storybook/react-webpack5",
     options: {},
