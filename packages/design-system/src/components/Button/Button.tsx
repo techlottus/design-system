@@ -1,15 +1,13 @@
 import cn from "classnames";
-import { ButtonHTMLAttributes, MouseEvent } from "react";
 
-const sizes = {
+const sizes: any = {
   xsm: cn("px-4 py-3 text-sm rounded"),
   sm: cn("py-4 px-8 text-base rounded-lg"),
   md: cn("py-5 px-9 text-xl rounded-lg"),
   lg: cn("py-6 px-12 text-xl rounded-lg"),
 };
-type Size = keyof typeof sizes;
 
-const variants = {
+const variants: any = {
   primary: cn(
     "bg-neutral-900 hover:bg-neutral-800 focus:bg-neutral-600 active:bg-neutral-600",
     "text-neutral-100",
@@ -32,7 +30,6 @@ const variants = {
     "focus:border focus:border-neutral-100 focus:ring-1 focus:ring-neutral-100 "
   ),
 };
-type Variant = keyof typeof variants;
 
 const commonClasses: any = cn(
   "flex",
@@ -58,17 +55,7 @@ const isDisabled: any = {
   ),
 };
 
-interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
-  id?: string;
-  children: React.ReactNode;
-  className?: string;
-  disabled?: boolean;
-  size?: Size;
-  variant?: Variant;
-  onClick?: (event: MouseEvent<HTMLElement>) => void;
-}
-
-const Button: React.FC<IButton> = (props: IButton) => {
+const Button = (props: any) => {
   const {
     id = "btn",
     children,
@@ -79,7 +66,7 @@ const Button: React.FC<IButton> = (props: IButton) => {
     onClick,
     ...restProps
   } = props;
-  const buttonClasses: string = cn(commonClasses, className, {
+  const buttonClasses = cn(commonClasses, className, {
     [sizes[size]]: true,
     [variants[variant]]: !disabled,
     [isDisabled[variant]]: disabled,

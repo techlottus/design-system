@@ -2079,7 +2079,7 @@
 "@lottuseducation/design_system@file:../packages/design-system/lottuseducation-design_system-v1.10.0-alpha.0.tgz":
   version "1.10.0-alpha.0"
   resolved "file:../packages/design-system/lottuseducation-design_system-v1.10.0-alpha.0.tgz"
-  integrity sha512-VPLcOUZblobxBJCdIpKrIzPKJxrnp7HaVMcffS0t4mbp6L5mfWjv+8O7PHLBhQijUqn5HhadL25SQ8RnRtQUvw==
+  integrity sha512-4XBr4kQjZKwFUeYG0tR+M1FMMitlINGk0oyBobWvzQ4EB01M8+wYKxd3uIpts/MRIBsb0H7FC24xdPN/gHCU1A==
   dependencies:
     classnames "^2.3.1"
     react-lottie-player "^1.5.4"
