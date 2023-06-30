@@ -1,9 +1,8 @@
 /** @type { import('@storybook/react').Preview } */
-import { Preview } from "@storybook/react";
 import "../index.css";
 import "keen-slider/keen-slider.min.css";
 import "tailwindcss/tailwind.css";
-const preview: Preview = {
+const preview = {
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
