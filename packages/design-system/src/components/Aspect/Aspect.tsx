@@ -1,6 +1,6 @@
 import { calculateAspectRatioPercentage } from "../helpers/calculateAspectPer";
 
-const defaultRatioPercentage = "50%"; // 2:1
+const defaultRatioPercentage = "50%";
 const fractionRegex = /([1-9][0-9]*(.[0-9]*)?)\/[1-9][0-9]*(.[0-9]*)?/g;
 
 const Aspect = (props: any) => {
