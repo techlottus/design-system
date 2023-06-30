@@ -1,10 +1,6 @@
 import cn from "classnames";
-type icontypes = {
-  iconName?: string;
-  className?: string;
-  variant?: "solid" | "outlined";
-};
-const Icon = (props: icontypes) => {
+
+const Icon = (props: any) => {
   const { iconName, className = "", variant = "solid" } = props;
   return (
     <span
