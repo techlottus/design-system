@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, { ButtonHTMLAttributes, MouseEvent } from "react";
+import { buttonTypes } from "../Types";
 
 const sizes = {
   xsm: cn("px-4 py-3 text-sm rounded"),
@@ -58,15 +58,9 @@ const isDisabled = {
   ),
 };
 
-interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
-  className?: string;
-  disabled?: boolean;
+interface IButton extends buttonTypes {
   size?: Size;
-  type?: "button" | "submit" | "reset";
   variant?: Variant;
-  style?: React.CSSProperties;
-  onClick?: (event: MouseEvent<HTMLElement>) => void;
 }
 
 const Button: React.FC<IButton> = (props: IButton) => {
