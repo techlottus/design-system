@@ -1,5 +1,6 @@
 import cn from "classnames";
 import { buttonTypes } from "../Types";
+import Icon from "../Icon/Icon";
 
 const sizes = {
   xsm: cn("px-4 py-3 text-sm rounded"),
@@ -67,8 +68,9 @@ const Button: React.FC<IButton> = (props: IButton) => {
   const {
     id = "btn",
     className = "",
+    label,
+    iconName,
     disabled = false,
-    children,
     size = "md",
     variant = "primary",
     onClick,
@@ -89,7 +91,13 @@ const Button: React.FC<IButton> = (props: IButton) => {
       onClick={onClick}
       {...restProps}
     >
-      {children}
+      {iconName ? (
+        <span className={cn(" flex items-center", { ["space-x-2"]: label })}>
+          <Icon iconName={iconName} /> <span>{label}</span>
+        </span>
+      ) : (
+        <span>{label}</span>
+      )}
     </button>
   );
 };
