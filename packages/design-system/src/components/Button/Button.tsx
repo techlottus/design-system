@@ -41,7 +41,7 @@ const commonClasses = cn(
   "font-bold font-principal",
   "items-center justify-center"
 );
-const isDisabled: any = {
+const isDisabled = {
   primary: cn("cursor-not-allowed", "bg-neutral-400", "text-neutral-100"),
   text: cn("cursor-not-allowed text-neutral-400"),
   outlined: cn(
@@ -78,6 +78,8 @@ const Button: React.FC<IButton> = (props: IButton) => {
     size = "md",
     variant = "primary",
     onClick,
+    type = "button",
+    ...restProps
   } = props;
   const buttonClasses = cn(commonClasses, className, {
     [sizes[size]]: true,
@@ -86,7 +88,13 @@ const Button: React.FC<IButton> = (props: IButton) => {
     ["cursor-pointer"]: !disabled,
   });
   return (
-    <button id={id} className={buttonClasses} onClick={onClick}>
+    <button
+      id={id}
+      type={type}
+      className={buttonClasses}
+      onClick={onClick}
+      {...restProps}
+    >
       {children}
     </button>
   );
