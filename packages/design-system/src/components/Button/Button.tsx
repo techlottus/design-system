@@ -1,5 +1,5 @@
 import cn from "classnames";
-import { buttonTypes } from "../Types";
+import { ButtonTypes } from "../Types";
 import Icon from "../Icon/Icon";
 
 const sizes = {
@@ -8,7 +8,6 @@ const sizes = {
   md: cn("py-5 px-9 text-xl rounded-lg"),
   lg: cn("py-6 px-12 text-xl rounded-lg"),
 };
-type Size = keyof typeof sizes;
 
 const variants = {
   primary: cn(
@@ -33,7 +32,6 @@ const variants = {
     "focus:border focus:border-neutral-100 focus:ring-1 focus:ring-neutral-100 "
   ),
 };
-type Variant = keyof typeof variants;
 
 const commonClasses = cn(
   "flex",
@@ -59,12 +57,7 @@ const isDisabled = {
   ),
 };
 
-interface IButton extends buttonTypes {
-  size?: Size;
-  variant?: Variant;
-}
-
-const Button: React.FC<IButton> = (props: IButton) => {
+const Button: React.FC<ButtonTypes> = (props: ButtonTypes) => {
   const {
     id = "btn",
     className = "",
