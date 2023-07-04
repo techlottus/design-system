@@ -1,15 +1,15 @@
 import cn from "classnames";
-import { ButtonTypes } from "../Types";
+import { ButtonSize, ButtonType, ButtonVariant } from "../Types/button.types";
 import Icon from "../Icon/Icon";
 
-const sizes = {
+const sizes: ButtonSize = {
   xsm: cn("px-4 py-3 text-sm rounded"),
   sm: cn("py-4 px-8 text-base rounded-lg"),
   md: cn("py-5 px-9 text-xl rounded-lg"),
   lg: cn("py-6 px-12 text-xl rounded-lg"),
 };
 
-const variants = {
+const variants: ButtonVariant = {
   primary: cn(
     "bg-neutral-900 hover:bg-neutral-800 focus:bg-neutral-600 active:bg-neutral-600",
     "text-neutral-100",
@@ -33,14 +33,15 @@ const variants = {
   ),
 };
 
-const commonClasses = cn(
+const commonClasses: string = cn(
   "flex",
   "relative",
   "min-w-40 max-w-full",
   "font-bold font-principal",
   "items-center justify-center"
 );
-const isDisabled = {
+
+const disabledVariants: ButtonVariant = {
   primary: cn("cursor-not-allowed", "bg-neutral-400", "text-neutral-100"),
   text: cn("cursor-not-allowed text-neutral-400"),
   outlined: cn(
@@ -57,9 +58,8 @@ const isDisabled = {
   ),
 };
 
-const Button: React.FC<ButtonTypes> = (props: ButtonTypes) => {
+const Button: React.FC<ButtonType> = (props: ButtonType) => {
   const {
-    id = "btn",
     className = "",
     label,
     iconName,
@@ -67,23 +67,16 @@ const Button: React.FC<ButtonTypes> = (props: ButtonTypes) => {
     size = "md",
     variant = "primary",
     onClick,
-    type = "button",
-    ...restProps
   } = props;
-  const buttonClasses = cn(commonClasses, className, {
-    [sizes[size]]: true,
+
+  const buttonClasses: string = cn(commonClasses, className, [sizes[size]], {
     [variants[variant]]: !disabled,
-    [isDisabled[variant]]: disabled,
+    [disabledVariants[variant]]: disabled,
     ["cursor-pointer"]: !disabled,
   });
+
   return (
-    <button
-      id={id}
-      type={type}
-      className={buttonClasses}
-      onClick={onClick}
-      {...restProps}
-    >
+    <button className={buttonClasses} onClick={onClick}>
       {iconName ? (
         <span className={cn(" flex items-center", { ["space-x-2"]: label })}>
           <Icon iconName={iconName} /> <span>{label}</span>
