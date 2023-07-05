@@ -51,7 +51,7 @@ const Breadcrumb = ({
         >
           <Icon
             iconName={homeIcon?.iconName}
-            type="outlined"
+            variant="outlined"
             className="leading-5 "
           />
         </li>
@@ -76,7 +76,7 @@ const Breadcrumb = ({
         >
           <Icon
             iconName={homeIcon?.iconName}
-            type="outlined"
+            variant="outlined"
             className="leading-5"
           />
         </li>
