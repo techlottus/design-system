@@ -51,7 +51,6 @@ const Footer = (props: any) => {
               />
 
               <Button
-                id="btn-mail-subscribe"
                 label={newsletter.btn.label}
                 variant="primary"
                 size="md"
@@ -60,7 +59,6 @@ const Footer = (props: any) => {
                 onClick={newsletter.onClick}
               />
               <Button
-                id="btn-mail-subscribe"
                 label={newsletter.btn.label}
                 variant="primary"
                 size="xsm"

@@ -52,7 +52,6 @@ const BannerContent = (props: any) => {
           {btn ? (
             <div className={getClassBannerPositionButton(position)}>
               <Button
-                id={btn?.id}
                 label={btn?.label}
                 iconName={btn?.iconName}
                 variant={
@@ -79,7 +78,6 @@ const BannerContent = (props: any) => {
         {btn ? (
           <div className="pb-4 font-secondary">
             <Button
-              id={btn?.id}
               label={btn?.label}
               variant="primary"
               size="xsm"
