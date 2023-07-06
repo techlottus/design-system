@@ -210,7 +210,6 @@ const Menu = (props: any) => {
             </div>
             <div id="btn" className={classButton}>
               <Button
-                id="btn menu"
                 label={btn?.label}
                 size="xsm"
                 variant="primary"

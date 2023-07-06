@@ -1,14 +1,15 @@
 import cn from "classnames";
-import Icon from "../Icon";
+import { ButtonSize, ButtonType, ButtonVariant } from "../Types/button.types";
+import Icon from "../Icon/Icon";
 
-const sizes: { [key: string]: any } = {
+const sizes: ButtonSize = {
   xsm: cn("px-4 py-3 text-sm rounded"),
   sm: cn("py-4 px-8 text-base rounded-lg"),
   md: cn("py-5 px-9 text-xl rounded-lg"),
   lg: cn("py-6 px-12 text-xl rounded-lg"),
 };
 
-const variants: any = {
+const variants: ButtonVariant = {
   primary: cn(
     "bg-neutral-900 hover:bg-neutral-800 focus:bg-neutral-600 active:bg-neutral-600",
     "text-neutral-100",
@@ -32,14 +33,15 @@ const variants: any = {
   ),
 };
 
-const commonClasses: any = cn(
+const commonClasses: string = cn(
   "flex",
   "relative",
   "min-w-40 max-w-full",
   "font-bold font-principal",
   "items-center justify-center"
 );
-const isDisabled: any = {
+
+const disabledVariants: ButtonVariant = {
   primary: cn("cursor-not-allowed", "bg-neutral-400", "text-neutral-100"),
   text: cn("cursor-not-allowed text-neutral-400"),
   outlined: cn(
@@ -56,34 +58,25 @@ const isDisabled: any = {
   ),
 };
 
-const Button = (props: {
-  id: string;
-  label: string;
-  className?: string;
-  disabled?: boolean;
-  iconName?: string;
-  size: string;
-  variant: "primary" | "secondary" | "outlined" | "outlined-negative";
-  onClick?: () => {};
-}) => {
+const Button: React.FC<ButtonType> = (props: ButtonType) => {
   const {
-    id = "btn",
-    label,
     className = "",
-    disabled = false,
+    label,
     iconName,
+    disabled = false,
     size = "md",
     variant = "primary",
     onClick,
   } = props;
-  const buttonClasses: string = cn(commonClasses, className, {
-    [sizes[size]]: true,
+
+  const buttonClasses: string = cn(commonClasses, className, [sizes[size]], {
     [variants[variant]]: !disabled,
-    [isDisabled[variant]]: disabled,
+    [disabledVariants[variant]]: disabled,
     ["cursor-pointer"]: !disabled,
   });
+
   return (
-    <button id={id} className={buttonClasses} onClick={onClick}>
+    <button className={buttonClasses} onClick={onClick}>
       {iconName ? (
         <span className={cn(" flex items-center", { ["space-x-2"]: label })}>
           <Icon iconName={iconName} /> <span>{label}</span>

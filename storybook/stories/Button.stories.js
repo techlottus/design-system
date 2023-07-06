@@ -5,7 +5,6 @@ export default {
   component: Button,
   tags: ["autodocs"],
   args: {
-    id: "button",
     label: "Demo Button",
     variant: "primary",
     size: "sm",
@@ -15,7 +14,6 @@ export default {
     className: "",
   },
   args2: {
-    id: "button",
     label: "Demo Button",
     variant: "primary",
     size: "sm",
