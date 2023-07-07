@@ -242,7 +242,6 @@ const MenuMobile = (props: any) => {
           >
             <div className="py-2 px-2">
               <Button
-                id={btn?.id}
                 label={btn?.label}
                 variant={btn?.variant}
                 size="sm"
