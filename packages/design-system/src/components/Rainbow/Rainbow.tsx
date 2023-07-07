@@ -28,10 +28,9 @@ const Rainbow = (props: any) => {
             <div className="lg:w-1/2 w-full flex flex-col lg:align-middle">
               <Heading
                 title={item?.title}
-                type="h-3"
+                variant="h-3"
                 font="secondary"
-                variant="negative"
-                className="leading-5 pb-6"
+                className="leading-5 pb-6 text-neutral-100"
               />
               <span className="flex items-start leading-5 text-neutral-100 font-principal pb-6 lg:pb-0 text-sm md:text-base lg:text-lg">
                 {item?.description}

@@ -60,7 +60,12 @@ const Outstanding = (props: any) => {
           [paddingContent[imgPosition]]: true,
         })}
       >
-        <Heading title={title} type="h-5" font="secondary" className="pb-4" />
+        <Heading
+          title={title}
+          variant="h-5"
+          font="secondary"
+          className="pb-4"
+        />
         <div className="text-neutral-100 font-secondary align-center md:pb-4 pb-2 md:text-base text-sm">
           {paragraph}
         </div>

@@ -41,19 +41,17 @@ const Tab = (props: any) => {
             <Icon iconName={iconName} className="flex justify-center text-lg" />
             <Heading
               title={label}
-              type="h-6"
-              variant="negative"
+              variant="h-6"
               font="secondary"
-              className="text-sm font-semibold leading-5"
+              className="text-sm font-semibold leading-5 text-neutral-100"
             />
           </span>
         ) : (
           <Heading
             title={label}
-            type="h-6"
-            variant="negative"
+            variant="h-6"
             font="secondary"
-            className="text-sm font-semibold leading-5"
+            className="text-sm font-semibold leading-5 text-neutral-100"
           />
         )}
       </div>

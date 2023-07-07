@@ -36,7 +36,7 @@ const LeaderBoard = (props: any) => {
         <span className="pb-4">
           <Heading
             title={getTextCount(title, 61)}
-            type="h-4"
+            variant="h-4"
             font="principal"
           />
         </span>
