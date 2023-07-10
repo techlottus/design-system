@@ -8,7 +8,7 @@ export default {
     className: "",
   },
   argTypes: {
-    type: {
+    variant: {
       options: ["solid", "outlined"],
       control: { type: "radio" },
     },
