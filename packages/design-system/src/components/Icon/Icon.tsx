@@ -1,12 +1,13 @@
 import cn from "classnames";
+import { IconType } from "../Types/Icon.types";
 
-const Icon = (props: any) => {
-  const { iconName, className = "", type = "solid" } = props;
+const Icon: React.FC<IconType> = (props: IconType) => {
+  const { iconName, className = "", variant = "solid" } = props;
   return (
     <span
       className={cn(className, {
-        ["font-icons-outlined"]: type === "outlined",
-        ["font-icons-solid"]: type === "solid",
+        ["font-icons-outlined"]: variant === "outlined",
+        ["font-icons-solid"]: variant === "solid",
       })}
     >
       <i>{iconName}</i>
