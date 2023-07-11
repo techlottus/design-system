@@ -3,19 +3,17 @@ import Icon from "../Icon/Icon";
 import TextLink from "../TextLink/TextLink";
 import { myhref } from "../helpers/myrefHelper";
 import cn from "classnames";
-import { BreadcrumbType } from "../Types/Breadcrumb.types";
 
-const Breadcrumb: React.FC<BreadcrumbType> = (props: BreadcrumbType) => {
-  const {
-    homeIcon = { iconName: "Home", route: "/home" },
-    separatorIcon = "arrow_forward_ios",
-    collapseIcon = "more_horiz",
-    links,
-    className = "text-neutral-900",
-    collapseMin = 3,
-  } = props;
-
+const Breadcrumb = ({
+  homeIcon,
+  separatorIcon,
+  collapseIcon,
+  links,
+  classPageColor = "text-neutral-900",
+  collapseMin = 3,
+}: any) => {
   const [isExpand, setExpand] = useState<boolean>(links?.length < collapseMin);
+  console.log("initial state:", isExpand);
 
   const breandcrumbExpandStyles: string = cn(
     "flex items-center align-center leading-5 space-x-2",
@@ -68,7 +66,7 @@ const Breadcrumb: React.FC<BreadcrumbType> = (props: BreadcrumbType) => {
               text={link?.text}
               href={link?.route}
               className={cn({
-                [className]: indexlink === links.length - 1,
+                [classPageColor]: indexlink === links.length - 1,
               })}
             />
           </li>
@@ -99,7 +97,7 @@ const Breadcrumb: React.FC<BreadcrumbType> = (props: BreadcrumbType) => {
           <TextLink
             text={links[links.length - 1]?.text}
             href={links[links.length - 1]?.route}
-            className={cn(className)}
+            className={cn(classPageColor)}
           />
         </li>
       </ul>
