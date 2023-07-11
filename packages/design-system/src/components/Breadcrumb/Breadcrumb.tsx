@@ -13,36 +13,32 @@ const Breadcrumb = ({
   collapseMin = 3,
 }: any) => {
   const [isExpand, setExpand] = useState<boolean>(links?.length < collapseMin);
-  console.log("initial state:", isExpand);
 
-  const breandcrumbExpandStyles: string = cn(
-    "flex items-center align-center leading-5 space-x-2",
+  const breandcrumbExpandStyles = cn(
+    "md:flex items-center align-center leading-5 space-x-2 hidden ",
     {
       ["hidden"]: isExpand === false,
     }
   );
-  const breandcrumbCollapseStyles: string = cn(
+  const breandcrumbCollapseStyles = cn(
     "flex items-center align-center leading-5 space-x-2 group",
     {
-      ["hidden"]: isExpand,
+      ["md:hidden"]: isExpand,
     }
   );
-  const commonClasses: string = cn(
-    "flex space-x-2 items-center align-center",
-    "text-neutral-600  font-principal leading-5 font-bold"
-  );
+  const commonClasses =
+    "md:flex items-center align-center text-neutral-600 font-principal leading-5 space-x-2 font-bold";
+
   const handleOnHover = () => {
     if (links.length >= collapseMin) setExpand(true);
-    console.log("hover:", isExpand);
   };
   const handleOnLeave = () => {
     if (links.length >= collapseMin) setExpand(false);
-    console.log("leave:", isExpand);
   };
   return (
     <div>
       <ul
-        className={cn(commonClasses, {
+        className={cn(commonClasses, "hidden", {
           ["hidden"]: isExpand === false,
         })}
         onMouseEnter={handleOnHover}
@@ -72,7 +68,7 @@ const Breadcrumb = ({
           </li>
         ))}
       </ul>
-      <ul className={cn(commonClasses, { ["hidden"]: isExpand })}>
+      <ul className={cn(commonClasses, { ["md:hidden"]: isExpand })}>
         <li
           onClick={(_) => {
             myhref(homeIcon?.route);
