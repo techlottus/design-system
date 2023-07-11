@@ -5,7 +5,10 @@ import { myhref } from "../helpers/myrefHelper";
 
 const AccordionItem = (props: any) => {
   const {
-    data,
+    icon,
+    title,
+    text,
+    content,
     ColorClass = "",
     borderDownOn = false,
     onToggle,
@@ -13,6 +16,7 @@ const AccordionItem = (props: any) => {
     titleClass = "",
     oneItemOpen = false,
   } = props;
+
   const [isOpen, setOpen] = useState(false);
 
   const handleOnClick = () => {
@@ -37,11 +41,9 @@ const AccordionItem = (props: any) => {
         onClick={oneItemOpen ? onToggle : handleOnClick}
       >
         <span className="flex pr-4 text-neutral-600">
-          <Icon {...data?.icon} />
+          <Icon {...icon} />
         </span>
-        <span className={cn(titleClass, "flex w-full pr-4")}>
-          {data?.title}
-        </span>
+        <span className={cn(titleClass, "flex w-full pr-4")}>{title}</span>
         <span className={cn("flex pr-4 text-neutral-600 cursor-pointer")}>
           <Icon
             iconName={
@@ -49,7 +51,7 @@ const AccordionItem = (props: any) => {
             }
           />
         </span>
-        <span>{data?.text}</span>
+        <span>{text}</span>
       </div>
       <div
         id="accordeon-item-content"
@@ -57,7 +59,7 @@ const AccordionItem = (props: any) => {
           ["h-0 hidden"]: !open && !isOpen,
         })}
       >
-        {data?.content.map((item: any, index: any) => (
+        {content.map((item: any, index: any) => (
           <div
             key={index}
             className={cn(

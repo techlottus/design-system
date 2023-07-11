@@ -5,22 +5,20 @@ export default {
   component: AccordionItem,
   tags: ["autodocs"],
   args: {
-    data: {
-      title: "Item 1",
-      content: [
-        {
-          text: "content",
-          link: "https://www.deepl.com/es/translator",
-          iconHoriz: true,
-        },
-        { text: "content" },
-      ],
-      icon: { iconName: "people", type: "outlined" },
-      text: "texto",
-    },
-    open: true,
-    borderDownOn: true,
+    title: "Item 1",
+    content: [
+      {
+        text: "content",
+        link: "https://www.deepl.com/es/translator",
+        iconHoriz: true,
+      },
+      { text: "content" },
+    ],
+    icon: { iconName: "people", type: "outlined" },
+    text: "texto",
   },
+  open: false,
+  borderDownOn: true,
 };
 
 const Template = (args) => <AccordionItem {...args} />;
