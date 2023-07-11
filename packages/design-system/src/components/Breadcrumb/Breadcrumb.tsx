@@ -3,17 +3,19 @@ import Icon from "../Icon/Icon";
 import TextLink from "../TextLink/TextLink";
 import { myhref } from "../helpers/myrefHelper";
 import cn from "classnames";
+import { BreadcrumbType } from "../Types/Breadcrumb.types";
 
-const Breadcrumb = ({
-  homeIcon,
-  separatorIcon,
-  collapseIcon,
-  links,
-  classPageColor = "text-neutral-900",
-  collapseMin = 3,
-}: any) => {
+const Breadcrumb: React.FC<BreadcrumbType> = (props: BreadcrumbType) => {
+  const {
+    homeIcon = { iconName: "Home", route: "/home" },
+    separatorIcon = "arrow_forward_ios",
+    collapseIcon = "more_horiz",
+    links,
+    className = "text-neutral-900",
+    collapseMin = 3,
+  } = props;
+
   const [isExpand, setExpand] = useState<boolean>(links?.length < collapseMin);
-  console.log("initial state:", isExpand);
 
   const breandcrumbExpandStyles: string = cn(
     "flex items-center align-center leading-5 space-x-2",
@@ -66,7 +68,7 @@ const Breadcrumb = ({
               text={link?.text}
               href={link?.route}
               className={cn({
-                [classPageColor]: indexlink === links.length - 1,
+                [className]: indexlink === links.length - 1,
               })}
             />
           </li>
@@ -97,7 +99,7 @@ const Breadcrumb = ({
           <TextLink
             text={links[links.length - 1]?.text}
             href={links[links.length - 1]?.route}
-            className={cn(classPageColor)}
+            className={cn(className)}
           />
         </li>
       </ul>
