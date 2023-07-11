@@ -1,13 +1,15 @@
 import cn from "classnames";
 import Icon from "../Icon";
 import { useState } from "react";
+import { IconPosition, TextLinkConfig } from "../Types/TextLink.types";
 
-const iconPositions: any = {
+
+const iconPositions: IconPosition = {
   right: "flex",
   left: "flex flex-row-reverse",
 };
 
-const TextLink = (props: any) => {
+const TextLink: React.FC<TextLinkConfig> = (props: TextLinkConfig) => {
   const {
     target = "_self",
     className = "",
@@ -50,7 +52,7 @@ const TextLink = (props: any) => {
     </div>
   ) : (
     <div className="items-center whitespace-nowrap flex ">
-      <div className={cn({ [iconPositions[iconPosition]]: true })}>
+      <div className={cn([iconPositions[iconPosition]])}>
         <div
           className={cn("p-1  cursor-pointer  ", className, {
             ["hover:underline"]: !disabled,
