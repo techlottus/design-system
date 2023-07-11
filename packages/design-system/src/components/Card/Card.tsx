@@ -113,7 +113,7 @@ const Card = (props: any) => {
             <span>{subtitle}</span>
           </div>
           <div id="title" className={classTitle}>
-            <Heading title={title} type="h-6" font="secondary" />
+            <Heading title={title} variant="h-6" font="secondary" />
           </div>
           <div id="content" className={classText}>
             <span dangerouslySetInnerHTML={{ __html: text }} />
