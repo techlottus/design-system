@@ -3,82 +3,79 @@ import TextLink from "../TextLink";
 import Aspect from "../Aspect";
 import { myhref } from "../helpers/myrefHelper";
 import Heading from "../Heading";
+import { CardType, DisplayType } from "../Types/Card.types";
 
-const types: any = {
+const types: DisplayType = {
   horizontal: "w-3/5",
   vertical: "h-full",
 };
 
-const display: any = {
+const display: DisplayType = {
   horizontal: "flex-row",
   vertical: "flex-col",
 };
-const classesContent: any = cn(
+const classesContent: string = cn(
   "flex flex-col",
   "relative",
   "justify-between",
   "p-4"
 );
-const classesSubTitle: any = cn(
+const classesSubTitle: string = cn(
   "flex",
   "pb-2",
   "font-bold font-principal text-neutral-500",
   " md:text-sm sm:text-xs"
 );
-const classesLink = cn(
+const classesLink: string = cn(
   "flex",
   "font-bold font-principal",
   "justify-end items-center",
   "lg:text-base md:text-sm sm:text-xs"
 );
 
-const classesText = cn(
+const classesText: string = cn(
   "pb-2",
   "text-neutral-500",
   "font-nunito",
   " md:text-sm sm:text-xs"
 );
-const classesCard = cn(
+const classesCard: string = cn(
   "flex flex-1",
   "relative",
   "rounded border border-neutral-300",
   "overflow-hidden h-full"
 );
 
-const defaultValues = {
-  type: "horizontal",
-  aspectRatio: "2/1",
-  className: "",
-};
-
-const Card = (props: any) => {
+const Card: React.FC<CardType> = (props: CardType) => {
   const {
     imageUrl,
-    text,
+    content,
     subtitle,
     title,
-    link,
-    type = defaultValues.type,
-    aspectRatio = defaultValues.aspectRatio,
-    className = defaultValues.className,
+    textLink,
+    type = "horizontal",
+    ImageAspectRatio = "2/1",
+    className = "",
   } = props;
-  const classText = cn(classesText, { ["hidden"]: !text });
-  const classContent = cn(classesContent, { [types[type]]: type });
-  const classSubTitle = cn(classesSubTitle, { ["hidden"]: !subtitle });
-  const classLink = cn(classesLink, { ["hidden"]: !link });
-  const classTitle = cn("text-neutral-800 pb-2", { ["hidden"]: !title });
-  const classCard = cn(classesCard, className, {
+  const classText: string = cn(classesText, { ["hidden"]: !content });
+  const classContent: string = cn(classesContent, { [types[type]]: type });
+  const classSubTitle: string = cn(classesSubTitle, { ["hidden"]: !subtitle });
+  const classLink: string = cn(classesLink, { ["hidden"]: !textLink });
+  const classTitle: string = cn("text-neutral-800 pb-2", {
+    ["hidden"]: !title,
+  });
+  const classCard: string = cn(classesCard, className, {
     [display?.[type]]: type,
-    ["group hover:shadow-lg  cursor-pointer"]: link?.route,
+    ["group hover:shadow-lg  cursor-pointer"]: textLink?.href,
   });
 
-  const handleOnClick = (e: any) => {
-    if (link?.disabled) {
+  const handleOnClick = (e: Event) => {
+    if (textLink?.disabled) {
       e.stopPropagation();
-    } else if (link?.route) {
-      myhref(link?.route);
-    } else {
-      link?.onClick();
+    } else if (textLink?.href) {
+      myhref(textLink?.href);
+    } else if (textLink?.onClick) {
+      textLink?.onClick();
     }
   };
 
@@ -98,7 +95,7 @@ const Card = (props: any) => {
           />
         </div>
       ) : (
-        <Aspect ratio={aspectRatio}>
+        <Aspect ratio={ImageAspectRatio}>
           <div id="image" className="w-full h-full ">
             <img
               className="w-full h-full object-cover object-center"
@@ -116,17 +113,14 @@ const Card = (props: any) => {
             <Heading title={title} variant="h-6" font="secondary" />
           </div>
           <div id="content" className={classText}>
-            <span dangerouslySetInnerHTML={{ __html: text }} />
+            <span dangerouslySetInnerHTML={{ __html: content }} />
           </div>
         </div>
         <div className={classLink}>
           <TextLink
-            text={link?.label}
-            href={link?.route}
             className="group-hover:underline text-sm"
-            disabled={link?.disabled}
-            onClick={link?.onClick}
             iconName="arrow_forward_ios"
+            {...textLink}
           />
         </div>
       </div>
