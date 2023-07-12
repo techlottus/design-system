@@ -1,7 +1,7 @@
 import { IconType } from "./Icon.types";
 
 export interface AccordionType {
-  itemsData: AccordionItemType[];
+  items: AccordionItemType[];
   expandAll?: boolean;
 }
 
@@ -19,6 +19,6 @@ export interface AccordionItemType {
 export type AccordionContentType = {
   text?: string;
   link?: string;
-  iconHoriz?: boolean;
+  icon: IconType;
   onClick?: () => void;
 };

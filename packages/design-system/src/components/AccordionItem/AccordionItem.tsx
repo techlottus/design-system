@@ -85,10 +85,10 @@ const AccordionItem: React.FC<AccordionItemType> = (
             <div
               className={cn(
                 "text-neutral-700 font-bold text-2xl flex items-start cursor-pointer",
-                { ["invisible"]: !item.iconHoriz }
+                { ["invisible"]: !item.icon }
               )}
             >
-              <Icon iconName="more_horiz" />
+              <Icon {...icon} />
             </div>
           </div>
         ))}
