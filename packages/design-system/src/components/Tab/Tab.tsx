@@ -2,8 +2,9 @@ import cn from "classnames";
 import Heading from "../Heading";
 import Icon from "../Icon";
 import SVGIcons from "../assets/SVGIcons";
+import { TabConfig } from "../Types/Tab.types";
 
-const Tab = (props: any) => {
+const Tab = (props: TabConfig) => {
   const {
     label,
     active = false,
