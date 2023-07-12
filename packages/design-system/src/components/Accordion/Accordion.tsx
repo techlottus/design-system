@@ -1,12 +1,13 @@
 import { useState } from "react";
 import AccordionItem from "../AccordionItem/AccordionItem";
+import { AccordionItemType, AccordionType } from "../Types/Accordion.types";
 
-const Accordion = (props: any) => {
+const Accordion: React.FC<AccordionType> = (props: AccordionType) => {
   const { itemsData, expandAll = false } = props;
 
   const [clicked, setClicked] = useState(0);
 
-  const handleToggle = (index: any) => {
+  const handleToggle = (index: number) => {
     if (clicked === index) {
       setClicked(0);
       return;
@@ -16,7 +17,7 @@ const Accordion = (props: any) => {
 
   return !expandAll ? (
     <ul className="">
-      {itemsData.map((item: any, index: any) => (
+      {itemsData.map((item: AccordionItemType, index: number) => (
         <li key={index} className="last:border-b border-neutral-400">
           <AccordionItem
             onToggle={() => handleToggle(index)}
@@ -30,7 +31,7 @@ const Accordion = (props: any) => {
     </ul>
   ) : (
     <ul className="">
-      {itemsData.map((item: any, index: any) => (
+      {itemsData.map((item: AccordionItemType, index: number) => (
         <li key={index} className="last:border-b border-neutral-400">
           <AccordionItem expandAll={true} {...item} />
         </li>

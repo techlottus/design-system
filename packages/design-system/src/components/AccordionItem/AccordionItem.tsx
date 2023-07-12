@@ -2,8 +2,14 @@ import { useState } from "react";
 import Icon from "../Icon";
 import cn from "classnames";
 import { myhref } from "../helpers/myrefHelper";
+import {
+  AccordionContentType,
+  AccordionItemType,
+} from "../Types/Accordion.types";
 
-const AccordionItem = (props: any) => {
+const AccordionItem: React.FC<AccordionItemType> = (
+  props: AccordionItemType
+) => {
   const {
     icon,
     title,
@@ -12,7 +18,6 @@ const AccordionItem = (props: any) => {
     className = "",
     onToggle,
     open,
-    titleClass = "",
     expandAll = true,
   } = props;
 
@@ -30,8 +35,8 @@ const AccordionItem = (props: any) => {
       <div
         id="accordion-item-title"
         className={cn(
-          className,
           "border border-neutral-400 flex flex-1 items-start py-6 px-4 cursor-pointer border-b-0",
+          className,
           {
             ["bg-neutral-200"]: open || isOpen,
           }
@@ -39,9 +44,9 @@ const AccordionItem = (props: any) => {
         onClick={!expandAll ? onToggle : handleOnClick}
       >
         <span className="flex pr-4 text-neutral-600">
-          <Icon {...icon} />
+          <Icon iconName={icon?.iconName} />
         </span>
-        <span className={cn(titleClass, "flex w-full pr-4")}>{title}</span>
+        <span className={cn("flex w-full pr-4")}>{title}</span>
         <span className={cn("flex pr-4 text-neutral-600 cursor-pointer")}>
           <Icon
             iconName={
@@ -57,7 +62,7 @@ const AccordionItem = (props: any) => {
           ["h-0 hidden"]: !open && !isOpen,
         })}
       >
-        {content.map((item: any, index: any) => (
+        {content?.map((item: AccordionContentType, index: number) => (
           <div
             key={index}
             className={cn(
