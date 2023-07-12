@@ -1,4 +1,4 @@
-import {Accordion} from "@lottuseducation/design_system";
+import { Accordion } from "@lottuseducation/design_system";
 export default {
   title: "Accordion",
   component: Accordion,
@@ -6,31 +6,22 @@ export default {
   args: {
     itemsData: [
       {
-        data: {
-          title: "Item 1",
-          content: [
-            { text: "content", link: "https://www.deepl.com/es/translator" },
-            { text: "text", link: "https://www.deepl.com/es/translator" },
-          ],
-          icon: { iconName: "people", type: "outlined" },
-          text: "texto",
-        },
-        open: true,
-        borderDownOn: false,
-        ColorClass: "border-neutral-400",
+        title: "Item 1",
+        content: [
+          { text: "content", link: "https://www.deepl.com/es/translator" },
+          { text: "text", link: "https://www.deepl.com/es/translator" },
+        ],
+        icon: { iconName: "people", type: "outlined" },
+        text: "texto",
       },
       {
-        data: {
-          title: "Item 1",
-          content: [{ text: "content" }],
-          icon: { iconName: "people", type: "outlined" },
-          text: "texto",
-        },
-        borderDownOn: true,
-        ColorClass: "border-primary-500",
+        title: "Item 1",
+        content: [{ text: "content" }],
+        icon: { iconName: "people", type: "outlined" },
+        text: "texto",
       },
     ],
-    oneItemOpen: true,
+    expandAll: false,
   },
 };
 

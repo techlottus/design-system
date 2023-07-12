@@ -16,9 +16,9 @@ export default {
     ],
     icon: { iconName: "people", type: "outlined" },
     text: "texto",
+    open: false,
+    className: "border-b border-neutral-400",
   },
-  open: false,
-  borderDownOn: true,
 };
 
 const Template = (args) => <AccordionItem {...args} />;
