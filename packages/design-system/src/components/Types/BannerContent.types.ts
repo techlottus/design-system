@@ -1,10 +1,10 @@
 import { ButtonType } from "./button.types";
 
-export interface BannerContent {
+export interface BannerContentConfig {
     title: string;
     text: string;
-    btn: ButtonType;
-    contentVariant: string;
+    btn?: ButtonType;
+    contentVariant?: string;
     size?: string;
     position?: string;
     className?: string;
