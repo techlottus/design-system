@@ -2,7 +2,7 @@ import cn from "classnames";
 import Heading from "../Heading";
 import Icon from "../Icon";
 import SVGIcons from "../assets/SVGIcons";
-import { TabConfig } from "../Types/Tab.types";
+import { TabConfig } from "../Types/Tabs.types";
 
 const Tab: React.FC<TabConfig> = (props: TabConfig) => {
   const {
