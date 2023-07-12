@@ -6,8 +6,9 @@ import {
   getClassBannerPositionButton,
 } from "../helpers/classesHelper";
 import { getTextCount } from "../helpers/textHelper";
+import { BannerContent } from "../Types/BannerContent.types";
 
-const BannerContent = (props: any) => {
+const BannerContent: React.FC<BannerContent> = (props: BannerContent) => {
   const {
     title,
     text,
