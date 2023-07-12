@@ -1,5 +1,5 @@
 export type IconType = {
-  iconName: string;
+  iconName: string | undefined;
   variant?: "solid" | "outlined";
   className?: string;
 };
