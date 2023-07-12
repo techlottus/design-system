@@ -5,7 +5,7 @@ import { TabConfig, TabsConfig } from "../Types/Tabs.types";
 const defaultValues = {
   className: "",
 };
-const Tabs = (props: TabsConfig) => {
+const Tabs: React.FC<TabsConfig> = (props: TabsConfig) => {
   const { tabs, className = defaultValues.className } = props;
   return (
     <div className="overflow-hidden">
