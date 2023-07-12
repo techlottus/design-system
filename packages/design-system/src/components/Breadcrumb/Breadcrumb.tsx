@@ -3,32 +3,35 @@ import Icon from "../Icon/Icon";
 import TextLink from "../TextLink/TextLink";
 import { myhref } from "../helpers/myrefHelper";
 import cn from "classnames";
+import { BreadcrumbType } from "../Types/Breadcrumb.types";
 
-const Breadcrumb = ({
-  homeIcon,
-  separatorIcon,
-  collapseIcon,
-  links,
-  classPageColor = "text-neutral-900",
-  collapseMin = 3,
-}: any) => {
+const Breadcrumb: React.FC<BreadcrumbType> = (props: BreadcrumbType) => {
+  const {
+    homeIcon = { iconName: "Home", route: "/home" },
+    separatorIcon = "arrow_forward_ios",
+    collapseIcon = "more_horiz",
+    links,
+    className = "text-neutral-900",
+    collapseMin = 3,
+  } = props;
   const [isExpand, setExpand] = useState<boolean>(links?.length < collapseMin);
 
-  const breandcrumbExpandStyles = cn(
-    "md:flex items-center align-center leading-5 space-x-2 hidden ",
+  const breandcrumbExpandStyles: string = cn(
+    "flex items-center align-center leading-5 space-x-2 ",
     {
       ["hidden"]: isExpand === false,
     }
   );
-  const breandcrumbCollapseStyles = cn(
+  const breandcrumbCollapseStyles: string = cn(
     "flex items-center align-center leading-5 space-x-2 group",
     {
-      ["md:hidden"]: isExpand,
+      ["hidden"]: isExpand,
     }
   );
-  const commonClasses =
-    "md:flex items-center align-center text-neutral-600 font-principal leading-5 space-x-2 font-bold";
-
+  const commonClasses: string = cn(
+    "flex space-x-2 items-center align-center",
+    "text-neutral-600  font-principal leading-5 font-bold"
+  );
   const handleOnHover = () => {
     if (links.length >= collapseMin) setExpand(true);
   };
@@ -38,7 +41,7 @@ const Breadcrumb = ({
   return (
     <div>
       <ul
-        className={cn(commonClasses, "hidden", {
+        className={cn(commonClasses, {
           ["hidden"]: isExpand === false,
         })}
         onMouseEnter={handleOnHover}
@@ -62,13 +65,13 @@ const Breadcrumb = ({
               text={link?.text}
               href={link?.route}
               className={cn({
-                [classPageColor]: indexlink === links.length - 1,
+                [className]: indexlink === links.length - 1,
               })}
             />
           </li>
         ))}
       </ul>
-      <ul className={cn(commonClasses, { ["md:hidden"]: isExpand })}>
+      <ul className={cn(commonClasses, { ["hidden"]: isExpand })}>
         <li
           onClick={(_) => {
             myhref(homeIcon?.route);
@@ -93,7 +96,7 @@ const Breadcrumb = ({
           <TextLink
             text={links[links.length - 1]?.text}
             href={links[links.length - 1]?.route}
-            className={cn(classPageColor)}
+            className={cn(className)}
           />
         </li>
       </ul>
