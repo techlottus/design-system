@@ -9,12 +9,11 @@ const AccordionItem = (props: any) => {
     title,
     text,
     content,
-    ColorClass = "",
-    borderDownOn = false,
+    className = "",
     onToggle,
     open,
     titleClass = "",
-    oneItemOpen = false,
+    expandAll = true,
   } = props;
 
   const [isOpen, setOpen] = useState(false);
@@ -31,14 +30,13 @@ const AccordionItem = (props: any) => {
       <div
         id="accordion-item-title"
         className={cn(
-          ColorClass,
-          "border border-neutral-400 flex flex-1 items-start py-6 px-4 cursor-pointer",
+          className,
+          "border border-neutral-400 flex flex-1 items-start py-6 px-4 cursor-pointer border-b-0",
           {
-            ["border-b-0"]: !borderDownOn,
             ["bg-neutral-200"]: open || isOpen,
           }
         )}
-        onClick={oneItemOpen ? onToggle : handleOnClick}
+        onClick={!expandAll ? onToggle : handleOnClick}
       >
         <span className="flex pr-4 text-neutral-600">
           <Icon {...icon} />
@@ -47,7 +45,7 @@ const AccordionItem = (props: any) => {
         <span className={cn("flex pr-4 text-neutral-600 cursor-pointer")}>
           <Icon
             iconName={
-              (oneItemOpen && open) || isOpen ? "expand_less" : "expand_more"
+              (expandAll! && open) || isOpen ? "expand_less" : "expand_more"
             }
           />
         </span>
