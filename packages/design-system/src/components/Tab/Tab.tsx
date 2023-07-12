@@ -4,7 +4,7 @@ import Icon from "../Icon";
 import SVGIcons from "../assets/SVGIcons";
 import { TabConfig } from "../Types/Tab.types";
 
-const Tab = (props: TabConfig) => {
+const Tab: React.FC<TabConfig> = (props: TabConfig) => {
   const {
     label,
     active = false,
