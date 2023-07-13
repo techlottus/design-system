@@ -15,25 +15,16 @@ const Accordion: React.FC<AccordionType> = (props: AccordionType) => {
     setClicked(index);
   };
 
-  return !expandAll ? (
+  return (
     <ul className="">
       {items.map((item: AccordionItemType, index: number) => (
         <li key={index} className="last:border-b border-neutral-400">
           <AccordionItem
             onToggle={() => handleToggle(index)}
-            open={clicked === index}
-            expandAll={false}
+            open={clicked === index && !expandAll}
+            expandAll={expandAll}
             {...item}
-            className="last:border-b"
           />
-        </li>
-      ))}
-    </ul>
-  ) : (
-    <ul className="">
-      {items.map((item: AccordionItemType, index: number) => (
-        <li key={index} className="last:border-b border-neutral-400">
-          <AccordionItem expandAll={true} {...item} />
         </li>
       ))}
     </ul>

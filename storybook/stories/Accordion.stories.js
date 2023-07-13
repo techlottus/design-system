@@ -4,7 +4,7 @@ export default {
   component: Accordion,
   tags: ["autodocs"],
   args: {
-    itemsData: [
+    items: [
       {
         title: "Item 1",
         content: [

@@ -50,7 +50,7 @@ const AccordionItem: React.FC<AccordionItemType> = (
         <span className={cn("flex pr-4 text-neutral-600 cursor-pointer")}>
           <Icon
             iconName={
-              (expandAll! && open) || isOpen ? "expand_less" : "expand_more"
+              (expandAll && open) || isOpen ? "expand_less" : "expand_more"
             }
           />
         </span>
