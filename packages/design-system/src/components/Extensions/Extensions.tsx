@@ -5,7 +5,7 @@ import { ExtensionsType } from "../Types/Leaderboard.types";
 const Extensions: React.FC<ExtensionsType> = (props: ExtensionsType) => {
   const {
     variant = "",
-    ext = "",
+    href = "",
     text = "",
     icon,
     target = "_self",
@@ -17,7 +17,7 @@ const Extensions: React.FC<ExtensionsType> = (props: ExtensionsType) => {
       {variant === "phone" ? (
         <span>
           <span className="md:hidden  cursor-pointer ">
-            <a href={"tel:" + ext} target={target}>
+            <a href={"tel:" + href} target={target}>
               {text}
             </a>
           </span>
@@ -25,13 +25,13 @@ const Extensions: React.FC<ExtensionsType> = (props: ExtensionsType) => {
         </span>
       ) : variant === "mail" ? (
         <span className="hover:underline cursor-pointer ">
-          <a href={"mailto:" + ext} target={target}>
+          <a href={"mailto:" + href} target={target}>
             {text}
           </a>
         </span>
       ) : variant === "link" ? (
         <span className=" hover:underline cursor-pointer ">
-          <a href={ext} target={target}>
+          <a href={href} target={target}>
             {text}
           </a>
         </span>

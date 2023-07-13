@@ -16,7 +16,7 @@ export interface LeaderboardTypeVariants {
 
 export interface ExtensionsType {
   variant?: string;
-  ext?: string;
+  href?: string;
   text?: string;
   icon?: IconType;
   target?: string;
