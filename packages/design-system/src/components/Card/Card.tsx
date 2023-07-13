@@ -14,37 +14,6 @@ const display: DisplayType = {
   horizontal: "flex-row",
   vertical: "flex-col",
 };
-const classesContent: string = cn(
-  "flex flex-col",
-  "relative",
-  "justify-between",
-  "p-4"
-);
-const classesSubTitle: string = cn(
-  "flex",
-  "pb-2",
-  "font-bold font-principal text-neutral-500",
-  " md:text-sm sm:text-xs"
-);
-const classesLink: string = cn(
-  "flex",
-  "font-bold font-principal",
-  "justify-end items-center",
-  "lg:text-base md:text-sm sm:text-xs"
-);
-
-const classesText: string = cn(
-  "pb-2",
-  "text-neutral-500",
-  "font-nunito",
-  " md:text-sm sm:text-xs"
-);
-const classesCard: string = cn(
-  "flex flex-1",
-  "relative",
-  "rounded border border-neutral-300",
-  "overflow-hidden h-full"
-);
 
 const Card: React.FC<CardType> = (props: CardType) => {
   const {
@@ -57,17 +26,33 @@ const Card: React.FC<CardType> = (props: CardType) => {
     ImageAspectRatio = "2/1",
     className = "",
   } = props;
-  const classText: string = cn(classesText, { ["hidden"]: !content });
-  const classContent: string = cn(classesContent, { [types[type]]: type });
-  const classSubTitle: string = cn(classesSubTitle, { ["hidden"]: !subtitle });
-  const classLink: string = cn(classesLink, { ["hidden"]: !textLink });
+  const classText: string = cn(
+    "pb-2 text-neutral-500 font-nunito md:text-sm sm:text-xs",
+    { ["hidden"]: !content }
+  );
+  const classContent: string = cn(
+    "flex flex-col relative justify-between p-4",
+    { [types[type]]: type }
+  );
+  const classSubTitle: string = cn(
+    "flex pb-2 font-bold font-principal text-neutral-500 md:text-sm sm:text-xs",
+    { ["hidden"]: !subtitle }
+  );
+  const classLink: string = cn(
+    "flex font-bold font-principal justify-end items-center lg:text-base md:text-sm sm:text-xs",
+    { ["hidden"]: !textLink }
+  );
   const classTitle: string = cn("text-neutral-800 pb-2", {
     ["hidden"]: !title,
   });
-  const classCard: string = cn(classesCard, className, {
-    [display?.[type]]: type,
-    ["group hover:shadow-lg  cursor-pointer"]: textLink?.href,
-  });
+  const classCard: string = cn(
+    "flex flex-1 relative rounded border border-neutral-300 overflow-hidden h-full",
+    className,
+    {
+      [display?.[type]]: type,
+      ["group hover:shadow-lg  cursor-pointer"]: textLink?.href,
+    }
+  );
 
   const handleOnClick = (e: Event) => {
     if (textLink?.disabled) {
