@@ -6,13 +6,15 @@ import {
   getClassBannerPositionButton,
 } from "../helpers/classesHelper";
 import { getTextCount } from "../helpers/textHelper";
-import { BannerContentConfig} from "../Types/BannerContent.types";
+import { BannerContentConfig } from "../Types/Banner.types";
 
-const BannerContent: React.FC<BannerContentConfig> = (props: BannerContentConfig) => {
+const BannerContent: React.FC<BannerContentConfig> = (
+  props: BannerContentConfig
+) => {
   const {
     title,
-    text,
-    btn,
+    content,
+    button,
     contentVariant = "dark",
     size = "lg",
     position = "left-top",
@@ -42,19 +44,19 @@ const BannerContent: React.FC<BannerContentConfig> = (props: BannerContentConfig
           ) : (
             ""
           )}
-          {text ? (
+          {content ? (
             <div className={textColor}>
               {/* <span>{getTextCount(text, 132)}</span> */}
-              <span dangerouslySetInnerHTML={{ __html: text }} />
+              <span dangerouslySetInnerHTML={{ __html: content }} />
             </div>
           ) : (
             ""
           )}
-          {btn ? (
+          {button ? (
             <div className={getClassBannerPositionButton(position)}>
               <Button
-                label={btn?.label}
-                iconName={btn?.iconName}
+                label={button?.label}
+                iconName={button?.iconName}
                 variant={
                   contentVariant === "light" ? "outlined-negative" : "primary"
                 }
@@ -74,17 +76,17 @@ const BannerContent: React.FC<BannerContentConfig> = (props: BannerContentConfig
           <Heading title={title} variant="h-3" font="secondary" />
         </div>
         <div className="pb-4 text-neutral-800 font-secondary">
-          <span dangerouslySetInnerHTML={{ __html: text }} />
+          <span dangerouslySetInnerHTML={{ __html: content }} />
         </div>
-        {btn ? (
+        {button ? (
           <div className="pb-4 font-secondary">
             <Button
-              label={btn?.label}
+              label={button?.label}
               variant="primary"
               size="xsm"
-              iconName={btn?.iconName}
+              iconName={button?.iconName}
               className="min-w-full flex justify-center"
-              onClick={btn?.onClick}
+              onClick={button?.onClick}
             />
           </div>
         ) : (

@@ -1,36 +1,28 @@
 import Aspect from "../Aspect";
 import BannerContent from "../BannerContent";
 import cn from "classnames";
+import { BannerType } from "../Types/Banner.types";
 const bannerImageStyles: any = {
   dark: { filter: "brightness(0.5)" },
   light: { opacity: "0.5" },
 };
-const defaultValues: any = {
-  desktopRatio: "7/2",
-  tabletRatio: "7/2",
-  mobileRatio: "4/3",
-  overlay: "normal",
-  contentVariant: "dark",
-  size: "md",
-  position: "left-top",
-  className: "",
-};
+
 const classBannerImage: any = cn("w-full h-full object-cover object-center");
 
-const Banner = (props: any) => {
+const Banner: React.FC<BannerType> = (props: BannerType) => {
   const {
     imageUrl,
-    desktopRatio = defaultValues.desktopRatio,
-    mobileRatio = defaultValues.mobileRatio,
-    tabletRatio = defaultValues.tabletRatio,
-    overlay = defaultValues.overlay,
+    desktopRatio = "7/2",
+    mobileRatio = "4/3",
+    tabletRatio = "7/2",
+    overlay = "normal",
     title,
-    text,
-    contentVariant = defaultValues.contentVariant,
-    btn,
-    size = defaultValues.size,
-    position = defaultValues.position,
-    className = defaultValues.className,
+    content,
+    contentVariant = "dark",
+    button,
+    size = "md",
+    position = "left-top",
+    className = "",
   } = props;
   return (
     <div className={className}>
@@ -44,12 +36,11 @@ const Banner = (props: any) => {
           />
           <BannerContent
             title={title}
-            text={text}
-            btn={{
-              id: btn.id,
-              label: btn.label,
+            content={content}
+            button={{
+              label: button.label,
               variant: contentVariant ? "outlined" : "primary",
-              iconName: btn?.iconName,
+              iconName: button?.iconName,
             }}
             contentVariant={contentVariant}
             size={size}
@@ -68,12 +59,11 @@ const Banner = (props: any) => {
           />
           <BannerContent
             title={title}
-            text={text}
-            btn={{
-              id: btn.id,
-              label: btn.label,
+            content={content}
+            button={{
+              label: button.label,
               variant: contentVariant ? "outlined" : "primary",
-              iconName: btn?.iconName,
+              iconName: button?.iconName,
             }}
             contentVariant={contentVariant}
             size={size}
@@ -95,13 +85,12 @@ const Banner = (props: any) => {
         <div>
           <BannerContent
             title={title}
-            text={text}
+            content={content}
             contentVariant="dark"
-            btn={{
-              id: btn?.id,
-              label: btn?.label,
+            button={{
+              label: button?.label,
               variant: "primary",
-              iconName: btn?.iconName,
+              iconName: button?.iconName,
             }}
           />
         </div>
