@@ -24,18 +24,15 @@ export default {
           "Al ingresar a la Licenciatura en Administración el aspitante deberá tener una alta orientación a los negocios y las siguientes características: Pensamiento innovador y analítico enfocado a resultados. Adaptación a los cambios. Facilidad de palabra, liderazgo y gusto por formar y dirigir equipos de trabajo de alto desempeño. ",
       },
     ],
-    backgroundColor: "color1",
+    background: "bg-oustanding-100",
   },
   argTypes: {
-    backgroundColor: {
+    background: {
       options: [
-        "color1",
-        "color2",
-        "color3",
-        "color4",
-        "color5",
-        "color6",
-        "color7",
+        "bg-oustanding-100",
+        "bg-oustanding-200",
+        "bg-oustanding-300",
+        "bg-oustanding-400",
       ],
       control: { type: "select" },
     },
@@ -67,7 +64,7 @@ const Example = (args) => (
             "Al ingresar a la Licenciatura en Administración el aspitante deberá tener una alta orientación a los negocios y las siguientes características: Pensamiento innovador y analítico enfocado a resultados. Adaptación a los cambios. Facilidad de palabra, liderazgo y gusto por formar y dirigir equipos de trabajo de alto desempeño. ",
         },
       ]}
-      backgroundColor="color4"
+      background="bg-oustanding-100"
     />
     <Rainbow
       items={[
@@ -90,7 +87,7 @@ const Example = (args) => (
             "Al ingresar a la Licenciatura en Administración el aspitante deberá tener una alta orientación a los negocios y las siguientes características: Pensamiento innovador y analítico enfocado a resultados. Adaptación a los cambios. Facilidad de palabra, liderazgo y gusto por formar y dirigir equipos de trabajo de alto desempeño. ",
         },
       ]}
-      backgroundColor="color3"
+      background="bg-oustanding-200"
     />
     <Rainbow
       items={[
@@ -113,7 +110,7 @@ const Example = (args) => (
             "Al ingresar a la Licenciatura en Administración el aspitante deberá tener una alta orientación a los negocios y las siguientes características: Pensamiento innovador y analítico enfocado a resultados. Adaptación a los cambios. Facilidad de palabra, liderazgo y gusto por formar y dirigir equipos de trabajo de alto desempeño. ",
         },
       ]}
-      backgroundColor="color2"
+      background="bg-oustanding-300"
     />
   </div>
 );
