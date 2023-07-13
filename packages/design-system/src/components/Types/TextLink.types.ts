@@ -6,7 +6,7 @@ export interface TextLinkConfig {
   items?: boolean;
   iconPosition?: "right" | "left";
   href?: string;
-  text: string;
+  text?: string;
   iconName?: string;
   onClick?: () => void;
 }
