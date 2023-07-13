@@ -6,11 +6,7 @@ export interface CardType {
   subtitle: string;
   title: string;
   textLink: TextLinkConfig;
-  type: "horizontal" | "vertical";
+  orientation: "horizontal" | "vertical";
   ImageAspectRatio: string;
   className: string;
 }
-export type DisplayType = {
-  horizontal: string;
-  vertical: string;
-};

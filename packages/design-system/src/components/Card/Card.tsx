@@ -3,17 +3,7 @@ import TextLink from "../TextLink";
 import Aspect from "../Aspect";
 import { myhref } from "../helpers/myrefHelper";
 import Heading from "../Heading";
-import { CardType, DisplayType } from "../Types/Card.types";
-
-const types: DisplayType = {
-  horizontal: "w-3/5",
-  vertical: "h-full",
-};
-
-const display: DisplayType = {
-  horizontal: "flex-row",
-  vertical: "flex-col",
-};
+import { CardType } from "../Types/Card.types";
 
 const Card: React.FC<CardType> = (props: CardType) => {
   const {
@@ -22,17 +12,21 @@ const Card: React.FC<CardType> = (props: CardType) => {
     subtitle,
     title,
     textLink,
-    type = "horizontal",
+    orientation = "horizontal",
     ImageAspectRatio = "2/1",
     className = "",
   } = props;
+  /** classes for text in textlink */
   const classText: string = cn(
     "pb-2 text-neutral-500 font-nunito md:text-sm sm:text-xs",
     { ["hidden"]: !content }
   );
   const classContent: string = cn(
     "flex flex-col relative justify-between p-4",
-    { [types[type]]: type }
+    {
+      ["w-3/5"]: orientation === "horizontal",
+      ["h-full"]: orientation === "vertical",
+    }
   );
   const classSubTitle: string = cn(
     "flex pb-2 font-bold font-principal text-neutral-500 md:text-sm sm:text-xs",
@@ -49,7 +43,8 @@ const Card: React.FC<CardType> = (props: CardType) => {
     "flex flex-1 relative rounded border border-neutral-300 overflow-hidden h-full",
     className,
     {
-      [display?.[type]]: type,
+      ["flex-row"]: orientation === "horizontal",
+      ["flex-col"]: orientation === "vertical",
       ["group hover:shadow-lg  cursor-pointer"]: textLink?.href,
     }
   );
@@ -71,24 +66,28 @@ const Card: React.FC<CardType> = (props: CardType) => {
         handleOnClick(e);
       }}
     >
-      {type === "horizontal" ? (
-        <div id="image" className="w-2/5 h-auto ">
-          <img
-            className="w-full h-full"
-            src={imageUrl}
-            style={{ objectFit: "cover", objectPosition: "center" }}
-          />
-        </div>
-      ) : (
-        <Aspect ratio={ImageAspectRatio}>
-          <div id="image" className="w-full h-full ">
+      {
+        /** when horizontal image grows with content */ orientation ===
+        "horizontal" ? (
+          <div id="image" className="w-2/5 h-auto ">
             <img
               className="w-full h-full object-cover object-center"
               src={imageUrl}
             />
           </div>
-        </Aspect>
-      )}
+        ) : (
+          /** when is vertical, image receive an aspect ratio */ <Aspect
+            ratio={ImageAspectRatio}
+          >
+            <div id="image" className="w-full h-full ">
+              <img
+                className="w-full h-full object-cover object-center"
+                src={imageUrl}
+              />
+            </div>
+          </Aspect>
+        )
+      }
       <div className={classContent}>
         <div>
           <div id="subtitle" className={classSubTitle}>

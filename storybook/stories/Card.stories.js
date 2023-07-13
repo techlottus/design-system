@@ -10,7 +10,7 @@ export default {
     content:
       "Lorem ipsum dolor sit amet consectetur. Urna curabitur sit faucibus vitae. Elit dignissim tempus pharetra risus porta in phasellus magnis pellentesque.",
     subtitle: "subtitle",
-    type: "horizontal",
+    orientation: "horizontal",
     imageAspectRatio: "2/1",
     textLink: { text: "Ver más", href: "https://jonsuh.com/hamburgers/" },
     className: "",
@@ -20,7 +20,7 @@ export default {
     title: "Demo Card",
     content: "Demo Card",
     subtitle: "subtitle",
-    type: "vertical",
+    orientation: "vertical",
     imageAspectRatio: "2/1",
     textLink: { text: "Ver más", href: "https://jonsuh.com/hamburgers/" },
   },
@@ -30,13 +30,13 @@ export default {
     content:
       "Lorem ipsum dolor sit amet consectetur. Urna curabitur sit faucibus vitae. Elit dignissim tempus pharetra risus porta in phasellus magnis pellentesque.",
     subtitle: "subtitle",
-    type: "horizontal",
+    orientation: "horizontal",
     imageAspectRatio: "2/1",
     textLink: { text: "Ver más", href: "https://jonsuh.com/hamburgers/" },
   },
 
   argTypes: {
-    type: {
+    orientation: {
       options: ["vertical", "horizontal"],
       control: { type: "select" },
     },
@@ -70,7 +70,7 @@ const Row = (args1) => (
         subtitle="subtitle"
         content="Demo Card Demo Card Demo Card"
         title="Demo Card"
-        type="vertical"
+        orientation="vertical"
         imageAspectRatio="2/1"
       />
     </div>
@@ -98,7 +98,7 @@ const Column = (args2) => (
         subtitle="subtitle"
         content="Demo Card Demo Card Demo Card"
         title="Demo Card"
-        type="horizontal"
+        orientation="horizontal"
         imageAspectRatio="2/1"
       />
     </div>
