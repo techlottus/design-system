@@ -4,8 +4,9 @@ import { myhref } from "../helpers/myrefHelper";
 import { getTextCount } from "../helpers/textHelper";
 import Aspect from "../Aspect";
 import Heading from "../Heading";
+import { PromoLinkColors, PromoLinkColorsImage, PromoLinkConfig } from "../Types/PromoLink.types";
 
-const colors: any = {
+const colors: PromoLinkColors = {
   transparent: "",
   color1: "border-outstanding-100 shadow-outstanding-100",
   color2: "border-outstanding-200 shadow-outstanding-200",
@@ -15,7 +16,7 @@ const colors: any = {
   color6: "border-neutral-800 shadow-neutral-800",
   color7: "border-neutral-900 shadow-neutral-900",
 };
-const colorsImg: any = {
+const colorsImg: PromoLinkColorsImage = {
   transparent: "",
   color1: "bg-outstanding-100 ",
   color2: "bg-outstanding-200 ",
@@ -26,7 +27,7 @@ const colorsImg: any = {
   color7: "bg-neutral-900 ",
 };
 
-const PromoLink = (props: any) => {
+const PromoLink = (props: PromoLinkConfig) => {
   const {
     text,
     link,
@@ -35,7 +36,7 @@ const PromoLink = (props: any) => {
     imgUrl,
     variant = "image",
   } = props;
-  const handleOnClick = (e: any) => {
+  const handleOnClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (!link) {
       e.stopPropagation();
     } else if (link) {
