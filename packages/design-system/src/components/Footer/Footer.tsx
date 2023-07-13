@@ -186,7 +186,7 @@ const Footer = (props: any) => {
           </div>
         </div>
         <div>
-          <Accordion itemsData={links.mobileLinks} expandAll={true} />
+          <Accordion items={links.mobileLinks} expandAll={true} />
         </div>
         <div id="contact" className="flex  py-10 flex-col ">
           <div className="flex flex-col ">
