@@ -1,13 +1,7 @@
 import Aspect from "../Aspect";
 import BannerContent from "../BannerContent";
-import cn from "classnames";
 import { BannerType } from "../Types/Banner.types";
-const bannerImageStyles: any = {
-  dark: { filter: "brightness(0.5)" },
-  light: { opacity: "0.5" },
-};
-
-const classBannerImage: any = cn("w-full h-full object-cover object-center");
+import cn from "classnames";
 
 const Banner: React.FC<BannerType> = (props: BannerType) => {
   const {
@@ -29,8 +23,10 @@ const Banner: React.FC<BannerType> = (props: BannerType) => {
       <div className="hidden xl:block lg:block ">
         <Aspect ratio={desktopRatio}>
           <img
-            className={classBannerImage}
-            style={bannerImageStyles?.[overlay]}
+            className={cn("w-full h-full object-cover object-center", {
+              ["opacity-50"]: overlay === "light",
+              ["brightness-50"]: overlay === "dark",
+            })}
             src={imageUrl}
             alt="image Banner"
           />
@@ -52,8 +48,10 @@ const Banner: React.FC<BannerType> = (props: BannerType) => {
       <div className="hidden xl:hidden lg:hidden md:block  ">
         <Aspect ratio={tabletRatio}>
           <img
-            className={classBannerImage}
-            style={bannerImageStyles?.[overlay]}
+            className={cn("w-full h-full object-cover object-center", {
+              ["opacity-50"]: overlay === "light",
+              ["brightness-50"]: overlay === "dark",
+            })}
             src={imageUrl}
             alt="image Banner"
           />
