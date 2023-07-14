@@ -14,4 +14,3 @@ export interface IconPosition {
     right?: string,
     left?: string
 }
-
