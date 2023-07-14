@@ -5,22 +5,12 @@ import SocialMedia from "../SocialMedia";
 import Icon from "../Icon";
 import Accordion from "../Accordion";
 import { myhref } from "../helpers/myrefHelper";
+import { TextLinkConfig } from "../Types/TextLink.types";
+import { LogoType, LinkType, FooterType } from "../Types/Footer.types";
 
-const linksTitleSection = cn(
-  "font-principal font-bold lg:text-lg text-neutral-800 pb-6"
-);
-const textLinksClasses = cn("font-principal text-neutral-600 px-0 pb-4 pt-0");
-
-const Footer = (props: any) => {
-  const {
-    logoUrl,
-    newsletter,
-    textLinks,
-    links,
-    contact,
-    certificates,
-    legal,
-  } = props;
+const Footer: React.FC<FooterType> = (props: FooterType) => {
+  const { logoUrl, newsletter, textLink, links, contact, certificates, legal } =
+    props;
   return (
     <div id="Footer-container" className="lg:px-20 md:px-10 px-6">
       <div id="footer-desk-tab" className="md:flex hidden flex-col">
@@ -44,27 +34,27 @@ const Footer = (props: any) => {
               </div>
               <input
                 type="text"
-                placeholder={newsletter?.inputTxt}
-                id="input-mail"
-                name={newsletter?.inputName}
+                placeholder={newsletter?.placeholder}
+                id={newsletter?.id}
+                name={newsletter?.name}
                 className="flex bg-neutral-200  w-1/2 rounded-l-lg py-4 px-3 font-principal text-neutral-800"
               />
 
               <Button
-                label={newsletter.btn.label}
+                label={newsletter?.button.label}
                 variant="primary"
                 size="md"
-                iconName={newsletter.btn?.iconName}
+                iconName={newsletter?.button?.iconName}
                 className="rounded-l-none hidden lg:flex"
-                onClick={newsletter.onClick}
+                onClick={newsletter?.button?.onClick}
               />
               <Button
-                label={newsletter.btn.label}
+                label={newsletter?.button?.label}
                 variant="primary"
                 size="xsm"
-                iconName={newsletter.btn?.iconName}
+                iconName={newsletter?.button?.iconName}
                 className="rounded-l-none  lg:hidden"
-                onClick={newsletter.onClick}
+                onClick={newsletter?.button?.onClick}
               />
             </div>
           ) : (
@@ -77,7 +67,7 @@ const Footer = (props: any) => {
           className="flex flex-row-reverse pb-6 space-x-2 space-x-reverse "
         >
           <TextLink
-            {...textLinks}
+            {...textLink}
             className="font-bold font-principal text-base "
           />
         </div>
@@ -86,20 +76,25 @@ const Footer = (props: any) => {
             id="links"
             className="border-t border-b border-neutral-400 flex justify-between py-10"
           >
-            {links?.deskLinks.map((l: any, indx: any) => (
+            {links?.deskLinks?.map((l: LinkType[], indx: number) => (
               <div className="flex flex-col" key={indx}>
-                {l.map((link: any, index: any) => (
+                {l.map((link: LinkType, index: number) => (
                   <div id="col1" className="flex flex-col pb-10" key={index}>
-                    <div id="title-section1" className={linksTitleSection}>
+                    <div
+                      id="title-section1"
+                      className="font-principal font-bold lg:text-lg text-neutral-800 pb-6"
+                    >
                       {link?.titleSection}
                     </div>
-                    {link?.linktext?.map((lt: any, indxLt: any) => (
-                      <TextLink
-                        {...lt}
-                        key={indxLt}
-                        className={textLinksClasses}
-                      />
-                    ))}
+                    {link?.linktext?.map(
+                      (lt: TextLinkConfig, indxLt: number) => (
+                        <TextLink
+                          {...lt}
+                          key={indxLt}
+                          className="font-principal text-neutral-600 px-0 pb-4 pt-0"
+                        />
+                      )
+                    )}
                   </div>
                 ))}
               </div>
@@ -118,9 +113,8 @@ const Footer = (props: any) => {
             </div>
             <div id="socialmedia" className="flex">
               <SocialMedia
-                className=" flex py-0 md:py-4 lg:items-center md:px-0 lg:px-6 space-x-8  md:justify-start lg:justify-center "
-                imgClassName="h-5"
-                socialMedia={contact?.socialMedia}
+                className=" flex py-0 h-5 md:py-4 lg:items-center md:px-0 lg:px-6 space-x-8  md:justify-start lg:justify-center "
+                {...contact?.socialMedia}
               />
             </div>
           </div>
@@ -147,9 +141,9 @@ const Footer = (props: any) => {
             {certificates?.title}
           </div>
           <div className="flex space-x-10">
-            {certificates?.logos.map((logo: any, index: any) => (
+            {certificates?.logos?.map((logo: LogoType, index: number) => (
               <img
-                src={logo?.url}
+                src={logo?.src}
                 alt={logo?.alt}
                 className={cn("h-16", {
                   ["cursor-pointer"]: logo?.link,
@@ -168,7 +162,7 @@ const Footer = (props: any) => {
             <span className="font-bold text-neutral-800">{legal?.text}</span>
           </div>
           <div className="text-neutral-700 font-principal">
-            <TextLink {...legal?.linkText} />
+            <TextLink {...legal?.textLink} />
           </div>
         </div>
       </div>
@@ -180,22 +174,21 @@ const Footer = (props: any) => {
             className="flex space-x-2 justify-end items-end "
           >
             <TextLink
-              {...textLinks}
+              {...textLink}
               className="font-bold font-principal text-base"
             />
           </div>
         </div>
         <div>
-          <Accordion items={links.mobileLinks} expandAll={true} />
+          <Accordion items={links?.mobileLinks} expandAll={true} />
         </div>
         <div id="contact" className="flex  py-10 flex-col ">
           <div className="flex flex-col ">
             <div className="font-principal font-bold ">{contact?.text}</div>
             <div id="socialmedia" className="flex justify-start">
               <SocialMedia
-                className="  flex  py-4  sm:px-0 space-x-8sm:justify-start  "
-                svgClass="h-5"
-                socialMedia={contact?.socialMedia}
+                className=" h-5 flex  py-4  sm:px-0 space-x-8sm:justify-start  "
+                {...contact?.socialMedia}
               />
             </div>
           </div>
@@ -222,9 +215,9 @@ const Footer = (props: any) => {
             {certificates?.title}
           </div>
           <div className="flex space-x-10 flex-wrap">
-            {certificates?.logos.map((logo: any, index: any) => (
+            {certificates?.logos?.map((logo: LogoType, index: number) => (
               <img
-                src={logo?.url}
+                src={logo?.src}
                 alt={logo?.alt}
                 className={cn("h-16", {
                   ["cursor-pointer"]: logo?.link,
@@ -243,7 +236,7 @@ const Footer = (props: any) => {
             <span className="font-bold text-neutral-800">{legal?.text}</span>
           </div>
           <div className="text-neutral-700 font-principal">
-            <TextLink {...legal?.linkText} />
+            <TextLink {...legal?.textLink} />
           </div>
         </div>
       </div>

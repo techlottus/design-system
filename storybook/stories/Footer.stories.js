@@ -7,15 +7,16 @@ export default {
     logoUrl:
       "https://1.bp.blogspot.com/-ilM0ThnMs_s/WIVtiNb1qOI/AAAAAAAADEw/1fY4kvXEJdQm_IKoBFI4iVQfWoF9GqEaACPcB/s1600/uane%2Bmatamoros%2Blogo%2Bgota%2Bde%2Bagua.png",
     newsletter: {
+      id: "news",
+      placeholder: "Correo electrónico",
       text: "¡Suscríbete a nuestro newsletter!",
-      inputTxt: "Correo electrónico",
-      btn: {
+      button: {
         label: "Enviar",
         onclick: () => {},
       },
-      inputName: "mail",
+      name: "mail",
     },
-    textLinks: {
+    textLink: {
       text: "Text Link",
       href: "https://www.nba.com/playoffs/2023",
       iconName: "arrow_forward_ios",
@@ -160,7 +161,7 @@ export default {
       ],
       mobileLinks: [
         {
-          data: {
+          items: {
             title: "Estudiantes",
             content: [
               {
@@ -186,10 +187,9 @@ export default {
             ],
             icon: { iconName: "people", type: "outlined" },
           },
-          borderDownOn: false,
         },
         {
-          data: {
+          items: {
             title: "Estudiantes",
             content: [
               {
@@ -215,7 +215,6 @@ export default {
             ],
             icon: { iconName: "people", type: "outlined" },
           },
-          borderDownOn: true,
         },
       ],
     },
@@ -251,12 +250,12 @@ export default {
       title: "Certificaciones",
       logos: [
         {
-          url: "https://www.pngfind.com/pngs/m/342-3423146_award-ribbon-transparent-png-ribbon-for-certificate-of.png",
+          src: "https://www.pngfind.com/pngs/m/342-3423146_award-ribbon-transparent-png-ribbon-for-certificate-of.png",
           alt: "certificate",
           link: "https://www.pngfind.com/pngs/m/342-3423146_award-ribbon-transparent-png-ribbon-for-certificate-of.png",
         },
         {
-          url: "https://www.pngfind.com/pngs/m/342-3423146_award-ribbon-transparent-png-ribbon-for-certificate-of.png",
+          src: "https://www.pngfind.com/pngs/m/342-3423146_award-ribbon-transparent-png-ribbon-for-certificate-of.png",
           alt: "certificate",
         },
       ],
@@ -264,7 +263,7 @@ export default {
     legal: {
       title: "Derechos reservados:",
       text: "Lottus Education 2023",
-      linkText: {
+      textLink: {
         text: "Aviso de privacidad",
         href: "https://uane.edu.mx/",
       },
