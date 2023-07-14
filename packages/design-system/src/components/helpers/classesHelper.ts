@@ -2,14 +2,24 @@ import cn from "classnames";
 
 /* Classes*/
 
-export const getPositionContainerText = (potition: any) => {
+export const getPositionContainerText = (potition: "center-top" | "center-middle" | "center-bottom" |"left-top" |"left-middle" |"left-bottom" |"right-top" |"right-middle" |"right-bottom") => {
   const commonClasses = cn(
     "absolute p-10",
     "top-0  left-0",
     "w-full h-full",
     "hidden md:flex "
   );
-  const positions: any = {
+  const positions: {
+    "center-top": string;
+    "center-middle": string;
+    "center-bottom": string;
+    "left-top": string;
+    "left-middle": string;
+    "left-bottom": string;
+    "right-top": string;
+    "right-middle": string;
+    "right-bottom": string;
+} = {
     "center-top": "justify-center items-start text-center",
     "center-middle": "justify-center items-center text-center",
     "center-bottom": "justify-center items-end text-center",
@@ -21,13 +31,11 @@ export const getPositionContainerText = (potition: any) => {
     "right-bottom": "justify-end items-end text-right",
   };
 
-  const classesBannerImg = cn(commonClasses, {
-    [positions[potition]]: true,
-  });
+  const classesBannerImg = cn(commonClasses, [positions[potition]]);
   return classesBannerImg;
 };
 
-export const getClassBannerPositionButton = (potition: any) => {
+export const getClassBannerPositionButton = (potition: string) => {
   const classesBannerImg = cn("flex", {
     ["justify-center items-start text-center"]: potition === "center-top",
     ["justify-center items-center text-center"]: potition === "center-middle",
@@ -42,7 +50,7 @@ export const getClassBannerPositionButton = (potition: any) => {
   return classesBannerImg;
 };
 
-export const getClassItem = (principal: any, active: any) => {
+export const getClassItem = (principal: boolean, active: boolean) => {
   const classItem = cn("flex flex-1 flex-nowrap align-middle  ", {
     ["font-bold"]: principal,
     ["pl-2  py-4"]: !principal,
@@ -61,12 +69,12 @@ const classesSubMenu = cn(
   "pl-2",
   "border-t border-neutral-300"
 );
-export const getclassSubMenu = (submenu: any) => {
+export const getclassSubMenu = (submenu: boolean) => {
   const classSubMenu = cn(classesSubMenu, { ["hidden"]: submenu });
   return classSubMenu;
 };
 
-export const getClassItemMobContainer = (active: any, principal: any) => {
+export const getClassItemMobContainer = (active: boolean, principal: boolean) => {
   const classItemMobContainer = cn("flex", {
     ["bg-neutral-900 text-neutral-100"]: active,
     ["flex-1"]: principal,
@@ -80,21 +88,31 @@ const commonClassesItems = cn(
   "px-3 py-1 cursor-pointer  border-l  border-neutral-300 hover:bg-neutral-300 hover:text-neutral-900 "
 );
 
-export const getClassIconMobContainer = (active: any) => {
+export const getClassIconMobContainer = (active: boolean) => {
   const classIconMobContainer = cn(commonClassesItems, {
     ["bg-neutral-900 text-neutral-100"]: active,
   });
   return classIconMobContainer;
 };
 
-export const getPositionSliderContainerText = (potition: any) => {
+export const getPositionSliderContainerText = (potition: "center-top" | "center-middle" | "center-bottom" |"left-top" |"left-middle" |"left-bottom" |"right-top" |"right-middle" |"right-bottom") => {
   const commonClasses = cn(
     "absolute py-12 px-32",
     "top-0  left-0",
     "w-full h-full",
     "hidden md:flex "
   );
-  const positions: any = {
+  const positions: {
+    "center-top": string;
+    "center-middle": string;
+    "center-bottom": string;
+    "left-top": string;
+    "left-middle": string;
+    "left-bottom": string;
+    "right-top": string;
+    "right-middle": string;
+    "right-bottom": string;
+}  = {
     "center-top": "justify-center items-start text-center",
     "center-middle": "justify-center items-center text-center",
     "center-bottom": "justify-center items-end text-center",
@@ -106,8 +124,6 @@ export const getPositionSliderContainerText = (potition: any) => {
     "right-bottom": "justify-end items-end text-right",
   };
 
-  const classesBannerImg = cn(commonClasses, {
-    [positions[potition]]: true,
-  });
+  const classesBannerImg = cn(commonClasses, [positions[potition]]);
   return classesBannerImg;
 };
