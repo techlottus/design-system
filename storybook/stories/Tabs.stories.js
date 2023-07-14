@@ -5,7 +5,7 @@ export default {
   tags: ["autodocs"],
   args: {
     tabs: [
-      { label: "Text Link", active: true, iconName: "home" },
+      { label: "Text Link", iconName: "home" },
       { label: "Text Link", iconName: "home" },
       { label: "Text Link", iconName: "home" },
       { label: "Text Link", iconName: "home" },
