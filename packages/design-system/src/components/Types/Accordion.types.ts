@@ -1,7 +1,7 @@
 import { IconType } from "./Icon.types";
 
 export interface AccordionType {
-  items: AccordionItemType[];
+  items?: AccordionItemType[];
   expandAll?: boolean;
 }
 
