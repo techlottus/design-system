@@ -2,20 +2,7 @@ import Aspect from "../Aspect";
 import Button from "../Button/Button";
 import Heading from "../Heading";
 import cn from "classnames";
-import { OutstandingType, PositionType } from "../Types/Outstanding.types";
-
-const position: PositionType = {
-  right: "flex-col-reverse md:flex-row-reverse md:pt-6  pt-4",
-  left: "flex-col-reverse md:flex-row md:pt-6  pt-4",
-};
-const paddings: PositionType = {
-  right: "md:pl-8 md:pr-0 px-0",
-  left: "md:pr-8 md:pl-0 px-0",
-};
-const paddingContent: PositionType = {
-  right: "md:pr-8 md:pl-0 px-4 ",
-  left: "md:pl-8 md:pr-0 px-4 ",
-};
+import { OutstandingType } from "../Types/Outstanding.types";
 
 const Outstanding: React.FC<OutstandingType> = (props: OutstandingType) => {
   const {
@@ -27,21 +14,34 @@ const Outstanding: React.FC<OutstandingType> = (props: OutstandingType) => {
     button,
   } = props;
   return (
-    <div className={cn("flex  md:px-6", [position[imagePosition]], background)}>
+    <div
+      className={cn(
+        "flex  md:px-6",
+        {
+          ["flex-col-reverse md:flex-row-reverse md:pt-6  pt-4"]:
+            imagePosition === "right",
+          ["flex-col-reverse md:flex-row md:pt-6 pt-4"]:
+            imagePosition === "left",
+        },
+        background
+      )}
+    >
       <div className="md:w-1/2 w-full self-end">
         <Aspect ratio="2/1">
           <img
             src={imageUrl}
-            className={cn("w-full h-full object-cover object-center", [
-              paddings[imagePosition],
-            ])}
+            className={cn("w-full h-full object-cover object-center", {
+              ["md:pl-8 md:pr-0 px-0"]: imagePosition === "right",
+              ["md:pr-8 md:pl-0 px-0"]: imagePosition === "left",
+            })}
           />
         </Aspect>
       </div>
       <div
-        className={cn("flex flex-col text-neutral-100 md:w-1/2 w-full", [
-          paddingContent[imagePosition],
-        ])}
+        className={cn("flex flex-col text-neutral-100 md:w-1/2 w-full", {
+          ["md:pr-8 md:pl-0 px-4 "]: imagePosition === "right",
+          ["md:pl-8 md:pr-0 px-4 "]: imagePosition === "left",
+        })}
       >
         <Heading
           title={title}
