@@ -18,7 +18,7 @@ export interface AccordionItemType {
 
 export type AccordionContentType = {
   text?: string;
-  link?: string;
+  link: string;
   icon: IconType;
   onClick?: () => void;
 };
