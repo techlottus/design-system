@@ -10,24 +10,30 @@ import Icon from "../Icon";
 import PromoLink from "../PromoLink";
 import SocialMedia from "../SocialMedia";
 import cn from "classnames";
+import {
+  MenuItemType,
+  MenuMobileType,
+  NavClassesType,
+} from "../Types/Menu.types";
 
-const MenuMobile = (props: any) => {
+const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
   const {
     submenuM = false,
-    itemsData,
-    btn,
+    items,
+    button,
     className = "",
     socialMedia,
   } = props;
-  // expand icon state
-  const iconExpandMore = "arrow_forward_ios";
-  const active = "principal";
-  const inactive = "inactive";
-  const iconExpandLess = "arrow_back_ios";
 
-  const [index, setIndex] = useState(0);
-  const [type, setType] = useState(active);
-  const [sub, setSub] = useState(inactive);
+  /** states */
+  const iconExpandMore: string = "arrow_forward_ios";
+  const active: string = "principal";
+  const inactive: string = "inactive";
+  const iconExpandLess: string = "arrow_back_ios";
+
+  const [index, setIndex] = useState<number>(0);
+  const [type, setType] = useState<string>(active);
+  const [sub, setSub] = useState<string>(inactive);
 
   const handleArrowMore = (index: number) => {
     setType(inactive);
@@ -39,24 +45,7 @@ const MenuMobile = (props: any) => {
     setSub(inactive);
   };
 
-  const ClassesMenuContainer = cn(
-    " w-full bg-neutral-100 container overscroll-contain h-9/10 px-2 overflow-hidden",
-    className
-  );
-  const ClassesItemsContainer = cn(
-    "w-full flex flex-col  py-1 z-20  border-t border-neutral-300"
-  );
-
-  const classesItems = cn(
-    "flex justify-between items-center p-1 h-full border-b border-neutral-300 cursor-pointer"
-  );
-  const classesSubMenuContainer = cn(
-    "w-full flex flex-col  py-1 z-20 overscroll-contain h-9/10 "
-  );
-  const classesReverse = cn(
-    "flex justify-end items-center p-1 border-b border-t w-full border-neutral-300 cursor-pointer flex-row-reverse"
-  );
-  const ClassesMenuMobContainer: any = cn(
+  const ClassesMenuMobContainer: string = cn(
     "lg:hidden w-full ",
     "bg-neutral-100",
     "border-t border-neutral-300",
@@ -67,7 +56,7 @@ const MenuMobile = (props: any) => {
       ["left-0 "]: !submenuM,
     }
   );
-  const navClasses = {
+  const navClasses: NavClassesType = {
     transform: !submenuM ? "translate3d(0, 0, 0)" : "translate3d(-150%, 0, 0)",
     opacity: "1",
   };
@@ -84,16 +73,6 @@ const MenuMobile = (props: any) => {
       msOverflowStyle: "none" /* IE and Edge */,
     },
   };
-  const commonClassesMenuMob: any = cn(
-    "h-80 w-full",
-    "overflow-y-scroll lg:hidden flex overscroll-contain",
-    "pr-2",
-    "-translate-x-full transition  ease-in-out delay-150"
-  );
-  const classesSubMenuMob = cn(
-    "w-full h-full top-2 left-0 absolute bg-neutral-100",
-    "overflow-auto lg:hidden flex overscroll-contain"
-  );
   const stylesSubMenuMob: any = {
     msOverflowStyle: "none" /* IE and Edge */,
     transform:
@@ -102,19 +81,30 @@ const MenuMobile = (props: any) => {
   };
 
   return (
-    <div className={ClassesMenuContainer}>
+    <div
+      className={cn(
+        " w-full bg-neutral-100 container overscroll-contain h-9/10 px-2 overflow-hidden",
+        className
+      )}
+    >
       <div id="MenuM" className={ClassesMenuMobContainer} style={navClasses}>
         <div id="MenuContainer" className="overscroll-contain h-screen   ">
           <div
             id="MenuOptions"
-            className={commonClassesMenuMob}
+            className="h-80 w-full overflow-y-scroll lg:hidden flex overscroll-contain pr-2 -translate-x-full transition  ease-in-out delay-150"
             style={MenuMobStyles[type]}
           >
-            <div id="itemsContainer" className={ClassesItemsContainer}>
-              {itemsData.map((item: any, itemIndex: any) => {
-                if (item.children.length) {
+            <div
+              id="itemsContainer"
+              className="w-full flex flex-col  py-1 z-20  border-t border-neutral-300"
+            >
+              {items?.map((item: MenuItemType, itemIndex: number) => {
+                if (item?.children?.length) {
                   return (
-                    <div key={itemIndex} className={classesItems}>
+                    <div
+                      key={itemIndex}
+                      className="flex justify-between items-center p-1 h-full border-b border-neutral-300 cursor-pointer"
+                    >
                       <div
                         className={getClassItemMobContainer(item.active, true)}
                       >
@@ -161,18 +151,15 @@ const MenuMobile = (props: any) => {
           </div>
           <div
             id="subMenu"
-            className={classesSubMenuMob}
+            className="w-full h-full top-2 left-0 absolute bg-neutral-100 overflow-auto lg:hidden flex overscroll-contain"
             style={stylesSubMenuMob}
           >
             <div
-              className={classesSubMenuContainer}
+              className="w-full flex flex-col  py-1 z-20 overscroll-contain h-9/10 "
               style={{ msOverflowStyle: "none" }}
             >
-              <div className={classesReverse}>
-                <TextLink
-                  text={itemsData[index].label}
-                  href={itemsData[index].route}
-                />
+              <div className="flex justify-end items-center p-1 border-b border-t w-full border-neutral-300 cursor-pointer flex-row-reverse">
+                <TextLink text={items[index].label} href={items[index].route} />
                 <div
                   id="iconGo"
                   className="px-2 py-1 cursor-pointer flex items-center"
@@ -181,58 +168,60 @@ const MenuMobile = (props: any) => {
                   <Icon iconName={iconExpandLess} />
                 </div>
               </div>
-              {itemsData[index].children.map((item: any, itemIndex: any) => {
-                if (item.principal) {
-                  return (
-                    <div
-                      key={itemIndex}
-                      className={getClassItemMobContainer(
-                        item.active,
-                        item.principal
-                      )}
-                    >
+              {items[index]?.children?.map(
+                (item: MenuItemType, itemIndex: number) => {
+                  if (item?.principal) {
+                    return (
                       <div
-                        className="flex-1"
-                        onClick={() => {
-                          myhref(item.route);
-                        }}
+                        key={itemIndex}
+                        className={getClassItemMobContainer(
+                          item?.active,
+                          item?.principal
+                        )}
                       >
-                        <TextLink text={item.label} href={item.route} />
+                        <div
+                          className="flex-1"
+                          onClick={() => {
+                            myhref(item?.route);
+                          }}
+                        >
+                          <TextLink text={item?.label} href={item?.route} />
+                        </div>
+                        <div
+                          id="iconGo"
+                          className="px-3 py-1 cursor-pointer  border-l-2  border-neutral-300"
+                        >
+                          <Icon iconName={iconExpandMore} />
+                        </div>
                       </div>
+                    );
+                  } else {
+                    return (
                       <div
-                        id="iconGo"
-                        className="px-3 py-1 cursor-pointer  border-l-2  border-neutral-300"
+                        key={itemIndex}
+                        className={getClassItemMobContainer(
+                          item?.active,
+                          item?.principal
+                        )}
                       >
-                        <Icon iconName={iconExpandMore} />
+                        <div
+                          className="flex-1"
+                          onClick={() => myhref(item?.route)}
+                        >
+                          <TextLink
+                            text={item?.label}
+                            href={item?.route}
+                            items={false}
+                          />
+                        </div>
+                        <div id="iconGo" className="px-3 py-1 cursor-pointer">
+                          <Icon iconName={iconExpandMore} />
+                        </div>
                       </div>
-                    </div>
-                  );
-                } else {
-                  return (
-                    <div
-                      key={itemIndex}
-                      className={getClassItemMobContainer(
-                        item.active,
-                        item.principal
-                      )}
-                    >
-                      <div
-                        className="flex-1"
-                        onClick={() => myhref(item.route)}
-                      >
-                        <TextLink
-                          text={item.label}
-                          href={item.route}
-                          items={false}
-                        />
-                      </div>
-                      <div id="iconGo" className="px-3 py-1 cursor-pointer">
-                        <Icon iconName={iconExpandMore} />
-                      </div>
-                    </div>
-                  );
+                    );
+                  }
                 }
-              })}
+              )}
             </div>
           </div>
 
@@ -242,12 +231,9 @@ const MenuMobile = (props: any) => {
           >
             <div className="py-2 px-2">
               <Button
-                label={btn?.label}
-                variant={btn?.variant}
                 size="sm"
-                iconName={btn?.iconName}
                 className="min-w-full flex justify-center"
-                onClick={btn?.onclick}
+                {...button}
               />
             </div>
             <div className="flex flex-row w-full rounded py-2 px-2">
@@ -257,7 +243,7 @@ const MenuMobile = (props: any) => {
             <div>
               <SocialMedia
                 socialMedia={socialMedia}
-                svgClass="text-neutral-600"
+                className="text-neutral-600"
               />
             </div>
           </div>
