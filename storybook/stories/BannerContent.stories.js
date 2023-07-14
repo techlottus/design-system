@@ -61,9 +61,9 @@ const Template2 = (args2) => (
   <BannerContent
     {...{
       title: "Demo BannerContent",
-      text: "<li>Example rich text</li>",
+      content: "<li>Example rich text</li>",
       contentVariant: "dark",
-      btn: {
+      button: {
         id: "banner-button",
         label: "button",
         variant: "primary",
