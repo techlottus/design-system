@@ -6,40 +6,22 @@ export interface BannerContentConfig {
   button?: ButtonType;
   contentVariant?: string;
   size?: string;
-  position?:
-    | "center-top"
-    | "center-middle"
-    | "center-bottom"
-    | "left-top"
-    | "left-middle"
-    | "left-bottom"
-    | "right-top"
-    | "right-middle"
-    | "right-bottom";
+  position?: string;
   className?: string;
   mobile?: boolean;
 }
 
 export interface BannerType {
   imageUrl: string;
-  desktopRatio?: string;
-  mobileRatio?: string;
-  tabletRatio?: string;
-  overlay?: string;
+  desktopRatio: string;
+  mobileRatio: string;
+  tabletRatio: string;
+  overlay: string;
   title: string;
   content: string;
-  contentVariant?: string;
-  button?: ButtonType;
-  size?: string;
-  position?:
-    | "center-top"
-    | "center-middle"
-    | "center-bottom"
-    | "left-top"
-    | "left-middle"
-    | "left-bottom"
-    | "right-top"
-    | "right-middle"
-    | "right-bottom";
+  contentVariant: string;
+  button: ButtonType;
+  size: string;
+  position: string;
   className: string;
 }
