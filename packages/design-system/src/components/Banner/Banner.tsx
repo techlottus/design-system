@@ -34,7 +34,7 @@ const Banner: React.FC<BannerType> = (props: BannerType) => {
             title={title}
             content={content}
             button={{
-              label: button.label,
+              label: button?.label,
               variant: contentVariant ? "outlined" : "primary",
               iconName: button?.iconName,
             }}
@@ -59,7 +59,7 @@ const Banner: React.FC<BannerType> = (props: BannerType) => {
             title={title}
             content={content}
             button={{
-              label: button.label,
+              label: button?.label,
               variant: contentVariant ? "outlined" : "primary",
               iconName: button?.iconName,
             }}
