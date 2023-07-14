@@ -11,11 +11,6 @@ export interface TextLinkConfig {
   onClick?: () => void;
 }
 export interface IconPosition {
-<<<<<<< HEAD
   right?: string;
   left?: string;
-=======
-  right: string;
-  left: string;
->>>>>>> feat/5965
 }
