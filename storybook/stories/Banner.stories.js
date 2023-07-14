@@ -6,14 +6,13 @@ export default {
   args: {
     imageUrl: "https://wallpapercave.com/wp/wp2599594.jpg",
     title: "Demo Banner",
-    text: "Demo Banner",
+    content: "Demo Banner",
     desktopRatio: "7/2",
     tabletRatio: "7/2",
     mobileRatio: "4/3",
     overlay: "dark",
     contentVariant: "dark",
-    btn: {
-      id: "banner-button",
+    button: {
       label: "button",
     },
     position: "left-top",

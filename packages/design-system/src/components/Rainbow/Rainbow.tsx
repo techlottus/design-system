@@ -1,26 +1,20 @@
 import Aspect from "../Aspect";
 import Heading from "../Heading";
 import cn from "classnames";
+import { RainbowItems, RainbowConfig } from "../Types/Rainbow.types";
 
-// const defaultValues: any = {};
-const colors: any = {
-  color1: "bg-outstanding-100",
-  color2: "bg-outstanding-200",
-  color3: "bg-outstanding-300",
-  color4: "bg-outstanding-400",
-};
-
-const Rainbow = (props: any) => {
-  const { items, backgroundColor } = props;
+const Rainbow: React.FC<RainbowConfig> = (props: RainbowConfig) => {
+  const { items, background } = props;
   return (
     <div className="flex w-full h-full relative ">
       <div
-        className={cn("lg:w-3/4 w-full overflow-visible flex h-full absolute", {
-          [colors[backgroundColor]]: true,
-        })}
+        className={cn(
+          "lg:w-3/4 w-full overflow-visible flex h-full absolute",
+          background
+        )}
       ></div>
       <div className="z-10 w-full  h-full left-0 top-0 py-12 lg:space-y-6 md:space-y-12 space-y-6">
-        {items.map((item: any, i: any) => (
+        {items?.map((item: RainbowItems, i: number) => (
           <section
             className="w-full flex flex-col lg:flex-row  lg:pl-24.75 pr-6 pl-6 lg:space-x-6 group"
             key={i}
