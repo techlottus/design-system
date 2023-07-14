@@ -2,63 +2,46 @@ import Aspect from "../Aspect";
 import Button from "../Button/Button";
 import Heading from "../Heading";
 import cn from "classnames";
+import { OutstandingType, PositionType } from "../Types/Outstanding.types";
 
-const position: any = {
-  ["right"]: "flex-col-reverse md:flex-row-reverse md:pt-6  pt-4",
-  ["left"]: "flex-col-reverse md:flex-row md:pt-6  pt-4",
+const position: PositionType = {
+  right: "flex-col-reverse md:flex-row-reverse md:pt-6  pt-4",
+  left: "flex-col-reverse md:flex-row md:pt-6  pt-4",
 };
-const paddings: any = {
-  ["right"]: "md:pl-8 md:pr-0 px-0",
-  ["left"]: "md:pr-8 md:pl-0 px-0",
+const paddings: PositionType = {
+  right: "md:pl-8 md:pr-0 px-0",
+  left: "md:pr-8 md:pl-0 px-0",
 };
-const paddingContent: any = {
-  ["right"]: "md:pr-8 md:pl-0 px-4 ",
-  ["left"]: "md:pl-8 md:pr-0 px-4 ",
-};
-const defaultValues: any = {
-  imgPosition: "right",
-  backgroundColor: "color1",
-};
-const colors: any = {
-  color1: "bg-outstanding-100",
-  color2: "bg-outstanding-200",
-  color3: "bg-outstanding-300",
-  color4: "bg-outstanding-400",
-  color5: "bg-neutral-500",
-  color6: "bg-neutral-800",
-  color7: "bg-neutral-900",
+const paddingContent: PositionType = {
+  right: "md:pr-8 md:pl-0 px-4 ",
+  left: "md:pl-8 md:pr-0 px-4 ",
 };
 
-const Outstanding = (props: any) => {
+const Outstanding: React.FC<OutstandingType> = (props: OutstandingType) => {
   const {
     imageUrl,
     title,
-    paragraph,
-    imgPosition = defaultValues.imgPosition,
-    backgroundColor = defaultValues.backgroundColor,
+    content,
+    imagePosition = "right",
+    background = "bg-outstanding-100",
     button,
   } = props;
   return (
-    <div
-      className={cn("flex  md:px-6", {
-        [position[imgPosition]]: true,
-        [colors[backgroundColor]]: true,
-      })}
-    >
+    <div className={cn("flex  md:px-6", [position[imagePosition]], background)}>
       <div className="md:w-1/2 w-full self-end">
         <Aspect ratio="2/1">
           <img
             src={imageUrl}
-            className={cn("w-full h-full object-cover object-center", {
-              [paddings[imgPosition]]: true,
-            })}
+            className={cn("w-full h-full object-cover object-center", [
+              paddings[imagePosition],
+            ])}
           />
         </Aspect>
       </div>
       <div
-        className={cn("flex flex-col text-neutral-100 md:w-1/2 w-full", {
-          [paddingContent[imgPosition]]: true,
-        })}
+        className={cn("flex flex-col text-neutral-100 md:w-1/2 w-full", [
+          paddingContent[imagePosition],
+        ])}
       >
         <Heading
           title={title}
@@ -67,7 +50,7 @@ const Outstanding = (props: any) => {
           className="pb-4"
         />
         <div className="text-neutral-100 font-secondary align-center md:pb-4 pb-2 md:text-base text-sm">
-          {paragraph}
+          <span dangerouslySetInnerHTML={{ __html: content }} />
         </div>
         <div className="pb-6">
           <Button size="xsm" variant="outlined-negative" {...button} />
