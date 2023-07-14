@@ -16,12 +16,10 @@ const Outstanding: React.FC<OutstandingType> = (props: OutstandingType) => {
   return (
     <div
       className={cn(
-        "flex  md:px-6",
+        "flex flex-col-reverse  md:px-6 md:pt-6 pt-4",
         {
-          ["flex-col-reverse md:flex-row-reverse md:pt-6  pt-4"]:
-            imagePosition === "right",
-          ["flex-col-reverse md:flex-row md:pt-6 pt-4"]:
-            imagePosition === "left",
+          [" md:flex-row-reverse"]: imagePosition === "right",
+          [" md:flex-row"]: imagePosition === "left",
         },
         background
       )}
@@ -30,17 +28,17 @@ const Outstanding: React.FC<OutstandingType> = (props: OutstandingType) => {
         <Aspect ratio="2/1">
           <img
             src={imageUrl}
-            className={cn("w-full h-full object-cover object-center", {
-              ["md:pl-8 md:pr-0 px-0"]: imagePosition === "right",
-              ["md:pr-8 md:pl-0 px-0"]: imagePosition === "left",
+            className={cn("w-full h-full object-cover object-center px-0", {
+              ["md:pl-8 md:pr-0 "]: imagePosition === "right",
+              ["md:pr-8 md:pl-0 "]: imagePosition === "left",
             })}
           />
         </Aspect>
       </div>
       <div
-        className={cn("flex flex-col text-neutral-100 md:w-1/2 w-full", {
-          ["md:pr-8 md:pl-0 px-4 "]: imagePosition === "right",
-          ["md:pl-8 md:pr-0 px-4 "]: imagePosition === "left",
+        className={cn("flex flex-col text-neutral-100 md:w-1/2 w-full px-4", {
+          ["md:pr-8 md:pl-0"]: imagePosition === "right",
+          ["md:pl-8 md:pr-0"]: imagePosition === "left",
         })}
       >
         <Heading
