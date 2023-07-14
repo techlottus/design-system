@@ -12,7 +12,7 @@ export interface VariantsType {
 }
 
 export interface HeadingType {
-  title: string;
+  title?: string;
   variant?: "h-1" | "h-2" | "h-3" | "h-4" | "h-5" | "h-6";
   font?: "principal" | "secondary";
   className?: string;
