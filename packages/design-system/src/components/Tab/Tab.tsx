@@ -10,24 +10,21 @@ const Tab: React.FC<TabConfig> = (props: TabConfig) => {
     active = false,
     className = "",
     iconName,
-    isFirst = false,
     onClick = () => {},
   } = props;
+
   return (
-    <div
-      className={cn(className, "flex flex-col space-x-0 w-fit")}
-      onClick={onClick}
-    >
+    <div className={cn("flex flex-col space-x-0 w-fit")} onClick={onClick}>
       <div
         className={cn(
           "flex relative  justify-center p-4  items-center whitespace-nowrap ",
           {
             ["bg-neutral-900 text-neutral-100 drop-shadow-md border-b-2 border border-neutral-900"]:
               active,
-            ["bg-neutral-100 border-b-2 border-t border-r border-neutral-300  border-b-primary-500"]:
+            ["bg-neutral-100 text-neutral-900 border-b-2 border-t border-r border-neutral-300  border-b-primary-500"]:
               !active,
-            ["border-l border-neutral-300"]: isFirst,
-          }
+          },
+          className
         )}
       >
         {iconName ? (
@@ -44,7 +41,7 @@ const Tab: React.FC<TabConfig> = (props: TabConfig) => {
               title={label}
               variant="h-6"
               font="secondary"
-              className="text-sm font-semibold leading-5 text-neutral-100"
+              className="text-sm font-semibold leading-5 "
             />
           </span>
         ) : (
@@ -52,7 +49,7 @@ const Tab: React.FC<TabConfig> = (props: TabConfig) => {
             title={label}
             variant="h-6"
             font="secondary"
-            className="text-sm font-semibold leading-5 text-neutral-100"
+            className="text-sm font-semibold leading-5"
           />
         )}
       </div>
