@@ -7,39 +7,42 @@ export default {
   args: {
     imageUrl: "https://wallpapercave.com/wp/wp2599594.jpg",
     title: "Demo Card",
-    text: "Lorem ipsum dolor sit amet consectetur. Urna curabitur sit faucibus vitae. Elit dignissim tempus pharetra risus porta in phasellus magnis pellentesque.",
+    content:
+      "Lorem ipsum dolor sit amet consectetur. Urna curabitur sit faucibus vitae. Elit dignissim tempus pharetra risus porta in phasellus magnis pellentesque.",
     subtitle: "subtitle",
-    type: "horizontal",
-    aspectRatio: "2/1",
-    link: { label: "Ver más", route: "https://jonsuh.com/hamburgers/" },
+    orientation: "horizontal",
+    imageAspectRatio: "2/1",
+    textLink: { text: "Ver más", href: "https://jonsuh.com/hamburgers/" },
     className: "",
   },
   args1: {
     imageUrl: "https://wallpapercave.com/wp/wp2599594.jpg",
     title: "Demo Card",
-    text: "Demo Card",
+    content: "Demo Card",
     subtitle: "subtitle",
-    type: "vertical",
-    aspectRatio: "2/1",
-    link: { label: "Ver más", route: "https://jonsuh.com/hamburgers/" },
+    orientation: "vertical",
+    imageAspectRatio: "2/1",
+    textLink: { text: "Ver más", href: "https://jonsuh.com/hamburgers/" },
   },
   args2: {
     imageUrl: "https://wallpapercave.com/wp/wp2599594.jpg",
     title: "Demo Card",
-    text: "Lorem ipsum dolor sit amet consectetur. Urna curabitur sit faucibus vitae. Elit dignissim tempus pharetra risus porta in phasellus magnis pellentesque.",
+    content:
+      "Lorem ipsum dolor sit amet consectetur. Urna curabitur sit faucibus vitae. Elit dignissim tempus pharetra risus porta in phasellus magnis pellentesque.",
     subtitle: "subtitle",
-    type: "horizontal",
-    aspectRatio: "2/1",
-    link: { label: "Ver más", route: "https://jonsuh.com/hamburgers/" },
+    orientation: "horizontal",
+    imageAspectRatio: "2/1",
+    textLink: { text: "Ver más", href: "https://jonsuh.com/hamburgers/" },
   },
 
   argTypes: {
-    type: {
+    orientation: {
       options: ["vertical", "horizontal"],
-      control: { type: "radio" },
+      control: { type: "select" },
     },
-    aspectRatio: {
+    imageAspectRatio: {
       options: ["2/1", "4/3"],
+      control: { type: "radio" },
     },
   },
 };
@@ -60,15 +63,15 @@ const Row = (args1) => (
       <Card {...args1} />
       <Card
         imageUrl="https://wallpapercave.com/wp/wp2599594.jpg"
-        link={{
-          label: "Ver más",
+        textLink={{
+          text: "Ver más",
           route: "https://jonsuh.com/hamburgers/",
         }}
         subtitle="subtitle"
-        text="Demo Card Demo Card Demo Card"
+        content="Demo Card Demo Card Demo Card"
         title="Demo Card"
-        type="vertical"
-        aspectRatio="2/1"
+        orientation="vertical"
+        imageAspectRatio="2/1"
       />
     </div>
   </div>
@@ -88,15 +91,15 @@ const Column = (args2) => (
       <Card {...args2} />
       <Card
         imageUrl="https://wallpapercave.com/wp/wp2599594.jpg"
-        link={{
-          label: "Ver más",
+        textLink={{
+          text: "Ver más",
           route: "https://jonsuh.com/hamburgers/",
         }}
         subtitle="subtitle"
-        text="Demo Card Demo Card Demo Card"
+        content="Demo Card Demo Card Demo Card"
         title="Demo Card"
-        type="horizontal"
-        aspectRatio="2/1"
+        orientation="horizontal"
+        imageAspectRatio="2/1"
       />
     </div>
   </div>
