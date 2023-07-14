@@ -114,7 +114,7 @@ const Footer: React.FC<FooterType> = (props: FooterType) => {
             <div id="socialmedia" className="flex">
               <SocialMedia
                 className=" flex py-0 h-5 md:py-4 lg:items-center md:px-0 lg:px-6 space-x-8  md:justify-start lg:justify-center "
-                {...SocialMedia}
+                {...contact?.socialMedia}
               />
             </div>
           </div>
@@ -187,9 +187,8 @@ const Footer: React.FC<FooterType> = (props: FooterType) => {
             <div className="font-principal font-bold ">{contact?.text}</div>
             <div id="socialmedia" className="flex justify-start">
               <SocialMedia
-                className="  flex  py-4  sm:px-0 space-x-8sm:justify-start  "
-                svgClass="h-5"
-                socialMedia={contact?.socialMedia}
+                className=" h-5 flex  py-4  sm:px-0 space-x-8sm:justify-start  "
+                {...contact?.socialMedia}
               />
             </div>
           </div>
