@@ -4,7 +4,11 @@ import { myhref } from "../helpers/myrefHelper";
 import { getTextCount } from "../helpers/textHelper";
 import Aspect from "../Aspect";
 import Heading from "../Heading";
-import { PromoLinkColors, PromoLinkColorsImage, PromoLinkConfig } from "../Types/PromoLink.types";
+import {
+  PromoLinkColors,
+  PromoLinkColorsImage,
+  PromoLinkConfig,
+} from "../Types/PromoLink.types";
 
 const colors: PromoLinkColors = {
   transparent: "",
@@ -33,7 +37,7 @@ const PromoLink = (props: PromoLinkConfig) => {
     link,
     className = "",
     color = "color1",
-    imgUrl,
+    imageUrl,
     variant = "image",
   } = props;
   const handleOnClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -75,7 +79,7 @@ const PromoLink = (props: PromoLinkConfig) => {
       >
         <Aspect ratio="1/1">
           <img
-            src={imgUrl}
+            src={imageUrl}
             className="w-full h-full object-cover object-center mix-blend-multiply bg-blend-multiply "
           />
           <div

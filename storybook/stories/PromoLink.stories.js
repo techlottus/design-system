@@ -6,7 +6,7 @@ export default {
   args: {
     link: "https://www.caffeineinformer.com/death-by-caffeine",
     text: "Demo PromoLink",
-    imgUrl:
+    imageUrl:
       "https://bachilleratorapido.com/wp-content/uploads/2020/07/La-UANE-de-Saltillo-2.jpg",
     color: "color1",
     className: "",
