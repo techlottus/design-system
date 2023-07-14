@@ -6,7 +6,7 @@ import { SocialMediaConfig, socialMediaItem } from "../Types/SocialMedia.types";
 const smClass = cn("cursor-pointer ");
 
 const SocialMedia: React.FC<SocialMediaConfig> = (props: SocialMediaConfig) => {
-  const { className = "", socialMedia, svgClass = "" } = props;
+  const { className = "", socialMedia } = props;
   return (
     <div
       className={cn(
@@ -23,7 +23,7 @@ const SocialMedia: React.FC<SocialMediaConfig> = (props: SocialMediaConfig) => {
           }}
           key={index}
         >
-          <SVGIcons name={sm?.socialName} className={svgClass} />
+          <SVGIcons name={sm?.socialName} />
         </div>
       ))}
     </div>

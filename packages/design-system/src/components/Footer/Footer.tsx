@@ -118,8 +118,7 @@ const Footer = (props: any) => {
             </div>
             <div id="socialmedia" className="flex">
               <SocialMedia
-                className=" flex py-0 md:py-4 lg:items-center md:px-0 lg:px-6 space-x-8  md:justify-start lg:justify-center "
-                imgClassName="h-5"
+                className=" flex py-0 md:py-4 lg:items-center md:px-0 h-5 lg:px-6 space-x-8  md:justify-start lg:justify-center "
                 socialMedia={contact?.socialMedia}
               />
             </div>
