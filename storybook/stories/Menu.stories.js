@@ -5,7 +5,7 @@ export default {
   tags: ["autodocs"],
   args: {
     languages: false,
-    btn: {
+    button: {
       id: "MenuMobileBtn",
       label: "Pedir información",
       type: "primary",
