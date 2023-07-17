@@ -235,7 +235,7 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
                 {...button}
               />
             </div>
-            <div className="flex flex-row w-full rounded py-2 px-2">
+            <div className="flex flex-row space-x-6 w-full rounded py-2 px-2">
               <PromoLink text="link" route="/route" variant="shadow" />
               <PromoLink text="link2" route="/route" variant="shadow" />
             </div>
