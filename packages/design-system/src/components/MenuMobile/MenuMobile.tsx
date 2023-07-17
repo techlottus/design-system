@@ -41,7 +41,7 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
     setIndex(index);
   };
   const handleArrowLess = () => {
-    setType(active);
+    setType("principal");
     setSub(inactive);
   };
 
@@ -61,17 +61,16 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
     opacity: "1",
   };
 
-  const MenuMobStyles: any = {
-    inactive: {
-      transform: "translate3d(0,0,0)",
-      msOverflowStyle: "none" /* IE and Edge */,
-    },
-    principal: {
-      transform: "translate3d(0, 0, 0)",
-      position: "absolute",
-      opacity: "1",
-      msOverflowStyle: "none" /* IE and Edge */,
-    },
+  const InactiveStyles = {
+    transform: "translate3d(0,0,0)",
+    msOverflowStyle: "none" /* IE and Edge */,
+  };
+
+  const PrincipalStyles: any = {
+    transform: "translate3d(0, 0, 0)",
+    position: "absolute",
+    opacity: "1",
+    msOverflowStyle: "none" /* IE and Edge */,
   };
   const stylesSubMenuMob: any = {
     msOverflowStyle: "none" /* IE and Edge */,
@@ -92,7 +91,7 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
           <div
             id="MenuOptions"
             className="h-80 w-full overflow-y-scroll lg:hidden flex overscroll-contain pr-2 -translate-x-full transition  ease-in-out delay-150"
-            style={MenuMobStyles[type]}
+            style={type === "principal" ? PrincipalStyles : InactiveStyles}
           >
             <div
               id="itemsContainer"
@@ -106,18 +105,18 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
                       className="flex justify-between items-center p-1 h-full border-b border-neutral-300 cursor-pointer"
                     >
                       <div
-                        className={getClassItemMobContainer(item.active, true)}
+                        className={getClassItemMobContainer(item?.active, true)}
                       >
                         <span
-                          onClick={() => myhref(item.route)}
+                          onClick={() => myhref(item?.route)}
                           className=" flex py-1"
                         >
-                          <TextLink text={item.label} href={item.route} />
+                          <TextLink text={item.label} href={item?.route} />
                         </span>
                       </div>
                       <div
                         id="iconGo"
-                        className={getClassIconMobContainer(item.iconActive)}
+                        className={getClassIconMobContainer(item?.iconActive)}
                         onClick={(_) => handleArrowMore(itemIndex)}
                       >
                         <Icon iconName={iconExpandMore} />
@@ -128,13 +127,13 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
                   return (
                     <div
                       key={itemIndex}
-                      className={getClassItemMobContainer(item.active, false)}
+                      className={getClassItemMobContainer(item?.active, false)}
                     >
                       <div
                         className="flex-1"
-                        onClick={() => myhref(item.route)}
+                        onClick={() => myhref(item?.route)}
                       >
-                        <TextLink text={item.label} href={item.route} />
+                        <TextLink text={item.label} href={item?.route} />
                       </div>
                       <div
                         id="iconGo"
@@ -241,10 +240,7 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
               <PromoLink text="link2" route="/route" variant="shadow" />
             </div>
             <div>
-              <SocialMedia
-                socialMedia={socialMedia}
-                className="text-neutral-600"
-              />
+              <SocialMedia {...socialMedia} className="text-neutral-600" />
             </div>
           </div>
         </div>
