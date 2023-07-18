@@ -1,6 +1,5 @@
 export interface SocialMediaConfig {
   className?: string;
-  svgClass?: string;
   socialMedia?: Array<socialMediaItem>;
 }
 

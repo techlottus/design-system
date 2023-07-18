@@ -223,7 +223,10 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
               <PromoLink text="link2" route="/route" variant="shadow" />
             </div>
             <div>
-              <SocialMedia {...socialMedia} className="text-neutral-600" />
+              <SocialMedia
+                socialMedia={socialMedia}
+                className="text-neutral-600"
+              />
             </div>
           </div>
         </div>

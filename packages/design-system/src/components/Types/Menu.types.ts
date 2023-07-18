@@ -1,4 +1,4 @@
-import { SocialMediaConfig } from "./SocialMedia.types";
+import { socialMediaItem } from "./SocialMedia.types";
 import { ButtonType } from "./button.types";
 
 export interface MenuMobileType {
@@ -6,7 +6,7 @@ export interface MenuMobileType {
   items: MenuItemType[];
   button?: ButtonType;
   className?: string;
-  socialMedia?: SocialMediaConfig;
+  socialMedia?: socialMediaItem[];
 }
 
 export interface NavClassesType {
@@ -39,7 +39,7 @@ export interface DataType {
   logotype: { src: string };
   menus: MenuElementType[];
   menuMobile: MenuItemType[];
-  socialMedia: SocialMediaConfig;
+  socialMedia: socialMediaItem[];
 }
 
 export interface MenuElementType {
