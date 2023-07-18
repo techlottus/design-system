@@ -10,11 +10,7 @@ import Icon from "../Icon";
 import PromoLink from "../PromoLink";
 import SocialMedia from "../SocialMedia";
 import cn from "classnames";
-import {
-  MenuItemType,
-  MenuMobileType,
-  NavClassesType,
-} from "../Types/Menu.types";
+import { MenuItemType, MenuMobileType } from "../Types/Menu.types";
 
 const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
   const {
@@ -51,33 +47,12 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
     "border-t border-neutral-300",
     "p-2 top-12",
     "flex absolute flex-col overflow-y-auto overscrol-contain",
-    " transition  ease-in-out delay-150 ",
+    " transition  ease-in-out delay-150 transform-gpu opacity-100",
     {
-      ["left-0 "]: !submenuM,
+      ["left-0 translate-x-0 translate-y-0"]: !submenuM,
+      ["-translate-x-full translate-y-0 right-8"]: submenuM,
     }
   );
-  const navClasses: NavClassesType = {
-    transform: !submenuM ? "translate3d(0, 0, 0)" : "translate3d(-150%, 0, 0)",
-    opacity: "1",
-  };
-
-  const InactiveStyles = {
-    transform: "translate3d(0,0,0)",
-    msOverflowStyle: "none" /* IE and Edge */,
-  };
-
-  const PrincipalStyles: any = {
-    transform: "translate3d(0, 0, 0)",
-    position: "absolute",
-    opacity: "1",
-    msOverflowStyle: "none" /* IE and Edge */,
-  };
-  const stylesSubMenuMob: any = {
-    msOverflowStyle: "none" /* IE and Edge */,
-    transform:
-      sub === "principal" ? "translate3d(0, 0, 0)" : "translate3d(200%, 0, 0)",
-    transition: "transform 0.5s, opacity 0.1s",
-  };
 
   return (
     <div
@@ -86,12 +61,18 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
         className
       )}
     >
-      <div id="MenuM" className={ClassesMenuMobContainer} style={navClasses}>
+      <div id="MenuM" className={ClassesMenuMobContainer}>
         <div id="MenuContainer" className="overscroll-contain h-screen   ">
           <div
             id="MenuOptions"
-            className="h-80 w-full overflow-y-scroll lg:hidden flex overscroll-contain pr-2 -translate-x-full transition  ease-in-out delay-150"
-            style={type === "principal" ? PrincipalStyles : InactiveStyles}
+            className={cn(
+              "h-80 w-full overflow-y-scroll lg:hidden flex overscroll-contain pr-2 -translate-x-full transition  ease-in-out delay-150 transform-gpu",
+              {
+                ["translate-x-0 translate-y-0"]: type === "principal",
+                ["translate-x-0 translate-y-0 absolute opacity-100"]:
+                  type !== "principal",
+              }
+            )}
           >
             <div
               id="itemsContainer"
@@ -150,13 +131,15 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
           </div>
           <div
             id="subMenu"
-            className="w-full h-full top-2 left-0 absolute bg-neutral-100 overflow-auto lg:hidden flex overscroll-contain"
-            style={stylesSubMenuMob}
+            className={cn(
+              "w-full h-full top-2 left-0 absolute bg-neutral-100 overflow-auto lg:hidden flex overscroll-contain transform-gpu transition-all ease-in-out ",
+              {
+                ["translate-x-0 translate-y-0"]: sub === "principal",
+                ["translate-x-full translate-y-0"]: sub !== "principal",
+              }
+            )}
           >
-            <div
-              className="w-full flex flex-col  py-1 z-20 overscroll-contain h-9/10 "
-              style={{ msOverflowStyle: "none" }}
-            >
+            <div className="w-full flex flex-col  py-1 z-20 overscroll-contain h-9/10 ">
               <div className="flex justify-end items-center p-1 border-b border-t w-full border-neutral-300 cursor-pointer flex-row-reverse">
                 <TextLink text={items[index].label} href={items[index].route} />
                 <div
