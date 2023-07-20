@@ -8,6 +8,7 @@ export default {
     active: true,
     iconName: "home",
     isFirst: true,
+    className: "rounded-full py-0 3",
   },
 };
 

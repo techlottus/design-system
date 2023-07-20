@@ -19,6 +19,8 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
     button,
     className = "",
     socialMedia,
+    promolink1,
+    promolink2,
   } = props;
 
   /** states */
@@ -218,10 +220,12 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
                 {...button}
               />
             </div>
+
             <div className="flex flex-row space-x-6 w-full rounded py-2 px-2">
-              <PromoLink text="link" route="/route" variant="shadow" />
-              <PromoLink text="link2" route="/route" variant="shadow" />
+              {promolink1 && <PromoLink {...promolink1} />}
+              {promolink2 && <PromoLink {...promolink2} />}
             </div>
+
             <div>
               <SocialMedia
                 socialMedia={socialMedia}

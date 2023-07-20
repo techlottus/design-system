@@ -223,6 +223,8 @@ const Menu: React.FC<MenuType> = (props: MenuType) => {
         items={data?.menuMobile}
         button={button}
         socialMedia={data?.socialMedia}
+        promolink1={data?.promolink1}
+        promolink2={data?.promolink2}
       />
     </div>
   );

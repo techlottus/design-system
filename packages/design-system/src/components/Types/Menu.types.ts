@@ -1,3 +1,4 @@
+import { PromoLinkConfig } from "./PromoLink.types";
 import { socialMediaItem } from "./SocialMedia.types";
 import { ButtonType } from "./button.types";
 
@@ -7,6 +8,8 @@ export interface MenuMobileType {
   button?: ButtonType;
   className?: string;
   socialMedia?: socialMediaItem[];
+  promolink1?: PromoLinkConfig;
+  promolink2?: PromoLinkConfig;
 }
 
 export interface NavClassesType {
@@ -40,6 +43,8 @@ export interface DataType {
   menus: MenuElementType[];
   menuMobile: MenuItemType[];
   socialMedia: socialMediaItem[];
+  promolink1?: PromoLinkConfig;
+  promolink2?: PromoLinkConfig;
 }
 
 export interface MenuElementType {
