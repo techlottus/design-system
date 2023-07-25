@@ -1,13 +1,13 @@
-import { BannerContent } from "@lottuseducation/design_system";
+import BannerContent from "../components/BannerContent";
 export default {
   title: "BannerContent",
   component: BannerContent,
   tags: ["autodocs"],
   args: {
     title: "Demo BannerContent",
-    text: "content demo",
+    content: "content demo",
     contentVariant: "dark",
-    btn: {
+    button: {
       id: "banner-button",
       label: "button",
       variant: "primary",
@@ -19,9 +19,9 @@ export default {
   },
   args1: {
     title: "Demo BannerContent",
-    text: "<li>Example rich text</li>",
+    content: "<li>Example rich text</li>",
     contentVariant: "dark",
-    btn: {
+    button: {
       id: "banner-button",
       label: "button",
       variant: "primary",

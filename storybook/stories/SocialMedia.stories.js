@@ -1,11 +1,10 @@
-import { SocialMedia } from "@lottuseducation/design_system";
+import SocialMedia from "../components/SocialMedia";
 export default {
   title: "SocialMedia",
   component: SocialMedia,
   tags: ["autodocs"],
   args: {
-    className: "",
-    svgClass: "text-primary-600",
+    className: "text-primary-600",
     socialMedia: [
       {
         socialName: "instagram",

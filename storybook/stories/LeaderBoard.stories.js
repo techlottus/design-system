@@ -1,10 +1,16 @@
-import { LeaderBoard } from "@lottuseducation/design_system";
+import LeaderBoard from "../components/LeaderBoard";
+
+/** The LeaderBoard is a space reserved mainly for the closing or division of a page.
+
+It is used within the website in order to take users to another part of the same website and/or to add contacts from the section to the closing of the page.
+
+Generally it will be composed of background image, icons and text. */
 export default {
   title: "LeaderBoard",
   component: LeaderBoard,
   tags: ["autodocs"],
   args: {
-    imgUrl: "https://wallpapercave.com/wp/wp2951423.png",
+    imageUrl: "https://wallpapercave.com/wp/wp2951423.png",
     title: "Contacta con el área de Titulación",
     variant: "light",
     links: [
@@ -55,7 +61,7 @@ const Template = (args) => <LeaderBoard {...args} />;
 const Example = (_) => (
   <div>
     <LeaderBoard
-      imgUrl="https://wallpapercave.com/wp/wp2951423.png"
+      imageUrl="https://wallpapercave.com/wp/wp2951423.png"
       title="Contacta con el área de Titulación"
       variant="light"
       links={[
