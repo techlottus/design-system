@@ -7,7 +7,7 @@ import Accordion from "../Accordion";
 import { myhref } from "../helpers/myrefHelper";
 import { TextLinkConfig } from "../Types/TextLink.types";
 import { LogoType, LinkType, FooterType } from "../Types/Footer.types";
-
+import React from "react";
 const Footer: React.FC<FooterType> = (props: FooterType) => {
   const { logoUrl, newsletter, textLink, links, contact, certificates, legal } =
     props;

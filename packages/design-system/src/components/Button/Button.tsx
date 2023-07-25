@@ -1,7 +1,7 @@
 import cn from "classnames";
 import { ButtonSize, ButtonType, ButtonVariant } from "../Types/button.types";
 import Icon from "../Icon/Icon";
-
+import React from "react";
 const sizes: ButtonSize = {
   xsm: cn("px-4 py-3 text-sm rounded"),
   sm: cn("py-4 px-8 text-base rounded-lg"),

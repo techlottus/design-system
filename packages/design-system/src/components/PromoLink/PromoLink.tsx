@@ -5,7 +5,7 @@ import { getTextCount } from "../helpers/textHelper";
 import Aspect from "../Aspect";
 import Heading from "../Heading";
 import { PromoLinkConfig } from "../Types/PromoLink.types";
-
+import React from "react";
 const PromoLink = (props: PromoLinkConfig) => {
   const {
     text,

@@ -1,6 +1,6 @@
 import cn from "classnames";
 import { FontsType, HeadingType, VariantsType } from "../Types/Heading.types";
-
+import React from "react";
 const fonts: FontsType = {
   principal: cn("font-principal"),
   secondary: cn("font-secondary"),

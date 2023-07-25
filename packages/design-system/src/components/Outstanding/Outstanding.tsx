@@ -3,7 +3,7 @@ import Button from "../Button/Button";
 import Heading from "../Heading";
 import cn from "classnames";
 import { OutstandingType } from "../Types/Outstanding.types";
-
+import React from "react";
 const Outstanding: React.FC<OutstandingType> = (props: OutstandingType) => {
   const {
     imageUrl,

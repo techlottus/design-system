@@ -2,7 +2,7 @@ import Tab from "../Tab";
 import cn from "classnames";
 import { TabConfig, TabsConfig } from "../Types/Tabs.types";
 import { useState } from "react";
-
+import React from "react";
 const Tabs: React.FC<TabsConfig> = (props: TabsConfig) => {
   const { tabs, className = "" } = props;
 

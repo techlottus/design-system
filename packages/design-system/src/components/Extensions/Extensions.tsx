@@ -1,7 +1,7 @@
 import Icon from "../Icon";
 import cn from "classnames";
 import { ExtensionsType } from "../Types/Leaderboard.types";
-
+import React from "react";
 const Extensions: React.FC<ExtensionsType> = (props: ExtensionsType) => {
   const {
     variant = "",

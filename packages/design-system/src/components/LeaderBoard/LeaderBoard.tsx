@@ -7,7 +7,7 @@ import {
   LeaderboardType,
   LeaderboardTypeVariants,
 } from "../Types/Leaderboard.types";
-
+import React from "react";
 const variants: LeaderboardTypeVariants = {
   light: "text-neutral-100",
   dark: "text-neutral-900",

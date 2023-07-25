@@ -3,7 +3,7 @@ import Heading from "../Heading";
 import Icon from "../Icon";
 import SVGIcons from "../assets/SVGIcons";
 import { TabConfig } from "../Types/Tabs.types";
-
+import React from "react";
 const Tab: React.FC<TabConfig> = (props: TabConfig) => {
   const {
     label,

@@ -1,6 +1,6 @@
 import cn from "classnames";
 import { IconType } from "../Types/Icon.types";
-
+import React from "react";
 const Icon: React.FC<IconType> = (props: IconType) => {
   const { iconName, className = "", variant = "solid" } = props;
   return (

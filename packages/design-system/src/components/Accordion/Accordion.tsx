@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import AccordionItem from "../AccordionItem/AccordionItem";
 import { AccordionItemType, AccordionType } from "../Types/Accordion.types";
 

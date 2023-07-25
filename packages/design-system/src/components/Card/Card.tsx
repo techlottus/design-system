@@ -4,7 +4,7 @@ import Aspect from "../Aspect";
 import { myhref } from "../helpers/myrefHelper";
 import Heading from "../Heading";
 import { CardType } from "../Types/Card.types";
-
+import React from "react";
 const Card: React.FC<CardType> = (props: CardType) => {
   const {
     imageUrl,

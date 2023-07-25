@@ -2,15 +2,15 @@ import Aspect from "../Aspect";
 import Heading from "../Heading";
 import cn from "classnames";
 import { RainbowItems, RainbowConfig } from "../Types/Rainbow.types";
-
+import React from "react";
 const Rainbow: React.FC<RainbowConfig> = (props: RainbowConfig) => {
   const { items, background } = props;
   return (
-    <div className="flex w-full h-full relative ">
+    <div className={cn("flex w-full h-full relative ", background)}>
       <div
         className={cn(
-          "lg:w-3/4 w-full overflow-visible flex h-full absolute",
-          background
+          background,
+          "lg:w-3/4 w-full overflow-visible flex h-full absolute"
         )}
       ></div>
       <div className="z-10 w-full  h-full left-0 top-0 py-12 lg:space-y-6 md:space-y-12 space-y-6">

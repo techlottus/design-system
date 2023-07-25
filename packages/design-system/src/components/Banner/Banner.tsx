@@ -2,6 +2,7 @@ import Aspect from "../Aspect";
 import BannerContent from "../BannerContent";
 import { BannerType } from "../Types/Banner.types";
 import cn from "classnames";
+import React from "react";
 
 const Banner: React.FC<BannerType> = (props: BannerType) => {
   const {

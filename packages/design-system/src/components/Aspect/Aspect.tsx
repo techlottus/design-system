@@ -1,5 +1,6 @@
 import { AspectType, PaddingsType } from "../Types/Aspect.types";
 import { calculateAspectRatioPercentage } from "../helpers/calculateAspectPer";
+import React from "react";
 
 const defaultRatioPercentage: string = "50%";
 const fractionRegex: RegExp = /([1-9][0-9]*(.[0-9]*)?)\/[1-9][0-9]*(.[0-9]*)?/g;

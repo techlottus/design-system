@@ -2,7 +2,7 @@ import cn from "classnames";
 import Icon from "../Icon";
 import { useState } from "react";
 import { IconPosition, TextLinkConfig } from "../Types/TextLink.types";
-
+import React from "react";
 
 const iconPositions: IconPosition = {
   right: "flex",

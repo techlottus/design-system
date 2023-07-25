@@ -2,7 +2,7 @@ import { myhref } from "../helpers/myrefHelper";
 import cn from "classnames";
 import SVGIcons from "../assets/SVGIcons";
 import { SocialMediaConfig, socialMediaItem } from "../Types/SocialMedia.types";
-
+import React from "react";
 const smClass = cn("cursor-pointer ");
 
 const SocialMedia: React.FC<SocialMediaConfig> = (props: SocialMediaConfig) => {

@@ -9,7 +9,7 @@ import Icon from "../Icon/Icon";
 import Button from "../Button/Button";
 import { menuAnimation } from "../assets/lotties/menu";
 import { MenuElementType, MenuItemsTypes, MenuType } from "../Types/Menu.types";
-
+import React from "react";
 const Menu: React.FC<MenuType> = (props: MenuType) => {
   const { data, languages = false, button } = props;
   //hooks
