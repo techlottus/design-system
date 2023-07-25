@@ -33,8 +33,11 @@ export interface SubMenuClassesType {
 }
 
 export interface MenuType {
+  /** Data array  */
   data: DataType;
+  /** To include languages section */
   languages: boolean;
+  /** cta */
   button: ButtonType;
 }
 

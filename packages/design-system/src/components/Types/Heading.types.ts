@@ -12,8 +12,12 @@ export interface VariantsType {
 }
 
 export interface HeadingType {
+  /** Title content */
   title?: string;
+  /** Variant size/weight */
   variant?: "h-1" | "h-2" | "h-3" | "h-4" | "h-5" | "h-6";
+  /** Font family token */
   font?: "principal" | "secondary";
+  /** Prop for extra tailwind classes */
   className?: string;
 }

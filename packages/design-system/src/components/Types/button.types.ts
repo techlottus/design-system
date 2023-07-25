@@ -1,10 +1,17 @@
 export interface ButtonType {
+  /** Prop for extra tailwind classes */
   className?: string;
+  /** Name of icon */
   iconName?: string;
+  /** Button label */
   label?: string;
+  /** To indicates if button is disabled */
   disabled?: boolean;
+  /** Size of Button */
   size?: "xsm" | "sm" | "md" | "lg";
+  /** Button variants */
   variant?: "primary" | "outlined" | "text" | "outlined-negative";
+  /** Onclick function */
   onClick?: () => void;
 }
 

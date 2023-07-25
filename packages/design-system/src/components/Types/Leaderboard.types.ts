@@ -2,10 +2,15 @@ import { IconType } from "./Icon.types";
 import { ButtonType } from "./button.types";
 
 export interface LeaderboardType {
+  /** src route for brackground image (requiered) */
   imageUrl: string;
+  /** Leaderboard Title */
   title?: string;
+  /** Image overlay */
   variant?: "dark" | "light";
+  /** Links and extensions eg. email, phone number, web site ... */
   links?: ExtensionsType[];
+  /** CTA */
   button?: ButtonType;
 }
 
