@@ -3,8 +3,8 @@ import { TextLinkConfig } from "./TextLink.types";
 export interface CardType {
   /** Src route for image (requiered) */
   imageUrl: string;
-  /** Text content of card */
-  content?: string;
+  /** Text content of card (requiered)*/
+  content: string;
   /** Subtitle content */
   subtitle?: string;
   /** Title of card */

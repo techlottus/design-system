@@ -13,7 +13,7 @@ const Card: React.FC<CardType> = (props: CardType) => {
     title,
     textLink,
     orientation = "horizontal",
-    ImageAspectRatio = "2/1",
+    imageAspectRatio = "2/1",
     className = "",
   } = props;
   /** classes for text in textlink */
@@ -77,7 +77,7 @@ const Card: React.FC<CardType> = (props: CardType) => {
           </div>
         ) : (
           /** when is vertical, image receive an aspect ratio */ <Aspect
-            ratio={ImageAspectRatio}
+            ratio={imageAspectRatio}
           >
             <div id="image" className="w-full h-full ">
               <img
