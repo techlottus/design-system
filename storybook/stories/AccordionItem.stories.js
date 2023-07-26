@@ -1,4 +1,4 @@
-import { AccordionItem } from "@lottuseducation/design_system";
+import AccordionItem from "../components/AccordionItem";
 
 export default {
   title: "AccordionItem",
@@ -10,14 +10,17 @@ export default {
       {
         text: "content",
         link: "https://www.deepl.com/es/translator",
-        iconHoriz: true,
+        icon: { iconName: "home", variant: "solid" },
       },
-      { text: "content" },
+      {
+        text: "content",
+        link: "https://www.deepl.com/es/translator",
+      },
     ],
     icon: { iconName: "people", type: "outlined" },
     text: "texto",
     open: false,
-    className: "border-b border-neutral-400",
+    className: "",
   },
 };
 

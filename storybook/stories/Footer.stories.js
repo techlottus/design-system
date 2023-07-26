@@ -1,4 +1,9 @@
-import { Footer } from "@lottuseducation/design_system";
+import Footer from "../components/Footer";
+/** The footer is the lower part of a web page, which includes a series of elements that may be of interest to the user browsing it, such as links to the main categories, contact information, social networks or links to legal texts.
+ * Some main features:
+ * * The footer is clearly identified and differentiated from the rest of the website, either through typography, background color or the presence of dividing elements. It must be very clear where it begins and ends at a glance.
+ * * The footer contains a number of key informational elements, such as contact and copyright information, and links to secondary pages related to the site, such as social media channels or legal notices.
+ * * The footer is a permanent element of the site, that is, it is the same on all pages of the site (and, logically, it should be present on all of them). */
 export default {
   title: "Footer",
   component: Footer,

@@ -1,4 +1,5 @@
-import { Tab } from "@lottuseducation/design_system";
+import Tab from "../components/Tab";
+/** The Tab component is used to allow the user to navigate through one or several tabs, which will display information underneath. The component can expand automatically according to the amount of text that is embedded in it.  */
 export default {
   title: "Tab",
   component: Tab,
@@ -8,17 +9,14 @@ export default {
     active: true,
     iconName: "home",
     isFirst: true,
-    className: "rounded-full py-0 3",
+    className: "",
   },
 };
 
 const Template = (args) => <Tab {...args} />;
-const Tabs = (args) => (
+const Tabs = () => (
   <div className="flex flex-row ">
-    <Tab label="label1" active={false} isFirst />
-    <Tab {...args} />
-    <Tab label="label2" active={false} />
-    <Tab label="label3" active={false} />
+    <Tab label="label1" active={true} className="rounded-full py-0 3" />
   </div>
 );
 

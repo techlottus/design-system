@@ -1,4 +1,4 @@
-import { Heading } from "@lottuseducation/design_system";
+import Heading from "../components/Heading";
 export default {
   title: "Heading",
   component: Heading,

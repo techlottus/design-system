@@ -1,5 +1,7 @@
-import { Card } from "@lottuseducation/design_system";
-import { Heading } from "@lottuseducation/design_system";
+import Card from "../components/Card";
+/** 
+Cards are surfaces that display content and actions on a single topic.
+They should be easy to scan for relevant and actionable information. Elements, such as text and images, should be placed on them in a way that clearly indicates hierarchy. */
 export default {
   title: "Card",
   component: Card,
@@ -50,57 +52,19 @@ export default {
 const Template = (args) => <Card {...args} />;
 const Row = (args1) => (
   <div>
-    <div className="py-4">
-      <Heading
-        title="Card adapt their size depending on the highest card."
-        variant="h-5"
-        font="primary"
-      />
-    </div>
     <div className="flex flex-row space-x-4">
       <Card {...args1} />
       <Card {...args1} />
       <Card {...args1} />
-      <Card
-        imageUrl="https://wallpapercave.com/wp/wp2599594.jpg"
-        textLink={{
-          text: "Ver más",
-          route: "https://jonsuh.com/hamburgers/",
-        }}
-        subtitle="subtitle"
-        content="Demo Card Demo Card Demo Card"
-        title="Demo Card"
-        orientation="vertical"
-        imageAspectRatio="2/1"
-      />
     </div>
   </div>
 );
 const Column = (args2) => (
   <div>
-    <div className="py-4 bg-neutral-900">
-      <Heading
-        title="The Card component adapts its size depending on the width of the container."
-        variant="h-5"
-        font="primary"
-      />
-    </div>
     <div className="flex flex-col space-y-4 w-1/2 border p-2">
       <Card {...args2} />
       <Card {...args2} />
       <Card {...args2} />
-      <Card
-        imageUrl="https://wallpapercave.com/wp/wp2599594.jpg"
-        textLink={{
-          text: "Ver más",
-          route: "https://jonsuh.com/hamburgers/",
-        }}
-        subtitle="subtitle"
-        content="Demo Card Demo Card Demo Card"
-        title="Demo Card"
-        orientation="horizontal"
-        imageAspectRatio="2/1"
-      />
     </div>
   </div>
 );

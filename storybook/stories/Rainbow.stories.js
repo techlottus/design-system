@@ -1,4 +1,4 @@
-import { Rainbow } from "@lottuseducation/design_system";
+import Rainbow from "../components/Rainbow";
 export default {
   title: "Rainbow",
   component: Rainbow,
@@ -24,15 +24,15 @@ export default {
           "Al ingresar a la Licenciatura en Administración el aspitante deberá tener una alta orientación a los negocios y las siguientes características: Pensamiento innovador y analítico enfocado a resultados. Adaptación a los cambios. Facilidad de palabra, liderazgo y gusto por formar y dirigir equipos de trabajo de alto desempeño. ",
       },
     ],
-    background: "bg-oustanding-100",
+    background: "bg-outstanding-100",
   },
   argTypes: {
     background: {
       options: [
-        "bg-oustanding-100",
-        "bg-oustanding-200",
-        "bg-oustanding-300",
-        "bg-oustanding-400",
+        "bg-outstanding-100",
+        "bg-outstanding-200",
+        "bg-outstanding-300",
+        "bg-outstanding-400",
       ],
       control: { type: "select" },
     },
@@ -64,7 +64,7 @@ const Example = (args) => (
             "Al ingresar a la Licenciatura en Administración el aspitante deberá tener una alta orientación a los negocios y las siguientes características: Pensamiento innovador y analítico enfocado a resultados. Adaptación a los cambios. Facilidad de palabra, liderazgo y gusto por formar y dirigir equipos de trabajo de alto desempeño. ",
         },
       ]}
-      background="bg-oustanding-100"
+      background="bg-outstanding-200"
     />
     <Rainbow
       items={[
@@ -87,7 +87,7 @@ const Example = (args) => (
             "Al ingresar a la Licenciatura en Administración el aspitante deberá tener una alta orientación a los negocios y las siguientes características: Pensamiento innovador y analítico enfocado a resultados. Adaptación a los cambios. Facilidad de palabra, liderazgo y gusto por formar y dirigir equipos de trabajo de alto desempeño. ",
         },
       ]}
-      background="bg-oustanding-200"
+      background="bg-outstanding-300"
     />
     <Rainbow
       items={[
@@ -110,7 +110,7 @@ const Example = (args) => (
             "Al ingresar a la Licenciatura en Administración el aspitante deberá tener una alta orientación a los negocios y las siguientes características: Pensamiento innovador y analítico enfocado a resultados. Adaptación a los cambios. Facilidad de palabra, liderazgo y gusto por formar y dirigir equipos de trabajo de alto desempeño. ",
         },
       ]}
-      background="bg-oustanding-300"
+      background="bg-outstanding-400"
     />
   </div>
 );
