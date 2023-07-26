@@ -32,7 +32,6 @@
   "dependencies": {
     "@babel/preset-typescript": "^7.22.5",
     "@lottuseducation/carousel": "file:../packages/carousel/lottuseducation-carousel-v1.6.0.tgz",
-    "@lottuseducation/design_system": "file:../packages/design-system/lottuseducation-design_system-v1.10.0-alpha.0.tgz",
     "@lottuseducation/numbers": "^1.6.0-alpha.0",
     "@lottuseducation/slider": "file:../packages/slider/lottuseducation-slider-v1.6.0-alpha.0.tgz",
     "@lottuseducation/tailwind-base": "file:../packages/tailwind-base/lottuseducation-tailwind-base-v1.9.0-alpha.0.tgz",
