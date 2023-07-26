@@ -35,8 +35,8 @@ const AccordionItem: React.FC<AccordionItemType> = (
       <div
         id="accordion-item-title"
         className={cn(
-          className,
           "border border-neutral-400 flex flex-1 items-start py-6 px-4 cursor-pointer border-b-0",
+          className,
 
           {
             ["bg-neutral-200"]: open || isOpen,
