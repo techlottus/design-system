@@ -61,5 +61,5 @@ export interface BannerType {
     | "right-middle"
     | "right-bottom";
   /** For extra tailwind classes  */
-  className: string;
+  className?: string;
 }

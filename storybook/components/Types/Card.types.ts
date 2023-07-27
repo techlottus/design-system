@@ -16,5 +16,5 @@ export interface CardType {
   /** Aspect ratio for vartical card */
   imageAspectRatio?: string;
   /** Prop for extra tailwind classes */
-  className: string;
+  className?: string;
 }
