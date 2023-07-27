@@ -42,10 +42,10 @@
     "postcss": "^8.4.24",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storybook": "^7.0.18"
+    "storybook": "^7.0.18",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
-    "@babel/preset-typescript": "^7.22.5",
     "@babel/cli": "^7.21.0",
     "@babel/plugin-transform-react-jsx": "^7.21.0",
     "@babel/preset-env": "^7.21.4",
