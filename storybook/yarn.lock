@@ -1598,7 +1598,7 @@
     remark-slug "^6.0.0"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-essentials@^7.0.18":
+"@storybook/addon-essentials@^7.1.1":
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/@storybook/addon-essentials/-/addon-essentials-7.1.1.tgz#f90c42596fd8f13d21b8693c8497f18b0b7ba0d7"
   integrity sha512-eCty+Q7zBjkBbaJ0HaM/UaXxJ+77uKBtEc9g+hLZFqga50auPCfCcqjnqNnxkTmewkJomx3N91BJUJJzVPUlJA==
@@ -1627,7 +1627,7 @@
     "@storybook/global" "^5.0.0"
     "@storybook/preview-api" "7.1.1"
 
-"@storybook/addon-interactions@^7.0.18":
+"@storybook/addon-interactions@^7.1.1":
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/@storybook/addon-interactions/-/addon-interactions-7.1.1.tgz#618a52186a47da556e62ea3a7d1132571ed728db"
   integrity sha512-6xPDKkt0gi2aqFBFtMyWx09lEF8+o3Q+te+VY4mdJztKgHAllKvlc27jqAFYMHicG6XWio2VBZGUSrSTDOQ9IA==
@@ -1646,7 +1646,7 @@
     polished "^4.2.2"
     ts-dedent "^2.2.0"
 
-"@storybook/addon-links@^7.0.18":
+"@storybook/addon-links@^7.1.1":
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-7.1.1.tgz#f53b52464b18663355936ad6b4510b2ee2caaf97"
   integrity sha512-cdc2OQj1LZkEd2dlaAc3Fp4TAHwLmnHKko/Aet3Dhm6TqH/C6UsSflZJbLXmV06x2f/Tm5UK0QQxPHBmOE7aXw==
@@ -2411,7 +2411,7 @@
   resolved "https://registry.npmjs.org/@storybook/react-dom-shim/-/react-dom-shim-7.1.1.tgz"
   integrity sha512-yfc0tCtg+OEfvOKwCF0+E0ot8XGpubMTpbfChahhzEYyI9zz1rA7OCwRzERMnX/C7TYW3aLab9f5MzWIKQClmQ==
 
-"@storybook/react-webpack5@^7.0.18":
+"@storybook/react-webpack5@^7.1.1":
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/@storybook/react-webpack5/-/react-webpack5-7.1.1.tgz#8f496ac1b5985270441ce3ce26375f3014d2e5dc"
   integrity sha512-iTliWdmqSXw5wz/iHefr7yKhI7rko8oN5JUfkYlZafqk7M3mXy0wamLgFcrOncnBcY2UNPX1oEAiLJBKSy9ulA==
@@ -7637,6 +7637,7 @@ stream-shift@^1.0.0:
   integrity sha512-AiisoFqQ0vbGcZgQPY1cdP2I76glaVA/RauYR4G4thNFgkTqr90yXTo4LYX60Jl+sIlPNHHdGSwo01AvbKUSVQ==
 
 "string-width-cjs@npm:string-width@^4.2.0", "string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -7662,6 +7663,7 @@ string_decoder@^1.1.1, string_decoder@~1.1.1:
     safe-buffer "~5.1.0"
 
 "strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+  name strip-ansi-cjs
   version "6.0.1"
   resolved "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
@@ -8324,6 +8326,7 @@ wordwrap@~0.0.2:
   integrity sha512-1tMA907+V4QmxV7dbRvb4/8MaRALK6q9Abid3ndMYnbyo8piisCmeONVqVSXqQA3KaP4SLt5b7ud6E2sqP8TFw==
 
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
+  name wrap-ansi-cjs
   version "7.0.0"
   resolved "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
