@@ -23,7 +23,7 @@
   },
   "scripts": {
     "test": "node ./__tests__/storybook.test.js",
-    "storybook": " storybook dev -p 6006",
+    "storybook": " rm  -r ./components/  && cp -r ../packages/design-system/src/components/ ./components && storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "bugs": {
