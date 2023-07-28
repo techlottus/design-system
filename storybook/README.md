@@ -1,11 +1,9 @@
 # `storybook`
 
-> TODO: description
+> Storybook documentation
 
 ## Usage
 
 ```
-const storybook = require('storybook');
-
-// TODO: DEMONSTRATE API
+run command npm run storybook
 ```
