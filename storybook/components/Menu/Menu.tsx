@@ -7,7 +7,7 @@ import TextLink from "../TextLink";
 import MenuMobile from "../MenuMobile";
 import Icon from "../Icon/Icon";
 import Button from "../Button/Button";
-import { menuAnimation } from "../assets/lotties/menu";
+import { menuAnimation } from "./menu";
 import { MenuElementType, MenuItemsTypes, MenuType } from "../Types/Menu.types";
 import React from "react";
 const Menu: React.FC<MenuType> = (props: MenuType) => {
