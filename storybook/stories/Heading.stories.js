@@ -1,27 +1,22 @@
-import { Heading } from "@lottuseducation/design_system";
+import Heading from "../components/Heading";
 export default {
   title: "Heading",
   component: Heading,
   tags: ["autodocs"],
   args: {
     title: "Demo Heading",
-    type: "h-1",
-    variant: "normal",
+    variant: "h-1",
     font: "principal",
     className: "",
   },
   argTypes: {
-    type: {
-      options: ["h-1", "h-2", "h-3", "h-4", "h-5", "h-6"],
-      control: { type: "select" },
-    },
     variant: {
-      options: ["normal", "primary", "negative"],
+      options: ["h-1", "h-2", "h-3", "h-4", "h-5", "h-6"],
       control: { type: "select" },
     },
     font: {
       options: ["principal", "secondary"],
-      control: { type: "radio" },
+      control: { type: "select" },
     },
   },
 };

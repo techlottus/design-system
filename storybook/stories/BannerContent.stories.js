@@ -1,13 +1,18 @@
-import { BannerContent } from "@lottuseducation/design_system";
+import BannerContent from "../components/BannerContent";
+/** The banner is a space reserved for advertising on a web page, in the form of an image. By clicking on this image, the user is redirected to a web page or landing page. 
+
+It is used within the website in order to take users to another part of the same website and/or to advertise an offer; or it can also appear on a different website, redirecting to the website that advertises the service/product. 
+
+Generally it will be composed of image, text and button (CTA). */
 export default {
   title: "BannerContent",
   component: BannerContent,
   tags: ["autodocs"],
   args: {
     title: "Demo BannerContent",
-    text: "content demo",
+    content: "content demo",
     contentVariant: "dark",
-    btn: {
+    button: {
       id: "banner-button",
       label: "button",
       variant: "primary",
@@ -19,9 +24,9 @@ export default {
   },
   args1: {
     title: "Demo BannerContent",
-    text: "<li>Example rich text</li>",
+    content: "<li>Example rich text</li>",
     contentVariant: "dark",
-    btn: {
+    button: {
       id: "banner-button",
       label: "button",
       variant: "primary",
@@ -61,9 +66,9 @@ const Template2 = (args2) => (
   <BannerContent
     {...{
       title: "Demo BannerContent",
-      text: "<li>Example rich text</li>",
+      content: "<li>Example rich text</li>",
       contentVariant: "dark",
-      btn: {
+      button: {
         id: "banner-button",
         label: "button",
         variant: "primary",

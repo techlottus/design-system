@@ -1,4 +1,7 @@
-import { Outstanding } from "@lottuseducation/design_system";
+import Outstanding from "../components/Outstanding";
+/** The Outstanding component is used so that the user can visualize modular content that as a whole belongs to a category.
+It is often used as a display of tab information, but it is not mandatory to use it only with tabs.
+It is important to consider the maximum number of characters for this component, as well as the suggested use of silhouetted images.  */
 export default {
   title: "Outstanding",
   component: Outstanding,
@@ -7,8 +10,8 @@ export default {
     imageUrl:
       "https://www.smatbot.com/blog/wp-content/uploads/2018/02/Hi-Animation-without-background-.gif",
     title: "Perfil de ingreso",
-    imgPosition: "right",
-    backgroundColor: "color1",
+    imagePosition: "right",
+    background: "bg-outstanding-100",
     button: {
       id: "cta-outstanding",
       label: "cta2",
@@ -17,23 +20,20 @@ export default {
         console.log("cta");
       },
     },
-    paragraph:
+    content:
       "Al ingresar a la Licenciatura en Administración el aspitante deberá tener una alta orientación a los negocios y las siguientes características: Pensamiento innovador y analítico enfocado a resultados. Adaptación a los cambios. Facilidad de palabra, liderazgo y gusto por formar y dirigir equipos de trabajo de alto desempeño. ",
   },
   argTypes: {
-    imgPosition: {
+    imagePosition: {
       options: ["right", "left"],
       control: { type: "select" },
     },
-    backgroundColor: {
+    background: {
       options: [
-        "color1",
-        "color2",
-        "color3",
-        "color4",
-        "color5",
-        "color6",
-        "color7",
+        "bg-outstanding-100",
+        "bg-outstanding-200",
+        "bg-outstanding-300",
+        "bg-outstanding-400",
       ],
       control: { type: "select" },
     },
@@ -47,23 +47,23 @@ const Example = (args) => (
     <Outstanding
       imageUrl="https://i.pinimg.com/originals/a9/9c/4c/a99c4cd4909df248ba1fb82b4aaf6491.gif"
       title="Perfil de ingreso"
-      imgPosition="left"
-      backgroundColor="color2"
-      paragraph="Al ingresar a la Licenciatura en Administración el aspitante deberá tener una alta orientación a los negocios y las siguientes características: Pensamiento innovador y analítico enfocado a resultados. Adaptación a los cambios. Facilidad de palabra, liderazgo y gusto por formar y dirigir equipos de trabajo de alto desempeño. "
+      imagePosition="left"
+      background="bg-outstanding-200"
+      content="Al ingresar a la Licenciatura en Administración el aspitante deberá tener una alta orientación a los negocios y las siguientes características: Pensamiento innovador y analítico enfocado a resultados. Adaptación a los cambios. Facilidad de palabra, liderazgo y gusto por formar y dirigir equipos de trabajo de alto desempeño. "
     />
     <Outstanding
       imageUrl="https://4.bp.blogspot.com/-hmXUzTYrZpA/UMC-Yn9eICI/AAAAAAAAF3o/bnVspkeWgJ0/s1600/katt09_jan_2012.gif"
       title="Perfil de ingreso"
-      imgPosition="right"
-      backgroundColor="color3"
-      paragraph="Al ingresar a la Licenciatura en Administración el aspitante deberá tener una alta orientación a los negocios y las siguientes características: Pensamiento innovador y analítico enfocado a resultados. Adaptación a los cambios. Facilidad de palabra, liderazgo y gusto por formar y dirigir equipos de trabajo de alto desempeño. "
+      imagePosition="right"
+      background="bg-outstanding-300"
+      content="Al ingresar a la Licenciatura en Administración el aspitante deberá tener una alta orientación a los negocios y las siguientes características: Pensamiento innovador y analítico enfocado a resultados. Adaptación a los cambios. Facilidad de palabra, liderazgo y gusto por formar y dirigir equipos de trabajo de alto desempeño. "
     />
     <Outstanding
       imageUrl="https://pngimg.com/uploads/crowd/crowd_PNG44.png"
       title="Perfil de ingreso"
-      imgPosition="left"
+      imagePosition="left"
       backgroundColor="color4"
-      paragraph="Al ingresar a la Licenciatura en Administración el aspitante deberá tener una alta orientación a los negocios y las siguientes características: Pensamiento innovador y analítico enfocado a resultados. Adaptación a los cambios. Facilidad de palabra, liderazgo y gusto por formar y dirigir equipos de trabajo de alto desempeño. "
+      content="Al ingresar a la Licenciatura en Administración el aspitante deberá tener una alta orientación a los negocios y las siguientes características: Pensamiento innovador y analítico enfocado a resultados. Adaptación a los cambios. Facilidad de palabra, liderazgo y gusto por formar y dirigir equipos de trabajo de alto desempeño. "
     />
   </div>
 );

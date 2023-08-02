@@ -1,4 +1,4 @@
-import { TextLink } from "@lottuseducation/design_system";
+import TextLink from "../components/TextLink";
 export default {
   title: "TextLink",
   component: TextLink,

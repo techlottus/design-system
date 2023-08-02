@@ -1,25 +1,26 @@
-import { AccordionItem } from "@lottuseducation/design_system";
+import AccordionItem from "../components/AccordionItem";
 
 export default {
   title: "AccordionItem",
   component: AccordionItem,
   tags: ["autodocs"],
   args: {
-    data: {
-      title: "Item 1",
-      content: [
-        {
-          text: "content",
-          link: "https://www.deepl.com/es/translator",
-          iconHoriz: true,
-        },
-        { text: "content" },
-      ],
-      icon: { iconName: "people", type: "outlined" },
-      text: "texto",
-    },
-    open: true,
-    borderDownOn: true,
+    title: "Item 1",
+    content: [
+      {
+        text: "content",
+        link: "https://www.deepl.com/es/translator",
+        icon: { iconName: "home", variant: "solid" },
+      },
+      {
+        text: "content",
+        link: "https://www.deepl.com/es/translator",
+      },
+    ],
+    icon: { iconName: "people", type: "outlined" },
+    text: "texto",
+    open: false,
+    className: "",
   },
 };
 

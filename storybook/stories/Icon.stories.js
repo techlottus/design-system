@@ -1,4 +1,4 @@
-import { Icon } from "@lottuseducation/design_system";
+import Icon from "../components/Icon";
 export default {
   title: "Icon",
   component: Icon,
@@ -8,7 +8,7 @@ export default {
     className: "",
   },
   argTypes: {
-    type: {
+    variant: {
       options: ["solid", "outlined"],
       control: { type: "radio" },
     },
