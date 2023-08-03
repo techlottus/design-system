@@ -1,11 +1,12 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useIntersectionObserver } from "../Hooks/useIntersectionObserver";
+import { CounterType } from "../types/Counter.types";
 
-const Counter = ({ maxNumber }: any) => {
+const Counter:React.FC<CounterType>= ({ maxNumber }:CounterType ) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const entry = useIntersectionObserver(containerRef, {});
   const isVisible = !!entry?.isIntersecting;
-  const [hasEnteredViewport, setHasEnteredViewport] = useState(false);
+  const [hasEnteredViewport, setHasEnteredViewport] = useState<boolean>(false);
   const [count, setCount] = useState<number>(0);
 
   useEffect(() => {
@@ -14,7 +15,7 @@ const Counter = ({ maxNumber }: any) => {
     counter(0, maxNumber);
   }, [isVisible, hasEnteredViewport]);
 
-  const counter = (minimum: any, maximum: any) => {
+  const counter = (minimum: number, maximum: number) => {
     for (let i = minimum; i <= maximum; i++) {
       setTimeout(() => {
         setCount(i);
