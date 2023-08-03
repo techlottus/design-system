@@ -1,16 +1,12 @@
 import { Aspect } from "@lottuseducation/design_system";
-import { useState } from "react";
+import React, { useState } from "react";
 import cn from "classnames";
 import SliderContent from "../SliderContent";
 
 import { useKeenSlider } from "keen-slider/react";
+import { SlideType, SliderType } from "../types/Slider.types";
 
-const sliderImageStyles: any = {
-  dark: { filter: "brightness(0.5)" },
-  light: { opacity: "0.5" },
-};
-
-const Slider = (props: any) => {
+const Slider: React.FC<SliderType> = (props: SliderType) => {
   const { slides } = props;
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [loaded, setLoaded] = useState<boolean>(false);
@@ -38,7 +34,7 @@ const Slider = (props: any) => {
     },
   });
 
-  const activeBulletSlide = (position: any) => {
+  const activeBulletSlide = (position: number) => {
     instanceRef.current?.moveToIdx(position);
   };
 
@@ -46,46 +42,42 @@ const Slider = (props: any) => {
     <section className="flex flex-col relative w-full my-6">
       <section className="w-full  mx-auto">
         <div ref={sliderRef} className="keen-slider">
-          {slides.map((slide: any, i: any) => (
+          {slides.map((slide: SlideType, i: number) => (
             <section key={`slide-item-${i}`}>
               <div className="keen-slider__slide">
                 <div className="flex w-full hidden md:flex ">
                   <Aspect ratio="2/1">
                     <img
-                      style={sliderImageStyles[slide?.overlay]}
-                      className="w-full h-full object-cover object-center"
-                      src={slide?.url}
+                      className={cn(
+                        "w-full h-full object-cover object-center",
+                        {
+                          ["opacity-50"]: slide?.overlay === "light",
+                          ["brightness-50"]: slide?.overlay === "dark",
+                        }
+                      )}
+                      src={slide?.imageUrl}
                       alt="slider-img"
                     />
                     <div className="absolute w-full h-full top-0 left-0 ">
-                      <SliderContent
-                        title={slide?.title}
-                        text={slide?.text}
-                        btn={slide?.btn}
-                        contentVariant={slide?.contentVariant}
-                        position={slide?.position}
-                        className={slide?.className}
-                      />
+                      <SliderContent {...slide} />
                     </div>
                   </Aspect>
                 </div>
                 <div className="md:hidden flex flex-col px-6 w-full ">
                   <Aspect ratio="1/1">
                     <img
-                      style={sliderImageStyles[slide?.overlay]}
-                      className="w-full h-full object-cover object-center"
-                      src={slide?.url}
+                      className={cn(
+                        "w-full h-full object-cover object-center",
+                        {
+                          ["opacity-50"]: slide?.overlay === "light",
+                          ["brightness-50"]: slide?.overlay === "dark",
+                        }
+                      )}
+                      src={slide?.imageUrl}
                       alt="slider-img"
                     />
                   </Aspect>
-                  <SliderContent
-                    title={slide?.title}
-                    text={slide?.text}
-                    btn={slide?.btn}
-                    contentVariant={slide?.contentVariant}
-                    position={slide?.position}
-                    className={slide?.className}
-                  />
+                  <SliderContent {...slide} />
                 </div>
               </div>
             </section>
@@ -128,7 +120,7 @@ const Slider = (props: any) => {
               "w-full flex justify-center gap-2 pt-6  absolute bottom-0 "
             )}
           >
-            {slides.map((_: any, i: any) => (
+            {slides.map((_: SlideType, i: number) => (
               <div
                 key={`bullet-item-${i}`}
                 onClick={() => activeBulletSlide(i)}

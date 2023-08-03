@@ -1,4 +1,3 @@
-import cn from "classnames";
 import { Heading } from "@lottuseducation/design_system";
 import { Button } from "@lottuseducation/design_system";
 import {
@@ -6,26 +5,21 @@ import {
   getClassBannerPositionButton,
 } from "@lottuseducation/design_system";
 import { getTextCount } from "@lottuseducation/design_system";
+import React from "react";
+import { SliderContentType } from "../types/Slider.types";
 
-const defaultValues = {
-  contentVariant: "dark",
-  position: "left-top",
-  className: "",
-};
-
-const SliderContent = (props: any) => {
+const SliderContent: React.FC<SliderContentType> = (
+  props: SliderContentType
+) => {
   const {
     title,
-    text,
-    btn,
-    contentVariant = defaultValues.contentVariant,
-    position = defaultValues.position,
-    className = defaultValues.className,
+    content,
+    button,
+    contentVariant = "dark",
+    position = "left-top",
+    className = "",
   } = props;
-  const textColor: any = cn("pb-4 font-secondary", {
-    ["text-neutral-100"]: contentVariant === "light",
-    ["text-neutral-800"]: contentVariant === "dark",
-  });
+
   return (
     <div className={className}>
       <div
@@ -33,41 +27,36 @@ const SliderContent = (props: any) => {
         className={getPositionSliderContainerText(position)}
       >
         <div className="w-3/5">
-          {title ? (
-            <div className={textColor}>
+          {title && (
+            <div>
               <Heading
                 title={getTextCount(title, 53)}
-                type="h-3"
+                variant="h-3"
                 font="secondary"
                 className="font-semibold"
               />
             </div>
-          ) : (
-            ""
           )}
-          {text ? (
-            <div className={textColor}>
+          {content && (
+            <div>
               <Heading
-                title={getTextCount(text, 132)}
-                type="h-6"
+                title={getTextCount(content, 132)}
+                variant="h-6"
                 font="secondary"
               />
             </div>
-          ) : (
-            ""
           )}
-          {btn ? (
+          {button && (
             <div className={getClassBannerPositionButton(position)}>
               <Button
+                id="button"
+                label={button.label}
                 variant={
                   contentVariant === "light" ? "outlined-negative" : "primary"
                 }
                 size="sm"
-                {...btn}
               />
             </div>
-          ) : (
-            ""
           )}
         </div>
       </div>
@@ -76,23 +65,21 @@ const SliderContent = (props: any) => {
         className="w-full h-full flex flex-col md:hidden "
       >
         <div className="py-4 text-neutral-800">
-          <Heading title={title} type="h-3" font="secondary" />
+          <Heading title={title} variant="h-3" font="secondary" />
         </div>
         <div className="pb-4 text-neutral-800 font-secondary">
-          <Heading title={text} type="h-6" font="secondary" />
+          <Heading title={content} variant="h-6" font="secondary" />
         </div>
-        {btn ? (
+        {button && (
           <div className="pb-4 font-secondary">
             <Button
-              label={btn?.label}
+              id="btn-slider"
+              label={button?.label}
               variant="primary"
               size="sm"
               className="min-w-full flex justify-center"
-              {...btn}
             />
           </div>
-        ) : (
-          ""
         )}
       </div>
     </div>
