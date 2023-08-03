@@ -1,6 +1,4 @@
-import React from "react";
-
-import { Aspect } from "@lottuseducation/design_system";
+import Aspect from "../components/Aspect";
 export default {
   title: "Aspect",
   component: Aspect,

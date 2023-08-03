@@ -1,4 +1,4 @@
-import { Breadcrumb } from "@lottuseducation/design_system";
+import Breadcrumb from "../components/Breadcrumb";
 export default {
   title: "Breadcrumb",
   component: Breadcrumb,
@@ -12,7 +12,7 @@ export default {
       { text: "pageLink2", route: "./pageLink2" },
       { text: "pageLink2", route: "./pageLink3" },
     ],
-    classPageColor: "text-neutral-500",
+    className: "text-neutral-500",
     collapseMin: 3,
   },
 };
