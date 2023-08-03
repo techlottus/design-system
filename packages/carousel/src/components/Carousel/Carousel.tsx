@@ -1,14 +1,15 @@
 import { Aspect } from "@lottuseducation/design_system";
-import { useState } from "react";
+import React, { useState } from "react";
 import cn from "classnames";
 import { Card } from "@lottuseducation/design_system";
 
 import { useKeenSlider } from "keen-slider/react";
+import { CarouselType } from "../types/carousel.types";
 
-const Carousel = (props: any) => {
-  const { data, variant } = props;
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [loaded, setLoaded] = useState(false);
+const Carousel: React.FC<CarouselType> = (props: CarouselType) => {
+  const { data, variant="card" } = props;
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const [loaded, setLoaded] = useState<boolean>(false);
   const stylesBaseControls =
     "select-none absolute top-1.5 p-4 rounded-lg text-sm sm:hidden";
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
@@ -33,7 +34,7 @@ const Carousel = (props: any) => {
     },
   });
 
-  const activeBulletSlide = (position: any) => {
+  const activeBulletSlide = (position: number) => {
     instanceRef.current?.moveToIdx(position);
   };
 
@@ -41,7 +42,7 @@ const Carousel = (props: any) => {
     <section className="flex flex-col relative w-full my-6">
       <section className="lg:w-11/12 md:w-11/12 sm:w-full mx-auto">
         <div ref={sliderRef} className="keen-slider ">
-          {data.map((card: any, i: any) => (
+          {data.map((card: any, i: number) => (
             <section key={`card-item-${i}`}>
               {variant === "card" ? (
                 <div className="keen-slider__slide h-full">
@@ -101,7 +102,7 @@ const Carousel = (props: any) => {
             </span>
           </div>
           <div className={cn("w-full flex justify-center gap-2 mt-6 dots")}>
-            {data.map((_: any, i: any) => (
+            {data.map((_: any, i: number) => (
               <div
                 key={`bullet-item-${i}`}
                 onClick={() => activeBulletSlide(i)}
