@@ -23,7 +23,7 @@
   },
   "scripts": {
     "test": "node ./__tests__/storybook.test.js",
-    "storybook": " rm  -r ./components/  && cp -r ../packages/design-system/src/components/ ./components && cp -r ../packages/slider/src/components/ ./ && storybook dev -p 6006",
+    "storybook": " rm  -r ./components/  && cp -r ../packages/design-system/src/components/ ./components && cp -r ../packages/slider/src/components/ ./ && cp -r ../packages/carousel/src/components/ ./ && storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "bugs": {
