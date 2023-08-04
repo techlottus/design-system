@@ -1,4 +1,4 @@
-import { Numbers } from "@lottuseducation/numbers";
+import Numbers from "../components/Numbers";
 export default {
   title: "Numbers",
   component: Numbers,
@@ -8,39 +8,13 @@ export default {
     title: "Numbers",
     iconName: "people",
     description: "Numbers component",
-    variant: "",
+    variant: "shadow",
+    border: "border-neutral-700 shadow-neutral-700",
   },
   argTypes: {
     variant: {
       options: ["", "stroke", "shadow"],
       control: { type: "radio" },
-    },
-    theme: {
-      options: ["light", "dark"],
-      control: { type: "radio" },
-    },
-    color: {
-      options: [
-        "neutral-100",
-        "neutral-200",
-        "neutral-300",
-        "neutral-400",
-        "neutral-500",
-        "neutral-600",
-        "neutral-700",
-        "neutral-800",
-        "neutral-900",
-        "primary-100",
-        "primary-200",
-        "primary-300",
-        "primary-400",
-        "primary-500",
-        "primary-600",
-        "primary-700",
-        "primary-800",
-        "primary-900",
-      ],
-      control: { type: "select" },
     },
   },
 };
