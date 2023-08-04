@@ -23,17 +23,17 @@
   },
   "scripts": {
     "test": "node ./__tests__/storybook.test.js",
-    "storybook": " rm  -r ./components/  && cp -r ../packages/design-system/src/components/ ./components && storybook dev -p 6006",
+    "storybook": " rm  -r ./components/  && cp -r ../packages/design-system/src/components/ ./components && cp -r ../packages/slider/src/components/ ./ && storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "bugs": {
     "url": "https://github.com/techlottus/design-system/issues"
   },
   "dependencies": {
-    "@lottuseducation/carousel": "file:../packages/carousel/lottuseducation-carousel-v1.6.0.tgz",
-    "@lottuseducation/design_system": "file:../packages/design-system/lottuseducation-design_system-v1.10.0-alpha.0.tgz",
-    "@lottuseducation/numbers": "^1.6.0-alpha.0",
-    "@lottuseducation/slider": "file:../packages/slider/lottuseducation-slider-v1.6.0-alpha.0.tgz",
+    "@lottuseducation/carousel": "^1.8.0-alpha.0",
+    "@lottuseducation/design_system": "^1.11.0-alpha.0",
+    "@lottuseducation/numbers": "^1.8.0-alpha.0",
+    "@lottuseducation/slider": "^1.8.0-alpha.0",
     "@lottuseducation/tailwind-base": "file:../packages/tailwind-base/lottuseducation-tailwind-base-v1.9.0-alpha.0.tgz",
     "@storybook/addon-essentials": "^7.1.1",
     "@storybook/addon-interactions": "^7.1.1",
@@ -44,7 +44,9 @@
     "react-dom": "^18.2.0",
     "storybook": "^7.1.1",
     "typescript": "^4.4.3",
-    "yarn": "^1.22.19"
+    "yarn": "^1.22.19",
+    "keen-slider": "^6.8.5",
+    "classnames": "^2.3.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.21.0",

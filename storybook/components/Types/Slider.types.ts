@@ -1,23 +1,15 @@
-import { ButtonType } from "@lottuseducation/design_system/lib/esm/components/Types/button.types";
-
 export interface SliderType {
-  /**Array of slides data */
   slides: SlideType[];
 }
 export interface SlideType extends SliderContentType {
-  /**Overlay */
-  overlay?: "dark" | "light" | undefined;
-  /**background image url */
+  overlay?: string;
   imageUrl: string;
 }
 export interface SliderContentType {
-  /**Title of slide content */
   title: string;
-  /**Text content of slide */
   content: string;
-  /**CTA of slide */
-  button: ButtonType;
-  /**Position of the content in the slide */
+  button: { label: string };
+  contentVariant: "dark" | "light" | undefined;
   position:
     | "left-top"
     | "left-middle"
@@ -28,6 +20,5 @@ export interface SliderContentType {
     | "center-top"
     | "center-middle"
     | "center-bottom";
-  /**Tailwind classes */
   className: string;
 }

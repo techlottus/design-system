@@ -15,6 +15,7 @@ const SliderContent: React.FC<SliderContentType> = (
     title,
     content,
     button,
+    contentVariant = "dark",
     position = "left-top",
     className = "",
   } = props;
@@ -47,7 +48,13 @@ const SliderContent: React.FC<SliderContentType> = (
           )}
           {button && (
             <div className={getClassBannerPositionButton(position)}>
-              <Button {...button} />
+              <Button
+                label={button.label}
+                variant={
+                  contentVariant === "light" ? "outlined-negative" : "primary"
+                }
+                size="sm"
+              />
             </div>
           )}
         </div>
