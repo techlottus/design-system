@@ -11,7 +11,7 @@ const Carousel: React.FC<CarouselType> = (props: CarouselType) => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [loaded, setLoaded] = useState<boolean>(false);
   const stylesBaseControls =
-    "select-none absolute top-1.5 p-4 rounded-lg text-sm sm:hidden";
+    "select-none absolute p-4 rounded-lg text-sm sm:hidden";
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     breakpoints: {
@@ -75,7 +75,7 @@ const Carousel: React.FC<CarouselType> = (props: CarouselType) => {
         <>
           <div
             className={cn(
-              "z-20 left-0  md:block hidden cursor-pointer",
+              "z-20 left-0 top-[35%]  md:block hidden cursor-pointer",
               stylesBaseControls
             )}
           >
@@ -90,7 +90,7 @@ const Carousel: React.FC<CarouselType> = (props: CarouselType) => {
           </div>
           <div
             className={cn(
-              "z-20 right-0  md:block hidden cursor-pointer",
+              "z-20 right-0  top-[35%] md:block hidden cursor-pointer",
               stylesBaseControls
             )}
           >
