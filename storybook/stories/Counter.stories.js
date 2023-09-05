@@ -1,4 +1,4 @@
-import { Counter } from "@lottuseducation/numbers";
+import Counter from "../components/Counter";
 export default {
   title: "Counter",
   component: Counter,

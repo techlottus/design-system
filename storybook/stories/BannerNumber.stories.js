@@ -1,4 +1,4 @@
-import { BannerNumber } from "@lottuseducation/numbers";
+import BannerNumber from "../components/BannerNumbers";
 export default {
   title: "BannerNumber",
   component: BannerNumber,
@@ -6,45 +6,37 @@ export default {
   args: {
     imageUrl: "https://wallpapercave.com/wp/wp2599594.jpg",
     title: "Demo BannerNumber",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     overlay: "",
-    contentVariant: "dark",
+    className: "text-neutral-100",
     numbers: [
       {
         number: 12000,
         title: "Numbers",
         iconName: "people",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        variant: "",
       },
       {
         number: 12000,
         title: "Numbers",
         iconName: "people",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        variant: "",
       },
       {
         number: 12000,
         title: "Numbers",
         iconName: "people",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        variant: "",
       },
       {
         number: 12000,
         title: "Numbers",
         iconName: "people",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        variant: "",
       },
     ],
   },
   argTypes: {
-    contentVariant: {
-      options: ["light", "dark"],
-      control: { type: "radio" },
-    },
     overlay: {
       options: ["dark", "light", ""],
       control: { type: "radio" },
