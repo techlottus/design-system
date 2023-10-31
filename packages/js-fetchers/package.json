@@ -1,0 +1,46 @@
+{
+  "name": "@lottuseducation/js-fetchers",
+  "version": "0.0.0",
+  "description": "Scripts library to fetch data from ecosystem",
+  "author": "Lottus Engineering <dev.tech@lottuseducation.com>",
+  "homepage": "https://github.com/techlottus/design-system#readme",
+  "license": "UNLICENSED",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "esnext": "lib/esnext/index.js",
+  "typings": "lib/esm/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf dist/* && rm -rf lib/*",
+    "prepublishOnly": "npm run compile",
+    "compile": "echo compiled",
+    "compile:esm": "tsc -p ./src",
+    "compile:cjs": "tsc -p ./src -m commonjs --outDir lib/cjs",
+    "compile:esnext": "cp -r ./src/scripts lib/esnext",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "jest:clearcache": "jest --clearCache"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "src/scripts",
+    "src/utils"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techlottus/design-system.git",
+    "directory": "packages/scripts"
+  },
+  "keywords": [
+    "scripts",
+    "lottus"
+  ],
+  "bugs": {
+    "url": "https://github.com/techlottus/design-system/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
