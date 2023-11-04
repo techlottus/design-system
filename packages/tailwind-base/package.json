@@ -24,10 +24,15 @@
     "lib": "lib"
   },
   "files": [
-    "lib/"
+    "lib/",
+    "src/scripts"
   ],
   "dependencies": {
     "tailwindcss": "^3.3.2"
+  },
+  "peerDependencies": {
+    "axios": "^1.2.2",
+    "dotenv": "^16.3.1"
   },
   "devDependencies": {
     "rimraf": "^3.0.2",
