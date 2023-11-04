@@ -1,7 +1,7 @@
 {
   "name": "@lottuseducation/tailwind-base",
   "version": "1.10.1-alpha.0",
-  "description": "A set of overrides and extensions for TailwindCSS based on Lottus's Design System",
+  "description": "A set of overrides and extensions for TailwindCSS based on Lottus's Design System ",
   "main": "lib/tailwind-base.js",
   "module": "lib/esm/tailwind-base.js",
   "esnext": "lib/esnext/tailwind-base.js",
