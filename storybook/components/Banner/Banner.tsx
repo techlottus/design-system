@@ -46,7 +46,7 @@ const Banner: React.FC<BannerType> = (props: BannerType) => {
           />
         </Aspect>
       </div>
-      <div className="hidden xl:hidden w-d:hidden w-t:block  ">
+      <div className="hidden  w-d:hidden w-t:block  ">
         <Aspect ratio={tabletRatio}>
           <img
             className={cn("w-full h-full object-cover object-center", {

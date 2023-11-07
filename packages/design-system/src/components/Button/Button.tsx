@@ -3,10 +3,10 @@ import { ButtonSize, ButtonType, ButtonVariant } from "../Types/button.types";
 import Icon from "../Icon/Icon";
 import React from "react";
 const sizes: ButtonSize = {
-  xw- p: cn("px-4 py-3 text-sm rounded"),
-    w - p: cn("py-4 px-8 text-base rounded-lg"),
-      w - t: cn("py-5 px-9 text-xl rounded-lg"),
-        w - d: cn("py-6 px-12 text-xl rounded-lg"),
+  xsm: cn("px-4 py-3 text-sm rounded"),
+  sm: cn("py-4 px-8 text-base rounded-lg"),
+  md: cn("py-5 px-9 text-xl rounded-lg"),
+  lg: cn("py-6 px-12 text-xl rounded-lg"),
 };
 
 const variants: ButtonVariant = {
