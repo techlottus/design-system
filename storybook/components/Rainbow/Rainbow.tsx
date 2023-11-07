@@ -9,28 +9,28 @@ const Rainbow: React.FC<RainbowConfig> = (props: RainbowConfig) => {
     <div className="flex w-full h-full relative ">
       <div
         className={cn(
-          "lg:w-3/4 w-full overflow-visible flex h-full absolute",
+          "w-d:w-3/4 w-full overflow-visible flex h-full absolute",
           background
         )}
       ></div>
-      <div className="z-10 w-full  h-full left-0 top-0 py-12 lg:space-y-6 md:space-y-12 space-y-6">
+      <div className="z-10 w-full  h-full left-0 top-0 py-12 w-d:space-y-6 w-t:space-y-12 space-y-6">
         {items?.map((item: RainbowItems, i: number) => (
           <section
-            className="w-full flex flex-col lg:flex-row  lg:pl-24.75 pr-6 pl-6 lg:space-x-6 group"
+            className="w-full flex flex-col w-d:flex-row  w-d:pl-24.75 pr-6 pl-6 w-d:space-x-6 group"
             key={i}
           >
-            <div className="lg:w-1/2 w-full flex flex-col lg:align-middle">
+            <div className="w-d:w-1/2 w-full flex flex-col w-d:align-middle">
               <Heading
                 title={item?.title}
                 variant="h-3"
                 font="secondary"
-                className="leading-5 pb-6 text-neutral-100"
+                className="leading-5 pb-6 text-surface-100"
               />
-              <span className="flex items-start leading-5 text-neutral-100 font-principal pb-6 lg:pb-0 text-sm md:text-base lg:text-lg">
+              <span className="flex items-start leading-5 text-surface-100 font-Nunito pb-6 w-d:pb-0 text-sm w-t:text-base w-d:text-lg">
                 {item?.description}
               </span>
             </div>
-            <div className="lg:w-1/2 w-full">
+            <div className="w-d:w-1/2 w-full">
               <Aspect ratio="2/1">
                 <img
                   src={item?.imageUrl}

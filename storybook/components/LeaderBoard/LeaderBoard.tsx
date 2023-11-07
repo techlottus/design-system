@@ -9,8 +9,8 @@ import {
 } from "../Types/Leaderboard.types";
 import React from "react";
 const variants: LeaderboardTypeVariants = {
-  light: "text-neutral-100",
-  dark: "text-neutral-900",
+  light: "text-surface-100",
+  dark: "text-surface-900",
 };
 
 const LeaderBoard: React.FC<LeaderboardType> = (props: LeaderboardType) => {
@@ -18,7 +18,7 @@ const LeaderBoard: React.FC<LeaderboardType> = (props: LeaderboardType) => {
   return (
     <div
       className={cn(
-        "w-full md:h-52 h-64 text-sm md:text-base relative overflow-hidden",
+        "w-full w-t:h-52 h-64 text-sm w-t:text-base relative overflow-hidden",
         [variants[variant]]
       )}
     >
@@ -26,7 +26,7 @@ const LeaderBoard: React.FC<LeaderboardType> = (props: LeaderboardType) => {
         src={imageUrl}
         className="w-full h-full object-cover object-center"
       />
-      <div className="absolute top-0 left-0 p-10 md:px-20 md:py-12 w-full h-full flex flex-col ">
+      <div className="absolute top-0 left-0 p-10 w-t:px-20 w-t:py-12 w-full h-full flex flex-col ">
         <span className="pb-4">
           <Heading
             title={getTextCount(title, 61)}
@@ -36,7 +36,7 @@ const LeaderBoard: React.FC<LeaderboardType> = (props: LeaderboardType) => {
         </span>
         {button ? (
           <div>
-            <span className="flex flex-col space-y-4 font-principal">
+            <span className="flex flex-col space-y-4 font-Nunito">
               <span>
                 {" "}
                 <Extensions {...links?.[0]} />
@@ -47,12 +47,12 @@ const LeaderBoard: React.FC<LeaderboardType> = (props: LeaderboardType) => {
             </span>
           </div>
         ) : (
-          <div className="flex md:flex-row md:space-x-4 flex-col space-y-4 md:space-y-1">
-            <span className="flex flex-col space-y-4 font-principal">
+          <div className="flex w-t:flex-row w-t:space-x-4 flex-col space-y-4 w-t:space-y-1">
+            <span className="flex flex-col space-y-4 font-Nunito">
               <Extensions {...links?.[0]} />
               <Extensions {...links?.[1]} />
             </span>
-            <span className="flex flex-col space-y-4 font-principal ">
+            <span className="flex flex-col space-y-4 font-Nunito ">
               <Extensions {...links?.[2]} />
               <Extensions {...links?.[3]} />
             </span>

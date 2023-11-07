@@ -12,7 +12,7 @@ export default {
       { text: "pageLink2", route: "./pageLink2" },
       { text: "pageLink2", route: "./pageLink3" },
     ],
-    className: "text-neutral-500",
+    className: "text-surface-500",
     collapseMin: 3,
   },
 };

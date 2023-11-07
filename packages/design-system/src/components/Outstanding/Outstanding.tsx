@@ -16,29 +16,29 @@ const Outstanding: React.FC<OutstandingType> = (props: OutstandingType) => {
   return (
     <div
       className={cn(
-        "flex flex-col-reverse  md:px-6 md:pt-6 pt-4",
+        "flex flex-col-reverse  w-t:px-6 w-t:pt-6 pt-4",
         {
-          [" md:flex-row-reverse"]: imagePosition === "right",
-          [" md:flex-row"]: imagePosition === "left",
+          [" w-t:flex-row-reverse"]: imagePosition === "right",
+          [" w-t:flex-row"]: imagePosition === "left",
         },
         background
       )}
     >
-      <div className="md:w-1/2 w-full self-end">
+      <div className="w-t:w-1/2 w-full self-end">
         <Aspect ratio="2/1">
           <img
             src={imageUrl}
             className={cn("w-full h-full object-cover object-center px-0", {
-              ["md:pl-8 md:pr-0 "]: imagePosition === "right",
-              ["md:pr-8 md:pl-0 "]: imagePosition === "left",
+              ["w-t:pl-8 w-t:pr-0 "]: imagePosition === "right",
+              ["w-t:pr-8 w-t:pl-0 "]: imagePosition === "left",
             })}
           />
         </Aspect>
       </div>
       <div
-        className={cn("flex flex-col text-neutral-100 md:w-1/2 w-full px-4", {
-          ["md:pr-8 md:pl-0"]: imagePosition === "right",
-          ["md:pl-8 md:pr-0"]: imagePosition === "left",
+        className={cn("flex flex-col text-surface-100 w-t:w-1/2 w-full px-4", {
+          ["w-t:pr-8 w-t:pl-0"]: imagePosition === "right",
+          ["w-t:pl-8 w-t:pr-0"]: imagePosition === "left",
         })}
       >
         <Heading
@@ -47,7 +47,7 @@ const Outstanding: React.FC<OutstandingType> = (props: OutstandingType) => {
           font="secondary"
           className="pb-4"
         />
-        <div className="text-neutral-100 font-secondary align-center md:pb-4 pb-2 md:text-base text-sm">
+        <div className="text-surface-100 font-Poppins align-center w-t:pb-4 pb-2 w-t:text-base text-sm">
           <span dangerouslySetInnerHTML={{ __html: content }} />
         </div>
         <div className="pb-6">

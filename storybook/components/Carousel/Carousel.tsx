@@ -11,7 +11,7 @@ const Carousel: React.FC<CarouselType> = (props: CarouselType) => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [loaded, setLoaded] = useState<boolean>(false);
   const stylesBaseControls =
-    "select-none absolute p-4 rounded-lg text-sm sm:hidden";
+    "select-none absolute p-4 rounded-lg text-sm w-p:hidden";
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     breakpoints: {
@@ -40,7 +40,7 @@ const Carousel: React.FC<CarouselType> = (props: CarouselType) => {
 
   return (
     <section className="flex flex-col relative w-full my-6">
-      <section className="lg:w-11/12 md:w-11/12 sm:w-full mx-auto">
+      <section className="w-d:w-11/12 w-t:w-11/12 w-p:w-full mx-auto">
         <div ref={sliderRef} className="keen-slider ">
           {data.map((card: any, i: number) => (
             <section key={`card-item-${i}`}>
@@ -75,7 +75,7 @@ const Carousel: React.FC<CarouselType> = (props: CarouselType) => {
         <>
           <div
             className={cn(
-              "z-20 left-0 top-[35%]  md:block hidden cursor-pointer",
+              "z-20 left-0 top-[35%]  w-t:block hidden cursor-pointer",
               stylesBaseControls
             )}
           >
@@ -90,7 +90,7 @@ const Carousel: React.FC<CarouselType> = (props: CarouselType) => {
           </div>
           <div
             className={cn(
-              "z-20 right-0  top-[35%] md:block hidden cursor-pointer",
+              "z-20 right-0  top-[35%] w-t:block hidden cursor-pointer",
               stylesBaseControls
             )}
           >
@@ -107,7 +107,7 @@ const Carousel: React.FC<CarouselType> = (props: CarouselType) => {
                 key={`bullet-item-${i}`}
                 onClick={() => activeBulletSlide(i)}
                 className={cn(
-                  "h-4 bg-neutral-600 rounded-full cursor-pointer",
+                  "h-4 bg-surface-600 rounded-full cursor-pointer",
                   {
                     "w-4": i !== currentSlide,
                     "w-8": i === currentSlide,

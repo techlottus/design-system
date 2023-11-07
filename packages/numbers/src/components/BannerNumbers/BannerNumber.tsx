@@ -10,7 +10,7 @@ const BannerNumber: React.FC<BannerNumberType> = (props: BannerNumberType) => {
   const { imageUrl, overlay = "", title, content, numbers, className } = props;
   return (
     <div className={cn("w-full", className)}>
-      <div className={cn("hidden lg:flex")}>
+      <div className={cn("hidden w-d:flex")}>
         <Aspect ratio="7/2">
           <img
             className={cn("w-full h-full object-cover object-center", {
@@ -29,7 +29,7 @@ const BannerNumber: React.FC<BannerNumberType> = (props: BannerNumberType) => {
             <div className={cn("pb-2 w-1/2 leading-5", className)}>
               <Heading title={title} variant="h-3" font="secondary" />
             </div>
-            <div className="w-1/2 font-secondary leading-5">
+            <div className="w-1/2 font-Poppins leading-5">
               <span>{content}</span>
             </div>
             <ul className="grid grid-cols-4 gap-6 pt-6">
@@ -42,7 +42,7 @@ const BannerNumber: React.FC<BannerNumberType> = (props: BannerNumberType) => {
           </div>
         </Aspect>
       </div>
-      <div className="hidden md:flex lg:hidden">
+      <div className="hidden w-t:flex w-d:hidden">
         <Aspect ratio="2/1">
           <img
             className={cn("w-full h-full object-cover object-center", {
@@ -56,7 +56,7 @@ const BannerNumber: React.FC<BannerNumberType> = (props: BannerNumberType) => {
             <div className="pb-2 w-4/5 leading-5">
               <Heading title={title} variant="h-3" font="secondary" />
             </div>
-            <div className="w-4/5 font-secondary  md:text-base leading-5">
+            <div className="w-4/5 font-Poppins  w-t:text-base leading-5">
               <span>{content}</span>
             </div>
             <ul className="grid grid-cols-4 gap-6 pt-6">
@@ -69,7 +69,7 @@ const BannerNumber: React.FC<BannerNumberType> = (props: BannerNumberType) => {
           </div>
         </Aspect>
       </div>
-      <div className="flex md:hidden ">
+      <div className="flex w-t:hidden ">
         <Aspect ratio="1/2">
           <img
             className={cn("w-full h-full object-cover object-center", {
@@ -83,10 +83,10 @@ const BannerNumber: React.FC<BannerNumberType> = (props: BannerNumberType) => {
             <div className="pb-2 leading-5">
               <Heading title={title} variant="h-3" font="secondary" />
             </div>
-            <div className={cn("font-secondary leading-5")}>
+            <div className={cn("font-Poppins leading-5")}>
               <span>{content}</span>
             </div>
-            <ul className={cn("flex flex-col pt-6 gap-4 md:gap-6")}>
+            <ul className={cn("flex flex-col pt-6 gap-4 w-t:gap-6")}>
               {numbers.map((number: NumbersType, numberindex: number) => (
                 <li key={numberindex}>
                   <Numbers {...number} />

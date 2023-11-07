@@ -16,12 +16,12 @@ const Extensions: React.FC<ExtensionsType> = (props: ExtensionsType) => {
       <Icon className="group-hover:animate-bounce" {...icon} />
       {variant === "phone" ? (
         <span>
-          <span className="md:hidden  cursor-pointer ">
+          <span className="w-t:hidden  cursor-pointer ">
             <a href={"tel:" + href} target={target}>
               {text}
             </a>
           </span>
-          <span className="hidden md:flex  ">{text}</span>
+          <span className="hidden w-t:flex  ">{text}</span>
         </span>
       ) : variant === "mail" ? (
         <span className="hover:underline cursor-pointer ">

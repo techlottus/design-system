@@ -11,7 +11,7 @@ const Breadcrumb: React.FC<BreadcrumbType> = (props: BreadcrumbType) => {
     separatorIcon = "arrow_forward_ios",
     collapseIcon = "more_horiz",
     links,
-    className = "text-neutral-900",
+    className = "text-surface-900",
     collapseMin = 3,
   } = props;
   const [isExpand, setExpand] = useState<boolean>(links?.length < collapseMin);
@@ -30,7 +30,7 @@ const Breadcrumb: React.FC<BreadcrumbType> = (props: BreadcrumbType) => {
   );
   const commonClasses: string = cn(
     "flex space-x-2 items-center align-center",
-    "text-neutral-600  font-principal leading-5 font-bold"
+    "text-surface-600  font-Nunito leading-5 font-bold"
   );
   const handleOnHover = () => {
     if (links.length >= collapseMin) setExpand(true);
@@ -102,17 +102,17 @@ const Breadcrumb: React.FC<BreadcrumbType> = (props: BreadcrumbType) => {
       </ul>
       <div
         className={cn(
-          "rounded  border border-neutral-200 shadow-2 shadow-neutral-200 drop-shadow md:hidden font-principal",
+          "rounded  border border-surface-200 shadow-2 shadow-surface-200 drop-shadow w-t:hidden font-Nunito",
           { ["hidden"]: isExpand === false }
         )}
         onMouseEnter={handleOnHover}
         onMouseLeave={handleOnLeave}
       >
-        <div className="flex-col md:hidden ">
+        <div className="flex-col w-t:hidden ">
           {links?.map((link: any, linkIndex: any) => (
             <div
               className={cn(
-                "p-3 text-neutral-600 hover:text-neutral-900 hover:bg-neutral-200 ",
+                "p-3 text-surface-600 hover:text-surface-900 hover:bg-surface-200 ",
                 { ["hidden"]: linkIndex == links.length - 1 }
               )}
               key={"crumb-" + linkIndex}

@@ -44,9 +44,9 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
   };
 
   const ClassesMenuMobContainer: string = cn(
-    "lg:hidden w-full ",
-    "bg-neutral-100",
-    "border-t border-neutral-300",
+    "w-d:hidden w-full ",
+    "bg-surface-100",
+    "border-t border-surface-300",
     "p-2 top-12",
     "flex absolute flex-col overflow-y-auto overscrol-contain",
     " transition  ease-in-out delay-150 transform-gpu opacity-100",
@@ -59,7 +59,7 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
   return (
     <div
       className={cn(
-        " w-full bg-neutral-100 container overscroll-contain h-9/10 px-2 overflow-hidden",
+        " w-full bg-surface-100 container overscroll-contain h-9/10 px-2 overflow-hidden",
         className
       )}
     >
@@ -68,7 +68,7 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
           <div
             id="MenuOptions"
             className={cn(
-              "h-80 w-full overflow-y-scroll lg:hidden flex overscroll-contain pr-2 -translate-x-full transition  ease-in-out delay-150 transform-gpu",
+              "h-80 w-full overflow-y-scroll w-d:hidden flex overscroll-contain pr-2 -translate-x-full transition  ease-in-out delay-150 transform-gpu",
               {
                 ["translate-x-0 translate-y-0"]: type === "principal",
                 ["translate-x-0 translate-y-0 absolute opacity-100"]:
@@ -78,14 +78,14 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
           >
             <div
               id="itemsContainer"
-              className="w-full flex flex-col  py-1 z-20  border-t border-neutral-300"
+              className="w-full flex flex-col  py-1 z-20  border-t border-surface-300"
             >
               {items?.map((item: MenuItemType, itemIndex: number) => {
                 if (item?.children?.length) {
                   return (
                     <div
                       key={itemIndex}
-                      className="flex justify-between items-center p-1 h-full border-b border-neutral-300 cursor-pointer"
+                      className="flex justify-between items-center p-1 h-full border-b border-surface-300 cursor-pointer"
                     >
                       <div
                         className={getClassItemMobContainer(item?.active, true)}
@@ -134,7 +134,7 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
           <div
             id="subMenu"
             className={cn(
-              "w-full h-full top-2 left-0 absolute bg-neutral-100 overflow-auto lg:hidden flex overscroll-contain transform-gpu transition-all ease-in-out ",
+              "w-full h-full top-2 left-0 absolute bg-surface-100 overflow-auto w-d:hidden flex overscroll-contain transform-gpu transition-all ease-in-out ",
               {
                 ["translate-x-0 translate-y-0"]: sub === "principal",
                 ["translate-x-full translate-y-0"]: sub !== "principal",
@@ -142,7 +142,7 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
             )}
           >
             <div className="w-full flex flex-col  py-1 z-20 overscroll-contain h-9/10 ">
-              <div className="flex justify-end items-center p-1 border-b border-t w-full border-neutral-300 cursor-pointer flex-row-reverse">
+              <div className="flex justify-end items-center p-1 border-b border-t w-full border-surface-300 cursor-pointer flex-row-reverse">
                 <TextLink text={items[index].label} href={items[index].route} />
                 <div
                   id="iconGo"
@@ -173,7 +173,7 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
                         </div>
                         <div
                           id="iconGo"
-                          className="px-3 py-1 cursor-pointer  border-l-2  border-neutral-300"
+                          className="px-3 py-1 cursor-pointer  border-l-2  border-surface-300"
                         >
                           <Icon iconName={iconExpandMore} />
                         </div>
@@ -211,7 +211,7 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
 
           <div
             id="info"
-            className=" absolute bottom-10 lg:hidden bg-neutral-100 flex flex-1 flex-col w-full"
+            className=" absolute bottom-10 w-d:hidden bg-surface-100 flex flex-1 flex-col w-full"
           >
             <div className="py-2 px-2">
               <Button
@@ -229,7 +229,7 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
             <div>
               <SocialMedia
                 socialMedia={socialMedia}
-                className="text-neutral-600"
+                className="text-surface-600"
               />
             </div>
           </div>
