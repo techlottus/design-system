@@ -36,7 +36,7 @@ const LeaderBoard: React.FC<LeaderboardType> = (props: LeaderboardType) => {
         </span>
         {button ? (
           <div>
-            <span className="flex flex-col space-y-4 font-Nunito">
+            <span className="flex flex-col space-y-4 font-headings">
               <span>
                 {" "}
                 <Extensions {...links?.[0]} />
@@ -48,11 +48,11 @@ const LeaderBoard: React.FC<LeaderboardType> = (props: LeaderboardType) => {
           </div>
         ) : (
           <div className="flex w-t:flex-row w-t:space-x-4 flex-col space-y-4 w-t:space-y-1">
-            <span className="flex flex-col space-y-4 font-Nunito">
+            <span className="flex flex-col space-y-4 font-headings">
               <Extensions {...links?.[0]} />
               <Extensions {...links?.[1]} />
             </span>
-            <span className="flex flex-col space-y-4 font-Nunito ">
+            <span className="flex flex-col space-y-4 font-headings ">
               <Extensions {...links?.[2]} />
               <Extensions {...links?.[3]} />
             </span>

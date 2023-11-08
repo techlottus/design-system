@@ -30,7 +30,7 @@ const Breadcrumb: React.FC<BreadcrumbType> = (props: BreadcrumbType) => {
   );
   const commonClasses: string = cn(
     "flex space-x-2 items-center align-center",
-    "text-surface-600  font-Nunito leading-5 font-bold"
+    "text-surface-600  font-headings leading-5 font-bold"
   );
   const handleOnHover = () => {
     if (links.length >= collapseMin) setExpand(true);
@@ -102,7 +102,7 @@ const Breadcrumb: React.FC<BreadcrumbType> = (props: BreadcrumbType) => {
       </ul>
       <div
         className={cn(
-          "rounded  border border-surface-200 shadow-2 shadow-surface-200 drop-shadow w-t:hidden font-Nunito",
+          "rounded  border border-surface-200 shadow-2 shadow-surface-200 drop-shadow w-t:hidden font-headings",
           { ["hidden"]: isExpand === false }
         )}
         onMouseEnter={handleOnHover}

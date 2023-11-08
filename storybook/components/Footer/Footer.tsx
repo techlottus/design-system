@@ -24,7 +24,7 @@ const Footer: React.FC<FooterType> = (props: FooterType) => {
           {newsletter ? (
             <div
               id="mail-input"
-              className="flex flex-1 content-stretch font-Nunito"
+              className="flex flex-1 content-stretch font-headings"
             >
               <div
                 id="subscribe-text"
@@ -37,7 +37,7 @@ const Footer: React.FC<FooterType> = (props: FooterType) => {
                 placeholder={newsletter?.placeholder}
                 id={newsletter?.id}
                 name={newsletter?.name}
-                className="flex bg-surface-200  w-1/2 rounded-l-lg py-4 px-3 font-Nunito text-surface-800"
+                className="flex bg-surface-200  w-1/2 rounded-l-lg py-4 px-3 font-headings text-surface-800"
               />
 
               <Button
@@ -68,7 +68,7 @@ const Footer: React.FC<FooterType> = (props: FooterType) => {
         >
           <TextLink
             {...textLink}
-            className="font-bold font-Nunito text-base "
+            className="font-bold font-headings text-base "
           />
         </div>
         {links ? (
@@ -82,7 +82,7 @@ const Footer: React.FC<FooterType> = (props: FooterType) => {
                   <div id="col1" className="flex flex-col pb-10" key={index}>
                     <div
                       id="title-section1"
-                      className="font-Nunito font-bold w-d:text-lg text-surface-800 pb-6"
+                      className="font-headings font-bold w-d:text-lg text-surface-800 pb-6"
                     >
                       {link?.titleSection}
                     </div>
@@ -91,7 +91,7 @@ const Footer: React.FC<FooterType> = (props: FooterType) => {
                         <TextLink
                           {...lt}
                           key={indxLt}
-                          className="font-Nunito text-surface-600 px-0 pb-4 pt-0"
+                          className="font-headings text-surface-600 px-0 pb-4 pt-0"
                         />
                       )
                     )}
@@ -108,7 +108,7 @@ const Footer: React.FC<FooterType> = (props: FooterType) => {
           className="flex w-d:justify-between py-10 w-d:items-center w-t:flex-col w-d:flex-row"
         >
           <div className="flex w-d:items-center w-t:flex-col w-d:flex-row">
-            <div className="font-Nunito font-bold w-d:text-lg">
+            <div className="font-headings font-bold w-d:text-lg">
               {contact?.text}
             </div>
             <div id="socialmedia" className="flex">
@@ -120,7 +120,7 @@ const Footer: React.FC<FooterType> = (props: FooterType) => {
           </div>
 
           <div className="flex flex-col">
-            <div className="flex w-d:justify-end font-Nunito font-bold">
+            <div className="flex w-d:justify-end font-headings font-bold">
               {contact?.phoneText}
             </div>
             <div className="flex items-start space-x-2 pt-2">
@@ -137,7 +137,7 @@ const Footer: React.FC<FooterType> = (props: FooterType) => {
           id="certificates"
           className="flex flex-col py-10 border-t border-b border-surface-400"
         >
-          <div className="w-full flex justify-start pb-4 font-Nunito w-d:text-lg font-bold">
+          <div className="w-full flex justify-start pb-4 font-headings w-d:text-lg font-bold">
             {certificates?.title}
           </div>
           <div className="flex space-x-10">
@@ -157,11 +157,11 @@ const Footer: React.FC<FooterType> = (props: FooterType) => {
           </div>
         </div>
         <div id="legal" className="flex justify-between py-6 items-center">
-          <div className="font-Nunito flex space-x-1">
+          <div className="font-headings flex space-x-1">
             <span className="text-surface-700">{legal?.title}</span>
             <span className="font-bold text-surface-800">{legal?.text}</span>
           </div>
-          <div className="text-surface-700 font-Nunito">
+          <div className="text-surface-700 font-headings">
             <TextLink {...legal?.textLink} />
           </div>
         </div>
@@ -175,7 +175,7 @@ const Footer: React.FC<FooterType> = (props: FooterType) => {
           >
             <TextLink
               {...textLink}
-              className="font-bold font-Nunito text-base"
+              className="font-bold font-headings text-base"
             />
           </div>
         </div>
@@ -184,7 +184,7 @@ const Footer: React.FC<FooterType> = (props: FooterType) => {
         </div>
         <div id="contact" className="flex  py-10 flex-col ">
           <div className="flex flex-col ">
-            <div className="font-Nunito font-bold ">{contact?.text}</div>
+            <div className="font-headings font-bold ">{contact?.text}</div>
             <div id="socialmedia" className="flex justify-start">
               <SocialMedia
                 className=" h-5 flex  py-4  w-p:px-0 space-x-8w-p:justify-start  "
@@ -194,7 +194,7 @@ const Footer: React.FC<FooterType> = (props: FooterType) => {
           </div>
 
           <div className="flex flex-col">
-            <div className="flex font-Nunito font-bold">
+            <div className="flex font-headings font-bold">
               {contact?.phoneText}
             </div>
             <div className="flex items-start space-x-2 ">
@@ -211,7 +211,7 @@ const Footer: React.FC<FooterType> = (props: FooterType) => {
           id="certificates"
           className="flex flex-col py-5 border-t border-b border-surface-400"
         >
-          <div className="w-full flex justify-start pb-4 font-Nunito text-lg font-bold">
+          <div className="w-full flex justify-start pb-4 font-headings text-lg font-bold">
             {certificates?.title}
           </div>
           <div className="flex space-x-10 flex-wrap">
@@ -231,11 +231,11 @@ const Footer: React.FC<FooterType> = (props: FooterType) => {
           </div>
         </div>
         <div id="legal" className="flex flex-col space-y-4 py-6">
-          <div className="font-Nunito flex space-x-1">
+          <div className="font-headings flex space-x-1">
             <span className="text-surface-700">{legal?.title}</span>
             <span className="font-bold text-surface-800">{legal?.text}</span>
           </div>
-          <div className="text-surface-700 font-Nunito">
+          <div className="text-surface-700 font-headings">
             <TextLink {...legal?.textLink} />
           </div>
         </div>

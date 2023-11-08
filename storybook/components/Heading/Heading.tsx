@@ -2,8 +2,8 @@ import cn from "classnames";
 import { FontsType, HeadingType, VariantsType } from "../Types/Heading.types";
 import React from "react";
 const fonts: FontsType = {
-  principal: cn("font-Nunito"),
-  secondary: cn("font-Poppins"),
+  principal: cn("font-headings"),
+  secondary: cn("font-texts"),
 };
 const variants: VariantsType = {
   "h-1": cn("text-4xl w-t:text-6xl w-d:text-7xl font-extrabold"),

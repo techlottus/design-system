@@ -26,7 +26,7 @@ const Rainbow: React.FC<RainbowConfig> = (props: RainbowConfig) => {
                 font="secondary"
                 className="leading-5 pb-6 text-surface-100"
               />
-              <span className="flex items-start leading-5 text-surface-100 font-Nunito pb-6 w-d:pb-0 text-sm w-t:text-base w-d:text-lg">
+              <span className="flex items-start leading-5 text-surface-100 font-headings pb-6 w-d:pb-0 text-sm w-t:text-base w-d:text-lg">
                 {item?.description}
               </span>
             </div>

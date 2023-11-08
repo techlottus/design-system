@@ -49,7 +49,7 @@ const Numbers: React.FC<NumbersType> = (props: NumbersType) => {
         <Heading title={title} variant="h-6" font="secondary" />
       </div>
       <div id="Numbers-description">
-        <span className="text-sm font-Poppins flex leading-5">
+        <span className="text-sm font-texts flex leading-5">
           {description}
         </span>
       </div>

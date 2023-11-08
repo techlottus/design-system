@@ -36,7 +36,7 @@ const Menu: React.FC<MenuType> = (props: MenuType) => {
   };
   //classes
   const classLanguages = cn(
-    " flex relative flex-1 flex-start text-primary-500 font-bold font-Nunito",
+    " flex relative flex-1 flex-start text-primary-500 font-bold font-headings",
     { ["invisible"]: !languages }
   );
 
@@ -75,13 +75,13 @@ const Menu: React.FC<MenuType> = (props: MenuType) => {
               id="Options"
               className="flex border-b border-surface-300 my-1 justify-items-end h-6"
             >
-              <span className="flex flex-nowrap relative pr-7 text-surface-500 font-Nunito">
+              <span className="flex flex-nowrap relative pr-7 text-surface-500 font-headings">
                 Accesos para :
               </span>
-              <div className="flex flex-1 flex-end flex-nowrap pr-6 cursor-pointer justify-center text-primary-500 font-Nunito font-bold">
+              <div className="flex flex-1 flex-end flex-nowrap pr-6 cursor-pointer justify-center text-primary-500 font-headings font-bold">
                 <a>Egresados</a>
               </div>
-              <div className="flex flex-1 flex-end flex-nowrap pr-6 cursor-pointer justify-center text-primary-500 font-Nunito font-bold">
+              <div className="flex flex-1 flex-end flex-nowrap pr-6 cursor-pointer justify-center text-primary-500 font-headings font-bold">
                 <a>Estudiantes</a>
               </div>
             </div>

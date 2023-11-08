@@ -39,7 +39,7 @@ const TextLink: React.FC<TextLinkConfig> = (props: TextLinkConfig) => {
         })}
       >
         <a
-          className="font-Nunito group-hover:underline "
+          className="font-headings group-hover:underline "
           href={href}
           target={target}
         >
@@ -61,13 +61,13 @@ const TextLink: React.FC<TextLinkConfig> = (props: TextLinkConfig) => {
           onClick={onClick}
         >
           {href && !disabled ? (
-            <a className="font-Nunito" href={href} target={target}>
+            <a className="font-headings" href={href} target={target}>
               {text}
             </a>
           ) : disabled ? (
-            <span className="font-Nunito">{text}</span>
+            <span className="font-headings">{text}</span>
           ) : (
-            <span className="font-Nunito" onClick={onClick}>
+            <span className="font-headings" onClick={onClick}>
               {text}
             </span>
           )}

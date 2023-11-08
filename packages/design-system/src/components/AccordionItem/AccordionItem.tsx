@@ -31,7 +31,7 @@ const AccordionItem: React.FC<AccordionItemType> = (
   };
 
   return (
-    <div id="Accordion-item" className="font-Nunito">
+    <div id="Accordion-item" className="font-headings">
       <div
         id="accordion-item-title"
         className={cn(

@@ -21,7 +21,7 @@ const BannerContent: React.FC<BannerContentConfig> = (
     position = "left-top",
     className = "",
   } = props;
-  const textColor = cn("pb-4 font-Poppins", {
+  const textColor = cn("pb-4 font-texts", {
     ["text-surface-100"]: contentVariant === "light",
     ["text-surface-800"]: !contentVariant || contentVariant === "dark",
   });
@@ -76,11 +76,11 @@ const BannerContent: React.FC<BannerContentConfig> = (
         <div className="py-4 text-surface-800">
           <Heading title={title} variant="h-3" font="secondary" />
         </div>
-        <div className="pb-4 text-surface-800 font-Poppins">
+        <div className="pb-4 text-surface-800 font-texts">
           <span dangerouslySetInnerHTML={{ __html: content }} />
         </div>
         {button ? (
-          <div className="pb-4 font-Poppins">
+          <div className="pb-4 font-texts">
             <Button
               label={button?.label}
               variant="primary"

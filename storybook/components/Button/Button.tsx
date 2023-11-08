@@ -37,7 +37,7 @@ const commonClasses: string = cn(
   "flex",
   "relative",
   "min-w-40 max-w-full",
-  "font-bold font-Nunito",
+  "font-bold font-headings",
   "items-center justify-center"
 );
 

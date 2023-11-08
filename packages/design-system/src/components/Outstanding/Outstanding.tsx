@@ -47,7 +47,7 @@ const Outstanding: React.FC<OutstandingType> = (props: OutstandingType) => {
           font="secondary"
           className="pb-4"
         />
-        <div className="text-surface-100 font-Poppins align-center w-t:pb-4 pb-2 w-t:text-base text-sm">
+        <div className="text-surface-100 font-texts align-center w-t:pb-4 pb-2 w-t:text-base text-sm">
           <span dangerouslySetInnerHTML={{ __html: content }} />
         </div>
         <div className="pb-6">
