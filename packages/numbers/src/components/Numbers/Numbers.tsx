@@ -33,11 +33,11 @@ const Numbers: React.FC<NumbersType> = (props: NumbersType) => {
         className="flex align-center items-start space-x-1 pb-2"
       >
         {iconName && (
-          <span className="flex text-2xl w-d:text-5xl w-t:text-3xl">
+          <span className="flex text-2xl desktop:text-5xl tablet:text-3xl">
             <Icon
               iconName={iconName}
               variant="outlined"
-              className="text-2xl w-d:text-5xl w-t:text-3xl leading-4 w-p:leading-5"
+              className="text-2xl desktop:text-5xl tablet:text-3xl leading-4 mobile:leading-5"
             />
           </span>
         )}
@@ -45,7 +45,7 @@ const Numbers: React.FC<NumbersType> = (props: NumbersType) => {
           <Counter maxNumber={number} />
         </span>
       </div>
-      <div id="Numbers-title" className="pb-2 py-2 w-p:py-1 flex">
+      <div id="Numbers-title" className="pb-2 py-2 mobile:py-1 flex">
         <Heading title={title} variant="h-6" font="secondary" />
       </div>
       <div id="Numbers-description">

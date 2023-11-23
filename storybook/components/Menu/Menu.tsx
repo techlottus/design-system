@@ -48,7 +48,7 @@ const Menu: React.FC<MenuType> = (props: MenuType) => {
     >
       <header
         id="NavbarDesk"
-        className="flex flex-1 hidden w-d:flex p-1 h-14 w-d:h-auto shadow-lg bg-white"
+        className="flex flex-1 hidden desktop:flex p-1 h-14 desktop:h-auto shadow-lg bg-white"
       >
         <div
           id="Logo"
@@ -183,7 +183,7 @@ const Menu: React.FC<MenuType> = (props: MenuType) => {
 
       <header
         id="NavbarMobile"
-        className="flex absolute w-d:hidden z-20 px-1 py-1 shadow top-0 w-full"
+        className="flex absolute desktop:hidden z-20 px-1 py-1 shadow top-0 w-full"
         style={{ background: "#fff" }}
       >
         <div id="menu" className="border-r-2 border-surface-300  px-2">

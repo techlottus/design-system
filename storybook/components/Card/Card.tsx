@@ -18,7 +18,7 @@ const Card: React.FC<CardType> = (props: CardType) => {
   } = props;
   /** classes for text in textlink */
   const classText: string = cn(
-    "pb-2 text-surface-500 font-headings w-t:text-sm w-p:text-xs",
+    "pb-2 text-surface-500 font-headings tablet:text-sm mobile:text-xs",
     { ["hidden"]: !content }
   );
   const classContent: string = cn(
@@ -29,11 +29,11 @@ const Card: React.FC<CardType> = (props: CardType) => {
     }
   );
   const classSubTitle: string = cn(
-    "flex pb-2 font-bold font-headings text-surface-500 w-t:text-sm w-p:text-xs",
+    "flex pb-2 font-bold font-headings text-surface-500 tablet:text-sm mobile:text-xs",
     { ["hidden"]: !subtitle }
   );
   const classLink: string = cn(
-    "flex font-bold font-headings justify-end items-center w-d:text-base w-t:text-sm w-p:text-xs",
+    "flex font-bold font-headings justify-end items-center desktop:text-base tablet:text-sm mobile:text-xs",
     { ["hidden"]: !textLink }
   );
   const classTitle: string = cn("text-surface-800 pb-2", {

@@ -54,7 +54,7 @@ const SliderContent: React.FC<SliderContentType> = (
       </div>
       <div
         id="slider-content-mobile"
-        className="w-full h-full flex flex-col w-t:hidden "
+        className="w-full h-full flex flex-col tablet:hidden "
       >
         <div className="py-4 text-surface-800">
           <Heading title={title} variant="h-3" font="secondary" />

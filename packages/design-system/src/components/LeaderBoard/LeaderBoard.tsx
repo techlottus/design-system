@@ -18,7 +18,7 @@ const LeaderBoard: React.FC<LeaderboardType> = (props: LeaderboardType) => {
   return (
     <div
       className={cn(
-        "w-full w-t:h-52 h-64 text-sm w-t:text-base relative overflow-hidden",
+        "w-full tablet:h-52 h-64 text-sm tablet:text-base relative overflow-hidden",
         [variants[variant]]
       )}
     >
@@ -26,7 +26,7 @@ const LeaderBoard: React.FC<LeaderboardType> = (props: LeaderboardType) => {
         src={imageUrl}
         className="w-full h-full object-cover object-center"
       />
-      <div className="absolute top-0 left-0 p-10 w-t:px-20 w-t:py-12 w-full h-full flex flex-col ">
+      <div className="absolute top-0 left-0 p-10 tablet:px-20 tablet:py-12 w-full h-full flex flex-col ">
         <span className="pb-4">
           <Heading
             title={getTextCount(title, 61)}
@@ -47,7 +47,7 @@ const LeaderBoard: React.FC<LeaderboardType> = (props: LeaderboardType) => {
             </span>
           </div>
         ) : (
-          <div className="flex w-t:flex-row w-t:space-x-4 flex-col space-y-4 w-t:space-y-1">
+          <div className="flex tablet:flex-row tablet:space-x-4 flex-col space-y-4 tablet:space-y-1">
             <span className="flex flex-col space-y-4 font-headings">
               <Extensions {...links?.[0]} />
               <Extensions {...links?.[1]} />

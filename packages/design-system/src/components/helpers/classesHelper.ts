@@ -7,7 +7,7 @@ export const getPositionContainerText = (potition: "center-top" | "center-middle
     "absolute p-10",
     "top-0  left-0",
     "w-full h-full",
-    "hidden w-t:flex "
+    "hidden tablet:flex "
   );
   const positions: {
     "center-top": string;
@@ -64,8 +64,8 @@ const classesSubMenu = cn(
   "shadow shadow-lg",
   "font-normal",
   "bg-surface-100",
-  "w-full h-14 w-d:h-auto xl:h-auto 2xl:h-auto",
-  "invisible w-d:visible",
+  "w-full h-14 desktop:h-auto xl:h-auto 2xl:h-auto",
+  "invisible desktop:visible",
   "pl-2",
   "border-t border-surface-300"
 );
@@ -100,7 +100,7 @@ export const getPositionSliderContainerText = (potition: "center-top" | "center-
     "absolute py-12 px-32",
     "top-0  left-0",
     "w-full h-full",
-    "hidden w-t:flex "
+    "hidden tablet:flex "
   );
   const positions: {
     "center-top": string;

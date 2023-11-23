@@ -12,8 +12,8 @@ const Footer: React.FC<FooterType> = (props: FooterType) => {
   const { logoUrl, newsletter, textLink, links, contact, certificates, legal } =
     props;
   return (
-    <div id="Footer-container" className="w-d:px-20 w-t:px-10 px-6">
-      <div id="footer-desk-tab" className="w-t:flex hidden flex-col">
+    <div id="Footer-container" className="desktop:px-20 tablet:px-10 px-6">
+      <div id="footer-desk-tab" className="tablet:flex hidden flex-col">
         <div
           id="footer-main"
           className="flex justify-between items-center py-10"
@@ -28,7 +28,7 @@ const Footer: React.FC<FooterType> = (props: FooterType) => {
             >
               <div
                 id="subscribe-text"
-                className="flex w-full items-center justify-end  pr-6 font-bold w-t:text-sm w-d:text-base"
+                className="flex w-full items-center justify-end  pr-6 font-bold tablet:text-sm desktop:text-base"
               >
                 {newsletter.text}
               </div>
@@ -45,7 +45,7 @@ const Footer: React.FC<FooterType> = (props: FooterType) => {
                 variant="primary"
                 size="md"
                 iconName={newsletter?.button?.iconName}
-                className="rounded-l-none hidden w-d:flex"
+                className="rounded-l-none hidden desktop:flex"
                 onClick={newsletter?.button?.onClick}
               />
               <Button
@@ -53,7 +53,7 @@ const Footer: React.FC<FooterType> = (props: FooterType) => {
                 variant="primary"
                 size="xsm"
                 iconName={newsletter?.button?.iconName}
-                className="rounded-l-none  w-d:hidden"
+                className="rounded-l-none  desktop:hidden"
                 onClick={newsletter?.button?.onClick}
               />
             </div>
@@ -82,7 +82,7 @@ const Footer: React.FC<FooterType> = (props: FooterType) => {
                   <div id="col1" className="flex flex-col pb-10" key={index}>
                     <div
                       id="title-section1"
-                      className="font-headings font-bold w-d:text-lg text-surface-800 pb-6"
+                      className="font-headings font-bold desktop:text-lg text-surface-800 pb-6"
                     >
                       {link?.titleSection}
                     </div>
@@ -105,22 +105,22 @@ const Footer: React.FC<FooterType> = (props: FooterType) => {
         )}
         <div
           id="contact"
-          className="flex w-d:justify-between py-10 w-d:items-center w-t:flex-col w-d:flex-row"
+          className="flex desktop:justify-between py-10 desktop:items-center tablet:flex-col desktop:flex-row"
         >
-          <div className="flex w-d:items-center w-t:flex-col w-d:flex-row">
-            <div className="font-headings font-bold w-d:text-lg">
+          <div className="flex desktop:items-center tablet:flex-col desktop:flex-row">
+            <div className="font-headings font-bold desktop:text-lg">
               {contact?.text}
             </div>
             <div id="socialmedia" className="flex">
               <SocialMedia
-                className=" flex py-0 h-5 w-t:py-4 w-d:items-center w-t:px-0 w-d:px-6 space-x-8  w-t:justify-start w-d:justify-center "
+                className=" flex py-0 h-5 tablet:py-4 desktop:items-center tablet:px-0 desktop:px-6 space-x-8  tablet:justify-start desktop:justify-center "
                 {...contact?.socialMedia}
               />
             </div>
           </div>
 
           <div className="flex flex-col">
-            <div className="flex w-d:justify-end font-headings font-bold">
+            <div className="flex desktop:justify-end font-headings font-bold">
               {contact?.phoneText}
             </div>
             <div className="flex items-start space-x-2 pt-2">
@@ -137,7 +137,7 @@ const Footer: React.FC<FooterType> = (props: FooterType) => {
           id="certificates"
           className="flex flex-col py-10 border-t border-b border-surface-400"
         >
-          <div className="w-full flex justify-start pb-4 font-headings w-d:text-lg font-bold">
+          <div className="w-full flex justify-start pb-4 font-headings desktop:text-lg font-bold">
             {certificates?.title}
           </div>
           <div className="flex space-x-10">
@@ -166,7 +166,7 @@ const Footer: React.FC<FooterType> = (props: FooterType) => {
           </div>
         </div>
       </div>
-      <div id="footer-mobile" className="w-t:hidden flex flex-col">
+      <div id="footer-mobile" className="tablet:hidden flex flex-col">
         <div id="Logo" className="flex justify-between items-end pb-6">
           <img src={logoUrl} alt="logo-img" className="w-36 h-10" />
           <div
@@ -187,7 +187,7 @@ const Footer: React.FC<FooterType> = (props: FooterType) => {
             <div className="font-headings font-bold ">{contact?.text}</div>
             <div id="socialmedia" className="flex justify-start">
               <SocialMedia
-                className=" h-5 flex  py-4  w-p:px-0 space-x-8w-p:justify-start  "
+                className=" h-5 flex  py-4  mobile:px-0 space-x-8mobile:justify-start  "
                 {...contact?.socialMedia}
               />
             </div>

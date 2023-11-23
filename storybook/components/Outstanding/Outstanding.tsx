@@ -16,29 +16,29 @@ const Outstanding: React.FC<OutstandingType> = (props: OutstandingType) => {
   return (
     <div
       className={cn(
-        "flex flex-col-reverse  w-t:px-6 w-t:pt-6 pt-4",
+        "flex flex-col-reverse  tablet:px-6 tablet:pt-6 pt-4",
         {
-          [" w-t:flex-row-reverse"]: imagePosition === "right",
-          [" w-t:flex-row"]: imagePosition === "left",
+          [" tablet:flex-row-reverse"]: imagePosition === "right",
+          [" tablet:flex-row"]: imagePosition === "left",
         },
         background
       )}
     >
-      <div className="w-t:w-1/2 w-full self-end">
+      <div className="tablet:w-1/2 w-full self-end">
         <Aspect ratio="2/1">
           <img
             src={imageUrl}
             className={cn("w-full h-full object-cover object-center px-0", {
-              ["w-t:pl-8 w-t:pr-0 "]: imagePosition === "right",
-              ["w-t:pr-8 w-t:pl-0 "]: imagePosition === "left",
+              ["tablet:pl-8 tablet:pr-0 "]: imagePosition === "right",
+              ["tablet:pr-8 tablet:pl-0 "]: imagePosition === "left",
             })}
           />
         </Aspect>
       </div>
       <div
-        className={cn("flex flex-col text-surface-100 w-t:w-1/2 w-full px-4", {
-          ["w-t:pr-8 w-t:pl-0"]: imagePosition === "right",
-          ["w-t:pl-8 w-t:pr-0"]: imagePosition === "left",
+        className={cn("flex flex-col text-surface-100 tablet:w-1/2 w-full px-4", {
+          ["tablet:pr-8 tablet:pl-0"]: imagePosition === "right",
+          ["tablet:pl-8 tablet:pr-0"]: imagePosition === "left",
         })}
       >
         <Heading
@@ -47,7 +47,7 @@ const Outstanding: React.FC<OutstandingType> = (props: OutstandingType) => {
           font="secondary"
           className="pb-4"
         />
-        <div className="text-surface-100 font-texts align-center w-t:pb-4 pb-2 w-t:text-base text-sm">
+        <div className="text-surface-100 font-texts align-center tablet:pb-4 pb-2 tablet:text-base text-sm">
           <span dangerouslySetInnerHTML={{ __html: content }} />
         </div>
         <div className="pb-6">

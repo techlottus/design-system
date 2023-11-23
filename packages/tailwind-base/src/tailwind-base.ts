@@ -1,84 +1,53 @@
 export default {
-  contents: [
-    "./pages/**/*.{js,jsx,ts,tsx}",
-    "./components/**/*.{js,jsx,ts,tsx}",
-    "./layouts/**/*.{js,jsx,ts,tsx}",
-  ],
   theme: {
-    fontFamily: {
-      principal: [
-        "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800&display=swap",
-      ],
-      secondary: [
-        "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap",
-      ],
-      icons: [
-        "https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp",
-      ],
-      "icons-outlined": ["Material Icons Outlined"],
-      "icons-solid": ["Material Icons"],
-    },
-    colors: {
-      primary: {
-        100: "#fff3f2",
-        200: "#ace2db",
-        300: "#67bab1",
-        400: "#47a398",
-        500: "#2b897e",
-        600: "#177065",
-        700: "#0a5048",
-      },
-      secondary: {
-        100: "#dda6a7",
-        200: "",
-        300: "",
-        400: "",
-        500: "",
-        600: "",
-        700: "",
-        800: "",
-        900: "",
-      },
-
-      neutral: {
-        100: "#fff",
-        200: "#f2f2f2",
-        300: "#e6e6e6",
-        400: "#cdcdcd",
-        500: "#9a9a9a",
-        600: "#686868",
-        700: "#818181",
-        800: "#282828",
-        900: "#000",
-      },
-      outstanding: {
-        100: "#66CBBF",
-        200: "#DD7265",
-        300: "#F2BB43",
-        400: "#A1203E",
-        500: "",
-      },
-      success: { 100: "", 200: "", 300: "", 400: "", 500: "" },
-    },
     extend: {
-      boxShadow: {
-        lb: "4px 6px 0px 0px rgba(0, 0, 0, 1)",
+      "screens": {
+        "mobile": {
+          "max": "599px"
+        },
+        "tablet": {
+          "min": "600px",
+          "max": "1023px"
+        },
+        "desktop": {
+          "min": "1024px"
+        },
       },
-      height: {
-        "9/10": "90%",
+      "fontSize": {
+        "xs": ["0.75rem", "125%"],
+        "sm": ["0.875rem", "125%"],
+        "base": ["1rem", "125%"],
+        "lg": ["1.125rem", "125%"],
+        "xl": ["1.25rem", "125%"],
+        "2xl": ["1.5rem", "125%"],
+        "3xl": ["1.75rem", "125%"],
+        "4xl": ["2rem", "125%"],
+        "5xl": ["2.125rem", "125%"],
+        "6xl": ["2.5rem", "125%"],
+        "7xl": ["3.25rem", "125%"],
+        "8xl": ["3.875rem", "125%"]
       },
-      width: {
-        "22.5": "90px",
+      "aspectRatio": {
+        "1/1": "1 / 1",
+        "1/2": "1 / 2",
+        "2/1": "2 / 1",
+        "3/4": "3 / 4",
+        "4/3": "4 / 3",
+        "7/2": "7 / 2"
       },
-      padding: {
-        "24.75": "99px",
+      "boxShadow": {
+        "r-sm": "0px 2px 12px rgba(0,0,0,0.12)",
+        "r-md": "0px 5px 15px rgba(0, 0, 0, 0.15)",
+        "r-lg": "0px 10px 30px rgba(0, 0, 0, 0.15)",
+        "r-xl": "0px 30px 60px rgba(0, 0, 0, 0.15)",
+        "r-solid": "4px 6px 0px 0px rgba(0, 0, 0, 1)",
+        "l-sm": "0px 2px 12px rgba(0,0,0,0.12)",
+        "l-md": "0px 5px 15px rgba(0, 0, 0, 0.15)",
+        "l-lg": "0px 10px 30px rgba(0, 0, 0, 0.15)",
+        "l-xl": "0px 30px 60px rgba(0, 0, 0, 0.15)",
+        "l-solid": "4px 6px 0px 0px rgba(0, 0, 0, 1)",
       },
-    },
-  },
-  variants: {
-    extend: {
-      fill: ["dark"],
-    },
+    }
   },
   plugins: [],
-};
+}

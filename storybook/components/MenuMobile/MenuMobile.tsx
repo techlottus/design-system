@@ -44,7 +44,7 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
   };
 
   const ClassesMenuMobContainer: string = cn(
-    "w-d:hidden w-full ",
+    "desktop:hidden w-full ",
     "bg-surface-100",
     "border-t border-surface-300",
     "p-2 top-12",
@@ -68,7 +68,7 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
           <div
             id="MenuOptions"
             className={cn(
-              "h-80 w-full overflow-y-scroll w-d:hidden flex overscroll-contain pr-2 -translate-x-full transition  ease-in-out delay-150 transform-gpu",
+              "h-80 w-full overflow-y-scroll desktop:hidden flex overscroll-contain pr-2 -translate-x-full transition  ease-in-out delay-150 transform-gpu",
               {
                 ["translate-x-0 translate-y-0"]: type === "principal",
                 ["translate-x-0 translate-y-0 absolute opacity-100"]:
@@ -134,7 +134,7 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
           <div
             id="subMenu"
             className={cn(
-              "w-full h-full top-2 left-0 absolute bg-surface-100 overflow-auto w-d:hidden flex overscroll-contain transform-gpu transition-all ease-in-out ",
+              "w-full h-full top-2 left-0 absolute bg-surface-100 overflow-auto desktop:hidden flex overscroll-contain transform-gpu transition-all ease-in-out ",
               {
                 ["translate-x-0 translate-y-0"]: sub === "principal",
                 ["translate-x-full translate-y-0"]: sub !== "principal",
@@ -211,7 +211,7 @@ const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
 
           <div
             id="info"
-            className=" absolute bottom-10 w-d:hidden bg-surface-100 flex flex-1 flex-col w-full"
+            className=" absolute bottom-10 desktop:hidden bg-surface-100 flex flex-1 flex-col w-full"
           >
             <div className="py-2 px-2">
               <Button

@@ -102,13 +102,13 @@ const Breadcrumb: React.FC<BreadcrumbType> = (props: BreadcrumbType) => {
       </ul>
       <div
         className={cn(
-          "rounded  border border-surface-200 shadow-2 shadow-surface-200 drop-shadow w-t:hidden font-headings",
+          "rounded  border border-surface-200 shadow-2 shadow-surface-200 drop-shadow tablet:hidden font-headings",
           { ["hidden"]: isExpand === false }
         )}
         onMouseEnter={handleOnHover}
         onMouseLeave={handleOnLeave}
       >
-        <div className="flex-col w-t:hidden ">
+        <div className="flex-col tablet:hidden ">
           {links?.map((link: any, linkIndex: any) => (
             <div
               className={cn(
