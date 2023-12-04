@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import * as tailwindBaseLottus from "./tenants/LOTTUS/tailwindBase"
 import * as tailwindBase from "@lottuseducation/tailwind-base";
 
 module.exports = {
@@ -10,7 +11,7 @@ module.exports = {
     "./node_modules/@lottuseducation/numbers/**/*.{js,jsx,ts,tsx}",
     ,
   ],
-  presets: [tailwindBase.default],
+  presets: [tailwindBaseLottus.default, tailwindBase.default],
   theme: {},
   plugins: [],
 };

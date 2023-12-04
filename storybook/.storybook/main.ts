@@ -13,10 +13,11 @@ const config: StorybookConfig = {
         // For more details on this addon's options.
         postCss: true,
       },
-    },
+    }, '@storybook/addon-viewport', 'storybook-addon-themes'
   ],
   framework: getAbsolutePath("@storybook/react-webpack5"),
   stories: ["../stories/**/*.mdx", "../stories/**/*.stories.@(js|jsx|ts|tsx)"],
+  staticDirs: ['../public'],
   docs: {
     autodocs: "tag",
   },

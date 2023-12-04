@@ -1,7 +1,7 @@
 import AccordionItem from "../components/AccordionItem";
 
 export default {
-  title: "AccordionItem",
+  title: "MOLECULES/AccordionItem",
   component: AccordionItem,
   tags: ["autodocs"],
   args: {

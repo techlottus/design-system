@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
  * * The footer contains a number of key informational elements, such as contact and copyright information, and links to secondary pages related to the site, such as social media channels or legal notices.
  * * The footer is a permanent element of the site, that is, it is the same on all pages of the site (and, logically, it should be present on all of them). */
 export default {
-  title: "Footer",
+  title: "ORGANISMS/Footer",
   component: Footer,
   tags: ["autodocs"],
   args: {

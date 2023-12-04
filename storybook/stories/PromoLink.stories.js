@@ -5,7 +5,7 @@ It is used within the website in order to take users to another part of the same
 
 Generally it will be composed of image, text and button (CTA). */
 export default {
-  title: "PromoLink",
+  title: "ORGANISMS/PromoLink",
   component: PromoLink,
   tags: ["autodocs"],
   args: {

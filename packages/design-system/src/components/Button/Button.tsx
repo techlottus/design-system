@@ -11,7 +11,7 @@ const sizes: ButtonSize = {
 
 const variants: ButtonVariant = {
   primary: cn(
-    "bg-surface-900 hover:bg-surface-800 focus:bg-surface-600 active:bg-surface-600",
+    "bg-primary-500 hover:bg-primary-800 focus:bg-primary-600 active:bg-primary-600",
     "text-surface-100",
     "border border-surface-900 active:border-0 active:ring-0 focus:border-surface-900 focus:ring-2 focus:ring-surface-900 focus:outline-none"
   ),

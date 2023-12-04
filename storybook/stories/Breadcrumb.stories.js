@@ -1,6 +1,6 @@
 import Breadcrumb from "../components/Breadcrumb";
 export default {
-  title: "Breadcrumb",
+  title: "ORGANISMS/Breadcrumb",
   component: Breadcrumb,
   tags: ["autodocs"],
   args: {

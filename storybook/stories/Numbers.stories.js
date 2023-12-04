@@ -1,6 +1,6 @@
 import Numbers from "../components/Numbers";
 export default {
-  title: "Numbers",
+  title: "ORGANISMS/Numbers",
   component: Numbers,
   tags: ["autodocs"],
   args: {

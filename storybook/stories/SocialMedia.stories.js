@@ -1,6 +1,6 @@
 import SocialMedia from "../components/SocialMedia";
 export default {
-  title: "SocialMedia",
+  title: "MOLECULES/SocialMedia",
   component: SocialMedia,
   tags: ["autodocs"],
   args: {

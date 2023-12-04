@@ -5,7 +5,7 @@ Links are used when you’re navigating to another place or do secondary actions
 Buttons are used when you are performing an action, such as: “Submit”, “Buy”, “Create new”, etc.
  */
 export default {
-  title: "Button",
+  title: "MOLECULES/Button",
   component: Button,
   tags: ["autodocs"],
   args: {

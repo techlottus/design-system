@@ -1,6 +1,6 @@
 import Accordion from "../components/Accordion";
 export default {
-  title: "Accordion",
+  title: "ORGANISMS/Accordion",
   component: Accordion,
   tags: ["autodocs"],
   args: {
