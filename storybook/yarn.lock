@@ -1735,7 +1735,7 @@
     "keen-slider" "^6.8.5"
 
 "@lottuseducation/tailwind-base@file:../packages/tailwind-base/lottuseducation-tailwind-base-v1.10.2-alpha.0.tgz":
-  "integrity" "sha512-ZLw+xEy91e9DXm1BOKuxt5SvnvV+9ZMRVsp3MpsDSOqzORe6xUvMw3oWGaphRTDO0I8+yN1Tf+gBr+o6ciJXMQ=="
+  "integrity" "sha512-ACitnUG2BPLxCcgRGXteedcnHtq4vEJXgjhW/8btUB97D5UTd+pmBj+3QTtbgfw/MyJYoDgCqdJwSjBIC74fqA=="
   "resolved" "file:../packages/tailwind-base/lottuseducation-tailwind-base-v1.10.2-alpha.0.tgz"
   "version" "1.10.2-alpha.0"
   dependencies:
@@ -2310,7 +2310,14 @@
     "sass-loader" "^13.2.2"
     "style-loader" "^3.3.2"
 
+"@storybook/addon-toolbars@^7.6.3":
+  "integrity" "sha512-8GpwOt0J5yLrJhTr9/h0a/LTDjt49FhdvdxiVWLlLMrjIXSIc7j193ZgoHfnlwVhJS5zojcjB+HmRw/E+AneoA=="
+  "resolved" "https://registry.npmjs.org/@storybook/addon-toolbars/-/addon-toolbars-7.6.3.tgz"
+  "version" "7.6.3"
+
 "@storybook/addon-toolbars@7.2.1":
+  "integrity" "sha512-SEDj9f0EgifPK/Eyh703N1tbk7SZ7yAZOnNUK8T0mwdKrMa7jskvYuift8iSnJA2ldp1siqwe1Obq+Oielp9hQ=="
+  "resolved" "https://registry.npmjs.org/@storybook/addon-toolbars/-/addon-toolbars-7.2.1.tgz"
   "version" "7.2.1"
   dependencies:
     "@storybook/client-logger" "7.2.1"

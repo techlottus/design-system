@@ -1,6 +1,10 @@
 export default {
   theme: {
     extend: {
+      "fontFamily": {
+        "icons-solid": ["Material Icons"],
+        "icons-outlined": ["material-icons-outlined"],
+      },
       "screens": {
         "mobile": {
           "max": "599px"
@@ -12,7 +16,8 @@ export default {
         "desktop": {
           "min": "1024px"
         },
-      },
+      }
+      ,
       "fontSize": {
         "xs": ["0.75rem", "125%"],
         "sm": ["0.875rem", "125%"],
