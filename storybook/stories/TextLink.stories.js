@@ -1,6 +1,6 @@
 import TextLink from "../components/TextLink";
 export default {
-  title: "TextLink",
+  title: "MOLECULES/TextLink",
   component: TextLink,
   tags: ["autodocs"],
   args: {

@@ -31,15 +31,15 @@ const PromoLink = (props: PromoLinkConfig) => {
         id="promo-link-shadow"
         className={cn(
           { ["hidden"]: variant === "image" },
-          "h-full w-full rounded border p-4  shadow-lb bg-neutral-100 cursor-pointer",
+          "h-full w-full rounded border p-4  shadow-lb bg-surface-100 cursor-pointer",
           border
         )}
         onClick={handleOnClick}
       >
-        <div className="font-principal font-bold">
+        <div className="font-headings font-bold">
           <span>{getTextCount(text, 52)}</span>
         </div>
-        <div className=" w-full font-principal flex font-bold relative justify-end ">
+        <div className=" w-full font-headings flex font-bold relative justify-end ">
           <span>
             <Icon iconName="arrow_forward" />
           </span>
@@ -58,13 +58,13 @@ const PromoLink = (props: PromoLinkConfig) => {
             className="w-full h-full object-cover object-center mix-blend-multiply bg-blend-multiply "
           />
           <div
-            className="w-full h-full absolute top-0 left-0 p-4 flex flex-col justify-between text-neutral-100 cursor-pointer group"
+            className="w-full h-full absolute top-0 left-0 p-4 flex flex-col justify-between text-surface-100 cursor-pointer group"
             onClick={handleOnClick}
           >
-            <div className="flex font-principal font-bold">
+            <div className="flex font-headings font-bold">
               <Heading title={getTextCount(text, 52)} variant="h-5" />
             </div>
-            <div className=" w-full font-principal flex font-bold  justify-end ">
+            <div className=" w-full font-headings flex font-bold  justify-end ">
               <span className="group-hover:animate-ping">
                 <Icon iconName="arrow_forward" />
               </span>

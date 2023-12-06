@@ -36,24 +36,23 @@ const Menu: React.FC<MenuType> = (props: MenuType) => {
   };
   //classes
   const classLanguages = cn(
-    " flex relative flex-1 flex-start text-primary-500 font-bold font-principal",
+    " flex relative flex-1 flex-start text-primary-500 font-bold font-headings",
     { ["invisible"]: !languages }
   );
 
   return (
     <div
-      className={`sticky ${
-        scrollDirection === "down" && !IconOpen ? "-top-40" : "top-0"
-      } z-20 bg-white transition duration-100`}
+      className={`sticky ${scrollDirection === "down" && !IconOpen ? "-top-40" : "top-0"
+        } z-20 bg-white transition duration-100`}
       style={{ background: "#fff" }}
     >
       <header
         id="NavbarDesk"
-        className="flex flex-1 hidden lg:flex p-1 h-14 lg:h-auto shadow-lg bg-white"
+        className="flex flex-1 hidden desktop:flex p-1 h-14 desktop:h-auto shadow-lg bg-white"
       >
         <div
           id="Logo"
-          className="flex relative p-4 items-center justify-items-center border-r border-neutral-300"
+          className="flex relative p-4 items-center justify-items-center border-r border-surface-300"
         >
           <img className="w-36 h-10" src={data.logotype.src} alt="logo" />
         </div>
@@ -61,10 +60,10 @@ const Menu: React.FC<MenuType> = (props: MenuType) => {
           <div className="flex flex-row flex-1 w-full">
             <div
               id="Languages"
-              className="flex flex-start flex-grow px-6 my-1 border-b border-neutral-300 h-6"
+              className="flex flex-start flex-grow px-6 my-1 border-b border-surface-300 h-6"
             >
               <div className={classLanguages}>
-                <span className="border-r  border-neutral-300 pr-2  ">
+                <span className="border-r  border-surface-300 pr-2  ">
                   <a>ES</a>
                 </span>
                 <span className="px-2 ">
@@ -74,15 +73,15 @@ const Menu: React.FC<MenuType> = (props: MenuType) => {
             </div>
             <div
               id="Options"
-              className="flex border-b border-neutral-300 my-1 justify-items-end h-6"
+              className="flex border-b border-surface-300 my-1 justify-items-end h-6"
             >
-              <span className="flex flex-nowrap relative pr-7 text-neutral-500 font-principal">
+              <span className="flex flex-nowrap relative pr-7 text-surface-500 font-headings">
                 Accesos para :
               </span>
-              <div className="flex flex-1 flex-end flex-nowrap pr-6 cursor-pointer justify-center text-primary-500 font-principal font-bold">
+              <div className="flex flex-1 flex-end flex-nowrap pr-6 cursor-pointer justify-center text-primary-500 font-headings font-bold">
                 <a>Egresados</a>
               </div>
-              <div className="flex flex-1 flex-end flex-nowrap pr-6 cursor-pointer justify-center text-primary-500 font-principal font-bold">
+              <div className="flex flex-1 flex-end flex-nowrap pr-6 cursor-pointer justify-center text-primary-500 font-headings font-bold">
                 <a>Estudiantes</a>
               </div>
             </div>
@@ -92,7 +91,7 @@ const Menu: React.FC<MenuType> = (props: MenuType) => {
               id="Menu"
               className="flex flex-grow relative px-6 items-center"
             >
-              <ul className="flex space-x-5 whitespace-nowrap border-top border-neutral-300">
+              <ul className="flex space-x-5 whitespace-nowrap border-top border-surface-300">
                 {data.menus.map(
                   (element: MenuElementType, itemIndex: number) => {
                     if (element.items?.length) {
@@ -136,7 +135,7 @@ const Menu: React.FC<MenuType> = (props: MenuType) => {
             </nav>
             <div
               id="Search"
-              className="flex justify-center cursor-pointer border-r border-l border-neutral-300 py-4 my-2 hidden"
+              className="flex justify-center cursor-pointer border-r border-l border-surface-300 py-4 my-2 hidden"
             >
               <Icon iconName="search" />
             </div>
@@ -168,7 +167,7 @@ const Menu: React.FC<MenuType> = (props: MenuType) => {
           (subitem: MenuItemsTypes, subitemIndex: number) => (
             <div
               key={subitemIndex}
-              className=" border-r border-neutral-300 h-auto flex flex-row flex-grow flex-1 flex-nowrap flex-inline relative "
+              className=" border-r border-surface-300 h-auto flex flex-row flex-grow flex-1 flex-nowrap flex-inline relative "
             >
               <div className={getClassItem(false, subitem.active)}>
                 <TextLink
@@ -184,10 +183,10 @@ const Menu: React.FC<MenuType> = (props: MenuType) => {
 
       <header
         id="NavbarMobile"
-        className="flex absolute lg:hidden z-20 px-1 py-1 shadow top-0 w-full"
+        className="flex absolute desktop:hidden z-20 px-1 py-1 shadow top-0 w-full"
         style={{ background: "#fff" }}
       >
-        <div id="menu" className="border-r-2 border-neutral-300  px-2">
+        <div id="menu" className="border-r-2 border-surface-300  px-2">
           <div
             id="icon"
             className="py-4 px-2 w-12 h-12 flex items-center justify-center cursor-pointer"
@@ -211,7 +210,7 @@ const Menu: React.FC<MenuType> = (props: MenuType) => {
         </div>
         <div
           id="search"
-          className="flex relative flex-end hidden border-l-2  border-neutral-300 px-2"
+          className="flex relative flex-end hidden border-l-2  border-surface-300 px-2"
         >
           <div className="py-4 px-2 w-12 h-12 flex hidden items-center justify-center cursor-pointer ">
             <Icon iconName="search" />

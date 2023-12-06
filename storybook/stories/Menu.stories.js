@@ -2,7 +2,7 @@ import Menu from "../components/Menu";
 /** The header is composed of several levels, mainly we have nav-bar which is the bar that contains elements such as the logo, address links, CTA, search button etc..
  */
 export default {
-  title: "Menu",
+  title: "ORGANISMS/Menu",
   component: Menu,
   tags: ["autodocs"],
   args: {

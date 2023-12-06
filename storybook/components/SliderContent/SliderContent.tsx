@@ -54,16 +54,16 @@ const SliderContent: React.FC<SliderContentType> = (
       </div>
       <div
         id="slider-content-mobile"
-        className="w-full h-full flex flex-col md:hidden "
+        className="w-full h-full flex flex-col tablet:hidden "
       >
-        <div className="py-4 text-neutral-800">
+        <div className="py-4 text-surface-800">
           <Heading title={title} variant="h-3" font="secondary" />
         </div>
-        <div className="pb-4 text-neutral-800 font-secondary">
+        <div className="pb-4 text-surface-800 font-texts">
           <Heading title={content} variant="h-6" font="secondary" />
         </div>
         {button && (
-          <div className="pb-4 font-secondary">
+          <div className="pb-4 font-texts">
             <Button
               label={button?.label}
               variant="primary"

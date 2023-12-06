@@ -1,6 +1,6 @@
 import Numbers from "../components/Numbers";
 export default {
-  title: "Numbers",
+  title: "ORGANISMS/Numbers",
   component: Numbers,
   tags: ["autodocs"],
   args: {
@@ -9,7 +9,7 @@ export default {
     iconName: "people",
     description: "Numbers component",
     variant: "shadow",
-    border: "border-neutral-700 shadow-neutral-700",
+    border: "border-surface-700 shadow-surface-700",
   },
   argTypes: {
     variant: {

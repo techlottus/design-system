@@ -1,6 +1,6 @@
 import Heading from "../components/Heading";
 export default {
-  title: "Heading",
+  title: "ATOMS/Heading",
   component: Heading,
   tags: ["autodocs"],
   args: {

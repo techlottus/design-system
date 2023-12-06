@@ -1,6 +1,6 @@
 import Rainbow from "../components/Rainbow";
 export default {
-  title: "Rainbow",
+  title: "ORGANISMS/Rainbow",
   component: Rainbow,
   tags: ["autodocs"],
   args: {

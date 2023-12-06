@@ -25,7 +25,7 @@ const Counter: React.FC<CounterType> = ({ maxNumber }: CounterType) => {
   return (
     <span
       ref={containerRef}
-      className="font-secondary text-2xl lg:text-5xl md:text-3xl font-bold leading-4 sm:leading-5"
+      className="font-texts text-2xl desktop:text-5xl tablet:text-3xl font-bold leading-4 mobile:leading-5"
     >
       {count}
     </span>

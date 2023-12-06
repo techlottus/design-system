@@ -5,7 +5,7 @@ It is used within the website in order to take users to another part of the same
 
 Generally it will be composed of image, text and button (CTA). */
 export default {
-  title: "PromoLink",
+  title: "ORGANISMS/PromoLink",
   component: PromoLink,
   tags: ["autodocs"],
   args: {
@@ -27,9 +27,9 @@ export default {
         "border-outstanding-300 shadow-outstanding-300",
         "border-outstanding-400 shadow-outstanding-400",
         "border-outstanding-200 shadow-outstanding-200",
-        "border-neutral-500 shadow-neutral-500",
-        "border-neutral-800 shadow-neutral-800",
-        "border-neutral-900 shadow-neutral-900",
+        "border-surface-500 shadow-surface-500",
+        "border-surface-800 shadow-surface-800",
+        "border-surface-900 shadow-surface-900",
         "",
       ],
       control: { type: "select" },
@@ -40,9 +40,9 @@ export default {
         "bg-outstanding-200 ",
         "bg-outstanding-300 ",
         "bg-outstanding-400 ",
-        "bg-neutral-500 ",
-        "bg-neutral-800 ",
-        "bg-neutral-900 ",
+        "bg-surface-500 ",
+        "bg-surface-800 ",
+        "bg-surface-900 ",
         "",
       ],
       control: { type: "select" },

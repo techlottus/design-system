@@ -16,29 +16,29 @@ const Outstanding: React.FC<OutstandingType> = (props: OutstandingType) => {
   return (
     <div
       className={cn(
-        "flex flex-col-reverse  md:px-6 md:pt-6 pt-4",
+        "flex flex-col-reverse  tablet:px-6 tablet:pt-6 pt-4",
         {
-          [" md:flex-row-reverse"]: imagePosition === "right",
-          [" md:flex-row"]: imagePosition === "left",
+          [" tablet:flex-row-reverse"]: imagePosition === "right",
+          [" tablet:flex-row"]: imagePosition === "left",
         },
         background
       )}
     >
-      <div className="md:w-1/2 w-full self-end">
+      <div className="tablet:w-1/2 w-full self-end">
         <Aspect ratio="2/1">
           <img
             src={imageUrl}
             className={cn("w-full h-full object-cover object-center px-0", {
-              ["md:pl-8 md:pr-0 "]: imagePosition === "right",
-              ["md:pr-8 md:pl-0 "]: imagePosition === "left",
+              ["tablet:pl-8 tablet:pr-0 "]: imagePosition === "right",
+              ["tablet:pr-8 tablet:pl-0 "]: imagePosition === "left",
             })}
           />
         </Aspect>
       </div>
       <div
-        className={cn("flex flex-col text-neutral-100 md:w-1/2 w-full px-4", {
-          ["md:pr-8 md:pl-0"]: imagePosition === "right",
-          ["md:pl-8 md:pr-0"]: imagePosition === "left",
+        className={cn("flex flex-col text-surface-100 tablet:w-1/2 w-full px-4", {
+          ["tablet:pr-8 tablet:pl-0"]: imagePosition === "right",
+          ["tablet:pl-8 tablet:pr-0"]: imagePosition === "left",
         })}
       >
         <Heading
@@ -47,7 +47,7 @@ const Outstanding: React.FC<OutstandingType> = (props: OutstandingType) => {
           font="secondary"
           className="pb-4"
         />
-        <div className="text-neutral-100 font-secondary align-center md:pb-4 pb-2 md:text-base text-sm">
+        <div className="text-surface-100 font-texts align-center tablet:pb-4 pb-2 tablet:text-base text-sm">
           <span dangerouslySetInnerHTML={{ __html: content }} />
         </div>
         <div className="pb-6">

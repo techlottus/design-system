@@ -22,7 +22,7 @@ const Tabs: React.FC<TabsConfig> = (props: TabsConfig) => {
             <li onClick={() => handleToggle(indexTab)} key={indexTab}>
               <Tab
                 active={clicked === indexTab}
-                className="first:border-l border-neutral-300"
+                className="first:border-l border-surface-300"
                 {...tab}
               />
             </li>

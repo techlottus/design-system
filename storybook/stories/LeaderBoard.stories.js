@@ -6,7 +6,7 @@ It is used within the website in order to take users to another part of the same
 
 Generally it will be composed of background image, icons and text. */
 export default {
-  title: "LeaderBoard",
+  title: "ORGANISMS/LeaderBoard",
   component: LeaderBoard,
   tags: ["autodocs"],
   args: {

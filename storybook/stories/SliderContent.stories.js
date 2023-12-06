@@ -1,6 +1,6 @@
 import SliderContent from "../components/SliderContent";
 export default {
-  title: "SliderContent",
+  title: "MOLECULES/SliderContent",
   component: SliderContent,
   tags: ["autodocs"],
   args: {

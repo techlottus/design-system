@@ -10,7 +10,7 @@ const Tab: React.FC<TabConfig> = (props: TabConfig) => {
     active = false,
     className = "",
     iconName,
-    onClick = () => {},
+    onClick = () => { },
   } = props;
 
   return (
@@ -19,9 +19,9 @@ const Tab: React.FC<TabConfig> = (props: TabConfig) => {
         className={cn(
           "flex relative  justify-center p-4  items-center whitespace-nowrap ",
           {
-            ["bg-neutral-900 text-neutral-100 drop-shadow-md border-b-2 border border-neutral-900"]:
+            ["bg-surface-900 text-surface-100 drop-shadow-md border-b-2 border border-surface-900"]:
               active,
-            ["bg-neutral-100 text-neutral-900 border-b-2 border-t border-r border-neutral-300  border-b-primary-500"]:
+            ["bg-surface-100 text-surface-900 border-b-2 border-t border-r border-surface-300  border-b-primary-500"]:
               !active,
           },
           className
@@ -55,7 +55,7 @@ const Tab: React.FC<TabConfig> = (props: TabConfig) => {
       </div>
       <div className={cn("flex justify-center h-2", { ["hidden"]: !active })}>
         {/* <img className="h-2 " src={polygon} alt="polygon" /> */}
-        <SVGIcons name="polygonTab" className="text-neutral-900" />
+        <SVGIcons name="polygonTab" className="text-surface-900" />
       </div>
     </div>
   );

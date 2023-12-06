@@ -1,6 +1,6 @@
 import Slider from "../components/Slider";
 export default {
-  title: "Slider",
+  title: "ORGANISMS/Slider",
   component: Slider,
   tags: ["autodocs"],
   args: {

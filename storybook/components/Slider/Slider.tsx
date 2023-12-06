@@ -11,7 +11,7 @@ const Slider: React.FC<SliderType> = (props: SliderType) => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [loaded, setLoaded] = useState<boolean>(false);
   const stylesBaseControls =
-    "select-none absolute  p-4 rounded-lg text-sm sm:hidden";
+    "select-none absolute  p-4 rounded-lg text-sm mobile:hidden";
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     breakpoints: {
@@ -45,7 +45,7 @@ const Slider: React.FC<SliderType> = (props: SliderType) => {
           {slides.map((slide: SlideType, i: number) => (
             <section key={`slide-item-${i}`}>
               <div className="keen-slider__slide">
-                <div className="flex w-full hidden md:flex ">
+                <div className="flex w-full hidden tablet:flex ">
                   <Aspect ratio="2/1">
                     <img
                       className={cn(
@@ -63,7 +63,7 @@ const Slider: React.FC<SliderType> = (props: SliderType) => {
                     </div>
                   </Aspect>
                 </div>
-                <div className="md:hidden flex flex-col px-6 w-full ">
+                <div className="tablet:hidden flex flex-col px-6 w-full ">
                   <Aspect ratio="1/1">
                     <img
                       className={cn(
@@ -89,7 +89,7 @@ const Slider: React.FC<SliderType> = (props: SliderType) => {
         <>
           <div
             className={cn(
-              "z-20 left-8 top-[35%]  md:block hidden cursor-pointer w-14 h-14 rounded-lg bg-neutral-200 opacity-50 flex items-center align-middle justify-center ",
+              "z-20 left-8 top-[35%]  tablet:block hidden cursor-pointer w-14 h-14 rounded-lg bg-surface-200 opacity-50 flex items-center align-middle justify-center ",
               stylesBaseControls
             )}
           >
@@ -104,7 +104,7 @@ const Slider: React.FC<SliderType> = (props: SliderType) => {
           </div>
           <div
             className={cn(
-              "z-20 right-8 top-[35%]  md:block hidden cursor-pointer  w-14 h-14 rounded-lg bg-neutral-200 opacity-50 flex items-center align-middle justify-center",
+              "z-20 right-8 top-[35%]  tablet:block hidden cursor-pointer  w-14 h-14 rounded-lg bg-surface-200 opacity-50 flex items-center align-middle justify-center",
               stylesBaseControls
             )}
           >
@@ -125,7 +125,7 @@ const Slider: React.FC<SliderType> = (props: SliderType) => {
                 key={`bullet-item-${i}`}
                 onClick={() => activeBulletSlide(i)}
                 className={cn(
-                  "h-4 bg-neutral-600 rounded-full cursor-pointer",
+                  "h-4 bg-surface-600 rounded-full cursor-pointer",
                   {
                     "w-4": i !== currentSlide,
                     "w-8": i === currentSlide,

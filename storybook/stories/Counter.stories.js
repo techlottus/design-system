@@ -1,6 +1,6 @@
 import Counter from "../components/Counter";
 export default {
-  title: "Counter",
+  title: "TECHNICAL COMPONENTS/Counter",
   component: Counter,
   tags: ["autodocs"],
   args: {

@@ -3,7 +3,7 @@ import Outstanding from "../components/Outstanding";
 It is often used as a display of tab information, but it is not mandatory to use it only with tabs.
 It is important to consider the maximum number of characters for this component, as well as the suggested use of silhouetted images.  */
 export default {
-  title: "Outstanding",
+  title: "ORGANISMS/Outstanding",
   component: Outstanding,
   tags: ["autodocs"],
   args: {

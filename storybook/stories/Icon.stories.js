@@ -1,6 +1,6 @@
 import Icon from "../components/Icon";
 export default {
-  title: "Icon",
+  title: "ATOMS/Icon",
   component: Icon,
   tags: ["autodocs"],
   args: {

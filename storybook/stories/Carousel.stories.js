@@ -1,6 +1,6 @@
 import Carousel from "../components/Carousel";
 export default {
-  title: "Carousel",
+  title: "ORGANISMS/Carousel",
   component: Carousel,
   tags: ["autodocs"],
   args: {

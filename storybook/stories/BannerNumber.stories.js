@@ -1,6 +1,6 @@
 import BannerNumber from "../components/BannerNumbers";
 export default {
-  title: "BannerNumber",
+  title: "ORGANISMS/BannerNumber",
   component: BannerNumber,
   tags: ["autodocs"],
   args: {
@@ -8,7 +8,7 @@ export default {
     title: "Demo BannerNumber",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     overlay: "",
-    className: "text-neutral-100",
+    className: "text-surface-100",
     numbers: [
       {
         number: 12000,

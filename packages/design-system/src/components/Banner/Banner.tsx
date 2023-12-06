@@ -21,7 +21,7 @@ const Banner: React.FC<BannerType> = (props: BannerType) => {
   } = props;
   return (
     <div className={className}>
-      <div className="hidden xl:block lg:block ">
+      <div className="hidden xl:block desktop:block ">
         <Aspect ratio={desktopRatio}>
           <img
             className={cn("w-full h-full object-cover object-center", {
@@ -46,7 +46,7 @@ const Banner: React.FC<BannerType> = (props: BannerType) => {
           />
         </Aspect>
       </div>
-      <div className="hidden xl:hidden lg:hidden md:block  ">
+      <div className="hidden  desktop:hidden tablet:block  ">
         <Aspect ratio={tabletRatio}>
           <img
             className={cn("w-full h-full object-cover object-center", {
@@ -71,7 +71,7 @@ const Banner: React.FC<BannerType> = (props: BannerType) => {
           />
         </Aspect>
       </div>
-      <div className="lg:hidden md:hidden flex flex-col space-x-1 ">
+      <div className="desktop:hidden tablet:hidden flex flex-col space-x-1 ">
         <div className="w-full h-full flex relative ">
           <Aspect ratio={mobileRatio}>
             <img
