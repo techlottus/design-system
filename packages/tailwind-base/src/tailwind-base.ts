@@ -1,24 +1,24 @@
 export default {
   theme: {
     extend: {
-      "fontFamily": {
+      fontFamily: {
         "icons-solid": ["Material Icons"],
-        "icons-outlined": ["material-icons-outlined"],
+        "icons-outlined": ["material icons outlined"],
       },
-      "screens": {
-        "mobile": {
+      screens: {
+        mobile: {
           "max": "599px"
         },
-        "tablet": {
+        tablet: {
           "min": "600px",
           "max": "1023px"
         },
-        "desktop": {
+        desktop: {
           "min": "1024px"
         },
       }
       ,
-      "fontSize": {
+      fontSize: {
         "xs": ["0.75rem", "125%"],
         "sm": ["0.875rem", "125%"],
         "base": ["1rem", "125%"],
@@ -32,7 +32,7 @@ export default {
         "7xl": ["3.25rem", "125%"],
         "8xl": ["3.875rem", "125%"]
       },
-      "aspectRatio": {
+      aspectRatio: {
         "1/1": "1 / 1",
         "1/2": "1 / 2",
         "2/1": "2 / 1",
@@ -40,7 +40,7 @@ export default {
         "4/3": "4 / 3",
         "7/2": "7 / 2"
       },
-      "boxShadow": {
+      boxShadow: {
         "r-sm": "0px 2px 12px rgba(0,0,0,0.12)",
         "r-md": "0px 5px 15px rgba(0, 0, 0, 0.15)",
         "r-lg": "0px 10px 30px rgba(0, 0, 0, 0.15)",
