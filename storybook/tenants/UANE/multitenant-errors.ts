@@ -3,7 +3,7 @@ const errors: {[key:string]: { error_code:string; default_message:string; defaul
     "error_code": "404",
     "default_message": "hubo un error inesperado",
     "default_title": "lo sentimos",
-    "image": "https://pro-portalverse-lottus.s3.amazonaws.com/UANE/404_1724a01b22.png"
+    "image": "https://pro-portalverse-lottus.s3.amazonaws.com/UTEG/404_068eb52796.jpg"
   }
 } 
  export default errors

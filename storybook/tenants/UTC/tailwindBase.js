@@ -48,34 +48,6 @@ export default {
       "900": "var(--surface-900)",
       "950": "var(--surface-950)"
     },
-    "info": {
-      "0": "var(--info-0)",
-      "50": "var(--info-50)",
-      "100": "var(--info-100)",
-      "200": "var(--info-200)",
-      "300": "var(--info-300)",
-      "400": "var(--info-400)",
-      "500": "var(--info-500)",
-      "600": "var(--info-600)",
-      "700": "var(--info-700)",
-      "800": "var(--info-800)",
-      "900": "var(--info-900)",
-      "950": "var(--info-950)"
-    },
-    "warning": {
-      "0": "var(--warning-0)",
-      "50": "var(--warning-50)",
-      "100": "var(--warning-100)",
-      "200": "var(--warning-200)",
-      "300": "var(--warning-300)",
-      "400": "var(--warning-400)",
-      "500": "var(--warning-500)",
-      "600": "var(--warning-600)",
-      "700": "var(--warning-700)",
-      "800": "var(--warning-800)",
-      "900": "var(--warning-900)",
-      "950": "var(--warning-950)"
-    },
     "error": {
       "0": "var(--error-0)",
       "50": "var(--error-50)",
@@ -103,6 +75,34 @@ export default {
       "800": "var(--success-800)",
       "900": "var(--success-900)",
       "950": "var(--success-950)"
+    },
+    "warning": {
+      "0": "var(--warning-0)",
+      "50": "var(--warning-50)",
+      "100": "var(--warning-100)",
+      "200": "var(--warning-200)",
+      "300": "var(--warning-300)",
+      "400": "var(--warning-400)",
+      "500": "var(--warning-500)",
+      "600": "var(--warning-600)",
+      "700": "var(--warning-700)",
+      "800": "var(--warning-800)",
+      "900": "var(--warning-900)",
+      "950": "var(--warning-950)"
+    },
+    "info": {
+      "0": "var(--info-0)",
+      "50": "var(--info-50)",
+      "100": "var(--info-100)",
+      "200": "var(--info-200)",
+      "300": "var(--info-300)",
+      "400": "var(--info-400)",
+      "500": "var(--info-500)",
+      "600": "var(--info-600)",
+      "700": "var(--info-700)",
+      "800": "var(--info-800)",
+      "900": "var(--info-900)",
+      "950": "var(--info-950)"
     }
   },
   "fontFamily": {
