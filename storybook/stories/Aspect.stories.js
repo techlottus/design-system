@@ -1,6 +1,8 @@
-import Aspect from "../components/Aspect";
+import React from "react";
+
+import Aspect  from "../components/Aspect";
 export default {
-  title: "TECHNICAL COMPONENTS/Aspect",
+  title: "Technical Components/Aspect",
   component: Aspect,
   tags: ["autodocs"],
   args: {
@@ -10,9 +12,8 @@ export default {
 
 const Template = (args) => (
   <Aspect {...args}>
-    <div className="top-0 left-0 w-full h-full absolute bg-primary-500">
+    <div className="top-0 left-0 w-full h-full absolute bg-surface-500">
       <h1>Prueba de aspect</h1>
-      <span className="font-Icons">home</span>
     </div>
   </Aspect>
 );
