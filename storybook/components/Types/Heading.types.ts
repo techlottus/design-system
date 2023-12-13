@@ -1,23 +1,21 @@
-export interface FontsType {
-  principal: string;
-  secondary: string;
-}
+import { ReactElement } from "react";
+
 export interface VariantsType {
-  "h-1": string;
-  "h-2": string;
-  "h-3": string;
-  "h-4": string;
-  "h-5": string;
-  "h-6": string;
+  "h1": string;
+  "h2": string;
+  "h3": string;
+  "h4": string;
+  "h5": string;
+  "h6": string;
 }
 
 export interface HeadingType {
   /** Title content */
-  title?: string;
+  children?: ReactElement;
   /** Variant size/weight */
-  variant?: "h-1" | "h-2" | "h-3" | "h-4" | "h-5" | "h-6";
-  /** Font family token */
-  font?: "principal" | "secondary";
+  variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   /** Prop for extra tailwind classes */
   className?: string;
+  /** For other tags as "p", "div", "span" */
+  as?: string;
 }
