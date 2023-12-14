@@ -6,8 +6,7 @@ export default {
   component: Section,
   tags: ["autodocs"],
   args: {
-    className: "",
-    imgUrl:"https://img.freepik.com/vector-premium/fondo-linea-fondo-abstracto-hermoso-fondo-bg-patron-diseno-fondo-diapositiva-bg_634868-9.jpg"
+    className: "bg-[url('https://img.freepik.com/vector-premium/fondo-linea-fondo-abstracto-hermoso-fondo-bg-patron-diseno-fondo-diapositiva-bg_634868-9.jpg')]",
   },
 };
 
