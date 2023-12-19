@@ -1,5 +1,4 @@
 import Badge from "../components/Badge";
-/** Heading is a component for use titles with the correct styles (font family, weight, size) for the different screens */
 export default {
   title: "ATOMS/Badge",
   component: Badge,

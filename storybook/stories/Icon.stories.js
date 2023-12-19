@@ -1,4 +1,5 @@
 import Icon from "../components/Icon";
+/** Icon component is a helper to use material icons, you can find all the icon names in https://fonts.google.com/icons */
 export default {
   title: "ATOMS/Icon",
   component: Icon,

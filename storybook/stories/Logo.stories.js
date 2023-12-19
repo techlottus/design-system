@@ -1,5 +1,5 @@
 import Logo from "../components/Logo";
-/** Heading is a component for use titles with the correct styles (font family, weight, size) for the different screens */
+/** Logo component use bg-logo and take the url image from multitenant. */
 export default {
   title: "ATOMS/Logo",
   component: Logo,

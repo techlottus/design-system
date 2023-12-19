@@ -6,7 +6,7 @@ export default {
   tags: ["autodocs"],
   args: {
     variant: "h1",
-    className: "bg-primary-300",
+    className: "",
     as:""
   },
   argTypes: {
