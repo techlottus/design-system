@@ -1,5 +1,4 @@
 import React from "react";
-
 import Aspect  from "../components/Aspect";
 /**Aspect component was created as a solution for class aspect ratio and resolve the problem of keep a scale in different screens sizes. To use Aspect, call the function and assign the prop "ratio" with the scale value (in string type) you want to aply  */
 export default {
