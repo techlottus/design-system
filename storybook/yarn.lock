@@ -1322,6 +1322,21 @@
   "resolved" "https://registry.npmjs.org/@eslint/js/-/js-8.53.0.tgz"
   "version" "8.53.0"
 
+"@etchteam/storybook-addon-status@^4.2.4":
+  "integrity" "sha512-WkSz82WPqcqOBjB6MkLED4kIZU6jX61skBDh+/D8cedvSEQnPhQVMfxO0fnnzwhDsbqR7IXpPQPGx3hHPpi54A=="
+  "resolved" "https://registry.npmjs.org/@etchteam/storybook-addon-status/-/storybook-addon-status-4.2.4.tgz"
+  "version" "4.2.4"
+  dependencies:
+    "@storybook/api" "^7.0.9"
+    "@storybook/client-logger" "^7.0.9"
+    "@storybook/components" "^7.0.9"
+    "@storybook/core-events" "^7.0.9"
+    "@storybook/manager-api" "^7.0.9"
+    "@storybook/theming" "^7.0.9"
+    "lodash" "^4.17.21"
+    "react" "18.2.0"
+    "react-dom" "^18.2.0"
+
 "@fal-works/esbuild-plugin-global-externals@^2.1.2":
   "integrity" "sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ=="
   "resolved" "https://registry.npmjs.org/@fal-works/esbuild-plugin-global-externals/-/esbuild-plugin-global-externals-2.1.2.tgz"
@@ -2388,7 +2403,7 @@
     "ts-dedent" "^2.0.0"
     "util-deprecate" "^1.0.2"
 
-"@storybook/api@^7.0.12":
+"@storybook/api@^7.0.12", "@storybook/api@^7.0.9":
   "version" "7.2.1"
   dependencies:
     "@storybook/client-logger" "7.2.1"
@@ -2570,6 +2585,11 @@
     "@storybook/client-logger" "7.2.1"
     "@storybook/preview-api" "7.2.1"
 
+"@storybook/client-logger@^7.0.9", "@storybook/client-logger@7.2.1":
+  "version" "7.2.1"
+  dependencies:
+    "@storybook/global" "^5.0.0"
+
 "@storybook/client-logger@6.5.16":
   "integrity" "sha512-pxcNaCj3ItDdicPTXTtmYJE3YC1SjxFrBmHcyrN+nffeNyiMuViJdOOZzzzucTUG0wcOOX8jaSyak+nnHg5H1Q=="
   "resolved" "https://registry.npmjs.org/@storybook/client-logger/-/client-logger-6.5.16.tgz"
@@ -2577,11 +2597,6 @@
   dependencies:
     "core-js" "^3.8.2"
     "global" "^4.4.0"
-
-"@storybook/client-logger@7.2.1":
-  "version" "7.2.1"
-  dependencies:
-    "@storybook/global" "^5.0.0"
 
 "@storybook/client-logger@7.5.3":
   "integrity" "sha512-vUFYALypjix5FoJ5M/XUP6KmyTnQJNW1poHdW7WXUVSg+lBM6E5eAtjTm0hdxNNDH8KSrdy24nCLra5h0X0BWg=="
@@ -2622,7 +2637,7 @@
     "regenerator-runtime" "^0.13.7"
     "util-deprecate" "^1.0.2"
 
-"@storybook/components@^7.0.12", "@storybook/components@7.2.1":
+"@storybook/components@^7.0.12", "@storybook/components@^7.0.9", "@storybook/components@7.2.1":
   "version" "7.2.1"
   dependencies:
     "@radix-ui/react-select" "^1.2.2"
@@ -2675,7 +2690,7 @@
   dependencies:
     "core-js" "^3.8.2"
 
-"@storybook/core-events@^7.0.12", "@storybook/core-events@7.2.1":
+"@storybook/core-events@^7.0.12", "@storybook/core-events@^7.0.9", "@storybook/core-events@7.2.1":
   "version" "7.2.1"
 
 "@storybook/core-events@7.5.3":
@@ -2806,7 +2821,7 @@
     "@storybook/global" "^5.0.0"
     "@storybook/preview-api" "7.2.1"
 
-"@storybook/manager-api@^7.0.12", "@storybook/manager-api@^7.5.3":
+"@storybook/manager-api@^7.0.12", "@storybook/manager-api@^7.0.9", "@storybook/manager-api@^7.5.3":
   "integrity" "sha512-d8mVLr/5BEG4bAS2ZeqYTy/aX4jPEpZHdcLaWoB4mAM+PAL9wcWsirUyApKtDVYLITJf/hd8bb2Dm2ok6E45gA=="
   "resolved" "https://registry.npmjs.org/@storybook/manager-api/-/manager-api-7.5.3.tgz"
   "version" "7.5.3"
@@ -3057,7 +3072,7 @@
     "memoizerific" "^1.11.3"
     "regenerator-runtime" "^0.13.7"
 
-"@storybook/theming@^7.0.12", "@storybook/theming@^7.5.3", "@storybook/theming@7.5.3":
+"@storybook/theming@^7.0.12", "@storybook/theming@^7.0.9", "@storybook/theming@^7.5.3", "@storybook/theming@7.5.3":
   "integrity" "sha512-Cjmthe1MAk0z4RKCZ7m72gAD8YD0zTAH97z5ryM1Qv84QXjiCQ143fGOmYz1xEQdNFpOThPcwW6FEccLHTkVcg=="
   "resolved" "https://registry.npmjs.org/@storybook/theming/-/theming-7.5.3.tgz"
   "version" "7.5.3"
@@ -11016,7 +11031,7 @@
     "invariant" "^2.2.4"
     "tslib" "^2.0.0"
 
-"react@^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1 || ^18.0.0", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8.4 || ^17.0.0 || ^18.0.0", "react@^18.2.0", "react@>= 0.14.0", "react@>= 16", "react@>= 16.3.0", "react@>=16", "react@>=16.8.0", "react@16.8.0 - 18":
+"react@^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1 || ^18.0.0", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8.4 || ^17.0.0 || ^18.0.0", "react@^18.2.0", "react@>= 0.14.0", "react@>= 16", "react@>= 16.3.0", "react@>=16", "react@>=16.8.0", "react@16.8.0 - 18", "react@18.2.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"

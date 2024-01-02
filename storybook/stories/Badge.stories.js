@@ -1,4 +1,8 @@
 import Badge from "../components/Badge";
+/**
+ * @todo 
+ * Documentation in figma and complete design
+ */
 export default {
   title: "ATOMS/Badge",
   component: Badge,
