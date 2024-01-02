@@ -5,12 +5,12 @@ export default {
   component: Logo,
   tags: ["autodocs"],
   args:{
-
+    size:"md"
   }
 
 };
 
-const Template = ({...args}) => <Logo/>;
+const Template = ({...args}) => <Logo {...args}/>;
 
 const Standard = Template.bind({});
 
