@@ -22,7 +22,7 @@
     "url": "git+https://github.com/techlottus/design-system.git"
   },
   "scripts": {
-    "build:css": "postcss ./index.css -o ./public/main.css",
+    "build:css": "postcss ./index.css -o ./public/https://design-system-docs-git-feature-lot-720-techlottus.vercel.app/?path=/docs/welcome--docsmain.css",
     "test": "node ./__tests__/storybook.test.js",
     "storybook": "rm -r ./components/  &&  cp -r ../packages/atoms/src/components/ ./ && cp -r ../packages/technical-components/src/components/ ./ && storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -58,7 +58,6 @@
     "@babel/plugin-transform-react-jsx": "^7.21.0",
     "@babel/preset-env": "^7.21.4",
     "@babel/preset-react": "^7.18.6",
-    "@etchteam/storybook-addon-status": "^4.2.4",
     "@storybook/addon-essentials": "^7.1.1",
     "@storybook/addon-interactions": "^7.1.1",
     "@storybook/addon-links": "^7.1.1",
