@@ -7,15 +7,15 @@ const Logo: React.FC<LogoType> = (props: LogoType) => {
   const { className = "", size = "md" } = props
 
   const Sizes: SizeType = {
-    "2xl": cn("h-24 w-96"),
-    "xl": cn("h-16 w-80"),
-    "lg": cn("h-12 w-56"),
-    "md": cn("h-9 w-40"),
-    "sm": cn("h-6 w-24"),
-    "xs": cn("h-4 w-20"),
+    "2xl": cn("h-24"),
+    "xl": cn("h-18"),
+    "lg": cn("h-12"),
+    "md": cn("h-9"),
+    "sm": cn("h-6"),
+    "xs": cn("h-4"),
   };
 
-  const LogoClasses: string = cn("bg-logo bg-cover bg-center",
+  const LogoClasses: string = cn("bg-logo bg-cover bg-center w-fit",
     className,
     [Sizes[size]]
   );
