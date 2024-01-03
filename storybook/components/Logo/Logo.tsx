@@ -15,7 +15,7 @@ const Logo: React.FC<LogoType> = (props: LogoType) => {
     "xs": cn("h-4"),
   };
 
-  const LogoClasses: string = cn("bg-logo bg-cover bg-center w-fit",
+  const LogoClasses: string = cn("bg-logo bg-cover bg-center w-auto",
     className,
     [Sizes[size]]
   );
