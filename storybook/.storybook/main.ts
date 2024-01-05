@@ -1,6 +1,8 @@
 import { dirname, join } from "path";
-// Replace your-framework with the framework you are using (e.g., react-webpack5, vue3-vite)
 import type { StorybookConfig } from "@storybook/react-webpack5";
+
+require("../bin/initialize.js")
+  .default('../../tailwind.config.js');
 const config: StorybookConfig = {
   addons: [
     getAbsolutePath("@storybook/addon-links"),
