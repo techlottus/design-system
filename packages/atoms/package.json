@@ -1,6 +1,6 @@
 {
   "name": "@lottuseducation/atoms",
-  "version": "1.11.0-alpha.0",
+  "version": "0.1.0",
   "description": "Core components",
   "author": "Lottus Engineering <dev.tech@lottuseducation.com>",
   "main": "lib/cjs/index.js",
