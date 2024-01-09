@@ -5,8 +5,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 export default {
  safelist: ["font-headings","font-texts","font-icons","bg-logo","bg-favicon"], theme: {
  extend:  {
-  "colors": {
-    "primary": {
+  colors: {
+    primary: {
       "0": "var(--primary-0)",
       "50": "var(--primary-50)",
       "100": "var(--primary-100)",
@@ -20,7 +20,7 @@ export default {
       "900": "var(--primary-900)",
       "950": "var(--primary-950)"
     },
-    "secondary": {
+    secondary: {
       "0": "var(--secondary-0)",
       "50": "var(--secondary-50)",
       "100": "var(--secondary-100)",
@@ -34,7 +34,7 @@ export default {
       "900": "var(--secondary-900)",
       "950": "var(--secondary-950)"
     },
-    "surface": {
+    surface: {
       "0": "var(--surface-0)",
       "50": "var(--surface-50)",
       "100": "var(--surface-100)",
@@ -48,7 +48,7 @@ export default {
       "900": "var(--surface-900)",
       "950": "var(--surface-950)"
     },
-    "error": {
+    error: {
       "0": "var(--error-0)",
       "50": "var(--error-50)",
       "100": "var(--error-100)",
@@ -62,7 +62,7 @@ export default {
       "900": "var(--error-900)",
       "950": "var(--error-950)"
     },
-    "success": {
+    success: {
       "0": "var(--success-0)",
       "50": "var(--success-50)",
       "100": "var(--success-100)",
@@ -76,7 +76,7 @@ export default {
       "900": "var(--success-900)",
       "950": "var(--success-950)"
     },
-    "warning": {
+    warning: {
       "0": "var(--warning-0)",
       "50": "var(--warning-50)",
       "100": "var(--warning-100)",
@@ -90,7 +90,7 @@ export default {
       "900": "var(--warning-900)",
       "950": "var(--warning-950)"
     },
-    "info": {
+    info: {
       "0": "var(--info-0)",
       "50": "var(--info-50)",
       "100": "var(--info-100)",
@@ -105,12 +105,12 @@ export default {
       "950": "var(--info-950)"
     }
   },
-  "fontFamily": {
+  fontFamily: {
     "headings": "var(--headings)",
     "texts": "var(--texts)",
     "icons": "var(--icons)"
   },
-  "backgroundImage": {
+  backgroundImage: {
     "logo": "var(--logo)",
     "favicon": "var(--favicon)"
   }

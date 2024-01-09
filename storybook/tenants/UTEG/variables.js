@@ -1,31 +1,31 @@
 export const vars = `:root{
  
---primary-0 : #E7EDF6;
---primary-50 : #CFDBED;
---primary-100 : #9FB7DA;
---primary-200 : #6F93C8;
---primary-300 : #4470B1;
---primary-400 : #284280;
---primary-500 : #1B2D68;
---primary-600 : #172759;
---primary-700 : #13204A;
---primary-800 : #0F1A3B;
---primary-900 : #0C132D;
---primary-950 : #060917;
+--primary-0 : #e3fffc;
+--primary-50 : #c6fff8;
+--primary-100 : #8dfff1;
+--primary-200 : #55ffea;
+--primary-300 : #1cffe3;
+--primary-400 : #00e2c6;
+--primary-500 : #00a994;
+--primary-600 : #008d7b;
+--primary-700 : #007163;
+--primary-800 : #00554a;
+--primary-900 : #003831;
+--primary-950 : #001c19;
 
 
---secondary-0 : #FBF0F2;
---secondary-50 : #F7E0E4;
---secondary-100 : #EFC1C8;
---secondary-200 : #EA9CA5;
---secondary-300 : #E17680;
---secondary-400 : #D44D5A;
---secondary-500 : #C31433;
---secondary-600 : #A3112A;
---secondary-700 : #820D22;
---secondary-800 : #620A19;
---secondary-900 : #410711;
---secondary-950 : #210408;
+--secondary-0 : #ced4de;
+--secondary-50 : #9caabd;
+--secondary-100 : #7f8ea5;
+--secondary-200 : #63738e;
+--secondary-300 : #485977;
+--secondary-400 : #2e4061;
+--secondary-500 : #13294b;
+--secondary-600 : #10223f;
+--secondary-700 : #0d1b32;
+--secondary-800 : #0a1426;
+--secondary-900 : #060e19;
+--secondary-950 : #03070d;
 
 
 --surface-0 : #FFFFFF;
@@ -42,125 +42,77 @@ export const vars = `:root{
 --surface-950 : #000000;
 
 
---info-0 : #EFF4FC;
---info-50 : #DFE9F9;
---info-100 : #C0D2F4;
---info-200 : #A0BCEE;
---info-300 : #80A6E8;
---info-400 : #618FE3;
---info-500 : #4179DD;
---info-600 : #2460CA;
---info-700 : #1D4DA2;
---info-800 : #163979;
---info-900 : #0E2651;
---info-950 : #071328;
+--error-0 : #EFF4FC;
+--error-50 : #DFE9F9;
+--error-100 : #C0D2F4;
+--error-200 : #A0BCEE;
+--error-300 : #80A6E8;
+--error-400 : #618FE3;
+--error-500 : #4179DD;
+--error-600 : #2460CA;
+--error-700 : #1D4DA2;
+--error-800 : #163979;
+--error-900 : #0E2651;
+--error-950 : #071328;
 
 
---warning-0 : #FDF9F0;
---warning-50 : #FAF3E1;
---warning-100 : #F6E8C3;
---warning-200 : #F1DCA6;
---warning-300 : #ECD088;
---warning-400 : #ECD088;
---warning-500 : #E3B94C;
---warning-600 : #DAA722;
---warning-700 : #AF861B;
---warning-800 : #836414;
---warning-900 : #57430D;
---warning-950 : #2C2107;
+--success-0 : #FDF9F0;
+--success-50 : #FAF3E1;
+--success-100 : #F6E8C3;
+--success-200 : #F1DCA6;
+--success-300 : #ECD088;
+--success-400 : #ECD088;
+--success-500 : #E3B94C;
+--success-600 : #DAA722;
+--success-700 : #AF861B;
+--success-800 : #836414;
+--success-900 : #57430D;
+--success-950 : #2C2107;
 
 
---error-0 : #FDF4F2;
---error-50 : #FBE8E5;
---error-100 : #F6D1CC;
---error-200 : #F2BAB2;
---error-300 : #EEA398;
---error-400 : #E98C7F;
---error-500 : #E57565;
---error-600 : #DD4B36;
---error-700 : #BC3320;
---error-800 : #8D2718;
---error-900 : #5E1A10;
---error-950 : #2F0D08;
+--warning-0 : #FDF4F2;
+--warning-50 : #FBE8E5;
+--warning-100 : #F6D1CC;
+--warning-200 : #F2BAB2;
+--warning-300 : #EEA398;
+--warning-400 : #E98C7F;
+--warning-500 : #E57565;
+--warning-600 : #DD4B36;
+--warning-700 : #BC3320;
+--warning-800 : #8D2718;
+--warning-900 : #5E1A10;
+--warning-950 : #2F0D08;
 
 
---success-0 : #EEF9EC;
---success-50 : #DDF2D9;
---success-100 : #BCE6B3;
---success-200 : #9AD98C;
---success-300 : #78CC66;
---success-400 : #56C040;
---success-500 : #459A33;
---success-600 : #39802A;
---success-700 : #2E6722;
---success-800 : #224D19;
---success-900 : #173311;
---success-950 : #0B1A08;
-
-
---presencial-0 : #FDF7E8;
---presencial-50 : #FBEED0;
---presencial-100 : #F7DCA1;
---presencial-200 : #F5D081;
---presencial-300 : #F3C460;
---presencial-400 : #F0B73D;
---presencial-500 : #EEAA01;
---presencial-600 : #BE8801;
---presencial-700 : #8F6601;
---presencial-800 : #5F4400;
---presencial-900 : #302200;
---presencial-950 : #181100;
-
-
---online-0 : #FBF0F2;
---online-50 : #F7E0E4;
---online-100 : #EFC1C8;
---online-200 : #EA9CA5;
---online-300 : #E17680;
---online-400 : #D44D5A;
---online-500 : #C31433;
---online-600 : #A3112A;
---online-700 : #820D22;
---online-800 : #620A19;
---online-900 : #410711;
---online-950 : #210408;
-
-
---híbrida-0 : #E4EAF4;
---híbrida-50 : #C8D6EA;
---híbrida-100 : #ADC1DF;
---híbrida-200 : #92ADD5;
---híbrida-300 : #7698CA;
---híbrida-400 : #5B84C0;
---híbrida-500 : #4470B1;
---híbrida-600 : #395D93;
---híbrida-700 : #2D4B76;
---híbrida-800 : #223859;
---híbrida-900 : #17253B;
---híbrida-950 : #0B131D;
+--info-0 : #EEF9EC;
+--info-50 : #DDF2D9;
+--info-100 : #BCE6B3;
+--info-200 : #9AD98C;
+--info-300 : #78CC66;
+--info-400 : #56C040;
+--info-500 : #459A33;
+--info-600 : #39802A;
+--info-700 : #2E6722;
+--info-800 : #224D19;
+--info-900 : #173311;
+--info-950 : #0B1A08;
 
 
  
 --headings : ["Poppins"];
       
 
---texts : ["Nunito Sans"," sans-serif"];
-      
-
---icons-outlined : ["Material Icons Outlined"];
-      
-
---icons-solid : ["Material Icons"];
+--texts : ["Nunito Sans"];
       
 
 --icons : ["Material Icons"];
       
 
  
---logo : url('https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTEG/logotipo_78c3589ec5.svg');
+--logo : url('https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UANE/lottus_f27cdbfd60.png');
       
 
---favicon : url('https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTEG/favicon_c8769ba7f3.ico');
+--favicon : url('https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UANE/lottus_favicon_75b18c8bae.png');
       
  
 }`
