@@ -1,6 +1,8 @@
 import React from "react";
 import Button  from "../components/Button";
-/**Button component was created as a solution for class aspect ratio and resolve the problem of keep a scale in different screens sizes. To use Button, call the function and assign the prop "ratio" with the scale value (in string type) you want to aply  */
+/** Buttons communicate actions that users can take. They are typically placed throughout your UI, in places like: Dialogs, Forms, Toolbars, etc. The distinction between buttons and links matters:  */
+/** Links are used when you’re navigating to another place or do secondary actions, such as: “view all” page, “Sofía“ profile, etc. */
+/** Buttons are used when you are performing an action, such as: “Submit”, “Buy”, “Create new”, etc. */
 export default {
   title: "Molecules/Button",
   component: Button,
