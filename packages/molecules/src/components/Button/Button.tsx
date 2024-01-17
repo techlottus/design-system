@@ -10,9 +10,9 @@ const sizes: ButtonSize = {
 
 const variants: ButtonVariant = {
   primary: cn(
-    "bg-primary-500 hover:bg-primary-800 focus:bg-primary-600 active:bg-primary-600",
+    "bg-primary-500 hover:bg-primary-600 focus:bg-primary-700 active:bg-primary-700",
     "text-surface-100",
-    "border border-primary-500 active:border-0 active:ring-0 focus:border-primary-900 focus:ring-2 focus:ring-primary-900 focus:outline-none"
+    "border-2 border-primary-500  hover:border-primary-600 active:border-primary-700 active:ring-0 focus:border-primary-500 focus:ring-2 focus:ring-primary-50 focus:outline-none"
   ),
   outlined: cn(
     "bg-transparent hover:bg-surface-200 active:bg-surface-400 focus:bg-surface-100",
@@ -41,7 +41,7 @@ const commonClasses: string = cn(
 );
 
 const disabledVariants: ButtonVariant = {
-  primary: cn("cursor-not-allowed", "bg-surface-400", "text-surface-100"),
+  primary: cn("cursor-not-allowed", "bg-surface-200", "text-surface-400"),
   text: cn("cursor-not-allowed text-surface-400"),
   outlined: cn(
     "cursor-not-allowed",
