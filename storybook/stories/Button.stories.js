@@ -28,28 +28,34 @@ export default {
 };
 
 const examples = (args) => (
- <table>
-  <thead>
-    <tr>
-      <td>only label</td>
-      <td>Left Icon</td>
+ <table className="border border-primary-500 w-full">
+  <thead className="bg-primary-400 text-surface-100"> 
+    <tr className="font-principal">
+      <td>Only label</td>
       <td>Right Icon</td>
+      <td>Left Icon</td>
+      <td>Only Icon</td>
     </tr>
     
   </thead>
   <tbody>
-    <tr>
-      <td>
-        <Button {...args}> <p className="font-principal text-xl font-bold ">Button 1</p></Button>
+    <tr className="bg-primary-200">
+      <td className="p-2">
+        <Button {...args}> <p className="font-principal text-xl font-bold ">Button</p></Button>
       </td>
-    <td>
+    <td className="p-2">
       <Button {...args}>
         <span className="flex items-start">Button <Icon iconName="arrow_forward"/></span>
       </Button>
     </td>
-    <td>
+    <td className="p-2">
       <Button {...args}>
         <span className="flex items-start"><Icon iconName="arrow_forward"/> Button </span>
+      </Button>
+    </td>
+    <td className="p-2">
+      <Button {...args}>
+        <Icon iconName="arrow_forward"/>
       </Button>
     </td>
     </tr>
