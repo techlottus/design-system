@@ -50,7 +50,7 @@ const examples = (args) => (
     </td>
     <td className="p-2">
       <Button {...args}>
-       <span className="flex items-start "><Icon iconName="arrow_forward"/><span > Button </span></span> 
+       <span className="flex items-start space-x-2"><Icon iconName="arrow_forward"/><span > Button </span></span> 
       </Button>
     </td>
     <td className="p-2">
