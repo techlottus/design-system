@@ -30,18 +30,18 @@ export default {
 const examples = (args) => (
  <table className="border border-primary-500 w-full">
   <thead className="bg-primary-400 text-surface-100"> 
-    <tr className="font-principal text-center font-bold">
-      <td>Only label</td>
-      <td>Right Icon</td>
-      <td>Left Icon</td>
-      <td>Only Icon</td>
+    <tr className="font-principal  font-bold">
+      <td className="pl-2">Only label</td>
+      <td className="pl-2">Right Icon</td>
+      <td className="pl-2">Left Icon</td>
+      <td className="pl-2">Only Icon</td>
     </tr>
     
   </thead>
   <tbody>
     <tr className="bg-primary-100 ">
       <td className="p-2">
-        <Button {...args}> <p className="font-principal text-xl font-bold ">Button</p></Button>
+        <Button {...args}> <p className="font-principal  ">Button</p></Button>
       </td>
     <td className="p-2">
       <Button {...args}>
@@ -50,7 +50,7 @@ const examples = (args) => (
     </td>
     <td className="p-2">
       <Button {...args}>
-        <span className="flex items-start space-x-1"><Icon iconName="arrow_forward"/> Button </span>
+       <span className="flex items-start "><Icon iconName="arrow_forward"/><span > Button </span></span> 
       </Button>
     </td>
     <td className="p-2">
