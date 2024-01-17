@@ -30,7 +30,7 @@ export default {
 const examples = (args) => (
  <table className="border border-primary-500 w-full">
   <thead className="bg-primary-400 text-surface-100"> 
-    <tr className="font-principal">
+    <tr className="font-principal text-center font-bold">
       <td>Only label</td>
       <td>Right Icon</td>
       <td>Left Icon</td>
@@ -39,7 +39,7 @@ const examples = (args) => (
     
   </thead>
   <tbody>
-    <tr className="bg-primary-200">
+    <tr className="bg-primary-100 ">
       <td className="p-2">
         <Button {...args}> <p className="font-principal text-xl font-bold ">Button</p></Button>
       </td>
@@ -50,7 +50,7 @@ const examples = (args) => (
     </td>
     <td className="p-2">
       <Button {...args}>
-        <span className="flex items-start"><Icon iconName="arrow_forward"/> Button </span>
+        <span className="flex items-start space-x-1"><Icon iconName="arrow_forward"/> Button </span>
       </Button>
     </td>
     <td className="p-2">
