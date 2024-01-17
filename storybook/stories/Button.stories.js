@@ -39,7 +39,7 @@ const examples = (args) => (
     
   </thead>
   <tbody>
-    <tr className="bg-primary-100 ">
+    <tr className="">
       <td className="p-2">
         <Button {...args}> <p className="font-principal  ">Button</p></Button>
       </td>
