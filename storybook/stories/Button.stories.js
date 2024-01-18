@@ -66,7 +66,7 @@ const examples = (args) => (
 );
 const standar = (args) => (
   <Button {...args}>
-      <p className="font-principal text-xl font-bold ">Button 1</p>
+      <p >Button 1</p>
   </Button>
 );
 

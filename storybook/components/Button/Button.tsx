@@ -10,25 +10,28 @@ const sizes: ButtonSize = {
 
 const variants: ButtonVariant = {
   primary: cn(
-    "bg-primary-500 hover:bg-primary-600 focus:bg-primary-700 active:bg-primary-700",
-    "text-surface-100",
-    "border-2 border-primary-500  hover:border-primary-600 active:border-primary-700 active:ring-0 focus:border-primary-500 focus:ring-2 focus:ring-primary-50 focus:outline-none"
+    "bg-primary-500 text-surface-100 border-2 border-primary-500 ",
+    "hover:bg-primary-600 hover:border-primary-600",
+    "active:bg-primary-700 active:border-primary-700 active:ring-0 ",
+    "focus:bg-primary-700 focus:border-primary-500 focus:ring-2 focus:ring-primary-50 focus:outline-none"
   ),
   outlined: cn(
-    "bg-transparent hover:bg-surface-200 active:bg-surface-400 focus:bg-surface-100",
-    "text-surface-900",
-    " border border-surface-900 focus:border-surface-900 focus:ring-2 focus:ring-surface-900 focus:outline-none"
+    "bg-transparent text-surface-900 border-2 border-surface-900  ",
+    "hover:bg-surface-100 hover:opacity-50 ",
+    "active:bg-surface-100 ",
+    "focus:bg-surface-100 focus:border-surface-900 focus:ring-2 focus:ring-primary-50 focus:outline-none"
   ),
   text: cn(
-    "bg-transparent hover:bg-surface-200 active:bg-surface-400 ",
-    "text-surface-900 hover:text-surface-900",
-    "active:ring-0 active:border-0 focus:border focus:border-surface-900 focus:ring-1 focus:ring-surface-900 "
+    "bg-transparent text-surface-900  ",
+    "hover:text-surface-600",
+    "active:bg-surface-200  active:ring-0 active:border-0 active:text-surface-900 ",
+    "focus:border-2 focus:border-surface-900 focus:ring-1 focus:ring-primary-50 "
   ),
   "outlined-negative": cn(
-    "bg-transparent text-surface-100 border border-surface-100  ",
-    "hover:bg-surface-100 hover:border-surface-900 hover:text-surface-900",
-    "active:ring-0 active:border-0 active:bg-surface-400 active:text-surface-100 ",
-    "focus:border focus:border-surface-100 focus:ring-1 focus:ring-surface-100 "
+    "bg-transparent text-surface-100 border border-surface-100 ring-1 ring-surface-100  ",
+    "hover:bg-surface-600 hover:opacity-25 hover:border-surface-100 hover:text-surface-100",
+    "active:ring-surface-100 active:border-surface-100 active:bg-transparent active:text-surface-100 active:opacity-100",
+    "focus:border focus:border-surface-800 focus:ring-1 focus:ring-primary-50 focus:text-surface-100 focus:bg-transparent"
   ),
 };
 
@@ -47,13 +50,13 @@ const disabledVariants: ButtonVariant = {
     "cursor-not-allowed",
     "bg-transparent",
     "text-surface-400",
-    "border border-surface-400"
+    "border-2 border-surface-400"
   ),
   "outlined-negative": cn(
     "cursor-not-allowed",
     "bg-transparent",
-    "text-surface-200",
-    "border border-surface-200"
+    "text-surface-400",
+    "border border-surface-400"
   ),
 };
 
