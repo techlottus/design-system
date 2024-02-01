@@ -1,0 +1,106 @@
+import { Meta, Preview } from '@storybook/blocks';
+import RadioButton from './RadioButton'
+import RadioGroup from './RadioGroup'
+
+<Meta title="MDX|RadioButton" component={RadioButton} />
+
+# RadioButton
+
+Radio Button give you the same functionality as native HTML radio inputs, without any of the styling. They're perfect for building out custom UIs for selectors.
+
+## Installation
+
+To get started, install Headless UI via npm:
+
+`npm install @headlessui/react`
+
+## RadioGroups
+
+Radio Groups are built using the RadioGroup, RadioGroup.Label, and RadioGroup.Option components.
+
+Clicking an option will select it, and when the radio group is focused, the arrow keys will change the selected option.
+
+ <RadioGroup /> 
+```
+const MyRadioGroup = () => {
+ let [plan, setPlan] = useState('startup')
+
+ return (
+  <div className="w-full px-1 grid grid-cols-12">
+   <div className="col-span-5">
+    <RadioGroup value={plan} onChange={setPlan}>
+     <RadioGroup.Option value="startup" className="bg-surface-100 w-24 h-9	border-2 border-black rounded py-1.5">
+      {({ checked }) => (
+       <>
+        {checked ?
+         <Icon iconName="adjust" className="text-base ms-2 me-3 text-dark" />
+         : <Icon iconName="radio_button_unchecked" className="text-base ms-2 me-3 text-surface-400" />
+        }
+        <span className={checked ? 'bg-surface-100' : ''}>Label</span>
+       </>
+      )}
+     </RadioGroup.Option>
+     <RadioGroup.Option value="business" className="bg-surface-100 w-24 h-9 border-2 border-info-700 rounded py-1.5 my-3">
+      {({ checked }) => (
+       <>
+        {checked ?
+         <Icon iconName="adjust" className="text-base ms-2 me-3 text-info-700" />
+         : <Icon iconName="radio_button_unchecked" className="text-base ms-2 me-3 text-surface-400" />
+        }
+        <span className={checked ? 'bg-surface-100' : ''}>Label</span>
+       </>
+      )}
+     </RadioGroup.Option>
+     <RadioGroup.Option value="enterprise" className="bg-surface-100 w-24 h-9 border-2 border-error-600 rounded py-1.5">
+      {({ checked }) => (
+       <>
+        {checked ?
+         <Icon iconName="adjust" className="text-base ms-2 me-3 text-error-600" />
+         : <Icon iconName="radio_button_unchecked" className="text-base ms-2 me-3 text-surface-400" />
+        }
+        <span className={checked ? 'bg-surface-100' : ''}>Label</span>
+       </>
+      )}
+     </RadioGroup.Option>
+    </RadioGroup>
+   </div>
+  </div>
+ )
+};
+``` 
+
+## Card Radio Button
+
+You can use this customize RadioButton to show more info as a card
+    
+<RadioButton />  
+
+```
+<RadioGroup.Option
+    value={true}
+    className="relative flex cursor-pointer rounded-lg px-5 py-4 shadow-[0_2px_12px_0px_rgba(0,0,0,0.12)]">
+    <div className="flex w-full items-center justify-between">
+        <div className="flex items-center">
+            <Icon iconName="school" className="text-4xl text-primary-500 me-6" />
+            <div className="grid gap-3">
+                <RadioGroup.Label
+                    as="p"
+                    className="text-gray-900 text-lg font-bold">
+                    Historial académico
+                </RadioGroup.Label>
+                <RadioGroup.Description
+                    as="span"
+                    className="text-gray-500 grid gap-3">
+                    <p className="text-sm">Vencimiento: 08-06-2022</p>
+                    <p className="text-base font-bold text-primary-500">$390.00</p>
+                    <p className="text-base text-primary-500">Eliminar</p>
+                </RadioGroup.Description>
+            </div>
+            {selected ?
+                <Icon iconName="radio_button_unchecked" className="text-4xl me-3 text-surface-400 absolute right-0 top-1" />
+                : <Icon iconName="radio_button_checked" className="text-4xl me-3 text-surface-400 absolute right-0 top-1" />
+            }
+        </div>
+    </div>
+</RadioGroup.Option>
+```
