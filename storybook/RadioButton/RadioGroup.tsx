@@ -14,19 +14,19 @@ const RadioSimpleGroup = () => {
       {({ checked }) => (
        <>
         {checked ?
-         <Icon iconName="adjust" className="text-base ms-2 me-3 text-dark" />
-         : <Icon iconName="radio_button_unchecked" className="text-base ms-2 me-3 text-surface-400" />
+         <Icon iconName="adjust" className="!font-icons-solid text-base !ms-2 !me-3 text-dark" />
+         : <Icon iconName="radio_button_unchecked" className="!font-icons-solid text-base !ms-2 !me-3 text-surface-400" />
         }
         <span className={checked ? 'bg-surface-100' : ''}>Label</span>
        </>
       )}
      </RadioGroup.Option>
-     <RadioGroup.Option value="business" className="bg-surface-100 w-24 h-9 border-2 border-info-700 rounded py-1.5 my-3">
+     <RadioGroup.Option value="business" className="bg-surface-100 w-24 h-9 border-2 border-info-700 rounded py-1.5 !my-3">
       {({ checked }) => (
        <>
         {checked ?
-         <Icon iconName="adjust" className="text-base ms-2 me-3 text-info-700" />
-         : <Icon iconName="radio_button_unchecked" className="text-base ms-2 me-3 text-surface-400" />
+         <Icon iconName="adjust" className="!font-icons-solid text-base !ms-2 !me-3 text-info-700" />
+         : <Icon iconName="radio_button_unchecked" className="!font-icons-solid text-base !ms-2 !me-3 text-surface-400" />
         }
         <span className={checked ? 'bg-surface-100' : ''}>Label</span>
        </>
@@ -36,8 +36,8 @@ const RadioSimpleGroup = () => {
       {({ checked }) => (
        <>
         {checked ?
-         <Icon iconName="adjust" className="text-base ms-2 me-3 text-error-600" />
-         : <Icon iconName="radio_button_unchecked" className="text-base ms-2 me-3 text-surface-400" />
+         <Icon iconName="adjust" className="!font-icons-solid text-base !ms-2 !me-3 text-error-600" />
+         : <Icon iconName="radio_button_unchecked" className="!font-icons-solid text-base !ms-2 !me-3 text-surface-400" />
         }
         <span className={checked ? 'bg-surface-100' : ''}>Label</span>
        </>
