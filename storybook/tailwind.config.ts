@@ -4,12 +4,12 @@ import * as tailwindBase from "@lottuseducation/tailwind-base/lib/tailwind-base.
 
 module.exports = {
   content: [
-    "./stories/**/*.stories.{js,jsx,ts,tsx,mdx}",
-    "./components/**/*.{js,jsx,ts,tsx,mdx}",
-    "./RadioButton/**/*.{js,jsx,ts,tsx,mdx}"
-    ,
+    "./stories/**/*.stories.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx}",
+    "./RadioButton/**/*.{js,jsx,ts,tsx,mdx}",
   ],
+  safelist: [{ pattern: /[a-z][0-9]\:\-/ }],
   presets: [tailwindBaseLottus.default, tailwindBase.default],
   theme: {},
   plugins: [],
-}
+};
