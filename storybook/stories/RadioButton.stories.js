@@ -1,7 +1,7 @@
 import React from "react";
 import RadioButton from "../RadioButton/RadioButton"
 import RadioSimpleGroup from "../RadioButton/RadioGroup"
-import mdx from "../RadioButton/RadioButton.mdx"
+import mdx from "./RadioButton.mdx"
 
 /** Radio Button give you the same functionality as native HTML radio inputs, without any of the styling. They're perfect for building out custom UIs for selectors.*/
 export default {
