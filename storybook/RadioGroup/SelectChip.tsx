@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { RadioGroup } from '@headlessui/react'
 import React from "react";
-import Icon from "../components/Icon";
+import Icon from '../components/Icon/Icon';
 
-const RadioSimpleGroup = () => {
+const SelectChip = () => {
  let [plan, setPlan] = useState('startup')
 
  return (
@@ -49,6 +49,6 @@ const RadioSimpleGroup = () => {
  )
 };
 
-export default RadioSimpleGroup;
+export default SelectChip;
 
 

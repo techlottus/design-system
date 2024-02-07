@@ -6,7 +6,7 @@ module.exports = {
   content: [
     "./stories/**/*.stories.{js,jsx,ts,tsx}",
     "./components/**/*.{js,jsx,ts,tsx}",
-    "./RadioButton/**/*.{js,jsx,ts,tsx,mdx}",
+    "./RadioGroup/**/*.{js,jsx,ts,tsx,mdx}",
   ],
   safelist: [{ pattern: /[a-z][0-9]\:\-/ }],
   presets: [tailwindBaseLottus.default, tailwindBase.default],

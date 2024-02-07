@@ -3,7 +3,7 @@ import { RadioGroup } from '@headlessui/react'
 import React from "react";
 import Icon from "../components/Icon";
 
-const RadioButton = () => {
+const RadioButtonCard = () => {
     const [selected, setSelected] = useState(true)
 
     return (
@@ -45,6 +45,6 @@ const RadioButton = () => {
     )
 };
 
-export default RadioButton;
+export default RadioButtonCard;
 
 
