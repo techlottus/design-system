@@ -1,12 +1,11 @@
 import React from "react";
 import RadioButtonCard from "../RadioGroup/RadioButtonCard"
 import SelectChip from "../RadioGroup/SelectChip"
-import CheckBox from "../RadioGroup/CheckBox"
 import mdx from "../RadioGroup/RadioGroup.mdx"
 
 /** Radio Button give you the same functionality as native HTML radio inputs, without any of the styling. They're perfect for building out custom UIs for selectors.*/
 export default {
-  title: "MOLECULES/RadioGroup",
+  title: "MOLECULES/RadioGroup/RadioButton",
   component: RadioButtonCard,
   tags: ["autodocs"],
   parameters: {
@@ -31,11 +30,6 @@ const TemplateGroup = (args) => (
   </SelectChip>
 );
 
-const TemplateCheck = (args) => (
-  <CheckBox {...args}>
-  </ CheckBox>
-);
-
 const RadioButtonCards = TemplateRadioButtonCard.bind({
 
 });
@@ -44,9 +38,5 @@ const SelectChips  = TemplateGroup.bind({
 
 });
 
-const CheckBoxes = TemplateCheck.bind({
 
-});
-
-
-export { RadioButtonCards, SelectChips, CheckBoxes };
+export { RadioButtonCards, SelectChips };
