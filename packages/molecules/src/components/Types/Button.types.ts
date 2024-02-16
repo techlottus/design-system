@@ -6,11 +6,15 @@ export interface ButtonType {
   /** Size of Button */
   size?: "xsm" | "sm" | "md" | "lg";
   /** Button variants */
-  variant?: "primary" | "outlined" | "text" | "outlined-negative";
+  variant?: "solid" | "outlined" | "transparent" | "custom";
   /** Onclick function */
   onClick?: () => void;
   /**childrens */
   children: React.ReactNode;
+  /**Variant Color */
+  color: "primary" | "secondary" | "surface" | "warning" | "error" | "success" | "info";
+  // /**Variant intensity text */
+  // intensity: "100" | "200" | "300" | "400" | "600" | "500" | "700" | "800" | "900" | "950";
 }
 
 export interface ButtonSize {
@@ -21,8 +25,8 @@ export interface ButtonSize {
 }
 
 export interface ButtonVariant {
-  primary: string;
-  outlined: string;
-  text: string;
-  "outlined-negative": string;
+  solid: string | {"primary": string, "secondary": string, "surface": string , "warning": string , "error": string , "success": string , "info": string};
+  outlined: string | {"primary": string, "secondary": string, "surface": string , "warning": string , "error": string , "success": string , "info": string};
+  transparent: any;
+  custom: string;
 }

@@ -12,7 +12,8 @@ export default {
     className: "",
     disabled: false,
     size:  "md",
-    variant: "primary",
+    variant: "solid",
+    color: "primary",
     onClick: () => {}
   },
   argTypes:{
@@ -21,9 +22,10 @@ export default {
       control: { type: "select" },
     },
     variant: {
-      options: ["primary" , "outlined" , "text" , "outlined-negative"],
+      options: ["solid" , "outlined" , "transparent" , "custom"],
       control: { type: "select" },
     },
+    color: ["primary", "secondary", "surface", "warning", "error", "success", "info"]
   }
 };
 
@@ -35,6 +37,7 @@ const examples = (args) => (
       <td className="pl-2">Right Icon</td>
       <td className="pl-2">Left Icon</td>
       <td className="pl-2">Only Icon</td>
+      <td className="pl-2">Only Icon No Rounded</td>
     </tr>
     
   </thead>
@@ -55,6 +58,11 @@ const examples = (args) => (
     </td>
     <td className="p-2">
       <Button {...args}>
+        <Icon iconName="arrow_forward"/>
+      </Button>
+    </td>
+    <td className="p-2">
+      <Button {...args} className="rounded-none !p-4" >
         <Icon iconName="arrow_forward"/>
       </Button>
     </td>
