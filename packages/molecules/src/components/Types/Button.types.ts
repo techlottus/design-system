@@ -6,7 +6,7 @@ export interface ButtonType {
   /** Size of Button */
   size?: "xsm" | "sm" | "md" | "lg";
   /** Button variants */
-  variant?: "solid" | "outlined" | "transparent" | "custom";
+  variant?: "solid" | "outlined" | "transparent" | "darkOutlined" | "custom";
   /** Onclick function */
   onClick?: () => void;
   /**childrens */
@@ -26,7 +26,8 @@ export interface ButtonSize {
 
 export interface ButtonVariant {
   solid: string | {"primary": string, "secondary": string, "surface": string , "warning": string , "error": string , "success": string , "info": string};
-  outlined: string | {"primary": string, "secondary": string, "surface": string , "warning": string , "error": string , "success": string , "info": string};
-  transparent: any;
+  outlined: string;
+  darkOutlined: string;
+  transparent: string | any;
   custom: string;
 }

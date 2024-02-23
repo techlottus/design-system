@@ -22,7 +22,7 @@ export default {
       control: { type: "select" },
     },
     variant: {
-      options: ["solid" , "outlined" , "transparent" , "custom"],
+      options: ["solid" , "outlined", "darkOutlined" , "transparent" , "custom"],
       control: { type: "select" },
     },
     color: ["primary", "secondary", "surface", "warning", "error", "success", "info"]
@@ -62,7 +62,7 @@ const examples = (args) => (
       </Button>
     </td>
     <td className="p-2">
-      <Button {...args} className="rounded-none !p-4" >
+      <Button {...args} className="rounded-none !p-4 bg-red-500" >
         <Icon iconName="arrow_forward"/>
       </Button>
     </td>

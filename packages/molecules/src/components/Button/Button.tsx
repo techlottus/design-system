@@ -5,7 +5,7 @@ const sizes: ButtonSize = {
   xsm: cn("px-4 py-3 text-sm rounded"),
   sm: cn("py-4 px-8 text-base rounded-lg"),
   md: cn("py-5 px-9 text-xl rounded-lg"),
-  lg: cn("py-6 px-12 text-xl rounded-lg"),
+  lg: cn("py-6 px-12 text-xxl rounded-lg"),
 };
 
 const variants: ButtonVariant = {
@@ -53,52 +53,64 @@ const variants: ButtonVariant = {
       "focus:bg-success-700 focus:border-success-500 focus:ring-2 focus:ring-success-50 focus:outline-none"
     )
   },
-  outlined: {
-    primary: cn(
-      "bg-transparent text-primary-500 border-2 border-primary-500  ",
-      "hover:bg-primary-100 hover:opacity-50 ",
-      "active:bg-primary-100 ",
-      "focus:bg-primary-100 focus:border-primary-500 focus:ring-2 focus:ring-primary-50 focus:outline-none"
-    ),
-    secondary: cn(
-      "bg-transparent text-secondary-500 border-2 border-secondary-500  ",
-      "hover:bg-secondary-100 hover:opacity-50 ",
-      "active:bg-secondary-100 ",
-      "focus:bg-secondary-100 focus:border-secondary-500 focus:ring-2 focus:ring-primary-50 focus:outline-none"
-    ),
-    surface: cn(
-      "bg-transparent text-surface-500 border-2 border-surface-500  ",
-      "hover:bg-surface-100 hover:opacity-50 ",
-      "active:bg-surface-100 ",
-      "focus:bg-surface-100 focus:border-surface-500 focus:ring-2 focus:ring-primary-50 focus:outline-none"
-    ),
-    info: cn(
-      "bg-transparent text-info-500 border-2 border-info-500  ",
-      "hover:bg-info-100 hover:opacity-50 ",
-      "active:bg-info-100 ",
-      "focus:bg-info-100 focus:border-info-500 focus:ring-2 focus:ring-primary-50 focus:outline-none"
-    ),
-    warning: cn(
-      "bg-transparent text-warning-500 border-2 border-warning-500  ",
-      "hover:bg-warning-100 hover:opacity-50 ",
-      "active:bg-warning-100 ",
-      "focus:bg-warning-100 focus:border-warning-500 focus:ring-2 focus:ring-primary-50 focus:outline-none"
-    ),
-    error: cn(
-      "bg-transparent text-error-500 border-2 border-error-500  ",
-      "hover:bg-error-100 hover:opacity-50 ",
-      "active:bg-error-100 ",
-      "focus:bg-error-100 focus:border-error-500 focus:ring-2 focus:ring-primary-50 focus:outline-none"
-    ),
-    success: cn(
-      "bg-transparent text-success-500 border-2 border-success-500  ",
-      "hover:bg-success-100 hover:opacity-50 ",
-      "active:bg-success-100 ",
-      "focus:bg-success-100 focus:border-success-500 focus:ring-2 focus:ring-primary-50 focus:outline-none"
-    )
-  },
+  // outlined: {
+  //   primary: cn(
+  //     "bg-transparent text-primary-500 border-2 border-primary-500  ",
+  //     "hover:bg-primary-100 hover:opacity-50 ",
+  //     "active:bg-primary-100 ",
+  //     "focus:bg-primary-100 focus:border-primary-500 focus:ring-2 focus:ring-primary-50 focus:outline-none"
+  //   ),
+  //   secondary: cn(
+  //     "bg-transparent text-secondary-500 border-2 border-secondary-500  ",
+  //     "hover:bg-secondary-100 hover:opacity-50 ",
+  //     "active:bg-secondary-100 ",
+  //     "focus:bg-secondary-100 focus:border-secondary-500 focus:ring-2 focus:ring-primary-50 focus:outline-none"
+  //   ),
+  //   surface: cn(
+  //     "bg-transparent text-surface-500 border-2 border-surface-500  ",
+  //     "hover:bg-surface-100 hover:opacity-50 ",
+  //     "active:bg-surface-100 ",
+  //     "focus:bg-surface-100 focus:border-surface-500 focus:ring-2 focus:ring-primary-50 focus:outline-none"
+  //   ),
+  //   info: cn(
+  //     "bg-transparent text-info-500 border-2 border-info-500  ",
+  //     "hover:bg-info-100 hover:opacity-50 ",
+  //     "active:bg-info-100 ",
+  //     "focus:bg-info-100 focus:border-info-500 focus:ring-2 focus:ring-primary-50 focus:outline-none"
+  //   ),
+  //   warning: cn(
+  //     "bg-transparent text-warning-500 border-2 border-warning-500  ",
+  //     "hover:bg-warning-100 hover:opacity-50 ",
+  //     "active:bg-warning-100 ",
+  //     "focus:bg-warning-100 focus:border-warning-500 focus:ring-2 focus:ring-primary-50 focus:outline-none"
+  //   ),
+  //   error: cn(
+  //     "bg-transparent text-error-500 border-2 border-error-500  ",
+  //     "hover:bg-error-100 hover:opacity-50 ",
+  //     "active:bg-error-100 ",
+  //     "focus:bg-error-100 focus:border-error-500 focus:ring-2 focus:ring-primary-50 focus:outline-none"
+  //   ),
+  //   success: cn(
+  //     "bg-transparent text-success-500 border-2 border-success-500  ",
+  //     "hover:bg-success-100 hover:opacity-50 ",
+  //     "active:bg-success-100 ",
+  //     "focus:bg-success-100 focus:border-success-500 focus:ring-2 focus:ring-primary-50 focus:outline-none"
+  //   )
+  // },
+  outlined: cn(
+    "bg-transparent text-surface-800 border-2 border-surface-800",
+    "hover:text-surface-600 hover:border-surface-500",
+    "active:text-surface-950 active:border-surface-950",
+    "focus:border-surface-950 focus:ring-2 focus:ring-info-200 focus:outline-none"
+  ),
+  darkOutlined: cn(
+    "bg-transparent text-surface-50 border-2 border-surface-50 ",
+    "hover:text-surface-400 hover:border-surface-600",
+    "active:text-surface-00 active:border-surface-400",
+    "focus:border-transparent focus:ring-2 focus:ring-info-200 focus:outline-none"
+  ),
   transparent: cn(
-    "bg-transparent text-surface-900 ",
+    "bg-transparent text-surface-900",
     "hover:text-surface-800 hover:bg-surface-100",
     "active:bg-surface-200 active:ring-0 active:border-0 active:text-surface-900 ",
     "focus:border-2 focus:border-surface-900 focus:ring-2 focus-ring-primary-50"
@@ -123,7 +135,13 @@ const disabledVariants: ButtonVariant = {
     "text-surface-400",
     "border-2 border-surface-400"
   ),
-  custom: "" 
+  darkOutlined: cn(
+    "cursor-not-allowed",
+    "bg-transparent",
+    "text-surface-400",
+    "border-2 border-surface-400"
+  ),
+  custom: ""
 };
 
 const Button: React.FC<ButtonType> = (props: ButtonType) => {
@@ -137,13 +155,31 @@ const Button: React.FC<ButtonType> = (props: ButtonType) => {
     onClick,
   } = props;
 
-  const buttonClasses: string = cn(commonClasses, className, [sizes[size]], {
-    [variants[variant][color]]: !disabled && variant === "solid" || variant === "outlined",
-    [variants[variant]]: !disabled && variant === "transparent",
+  const buttonClasses: string = cn(commonClasses, [sizes[size]], className, {
+    [variants[variant][color]]: !disabled && variant === "solid",
+    [variants[variant]]: !disabled && variant === "outlined" || variant === "darkOutlined",
     [disabledVariants[variant]]: disabled,
     ["cursor-pointer"]: !disabled,
   });
 
+  if(variant === "transparent"){
+    const sizes: ButtonSize = {
+      xsm: cn("px-2 py-2 text-sm rounded"),
+      sm: cn("py-2 px-2 text-base rounded-lg"),
+      md: cn("py-2 px-2 text-xl rounded-lg"),
+      lg: cn("py-2 px-2 text-xl rounded-lg"),
+    };
+    const buttonClasses: string = cn(commonClasses, [sizes[size]], className, {
+      [variants[variant]]: !disabled,
+      [disabledVariants[variant]]: disabled,
+      ["cursor-pointer"]: !disabled,
+    });
+    return (
+      <button className={buttonClasses} onClick={onClick}>
+        {children}
+      </button>
+    );
+  }
   return (
     <button className={buttonClasses} onClick={onClick}>
       {children}
