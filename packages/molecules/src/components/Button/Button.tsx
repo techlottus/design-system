@@ -137,7 +137,7 @@ const disabledVariants: ButtonVariant = {
   ),
   darkOutlined: cn(
     "cursor-not-allowed",
-    "bg-transparent",
+    "bg-none",
     "text-surface-400",
     "border-2 border-surface-400"
   ),

@@ -28,6 +28,6 @@ export interface ButtonVariant {
   solid: string | {"primary": string, "secondary": string, "surface": string , "warning": string , "error": string , "success": string , "info": string};
   outlined: string;
   darkOutlined: string;
-  transparent: any;
+  transparent: string | any;
   custom: string;
 }
