@@ -53,50 +53,6 @@ const variants: ButtonVariant = {
       "focus:bg-success-700 focus:border-success-500 focus:ring-2 focus:ring-success-50 focus:outline-none"
     )
   },
-  // outlined: {
-  //   primary: cn(
-  //     "bg-transparent text-primary-500 border-2 border-primary-500  ",
-  //     "hover:bg-primary-100 hover:opacity-50 ",
-  //     "active:bg-primary-100 ",
-  //     "focus:bg-primary-100 focus:border-primary-500 focus:ring-2 focus:ring-primary-50 focus:outline-none"
-  //   ),
-  //   secondary: cn(
-  //     "bg-transparent text-secondary-500 border-2 border-secondary-500  ",
-  //     "hover:bg-secondary-100 hover:opacity-50 ",
-  //     "active:bg-secondary-100 ",
-  //     "focus:bg-secondary-100 focus:border-secondary-500 focus:ring-2 focus:ring-primary-50 focus:outline-none"
-  //   ),
-  //   surface: cn(
-  //     "bg-transparent text-surface-500 border-2 border-surface-500  ",
-  //     "hover:bg-surface-100 hover:opacity-50 ",
-  //     "active:bg-surface-100 ",
-  //     "focus:bg-surface-100 focus:border-surface-500 focus:ring-2 focus:ring-primary-50 focus:outline-none"
-  //   ),
-  //   info: cn(
-  //     "bg-transparent text-info-500 border-2 border-info-500  ",
-  //     "hover:bg-info-100 hover:opacity-50 ",
-  //     "active:bg-info-100 ",
-  //     "focus:bg-info-100 focus:border-info-500 focus:ring-2 focus:ring-primary-50 focus:outline-none"
-  //   ),
-  //   warning: cn(
-  //     "bg-transparent text-warning-500 border-2 border-warning-500  ",
-  //     "hover:bg-warning-100 hover:opacity-50 ",
-  //     "active:bg-warning-100 ",
-  //     "focus:bg-warning-100 focus:border-warning-500 focus:ring-2 focus:ring-primary-50 focus:outline-none"
-  //   ),
-  //   error: cn(
-  //     "bg-transparent text-error-500 border-2 border-error-500  ",
-  //     "hover:bg-error-100 hover:opacity-50 ",
-  //     "active:bg-error-100 ",
-  //     "focus:bg-error-100 focus:border-error-500 focus:ring-2 focus:ring-primary-50 focus:outline-none"
-  //   ),
-  //   success: cn(
-  //     "bg-transparent text-success-500 border-2 border-success-500  ",
-  //     "hover:bg-success-100 hover:opacity-50 ",
-  //     "active:bg-success-100 ",
-  //     "focus:bg-success-100 focus:border-success-500 focus:ring-2 focus:ring-primary-50 focus:outline-none"
-  //   )
-  // },
   outlined: cn(
     "bg-transparent text-surface-800 border-2 border-surface-800",
     "hover:text-surface-600 hover:border-surface-500",
@@ -136,10 +92,11 @@ const disabledVariants: ButtonVariant = {
     "border-2 border-surface-400"
   ),
   darkOutlined: cn(
-    "cursor-not-allowed",
+    "!cursor-not-allowed",
     "bg-none",
-    "text-surface-400",
-    "border-2 border-surface-400"
+    "!text-surface-400",
+    "!border-2 !border-surface-400",
+    "!ring-0"
   ),
   custom: ""
 };
