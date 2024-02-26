@@ -1,9 +1,20 @@
-import { svgIcon } from "../types";
+import React from "react";
+import cn from "classnames"
+import { SvgIcon } from "../Types/Icon.types";
 
-export default function RadioButtonActive({ className, size, fillColor }: svgIcon) {
+const sizes = {
+    "sm": "16",
+    "md": "24",
+    "lg": "32"
+};
+
+const RadioButtonActive: React.FC<SvgIcon> = (props: SvgIcon) => {
+
+    const { className, size = "sm" } = props;
+
     return (
-        <svg width={size} height={size} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-            <rect width="32" height="32" rx="16" fill={fillColor || "#18181B"} />
+        <svg width={sizes[size] || 16} height={sizes[size] || 16} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className={cn("fill-surface-950", className)}>
+            <rect width="32" height="32" rx="16" fill="inherit" />
             <g filter="url(#filter0_d_1252_448)">
                 <circle cx="16" cy="16" r="3" fill="white" />
             </g>
@@ -20,4 +31,6 @@ export default function RadioButtonActive({ className, size, fillColor }: svgIco
             </defs>
         </svg>
     );
-}
+};
+
+export default RadioButtonActive;
