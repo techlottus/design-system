@@ -1,0 +1,63 @@
+import { Meta, Preview } from '@storybook/blocks';
+import InputGroup from './Input'
+
+
+<Meta title="MDX|Input" component = { InputGroup } />
+
+# Input Group
+
+The Input Group is a fundamental component commonly employed within forms,
+ facilitating user input across various data types such as text, numbers, emails, and passwords, among others.
+  It serves as a conduit for both sending and collecting inputted data. Within the @lottuseducation/molecules library, 
+  the Input Group component comprises three integral elements: "InputGroup.InputText," "InputGroup.RightElement," and
+   "InputGroup.LeftElement." By leveraging these components, a multitude of distinct designs for input groups can be crafted.
+- InputGroup: The primary component that encompasses all elements within the input group.
+- InputGroup.RightElement: Contains the children for the right section of the input group.
+- InputGroup.InputText: This central component holds the input text and receives a label, along with all the properties of the HTML input element.
+- InputGroup.LeftElement: Holds the children for the left side of the input group
+
+## Installation and import
+
+
+To integrate this component, we leverage the @lottuseducation/molecules library. This library seamlessly combines unstyled yet fully accessible UI components into our projects, meticulously designed to complement Tailwind CSS integration.
+
+To get started, initiate the installation of @lottuseducation/molecules via npm:
+
+```
+   npm install @lottuseducation/molecules
+
+```
+
+
+After installing the library, you can import the component into your project as follows:
+
+`import InputGroup from "@lottuseducation/molecules`
+ 
+
+## Usage
+
+
+To utilize the Input Group component, incorporate it into your code as shown below:
+
+```
+<InputGroup >
+
+    //optional
+    <InputGroup.RightElement>
+    ...childrens
+    </InputGroup.RightElement>
+
+    <InputGroup.Input label="label" type="text" />
+
+    //optional
+    <InputGroup.LeftElement>
+    ...childrens
+    </InputGroup.LeftElement>
+
+</ InputGroup>
+
+```
+
+## Examples and casuistics
+
+< InputGroup.Input label = "label" type = "text" />
