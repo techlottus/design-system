@@ -5,8 +5,8 @@ import * as tailwindBase from "@lottuseducation/tailwind-base/lib/tailwind-base.
 module.exports = {
   content: [
     "./stories/**/*.stories.{js,jsx,ts,tsx}",
-    "./components/**/*.{js,jsx,ts,tsx}"
-    ,
+    "./components/**/*.{js,jsx,ts,tsx}",
+    "./../packages/**/*.{js,jsx,ts,tsx,mdx}"
   ],
   safelist: [{pattern: /[a-z][0-9]\:\-/}],
   presets: [tailwindBase.default, tailwindBaseLottus.default ],
