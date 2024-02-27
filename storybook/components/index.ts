@@ -1,5 +1,4 @@
-export { default as Heading } from "./Heading";
-export { default as Icon } from "./Icon";
-export { default as Badge } from "./Badge";
-export { default as Logo } from "./Logo";
-
+export { CheckBoxActive } from "./CheckBoxActive";
+export { CheckBoxDefault } from "./CheckBoxDefault";
+export { RadioButtonActive } from "./RadioButtonActive"
+export { RadioButtonDefault } from "./RadioButtonDefault";
