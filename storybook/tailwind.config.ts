@@ -8,7 +8,8 @@ module.exports = {
     "./components/**/*.{js,jsx,ts,tsx}",
     "./../packages/**/*.{js,jsx,ts,tsx,mdx}"
   ],
-  presets: [tailwindBaseLottus.default, tailwindBase.default],
+  safelist: [{pattern: /[a-z][0-9]\:\-/}],
+  presets: [tailwindBase.default, tailwindBaseLottus.default ],
   theme: {},
   plugins: [],
 };
