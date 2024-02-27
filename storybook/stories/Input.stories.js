@@ -1,22 +1,46 @@
 import React from "react";
-import Input  from "../components/Input";
-/** The input text is an element that is generally used in forms for the user to enter different types of data such as text, numbers, emails, passwords, among others. It also allows you to send and collect the input of this data */
+import InputGroup from "../components/Input/Input"
+import Icon from "../components/Icon"
+import mdx from "../components/Input/Input.mdx"
 
 export default {
-  title: "Molecules/Input",
-  component: Input,
+  title: "MOLECULES/Input",
+  component: InputGroup,
   tags: ["autodocs"],
-  args: {
-    className: "pl-18 pr-20",
-    leftElement: <span className=" text-surface-300 select-none">https://</span>,
-    rightElement: <span className="text-surface-300 select-none">.example.org</span>
+  parameters: {
+    docs: {
+      page: mdx,
+    },
   },
+  args:{
+    isValid:null,
+    type:"text",
+    label:"label"
+  },
+  argTypes:{
+    isValid: {
+      options: [true,false],
+      control: { type: "boolean" },
+    },
+    type: {
+      options: ["text","email","tel"],
+      control: { type: "select" },
+    },
+  }
 };
 
 const Template = (args) => (
-  <Input   {...args}/>
+  <InputGroup >
+    <InputGroup.RightElement>
+    <Icon iconName="done" className="text-success-500"/>
+    </InputGroup.RightElement>
+    <InputGroup.Input {...args} />
+    <InputGroup.LeftElement><Icon iconName="people"/></InputGroup.LeftElement>
+  </ InputGroup>
 );
 
-const Standard = Template.bind({});
+const InputExample = Template.bind({
 
-export { Standard };
+});
+
+export { InputExample };
