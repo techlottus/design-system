@@ -7,9 +7,10 @@ module.exports = {
     "./stories/**/*.stories.{js,jsx,ts,tsx}",
     "./components/**/*.{js,jsx,ts,tsx}",
     "./RadioGroup/**/*.{js,jsx,ts,tsx,mdx}",
+    "./../packages/**/*.{js,jsx,ts,tsx,mdx}"
   ],
-  safelist: [{ pattern: /[a-z][0-9]\:\-/ }],
-  presets: [tailwindBaseLottus.default, tailwindBase.default],
+  safelist: [{pattern: /[a-z][0-9]\:\-/}],
+  presets: [tailwindBase.default, tailwindBaseLottus.default ],
   theme: {},
   plugins: [],
 };
