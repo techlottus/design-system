@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { RadioGroup } from '@headlessui/react'
 import React from "react";
-import Icon from "../components/Icon";
-import RadioButtonActive from '../../assets/icons/RadioButtonActive';
-import RadioButtonDefault from '../../assets/icons/RadioButtonDefault';
+import Icon from "../../components/Icon";
+import RadioButtonActive from '../../components/RadioButtonActive/RadioButtonActive';
+import RadioButtonDefault from '../../components/RadioButtonDefault/RadioButtonDefault';
 
-const plans = [
+const select = [
     {
         name: 'Startup',
         ram: '12GB',
@@ -28,15 +28,15 @@ const plans = [
 
 const RadioButtonCard = () => {
 
-    const [selected, setSelected] = useState(plans[0])
+    const [selected, setSelected] = useState(select[0])
 
     return (
         <div className="w-full">
             <RadioGroup className="flex" value={selected} onChange={setSelected}>
                 <div className="space-y-2">
                     <RadioGroup.Option
-                        key={plans[0].name}
-                        value={plans[0]}
+                        key={select[0].name}
+                        value={select[0]}
                         className="w-96 relative cursor-pointer rounded-lg px-5 py-4 shadow-[0_2px_12px_0px_rgba(0,0,0,0.12)]">
                         <div className="flex w-full items-center justify-between">
                             <div className="flex items-center">
@@ -55,16 +55,16 @@ const RadioButtonCard = () => {
                                         <p className="!my-0 !text-base !text-primary-500">Eliminar</p>
                                     </RadioGroup.Description>
                                 </div>
-                                {selected == plans[0] ?
-                                    <RadioButtonActive size="24" fillColor="" className="!me-3 !absolute !right-0 !top-3" />
-                                    : <RadioButtonDefault size="24" fillColor="" className="!me-3 !absolute !right-0 !top-3" />
+                                {selected == select[0] ?
+                                    <RadioButtonActive size="md" className="!me-3 !absolute !right-0 !top-3" />
+                                    : <RadioButtonDefault size="md" className="!me-3 !absolute !right-0 !top-3" />
                                 }
                             </div>
                         </div>
                     </RadioGroup.Option>
                     <RadioGroup.Option
-                        key={plans[1].name}
-                        value={plans[1]}
+                        key={select[1].name}
+                        value={select[1]}
                         className="relative flex cursor-pointer !my-5 rounded-lg px-5 py-4 shadow-[0_2px_12px_0px_rgba(0,0,0,0.12)]">
                         <div className="flex w-full items-center justify-between">
                             <div className="flex items-center">
@@ -83,16 +83,16 @@ const RadioButtonCard = () => {
                                         <p className="!my-0 !text-base !text-primary-500">Eliminar</p>
                                     </RadioGroup.Description>
                                 </div>
-                                {selected == plans[1] ?
-                                    <RadioButtonActive size="24" fillColor="" className="!me-3 !text-surface-400 !absolute !right-0 !top-3" />
-                                    : <RadioButtonDefault size="24" fillColor="" className="!me-3 !text-surface-400 !absolute !right-0 !top-3" />
+                                {selected == select[1] ?
+                                    <RadioButtonActive size="md" className="!me-3 !text-surface-400 !absolute !right-0 !top-3" />
+                                    : <RadioButtonDefault size="md" className="!me-3 !text-surface-400 !absolute !right-0 !top-3" />
                                 }
                             </div>
                         </div>
                     </RadioGroup.Option>
                     <RadioGroup.Option
-                        key={plans[2].name}
-                        value={plans[2]}
+                        key={select[2].name}
+                        value={select[2]}
                         className="relative flex cursor-pointer rounded-lg px-5 py-4 shadow-[0_2px_12px_0px_rgba(0,0,0,0.12)]">
                         <div className="flex w-full items-center justify-between">
                             <div className="flex items-center">
@@ -111,9 +111,9 @@ const RadioButtonCard = () => {
                                         <p className="!my-0 !text-base !text-primary-500">Eliminar</p>
                                     </RadioGroup.Description>
                                 </div>
-                                {selected == plans[2] ?
-                                    <RadioButtonActive size="24" fillColor="" className="!me-3 !text-surface-400 !absolute !right-0 !top-3" />
-                                    : <RadioButtonDefault size="24" fillColor="" className="!me-3 !text-surface-400 !absolute !right-0 !top-3" />
+                                {selected == select[2] ?
+                                    <RadioButtonActive size="md" className="!me-3 !text-surface-400 !absolute !right-0 !top-3" />
+                                    : <RadioButtonDefault size="md" className="!me-3 !text-surface-400 !absolute !right-0 !top-3" />
                                 }
                             </div>
                         </div>

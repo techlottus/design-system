@@ -26,10 +26,11 @@ Select an option by clicking on it, and when the radio group is focused, utilize
 
  <SelectChip /> 
 ```
+import React from "react";
 import { useState } from 'react'
 import { RadioGroup } from '@headlessui/react'
-import React from "react";
 import Icon from '../components/Icon/Icon';
+
 const MyRadioGroup = () => {
  let [plan, setPlan] = useState('startup')
 
@@ -91,6 +92,7 @@ import { RadioGroup } from '@headlessui/react'
 import React from "react";
 import Icon from "../components/Icon";
 
+<RadioGroup className="flex" value={selected} onChange={setSelected}>
 <RadioGroup.Option
     value={true}
     className="relative flex cursor-pointer rounded-lg px-5 py-4 shadow-[0_2px_12px_0px_rgba(0,0,0,0.12)]">
@@ -118,6 +120,7 @@ import Icon from "../components/Icon";
         </div>
     </div>
 </RadioGroup.Option>
+<RadioGroup className="flex" value={selected} onChange={setSelected}>
 ```
 
 For further details, please visit <a className="cursor-pointer" href="https://headlessui.com/" target="_blank">https://headlessui.com/</a>

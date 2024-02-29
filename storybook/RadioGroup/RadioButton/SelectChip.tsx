@@ -1,10 +1,8 @@
 import { useState } from 'react'
 import { RadioGroup } from '@headlessui/react'
 import React from "react";
-import Icon from '../components/Icon/Icon';
-import RadioButtonActive from '../../assets/icons/RadioButtonActive';
-import RadioButtonDefault from '../../assets/icons/RadioButtonDefault';
-
+import RadioButtonActive from '../../components/RadioButtonActive/RadioButtonActive';
+import RadioButtonDefault from '../../components/RadioButtonDefault/RadioButtonDefault';
 const SelectChip = () => {
     let [selected, setSelected] = useState('startup')
 
@@ -16,8 +14,8 @@ const SelectChip = () => {
                         {({ checked }) => (
                             <>
                                 {checked ?
-                                    <RadioButtonActive size="16" fillColor="#18181B" className="!ms-2 !me-3 my-auto" />
-                                    : <RadioButtonDefault size="16" fillColor="#18181B" className="!ms-2 !me-3 my-auto" />
+                                    <RadioButtonActive size="sm" className="!ms-2 !me-3 my-auto" />
+                                    : <RadioButtonDefault size="sm" className="!ms-2 !me-3 my-auto" />
                                 }
                                 <span className={checked ? 'bg-surface-100' : ''}>Label</span>
                             </>
@@ -27,19 +25,19 @@ const SelectChip = () => {
                         {({ checked }) => (
                             <>
                                 {checked ?
-                                    <RadioButtonActive size="16" fillColor="#2B897E" className="!ms-2 !me-3 my-auto" />
-                                    : <RadioButtonDefault size="16" fillColor="#2B897E" className="!ms-2 !me-3 my-auto" />
+                                    <RadioButtonActive size="sm" className="!ms-2 !me-3 my-auto fill-info-700" />
+                                    : <RadioButtonDefault size="sm" className="!ms-2 !me-3 my-auto" />
                                 }
                                 <span className={checked ? 'bg-surface-100' : ''}>Label</span>
                             </>
                         )}
                     </RadioGroup.Option>
-                    <RadioGroup.Option value="enterprise" className="flex bg-surface-100 w-24 h-9 cursor-pointer border-2 border-error-600 rounded py-1.5">
+                    <RadioGroup.Option value="enterprise" className="flex bg-surface-100 w-24 h-9 cursor-pointer border-2 border-success-600 rounded py-1.5">
                         {({ checked }) => (
                             <>
                                 {checked ?
-                                    <RadioButtonActive size="16" fillColor="#0033FF" className="!ms-2 !me-3  my-auto" />
-                                    : <RadioButtonDefault size="16" fillColor="#0033FF" className="!ms-2 !me-3 my-auto" />
+                                    <RadioButtonActive size="sm" className="!ms-2 !me-3 my-auto fill-success-600" />
+                                    : <RadioButtonDefault size="sm" className="!ms-2 !me-3 my-auto" />
                                 }
                                 <span className={checked ? 'bg-surface-100' : ''}>Label</span>
                             </>

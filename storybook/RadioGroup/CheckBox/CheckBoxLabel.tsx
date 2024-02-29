@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import { RadioGroup } from '@headlessui/react'
 import React from "react";
-import Icon from '../../components/Icon';
-import CheckBoxOutline from '../../../assets/icons/CheckBoxOutline';
-import CheckBoxFlat from '../../../assets/icons/CheckBoxFlat';
+import CheckBoxActive from '../../components/CheckBoxActive/CheckBoxActive';
+import CheckBoxDefault from '../../components/CheckBoxDefault/CheckBoxDefault';
 
 const CheckBoxLabel = () => {
 
@@ -21,8 +20,8 @@ const CheckBoxLabel = () => {
                     <RadioGroup.Option value={optionSeven} className="flex !mt-4 cursor-pointer !mb-3 w-20" onClick={() => setOptionSeven(!optionSeven)}>
                         <>
                             {optionSeven ?
-                                <CheckBoxFlat size="22" fillColor="#A1A1AA" className="!mx-2 cursor-pointer" />
-                                : <CheckBoxOutline size="22" fillColor="#A1A1AA" className="!mx-2 cursor-pointer" />
+                                <CheckBoxActive size="md" className="!mx-2 cursor-pointer" />
+                                : <CheckBoxDefault size="md" className="!mx-2 cursor-pointer" />
                             }
                             <span className="">Label</span>
                         </>
@@ -30,23 +29,23 @@ const CheckBoxLabel = () => {
                     <RadioGroup.Option value={optionEight} className="flex cursor-pointer !mb-3 w-20" onClick={() => setOptionEight(!optionEight)}>
                         <>
                             {optionEight ?
-                                <CheckBoxFlat size="22" fillColor="#18181B" className="!mx-2" />
-                                : <CheckBoxOutline size="22" fillColor="#18181B" className="!mx-2" />
+                                <CheckBoxActive size="md" className="!mx-2" />
+                                : <CheckBoxDefault size="md" className="!mx-2" />
                             }
                             <span className="text-base">Label</span>
                         </>
                     </RadioGroup.Option>
                     <RadioGroup.Option value={optionNine} className="flex !mb-3 w-20" onClick={() => setOptionNine(!optionNine)}>
                         <>
-                            <CheckBoxOutline size="22" fillColor="#A1A1AA" className="!mx-2" />
+                            <CheckBoxDefault size="md" className="!mx-2" />
                             <span className="text-base">Label</span>
                         </>
                     </RadioGroup.Option>
                     <RadioGroup.Option value={optionTen} className="flex cursor-pointer !mb-3 w-20" onClick={() => setOptionTen(!optionTen)}>
                         <>
                             {optionTen ?
-                                <CheckBoxFlat size="22" fillColor="#D4D4D8" className="!mx-2" />
-                                : <CheckBoxOutline size="22" fillColor="#D4D4D8" className="!mx-2" />
+                                <CheckBoxActive size="md" className="!mx-2" />
+                                : <CheckBoxDefault size="md" className="!mx-2" />
                             }
                             <span className="">Label</span>
                         </>
@@ -54,15 +53,15 @@ const CheckBoxLabel = () => {
                     <RadioGroup.Option value={optionEleven} className="flex cursor-pointer !mb-3 w-20" onClick={() => setOptionEleven(!optionEleven)}>
                         <>
                             {optionEleven ?
-                                <CheckBoxFlat size="22" fillColor="#18181B" className="!mx-2 cursor-pointer" />
-                                : <CheckBoxOutline size="22" fillColor="#18181B" className="!mx-2 cursor-pointer" />
+                                <CheckBoxActive size="md" className="!mx-2 cursor-pointer" />
+                                : <CheckBoxDefault size="md" className="!mx-2 cursor-pointer" />
                             }
                             <span className="">Label</span>
                         </>
                     </RadioGroup.Option>
                     <RadioGroup.Option value={optionTwelve} className="flex !mb-3" onClick={() => setOptionTwelve(!optionTwelve)}>
                         <>
-                            <CheckBoxFlat size="22" fillColor="#18181B" className="!mx-2 opacity-60" />
+                            <CheckBoxActive size="md" className="!mx-2 opacity-60" />
                             <p className="">Label</p>
                             <p className="text-sm !ms-2">Help text</p>
                         </>
