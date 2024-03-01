@@ -13,7 +13,7 @@ export default {
     },
   },
   args:{
-    isValid:null,
+    isValid:true,
     type:"text",
     label:"label"
   },
@@ -30,12 +30,13 @@ export default {
 };
 
 const Template = (args) => (
-  <InputGroup >
+  <InputGroup isValid={true} >
     <InputGroup.RightElement>
-    <Icon iconName="done" className="text-success-500"/>
+    {/* <Icon iconName="done" className="text-success-500"/> */}
+    <span>.com</span>
     </InputGroup.RightElement>
     <InputGroup.Input {...args} />
-    <InputGroup.LeftElement><Icon iconName="people"/></InputGroup.LeftElement>
+    <InputGroup.LeftElement><span>http://</span></InputGroup.LeftElement>
   </ InputGroup>
 );
 
