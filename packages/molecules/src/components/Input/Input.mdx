@@ -11,6 +11,7 @@ The Input Group is a fundamental component commonly employed within forms,
   It serves as a conduit for both sending and collecting inputted data. Within the @lottuseducation/molecules library, 
   the Input Group component comprises three integral elements: "InputGroup.InputText," "InputGroup.RightElement," and
    "InputGroup.LeftElement." By leveraging these components, a multitude of distinct designs for input groups can be crafted.
+   
 - InputGroup: The primary component that encompasses all elements within the input group.
 - InputGroup.RightElement: Contains the children for the right section of the input group.
 - InputGroup.InputText: This central component holds the input text and receives a label, along with all the properties of the HTML input element.
@@ -37,7 +38,7 @@ After installing the library, you can import the component into your project as 
 ## Usage
 
 
-To utilize the Input Group component, incorporate it into your code as shown below:
+To incorporate the Input Group component into your code, follow the structure demonstrated below:
 
 ```
 <InputGroup >
@@ -57,7 +58,111 @@ To utilize the Input Group component, incorporate it into your code as shown bel
 </ InputGroup>
 
 ```
+The previous example showcases the simplest usage of the InputGroup component, utilizing default props and rendering an Input as illustrated below:
+{
+      <InputGroup >
+         <InputGroup.RightElement className="bg-primary-100"> <div className='w-3 h-4'></div> </InputGroup.RightElement> 
+         <InputGroup.Input label = "label" type = "text"/>
+         <InputGroup.LeftElement className="bg-primary-100"><div className='w-3 h-4'></div> </InputGroup.LeftElement>
+      </InputGroup>
+               }
 
-## Examples and casuistics
+## Examples and Use Cases
 
-< InputGroup.Input label = "label" type = "text" />
+Explore additional examples and use cases:
+
+Input Group with valid value:
+
+```
+<InputGroup isValid={true} >
+    
+    <InputGroup.LeftElement>
+      <Icon iconName="people" className="text-surface-800 text-lg"/> 
+    </InputGroup.LeftElement>
+
+    <InputGroup.Input type="text" isValid={true} label="label" />
+
+    <InputGroup.RightElement>
+    <Icon iconName="done" className="text-success-500 text-lg"/> 
+    </InputGroup.RightElement>
+
+</ InputGroup>
+```
+{<InputGroup isValid={true} >
+    
+    <InputGroup.LeftElement>
+       <span className="font-icons-solid not-italic  text-lg text-surface-400" >
+          <i>person</i>
+       </span>
+    </InputGroup.LeftElement>
+
+    <InputGroup.Input type="text" isValid={true} label="label" />
+    
+    <InputGroup.RightElement>
+    <span className="font-icons-solid not-italic  text-lg text-success-500" >
+          <i>done</i>
+       </span>
+    </InputGroup.RightElement>
+
+</ InputGroup>}
+
+
+Input Group with invalid value
+
+```
+<InputGroup isValid={false} >
+    
+    <InputGroup.LeftElement>
+       <span className="font-icons-solid not-italic  text-lg text-surface-400" >
+          <i>person</i>
+       </span>
+    </InputGroup.LeftElement>
+
+    <InputGroup.Input type="text" isValid={false} label="label" />
+    
+    <InputGroup.RightElement>
+    <span className="font-icons-solid not-italic  text-lg text-success-500" >
+          <i>done</i>
+       </span>
+    </InputGroup.RightElement>
+
+</ InputGroup>```
+
+```
+{<InputGroup isValid={false} >
+    
+    <InputGroup.LeftElement>
+       <span className="font-icons-solid not-italic  text-lg text-surface-400" >
+          <i>person</i>
+       </span>
+    </InputGroup.LeftElement>
+
+    <InputGroup.Input type="text" isValid={false} label="label" />
+    
+    <InputGroup.RightElement>
+    <span className="font-icons-solid not-italic  text-lg text-error-500" >
+          <i>error</i>
+       </span>
+    </InputGroup.RightElement>
+
+</ InputGroup>}
+
+for disable input:
+
+{<InputGroup  >
+    
+    <InputGroup.LeftElement>
+       <span className="font-icons-solid not-italic  text-lg text-surface-400" >
+          <i>person</i>
+       </span>
+    </InputGroup.LeftElement>
+
+    <InputGroup.Input disabled type="text" label="label" />
+    
+    <InputGroup.RightElement>
+    <span className="font-icons-solid not-italic  text-lg text-surface-400" >
+          <i>visibiliti_off</i>
+       </span>
+    </InputGroup.RightElement>
+
+</ InputGroup>}
