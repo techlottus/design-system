@@ -8,39 +8,85 @@ import CheckBoxActive from '../../components/CheckBoxActive/CheckBoxActive'
 
 # CheckBox
 
-Checkboxes empower users to effortlessly select one or multiple items from a given set, enhancing their control and flexibility within the interface.
+Check boxes provide users with a seamless way to select one or more items from a designated set, enhancing their ability to control and customize their experience within the interface.
 
 ## Installation
 
-To implement this component we use Headless UI which allows us to seamlessly combine unstyled but fully accessible UI components in our projects, 
-meticulously designed to harmonize with the Tailwind CSS integration.
-
-To kick off, initiate the installation of Headless UI via npm.
+To begin, start the installation process of Headless UI using npm. EN VEZ DE To kick off, initiate the installation of Headless UI via npm
 
 `npm install @headlessui/react`
 
-Here are three examples showcasing the use cases for the radio group and its functionality:
+## Usage
 
-## CheckBox
+Checkboxes are used to enable or disable an option. When presenting multiple choices in a list, using checkboxes instead of on/off switches helps conserve space.
 
-Checkboxes serve to activate or deactivate an option. When presenting multiple choices within a list, employing checkboxes rather than on/off switches conserves space. 
-Conversely, for singular options, opting for an on/off switch over a checkbox is preferable.
+To implement a checkbox in a list, refer to the following code example:
+
+```
+let [optionOne, setOptionOne] = useState(false)
+
+<RadioGroup>
+    <RadioGroup.Option value={optionOne} className="!w-5 !mx-2" onClick={() => setOptionOne(!optionOne)}>
+        <>
+            {optionOne ?
+                <CheckBoxActive size="md" className="!mx-2 cursor-pointer" />
+                : <CheckBoxDefault size="md" className="!mx-2 cursor-pointer" />
+            }
+        </>
+    </RadioGroup.Option>       
+</RadioGroup>
+```
 
 <CheckBox /> 
 
 ## CheckBoxLabel
 
-You can conveniently label a Checkbox using the CheckBoxLabel component.
+You can utilize a checkbox list with labels by following the code example below:
+
+```
+let [optionSeven, setOptionSeven] = useState(false)
+
+<RadioGroup>
+    <RadioGroup.Option value={optionSeven} className="flex !mt-4 cursor-pointer !mb-3 w-20" onClick={() => setOptionSeven(!optionSeven)}>
+        <>
+            {optionSeven ?
+                <CheckBoxActive size="md" className="!mx-2 cursor-pointer" />
+                : <CheckBoxDefault size="md" className="!mx-2 cursor-pointer" />
+            }
+            <span className="">Label</span>
+        </>
+    </RadioGroup.Option>                                      
+</RadioGroup>
+```
 
  <CheckBoxLabel /> 
 
-## Sizes
+## CheckBoxLink
 
- To adjust the size of the checkboxes, utilize the size prop or customize the font size of the SVG icons.
+To include a privacy link with a checkbox, refer to the following code example:
+```
+let [optionThirteen, setOptionThirteen] = useState(true)
 
-<CheckBoxActive size="sm" className=""/> 
-<CheckBoxActive size="md" className=""/>
-<CheckBoxActive size="lg" className=""/>
+<RadioGroup>
+    <RadioGroup.Option value={optionThirteen} className="!flex mb-2 cursor-pointer mt-2" onClick={() => setOptionThirteen(!optionThirteen)}>
+        <>
+            {optionThirteen ?
+                <CheckBoxActive size="md" className="!mx-2 my-auto" />
+                : <CheckBoxDefault size="md" className="!mx-2 my-auto" />
+            }
+            <p className="">I have read the <a className="!underline" href="#"> Privacy Notice</a></p>
+        </>
+    </RadioGroup.Option>
+</RadioGroup>
+```
+
+ <CheckBoxLink /> 
+
+For further details, please visit <a className="cursor-pointer" href="https://headlessui.com/" target="_blank">https://headlessui.com/</a>
+
+## Checkbox Icon details
+
+The checkbox icon is customizable. You can adjust the size of the checkboxes by using the size prop or customize the font size of the SVG icons.
 
 ```
 <CheckBoxActive size="sm"/> 
@@ -48,22 +94,20 @@ You can conveniently label a Checkbox using the CheckBoxLabel component.
 <CheckBoxActive size="lg"/>
 ```
 
- ## className
+<CheckBoxActive size="sm" className=""/> 
+<CheckBoxActive size="md" className=""/>
+<CheckBoxActive size="lg" className=""/>
+
+## className
 
 Below is an illustrative example of customizing the Checkbox. For further details, refer to the classes documentation page to deepen your understanding <a className="cursor-pointer" href="https://tailwindcss.com/" target="_blank">https://tailwindcss.com/</a>.
 
-<CheckBoxActive size="sm" className="fill-primary-500"/> 
-<CheckBoxActive size="md" className="fill-success-500"/>
-<CheckBoxActive size="lg" className="fill-info-500"/>
-
 ```
 <CheckBoxActive size="sm" className="fill-primary-500"/> 
 <CheckBoxActive size="md" className="fill-success-500"/>
 <CheckBoxActive size="lg" className="fill-info-500"/>
 ```
 
-## CheckBoxLink
-
- <CheckBoxLink /> 
-
-For further details, please visit <a className="cursor-pointer" href="https://headlessui.com/" target="_blank">https://headlessui.com/</a>
+<CheckBoxActive size="sm" className="fill-primary-500"/> 
+<CheckBoxActive size="md" className="fill-success-500"/>
+<CheckBoxActive size="lg" className="fill-info-500"/>
