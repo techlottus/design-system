@@ -16,7 +16,8 @@ export default {
   args:{
     isValid:null,
     type:"text",
-    label:"Name"
+    label:"Name",
+    disabled:false,
   },
   argTypes:{
     isValid: {
