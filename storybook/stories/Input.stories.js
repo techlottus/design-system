@@ -71,9 +71,9 @@ const Template2 = (args) =>{
       setValid(emailRegex.test(formJson?.inputName))
     }
   return(
-  <form onSubmit={handleSubmit}  >
+  <form onSubmit={handleSubmit}  noValidate={true} >
 <div className="w-full flex space-x-2"> 
-    <Input  name="inputName" label="E-mail" type="email" isValid={valid? valid : false} >
+    <Input  name="inputName" label="E-mail" type="text" isValid={valid} autocomplete="off"  >
     <Input.LeftElement>  
       <Icon iconName="person" className="text-surface-300"/>
     </Input.LeftElement>
