@@ -11,7 +11,6 @@ const CheckBoxLabel = () => {
     let [optionNine, setOptionNine] = useState(false)
     let [optionTen, setOptionTen] = useState(false)
     let [optionEleven, setOptionEleven] = useState(true)
-    let [optionTwelve, setOptionTwelve] = useState(true)
 
     return (
         <div className="w-full px-1 grid grid-cols-12">
@@ -58,14 +57,7 @@ const CheckBoxLabel = () => {
                             }
                             <span className="">Label</span>
                         </>
-                    </RadioGroup.Option>
-                    <RadioGroup.Option value={optionTwelve} className="flex !mb-3" onClick={() => setOptionTwelve(!optionTwelve)}>
-                        <>
-                            <CheckBoxActive size="md" className="!mx-2 opacity-60" />
-                            <p className="">Label</p>
-                            <p className="text-sm !ms-2">Help text</p>
-                        </>
-                    </RadioGroup.Option>
+                    </RadioGroup.Option>               
                 </RadioGroup>
             </div>
         </div>
