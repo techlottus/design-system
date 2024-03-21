@@ -23,7 +23,6 @@ const Input: InputGroupType = (props: InputGroupType) => {
     let valueInput = e.target.value;
     setValid(regexExp!=null && regexExp.test(valueInput))
     }
-    else setValid(isValid)
    
   }
 
