@@ -1,18 +1,12 @@
 import React, { useState } from "react";
 import Input from "../components/Input/Input"
 import Icon from "../components/Icon"
-import mdx from "../components/Input/Input.mdx"
 
 
 export default {
-  title: "MOLECULES/Input",
+  title: "MOLECULES/Input/InputValid",
   component: Input,
   tags: ["autodocs"],
-  parameters: {
-    docs: {
-      page: mdx,
-    },
-  },
   args:{
     isValid:null,
     type:"text",
