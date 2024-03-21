@@ -38,9 +38,9 @@ const Input: InputGroupType = (props: InputGroupType) => {
     ["text-surface-200  peer-placeholder-shown:text-surface-200 peer-placeholder-shown:text-surface-200"]:disabled
   });
   const containerClasses = cn("flex border rounded h-10 input-group grow align-middle",
-  {["border-surface-200 focus-within:border-surface-600"]:valid==null && !disabled,
-  ["border-success-500 focus-within:border-success-500"]:valid  && !disabled,
-  ["border-error-500 focus-within:border-error-500"]:!valid  && !disabled,
+  {["border-surface-200 focus-within:border-surface-600"]:(valid==null && isValid==null) && !disabled,
+  ["border-success-500 focus-within:border-success-500"]:(valid ||isValid)  && !disabled,
+  ["border-error-500 focus-within:border-error-500"]:(!valid || !isValid) && !disabled,
   ["border-surface-200 focus-within:border-surface-200"]:disabled}, className)
 
   return (
