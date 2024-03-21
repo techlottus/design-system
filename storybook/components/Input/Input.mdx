@@ -58,8 +58,8 @@ To incorporate the Input  component into your code, follow the structure demonst
 The previous example showcases the simplest usage of the Input component, utilizing default props and rendering an Input as illustrated below:
 {
       <Input label = "label" type = "text" id="neutral-input">
-         <Input.RightElement className="bg-primary-100"> <div className='w-3 h-4'></div> </Input.RightElement> 
-         <Input.LeftElement className="bg-primary-100"><div className='w-3 h-4'></div> </Input.LeftElement>
+         <Input.RightElement className="bg-primary-100"> <div className=' h-4'>RightElement</div> </Input.RightElement> 
+         <Input.LeftElement className="bg-primary-100"><div className=' h-4'>LeftElement</div> </Input.LeftElement>
       </Input>
                }
 
@@ -67,7 +67,8 @@ The previous example showcases the simplest usage of the Input component, utiliz
 
 Explore additional examples and use cases:
 
-Input  with valid value:
+### isValid prop
+The input can be customized using the isValid prop. When set to true, it displays classes indicating that the input holds a valid value.
 
 ```
 <Input isValid={true} type="text" label="label"  >
@@ -100,7 +101,7 @@ Input  with valid value:
 </ Input>}
 
 
-Input  with invalid value
+On the other hand, if an invalid value is passed, you can set the isValid prop to false, which will apply styles indicating an incorrect input value.
 
 ```
 <Input isValid={false} type="text" isValid={false} label="label">
@@ -138,7 +139,30 @@ Input  with invalid value
 
 </ Input>}
 
-for disable input:
+### Regular expression
+Another useful functionality is the RegexExp prop, which accepts a regular expression to validate whether a value is correct or incorrect. By utilizing this prop, the styles are automatically applied based on whether the value matches the regular expression.
+```
+<Input regexExp={/[^\s@]+@[^\s@]+\.[^\s@]+/} type="text" label="Email" id="invelid-input" >
+    
+    <Input.LeftElement>
+       <span className="font-icons-solid not-italic  text-lg text-surface-400" >
+          <i>person</i>
+       </span>
+    </Input.LeftElement>
+</ Input>
+```
+{<Input regexExp={/[^\s@]+@[^\s@]+\.[^\s@]+/} type="text" label="Email" id="invelid-input" >
+    
+    <Input.LeftElement>
+       <span className="font-icons-solid not-italic  text-lg text-surface-400" >
+          <i>person</i>
+       </span>
+    </Input.LeftElement>
+</ Input>}
+
+### Disabled prop
+
+To apply styles to a disabled input, you can set the disabled prop to true.
 
 ```
 <Input disabled type="text" label="label"  >

@@ -18,6 +18,7 @@ export default {
     type:"text",
     label:"Name",
     disabled:false,
+    regexExp:null
   },
   argTypes:{
     isValid: {
@@ -62,26 +63,14 @@ const Template = (args) =>{
 )}; 
 const Template2 = (args) =>{ 
   const emailRegex = /[^\s@]+@[^\s@]+\.[^\s@]+/;
-  const [valid,setValid]= useState(null);
-  const handleSubmit= (e)=> {
-      e.preventDefault();
-      const form = e.target;
-      const formData = new FormData(form);
-      const formJson = Object.fromEntries(formData.entries());
-      setValid(emailRegex.test(formJson?.inputName))
-    }
   return(
-  <form onSubmit={handleSubmit}  noValidate={true} >
 <div className="w-full flex space-x-2"> 
-    <Input  name="inputName" label="E-mail" type="text" isValid={valid} autocomplete="off"  >
+    <Input  name="inputName" label="E-mail" type="text"  autocomplete="off" regexExp={emailRegex} >
     <Input.LeftElement>  
       <Icon iconName="person" className="text-surface-300"/>
     </Input.LeftElement>
-  </ Input><button type="submit" className="p-2 bg-surface-300" >submit</button></div>
-   
-  
-  </form>
-  
+  </ Input></div>
+     
 )}; 
 
 const InputStandar = Template.bind();

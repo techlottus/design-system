@@ -3,6 +3,7 @@ import type { InputHTMLAttributes } from "react";
 export interface IInput extends InputHTMLAttributes<HTMLInputElement> {
   isValid?: boolean | null;
   label?: string;
+  regexExp?: RegExp
 }
 
 export type InputGroupType = {
