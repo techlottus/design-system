@@ -23,7 +23,7 @@ export default {
   argTypes:{
     isValid: {
       options: [true,false,null],
-      control: { type: "ratio" },
+      control: { type: "select" },
     },
     type: {
       options: ["text","email","tel"],
