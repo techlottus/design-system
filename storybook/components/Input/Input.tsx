@@ -32,9 +32,9 @@ const Input: InputGroupType = (props: InputGroupType) => {
   const labelClasses = cn("order-2 text-xs font-texts  absolute scale-75 origin-center duration-300 transform -translate-y-8 ",
     "peer-placeholder-shown:text-base peer-placeholder-shown:text-surface-700 peer-placeholder-shown:-translate-y-5 ",
     "peer-focus:text-xs peer-focus:-translate-y-8 ",
-    {["text-surface-800  peer-focus:text-surface-800"]:valid==null  && !disabled,
-    ["text-success-500  peer-focus:text-success-500"]:valid  && !disabled,
-    ["text-error-500  peer-focus:text-error-500"]:!valid  && !disabled,
+    {["text-surface-800  peer-focus:text-surface-800"]:(valid==null && isValid==null)  && !disabled,
+    ["text-success-500  peer-focus:text-success-500"]:(valid ||isValid) && !disabled,
+    ["text-error-500  peer-focus:text-error-500"]:(!valid || !isValid) && !disabled,
     ["text-surface-200  peer-placeholder-shown:text-surface-200 peer-placeholder-shown:text-surface-200"]:disabled
   });
   const containerClasses = cn("flex border rounded h-10 input-group grow align-middle",
