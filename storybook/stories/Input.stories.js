@@ -22,8 +22,8 @@ export default {
   },
   argTypes:{
     isValid: {
-      options: [true,false],
-      control: { type: "boolean" },
+      options: [true,false,null],
+      control: { type: "ratio" },
     },
     type: {
       options: ["text","email","tel"],
