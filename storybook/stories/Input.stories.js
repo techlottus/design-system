@@ -65,7 +65,7 @@ const Template2 = (args) =>{
   const emailRegex = /[^\s@]+@[^\s@]+\.[^\s@]+/;
   return(
 <div className="w-full flex space-x-2"> 
-    <Input  name="inputName" label="E-mail" type="text"  autocomplete="off" regexExp={emailRegex} >
+    <Input  {...args} regexExp={emailRegex}  >
     <Input.LeftElement>  
       <Icon iconName="person" className="text-surface-300"/>
     </Input.LeftElement>
