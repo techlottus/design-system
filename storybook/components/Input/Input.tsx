@@ -38,7 +38,7 @@ const Input: InputGroupType = (props: InputGroupType) => {
     ["text-error-500  peer-focus:text-error-500"]:(!valid || !isValid) && !disabled,
     ["text-surface-200  peer-placeholder-shown:text-surface-200 peer-placeholder-shown:text-surface-200"]:disabled
   });
-  const containerClasses = cn("flex border rounded h-10 input-group grow align-middle",{["border-none border-b-2 bg-surface-100"]:variant==="flat"},
+  const containerClasses = cn("flex border rounded h-10 input-group grow align-middle",{["border-b-2 border-x-0 border-t-0 bg-surface-100"]:variant==="flat"},
   {["border-surface-200 focus-within:border-surface-600"]:(valid==null && isValid==null) && !disabled,
   ["border-success-500 focus-within:border-success-500"]:(valid ||isValid)  && !disabled,
   ["border-error-500 focus-within:border-error-500"]:(!valid || !isValid) && !disabled,
