@@ -1,17 +1,19 @@
 import cn from "classnames";
 import Icon from "../Icon";
 import { useState } from "react";
+import { IconPosition, TextLinkConfig } from "../Types/TextLink.types";
+import React from "react";
 
-const iconPositions: any = {
+const iconPositions: IconPosition = {
   right: "flex",
   left: "flex flex-row-reverse",
 };
 
-const TextLink = (props: any) => {
+const TextLink: React.FC<TextLinkConfig> = (props: TextLinkConfig) => {
   const {
     target = "_self",
     className = "",
-    onClick = () => {},
+    onClick = () => { },
     disabled = false,
     active = false,
     items = false,
@@ -37,7 +39,7 @@ const TextLink = (props: any) => {
         })}
       >
         <a
-          className="font-principal group-hover:underline "
+          className="font-headings group-hover:underline "
           href={href}
           target={target}
         >
@@ -50,7 +52,7 @@ const TextLink = (props: any) => {
     </div>
   ) : (
     <div className="items-center whitespace-nowrap flex ">
-      <div className={cn({ [iconPositions[iconPosition]]: true })}>
+      <div className={cn([iconPositions[iconPosition]])}>
         <div
           className={cn("p-1  cursor-pointer  ", className, {
             ["hover:underline"]: !disabled,
@@ -59,13 +61,13 @@ const TextLink = (props: any) => {
           onClick={onClick}
         >
           {href && !disabled ? (
-            <a className="font-principal" href={href} target={target}>
+            <a className="font-headings" href={href} target={target}>
               {text}
             </a>
           ) : disabled ? (
-            <span className="font-principal">{text}</span>
+            <span className="font-headings">{text}</span>
           ) : (
-            <span className="font-principal" onClick={onClick}>
+            <span className="font-headings" onClick={onClick}>
               {text}
             </span>
           )}
