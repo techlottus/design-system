@@ -73,7 +73,7 @@ const Template2 = (args) =>{
 <div className="w-full flex space-x-2"> 
     <Input  {...args} regexExp={emailRegex}  >
     <Input.LeftElement>  
-      <Icon iconName="person" className="text-surface-300"/>
+      <Icon iconName="person" className="text-surface-300 flex-start"/>
     </Input.LeftElement>
   </ Input></div>
      
