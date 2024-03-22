@@ -78,30 +78,30 @@ const Template2 = (args) =>{
   </ Input></div>
      
 )}; 
-const Template3 = (args) =>{ 
-  const [visible, setVisible] = useState("password");
-  const handleClick = ()=>{
-    if (visible=="password"){
-      setVisible("text")
-    }
-    else setVisible("password")
-  }
-  return(
-<div className="w-full flex space-x-2"> 
-    <Input  {...args}  type={visible} autocomplete="current-password" required="" >
-    <Input.LeftElement>  
-      <Icon iconName="person" className="text-surface-300"/>
-    </Input.LeftElement>
-    <Input.RightElement><button onClick={()=>handleClick} className="z-3">
-      {visible=="password" && <Icon iconName="visibility_off" className="text-surface-300 password-toggle-icon"/>}
-      {visible=="text" && <Icon iconName="visibility" className="text-surface-300 password-toggle-icon"/>}
-      </button></Input.RightElement>
-  </ Input></div>
+// const Template3 = (args) =>{ 
+//   const [visible, setVisible] = useState("password");
+//   const handleClick = ()=>{
+//     if (visible=="password"){
+//       setVisible("text")
+//     }
+//     else setVisible("password")
+//   }
+//   return(
+// <div className="w-full flex space-x-2"> 
+//     <Input  {...args}  type={visible} autocomplete="current-password" required="" >
+//     <Input.LeftElement>  
+//       <Icon iconName="person" className="text-surface-300"/>
+//     </Input.LeftElement>
+//     <Input.RightElement><button onClick={()=>handleClick} className="z-3">
+//       {visible=="password" && <Icon iconName="visibility_off" className="text-surface-300 password-toggle-icon"/>}
+//       {visible=="text" && <Icon iconName="visibility" className="text-surface-300 password-toggle-icon"/>}
+//       </button></Input.RightElement>
+//   </ Input></div>
      
-)}; 
+// )}; 
 
 const InputStandar = Template.bind();
 const InputValid = Template2.bind();
-const InputPasword= Template3.bind();
+// const InputPasword= Template3.bind();
 
-export { InputStandar , InputValid, InputPasword};
+export { InputStandar , InputValid};
