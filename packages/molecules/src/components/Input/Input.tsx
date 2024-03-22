@@ -33,7 +33,7 @@ const Input: InputGroupType = (props: InputGroupType) => {
   const inputClasses = cn("flex order-2 grow peer", "w-full", "border-transparent focus:outline-none pt-3 px-1 bg-transparent",
     "text-base placeholder-transparent ", className);
   const labelClasses = cn("order-2 text-xs font-texts  absolute scale-75 origin-center duration-300 transform -translate-y-8 ",
-    "peer-placeholder-shown:text-base peer-placeholder-shown:text-surface-700 peer-placeholder-shown:-translate-y-5 ",
+    "peer-placeholder-shown:text-base peer-placeholder-shown:text-surface-700 peer-placeholder-shown:-translate-y-[22px] ",
     "peer-focus:text-xs peer-focus:-translate-y-8 ",
     {["text-surface-800  peer-focus:text-surface-800"]:(valid==null && isValid==null)  && !disabled,
     ["text-success-500  peer-focus:text-success-500"]:(valid ||isValid) && !disabled,
