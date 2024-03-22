@@ -70,11 +70,11 @@ const Input: InputGroupType = (props: InputGroupType) => {
 const RightElement= (props: ElementType) =>{
   const { children,className } = props;
   return(
-  <div className={cn("pr-3 pl-2 flex align-center justify-center order-last ",className)}>{children}</div>
+  <div className={cn("pr-3 pl-2 flex align-center items-center justify-center order-last ",className)}>{children}</div>
 );
 } 
 const LeftElement = ({ children,className }: ElementType) => (
-  <div className={cn(" pl-3 pr-2 flex align-center justify-center order-first",className)}>{children}</div>
+  <div className={cn(" pl-3 pr-2 flex align-center items-center justify-center order-first",className)}>{children}</div>
 );
 
 
