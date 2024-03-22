@@ -83,7 +83,7 @@ The input can be customized using the isValid prop. When set to true, it display
 {<Input isValid={true} type="text"  label="label" id="valid-input" >
     
     <Input.LeftElement>
-       <span className="font-icons-solid flex-start  text-lg text-surface-400" >
+       <span className="font-icons-solid flex-middle  text-lg text-surface-400" >
           person
        </span>
     </Input.LeftElement>
@@ -97,7 +97,7 @@ On the other hand, if an invalid value is passed, you can set the isValid prop t
 <Input isValid={false} type="text" isValid={false} label="label">
     
     <Input.LeftElement>
-       <span className="font-icons-solid not-italic  text-lg text-surface-400" >
+       <span className="font-icons-solid flex-middle  text-lg text-surface-400" >
           person
        </span>
     </Input.LeftElement>
@@ -109,7 +109,7 @@ On the other hand, if an invalid value is passed, you can set the isValid prop t
 {<Input isValid={false} type="text" label="label" id="invelid-input" >
     
     <Input.LeftElement>
-       <span className="font-icons-solid   text-lg text-surface-400" >
+       <span className="font-icons-solid flex-middle  text-lg text-surface-400" >
           person
        </span>
     </Input.LeftElement>
@@ -125,7 +125,7 @@ To hide icons in error and success cases, you can utilize the "hideIcons" prop. 
 <Input isValid={false} type="text"  label="label" hideIcons >
     
     <Input.LeftElement>
-       <span className="font-icons-solid not-italic  text-lg text-surface-400" >
+       <span className="font-icons-solid flex-middle  text-lg text-surface-400" >
           <i>person
        </span>
     </Input.LeftElement>
@@ -137,7 +137,7 @@ To hide icons in error and success cases, you can utilize the "hideIcons" prop. 
 {<Input isValid={false} type="text" label="label" id="invelid-input" hideIcons={true} >
     
     <Input.LeftElement>
-       <span className="font-icons-solid not-italic  text-lg text-surface-400" >
+       <span className="font-icons-solid flex-middle  text-lg text-surface-400" >
           person
        </span>
     </Input.LeftElement>
@@ -150,7 +150,7 @@ Another useful functionality is the RegexExp prop, which accepts a regular expre
 <Input regexExp={/[^\s@]+@[^\s@]+\.[^\s@]+/} type="text" label="Email" id="invelid-input" >
     
     <Input.LeftElement>
-       <span className="font-icons-solid not-italic  text-lg text-surface-400" >
+       <span className="font-icons-solid flex-middle  text-lg text-surface-400" >
           person
        </span>
     </Input.LeftElement>
@@ -159,7 +159,7 @@ Another useful functionality is the RegexExp prop, which accepts a regular expre
 {<Input regexExp={/[^\s@]+@[^\s@]+\.[^\s@]+/} type="text" label="Email" id="invelid-input" >
     
     <Input.LeftElement>
-       <span className="font-icons-solid not-italic  text-lg text-surface-400" >
+       <span className="font-icons-solid flex-middle  text-lg text-surface-400" >
           person
        </span>
     </Input.LeftElement>
@@ -173,14 +173,14 @@ To apply styles to a disabled input, you can set the disabled prop to true.
 <Input disabled type="text" label="label"  >
     
     <Input.LeftElement>
-       <span className="font-icons-solid not-italic  text-lg text-surface-400" >
+       <span className="font-icons-solid flex-middle  text-lg text-surface-400" >
           person
        </span>
     </Input.LeftElement>
 
     
     <Input.RightElement>
-    <span className="font-icons-solid not-italic  text-lg text-surface-400" >
+    <span className="font-icons-solid flex-middle  text-lg text-surface-400" >
           visibility_off
        </span>
     </Input.RightElement>
@@ -191,14 +191,14 @@ To apply styles to a disabled input, you can set the disabled prop to true.
 {<Input disabled type="text" label="label" id="disabled-input"  >
     
     <Input.LeftElement>
-       <span className="font-icons-solid not-italic  text-lg text-surface-400" >
+       <span className="font-icons-solid flex-middle  text-lg text-surface-400" >
           person
        </span>
     </Input.LeftElement>
 
     
     <Input.RightElement>
-    <span className="font-icons-solid not-italic  text-lg text-surface-400" >
+    <span className="font-icons-solid flex-middle  text-lg text-surface-400" >
           visibility_off
        </span>
     </Input.RightElement>
@@ -213,7 +213,7 @@ Input fields can be utilized in two distinct designs: outlined (by default) and 
 <Input regexExp={/[^\s@]+@[^\s@]+\.[^\s@]+/} type="text" label="Email" id="invelid-input" variant="flat" >
     
     <Input.LeftElement>
-       <span className="font-icons-solid not-italic  text-lg text-surface-400" >
+       <span className="font-icons-solid flex-middle  text-lg text-surface-400" >
           person
        </span>
     </Input.LeftElement>
@@ -222,7 +222,7 @@ Input fields can be utilized in two distinct designs: outlined (by default) and 
 {<Input regexExp={/[^\s@]+@[^\s@]+\.[^\s@]+/} type="text" label="Email" id="invelid-input" variant="flat">
     
     <Input.LeftElement>
-       <span className="font-icons-solid not-italic  text-lg text-surface-400" >
+       <span className="font-icons-solid flex-middle  text-lg text-surface-400" >
           person
        </span>
     </Input.LeftElement>
