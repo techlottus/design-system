@@ -62,8 +62,8 @@ const Input: InputGroupType = (props: InputGroupType) => {
 
       <label htmlFor={id} className={labelClasses}>{label}</label>
     </div>
-    {((isValid==false || valid==false) && !disabled && !hideIcons) && <div className={cn("flex align-middle py-3 pr-3 pl-2 justify-center",{["hide"]:hideIcons})}><span className="font-icons-solid text-error-500 text-lg">error</span> </div>}
-    {((isValid || valid) && !disabled && !hideIcons) && <div className={cn("flex align-middle py-3 pr-3 pl-2 justify-center",{["hide"]:hideIcons})}><span className="font-icons-solid text-success-500 text-lg">done</span></div>}
+    {((isValid==false || valid==false) && !disabled && !hideIcons) && <div className={cn("flex align-middle items-center py-3 pr-3 pl-2 justify-center",{["hide"]:hideIcons})}><span className="font-icons-solid text-error-500 text-lg">error</span> </div>}
+    {((isValid || valid) && !disabled && !hideIcons) && <div className={cn("flex align-middle items-center py-3 pr-3 pl-2 justify-center",{["hide"]:hideIcons})}><span className="font-icons-solid text-success-500 text-lg">done</span></div>}
     </div>);
 }
 
