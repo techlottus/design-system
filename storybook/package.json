@@ -24,13 +24,14 @@
   "scripts": {
     "build:css": "postcss ./index.css -o ./public/https://design-system-docs-git-feature-lot-720-techlottus.vercel.app/?path=/docs/welcome--docsmain.css",
     "test": "node ./__tests__/storybook.test.js",
-    "storybook": "rm -r ./components/  &&  cp -r ../packages/atoms/src/components/ ./ && cp -r ../packages/technical-components/src/components/ ./ && cp -r ../packages/molecules/src/components/ ./ && storybook dev -p 6006",
+    "storybook": "rm -r ./components/  &&  cp -r ../packages/atoms/src/components/ ./components/ && cp -r ../packages/technical-components/src/components/ ./components/ && cp -r ../packages/molecules/src/components/ ./components/ && cp -r ../packages/icons/src/components/ ./components/ && storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "bugs": {
     "url": "https://github.com/techlottus/design-system/issues"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.18",
     "@lottuseducation/carousel": "^1.8.0-alpha.0",
     "@lottuseducation/design_system": "^1.11.0-alpha.0",
     "@lottuseducation/numbers": "^1.8.0-alpha.0",
@@ -63,7 +64,7 @@
     "@storybook/addon-links": "^7.1.1",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/addon-styling": "^1.3.5",
-    "@storybook/blocks": "^7.1.1",
+    "@storybook/blocks": "^7.6.12",
     "@storybook/manager-api": "^7.5.3",
     "@storybook/preset-create-react-app": "^7.1.1",
     "@storybook/react": "^7.1.1",
