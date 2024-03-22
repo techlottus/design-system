@@ -81,11 +81,11 @@ const Template3 = (args) =>{
   const [visible, setVisible] = useState(false)
   return(
 <div className="w-full flex space-x-2"> 
-    <Input  {...args}  type={visible?"text": "password"} >
+    <Input  {...args}  type={"password"} autocomplete="current-password" required="" id="id_password" >
     <Input.LeftElement>  
       <Icon iconName="person" className="text-surface-300"/>
     </Input.LeftElement>
-    <Input.RightElement><div onclick={()=>setVisible(visible?false:true)}><Icon iconName={visible?"visibility":"visibility_off"} className="text-surface-300"/></div></Input.RightElement>
+    <Icon IconName="visibility" id="togglePassword" />
   </ Input></div>
      
 )}; 
