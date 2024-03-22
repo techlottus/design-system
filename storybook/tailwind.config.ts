@@ -7,6 +7,7 @@ module.exports = {
   content: [
     "./stories/**/*.stories.{js,jsx,ts,tsx}",
     "./components/**/*.{js,jsx,ts,tsx}",
+    "./RadioGroup/**/*.{js,jsx,ts,tsx,mdx}",
     "./../packages/**/*.{js,jsx,ts,tsx,mdx}"
   ],
   safelist: [{pattern: /[a-z][0-9]\:\-/}],
