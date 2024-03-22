@@ -18,7 +18,7 @@ export default {
     type:"text",
     label:"Name",
     disabled:false,
-    regexExp:null
+    regexExp:null,
     variant:"outlined"
   },
   argTypes:{
