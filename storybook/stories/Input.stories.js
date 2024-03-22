@@ -19,6 +19,7 @@ export default {
     label:"Name",
     disabled:false,
     regexExp:null
+    variant:"outlined"
   },
   argTypes:{
     isValid: {
@@ -27,6 +28,10 @@ export default {
     },
     type: {
       options: ["text","email","tel"],
+      control: { type: "select" },
+    },
+    variant: {
+      options: ["outlined","flat"],
       control: { type: "select" },
     },
   }
