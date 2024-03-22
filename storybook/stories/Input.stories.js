@@ -19,7 +19,8 @@ export default {
     label:"Name",
     disabled:false,
     regexExp:null,
-    variant:"outlined"
+    variant:"outlined",
+    hideIcons:false
   },
   argTypes:{
     isValid: {
@@ -27,7 +28,7 @@ export default {
       control: { type: "select" },
     },
     type: {
-      options: ["text","email","tel"],
+      options: ["text","email","tel","password"],
       control: { type: "select" },
     },
     variant: {
@@ -78,20 +79,23 @@ const Template2 = (args) =>{
      
 )}; 
 const Template3 = (args) =>{ 
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState("password");
   const handleClick = ()=>{
-    if (visible){
-      setVisible(false)
+    if (visible=="password"){
+      setVisible("text")
     }
-    else setVisible(true)
+    else setVisible("password")
   }
   return(
 <div className="w-full flex space-x-2"> 
-    <Input  {...args}  type={visible?"text": "password"} autocomplete="current-password" required="" >
+    <Input  {...args}  type={visible} autocomplete="current-password" required="" >
     <Input.LeftElement>  
       <Icon iconName="person" className="text-surface-300"/>
     </Input.LeftElement>
-    <Input.RightElement><button onclick={()=>handleClick}><Icon iconName={visible?"visibility":"visibility_off"} className="text-surface-300"/></button></Input.RightElement>
+    <Input.RightElement><button onClick={()=>handleClick} className="z-3">
+      {visible=="password" && <Icon iconName="visibility_off" className="text-surface-300 password-toggle-icon"/>}
+      {visible=="text" && <Icon iconName="visibility" className="text-surface-300 password-toggle-icon"/>}
+      </button></Input.RightElement>
   </ Input></div>
      
 )}; 

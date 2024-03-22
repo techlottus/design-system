@@ -2,6 +2,7 @@ import { useState } from "react";
 import cn from "classnames"
 import { ElementType, InputGroupType  } from "../Types/Input.types";
 
+
 //components
 const Input: InputGroupType = (props: InputGroupType) => {
   const {
@@ -13,6 +14,7 @@ const Input: InputGroupType = (props: InputGroupType) => {
     variant="outlined",
     label="",
     className,
+    hideIcons=false,
     children,
     ...restProps
   } = props;
@@ -58,7 +60,10 @@ const Input: InputGroupType = (props: InputGroupType) => {
         onChange={getValue}
         {...restProps} />
 
-      <label htmlFor={id} className={labelClasses}>{label}</label></div>
+      <label htmlFor={id} className={labelClasses}>{label}</label>
+    </div>
+    {((isValid==false || valid==false) && !disabled && !hideIcons) && <div className={cn("flex align-middle py-3 pr-3 pl-2 justify-center",{["hide"]:hideIcons})}><span className="font-icons-solid text-error-500 text-lg"><i>error</i></span> </div>}
+    {((isValid || valid) && !disabled && !hideIcons) && <div className={cn("flex align-middle py-3 pr-3 pl-2 justify-center",{["hide"]:hideIcons})}><span className="font-icons-solid text-success-500 text-lg"><i>done</i></span></div>}
     </div>);
 }
 

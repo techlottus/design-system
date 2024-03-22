@@ -4,6 +4,7 @@ export interface IInput extends InputHTMLAttributes<HTMLInputElement> {
   isValid?: boolean | null;
   label?: string;
   variant?:"outlined"|"flat";
+  hideIcons?:boolean;
   regexExp?: RegExp
 }
 

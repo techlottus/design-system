@@ -67,6 +67,7 @@ The previous example showcases the simplest usage of the Input component, utiliz
 
 Explore additional examples and use cases:
 
+
 ### isValid prop
 The input can be customized using the isValid prop. When set to true, it displays classes indicating that the input holds a valid value.
 
@@ -77,10 +78,6 @@ The input can be customized using the isValid prop. When set to true, it display
       <Icon iconName="people" className="text-surface-800 text-lg"/> 
     </Input.LeftElement>
 
-    <Input.RightElement>
-    <Icon iconName="done" className="text-success-500 text-lg"/> 
-    </Input.RightElement>
-
 </ Input>
 ```
 {<Input isValid={true} type="text"  label="label" id="valid-input" >
@@ -90,13 +87,6 @@ The input can be customized using the isValid prop. When set to true, it display
           <i>person</i>
        </span>
     </Input.LeftElement>
-
-    
-    <Input.RightElement>
-    <span className="font-icons-solid not-italic  text-lg text-success-500" >
-          <i>done</i>
-       </span>
-    </Input.RightElement>
 
 </ Input>}
 
@@ -112,12 +102,6 @@ On the other hand, if an invalid value is passed, you can set the isValid prop t
        </span>
     </Input.LeftElement>
 
-    
-    <Input.RightElement>
-    <span className="font-icons-solid not-italic  text-lg text-success-500" >
-          <i>done</i>
-       </span>
-    </Input.RightElement>
 
 </ Input>
 ```
@@ -130,12 +114,33 @@ On the other hand, if an invalid value is passed, you can set the isValid prop t
        </span>
     </Input.LeftElement>
 
+</ Input>}
+
+### Hide icons in error and success cases
+
+
+To hide icons in error and success cases, you can utilize the "hideIcons" prop. Simply set it to true to remove the icons.
+
+```
+<Input isValid={false} type="text"  label="label" hideIcons >
     
-    <Input.RightElement>
-    <span className="font-icons-solid not-italic  text-lg text-error-500" >
-          <i>error</i>
+    <Input.LeftElement>
+       <span className="font-icons-solid not-italic  text-lg text-surface-400" >
+          <i>person</i>
        </span>
-    </Input.RightElement>
+    </Input.LeftElement>
+
+
+</ Input>
+```
+
+{<Input isValid={false} type="text" label="label" id="invelid-input" hideIcons={true} >
+    
+    <Input.LeftElement>
+       <span className="font-icons-solid not-italic  text-lg text-surface-400" >
+          <i>person</i>
+       </span>
+    </Input.LeftElement>
 
 </ Input>}
 
@@ -199,3 +204,26 @@ To apply styles to a disabled input, you can set the disabled prop to true.
     </Input.RightElement>
 
 </ Input>} 
+
+## Variants
+
+Input fields can be utilized in two distinct designs: outlined (by default) and flat. To switch between designs, you can easily adjust the "variant" prop to either "outlined" or "flat", as demonstrated below:
+
+```
+<Input regexExp={/[^\s@]+@[^\s@]+\.[^\s@]+/} type="text" label="Email" id="invelid-input" variant="flat" >
+    
+    <Input.LeftElement>
+       <span className="font-icons-solid not-italic  text-lg text-surface-400" >
+          <i>person</i>
+       </span>
+    </Input.LeftElement>
+</ Input>
+```
+{<Input regexExp={/[^\s@]+@[^\s@]+\.[^\s@]+/} type="text" label="Email" id="invelid-input" variant="flat">
+    
+    <Input.LeftElement>
+       <span className="font-icons-solid not-italic  text-lg text-surface-400" >
+          <i>person</i>
+       </span>
+    </Input.LeftElement>
+</ Input>}
