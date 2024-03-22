@@ -77,8 +77,21 @@ const Template2 = (args) =>{
   </ Input></div>
      
 )}; 
+const Template3 = (args) =>{ 
+  const [visible, setVisible] = useState(false)
+  return(
+<div className="w-full flex space-x-2"> 
+    <Input  {...args}  type={visible?"text": "password"} >
+    <Input.LeftElement>  
+      <Icon iconName="person" className="text-surface-300"/>
+    </Input.LeftElement>
+    <Input.RightElement><div onclick={()=>setVisible(visible?false:true)}><Icon iconName={visible?"visibility":"visibility_off"} className="text-surface-300"/></div></Input.RightElement>
+  </ Input></div>
+     
+)}; 
 
 const InputStandar = Template.bind();
 const InputValid = Template2.bind();
+const InputPasword= Template3.bind();
 
-export { InputStandar , InputValid};
+export { InputStandar , InputValid, InputPasword};
