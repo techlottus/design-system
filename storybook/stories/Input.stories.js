@@ -70,7 +70,7 @@ const Template = (args) =>{
 const Template2 = (args) =>{ 
   const emailRegex = /[^\s@]+@[^\s@]+\.[^\s@]+/;
   return(
-<div className="w-full flex space-x-2"> 
+<div className="w-full flex-col space-x-2"> 
 
   <span><h3>Input con patrón de correo electrónico</h3></span>
     <Input  disabled={args.disabled} regexExp={emailRegex} label="Email"  type= "text" variant={args.variant} hideIcons={args.hideIcons}>
