@@ -71,7 +71,8 @@ const Template2 = (args) =>{
   const emailRegex = /[^\s@]+@[^\s@]+\.[^\s@]+/;
   return(
 <div className="w-full flex space-x-2"> 
-    <Input  {...args} regexExp={emailRegex}  >
+<h3>Input con patrón de correo electrónico</h3>
+    <Input  disabled={args.disabled} regexExp={emailRegex} label="Email"  type= "text" variant={args.variant} hideIcons={args.hideIcons}>
     <Input.LeftElement>  
       <Icon iconName="person" className="text-surface-300 flex-start"/>
     </Input.LeftElement>
@@ -101,7 +102,7 @@ const Template2 = (args) =>{
 // )}; 
 
 const InputStandar = Template.bind();
-const InputValid = Template2.bind();
+const EmailExample = Template2.bind();
 // const InputPasword= Template3.bind();
 
-export { InputStandar , InputValid};
+export { InputStandar , EmailExample};
