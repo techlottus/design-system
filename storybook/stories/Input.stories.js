@@ -95,8 +95,8 @@ const Template3 = () =>{
       <Icon iconName="person" className="text-surface-300"/>
     </Input.LeftElement>
     <Input.RightElement><button type="button" onClick={handleClick} className="z-3 focus:border">
-      {visible=="password" && <Icon iconName="visibility_off" className="text-surface-300 password-toggle-icon"/>}
-      {visible=="text" && <Icon iconName="visibility" className="text-surface-300 password-toggle-icon"/>}
+      {visible=="password" && <Icon iconName="visibility_off" className="text-surface-400 text-lg"/>}
+      {visible=="text" && <Icon iconName="visibility" className="text-surface-400 text-lg"/>}
       </button></Input.RightElement>
   </ Input></div>
      
