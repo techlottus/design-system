@@ -90,7 +90,7 @@ const Template3 = () =>{
   }
   return(
 <div className="w-full flex space-x-2"> 
-    <Input   type={visible} autocomplete="current-password" required="" label={Password} >
+    <Input   type={visible} autocomplete="current-password" required="" label="Password" >
     <Input.LeftElement>  
       <Icon iconName="person" className="text-surface-300"/>
     </Input.LeftElement>
