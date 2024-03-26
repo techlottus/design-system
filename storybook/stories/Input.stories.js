@@ -89,7 +89,7 @@ const Template3 = () =>{
     else setVisible("password")
   }
   return(
-<div className="w-full flex space-x-2"> 
+<div className="w-full"> 
     <Input   type={visible} autocomplete="current-password" required="" label="Password" >
     <Input.LeftElement>  
       <Icon iconName="person" className="text-surface-300"/>
