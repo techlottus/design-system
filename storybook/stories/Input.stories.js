@@ -80,7 +80,7 @@ const Template2 = (args) =>{
   </ Input></div>
      
 )}; 
-const Template3 = (args) =>{ 
+const Template3 = () =>{ 
   const [visible, setVisible] = useState("password");
   const handleClick = ()=>{
     if (visible=="password"){
@@ -90,11 +90,11 @@ const Template3 = (args) =>{
   }
   return(
 <div className="w-full flex space-x-2"> 
-    <Input   type={visible} autocomplete="current-password" required="" >
+    <Input   type={visible} autocomplete="current-password" required="" label={visible} >
     <Input.LeftElement>  
       <Icon iconName="person" className="text-surface-300"/>
     </Input.LeftElement>
-    <Input.RightElement><button type="button" onClick={()=>handleClick} className="z-3">
+    <Input.RightElement><button type="button" onClick={()=>handleClick} className="z-3 focus:border">
       {visible=="password" && <Icon iconName="visibility_off" className="text-surface-300 password-toggle-icon"/>}
       {visible=="text" && <Icon iconName="visibility" className="text-surface-300 password-toggle-icon"/>}
       </button></Input.RightElement>
