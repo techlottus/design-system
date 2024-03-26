@@ -1,15 +1,16 @@
 import cn from "classnames";
-
-const Icon = (props: any) => {
-  const { iconName, className = "", type = "solid" } = props;
+import { IconType } from "../Types/Icon.types";
+import React from "react";
+const Icon: React.FC<IconType> = (props: IconType) => {
+  const { iconName, className = "", variant = "solid" } = props;
   return (
     <span
-      className={cn("select-none leading-0", className, {
-        ["material-icons-outlined"]: type === "outlined",
-        ["font-icons"]: type === "solid",
+      className={cn(className, {
+        ["font-icons-outlined"]: variant === "outlined",
+        ["font-icons-solid"]: variant === "solid",
       })}
     >
-      {iconName}
+      <i>{iconName}</i>
     </span>
   );
 };

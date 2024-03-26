@@ -1,0 +1,70 @@
+
+# Lottus Education React Components
+> **Currently in BETA**
+
+With this set of packages, we want to homologate development. This library of reusable components and guidelines is part of the Design System and should help you with contribution and plugin development.
+
+## Our vision
+Lottus Education Design system started @lottuseducation, to make contributing to all our projects as easy as possible for developers and designers. We want to create a component library that results in:
+
+- Understanding of how each component works and how you can use it to create a great user experience.
+- Short development times and consistent code quality.
+- A beautiful, visually consistent design experience.
+- Transparency about how we work and what we do.
+- Homologate design in all Lottus Education projects 
+
+## How to get involved
+Developers and designers create and improve the library together. Throughout the process, we strive to involve and meet the projects needs. We are looking forward to discussing the design and improvement ideas.
+Atomic design is a methodology that proposes to build the interface based on a small set of atomic components and a set of rules to group them into increasingly complex components such as molecules and organisms. Atomic design subdivides each element of a UI into its essential and aggregated components, allowing them to be grouped in different and gradually more and more articulated ways, until an optimal result in terms of usability is obtained. The use of Atomic Design makes it possible to create coherence and homogeneity within a product or digital environment.
+Following this methodology, we developed a set of libraries separated into @lottuseducation/atoms, @lottuseducation/molecules and @lottuseducation/organisms. In addition, each package must be used with the Tailwind css library and @lottuseducation/tailwind-base to provide the relevant styles. 
+
+## Get started
+
+- **Explore UI components**
+  Click on any of the components in the sidebar to see how they look, and how to configure them. Each component contains documentation of its properties, as well as code examples for how to use it.
+- **Try them out**
+  - Experiment with different properties, by clicking on each component story.
+  - Change the properties under **Controls** in the panel.
+- **Use them**
+  Once you´ve found the right component for your use case, click the **Code** tab to see the code implementation, or look at examples.
+
+## Requirements
+- [Tailwind css](https://tailwindcss.com/docs/installation)
+- React.js
+
+### Installation
+
+## Atoms 
+
+`yarn add @lottuseducation/atoms`
+
+`npm install @lottuseducation/atoms`
+
+## Molecules 
+
+`yarn add @lottuseducation/molecules`
+
+`npm install @lottuseducation/molecules`
+
+## Organisms 
+
+`yarn add @lottuseducation/organisms`
+
+`npm install @lottuseducation/organisms`
+
+## Tailwind-base 
+
+`yarn add @lottuseducation/tailwind-base`
+
+`npm install @lottuseducation/tailwind-base`
+
+## Use tailwind-base
+On the tailwind.config add:
+```
+ import * as tailwindBase from "@lottuseducation/tailwind-base";
+ module.exports = {
+  ...,
+  presets: [tailwindBase.default],
+  ..
+};
+``` 

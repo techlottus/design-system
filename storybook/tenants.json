@@ -1,0 +1,34 @@
+{
+  "tenants": [
+    {
+      "name": "lottus",
+      "folder": "LOTTUS",
+      "url": "",
+      "token": ""
+    },
+    {
+      "name": "utc",
+      "folder": "UTC",
+      "url": "NEXT_PUBLIC_MULTITENANT_URL_UTC",
+      "token": "NEXT_PUBLIC_MULTITENANT_TOKEN_UTC"
+    },
+    {
+      "name": "uteg",
+      "folder": "UTEG",
+      "url": "NEXT_PUBLIC_MULTITENANT_URL_UTEG",
+      "token": "NEXT_PUBLIC_MULTITENANT_TOKEN_UTEG"
+    },
+    {
+      "name": "uane",
+      "folder": "UANE",
+      "url": "NEXT_PUBLIC_MULTITENANT_URL_UANE",
+      "token": "NEXT_PUBLIC_MULTITENANT_TOKEN_UANE"
+    },
+    {
+      "name": "ula",
+      "folder": "ULA",
+      "url": "NEXT_PUBLIC_MULTITENANT_URL_ULA",
+      "token": "NEXT_PUBLIC_MULTITENANT_TOKEN_ULA"
+    }
+  ]
+}
