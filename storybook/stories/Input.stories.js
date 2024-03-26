@@ -83,16 +83,14 @@ const Template2 = (args) =>{
 const Template3 = () =>{ 
   const [visible, setVisible] = useState("password");
   const handleClick = ()=> {
-    console.log("entro")
     if (visible=="password"){
       setVisible("text")
-      console.log("cambio a text", visible)
     }
     else setVisible("password")
   }
   return(
 <div className="w-full flex space-x-2"> 
-    <Input   type={visible} autocomplete="current-password" required="" label={visible} >
+    <Input   type={visible} autocomplete="current-password" required="" label={Password} >
     <Input.LeftElement>  
       <Icon iconName="person" className="text-surface-300"/>
     </Input.LeftElement>
