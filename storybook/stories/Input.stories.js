@@ -82,9 +82,11 @@ const Template2 = (args) =>{
 )}; 
 const Template3 = () =>{ 
   const [visible, setVisible] = useState("password");
-  const handleClick = ()=>{
+  const handleClick = ()=> {
+    console.log("entro")
     if (visible=="password"){
       setVisible("text")
+      console.log("cambio a text", visible)
     }
     else setVisible("password")
   }
@@ -94,7 +96,7 @@ const Template3 = () =>{
     <Input.LeftElement>  
       <Icon iconName="person" className="text-surface-300"/>
     </Input.LeftElement>
-    <Input.RightElement><button type="button" onClick={()=>handleClick} className="z-3 focus:border">
+    <Input.RightElement><button type="button" onClick={handleClick} className="z-3 focus:border">
       {visible=="password" && <Icon iconName="visibility_off" className="text-surface-300 password-toggle-icon"/>}
       {visible=="text" && <Icon iconName="visibility" className="text-surface-300 password-toggle-icon"/>}
       </button></Input.RightElement>
