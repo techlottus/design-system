@@ -24,6 +24,7 @@ const Template = () =>{
       <DropDown.Item >option</DropDown.Item>
       <DropDown.Item >option</DropDown.Item>
       <DropDown.Item >option</DropDown.Item>
+      <DropDown.Item >option</DropDown.Item>
     </DropDown.Items>    
     </DropDown>
 
