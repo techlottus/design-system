@@ -24,7 +24,7 @@
   "scripts": {
     "build:css": "postcss ./index.css -o ./public/https://design-system-docs-git-feature-lot-720-techlottus.vercel.app/?path=/docs/welcome--docsmain.css",
     "test": "node ./__tests__/storybook.test.js",
-    "storybook": "rm -r ./components/  &&  cp -r ../packages/atoms/src/components/ ./components/ && cp -r ../packages/technical-components/src/components/ ./components/ && cp -r ../packages/molecules/src/components/ ./components/ && cp -r ../packages/icons/src/components/ ./components/ && storybook dev -p 6006",
+    "storybook": "rm -r ./components/  &&  cp -r ../packages/atoms/src/components/ ./ && cp -r ../packages/technical-components/src/components/ ./ && cp -r ../packages/molecules/src/components/ ./ && cp -r ../packages/icons/src/components/ ./ && storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "bugs": {

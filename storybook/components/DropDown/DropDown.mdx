@@ -1,0 +1,66 @@
+import { Meta, Preview } from '@storybook/blocks';
+import DropDown from './DropDown'
+
+
+<Meta title="MDX|DropDown" component = { DropDown } />
+
+# DropDown 
+
+
+The dropdown menu serves as a navigational aid, facilitating various actions such as accessing the menu, navigating to the profile, or logging out. It enables users to seamlessly transition to different sections or paths within the same page.
+Within the @lottuseducation/molecules library, the DropDown component comprises the following elements : "DropDown.Button","DropDown.Items" and "DropDown.Item". By leveraging these components, a multitude of distinct designs for DropDown can be crafted.
+
+- DropDown: The primary component that encompasses all elements within the DropDown .
+- DropDown.Button: Contains the children for the actionable button of the DropDown .
+- DropDown.Items: Container for the options side of the DropDown. 
+- DropDown.Item: Each option of the Items container. 
+
+## Installation and import
+
+To integrate this component, we leverage the @lottuseducation/molecules library. This library seamlessly combines unstyled
+yet fully accessible UI components into our projects, meticulously designed to complement Tailwind CSS integration.
+
+To get started, initiate the installation of @lottuseducation/molecules via npm:
+
+```
+   npm install @lottuseducation/molecules
+```
+
+
+After installing the library, you can import the component into your project as follows:
+
+`import DropDown from "@lottuseducation/molecules"`
+
+
+## Usage
+
+
+To incorporate the DropDown component into your code, follow the structure demonstrated below:
+
+```
+<Input label="label" type="text" >
+    //optional
+    <Input.RightElement>
+    ...childrens
+    </Input.RightElement>
+    //optional
+    <Input.LeftElement>
+    ...childrens
+    </Input.LeftElement>
+</ Input>
+```
+The previous example showcases the simplest usage of the Input component, utilizing default props and rendering an Input
+as illustrated below:
+{
+    <DropDown>
+    <DropDown.Button>Button</DropDown.Button>
+    <DropDown.Items>
+     <div className="px-1 py-1 border border-primary-700">
+      <DropDown.item>Edit</DropDown.item>
+      <DropDown.item>download</DropDown.item>
+      <DropDown.item>profile</DropDown.item>
+     </div>
+    </DropDown.Items>    
+    </DropDown>
+               }
+
