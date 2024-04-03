@@ -38,25 +38,23 @@ After installing the library, you can import the component into your project as 
 To incorporate the DropDown component into your code, follow the structure demonstrated below:
 
 ```
-<Input label="label" type="text" >
-    //optional
-    <Input.RightElement>
-    ...childrens
-    </Input.RightElement>
-    //optional
-    <Input.LeftElement>
-    ...childrens
-    </Input.LeftElement>
-</ Input>
+ <DropDown className="shadow">
+    <DropDown.Button>---</DropDown.Button>
+    <DropDown.Items>
+    <DropDown.Item>---</DropDown.Item>
+    <DropDown.Item>---</DropDown.Item>
+    </DropDown.Items>    
+ </DropDown>
 ```
 The previous example showcases the simplest usage of the Input component, utilizing default props and rendering an Input
 as illustrated below:
 {
     <DropDown className="shadow">
-    <DropDown.Button>Button</DropDown.Button>
+    <DropDown.Button>---</DropDown.Button>
     <DropDown.Items>
-    <DropDown.Item>option</DropDown.Item>
+    <DropDown.Item>---</DropDown.Item>
+    <DropDown.Item>---</DropDown.Item>
     </DropDown.Items>    
     </DropDown>
-               }
+ }
 
