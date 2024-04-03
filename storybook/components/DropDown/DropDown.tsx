@@ -30,7 +30,7 @@ const  Items = (props:ElementType)=> {
 const  Item = (props:ElementType)=> {
   const {children}=props;
   return (
-      <Menu.Item as="div" className="flex p-3 space-x-2.5 hover:bg-surface-200">
+      <Menu.Item as="div" className="flex p-3 space-x-2.5 hover:bg-surface-200 font-texts text-lg">
          {children}     
       </Menu.Item>
   )
