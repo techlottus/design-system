@@ -22,7 +22,7 @@ const  Button = (props:ElementType)=> {
 const  Items = (props:ElementType)=> {
   const {children}=props;
   return (
-      <Menu.Items  className="p-1 rounded h-50  scroll absolute mt-2 left-0">
+      <Menu.Items  className="p-1 rounded h-50  scroll absolute mt-2 left-0 shadow">
          {children}     
       </Menu.Items>
   )
