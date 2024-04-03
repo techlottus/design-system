@@ -22,7 +22,7 @@ const  Button = (props:ElementType)=> {
 const  Items = (props:ElementType)=> {
   const {children}=props;
   return (
-      <Menu.Items  className="p-1 rounded h-10 scroll">
+      <Menu.Items  className="p-1 rounded h-10 scroll absolute mt-2 right-0">
          {children}     
       </Menu.Items>
   )
@@ -30,7 +30,7 @@ const  Items = (props:ElementType)=> {
 const  Item = (props:ElementType)=> {
   const {children}=props;
   return (
-      <Menu.Item as="div" className="flex p-4 space-x-2.5 hover:bg-surface-200">
+      <Menu.Item as="div" className="flex p-3 space-x-2.5 hover:bg-surface-200">
          {children}     
       </Menu.Item>
   )
