@@ -22,9 +22,7 @@ const Template = () =>{
     <DropDown.Button>Button</DropDown.Button>
     <DropDown.Items>
      <div className="px-1 py-1 border border-primary-700">
-      <DropDown.item>Edit</DropDown.item>
-      <DropDown.item>download</DropDown.item>
-      <DropDown.item>profile</DropDown.item>
+      <DropDown.Item>option</DropDown.Item>
      </div>
     </DropDown.Items>    
     </DropDown>
