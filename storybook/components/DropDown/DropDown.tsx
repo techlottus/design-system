@@ -1,11 +1,12 @@
 import { Menu } from '@headlessui/react'
 import { DropDownType, ElementType } from '../Types/DropDown.types'
+import cn from "classnames"
 
-const  DropDown:DropDownType = (props:ElementType )=> {
-  const {children}=props;
+const  DropDown:DropDownType = (props:DropDownType )=> {
+  const {children,className=""}=props;
 
   return (
-      <Menu as="div" className="relative inline-block bg-primary-500">
+      <Menu as="div" className={cn("relative inline-block bg-primary-500",className)}>
          {children}     
       </Menu>
   )
@@ -29,15 +30,15 @@ const  Items = (props:ElementType)=> {
 const  Item = (props:ElementType)=> {
   const {children}=props;
   return (
-      <Menu.Item>
+      <Menu.Item as="div">
          {children}     
       </Menu.Item>
   )
 }
 
 DropDown.Button = Button;
-DropDown.Items = Items;
 DropDown.Item = Item;
+DropDown.Items = Items;
 
 export default DropDown;
 

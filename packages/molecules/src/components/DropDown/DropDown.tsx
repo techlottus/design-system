@@ -30,7 +30,7 @@ const  Items = (props:ElementType)=> {
 const  Item = (props:ElementType)=> {
   const {children}=props;
   return (
-      <Menu.Item >
+      <Menu.Item as="div">
          {children}     
       </Menu.Item>
   )
