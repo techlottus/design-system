@@ -6,7 +6,7 @@ const  DropDown:DropDownType = (props:DropDownType )=> {
   const {children,className=""}=props;
 
   return (
-      <Menu as="div" className={cn("relative inline-block bg-primary-500",className)}>
+      <Menu as="div" className={cn("relative inline-block ",className)}>
          {children}     
       </Menu>
   )
@@ -14,7 +14,7 @@ const  DropDown:DropDownType = (props:DropDownType )=> {
 const  Button = (props:ElementType)=> {
   const {children}=props;
   return (
-      <Menu.Button className="border-2">
+      <Menu.Button className="p-1 rounded">
          {children}     
       </Menu.Button>
   )
@@ -22,7 +22,7 @@ const  Button = (props:ElementType)=> {
 const  Items = (props:ElementType)=> {
   const {children}=props;
   return (
-      <Menu.Items  className="bg-surface-100">
+      <Menu.Items  className="p-1 rounded h-10 scroll">
          {children}     
       </Menu.Items>
   )
@@ -30,7 +30,7 @@ const  Items = (props:ElementType)=> {
 const  Item = (props:ElementType)=> {
   const {children}=props;
   return (
-      <Menu.Item as="div">
+      <Menu.Item as="div" className="flex p-4 space-x-2.5 hover:bg-primary-200 ">
          {children}     
       </Menu.Item>
   )
