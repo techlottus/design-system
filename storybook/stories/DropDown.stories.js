@@ -18,11 +18,11 @@ export default {
 
 const Template = () =>{ 
   return(
-    <DropDown>
+    <DropDown as="div">
     <DropDown.Button>Button</DropDown.Button>
     <DropDown.Items>
      <div className="px-1 py-1 border border-primary-700">
-      <DropDown.Item>option</DropDown.Item>
+      <DropDown.Item as="div">option</DropDown.Item>
      </div>
     </DropDown.Items>    
     </DropDown>
