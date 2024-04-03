@@ -20,7 +20,7 @@ const Template = () =>{
   return(
     <DropDown className="shadow">
     <DropDown.Button>Button</DropDown.Button>
-    <DropDown.Items className="max:h-40">
+    <DropDown.Items className="h-40">
       <DropDown.Item >option</DropDown.Item>
       <DropDown.Item >option</DropDown.Item>
       <DropDown.Item >option</DropDown.Item>
