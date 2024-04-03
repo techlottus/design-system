@@ -20,9 +20,9 @@ const  Button = (props:ElementType)=> {
   )
 }
 const  Items = (props:ElementType)=> {
-  const {children}=props;
+  const {children, className}=props;
   return (
-      <Menu.Items  className="p-1 rounded h-40 overflow-auto  absolute mt-2 left-0 shadow w-52">
+      <Menu.Items  className={cn("p-1 rounded overflow-auto  absolute mt-2 left-0 shadow w-52", className)}>
          {children}     
       </Menu.Items>
   )
