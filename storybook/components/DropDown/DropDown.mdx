@@ -7,8 +7,12 @@ import DropDown from './DropDown'
 # DropDown 
 
 
-The dropdown menu serves as a navigational aid, facilitating various actions such as accessing the menu, navigating to the profile, or logging out. It enables users to seamlessly transition to different sections or paths within the same page.
-Within the @lottuseducation/molecules library, the DropDown component comprises the following elements : "DropDown.Button","DropDown.Items" and "DropDown.Item". By leveraging these components, a multitude of distinct designs for DropDown can be crafted.
+The dropdown menu serves as a navigational aid, facilitating various actions such as accessing the menu, 
+navigating to the profile, or logging out. It enables users to seamlessly transition to different sections
+or paths within the same page.
+Within the @lottuseducation/molecules library, the DropDown component comprises the following elements : 
+"DropDown.Button","DropDown.Items" and "DropDown.Item". By leveraging these components, a multitude of 
+distinct designs for DropDown can be crafted.
 
 - DropDown: The primary component that encompasses all elements within the DropDown .
 - DropDown.Button: Contains the children for the actionable button of the DropDown .
@@ -34,27 +38,50 @@ After installing the library, you can import the component into your project as 
 
 ## Usage
 
-
 To incorporate the DropDown component into your code, follow the structure demonstrated below:
 
 ```
- <DropDown className="shadow">
-    <DropDown.Button>---</DropDown.Button>
+ <DropDown >
+    <DropDown.Button>button content</DropDown.Button>
     <DropDown.Items>
-    <DropDown.Item>---</DropDown.Item>
-    <DropDown.Item>---</DropDown.Item>
+    <DropDown.Item>content item 1</DropDown.Item>
+    <DropDown.Item>content item 2</DropDown.Item>
     </DropDown.Items>    
  </DropDown>
 ```
-The previous example showcases the simplest usage of the Input component, utilizing default props and rendering an Input
+The previous example showcases the simplest usage of the DropDowncomponent, utilizing default props and rendering an DropDown
 as illustrated below:
 {
-    <DropDown className="shadow">
-    <DropDown.Button>---</DropDown.Button>
+    <DropDown >
+    <DropDown.Button>button content</DropDown.Button>
     <DropDown.Items>
-    <DropDown.Item>---</DropDown.Item>
-    <DropDown.Item>---</DropDown.Item>
+    <DropDown.Item>content item 1</DropDown.Item>
+    <DropDown.Item>content item 2</DropDown.Item>
     </DropDown.Items>    
     </DropDown>
- }
+}
 
+You can customize by adding tailwind classes as follows:
+```
+<DropDown className="shadow">
+    <DropDown.Button>Button</DropDown.Button>
+    <DropDown.Items className="h-40">
+      <DropDown.Item >option</DropDown.Item>
+      <DropDown.Item >option</DropDown.Item>
+      <DropDown.Item >option</DropDown.Item>
+      <DropDown.Item >option</DropDown.Item>
+    </DropDown.Items>    
+</DropDown>
+```
+
+{
+   <DropDown className="shadow">
+    <DropDown.Button>Button</DropDown.Button>
+    <DropDown.Items className="h-40">
+      <DropDown.Item >option</DropDown.Item>
+      <DropDown.Item >option</DropDown.Item>
+      <DropDown.Item >option</DropDown.Item>
+      <DropDown.Item >option</DropDown.Item>
+    </DropDown.Items>    
+    </DropDown>
+}
