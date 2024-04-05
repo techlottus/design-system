@@ -69,7 +69,7 @@ const Template4 = () =>{
       <DropDown.Item >
         <DropDown>
           <DropDown.Button>Option Nested</DropDown.Button>
-          <DropDown.Items className="left-52 mt-0 shadow">
+          <DropDown.Items className="left-52 z-20">
             <DropDown.Item>option 1</DropDown.Item>
             <DropDown.Item>option 2</DropDown.Item>
           </DropDown.Items>
