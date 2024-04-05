@@ -63,6 +63,6 @@ const Template3 = () =>{
 
 const DropDownText = Template.bind();
 const DropDownImage = Template2.bind();
-const DropDownMenu = Template2.bind();
+const DropDownMenu = Template3.bind();
 
 export { DropDownText,DropDownImage, DropDownMenu};
