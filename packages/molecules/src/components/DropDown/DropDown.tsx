@@ -14,7 +14,7 @@ const  DropDown:DropDownType = (props:DropDownType )=> {
 const  Button = (props:ElementType)=> {
   const {children}=props;
   return (
-      <Menu.Button className="p-1 rounded">
+      <Menu.Button className="p-1 rounded w-52">
          {children}     
       </Menu.Button>
   )
