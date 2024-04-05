@@ -61,17 +61,7 @@ as illustrated below:
     </DropDown>
 }
 
-
-
-
-
-
-
-You can customize by adding tailwind classes as follows:
-
-
-
-
+You can easily customize by incorporating Tailwind CSS classes. Take, for instance, the following example, where we've applied shadow effects to both the items and the dropdown button, while also establishing a fixed height for the items container.
 ```
 <DropDown className="shadow">
     <DropDown.Button>Button</DropDown.Button>
@@ -86,7 +76,7 @@ You can customize by adding tailwind classes as follows:
 
 {
    <DropDown className="shadow">
-    <DropDown.Button>Button</DropDown.Button>
+    <DropDown.Button><div className='flex justify-between'><span className='font-bold font-texts'>Options</span><span className='fonts-icons-solid text-lg'>expand_more</span></div></DropDown.Button>
     <DropDown.Items className="h-40">
       <DropDown.Item >option</DropDown.Item>
       <DropDown.Item >option</DropDown.Item>
