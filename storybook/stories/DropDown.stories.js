@@ -45,8 +45,8 @@ const Template2 = () =>{
 )}; 
 const Template3 = () =>{ 
   return(
-    <div className="w-full shadow flex">
-    <DropDown className="order-last">
+    <div className="w-full shadow flex justify-end">
+    <DropDown >
     <DropDown.Button>
     <div className='flex space-x-2.5'><img src='https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg' width={'48px'} height={'48px'} /><div className='flex-col space-y-2 justify-start w-full'><div className='flex justify-between'><span className='font-bold font-texts'>Options</span><span className='font-icons-solid text-lg'>expand_more</span></div><div className='flex justify-items-start'><span className='rounded text-success-500 bg-success-100 p-1 text-sm'>Active</span></div></div></div></DropDown.Button>
     <DropDown.Items className="h-40">
