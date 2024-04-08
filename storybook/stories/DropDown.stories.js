@@ -79,9 +79,9 @@ const Template4 = () =>{
       <DropDown.Item >
         <button onClick={handleclick()}>Nested</button>
         {open &&
-        <DropDown.Items className="left-52">
+        <div className="left-52 absolute mt-2">
           Items
-        </DropDown.Items> }
+        </div> }
         
       </DropDown.Item>
       <DropDown.Item ><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 2</span></DropDown.Item>
