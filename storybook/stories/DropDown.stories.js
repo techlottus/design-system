@@ -78,7 +78,7 @@ const Template4 = () =>{
     <DropDown.Items className="h-40">
       <DropDown.Item  className="static">
         <button className="peer">Nested</button>
-        <div className="peer-hover:visible invisible left-52 absolute  mt-2 w-52 p-12 z-0 overflow-visible">
+        <div className="peer-hover:visible invisible left-52 absolute  mt-2 w-52 p-12 z-50 overflow-visible">
           Items
         </div>        
       </DropDown.Item>
