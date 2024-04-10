@@ -78,13 +78,13 @@ const Template4 = () =>{
     <DropDown.Items className="h-40">
       <DropDown.Item >
         <button className="peer">Nested</button>
-        <div className="peer-hover:visible invisible left-52 mt-2 w-52 p-12 overflow-visible z-10 relative">
+        <div className="peer-hover:visible invisible left-52 mt-2 w-52 p-12 overflow-visible z-10 absolute">
           Items
         </div>        
       </DropDown.Item>
-      <DropDown.Item ><span className='font-icons-solid text-lg flex space-x-2.5'>people</span><span className='font-texts'>Option 2</span></DropDown.Item>
-      <DropDown.Item ><span className='font-icons-solid text-lg flex space-x-2.5'>people</span><span className='font-texts'>Option 3</span></DropDown.Item>
-      <DropDown.Item ><span className='font-icons-solid text-lg flex space-x-2.5'>people</span><span className='font-texts'>Option 4</span></DropDown.Item>
+      <DropDown.Item  className="flex space-x-2.5"><span className='font-icons-solid text-lg '>people</span><span className='font-texts'>Option 2</span></DropDown.Item>
+      <DropDown.Item  className="flex space-x-2.5"><span className='font-icons-solid text-lg '>people</span><span className='font-texts'>Option 3</span></DropDown.Item>
+      <DropDown.Item  className="flex space-x-2.5"><span className='font-icons-solid text-lg '>people</span><span className='font-texts'>Option 4</span></DropDown.Item>
     </DropDown.Items>    
     </DropDown>
 
