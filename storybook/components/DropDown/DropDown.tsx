@@ -3,18 +3,18 @@ import { DropDownType, ElementType } from '../Types/DropDown.types'
 import cn from "classnames"
 
 const  DropDown:DropDownType = (props:DropDownType )=> {
-  const {children,className=""}=props;
+  const {children,className="",...restprops}=props;
 
   return (
-      <Menu as="div" className={cn(" font-texts text-base w-52 ",className)}>
+      <Menu as="div" className={cn(" font-texts text-base w-52 ",className)} {...restprops}>
          {children}     
       </Menu>
   )
 }
 const  Button = (props:ElementType)=> {
-  const {children}=props;
+  const {children, className,...restprops}=props;
   return (
-      <Menu.Button className="p-1 rounded w-52">
+      <Menu.Button className={cn("p-1 rounded w-52",className)} {...restprops}>
          {children}     
       </Menu.Button>
   )
@@ -28,9 +28,9 @@ const  Items = (props:ElementType)=> {
   )
 }
 const  Item = (props:ElementType)=> {
-  const {children}=props;
+  const {children, className, ...restProps}=props;
   return (
-      <Menu.Item as="div" className="p-3 hover:bg-surface-100 font-texts text-base w-full">
+      <Menu.Item as="div" className={cn("p-3 hover:bg-surface-100 font-texts text-base w-full",className)} {...restProps}>
          {children}     
       </Menu.Item>
   )
