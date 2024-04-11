@@ -3,34 +3,31 @@ import cn from "classnames"
 import { AccordionType , ElementType} from '../Types/Accordion.types';
 
 const  Accordion:AccordionType = (props:AccordionType )=> {
-  const {children,...restprops}=props;
+  const {children,className}=props;
 
   return (
-      <Disclosure {...restprops}>
+      <div className={cn({className})}>
          {children}     
-      </Disclosure>
+      </div>
   )
 }
 const  Button = (props:ElementType)=> {
   const {children,open=false, className,...restprops}=props;
   return (
-      <Disclosure.Button  {...restprops}>
-        <div className={cn("p-4 flex border-surface-200 w-full ",{["rounded-lg border"]:!open, ["rounded-t-lg border-t border-x bg-surface-200"]:open})}>
+      <button  {...restprops}>
+        <div className={cn("p-4 flex border-surface-200 w-full ",{["rounded-lg border panelGroup:hidden"]:!open, ["rounded-t-lg border-t border-x bg-surface-200 panelGroup:rounded-b-lg panelGroup:border"]:open})}>
           {children}   
         </div>
-           
-      </Disclosure.Button>
+      </button>
       
   )
 }
 const  Panel = (props:ElementType)=> {
-  const {children,open=false, className, ...restProps}=props;
+  const {children, className}=props;
   return (
 
-      <Disclosure.Panel  {...restProps}>
-         <div className={cn("p-4 border-surface-200 rounded-b-lg border-b border-x",className)}>
+         <div className={cn("panelGroup p-4 border-surface-200 rounded-b-lg border-b border-x",className)}>
          {children}    </div> 
-      </Disclosure.Panel>
   )
 }
 
