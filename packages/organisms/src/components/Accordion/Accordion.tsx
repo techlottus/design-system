@@ -1,6 +1,6 @@
 import { Disclosure } from '@headlessui/react'
 import cn from "classnames"
-import { AccordionType , ElementType} from '../Types/Accordion.types';
+import { AccordionType , ButtonType, ElementType} from '../Types/Accordion.types';
 import { useState } from 'react';
 
 const  Accordion:AccordionType = (props:AccordionType )=> {
@@ -12,12 +12,13 @@ const  Accordion:AccordionType = (props:AccordionType )=> {
       </Disclosure>
   )
 }
-const  Button = (props:ElementType)=> {
-  const {children, className,...restprops}=props;
+const  Button = (props:ButtonType)=> {
+  const {children, className,iconOpen, iconClosed,...restprops}=props;
   const [open,setOpen]=useState(false)
   return (
       <Disclosure.Button onClick={()=>{open? setOpen(false): setOpen(true)}} className={cn("p-4 flex border-surface-200 w-full ",{["rounded-lg border"]:!open, ["rounded-t-lg border-t border-x bg-surface-200"]:open},className)} {...restprops}>
          {children}     
+         <div className='-order-1'><span className="font-icons-solid text-lg">{open?iconOpen: iconClosed}</span></div>
       </Disclosure.Button>
   )
 }

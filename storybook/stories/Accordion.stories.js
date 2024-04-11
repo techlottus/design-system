@@ -20,11 +20,9 @@ const Template = () =>{
   const [open,setOpen]=useState(false)
   return(
     <Accordion>
-        <Accordion.Button className="flex justify-between"  onclick={()=>{open? setOpen(false):setOpen(true)}}>
-          <div className="flex space-x-2.5"><span className="font-icons-solid">people</span> <span className="font-bold font-texts">Title</span></div>
-          <div className="flex space-x-2.5">
-            {open?<span className="font-icons-solid">expand_less</span>:<span className="font-icons-solid"> "expand_more"</span>}
-            
+        <Accordion.Button className="flex justify-between" >
+          <div className="flex space-x-2.5"><span className="font-icons-solid text-lg">people</span> <span className="font-bold font-texts">Title</span></div>
+          <div className="flex space-x-2.5">            
              <span className="font-bold font-texts">Text</span></div>
         </Accordion.Button>
         <Accordion.Panel>
