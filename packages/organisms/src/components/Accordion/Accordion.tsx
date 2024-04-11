@@ -12,18 +12,21 @@ const  Accordion:AccordionType = (props:AccordionType )=> {
   )
 }
 const  Button = (props:ElementType)=> {
-  const {children, className,...restprops}=props;
+  const {children,open=false, className,...restprops}=props;
   return (
-      <Disclosure.Button className={cn("p-4 flex border-surface-200 ",{["rounded-lg border"]:!open, ["rounded-t-lg border-t border-x"]:open},className)} {...restprops}>
+      <Disclosure.Button  className={cn("p-4 flex border-surface-200 ",{["rounded-lg border"]:!open, ["rounded-t-lg border-t border-x"]:open},className)} {...restprops}>
          {children}     
       </Disclosure.Button>
+      
   )
 }
 const  Panel = (props:ElementType)=> {
-  const {children, className, ...restProps}=props;
+  const {children,open=false, className, ...restProps}=props;
   return (
-      <Disclosure.Panel className={cn("p-4 border-surface-200",{["rounded-b-lg border-b border-x"]:open},className)} {...restProps}>
-         {children}     
+
+      <Disclosure.Panel  {...restProps}>
+         <div className={cn("p-4 border-surface-200 rounded-b-lg border-b border-x",className)}>
+         {children}    </div> 
       </Disclosure.Panel>
   )
 }

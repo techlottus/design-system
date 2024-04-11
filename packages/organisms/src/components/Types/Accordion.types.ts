@@ -3,4 +3,4 @@ export type AccordionType = {
     Panel?: React.FC<ElementType>;
   } & ElementType
 
-export type ElementType = { children?: React.ReactNode, className?: string }
+export type ElementType = { children?: React.ReactNode, className?: string ,open?:boolean}
