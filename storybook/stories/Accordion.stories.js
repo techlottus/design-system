@@ -17,12 +17,12 @@ export default {
 };
 
 const Template = () =>{ 
-
+  const [open,setOpen]=useState(false)
   return(
     <Accordion>
-        <Accordion.Button className="flex justify-between"  >
+        <Accordion.Button className="flex justify-between"  onclick={()=>{open? setOpen(false):setOpen(true)}}>
           <div className="flex space-x-2.5"><span className="font-icons-solid">people</span> <span className="font-bold font-texts">Title</span></div>
-          <div className="flex space-x-2.5"><span className="font-icons-solid">{open?"less":"more"}</span> <span className="font-bold font-texts">Text</span></div>
+          <div className="flex space-x-2.5"><span className="font-icons-solid">{open? "less": "more"}</span> <span className="font-bold font-texts">Text</span></div>
         </Accordion.Button>
         <Accordion.Panel>
         Panel
