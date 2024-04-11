@@ -20,7 +20,7 @@ const Template = () =>{
   return(
     <Accordion>
         <Accordion.Button className="flex justify-between" iconOpen="expand_less" iconClosed="expand_more">
-          <div className="flex space-x-2.5  order-1"><span className="font-icons-solid text-lg">people</span> <span className="font-bold font-texts">Title</span></div>
+          <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-solid text-lg">people</span> <span className="font-bold font-texts">Title</span></div>
           <div className="flex space-x-2.5 order-last">            
              <span className="font-bold font-texts">Text</span></div>
         </Accordion.Button>

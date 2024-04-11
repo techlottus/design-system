@@ -16,9 +16,9 @@ const  Button = (props:ButtonType)=> {
   const {children, className,iconOpen, iconClosed,...restprops}=props;
   const [open,setOpen]=useState(false)
   return (
-      <Disclosure.Button onClick={()=>{open? setOpen(false): setOpen(true)}} className={cn("p-4 flex border-surface-200 w-full ",{["rounded-lg border"]:!open, ["rounded-t-lg border-t border-x bg-surface-200"]:open},className)} {...restprops}>
+      <Disclosure.Button onClick={()=>{open? setOpen(false): setOpen(true)}} className={cn("p-4 flex space-x-2.5 border-surface-200 w-full ",{["rounded-lg border"]:!open, ["rounded-t-lg border-t border-x bg-surface-200"]:open},className)} {...restprops}>
          {children}     
-         <div className='-order-2'><span className="font-icons-solid text-lg">{open?iconOpen: iconClosed}</span></div>
+         <div className='-order-900'><span className="font-icons-solid text-lg">{open?iconOpen: iconClosed}</span></div>
       </Disclosure.Button>
   )
 }
