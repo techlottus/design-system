@@ -20,20 +20,13 @@ const Template = () =>{
 
   return(
     <Accordion>
-      {({ open }) => (
-        <>
-
-        <Accordion.Button  >
-          Button
+        <Accordion.Button className="flex justify-between"  >
+          <div className="flex space-x-2.5"><span className="font-icons-solid">people</span> <span className="font-bold font-texts">Title</span></div>
+          <div className="flex space-x-2.5"><span className="font-icons-solid">more</span> <span className="font-bold font-texts">Text</span></div>
         </Accordion.Button>
         <Accordion.Panel>
         Panel
       </Accordion.Panel> 
-          
-        </>
-      )}
-   
-     
     </Accordion>
 
 )}; 
