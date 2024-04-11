@@ -27,10 +27,10 @@ const Template = () =>{
         <Accordion.Button onClick={()=> handleClick()} open={open} className="flex justify-between border-surface-200"  >
           <div className="flex space-x-2.5  w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
           <div className="flex space-x-2.5 ">     
-          {open? <span className="font-icons-solid text-lg order-12">expand_less </span>:<span className="font-icons-solid text-lg order-12">expand_more </span> }       
+          {open? <span className="font-icons-solid text-lg">expand_less </span>:<span className="font-icons-solid text-lg ">expand_more </span> }       
              <span className="font-texts">Text</span></div>
         </Accordion.Button>
-        <Accordion.Panel>
+        <Accordion.Panel className={cn({["hidden"]:!open})}>
         Panel
       </Accordion.Panel> 
     </Accordion>
