@@ -83,9 +83,9 @@ const Template = () =>{
 
 // )}; 
 
-const Accordion = Template.bind();
+const AccordionExample = Template.bind();
 // const AccordionImage = Template2.bind();
 // const AccordionMenu = Template3.bind();
 // const AccordionNested = Template4.bind();
 
-export { Accordion};
+export { AccordionExample};
