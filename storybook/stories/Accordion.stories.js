@@ -19,10 +19,10 @@ export default {
 const Template = () =>{ 
   return(
     <Accordion>
-    <Accordion.Button className={cn("p-4 flex border-surface-200 ",{["rounded-lg border"]:!open, ["rounded-t-lg border-t border-x"]:open},className)} >
+    <Accordion.Button className={cn("p-4 flex border-surface-200 ",{["rounded-lg border"]:!open, ["rounded-t-lg border-t border-x"]:open})} >
       Button
     </Accordion.Button>
-    <Accordion.Panel className={cn("p-4 border-surface-200",{["rounded-b-lg border-b border-x"]:open},className)}>
+    <Accordion.Panel className={cn("p-4 border-surface-200",{["rounded-b-lg border-b border-x"]:open})}>
       Panel
     </Accordion.Panel>    
     </Accordion>
