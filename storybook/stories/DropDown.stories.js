@@ -18,9 +18,9 @@ export default {
 
 const Template = () =>{ 
   return(
-    <DropDown className="shadow">
+    <DropDown className="shadow relative">
     <DropDown.Button><div className='flex justify-between p-3 w-52'><span className='font-bold font-texts'>Options</span><span className='font-icons-solid text-lg'>expand_more</span></div></DropDown.Button>
-    <DropDown.Items className="h-40">
+    <DropDown.Items className="h-40 absolute">
       <DropDown.Item ><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 1</span></DropDown.Item>
       <DropDown.Item ><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 2</span></DropDown.Item>
       <DropDown.Item ><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 3</span></DropDown.Item>
