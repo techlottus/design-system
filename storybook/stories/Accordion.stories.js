@@ -19,12 +19,20 @@ export default {
 const Template = () =>{ 
   return(
     <Accordion>
-    <Accordion.Button  >
-      Button
-    </Accordion.Button>
-    <Accordion.Panel>
-      Panel
-    </Accordion.Panel>    
+      {({ open }) => (
+        <>
+
+        <Accordion.Button open= {open? true: false} >
+          Button
+        </Accordion.Button>
+        <Accordion.Panel open={open? true: false}>
+        Panel
+      </Accordion.Panel> 
+          
+        </>
+      )}
+   
+     
     </Accordion>
 
 )}; 
