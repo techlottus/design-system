@@ -1,4 +1,5 @@
 import { Disclosure } from '@headlessui/react'
+import cn from "classnames"
 import { AccordionType , ElementType} from '../Types/Accordion.types';
 
 const  Accordion:AccordionType = (props:AccordionType )=> {
@@ -13,7 +14,7 @@ const  Accordion:AccordionType = (props:AccordionType )=> {
 const  Button = (props:ElementType)=> {
   const {children, className,...restprops}=props;
   return (
-      <Disclosure.Button className="p-4 flex border-surface-200 border"{...restprops}>
+      <Disclosure.Button className={cn("p-4 flex border-surface-200 ",{["rounded-lg border"]:!open, ["rounded-t-lg border-t border-x"]:open},className)} {...restprops}>
          {children}     
       </Disclosure.Button>
   )
@@ -21,7 +22,7 @@ const  Button = (props:ElementType)=> {
 const  Panel = (props:ElementType)=> {
   const {children, className, ...restProps}=props;
   return (
-      <Disclosure.Panel className= "p-4 border-surface-200" {...restProps}>
+      <Disclosure.Panel className={cn("p-4 border-surface-200",{["rounded-b-lg border-b border-x"]:open},className)} {...restProps}>
          {children}     
       </Disclosure.Panel>
   )
