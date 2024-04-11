@@ -19,7 +19,7 @@ export default {
 const Template = () =>{ 
   return(
     <DropDown className="shadow">
-    <DropDown.Button><div className='flex justify-between p-3'><span className='font-bold font-texts'>Options</span><span className='font-icons-solid text-lg'>expand_more</span></div></DropDown.Button>
+    <DropDown.Button><div className='flex justify-between p-3 w-52'><span className='font-bold font-texts'>Options</span><span className='font-icons-solid text-lg'>expand_more</span></div></DropDown.Button>
     <DropDown.Items className="h-40">
       <DropDown.Item ><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 1</span></DropDown.Item>
       <DropDown.Item ><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 2</span></DropDown.Item>
@@ -82,8 +82,8 @@ const Template4 = () =>{
           Items
         </div>         */}
         <DropDown>
-        <DropDown.Button className="w-full">NESTED OPTION</DropDown.Button>
-        <DropDown.Items  className="left-52 mt-2 w-52 overflow-x-visible z-10 absolute">
+        <DropDown.Button className="w-52">NESTED OPTION</DropDown.Button>
+        <DropDown.Items  className="left-54  w-52 overflow-x-visible z-10 absolute">
           <DropDown.Item>ITEM 1</DropDown.Item>
           <DropDown.Item>ITEM 2</DropDown.Item>
           <DropDown.Item>ITEM 3</DropDown.Item>
