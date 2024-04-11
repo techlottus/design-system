@@ -30,7 +30,7 @@ const Template = () =>{
           {open? <span className="font-icons-solid text-lg">expand_less </span>:<span className="font-icons-solid text-lg ">expand_more </span> }       
              <span className="font-texts">Text</span></div>
         </Accordion.Button>
-        <Accordion.Panel className={cn({["hidden"]:!open})}>
+        <Accordion.Panel static className={cn({["hidden"]:!open})}>
         Panel
       </Accordion.Panel> 
     </Accordion>

@@ -22,7 +22,7 @@ const  Button = (props:ElementType)=> {
 const  Panel = (props:ElementType)=> {
   const {children,open=false, className, ...restProps}=props;
   return (
-      <Disclosure.Panel static className={cn("panelGroup p-4 border-surface-200 rounded-b-lg border",className)} {...restProps}>
+      <Disclosure.Panel  className={cn("panelGroup p-4 border-surface-200 rounded-b-lg border",className)} {...restProps}>
          {children}     
       </Disclosure.Panel>
   )
