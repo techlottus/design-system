@@ -6,7 +6,7 @@ const  DropDown:DropDownType = (props:DropDownType )=> {
   const {children,className="",...restprops}=props;
 
   return (
-      <Menu as="div" className={cn("font-texts text-base w-52 ",className)} {...restprops}>
+      <Menu as="div" className={cn(" font-texts text-base w-52 ",className)} {...restprops}>
          {children}     
       </Menu>
   )
@@ -22,7 +22,7 @@ const  Button = (props:ElementType)=> {
 const  Items = (props:ElementType)=> {
   const {children, className, ...restProps}=props;
   return (
-      <Menu.Items  className={cn("p-1 rounded mt-2 left-0 shadow bg-surface-0 z-10  w-52 overflow-y-auto absolute ", className)} {...restProps}>
+      <Menu.Items  className={cn("p-1 rounded mt-2 left-0 shadow bg-surface-0 z-10  w-52 overflow-y-auto ", className)} {...restProps}>
          {children}     
       </Menu.Items>
   )
