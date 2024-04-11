@@ -20,10 +20,10 @@ const Template = () =>{
   const [open, setOpen] =useState(false)
   return(
     <Accordion>
-    <Accordion.Button open={open} onClick={()=>{open? setOpen(false): setOpen(true)}} className={cn("p-4 flex border-surface-200 w-full ",{["rounded-lg border"]:open, ["rounded-t-lg border-t border-x"]:!open})} >
+    <Accordion.Button open={open} onClick={()=>{open? setOpen(false): setOpen(true)}}  >
       Button
     </Accordion.Button>
-    <Accordion.Panel  open={open} className={cn("p-4 border-surface-200 w-full",{["rounded-b-lg border"]:!open})}>
+    <Accordion.Panel  open={open} >
       Panel
     </Accordion.Panel>    
     </Accordion>
