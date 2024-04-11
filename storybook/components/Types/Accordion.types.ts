@@ -5,4 +5,3 @@ export type AccordionType = {
   } & ElementType
 
 export type ElementType = { children?: React.ReactNode, className?: string, open?:boolean}
-export type ButtonType = { children?: React.ReactNode, className?: string, iconOpen?:React.ReactNode, iconClosed?:React.ReactNode, openClasses?:string, closedClasses?:string}

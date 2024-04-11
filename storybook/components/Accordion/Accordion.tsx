@@ -1,31 +1,28 @@
 import { Disclosure } from '@headlessui/react'
 import cn from "classnames"
-import { AccordionType , ButtonType, ElementType} from '../Types/Accordion.types';
-import { useState } from 'react';
+import { AccordionType , ElementType} from '../Types/Accordion.types';
 
 const  Accordion:AccordionType = (props:AccordionType )=> {
   const {children,...restprops}=props;
 
   return (
-      <Disclosure {...restprops}>
+      <Disclosure  {...restprops}>
          {children}     
       </Disclosure>
   )
 }
-const  Button = (props:ButtonType)=> {
-  const {children, className,iconOpen, iconClosed, openClasses=" bg-surface-200", closedClasses="",...restprops}=props;
-  const [open,setOpen]=useState(false)
+const  Button = (props:ElementType)=> {
+  const {children, className, open=false,...restprops}=props;
   return (
-      <Disclosure.Button onClick={()=>{open? setOpen(false): setOpen(true)}} className={cn("p-4 flex space-x-2.5  w-full ",{["rounded-lg border "+closedClasses]:!open, ["rounded-t-lg border-t border-x "+openClasses]:open},className)} {...restprops}>
+      <Disclosure.Button  className={cn("p-4 flex space-x-2.5  w-full ",{["rounded-lg border"]:!open, ["rounded-t-lg border-t border-x "]:open},className)} {...restprops}>
          {children}     
-         {open?iconOpen: iconClosed}
       </Disclosure.Button>
   )
 }
 const  Panel = (props:ElementType)=> {
   const {children,open=false, className, ...restProps}=props;
   return (
-      <Disclosure.Panel className={cn("panelGroup p-4 border-surface-200 rounded-b-lg border",className)} {...restProps}>
+      <Disclosure.Panel static className={cn("panelGroup p-4 border-surface-200 rounded-b-lg border",className)} {...restProps}>
          {children}     
       </Disclosure.Panel>
   )
