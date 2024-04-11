@@ -33,6 +33,7 @@ const Template = () =>{
 const Template2 = () =>{ 
    return(
     <div className="flex-col space-y-2">
+      <div>
     <Accordion>
         <Accordion.Button className="flex justify-between" iconOpen={<span className="font-icons-solid text-lg order-12">expand_less </span>} iconClosed={<span className="font-icons-solid text-lg order-12">expand_more </span>}>
           <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">people</span> <span className="font-bold font-texts">Title</span></div>
@@ -42,7 +43,8 @@ const Template2 = () =>{
         <Accordion.Panel>
         Panel
       </Accordion.Panel> 
-    </Accordion>
+    </Accordion></div>
+      <div>
     <Accordion>
         <Accordion.Button className="flex justify-between" iconOpen={<span className="font-icons-solid text-lg order-12">expand_less </span>} iconClosed={<span className="font-icons-solid text-lg order-12">expand_more </span>}>
           <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">people</span> <span className="font-bold font-texts">Title</span></div>
@@ -52,7 +54,8 @@ const Template2 = () =>{
         <Accordion.Panel>
         Panel
       </Accordion.Panel> 
-    </Accordion>
+    </Accordion></div>
+      <div>
     <Accordion>
         <Accordion.Button className="flex justify-between" iconOpen={<span className="font-icons-solid text-lg order-12">expand_less </span>} iconClosed={<span className="font-icons-solid text-lg order-12">expand_more </span>}>
           <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">people</span> <span className="font-bold font-texts">Title</span></div>
@@ -62,7 +65,8 @@ const Template2 = () =>{
         <Accordion.Panel>
         Panel
       </Accordion.Panel> 
-    </Accordion>
+    </Accordion></div>
+
 </div>
 )}; 
 // const Template3 = () =>{ 
