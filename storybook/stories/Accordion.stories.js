@@ -17,10 +17,9 @@ export default {
 };
 
 const Template = () =>{ 
-  const [open, setOpen] =useState(false)
   return(
     <Accordion>
-    <Accordion.Button open={open} onClick={()=>{open? setOpen(false): setOpen(true)}}  >
+    <Accordion.Button  >
       Button
     </Accordion.Button>
     <Accordion.Panel>
