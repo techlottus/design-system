@@ -19,7 +19,7 @@ export default {
 const Template = () =>{ 
   return(
     <Accordion>
-    <Accordion.Button>
+    <Accordion.Button className="bg-surface-500">
       Button
     </Accordion.Button>
     <Accordion.Panel>
