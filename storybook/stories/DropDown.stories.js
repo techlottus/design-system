@@ -70,7 +70,7 @@ const Template4 = () =>{
       <DropDown.Item className="w-fit">
         <DropDown className="w-fit">
         <DropDown.Button className="w-fit">NESTED OPTION</DropDown.Button>
-        <DropDown.Items  className="left-58  w-52 overflow-x-visible z-10 absolute mt-0 top-[90px]">
+        <DropDown.Items  className="left-56  w-52 overflow-x-visible z-10 absolute mt-0 top-[63px]">
           <DropDown.Item>ITEM 1</DropDown.Item>
           <DropDown.Item>ITEM 2</DropDown.Item>
           <DropDown.Item>ITEM 3</DropDown.Item>
