@@ -14,7 +14,7 @@ const  Accordion:AccordionType = (props:AccordionType )=> {
 const  Button = (props:ElementType)=> {
   const {children, className, open=false,...restprops}=props;
   return (
-      <Disclosure.Button  className={cn("p-4 flex space-x-2.5  w-full ",{["rounded-lg border"]:!open, ["rounded-t-lg border-t border-x "]:open},className)} {...restprops}>
+      <Disclosure.Button  className={cn("p-4 flex space-x-2.5  w-full ",{["rounded-lg border"]:!open, ["rounded-t-lg border-t border-x bg-surface-200 "]:open},className)} {...restprops}>
          {children}     
       </Disclosure.Button>
   )
