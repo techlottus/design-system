@@ -1,4 +1,4 @@
-export const myhref = (web: any) => {
-  if (web === "") return;
+export const myhref = (web: string) => {
+  if (!web) return;
   window.location.href = web;
 };

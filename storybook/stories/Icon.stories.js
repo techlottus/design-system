@@ -1,6 +1,7 @@
-import { Icon } from "@lottuseducation/design_system";
+import Icon from "../components/Icon";
+/** Icon component is a helper to use material icons, you can find all the icon names in https://fonts.google.com/icons */
 export default {
-  title: "Icon",
+  title: "ATOMS/Icon",
   component: Icon,
   tags: ["autodocs"],
   args: {
@@ -8,7 +9,7 @@ export default {
     className: "",
   },
   argTypes: {
-    type: {
+    variant: {
       options: ["solid", "outlined"],
       control: { type: "radio" },
     },

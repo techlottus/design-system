@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   getClassItemMobContainer,
   getClassIconMobContainer,
@@ -10,24 +10,28 @@ import Icon from "../Icon";
 import PromoLink from "../PromoLink";
 import SocialMedia from "../SocialMedia";
 import cn from "classnames";
+import { MenuItemType, MenuMobileType } from "../Types/Menu.types";
 
-const MenuMobile = (props: any) => {
+const MenuMobile: React.FC<MenuMobileType> = (props: MenuMobileType) => {
   const {
     submenuM = false,
-    itemsData,
-    btn,
+    items,
+    button,
     className = "",
     socialMedia,
+    promolink1,
+    promolink2,
   } = props;
-  // expand icon state
-  const iconExpandMore = "arrow_forward_ios";
-  const active = "principal";
-  const inactive = "inactive";
-  const iconExpandLess = "arrow_back_ios";
 
-  const [index, setIndex] = useState(0);
-  const [type, setType] = useState(active);
-  const [sub, setSub] = useState(inactive);
+  /** states */
+  const iconExpandMore: string = "arrow_forward_ios";
+  const active: string = "principal";
+  const inactive: string = "inactive";
+  const iconExpandLess: string = "arrow_back_ios";
+
+  const [index, setIndex] = useState<number>(0);
+  const [type, setType] = useState<string>(active);
+  const [sub, setSub] = useState<string>(inactive);
 
   const handleArrowMore = (index: number) => {
     setType(inactive);
@@ -35,99 +39,67 @@ const MenuMobile = (props: any) => {
     setIndex(index);
   };
   const handleArrowLess = () => {
-    setType(active);
+    setType("principal");
     setSub(inactive);
   };
 
-  const ClassesMenuContainer = cn(
-    " w-full bg-neutral-100 container overscroll-contain h-[90%] px-2 overflow-hidden",
-    className
-  );
-  const ClassesItemsContainer = cn(
-    "w-full flex flex-col  py-1 z-20  border-t border-neutral-300"
-  );
-
-  const classesItems = cn(
-    "flex justify-between items-center p-1 h-full border-b border-neutral-300 cursor-pointer"
-  );
-  const classesSubMenuContainer = cn(
-    "w-full flex flex-col  py-1 z-20 overscroll-contain h-[90%] "
-  );
-  const classesReverse = cn(
-    "flex justify-end items-center p-1 border-b border-t w-full border-neutral-300 cursor-pointer flex-row-reverse"
-  );
-  const ClassesMenuMobContainer: any = cn(
-    "w-d:hidden w-full ",
-    "bg-neutral-100",
-    "border-t border-neutral-300",
+  const ClassesMenuMobContainer: string = cn(
+    "desktop:hidden w-full ",
+    "bg-surface-100",
+    "border-t border-surface-300",
     "p-2 top-12",
     "flex absolute flex-col overflow-y-auto overscrol-contain",
-    " transition  ease-in-out delay-150 ",
+    " transition  ease-in-out delay-150 transform-gpu opacity-100",
     {
-      ["left-0 "]: !submenuM,
+      ["left-0 translate-x-0 translate-y-0"]: !submenuM,
+      ["-translate-x-full translate-y-0 right-8"]: submenuM,
     }
   );
-  const navClasses = {
-    transform: !submenuM ? "translate3d(0, 0, 0)" : "translate3d(-150%, 0, 0)",
-    opacity: "1",
-  };
-
-  const MenuMobStyles: any = {
-    inactive: {
-      transform: "translate3d(0,0,0)",
-      msOverflowStyle: "none" /* IE and Edge */,
-    },
-    principal: {
-      transform: "translate3d(0, 0, 0)",
-      position: "absolute",
-      opacity: "1",
-      msOverflowStyle: "none" /* IE and Edge */,
-    },
-  };
-  const commonClassesMenuMob: any = cn(
-    "h-80 w-full",
-    "overflow-y-scroll lg:hidden flex overscroll-contain",
-    "pr-2",
-    "-translate-x-full transition  ease-in-out delay-150"
-  );
-  const classesSubMenuMob = cn(
-    "w-full h-full top-2 left-0 absolute bg-neutral-100",
-    "overflow-auto lg:hidden flex overscroll-contain"
-  );
-  const stylesSubMenuMob: any = {
-    msOverflowStyle: "none" /* IE and Edge */,
-    transform:
-      sub === "principal" ? "translate3d(0, 0, 0)" : "translate3d(200%, 0, 0)",
-    transition: "transform 0.5s, opacity 0.1s",
-  };
 
   return (
-    <div className={ClassesMenuContainer}>
-      <div id="MenuM" className={ClassesMenuMobContainer} style={navClasses}>
+    <div
+      className={cn(
+        " w-full bg-surface-100 container overscroll-contain h-9/10 px-2 overflow-hidden",
+        className
+      )}
+    >
+      <div id="MenuM" className={ClassesMenuMobContainer}>
         <div id="MenuContainer" className="overscroll-contain h-screen   ">
           <div
             id="MenuOptions"
-            className={commonClassesMenuMob}
-            style={MenuMobStyles[type]}
+            className={cn(
+              "h-80 w-full overflow-y-scroll desktop:hidden flex overscroll-contain pr-2 -translate-x-full transition  ease-in-out delay-150 transform-gpu",
+              {
+                ["translate-x-0 translate-y-0"]: type === "principal",
+                ["translate-x-0 translate-y-0 absolute opacity-100"]:
+                  type !== "principal",
+              }
+            )}
           >
-            <div id="itemsContainer" className={ClassesItemsContainer}>
-              {itemsData.map((item: any, itemIndex: any) => {
-                if (item.children.length) {
+            <div
+              id="itemsContainer"
+              className="w-full flex flex-col  py-1 z-20  border-t border-surface-300"
+            >
+              {items?.map((item: MenuItemType, itemIndex: number) => {
+                if (item?.children?.length) {
                   return (
-                    <div key={itemIndex} className={classesItems}>
+                    <div
+                      key={itemIndex}
+                      className="flex justify-between items-center p-1 h-full border-b border-surface-300 cursor-pointer"
+                    >
                       <div
-                        className={getClassItemMobContainer(item.active, true)}
+                        className={getClassItemMobContainer(item?.active, true)}
                       >
                         <span
-                          onClick={() => myhref(item.route)}
+                          onClick={() => myhref(item?.route)}
                           className=" flex py-1"
                         >
-                          <TextLink text={item.label} href={item.route} />
+                          <TextLink text={item.label} href={item?.route} />
                         </span>
                       </div>
                       <div
                         id="iconGo"
-                        className={getClassIconMobContainer(item.iconActive)}
+                        className={getClassIconMobContainer(item?.iconActive)}
                         onClick={(_) => handleArrowMore(itemIndex)}
                       >
                         <Icon iconName={iconExpandMore} />
@@ -138,13 +110,13 @@ const MenuMobile = (props: any) => {
                   return (
                     <div
                       key={itemIndex}
-                      className={getClassItemMobContainer(item.active, false)}
+                      className={getClassItemMobContainer(item?.active, false)}
                     >
                       <div
                         className="flex-1"
-                        onClick={() => myhref(item.route)}
+                        onClick={() => myhref(item?.route)}
                       >
-                        <TextLink text={item.label} href={item.route} />
+                        <TextLink text={item.label} href={item?.route} />
                       </div>
                       <div
                         id="iconGo"
@@ -161,18 +133,17 @@ const MenuMobile = (props: any) => {
           </div>
           <div
             id="subMenu"
-            className={classesSubMenuMob}
-            style={stylesSubMenuMob}
+            className={cn(
+              "w-full h-full top-2 left-0 absolute bg-surface-100 overflow-auto desktop:hidden flex overscroll-contain transform-gpu transition-all ease-in-out ",
+              {
+                ["translate-x-0 translate-y-0"]: sub === "principal",
+                ["translate-x-full translate-y-0"]: sub !== "principal",
+              }
+            )}
           >
-            <div
-              className={classesSubMenuContainer}
-              style={{ msOverflowStyle: "none" }}
-            >
-              <div className={classesReverse}>
-                <TextLink
-                  text={itemsData[index].label}
-                  href={itemsData[index].route}
-                />
+            <div className="w-full flex flex-col  py-1 z-20 overscroll-contain h-9/10 ">
+              <div className="flex justify-end items-center p-1 border-b border-t w-full border-surface-300 cursor-pointer flex-row-reverse">
+                <TextLink text={items[index].label} href={items[index].route} />
                 <div
                   id="iconGo"
                   className="px-2 py-1 cursor-pointer flex items-center"
@@ -181,84 +152,84 @@ const MenuMobile = (props: any) => {
                   <Icon iconName={iconExpandLess} />
                 </div>
               </div>
-              {itemsData[index].children.map((item: any, itemIndex: any) => {
-                if (item.principal) {
-                  return (
-                    <div
-                      key={itemIndex}
-                      className={getClassItemMobContainer(
-                        item.active,
-                        item.principal
-                      )}
-                    >
+              {items[index]?.children?.map(
+                (item: MenuItemType, itemIndex: number) => {
+                  if (item?.principal) {
+                    return (
                       <div
-                        className="flex-1"
-                        onClick={() => {
-                          myhref(item.route);
-                        }}
+                        key={itemIndex}
+                        className={getClassItemMobContainer(
+                          item?.active,
+                          item?.principal
+                        )}
                       >
-                        <TextLink text={item.label} href={item.route} />
+                        <div
+                          className="flex-1"
+                          onClick={() => {
+                            myhref(item?.route);
+                          }}
+                        >
+                          <TextLink text={item?.label} href={item?.route} />
+                        </div>
+                        <div
+                          id="iconGo"
+                          className="px-3 py-1 cursor-pointer  border-l-2  border-surface-300"
+                        >
+                          <Icon iconName={iconExpandMore} />
+                        </div>
                       </div>
+                    );
+                  } else {
+                    return (
                       <div
-                        id="iconGo"
-                        className="px-3 py-1 cursor-pointer  border-l-2  border-neutral-300"
+                        key={itemIndex}
+                        className={getClassItemMobContainer(
+                          item?.active,
+                          item?.principal
+                        )}
                       >
-                        <Icon iconName={iconExpandMore} />
+                        <div
+                          className="flex-1"
+                          onClick={() => myhref(item?.route)}
+                        >
+                          <TextLink
+                            text={item?.label}
+                            href={item?.route}
+                            items={false}
+                          />
+                        </div>
+                        <div id="iconGo" className="px-3 py-1 cursor-pointer">
+                          <Icon iconName={iconExpandMore} />
+                        </div>
                       </div>
-                    </div>
-                  );
-                } else {
-                  return (
-                    <div
-                      key={itemIndex}
-                      className={getClassItemMobContainer(
-                        item.active,
-                        item.principal
-                      )}
-                    >
-                      <div
-                        className="flex-1"
-                        onClick={() => myhref(item.route)}
-                      >
-                        <TextLink
-                          text={item.label}
-                          href={item.route}
-                          items={false}
-                        />
-                      </div>
-                      <div id="iconGo" className="px-3 py-1 cursor-pointer">
-                        <Icon iconName={iconExpandMore} />
-                      </div>
-                    </div>
-                  );
+                    );
+                  }
                 }
-              })}
+              )}
             </div>
           </div>
 
           <div
             id="info"
-            className=" absolute bottom-10 lg:hidden bg-neutral-100 flex flex-1 flex-col w-full"
+            className=" absolute bottom-10 desktop:hidden bg-surface-100 flex flex-1 flex-col w-full"
           >
             <div className="py-2 px-2">
               <Button
-                id={btn?.id}
-                label={btn?.label}
-                variant={btn?.variant}
                 size="sm"
-                iconName={btn?.iconName}
                 className="min-w-full flex justify-center"
-                onClick={btn?.onclick}
+                {...button}
               />
             </div>
-            <div className="flex flex-row w-full rounded py-2 px-2">
-              <PromoLink text="link" route="/route" />
-              <PromoLink text="link2" route="/route" />
+
+            <div className="flex flex-row space-x-6 w-full rounded py-2 px-2">
+              {promolink1 && <PromoLink {...promolink1} />}
+              {promolink2 && <PromoLink {...promolink2} />}
             </div>
+
             <div>
               <SocialMedia
                 socialMedia={socialMedia}
-                svgClass="text-neutral-600"
+                className="text-surface-600"
               />
             </div>
           </div>

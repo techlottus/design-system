@@ -1,3 +1,4 @@
+import React from "react";
 import cn from "classnames";
 import Heading from "../Heading";
 import Button from "../Button";
@@ -6,20 +7,23 @@ import {
   getClassBannerPositionButton,
 } from "../helpers/classesHelper";
 import { getTextCount } from "../helpers/textHelper";
+import { BannerContentConfig } from "../Types/Banner.types";
 
-const BannerContent = (props: any) => {
+const BannerContent: React.FC<BannerContentConfig> = (
+  props: BannerContentConfig
+) => {
   const {
     title,
-    text,
-    btn,
+    content,
+    button,
     contentVariant = "dark",
     size = "lg",
     position = "left-top",
     className = "",
   } = props;
-  const textColor = cn("pb-4 font-secondary", {
-    ["text-neutral-100"]: contentVariant === "light",
-    ["text-neutral-800"]: !contentVariant || contentVariant === "dark",
+  const textColor = cn("pb-4 font-texts", {
+    ["text-surface-100"]: contentVariant === "light",
+    ["text-surface-800"]: !contentVariant || contentVariant === "dark",
   });
   return (
     <div className={className}>
@@ -34,27 +38,26 @@ const BannerContent = (props: any) => {
             <div className={textColor}>
               <Heading
                 title={getTextCount(title, 53)}
-                type="h-3"
+                variant="h-3"
                 font="secondary"
               />
             </div>
           ) : (
             ""
           )}
-          {text ? (
+          {content ? (
             <div className={textColor}>
               {/* <span>{getTextCount(text, 132)}</span> */}
-              <span dangerouslySetInnerHTML={{ __html: text }} />
+              <span dangerouslySetInnerHTML={{ __html: content }} />
             </div>
           ) : (
             ""
           )}
-          {btn ? (
+          {button ? (
             <div className={getClassBannerPositionButton(position)}>
               <Button
-                id={btn?.id}
-                label={btn?.label}
-                iconName={btn?.iconName}
+                label={button?.label}
+                iconName={button?.iconName}
                 variant={
                   contentVariant === "light" ? "outlined-negative" : "primary"
                 }
@@ -68,24 +71,23 @@ const BannerContent = (props: any) => {
       </div>
       <div
         id="banner-content-mobile"
-        className="w-full h-full flex flex-col md:hidden "
+        className="w-full h-full flex flex-col tablet:hidden "
       >
-        <div className="py-4 text-neutral-800">
-          <Heading title={title} type="h-3" font="secondary" />
+        <div className="py-4 text-surface-800">
+          <Heading title={title} variant="h-3" font="secondary" />
         </div>
-        <div className="pb-4 text-neutral-800 font-secondary">
-          <span dangerouslySetInnerHTML={{ __html: text }} />
+        <div className="pb-4 text-surface-800 font-texts">
+          <span dangerouslySetInnerHTML={{ __html: content }} />
         </div>
-        {btn ? (
-          <div className="pb-4 font-secondary">
+        {button ? (
+          <div className="pb-4 font-texts">
             <Button
-              id={btn?.id}
-              label={btn?.label}
+              label={button?.label}
               variant="primary"
               size="xsm"
-              iconName={btn?.iconName}
+              iconName={button?.iconName}
               className="min-w-full flex justify-center"
-              onClick={btn?.onClick}
+              onClick={button?.onClick}
             />
           </div>
         ) : (

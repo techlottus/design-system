@@ -1,0 +1,237 @@
+import { Meta, Preview } from '@storybook/blocks';
+import Input from './Input'
+
+
+<Meta title="MDX|Input" component = { Input } />
+
+# Input 
+
+The Input  is a fundamental component commonly employed within forms,
+ facilitating user input across various data types such as text, numbers, emails, and passwords, among others.
+  It serves as a conduit for both sending and collecting inputted data. Within the @lottuseducation/molecules library, 
+  the Input  component comprises two optionals elements : "Input.RightElement," and
+   "Input.LeftElement." By leveraging these components, a multitude of distinct designs for input  can be crafted.
+   
+- Input: The primary component that encompasses all elements within the input .
+- Input.RightElement: Contains the children for the right section of the input .
+- Input.LeftElement: Holds the children for the left side of the input 
+
+## Installation and import
+
+
+To integrate this component, we leverage the @lottuseducation/molecules library. This library seamlessly combines unstyled
+yet fully accessible UI components into our projects, meticulously designed to complement Tailwind CSS integration.
+
+To get started, initiate the installation of @lottuseducation/molecules via npm:
+
+```
+   npm install @lottuseducation/molecules
+
+```
+
+
+After installing the library, you can import the component into your project as follows:
+
+`import Input from "@lottuseducation/molecules"`
+ 
+
+## Usage
+
+
+To incorporate the Input  component into your code, follow the structure demonstrated below:
+
+```
+<Input label="label" type="text" >
+
+    //optional
+    <Input.RightElement>
+    ...childrens
+    </Input.RightElement>
+
+    //optional
+    <Input.LeftElement>
+    ...childrens
+    </Input.LeftElement>
+
+</ Input>
+
+```
+The previous example showcases the simplest usage of the Input component, utilizing default props and rendering an Input
+as illustrated below:
+{
+      <Input label = "label" type = "text" id="neutral-input">
+         <Input.RightElement className="bg-primary-100"> <div className=' h-4'>RightElement</div> </Input.RightElement> 
+         <Input.LeftElement className="bg-primary-100"><div className=' h-4'>LeftElement</div> </Input.LeftElement>
+      </Input>
+               }
+
+## Examples and Use Cases
+
+Explore additional examples and use cases:
+
+
+### isValid prop
+The input can be customized using the isValid prop. When set to true, it displays classes
+indicating that the input holds a valid value.
+
+```
+<Input isValid={true} type="text" label="label"  >
+    
+    <Input.LeftElement>
+      <Icon iconName="people" className="text-surface-800 text-lg"/> 
+    </Input.LeftElement>
+
+</ Input>
+```
+{<Input isValid={true} type="text"  label="label" id="valid-input" >
+    
+    <Input.LeftElement>
+       <span className="font-icons-solid text-lg text-surface-400" >
+          person
+       </span>
+    </Input.LeftElement>
+
+</ Input>}
+
+
+On the other hand, if an invalid value is passed, you can set the isValid prop to false, 
+which will apply styles indicating an incorrect input value.
+
+```
+<Input isValid={false} type="text" isValid={false} label="label">
+    
+    <Input.LeftElement>
+       <span className="font-icons-solid text-lg text-surface-400" >
+          person
+       </span>
+    </Input.LeftElement>
+
+
+</ Input>
+```
+
+{<Input isValid={false} type="text" label="label" id="invelid-input" >
+    
+    <Input.LeftElement>
+       <span className="font-icons-solid text-lg text-surface-400" >
+          person
+       </span>
+    </Input.LeftElement>
+
+</ Input>}
+
+### Hide icons in error and success cases
+
+
+To hide icons in error and success cases, you can utilize the "hideIcons" prop. 
+Simply set it to true to remove the icons.
+
+```
+<Input isValid={false} type="text"  label="label" hideIcons >
+    
+    <Input.LeftElement>
+       <span className="font-icons-solid text-lg text-surface-400" >
+          <i>person
+       </span>
+    </Input.LeftElement>
+
+
+</ Input>
+```
+
+{<Input isValid={false} type="text" label="label" id="invelid-input" hideIcons={true} >
+    
+    <Input.LeftElement>
+       <span className="font-icons-solid text-lg text-surface-400" >
+          person
+       </span>
+    </Input.LeftElement>
+
+</ Input>}
+
+### Regular expression
+Another useful functionality is the RegexExp prop, which accepts a regular expression
+to validate whether a value is correct or incorrect. By utilizing this prop, 
+the styles are automatically applied based on whether the value matches the regular expression.
+```
+<Input regexExp={/[^\s@]+@[^\s@]+\.[^\s@]+/} type="text" label="Email" id="invelid-input" >
+    
+    <Input.LeftElement>
+       <span className="font-icons-solid text-lg text-surface-400" >
+          person
+       </span>
+    </Input.LeftElement>
+</ Input>
+```
+{<Input regexExp={/[^\s@]+@[^\s@]+\.[^\s@]+/} type="text" label="Email" id="invelid-input" >
+    
+    <Input.LeftElement>
+       <span className="font-icons-solid text-lg text-surface-400" >
+          person
+       </span>
+    </Input.LeftElement>
+</ Input>}
+
+### Disabled prop
+
+To apply styles to a disabled input, you can set the disabled prop to true.
+
+```
+<Input disabled type="text" label="label"  >
+    
+    <Input.LeftElement>
+       <span className="font-icons-solid text-lg text-surface-400" >
+          person
+       </span>
+    </Input.LeftElement>
+
+    
+    <Input.RightElement>
+    <span className="font-icons-solid text-lg text-surface-400" >
+          visibility_off
+       </span>
+    </Input.RightElement>
+
+</ Input>
+```
+
+{<Input disabled type="text" label="label" id="disabled-input"  >
+    
+    <Input.LeftElement>
+       <span className="font-icons-solid text-lg text-surface-400" >
+          person
+       </span>
+    </Input.LeftElement>
+
+    
+    <Input.RightElement>
+    <span className="font-icons-solid text-lg text-surface-400" >
+          visibility_off
+       </span>
+    </Input.RightElement>
+
+</ Input>} 
+
+## Variants
+
+Input fields can be utilized in two distinct designs: outlined (by default) and flat.
+To switch between designs, you can easily adjust the "variant" prop to either "outlined" or "flat", as demonstrated below:
+
+```
+<Input regexExp={/[^\s@]+@[^\s@]+\.[^\s@]+/} type="text" label="Email" id="invelid-input" variant="flat" >
+    
+    <Input.LeftElement>
+       <span className="font-icons-solid text-lg text-surface-400" >
+          person
+       </span>
+    </Input.LeftElement>
+</ Input>
+```
+{<Input regexExp={/[^\s@]+@[^\s@]+\.[^\s@]+/} type="text" label="Email" id="invelid-input" variant="flat">
+    
+    <Input.LeftElement>
+       <span className="font-icons-solid text-lg text-surface-400" >
+          person
+       </span>
+    </Input.LeftElement>
+</ Input>}
