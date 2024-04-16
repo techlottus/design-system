@@ -69,11 +69,11 @@ const Template4 = () =>{
     <DropDown.Items className="h-40 overflow-y-auto ">
       <DropDown.Item className="w-fit">
         <DropDown className="w-fit">
-        <DropDown.Button className="w-fit">NESTED OPTION</DropDown.Button>
+        <DropDown.Button className="w-fit flex space-x-2.5"><span className='font-icons-solid text-lg '>people</span><span className='font-texts'>Option 1 </span><span className='font-icons-solid text-lg '>chevron_right</span></DropDown.Button>
         <DropDown.Items  className="left-56  w-52 overflow-x-visible z-10 absolute mt-0 top-[63px]">
-          <DropDown.Item>ITEM 1</DropDown.Item>
-          <DropDown.Item>ITEM 2</DropDown.Item>
-          <DropDown.Item>ITEM 3</DropDown.Item>
+          <DropDown.Item>Item 1</DropDown.Item>
+          <DropDown.Item>Item 2</DropDown.Item>
+          <DropDown.Item>Item 3</DropDown.Item>
         </DropDown.Items></DropDown>
       </DropDown.Item>
       <DropDown.Item  className="flex space-x-2.5"><span className='font-icons-solid text-lg '>people</span><span className='font-texts'>Option 2</span></DropDown.Item>
