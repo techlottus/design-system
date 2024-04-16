@@ -10,7 +10,7 @@ const Icon: React.FC<IconType> = (props: IconType) => {
         ["font-icons-solid"]: variant === "solid",
       })}
     >
-      <i>{iconName}</i>
+      {iconName}
     </span>
   );
 };
