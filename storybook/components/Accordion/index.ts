@@ -1,2 +1,2 @@
-export { default } from "./Accordion";
-export { default as AccordionList } from "./AccordionList";
+export { Accordion } from "./Accordion";
+export  { AccordionList} from "./AccordionList";

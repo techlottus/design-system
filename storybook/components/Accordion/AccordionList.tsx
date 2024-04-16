@@ -3,7 +3,7 @@ import cn from "classnames"
 import { AccordionButtonType, AccordionListType, AccordionType , ElementType} from '../Types/Accordion.types';
 import { Children, useState } from 'react';
 
-const AccordionList:AccordionListType = (props:AccordionListType)=>{
+export const AccordionList:AccordionListType = (props:AccordionListType)=>{
   const {children,expandAll=false}= props;
   const [clicked, setClicked] = useState(0);
 
@@ -60,5 +60,4 @@ AccordionList.Item = Item;
 AccordionList.Button = Button;
 AccordionList.Panel = Panel;
 
-export default AccordionList
 ;

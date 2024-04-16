@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import Accordion from "../components/Accordion/Accordion"
-import AccordionList from "../components/Accordion/AccordionList"
+import {Accordion} from "../components/Accordion/Accordion"
 import Icon from "../components/Icon"
 import mdx from "../components/Accordion/Accordion.mdx"
 import cn from "classnames"
@@ -38,82 +37,82 @@ const Template = () => {
 
   )
 };
-const Template2 = () => {
-  return (
-    <div className="flex-col space-y-2">
-      <div>
-        <Accordion>
-          <Accordion.Button className="flex justify-between border-surface-200" iconOpen={<span className="font-icons-solid text-lg order-12">expand_less </span>} iconClosed={<span className="font-icons-solid text-lg order-12">expand_more </span>}>
-            <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
-            <div className="flex space-x-2.5 order-last">
-              <span className="font-texts">Text</span></div>
-          </Accordion.Button>
-          <Accordion.Panel>
-            Panel
-          </Accordion.Panel>
-        </Accordion></div>
-      <div>
-        <Accordion>
-          <Accordion.Button className="flex justify-between" iconOpen={<span className="font-icons-solid text-lg order-12">expand_less </span>} iconClosed={<span className="font-icons-solid text-lg order-12">expand_more </span>}>
-            <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
-            <div className="flex space-x-2.5 order-last">
-              <span className="font-texts">Text</span></div>
-          </Accordion.Button>
-          <Accordion.Panel>
-            Panel
-          </Accordion.Panel>
-        </Accordion></div>
-      <div>
-        <Accordion>
-          <Accordion.Button className="flex justify-between" iconOpen={<span className="font-icons-solid text-lg order-12">expand_less </span>} iconClosed={<span className="font-icons-solid text-lg order-12">expand_more </span>}>
-            <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
-            <div className="flex space-x-2.5 order-last">
-              <span className="font-texts">Text</span></div>
-          </Accordion.Button>
-          <Accordion.Panel>
-            Panel
-          </Accordion.Panel>
-        </Accordion></div>
+// const Template2 = () => {
+//   return (
+//     <div className="flex-col space-y-2">
+//       <div>
+//         <Accordion>
+//           <Accordion.Button className="flex justify-between border-surface-200" iconOpen={<span className="font-icons-solid text-lg order-12">expand_less </span>} iconClosed={<span className="font-icons-solid text-lg order-12">expand_more </span>}>
+//             <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
+//             <div className="flex space-x-2.5 order-last">
+//               <span className="font-texts">Text</span></div>
+//           </Accordion.Button>
+//           <Accordion.Panel>
+//             Panel
+//           </Accordion.Panel>
+//         </Accordion></div>
+//       <div>
+//         <Accordion>
+//           <Accordion.Button className="flex justify-between" iconOpen={<span className="font-icons-solid text-lg order-12">expand_less </span>} iconClosed={<span className="font-icons-solid text-lg order-12">expand_more </span>}>
+//             <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
+//             <div className="flex space-x-2.5 order-last">
+//               <span className="font-texts">Text</span></div>
+//           </Accordion.Button>
+//           <Accordion.Panel>
+//             Panel
+//           </Accordion.Panel>
+//         </Accordion></div>
+//       <div>
+//         <Accordion>
+//           <Accordion.Button className="flex justify-between" iconOpen={<span className="font-icons-solid text-lg order-12">expand_less </span>} iconClosed={<span className="font-icons-solid text-lg order-12">expand_more </span>}>
+//             <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
+//             <div className="flex space-x-2.5 order-last">
+//               <span className="font-texts">Text</span></div>
+//           </Accordion.Button>
+//           <Accordion.Panel>
+//             Panel
+//           </Accordion.Panel>
+//         </Accordion></div>
 
-    </div>
-  )
-};
-const Template3 = () => {
-  return (
-    <AccordionList>
-      <Accordion.Item>
-        <Accordion.Button className="flex justify-between " >
-          <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
-          <div className="flex space-x-2.5 order-last">
-            <span className="font-texts">Text</span></div>
-        </Accordion.Button>
-        <Accordion.Panel>
-          Panel
-        </Accordion.Panel>
-      </Accordion.Item>
-      <Accordion.Item>
-        <Accordion.Button className="flex justify-between " >
-          <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
-          <div className="flex space-x-2.5 order-last">
-            <span className="font-texts">Text</span></div>
-        </Accordion.Button>
-        <Accordion.Panel>
-          Panel
-        </Accordion.Panel>
-      </Accordion.Item>
-      <Accordion.Item>
-        <Accordion.Button className="flex justify-between " >
-          <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
-          <div className="flex space-x-2.5 order-last">
-            <span className="font-texts">Text</span></div>
-        </Accordion.Button>
-        <Accordion.Panel>
-          Panel
-        </Accordion.Panel>
-      </Accordion.Item>
-    </AccordionList>
-  )
-};
+//     </div>
+//   )
+// };
+// const Template3 = () => {
+//   return (
+//     <AccordionList>
+//       <Accordion.Item>
+//         <Accordion.Button className="flex justify-between " >
+//           <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
+//           <div className="flex space-x-2.5 order-last">
+//             <span className="font-texts">Text</span></div>
+//         </Accordion.Button>
+//         <Accordion.Panel>
+//           Panel
+//         </Accordion.Panel>
+//       </Accordion.Item>
+//       <Accordion.Item>
+//         <Accordion.Button className="flex justify-between " >
+//           <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
+//           <div className="flex space-x-2.5 order-last">
+//             <span className="font-texts">Text</span></div>
+//         </Accordion.Button>
+//         <Accordion.Panel>
+//           Panel
+//         </Accordion.Panel>
+//       </Accordion.Item>
+//       <Accordion.Item>
+//         <Accordion.Button className="flex justify-between " >
+//           <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
+//           <div className="flex space-x-2.5 order-last">
+//             <span className="font-texts">Text</span></div>
+//         </Accordion.Button>
+//         <Accordion.Panel>
+//           Panel
+//         </Accordion.Panel>
+//       </Accordion.Item>
+//     </AccordionList>
+//   )
+// };
 
 // const Template4 = () =>{ 
 
@@ -163,7 +162,7 @@ const Template3 = () => {
 
 const AccordionExample = Template.bind();
 //  const AccordionList = Template2.bind();
- const AccordionList = Template3.bind();
+//  const AccordionList = Template3.bind();
 // const AccordionColorList = Template4.bind();
 
-export { AccordionExample, AccordionList };
+export { AccordionExample };

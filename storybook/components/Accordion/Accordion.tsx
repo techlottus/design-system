@@ -4,7 +4,7 @@ import { AccordionButtonType, AccordionType , ElementType} from '../Types/Accord
 import { useState } from 'react';
 
 
-const  Accordion:AccordionType = (props:AccordionType )=> {
+export const  Accordion:AccordionType = (props:AccordionType )=> {
   const {children,...restprops}=props;
 
   return (
@@ -40,5 +40,3 @@ const  Panel = (props:ElementType)=> {
 Accordion.Button = Button;
 Accordion.Panel = Panel;
 
-export default Accordion
-;
