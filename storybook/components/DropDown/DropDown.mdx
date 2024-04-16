@@ -154,17 +154,17 @@ You can add dropdown in navbar as follows:
 Dropdown options can be nested using dropdown inside the item as shown below:
 
 ```
-<div className='relative'> <DropDown >
+    <div className='relative'> <DropDown >
     <DropDown.Button>
     <div className='flex space-x-2.5'><img src='https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg' width={'48px'} height={'48px'} /><div className='flex-col space-y-2 justify-start w-full'><div className='flex justify-between'><span className='font-bold font-texts'>Options</span><span className='font-icons-solid text-lg'>expand_more</span></div><div className='flex justify-items-start'><span className='rounded text-success-500 bg-success-100 p-1 text-sm'>Active</span></div></div></div></DropDown.Button>
     <DropDown.Items className="h-40 overflow-y-auto ">
       <DropDown.Item className="w-fit">
         <DropDown className="w-fit">
-        <DropDown.Button className="w-fit">NESTED OPTION</DropDown.Button>
-        <DropDown.Items  className="left-57  w-52 overflow-x-visible z-10 absolute mt-0 top-[63px]">
-          <DropDown.Item>ITEM 1</DropDown.Item>
-          <DropDown.Item>ITEM 2</DropDown.Item>
-          <DropDown.Item>ITEM 3</DropDown.Item>
+        <DropDown.Button className="w-fit flex space-x-2.5"><span className='font-icons-solid text-lg '>people</span><span className='font-texts'>Option 1 </span><span className='font-icons-solid text-lg '>chevron_right</span></DropDown.Button>
+        <DropDown.Items  className="left-56  w-52 overflow-x-visible z-10 absolute mt-0 top-[63px]">
+          <DropDown.Item>Item 1</DropDown.Item>
+          <DropDown.Item>Item 2</DropDown.Item>
+          <DropDown.Item>Item 3</DropDown.Item>
         </DropDown.Items></DropDown>
       </DropDown.Item>
       <DropDown.Item  className="flex space-x-2.5"><span className='font-icons-solid text-lg '>people</span><span className='font-texts'>Option 2</span></DropDown.Item>
@@ -176,17 +176,17 @@ Dropdown options can be nested using dropdown inside the item as shown below:
 
 
 
-{   <div className='relative'> <DropDown >
+{       <div className='relative'> <DropDown >
     <DropDown.Button>
     <div className='flex space-x-2.5'><img src='https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg' width={'48px'} height={'48px'} /><div className='flex-col space-y-2 justify-start w-full'><div className='flex justify-between'><span className='font-bold font-texts'>Options</span><span className='font-icons-solid text-lg'>expand_more</span></div><div className='flex justify-items-start'><span className='rounded text-success-500 bg-success-100 p-1 text-sm'>Active</span></div></div></div></DropDown.Button>
     <DropDown.Items className="h-40 overflow-y-auto ">
       <DropDown.Item className="w-fit">
         <DropDown className="w-fit">
-        <DropDown.Button className="w-fit">NESTED OPTION</DropDown.Button>
-        <DropDown.Items  className="left-57  w-52 overflow-x-visible z-10 absolute mt-0 top-[63px]">
-          <DropDown.Item>ITEM 1</DropDown.Item>
-          <DropDown.Item>ITEM 2</DropDown.Item>
-          <DropDown.Item>ITEM 3</DropDown.Item>
+        <DropDown.Button className="w-fit flex space-x-2.5"><span className='font-icons-solid text-lg '>people</span><span className='font-texts'>Option 1 </span><span className='font-icons-solid text-lg '>chevron_right</span></DropDown.Button>
+        <DropDown.Items  className="left-56  w-52 overflow-x-visible z-10 absolute mt-0 top-[63px]">
+          <DropDown.Item>Item 1</DropDown.Item>
+          <DropDown.Item>Item 2</DropDown.Item>
+          <DropDown.Item>Item 3</DropDown.Item>
         </DropDown.Items></DropDown>
       </DropDown.Item>
       <DropDown.Item  className="flex space-x-2.5"><span className='font-icons-solid text-lg '>people</span><span className='font-texts'>Option 2</span></DropDown.Item>
