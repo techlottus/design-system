@@ -1,6 +1,8 @@
 import { Disclosure } from '@headlessui/react'
 import cn from "classnames"
-import { AccordionType , ElementType} from '../Types/Accordion.types';
+import { AccordionButtonType, AccordionType , ElementType} from '../Types/Accordion.types';
+import { useState } from 'react';
+
 
 const  Accordion:AccordionType = (props:AccordionType )=> {
   const {children,...restprops}=props;
@@ -11,10 +13,17 @@ const  Accordion:AccordionType = (props:AccordionType )=> {
       </Disclosure>
   )
 }
-const  Button = (props:ElementType)=> {
-  const {children, className, open=false,...restprops}=props;
+const  Button = (props:AccordionButtonType)=> {
+  const {children, className, open=false,onClick,...restprops}=props;
+  const [isOpen,setOpen] =useState(false)
+  const handleClick =()=>{
+    if(isOpen){
+      setOpen(false)
+    }
+    else setOpen(true)
+  }
   return (
-      <Disclosure.Button  className={cn("p-4 flex space-x-2.5  w-full ",{["rounded-lg border"]:!open, ["rounded-t-lg border-t border-x bg-surface-200 "]:open},className)} {...restprops}>
+      <Disclosure.Button  onClick={()=>onClick? onClick : handleClick} className={cn("p-4 flex space-x-2.5  w-full ",{["rounded-lg border "]:!open || !isOpen, ["rounded-t-lg border-t border-x bg-surface-200 "]:open || isOpen},className)} {...restprops}>
          {children}     
       </Disclosure.Button>
   )
@@ -22,7 +31,7 @@ const  Button = (props:ElementType)=> {
 const  Panel = (props:ElementType)=> {
   const {children,open=false, className, ...restProps}=props;
   return (
-      <Disclosure.Panel  className={cn("panelGroup p-4 border-surface-200 rounded-b-lg border",className)} {...restProps}>
+      <Disclosure.Panel  className={cn("group/panel p-4 border-surface-200 rounded-b-lg border",className)} {...restProps}>
          {children}     
       </Disclosure.Panel>
   )
