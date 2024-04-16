@@ -1,0 +1,196 @@
+import { Meta, Preview } from '@storybook/blocks';
+import DropDown from './DropDown'
+
+
+<Meta title="MDX|DropDown" component = { DropDown } />
+
+# DropDown 
+
+
+The dropdown menu serves as a navigational aid, facilitating various actions such as accessing the menu, 
+navigating to the profile, or logging out. It enables users to seamlessly transition to different sections
+or paths within the same page.
+Within the @lottuseducation/molecules library, the DropDown component comprises the following elements : 
+"DropDown.Button","DropDown.Items" and "DropDown.Item". By leveraging these components, a multitude of 
+distinct designs for DropDown can be crafted.
+
+- DropDown: The primary component that encompasses all elements within the DropDown .
+- DropDown.Button: Contains the children for the actionable button of the DropDown .
+- DropDown.Items: Container for the options side of the DropDown. 
+- DropDown.Item: Each option of the Items container. 
+
+## Installation and import
+
+To integrate this component, we leverage the @lottuseducation/molecules library. This library seamlessly combines unstyled
+yet fully accessible UI components into our projects, meticulously designed to complement Tailwind CSS integration.
+
+To get started, initiate the installation of @lottuseducation/molecules via npm:
+
+```
+   npm install @lottuseducation/molecules
+```
+
+
+After installing the library, you can import the component into your project as follows:
+
+`import DropDown from "@lottuseducation/molecules"`
+
+
+## Usage
+
+To incorporate the DropDown component into your code, follow the structure demonstrated below:
+
+```
+ <DropDown >
+    <DropDown.Button>button content</DropDown.Button>
+    <DropDown.Items>
+    <DropDown.Item>content item 1</DropDown.Item>
+    <DropDown.Item>content item 2</DropDown.Item>
+    </DropDown.Items>    
+ </DropDown>
+```
+The previous example showcases the simplest usage of the DropDowncomponent, utilizing default props and rendering an DropDown
+as illustrated below:
+{
+    <DropDown >
+    <DropDown.Button>button content</DropDown.Button>
+    <DropDown.Items>
+    <DropDown.Item>content item 1</DropDown.Item>
+    <DropDown.Item>content item 2</DropDown.Item>
+    </DropDown.Items>    
+    </DropDown>
+}
+
+You can easily customize by incorporating Tailwind CSS classes. Take, for instance, the following example, where we've applied shadow effects to both the items and the dropdown button, while also establishing a fixed height for the items container.
+```
+ <DropDown className="shadow relative">
+    <DropDown.Button><div className='flex justify-between p-3 w-52'><span className='font-bold font-texts'>Options</span><span className='font-icons-solid text-lg'>expand_more</span></div></DropDown.Button>
+    <DropDown.Items className="h-40 absolute ">
+      <DropDown.Item className="flex space-x-2.5"><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 1</span></DropDown.Item>
+      <DropDown.Item className="flex space-x-2.5"><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 2</span></DropDown.Item>
+      <DropDown.Item className="flex space-x-2.5"><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 3</span></DropDown.Item>
+      <DropDown.Item className="flex space-x-2.5"><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 4</span></DropDown.Item>
+    </DropDown.Items>    
+    </DropDown>
+```
+
+{
+ <DropDown className="shadow relative">
+    <DropDown.Button><div className='flex justify-between p-3 w-52'><span className='font-bold font-texts'>Options</span><span className='font-icons-solid text-lg'>expand_more</span></div></DropDown.Button>
+    <DropDown.Items className="h-40 absolute ">
+      <DropDown.Item className="flex space-x-2.5"><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 1</span></DropDown.Item>
+      <DropDown.Item className="flex space-x-2.5"><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 2</span></DropDown.Item>
+      <DropDown.Item className="flex space-x-2.5"><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 3</span></DropDown.Item>
+      <DropDown.Item className="flex space-x-2.5"><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 4</span></DropDown.Item>
+    </DropDown.Items>    
+    </DropDown>
+}
+
+## DropDown with image profile
+
+You can customize dropdown button by adding images, labels, icons, etc.
+
+```
+<DropDown className="shadow relative">
+    <DropDown.Button>
+    <div className='flex space-x-2.5'><img src='https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg' width={'48px'} height={'48px'} /><div className='flex-col space-y-2 justify-start w-full'><div className='flex justify-between'><span className='font-bold font-texts'>Options</span><span className='font-icons-solid text-lg'>expand_more</span></div><div className='flex justify-items-start'><span className='rounded text-success-500 bg-success-100 p-1 text-sm'>Active</span></div></div></div></DropDown.Button>
+    <DropDown.Items className="h-40  ">
+      <DropDown.Item className="flex space-x-2.5" ><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 1</span></DropDown.Item>
+      <DropDown.Item className="flex space-x-2.5" ><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 2</span></DropDown.Item>
+      <DropDown.Item className="flex space-x-2.5" ><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 3</span></DropDown.Item>
+      <DropDown.Item className="flex space-x-2.5" ><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 4</span></DropDown.Item>
+    </DropDown.Items>    
+    </DropDown>
+```
+
+{
+ <DropDown className="shadow relative">
+    <DropDown.Button>
+    <div className='flex space-x-2.5'><img src='https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg' width={'48px'} height={'48px'} /><div className='flex-col space-y-2 justify-start w-full'><div className='flex justify-between'><span className='font-bold font-texts'>Options</span><span className='font-icons-solid text-lg'>expand_more</span></div><div className='flex justify-items-start'><span className='rounded text-success-500 bg-success-100 p-1 text-sm'>Active</span></div></div></div></DropDown.Button>
+    <DropDown.Items className="h-40 absolute ">
+      <DropDown.Item className="flex space-x-2.5" ><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 1</span></DropDown.Item>
+      <DropDown.Item className="flex space-x-2.5" ><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 2</span></DropDown.Item>
+      <DropDown.Item className="flex space-x-2.5" ><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 3</span></DropDown.Item>
+      <DropDown.Item className="flex space-x-2.5" ><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 4</span></DropDown.Item>
+    </DropDown.Items>    
+  </DropDown>
+}
+
+## DropDown in Header menu
+
+You can add dropdown in navbar as follows:
+
+```
+  <div className="w-full shadow flex justify-end">
+    <DropDown className="relative">
+    <DropDown.Button>
+    <div className='flex space-x-2.5'><img src='https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg' width={'48px'} height={'48px'} /><div className='flex-col space-y-2 justify-start w-full'><div className='flex justify-between'><span className='font-bold font-texts'>Options</span><span className='font-icons-solid text-lg'>expand_more</span></div><div className='flex justify-items-start'><span className='rounded text-success-500 bg-success-100 p-1 text-sm'>Active</span></div></div></div></DropDown.Button>
+    <DropDown.Items className="h-40 absolute">
+      <DropDown.Item className="flex space-x-2.5"><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 1</span></DropDown.Item>
+      <DropDown.Item className="flex space-x-2.5"><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 2</span></DropDown.Item>
+      <DropDown.Item className="flex space-x-2.5"><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 3</span></DropDown.Item>
+      <DropDown.Item className="flex space-x-2.5"><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 4</span></DropDown.Item>
+    </DropDown.Items>    
+    </DropDown>
+    </div>
+
+```
+
+{     <div className="w-full shadow flex justify-end">
+    <DropDown className="relative">
+    <DropDown.Button>
+    <div className='flex space-x-2.5'><img src='https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg' width={'48px'} height={'48px'} /><div className='flex-col space-y-2 justify-start w-full'><div className='flex justify-between'><span className='font-bold font-texts'>Options</span><span className='font-icons-solid text-lg'>expand_more</span></div><div className='flex justify-items-start'><span className='rounded text-success-500 bg-success-100 p-1 text-sm'>Active</span></div></div></div></DropDown.Button>
+    <DropDown.Items className="h-40 absolute">
+      <DropDown.Item className="flex space-x-2.5"><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 1</span></DropDown.Item>
+      <DropDown.Item className="flex space-x-2.5"><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 2</span></DropDown.Item>
+      <DropDown.Item className="flex space-x-2.5"><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 3</span></DropDown.Item>
+      <DropDown.Item className="flex space-x-2.5"><span className='font-icons-solid text-lg'>people</span><span className='font-texts'>Option 4</span></DropDown.Item>
+    </DropDown.Items>    
+    </DropDown>
+    </div>}
+
+## Dropdown with nested items
+
+Dropdown options can be nested using dropdown inside the item as shown below:
+
+```
+    <div className='relative'> <DropDown >
+    <DropDown.Button>
+    <div className='flex space-x-2.5'><img src='https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg' width={'48px'} height={'48px'} /><div className='flex-col space-y-2 justify-start w-full'><div className='flex justify-between'><span className='font-bold font-texts'>Options</span><span className='font-icons-solid text-lg'>expand_more</span></div><div className='flex justify-items-start'><span className='rounded text-success-500 bg-success-100 p-1 text-sm'>Active</span></div></div></div></DropDown.Button>
+    <DropDown.Items className="h-40 overflow-y-auto ">
+      <DropDown.Item className="w-fit">
+        <DropDown className="w-fit">
+        <DropDown.Button className="w-fit flex space-x-2.5"><span className='font-icons-solid text-lg '>people</span><span className='font-texts'>Option 1 </span><span className='font-icons-solid text-lg '>chevron_right</span></DropDown.Button>
+        <DropDown.Items  className="left-56  w-52 overflow-x-visible z-10 absolute mt-0 top-[63px]">
+          <DropDown.Item>Item 1</DropDown.Item>
+          <DropDown.Item>Item 2</DropDown.Item>
+          <DropDown.Item>Item 3</DropDown.Item>
+        </DropDown.Items></DropDown>
+      </DropDown.Item>
+      <DropDown.Item  className="flex space-x-2.5"><span className='font-icons-solid text-lg '>people</span><span className='font-texts'>Option 2</span></DropDown.Item>
+      <DropDown.Item  className="flex space-x-2.5"><span className='font-icons-solid text-lg '>people</span><span className='font-texts'>Option 3</span></DropDown.Item>
+      <DropDown.Item  className="flex space-x-2.5"><span className='font-icons-solid text-lg '>people</span><span className='font-texts'>Option 4</span></DropDown.Item>
+    </DropDown.Items>    
+    </DropDown></div>
+```
+
+
+
+{       <div className='relative'> <DropDown >
+    <DropDown.Button>
+    <div className='flex space-x-2.5'><img src='https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg' width={'48px'} height={'48px'} /><div className='flex-col space-y-2 justify-start w-full'><div className='flex justify-between'><span className='font-bold font-texts'>Options</span><span className='font-icons-solid text-lg'>expand_more</span></div><div className='flex justify-items-start'><span className='rounded text-success-500 bg-success-100 p-1 text-sm'>Active</span></div></div></div></DropDown.Button>
+    <DropDown.Items className="h-40 overflow-y-auto ">
+      <DropDown.Item className="w-fit">
+        <DropDown className="w-fit">
+        <DropDown.Button className="w-fit flex space-x-2.5"><span className='font-icons-solid text-lg '>people</span><span className='font-texts'>Option 1 </span><span className='font-icons-solid text-lg '>chevron_right</span></DropDown.Button>
+        <DropDown.Items  className="left-56  w-52 overflow-x-visible z-10 absolute mt-0 top-[63px]">
+          <DropDown.Item>Item 1</DropDown.Item>
+          <DropDown.Item>Item 2</DropDown.Item>
+          <DropDown.Item>Item 3</DropDown.Item>
+        </DropDown.Items></DropDown>
+      </DropDown.Item>
+      <DropDown.Item  className="flex space-x-2.5"><span className='font-icons-solid text-lg '>people</span><span className='font-texts'>Option 2</span></DropDown.Item>
+      <DropDown.Item  className="flex space-x-2.5"><span className='font-icons-solid text-lg '>people</span><span className='font-texts'>Option 3</span></DropDown.Item>
+      <DropDown.Item  className="flex space-x-2.5"><span className='font-icons-solid text-lg '>people</span><span className='font-texts'>Option 4</span></DropDown.Item>
+    </DropDown.Items>    
+    </DropDown></div>}
