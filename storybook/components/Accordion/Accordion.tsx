@@ -29,7 +29,8 @@ const Button = (props: ButtonType) => {
     :
      (<Disclosure.Button className={cn("p-4 flex space-x-2.5 w-full", className)} {...restprops}>
       {children}
-      {open ? iconOpen : iconClosed}
+      {open && iconOpen}
+      {!open && iconClosed}
     </Disclosure.Button>)
   )
 }
