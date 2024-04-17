@@ -1,38 +1,31 @@
 import { Disclosure } from '@headlessui/react'
 import cn from "classnames"
-import { AccordionButtonType, AccordionType , ElementType} from '../Types/Accordion.types';
+import { AccordionType , AccordionButtonType, ElementType} from '../Types/Accordion.types';
 import { useState } from 'react';
 
-
-export const  Accordion:AccordionType = (props:AccordionType )=> {
+const  Accordion:AccordionType = (props:AccordionType )=> {
   const {children,...restprops}=props;
 
   return (
-      <Disclosure  {...restprops}>
+      <Disclosure {...restprops}>
          {children}     
       </Disclosure>
   )
 }
 const  Button = (props:AccordionButtonType)=> {
-  const {children, className, iconOpen,iconClose,onClick,...restprops}=props;
-  const [isOpen,setOpen] = useState(false)
-  const handleClick =()=>{
-    if(isOpen){
-      setOpen(false)
-    }
-    else {setOpen(true)}
-  }
+  const {children, className,iconOpen, iconClose, ...restprops}=props;
+  const [open,setOpen]=useState(false)
   return (
-      <Disclosure.Button  onClick={()=>handleClick} className={cn("p-4 flex space-x-2.5  w-full ",{["rounded-lg border "]:!isOpen, ["rounded-t-lg border-t border-x bg-surface-200 "]: isOpen},className)} {...restprops}>
-         {children} 
-         {isOpen?iconOpen:iconClose}    
+      <Disclosure.Button onClick={()=>{open? setOpen(false): setOpen(true)}} className={cn("p-4 flex space-x-2.5 border-surface-200 w-full ",{["rounded-lg border "]:!open, ["rounded-t-lg border-t border-x "]:open},className)} {...restprops}>
+         {children}     
+         {open?iconOpen: iconClose}
       </Disclosure.Button>
   )
 }
 const  Panel = (props:ElementType)=> {
   const {children,open=false, className, ...restProps}=props;
   return (
-      <Disclosure.Panel  className={cn("group/panel p-4 border-surface-200 rounded-b-lg border",className)} {...restProps}>
+      <Disclosure.Panel className={cn("panelGroup p-4 border-surface-200 rounded-b-lg border",className)} {...restProps}>
          {children}     
       </Disclosure.Panel>
   )
@@ -41,3 +34,5 @@ const  Panel = (props:ElementType)=> {
 Accordion.Button = Button;
 Accordion.Panel = Panel;
 
+export default Accordion
+;
