@@ -35,7 +35,7 @@ const Template = () => {
 
   )
 };
-const Template2 = (args) => {
+const Template2 = () => {
   return (
     <Accordion>
         <Accordion.Button  className={cn("flex justify-between  border-primary-500 ")}  iconOpen={<span className="font-icons-solid text-lg order-12">expand_less </span>} iconClosed={<span className="font-icons-solid text-lg order-12">expand_more </span>} variant="outlined">
