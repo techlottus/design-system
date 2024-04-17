@@ -11,4 +11,4 @@ export type AccordionType = {
 } & ElementType
 
 export type ElementType = { children?: React.ReactNode, className?: string, open?: boolean }
-export type AccordionButtonType = { onClick: ()=>void, auto:boolean } & ElementType
+export type AccordionButtonType = { onClick: ()=>void,iconOpen:React.ReactNode,iconClose:React.ReactNode } & ElementType
