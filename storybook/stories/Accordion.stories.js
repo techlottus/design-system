@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Accordion} from "../components/Accordion/Accordion"
+import Accordion from "../components/Accordion/Accordion"
 import Icon from "../components/Icon"
 import mdx from "../components/Accordion/Accordion.mdx"
 import cn from "classnames"
