@@ -18,7 +18,7 @@ const Button = (props: ButtonType) => {
   return (
     // open==null ? (
     <Disclosure.Button 
-    onClick={() => isOpen ? setOpen(false) : setOpen(true)} 
+    onClick={() => open==null?( isOpen ? setOpen(false) : setOpen(true)):(setOpen(open))} 
     className={cn("p-4 flex space-x-2.5  w-full ", 
               { ["rounded-lg border border-surface-200"]: (!isOpen || open==false) && variant=="solid",
               ["rounded-lg border "]: (!isOpen || open==false) && variant=="outlined",
