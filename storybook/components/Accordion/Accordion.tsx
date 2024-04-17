@@ -45,7 +45,7 @@ const Button = (props: ButtonType) => {
 const Panel = (props: ElementType) => {
   const { children, open = false, className, ...restProps } = props;
   return (
-    <Disclosure.Panel className={cn("panelGroup p-4 border-surface-200 rounded-b-lg border",{["hidden"]:!open}, className)} {...restProps}>
+    <Disclosure.Panel className={cn("panelGroup p-4 border-surface-200 rounded-b-lg border flex",{["hidden"]:open==false}, className)} {...restProps}>
       {children}
     </Disclosure.Panel>
   )
