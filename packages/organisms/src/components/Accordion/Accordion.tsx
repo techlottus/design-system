@@ -13,10 +13,10 @@ const  Accordion:AccordionType = (props:AccordionType )=> {
   )
 }
 const  Button = (props:ButtonType)=> {
-  const {children, className,iconOpen, iconClosed,...restprops}=props;
+  const {children, className,iconOpen, iconClosed,auto=true,onClick,...restprops}=props;
   const [open,setOpen]=useState(false)
   return (
-      <Disclosure.Button onClick={()=>{open? setOpen(false): setOpen(true)}} className={cn("p-4 flex space-x-2.5 border-surface-200 w-full ",{["rounded-lg border "]:!open, ["rounded-t-lg border-t border-x bg-surface-200 "]:open},className)} {...restprops}>
+      <Disclosure.Button onClick={auto?()=>{open? setOpen(false): setOpen(true)}: ()=> onClick }className={cn("p-4 flex space-x-2.5 border-surface-200 w-full ",{["rounded-lg border "]:!open, ["rounded-t-lg border-t border-x bg-surface-200 "]:open},className)} {...restprops}>
          {children}     
          {open?iconOpen: iconClosed}
       </Disclosure.Button>

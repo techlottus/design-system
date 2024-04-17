@@ -42,7 +42,7 @@ const Template2 = () => {
   }
   return (
     <Accordion>
-     <Accordion.Button onClick={()=>handleOnClick} className={cn("flex justify-between bg-none border-primary-500",{["bg-none"]:open})} iconOpen={<span className="font-icons-solid text-lg order-12">expand_less </span>} iconClosed={<span className="font-icons-solid text-lg order-12">expand_more </span>}>
+     <Accordion.Button auto={false} onClick={()=>handleOnClick} className={cn("flex justify-between bg-none border-primary-500",{["bg-none rounded-b-none"]:open})} iconOpen={<span className="font-icons-solid text-lg order-12">expand_less </span>} iconClosed={<span className="font-icons-solid text-lg order-12">expand_more </span>}>
        <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
        <div className="flex space-x-2.5 order-last">
          <span className="font-texts">Text</span></div>
@@ -178,7 +178,7 @@ const Template2 = () => {
 // )}; 
 
 const AccordionExample = Template.bind();
-  const AccordionColor = Template2.bind();
+const AccordionColor = Template2.bind();
 //  const AccordionList = Template3.bind();
 // const AccordionColorList = Template4.bind();
 
