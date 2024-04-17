@@ -13,33 +13,22 @@ const Accordion: AccordionType = (props: AccordionType) => {
   )
 }
 const Button = (props: ButtonType) => {
-  const { children, className, iconOpen, iconClosed, open = null, auto=true,onClick, variant="solid", ...restprops } = props;
+  const { children, className, iconOpen, iconClosed, auto=true,onClick, variant="solid", ...restprops } = props;
   const [isOpen, setOpen] = useState(false);
   return (
-    // open==null ? (
     <Disclosure.Button 
-    onClick={() => auto?( isOpen ? setOpen(false) : setOpen(true)):(open==null? setOpen(isOpen) : setOpen(open))} 
+    onClick={() =>  isOpen ? setOpen(false) : setOpen(true)} 
     className={cn("p-4 flex space-x-2.5  w-full ", 
-              { ["rounded-lg border border-surface-200"]: (!isOpen || open==false) && variant=="solid",
-              ["rounded-lg border "]: (!isOpen || open==false) && variant=="outlined",
-              ["rounded-t-lg border-t border-x "]: (isOpen||open) && variant=="outlined",
-               ["rounded-t-lg border-t border-x bg-surface-200 border-surface-200"]: (isOpen||open) && variant=="solid",
+              { ["rounded-lg border border-surface-200"]: (!isOpen) && variant=="solid",
+              ["rounded-lg border "]: (!isOpen) && variant=="outlined",
+              ["rounded-t-lg border-t border-x "]: (isOpen) && variant=="outlined",
+               ["rounded-t-lg border-t border-x bg-surface-200 border-surface-200"]: (isOpen) && variant=="solid",
                }, className)}
    {...restprops}>
       {children}
-      {(open==null && isOpen)?  iconOpen: open?iconOpen:iconClosed }
+      {isOpen?  iconOpen:iconClosed }
     </Disclosure.Button>
-    // :
-    //  (<Disclosure.Button 
-    //  className={cn("p-4 flex space-x-2.5 w-full",
-    //  { ["rounded-lg border border-surface-200"]: !open && variant=="solid",
-    //  ["rounded-lg border"]: !open && variant=="outlined",
-    //  ["rounded-t-lg border-t border-x "]: open && variant=="outlined",
-    //  ["rounded-t-lg border-t border-x bg-surface-200 border-surface-200"]: open && variant=="solid" },
-    //   className)} {...restprops}>
-    //   {children}
-    //   {open ? iconOpen : iconClosed}
-    // </Disclosure.Button>)
+
   )
 }
 const Panel = (props: ElementType) => {
