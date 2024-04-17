@@ -13,24 +13,28 @@ const Accordion: AccordionType = (props: AccordionType) => {
   )
 }
 const Button = (props: ButtonType) => {
-  const { children, className, iconOpen, iconClosed, open = null, onClick, ...restprops } = props;
+  const { children, className, iconOpen, iconClosed, open = null, onClick, variant="solid", ...restprops } = props;
   const [isOpen, setOpen] = useState(false)
   return (
     open==null ? (
     <Disclosure.Button 
     onClick={() => { isOpen ? setOpen(false) : setOpen(true) }} 
     className={cn("p-4 flex space-x-2.5  w-full ", 
-              { ["rounded-lg border border-surface-200"]: !isOpen,
-               ["rounded-t-lg border-t border-x bg-surface-200 border-surface-200"]: isOpen }, className)}
+              { ["rounded-lg border border-surface-200"]: !isOpen && variant=="solid",
+               ["rounded-t-lg border-t border-x bg-surface-200 border-surface-200"]: isOpen && variant=="solid" }, className)}
    {...restprops}>
       {children}
       {isOpen ? iconOpen : iconClosed}
     </Disclosure.Button>) 
     :
-     (<Disclosure.Button className={cn("p-4 flex space-x-2.5 w-full", className)} {...restprops}>
+     (<Disclosure.Button onClick={()=>onClick} 
+     className={cn("p-4 flex space-x-2.5 w-full",
+     { ["rounded-lg border border-surface-200"]: !open && variant=="solid",
+     ["rounded-lg border"]: !open && variant=="outlined",
+     ["rounded-t-lg border-t border-x "]: open && variant=="outlined" },
+      className)} {...restprops}>
       {children}
-      {open && iconOpen}
-      {!open && iconClosed}
+      {open ? iconOpen : iconClosed}
     </Disclosure.Button>)
   )
 }
