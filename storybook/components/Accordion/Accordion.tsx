@@ -34,5 +34,4 @@ const  Panel = (props:ElementType)=> {
 Accordion.Button = Button;
 Accordion.Panel = Panel;
 
-export default Accordion
-;
+export default Accordion;
