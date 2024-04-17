@@ -17,17 +17,32 @@ export default {
 };
 
 const Template = () => {
-  // const [open, setOpen] = useState(false)
-  // const handleOnClick = () => {
-  //   if (open) {
-  //      setOpen(false) 
-  //     }
-  //   else setOpen(true)
-  //   console.log(open)
-  // }
   return (
     <Accordion>
      <Accordion.Button className="flex justify-between border-surface-200" iconOpen={<span className="font-icons-solid text-lg order-12">expand_less </span>} iconClosed={<span className="font-icons-solid text-lg order-12">expand_more </span>}>
+       <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
+       <div className="flex space-x-2.5 order-last">
+         <span className="font-texts">Text</span></div>
+     </Accordion.Button>
+     <Accordion.Panel>
+       Panel
+     </Accordion.Panel>
+   </Accordion>
+
+  )
+};
+const Template2 = () => {
+  const [open, setOpen] = useState(false)
+  const handleOnClick = () => {
+    if (open) {
+       setOpen(false) 
+      }
+    else setOpen(true)
+    console.log(open)
+  }
+  return (
+    <Accordion>
+     <Accordion.Button onClick={()=>handleOnClick} className={cn("flex justify-between bg-none border-primary-500",{["bg-none"]:open})} iconOpen={<span className="font-icons-solid text-lg order-12">expand_less </span>} iconClosed={<span className="font-icons-solid text-lg order-12">expand_more </span>}>
        <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
        <div className="flex space-x-2.5 order-last">
          <span className="font-texts">Text</span></div>
