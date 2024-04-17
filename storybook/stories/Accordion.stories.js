@@ -19,8 +19,11 @@ export default {
 const Template = () => {
   const [open, setOpen] = useState(false)
   const handleClick = () => {
-    if (open) { setOpen(false) }
+    if (open) {
+       setOpen(false) 
+      }
     else setOpen(true)
+    console.log(open)
   }
   return (
     <Accordion>
@@ -30,8 +33,8 @@ const Template = () => {
           {open ? <span className="font-icons-solid text-lg">expand_less </span> : <span className="font-icons-solid text-lg ">expand_more </span>}
           <span className="font-texts">Text</span></div>
       </Accordion.Button>
-      <Accordion.Panel static className={cn({ ["hidden"]: open==false,["block"]:open })}>
-        Panel {open}
+      <Accordion.Panel>
+        Panel
       </Accordion.Panel>
     </Accordion>
 
