@@ -5,7 +5,7 @@ import * as tailwindBase from "@lottuseducation/tailwind-base/lib/tailwind-base.
 module.exports = {
   content: [
     "./stories/**/*.stories.{js,jsx,ts,tsx}",
-    "./components/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx,mdx}",
     "./RadioGroup/**/*.{js,jsx,ts,tsx,mdx}",
     "./../packages/**/*.{js,jsx,ts,tsx,mdx}"
   ],
