@@ -178,8 +178,8 @@ const Template2 = () => {
 // )}; 
 
 const AccordionExample = Template.bind();
-//  const AccordionList = Template2.bind();
+  const AccordionColor = Template2.bind();
 //  const AccordionList = Template3.bind();
 // const AccordionColorList = Template4.bind();
 
-export { AccordionExample };
+export { AccordionExample, AccordionColor };
