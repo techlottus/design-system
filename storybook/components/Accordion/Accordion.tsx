@@ -27,7 +27,7 @@ const Button = (props: ButtonType) => {
                }, className)}
    {...restprops}>
       {children}
-      {(isOpen||open) ? iconOpen : iconClosed}
+      {(open==null && isOpen)?  iconOpen: open?iconOpen:iconClosed }
     </Disclosure.Button>
     // :
     //  (<Disclosure.Button 
@@ -45,7 +45,7 @@ const Button = (props: ButtonType) => {
 const Panel = (props: ElementType) => {
   const { children, open = false, className, ...restProps } = props;
   return (
-    <Disclosure.Panel className={cn("panelGroup p-4 border-surface-200 rounded-b-lg border", className)} {...restProps}>
+    <Disclosure.Panel className={cn("panelGroup p-4 border-surface-200 rounded-b-lg border",{["hidden"]:!open}, className)} {...restProps}>
       {children}
     </Disclosure.Panel>
   )
