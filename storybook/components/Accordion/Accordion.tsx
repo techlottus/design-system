@@ -1,33 +1,37 @@
 import { Disclosure } from '@headlessui/react'
 import cn from "classnames"
-import { AccordionType , ButtonType, ElementType} from '../Types/Accordion.types';
+import { AccordionType, ButtonType, ElementType } from '../Types/Accordion.types';
 import { useState } from 'react';
 
-const  Accordion:AccordionType = (props:AccordionType )=> {
-  const {children,...restprops}=props;
+const Accordion: AccordionType = (props: AccordionType) => {
+  const { children, ...restprops } = props;
 
   return (
-      <Disclosure {...restprops}>
-         {children}     
-      </Disclosure>
+    <Disclosure {...restprops}>
+      {children}
+    </Disclosure>
   )
 }
-const  Button = (props:ButtonType)=> {
-  const {children, className,iconOpen, iconClosed,auto=true,onClick,...restprops}=props;
-  const [open,setOpen]=useState(false)
+const Button = (props: ButtonType) => {
+  const { children, className, iconOpen, iconClosed, open = null, onClick, ...restprops } = props;
+  const [isOpen, setOpen] = useState(false)
   return (
-      <Disclosure.Button onClick={auto?()=>{open? setOpen(false): setOpen(true)}: ()=> onClick }className={cn("p-4 flex space-x-2.5 border-surface-200 w-full ",{["rounded-lg border "]:!open, ["rounded-t-lg border-t border-x bg-surface-200 "]:open},className)} {...restprops}>
-         {children}     
-         {open?iconOpen: iconClosed}
-      </Disclosure.Button>
+    open==null ? (<Disclosure.Button onClick={() => { isOpen ? setOpen(false) : setOpen(true) }} className={cn("p-4 flex space-x-2.5 border-surface-200 w-full ", { ["rounded-lg border "]: !isOpen, ["rounded-t-lg border-t border-x bg-surface-200 "]: isOpen }, className)} {...restprops}>
+      {children}
+      {isOpen ? iconOpen : iconClosed}
+    </Disclosure.Button>) :
+     (<Disclosure.Button className={cn("p-4 flex space-x-2.5 border-surface-200 w-full ", className)} {...restprops}>
+      {children}
+      {open ? iconOpen : iconClosed}
+    </Disclosure.Button>)
   )
 }
-const  Panel = (props:ElementType)=> {
-  const {children,open=false, className, ...restProps}=props;
+const Panel = (props: ElementType) => {
+  const { children, open = false, className, ...restProps } = props;
   return (
-      <Disclosure.Panel className={cn("panelGroup p-4 border-surface-200 rounded-b-lg border",className)} {...restProps}>
-         {children}     
-      </Disclosure.Panel>
+    <Disclosure.Panel className={cn("panelGroup p-4 border-surface-200 rounded-b-lg border", className)} {...restProps}>
+      {children}
+    </Disclosure.Panel>
   )
 }
 
