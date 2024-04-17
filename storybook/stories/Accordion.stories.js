@@ -24,7 +24,7 @@ const Template = () => {
   }
   return (
     <Accordion>
-      <Accordion.Button onClick={() => handleClick()} open={open} className="flex justify-between border-surface-200"  >
+      <Accordion.Button onClick={() => handleClick()} open={open} className="flex justify-between border-surface-200" auto={false} >
         <div className="flex space-x-2.5  w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
         <div className="flex space-x-2.5 ">
           {open ? <span className="font-icons-solid text-lg">expand_less </span> : <span className="font-icons-solid text-lg ">expand_more </span>}
