@@ -44,7 +44,7 @@ const Template2 = (args) => {
          <span className="font-texts">Text</span></div>
      </Accordion.Button>
      
-     <Accordion.Panel static open={args[open]}>
+     <Accordion.Panel static {...args}>
        Panel
      </Accordion.Panel>
    </Accordion>
