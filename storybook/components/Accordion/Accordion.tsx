@@ -15,7 +15,7 @@ export const  Accordion:AccordionType = (props:AccordionType )=> {
 }
 const  Button = (props:AccordionButtonType)=> {
   const {children, className, iconOpen,iconClose,onClick,...restprops}=props;
-  const [isOpen,setOpen] =useState(false)
+  const [isOpen,setOpen] = useState(false)
   const handleClick =()=>{
     if(isOpen){
       setOpen(false)
