@@ -14,17 +14,16 @@ export const  Accordion:AccordionType = (props:AccordionType )=> {
   )
 }
 const  Button = (props:AccordionButtonType)=> {
-  const {children, className, open=false, iconOpen,iconClose,onClick,...restprops}=props;
+  const {children, className, iconOpen,iconClose,onClick,...restprops}=props;
   const [isOpen,setOpen] =useState(false)
   const handleClick =()=>{
     if(isOpen){
       setOpen(false)
     }
-    else setOpen(true)
-    console.log(isOpen)
+    else {setOpen(true)}
   }
   return (
-      <Disclosure.Button  onClick={()=>handleClick} className={cn("p-4 flex space-x-2.5  w-full ",{["rounded-lg border "]:!open || !isOpen, ["rounded-t-lg border-t border-x bg-surface-200 "]:open || isOpen},className)} {...restprops}>
+      <Disclosure.Button  onClick={()=>handleClick} className={cn("p-4 flex space-x-2.5  w-full ",{["rounded-lg border "]:!isOpen, ["rounded-t-lg border-t border-x bg-surface-200 "]: isOpen},className)} {...restprops}>
          {children} 
          {isOpen?iconOpen:iconClose}    
       </Disclosure.Button>

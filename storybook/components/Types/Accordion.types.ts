@@ -10,5 +10,5 @@ export type AccordionType = {
   Panel?: React.FC<ElementType>;
 } & ElementType
 
-export type ElementType = { children?: React.ReactNode, className?: string, open?: boolean }
+export type ElementType = { children?: React.ReactNode, className?: string, open?: boolean | null }
 export type AccordionButtonType = { onClick: ()=>void,iconOpen:React.ReactNode,iconClose:React.ReactNode } & ElementType
