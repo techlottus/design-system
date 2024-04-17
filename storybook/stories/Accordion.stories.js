@@ -3,6 +3,7 @@ import Accordion from "../components/Accordion/Accordion"
 import Icon from "../components/Icon"
 import mdx from "../components/Accordion/Accordion.mdx"
 import cn from "classnames"
+import { ArgTypes } from "@storybook/blocks";
 
 export default {
   title: "ORGANISMS/Accordion",
@@ -16,6 +17,12 @@ export default {
   args: {
     variant: "outlined",
   },
+  ArgTypes:{
+    variant: {
+      options: ["outlined" ,"solid" ],
+      control: { type: "select" },
+    },
+  }
 
 };
 
