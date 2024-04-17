@@ -14,11 +14,17 @@ const Accordion: AccordionType = (props: AccordionType) => {
 }
 const Button = (props: ButtonType) => {
   const { children, className, iconOpen, iconClosed, open = null, onClick, variant="solid", ...restprops } = props;
-  const [isOpen, setOpen] = useState(false)
+  const [isOpen, setOpen] = useState(false);
+  const handleClick = ()=>{
+    if(open==null){
+      isOpen ? setOpen(false) : setOpen(true) 
+    }
+    else setOpen(open)
+  }
   return (
-    open==null ? (
+    // open==null ? (
     <Disclosure.Button 
-    onClick={() => { isOpen ? setOpen(false) : setOpen(true) }} 
+    onClick={() => handleClick} 
     className={cn("p-4 flex space-x-2.5  w-full ", 
               { ["rounded-lg border border-surface-200"]: !isOpen && variant=="solid",
               ["rounded-lg border "]: !isOpen && variant=="outlined",
@@ -28,18 +34,18 @@ const Button = (props: ButtonType) => {
    {...restprops}>
       {children}
       {isOpen ? iconOpen : iconClosed}
-    </Disclosure.Button>) 
-    :
-     (<Disclosure.Button onClick={()=>onClick} 
-     className={cn("p-4 flex space-x-2.5 w-full",
-     { ["rounded-lg border border-surface-200"]: !open && variant=="solid",
-     ["rounded-lg border"]: !open && variant=="outlined",
-     ["rounded-t-lg border-t border-x "]: open && variant=="outlined",
-     ["rounded-t-lg border-t border-x bg-surface-200 border-surface-200"]: open && variant=="solid" },
-      className)} {...restprops}>
-      {children}
-      {open ? iconOpen : iconClosed}
-    </Disclosure.Button>)
+    </Disclosure.Button>
+    // :
+    //  (<Disclosure.Button 
+    //  className={cn("p-4 flex space-x-2.5 w-full",
+    //  { ["rounded-lg border border-surface-200"]: !open && variant=="solid",
+    //  ["rounded-lg border"]: !open && variant=="outlined",
+    //  ["rounded-t-lg border-t border-x "]: open && variant=="outlined",
+    //  ["rounded-t-lg border-t border-x bg-surface-200 border-surface-200"]: open && variant=="solid" },
+    //   className)} {...restprops}>
+    //   {children}
+    //   {open ? iconOpen : iconClosed}
+    // </Disclosure.Button>)
   )
 }
 const Panel = (props: ElementType) => {
