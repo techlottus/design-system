@@ -21,6 +21,7 @@ const  Button = (props:AccordionButtonType)=> {
       setOpen(false)
     }
     else setOpen(true)
+    console.log(isOpen)
   }
   return (
       <Disclosure.Button  onClick={()=>handleClick} className={cn("p-4 flex space-x-2.5  w-full ",{["rounded-lg border "]:!open || !isOpen, ["rounded-t-lg border-t border-x bg-surface-200 "]:open || isOpen},className)} {...restprops}>
