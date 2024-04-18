@@ -1,6 +1,6 @@
 import { Meta, Preview } from '@storybook/blocks';
 import AccordionList from './AccordionList'
-import {useState} from "react"
+import { useState } from "react"
 
 <Meta title="MDX|AccordionList" component = { AccordionList } />
 
@@ -52,7 +52,6 @@ const [clicked, setClicked] = useState(20);
     }
     setClicked(index);
   };
-  return (
     <AccordionList>
       <AccordionList.Item index={0}>
         <AccordionList.Button index={0} open={clicked==0} className="flex justify-between border-primary-500" variant="outlined" onClick={()=>handleToggle(0)}>
@@ -87,5 +86,5 @@ const [clicked, setClicked] = useState(20);
 
     </AccordionList>
 }
-import { useState } from "react"
+
 
