@@ -24,9 +24,8 @@ const  Item = (props:ItemType )=> {
   )
 }
 const  Button = (props: ButtonType)=> {
-  const {children, className,variant="solid",index=0, clicked=0,onClick}=props;
+  const {children, className,variant="solid",open=false,onClick}=props;
 
-  const open= clicked===index
   return (
       <button className={cn("p-4 flex space-x-2.5  w-full ", 
       { ["rounded-lg border border-surface-200"]: (!open) && variant=="solid",
