@@ -22,10 +22,10 @@ const Template = () => {
   return (
     <AccordionList>
       <AccordionList.Item index={0}>
-        <AccordionList.Button index={0} open={clicked==0} className="flex justify-between border-surface-200" variant="outlined" onClick={()=>handleToggle(0)}>
+        <AccordionList.Button index={0} open={clicked==0} className="flex justify-between border-primary-500" variant="outlined" onClick={()=>handleToggle(0)}>
           <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
           <div className="flex space-x-2.5 order-last">
-            <span className="font-texts">{Text}</span></div>
+            <span className="font-texts">{Text}</span>{(clicked==0)?<span className="font-icons-solid">expand_more</span>:<span className="font-icons-solid">expand_less</span>}</div>
         </AccordionList.Button>
         <AccordionList.Panel open={clicked==0}>
           Panel
