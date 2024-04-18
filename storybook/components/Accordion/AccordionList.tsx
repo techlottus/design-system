@@ -2,7 +2,7 @@ import cn from "classnames"
 import { AccordionListType , ButtonType, ElementType, ItemType} from '../Types/Accordion.types';
 import { clicked, handleToggle } from "./handleClick";
 
-export const AccordionList:AccordionListType = (props:AccordionListType)=>{
+const AccordionList:AccordionListType = (props:AccordionListType)=>{
   const {children}= props;
  
   return(
@@ -51,3 +51,5 @@ const  Panel = (props:ElementType)=> {
 AccordionList.Item = Item;
 AccordionList.Button = Button;
 AccordionList.Panel = Panel;
+
+export default AccordionList;
