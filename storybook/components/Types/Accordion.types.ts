@@ -5,4 +5,12 @@ export type AccordionType = {
 } & ElementType
 
 export type ElementType = { children?: React.ReactNode, className?: string, open?:boolean}
-export type ButtonType = { children?: React.ReactNode, className?: string, iconOpen?:React.ReactNode, iconClosed?:React.ReactNode, open?:boolean | null, variant?:"solid"|"outlined",auto?:boolean,onClick?:()=>{}}
+export type ButtonType = { children?: React.ReactNode, className?: string, iconOpen?:React.ReactNode, iconClosed?:React.ReactNode, variant?:"solid"|"outlined",onClick?:()=>{}, open?:boolean,index?:number}
+export type ItemType = {className?:string, index:number,children?: React.ReactNode} 
+export type AccordionListType = {
+  expandAll?:boolean
+  Item?: React.FC<ItemType>;
+  Button?: React.FC<ElementType>;
+  Panel?: React.FC<ElementType>;
+  children?:React.ReactNode
+}
