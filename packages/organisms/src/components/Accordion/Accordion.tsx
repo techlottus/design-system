@@ -13,7 +13,7 @@ const Accordion: AccordionType = (props: AccordionType) => {
   )
 }
 const Button = (props: ButtonType) => {
-  const { children, className, iconOpen, iconClosed, auto=true,onClick, variant="solid", ...restprops } = props;
+  const { children, className, iconOpen, iconClosed, variant="solid", ...restprops } = props;
   const [isOpen, setOpen] = useState(false);
   return (
     <Disclosure.Button 
