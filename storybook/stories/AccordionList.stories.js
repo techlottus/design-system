@@ -27,7 +27,7 @@ const Template = () => {
           <div className="flex space-x-2.5 order-last">
             <span className="font-texts">{Text}</span></div>
         </AccordionList.Button>
-        <AccordionList.Panel open={clicked==index}>
+        <AccordionList.Panel open={clicked==0}>
           Panel
         </AccordionList.Panel></AccordionList.Item>
       <AccordionList.Item index={1}>
@@ -36,7 +36,7 @@ const Template = () => {
           <div className="flex space-x-2.5 order-last">
             <span className="font-texts">Text</span></div>
         </AccordionList.Button>
-        <AccordionList.Panel open={clicked==index}>
+        <AccordionList.Panel open={clicked==1}>
           Panel
         </AccordionList.Panel></AccordionList.Item>
     </AccordionList>
