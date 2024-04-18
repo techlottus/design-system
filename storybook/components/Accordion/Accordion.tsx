@@ -7,7 +7,7 @@ const Accordion: AccordionType = (props: AccordionType) => {
   const { children, ...restprops } = props;
 
   return (
-    <Disclosure className="mobile:h-40" {...restprops} >
+    <Disclosure as="div" className="mobile:h-40" {...restprops} >
       {children}
     </Disclosure>
   )
