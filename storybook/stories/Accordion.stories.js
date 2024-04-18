@@ -1,4 +1,4 @@
-import React, { useState, useTransition } from "react";
+import React from "react";
 import Accordion from "../components/Accordion/Accordion"
 import mdx from "../components/Accordion/Accordion.mdx"
 import cn from "classnames"
@@ -40,10 +40,10 @@ const Template = (args) => {
 
   )
 };
-const Template2 = () => {
+const Template2 = (args) => {
   return (
     <Accordion>
-        <Accordion.Button  className={cn("flex justify-between  border-primary-500 ")}  iconOpen={<span className="font-icons-solid text-lg order-12">expand_less </span>} iconClosed={<span className="font-icons-solid text-lg order-12">expand_more </span>} variant="outlined">
+        <Accordion.Button  className={cn("flex justify-between  border-primary-500 ")}  iconOpen={<span className="font-icons-solid text-lg order-12">expand_less </span>} iconClosed={<span className="font-icons-solid text-lg order-12">expand_more </span>} {...args}>
        <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
        <div className="flex space-x-2.5 order-last">
          <span className="font-texts">Text</span></div>
