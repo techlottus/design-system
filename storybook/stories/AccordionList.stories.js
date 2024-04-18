@@ -11,7 +11,7 @@ export default {
 };
 
 const Template = () => {
-  const [clicked, setClicked] = useState();
+  const [clicked, setClicked] = useState(20);
 
   const handleToggle = (index) => {
     if (clicked === index) {
