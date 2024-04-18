@@ -63,7 +63,7 @@ You can add icons to open and close states with the props iconClose and iconOpen
 
 {
   <Accordion>
-     <Accordion.Button className="flex justify-between border-surface-200" iconOpen={<span className="font-icons-solid text-lg order-12">expand_less </span>} iconClosed={<span className="font-icons-solid text-lg order-12">expand_more </span>}>
+     <Accordion.Button variant="solid" className="flex justify-between border-surface-200" iconOpen={<span className="font-icons-solid text-lg order-12">iconopen </span>} iconClosed={<span className="font-icons-solid text-lg order-12">iconclose </span>}>
        <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
        <div className="flex space-x-2.5 order-last">
          <span className="font-texts">Text</span></div>
@@ -74,4 +74,29 @@ You can add icons to open and close states with the props iconClose and iconOpen
    </Accordion>
 }
 
-You can change className for open and close states:
+by default variant is seted to "solid" but you can change by "outlined" variant:
+```
+<Accordion>
+     <Accordion.Button variant="outlined" className="flex justify-between border-primary-500" iconOpen={<span className="font-icons-solid text-lg order-12">iconopen </span>} iconClosed={<span className="font-icons-solid text-lg order-12">iconclose </span>}>
+       <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
+       <div className="flex space-x-2.5 order-last">
+         <span className="font-texts">Text</span></div>
+     </Accordion.Button>
+     <Accordion.Panel>
+       Panel
+     </Accordion.Panel>
+   </Accordion>
+```
+
+{
+  <Accordion>
+     <Accordion.Button variant="outlined" className="flex justify-between border-primary-500" iconOpen={<span className="font-icons-solid text-lg order-12">iconopen </span>} iconClosed={<span className="font-icons-solid text-lg order-12">iconclose </span>}>
+       <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
+       <div className="flex space-x-2.5 order-last">
+         <span className="font-texts">Text</span></div>
+     </Accordion.Button>
+     <Accordion.Panel>
+       Panel
+     </Accordion.Panel>
+   </Accordion>
+}
