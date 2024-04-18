@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import AccordionList from "../components/Accordion/AccordionList"
+import mdx from "../components/Accordion/AccordionList.mdx"
 import cn from "classnames"
 
 export default {
   title: "ORGANISMS/AccordionList",
   component: AccordionList,
   tags: ["autodocs"],
-
-
+  parameters: {
+    docs: {
+      page: mdx,
+    },
+  },
 };
 
 const Template = () => {

@@ -1,0 +1,52 @@
+import { Meta, Preview } from '@storybook/blocks';
+import AccordionList from './AccordionList'
+
+<Meta title="MDX|AccordionList" component = { AccordionList } />
+
+# AccordionList
+The "AccordionList" component is a user interface that allows content to be organized and presented in a hierarchical and compact manner. 
+It consists of a series of collapsible sections or panels, where only one section is expanded at a time, while the others are kept 
+closed. Users can click on the header of each section to expand it and view its content, which helps conserve screen space and 
+facilitates navigation in interfaces with extensive content.
+
+Within the @lottuseducation/organisms library, the AccordionList component comprises the following elements : "AccordionList.Button","AccordionList.Panel".
+By leveraging these components, a multitude of distinct designs for AccordionList can be crafted.
+
+- AccordionList: the main container of the accordion component
+- AccordionList.Button: The element actionable that open/close the information panels
+- AccordionList.Panel: each content for button accordion.
+
+## Installation and import
+To integrate this component, we install the @lottuseducation/organisms library.
+This library seamlessly combines unstyled yet fully accessible UI components into our projects,
+ meticulously designed to complement Tailwind CSS integration.
+
+To get started, initiate the installation of @lottuseducation/organisms via npm:
+
+  ``` npm install @lottuseducation/organisms ```
+After installing the library, you can import the component into your project as follows:
+
+```import AccordionList from "@lottuseducation/organisms" ```
+
+## Usage
+
+To incorporate the AccordionList component into your code, follow the structure demonstrated below:
+
+```
+<AccordionList>
+ <AccordionList.Item>
+ <AccordionList.Button>AccordionList button</AccordionList.Button>
+ <AccordionList.Panel>AccordionList Panel</AccordionList.Panel>
+ </AccordionList.Item>
+</AccordionList>
+```
+The previous example showcases the simplest usage of the AccordionList component, utilizing default props and rendering
+ an AccordionList as illustrated below:
+{
+<AccordionList>
+ <AccordionList.Item>
+ <AccordionList.Button>AccordionList button</AccordionList.Button>
+ <AccordionList.Panel>AccordionList Panel</AccordionList.Panel>
+ </AccordionList.Item>
+</AccordionList>
+}
