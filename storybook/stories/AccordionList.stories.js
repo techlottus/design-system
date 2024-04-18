@@ -1,30 +1,16 @@
 import React, { useState, useTransition } from "react";
 import AccordionList from "../components/Accordion/AccordionList"
-import mdx from "../components/Accordion/Accordion.mdx"
 import cn from "classnames"
 
 export default {
   title: "ORGANISMS/AccordionList",
   component: AccordionList,
   tags: ["autodocs"],
-  parameters: {
-    docs: {
-      page: mdx,
-    },
-  },
-  args: {
-    variant: "outlined",
-  },
-  argTypes:{
-    variant: {
-      options: ["outlined" ,"solid" ],
-      control: { type: "select" },
-    },
-  }
+
 
 };
 
-const Template = (args) => {
+const Template = () => {
   return (
     <AccordionList>
       <AccordionList.Item>
