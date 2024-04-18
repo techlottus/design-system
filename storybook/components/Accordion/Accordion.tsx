@@ -7,7 +7,7 @@ const Accordion: AccordionType = (props: AccordionType) => {
   const { children, ...restprops } = props;
 
   return (
-    <Disclosure {...restprops}>
+    <Disclosure className="mobile:h-40" {...restprops} >
       {children}
     </Disclosure>
   )
@@ -18,7 +18,7 @@ const Button = (props: ButtonType) => {
   return (
     <Disclosure.Button 
     onClick={() =>  isOpen ? setOpen(false) : setOpen(true)} 
-    className={cn("p-4 flex space-x-2.5  w-full ", 
+    className={cn("p-4 mobile:py-2 mobile:px-4 flex space-x-2.5  w-full ", 
               { ["rounded-lg border border-surface-200"]: (!isOpen) && variant=="solid",
               ["rounded-lg border "]: (!isOpen) && variant=="outlined",
               ["rounded-t-lg border-t border-x "]: (isOpen) && variant=="outlined",
@@ -34,7 +34,7 @@ const Button = (props: ButtonType) => {
 const Panel = (props: ElementType) => {
   const { children, className, ...restProps } = props;
   return (
-    <Disclosure.Panel className={cn("panelGroup p-4 border-surface-200 rounded-b-lg border flex", className)} {...restProps}>
+    <Disclosure.Panel className={cn("panelGroup p-4 mobile:px-4 mobile:py-2 border-surface-200 rounded-b-lg border flex", className)} {...restProps}>
       {children}
     </Disclosure.Panel>
   )
