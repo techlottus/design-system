@@ -47,6 +47,8 @@ The previous example showcases the simplest usage of the Accordion component, ut
 </Accordion>
 }
 
+### Props iconClosed and iconOpen
+
 You can add icons to open and close states with the props iconClose and iconOpen as shown below:
 ```
 <Accordion>
@@ -74,7 +76,9 @@ You can add icons to open and close states with the props iconClose and iconOpen
    </Accordion>
 }
 
-by default variant is seted to "solid" but you can change by "outlined" variant:
+### Props variant
+
+By default variant is seted to "solid" but you can change by "outlined" variant:
 ```
 <Accordion>
      <Accordion.Button variant="outlined" className="flex justify-between border-primary-500" iconOpen={<span className="font-icons-solid text-lg order-12">iconopen </span>} iconClosed={<span className="font-icons-solid text-lg order-12">iconclose </span>}>
