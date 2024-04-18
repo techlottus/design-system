@@ -39,6 +39,24 @@ const Template = () => {
         <AccordionList.Panel open={clicked==1}>
           Panel
         </AccordionList.Panel></AccordionList.Item>
+      <AccordionList.Item index={2}>
+        <AccordionList.Button index={2} open={clicked==2} className="flex justify-between border-surface-200" variant="outlined" onClick={()=>handleToggle(2)}>
+          <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
+          <div className="flex space-x-2.5 order-last">
+            <span className="font-texts">Text</span></div>
+        </AccordionList.Button>
+        <AccordionList.Panel open={clicked==2}>
+          Panel
+        </AccordionList.Panel></AccordionList.Item>
+      <AccordionList.Item index={3}>
+        <AccordionList.Button index={3} open={clicked==3} className="flex justify-between border-surface-200" variant="outlined" onClick={()=>handleToggle(3)}>
+          <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
+          <div className="flex space-x-2.5 order-last">
+            <span className="font-texts">Text</span></div>
+        </AccordionList.Button>
+        <AccordionList.Panel open={clicked==3}>
+          Panel
+        </AccordionList.Panel></AccordionList.Item>
     </AccordionList>
 
   )
