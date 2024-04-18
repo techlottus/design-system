@@ -1,6 +1,7 @@
 import cn from "classnames"
 import { AccordionListType , ButtonType, ElementType, ItemType} from '../Types/Accordion.types';
-import { clicked, handleToggle } from "./handleClick";
+import { handleToggle } from "./handleClick";
+import { useState } from "react";
 
 const AccordionList:AccordionListType = (props:AccordionListType)=>{
   const {children}= props;
@@ -26,7 +27,7 @@ const  Item = (props:ItemType )=> {
 }
 const  Button = (props: ButtonType)=> {
   const {children, className,variant="solid",index=0}=props;
-  const open= clicked;
+  const [open,setOpen]=useState(handleToggle(index))
   return (
       <button className={cn("p-4 flex space-x-2.5  w-full ", 
       { ["rounded-lg border border-surface-200"]: (!open) && variant=="solid",
@@ -34,7 +35,7 @@ const  Button = (props: ButtonType)=> {
       ["rounded-t-lg border-t border-x "]: (open) && variant=="outlined",
        ["rounded-t-lg border-t border-x bg-surface-200 border-surface-200"]: (open) && variant=="solid",
        }, className)}
-       onClick={()=>handleToggle(index)}>
+       onClick={()=>setOpen(handleToggle(index))}>
          {children}     
       </button>
   )
