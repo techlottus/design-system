@@ -5,8 +5,8 @@ const AccordionList:AccordionListType = (props:AccordionListType)=>{
   const {children}= props;
  
   return(
-    <div className='p-1 flex-col'>
-      <ul>
+    <div className='p-1 flex-col '>
+      <ul className="space-y-2">
         {children}
       </ul>
     </div>
