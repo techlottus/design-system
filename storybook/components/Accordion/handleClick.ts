@@ -8,5 +8,5 @@ export const handleToggle = (index: number) => {
     setClicked(0);
   }
   setClicked(index);
-  return clicked;
+  return clicked
 };
