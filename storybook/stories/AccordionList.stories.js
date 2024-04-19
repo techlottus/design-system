@@ -234,12 +234,12 @@ const Template4 = () => {
         </AccordionList.Panel>
       </AccordionList.Item>
       <AccordionList.Item >
-        <AccordionList.Button  open={clicked==0} className="flex justify-between border-warning-500 " variant="outlined" onClick={()=>handleToggle(0)}>
+        <AccordionList.Button  open={clicked==1} className="flex justify-between border-warning-500 " variant="outlined" onClick={()=>handleToggle(1)}>
           <div className="text-surface-400">Área disicplinar</div>
           <div >
-            {(clicked==0)?<span className="font-icons-solid w-6 h-6 bg-warning-500 text-surface-50 rounded-full">expand_less</span>:<span className="font-icons-solid w-6 h-6 bg-warning-500 text-surface-50 rounded-full">expand_more</span>}</div>
+            {(clicked==1)?<span className="font-icons-solid w-6 h-6 bg-warning-500 text-surface-50 rounded-full">expand_less</span>:<span className="font-icons-solid w-6 h-6 bg-warning-500 text-surface-50 rounded-full">expand_more</span>}</div>
         </AccordionList.Button>
-        <AccordionList.Panel className="p-0 border-0" open={clicked==0}>
+        <AccordionList.Panel className="p-0 border-0" open={clicked==1}>
           <ul>
             <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
               <span className="font-texts text-surface-500">Fundamentos de matemáticas</span><span className="font-icons-solid text-surface-500">more_horiz</span>
@@ -257,12 +257,12 @@ const Template4 = () => {
         </AccordionList.Panel>
       </AccordionList.Item>
       <AccordionList.Item >
-        <AccordionList.Button  open={clicked==0} className="flex justify-between border-info-500 " variant="outlined" onClick={()=>handleToggle(0)}>
+        <AccordionList.Button  open={clicked==2} className="flex justify-between border-info-500 " variant="outlined" onClick={()=>handleToggle(2)}>
           <div className="text-surface-400">Área profesional</div>
           <div >
-            {(clicked==0)?<span className="font-icons-solid w-6 h-6 bg-info-500 text-surface-50 rounded-full">expand_less</span>:<span className="font-icons-solid w-6 h-6 bg-info-500 text-surface-50 rounded-full">expand_more</span>}</div>
+            {(clicked==2)?<span className="font-icons-solid w-6 h-6 bg-info-500 text-surface-50 rounded-full">expand_less</span>:<span className="font-icons-solid w-6 h-6 bg-info-500 text-surface-50 rounded-full">expand_more</span>}</div>
         </AccordionList.Button>
-        <AccordionList.Panel className="p-0 border-0" open={clicked==0}>
+        <AccordionList.Panel className="p-0 border-0" open={clicked==2}>
           <ul>
             <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
               <span className="font-texts text-surface-500">Fundamentos de matemáticas</span><span className="font-icons-solid text-surface-500">more_horiz</span>
