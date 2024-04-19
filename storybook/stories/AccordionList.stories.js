@@ -133,7 +133,7 @@ const Template3 = () => {
     setClicked(index);
   };
   return (
-    <div>
+    <div className="flex-col space-y-2 p-1">
      <h3 className="fonts-texts text-lg">Preguntas frecuentes</h3> 
     <AccordionList>
       <AccordionList.Item >
@@ -184,7 +184,7 @@ const Template3 = () => {
           <div >
             {(clicked==3)?<span className="font-icons-solid">expand_less</span>:<span className="font-icons-solid">expand_more</span>}</div>
         </AccordionList.Button>
-        <AccordionList.Panel open={clicked==2}>
+        <AccordionList.Panel open={clicked==3}>
         Consideramos que todo aquél o aquella que haya terminado con éxito sus estudios de educación media superior,
          tiene derecho a acceder a la educación superior, por lo cual no realizamos exámenes de admisión. Sin embargo, 
          todos los alumnos de nuevo ingreso deben realizar una evaluación diagnóstica. Este diagnóstico nos permite identificar
