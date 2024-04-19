@@ -131,7 +131,7 @@ const Template3 = () => {
       setClicked(100);
       console.log("same",clicked)
     }
-    setClicked(index);
+    else setClicked(index);
   };
   return (
     <div className="flex-col space-y-2 p-1">
