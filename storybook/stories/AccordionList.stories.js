@@ -128,7 +128,7 @@ const Template3 = () => {
 
   const handleToggle = (index) => {
     if (clicked === index) {
-      setClicked(-1);
+      setClicked(100);
       console.log("same",clicked)
     }
     setClicked(index);
