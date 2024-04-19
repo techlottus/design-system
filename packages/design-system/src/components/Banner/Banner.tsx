@@ -1,43 +1,51 @@
 import Aspect from "../Aspect";
 import BannerContent from "../BannerContent";
-import { BannerType } from "../Types/Banner.types";
 import cn from "classnames";
-import React from "react";
+const bannerImageStyles: any = {
+  dark: { filter: "brightness(0.5)" },
+  light: { opacity: "0.5" },
+};
+const defaultValues: any = {
+  ratio: "2/1",
+  overlay: "normal",
+  contentVariant: "dark",
+  size: "md",
+  position: "left-top",
+  className: "",
+};
+const classBannerImage: any = cn("w-full h-full object-cover object-center");
 
-const Banner: React.FC<BannerType> = (props: BannerType) => {
+const Banner = (props: any) => {
   const {
     imageUrl,
-    desktopRatio = "7/2",
-    mobileRatio = "4/3",
-    tabletRatio = "7/2",
-    overlay = "normal",
+    ratio = defaultValues.ratio,
+    overlay = defaultValues.overlay,
     title,
-    content,
-    contentVariant = "dark",
-    button,
-    size = "md",
-    position = "left-top",
-    className = "",
+    text,
+    contentVariant = defaultValues.contentVariant,
+    btn,
+    size = defaultValues.size,
+    position = defaultValues.position,
+    className = defaultValues.className,
   } = props;
   return (
     <div className={className}>
-      <div className="hidden xl:block desktop:block ">
-        <Aspect ratio={desktopRatio}>
+      <div className="hidden xl:block lg:block md:block  ">
+        <Aspect ratio={ratio}>
           <img
-            className={cn("w-full h-full object-cover object-center", {
-              ["opacity-50"]: overlay === "light",
-              ["brightness-50"]: overlay === "dark",
-            })}
+            className={classBannerImage}
+            style={bannerImageStyles?.[overlay]}
             src={imageUrl}
             alt="image Banner"
           />
           <BannerContent
             title={title}
-            content={content}
-            button={{
-              label: button?.label,
+            text={text}
+            btn={{
+              id: btn.id,
+              label: btn.label,
               variant: contentVariant ? "outlined" : "primary",
-              iconName: button?.iconName,
+              iconName: btn?.iconName,
             }}
             contentVariant={contentVariant}
             size={size}
@@ -46,34 +54,9 @@ const Banner: React.FC<BannerType> = (props: BannerType) => {
           />
         </Aspect>
       </div>
-      <div className="hidden  desktop:hidden tablet:block  ">
-        <Aspect ratio={tabletRatio}>
-          <img
-            className={cn("w-full h-full object-cover object-center", {
-              ["opacity-50"]: overlay === "light",
-              ["brightness-50"]: overlay === "dark",
-            })}
-            src={imageUrl}
-            alt="image Banner"
-          />
-          <BannerContent
-            title={title}
-            content={content}
-            button={{
-              label: button?.label,
-              variant: contentVariant ? "outlined" : "primary",
-              iconName: button?.iconName,
-            }}
-            contentVariant={contentVariant}
-            size={size}
-            position={position}
-            mobile={false}
-          />
-        </Aspect>
-      </div>
-      <div className="desktop:hidden tablet:hidden flex flex-col space-x-1 ">
+      <div className="lg:hidden md:hidden flex flex-col space-x-1 ">
         <div className="w-full h-full flex relative ">
-          <Aspect ratio={mobileRatio}>
+          <Aspect ratio="4/3">
             <img
               src={imageUrl}
               className="w-full h-full object-cover object-center"
@@ -84,12 +67,13 @@ const Banner: React.FC<BannerType> = (props: BannerType) => {
         <div>
           <BannerContent
             title={title}
-            content={content}
+            text={text}
             contentVariant="dark"
-            button={{
-              label: button?.label,
+            btn={{
+              id: btn?.id,
+              label: btn?.label,
               variant: "primary",
-              iconName: button?.iconName,
+              iconName: btn?.iconName,
             }}
           />
         </div>

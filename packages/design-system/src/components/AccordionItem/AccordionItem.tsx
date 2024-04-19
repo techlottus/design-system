@@ -1,26 +1,18 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Icon from "../Icon";
 import cn from "classnames";
 import { myhref } from "../helpers/myrefHelper";
-import {
-  AccordionContentType,
-  AccordionItemType,
-} from "../Types/Accordion.types";
 
-const AccordionItem: React.FC<AccordionItemType> = (
-  props: AccordionItemType
-) => {
+const AccordionItem = (props: any) => {
   const {
-    icon,
-    title,
-    text,
-    content,
-    className = "",
+    data,
+    ColorClass = "",
+    borderDownOn = false,
     onToggle,
     open,
-    expandAll = true,
+    titleClass = "",
+    oneItemOpen = false,
   } = props;
-
   const [isOpen, setOpen] = useState(false);
 
   const handleOnClick = () => {
@@ -31,31 +23,33 @@ const AccordionItem: React.FC<AccordionItemType> = (
   };
 
   return (
-    <div id="Accordion-item" className="font-headings">
+    <div id="Accordion-item" className="font-principal">
       <div
         id="accordion-item-title"
         className={cn(
-          "border border-surface-400 flex flex-1 items-start py-6 px-4 cursor-pointer border-b-0",
-          className,
-
+          ColorClass,
+          "border border-neutral-400 flex flex-1 items-start py-6 px-4 cursor-pointer",
           {
-            ["bg-surface-200"]: open || isOpen,
+            ["border-b-0"]: !borderDownOn,
+            ["bg-neutral-200"]: open || isOpen,
           }
         )}
-        onClick={!expandAll ? onToggle : handleOnClick}
+        onClick={oneItemOpen ? onToggle : handleOnClick}
       >
-        <span className="flex pr-4 text-surface-600">
-          <Icon iconName={icon?.iconName} />
+        <span className="flex pr-4 text-neutral-600">
+          <Icon {...data?.icon} />
         </span>
-        <span className={cn("flex w-full pr-4")}>{title}</span>
-        <span className={cn("flex pr-4 text-surface-600 cursor-pointer")}>
+        <span className={cn(titleClass, "flex w-full pr-4")}>
+          {data?.title}
+        </span>
+        <span className={cn("flex pr-4 text-neutral-600 cursor-pointer")}>
           <Icon
             iconName={
-              (expandAll && open) || isOpen ? "expand_less" : "expand_more"
+              (oneItemOpen && open) || isOpen ? "expand_less" : "expand_more"
             }
           />
         </span>
-        <span>{text}</span>
+        <span>{data?.text}</span>
       </div>
       <div
         id="accordeon-item-content"
@@ -63,11 +57,11 @@ const AccordionItem: React.FC<AccordionItemType> = (
           ["h-0 hidden"]: !open && !isOpen,
         })}
       >
-        {content?.map((item: AccordionContentType, index: number) => (
+        {data?.content.map((item: any, index: any) => (
           <div
             key={index}
             className={cn(
-              "flex px-4 border border-t-0 border-surface-400 py-2 items-center",
+              "flex px-4 border border-t-0 border-neutral-400 py-2 items-center",
               {
                 ["cursor-pointer"]: item?.link,
               }
@@ -75,21 +69,21 @@ const AccordionItem: React.FC<AccordionItemType> = (
             onClick={
               item.link
                 ? () => {
-                  myhref(item.link);
-                }
+                    myhref(item.link);
+                  }
                 : item.onClick
-                  ? item.onClick
-                  : () => { }
+                ? item.onClick
+                : () => {}
             }
           >
             <div className="w-full">{item?.text}</div>
             <div
               className={cn(
-                "text-surface-700 font-bold text-2xl flex items-start cursor-pointer",
-                { ["invisible"]: !item.icon }
+                "text-neutral-700 font-bold text-2xl leading-0 flex items-start cursor-pointer",
+                { ["invisible"]: !item.iconHoriz }
               )}
             >
-              <Icon {...icon} />
+              <Icon iconName="more_horiz" />
             </div>
           </div>
         ))}

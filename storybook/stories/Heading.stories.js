@@ -1,23 +1,32 @@
-import Heading from "../components/Heading";
-/** Heading is a component for use titles with the correct styles (font family, weight, size) for the different screens */
+import { Heading } from "@lottuseducation/design_system";
 export default {
-  title: "ATOMS/Heading",
+  title: "Heading",
   component: Heading,
   tags: ["autodocs"],
   args: {
-    variant: "h1",
+    title: "Demo Heading",
+    type: "h-1",
+    variant: "normal",
+    font: "principal",
     className: "",
-    as:""
   },
   argTypes: {
-    variant: {
-      options: ["h1", "h2","h3","h4","h5","h6"],
+    type: {
+      options: ["h-1", "h-2", "h-3", "h-4", "h-5", "h-6"],
       control: { type: "select" },
+    },
+    variant: {
+      options: ["normal", "primary", "negative"],
+      control: { type: "select" },
+    },
+    font: {
+      options: ["principal", "secondary"],
+      control: { type: "radio" },
     },
   },
 };
 
-const Template = (args) => <Heading {...args}>Heading example</Heading>;
+const Template = (args) => <Heading {...args} />;
 
 const Standard = Template.bind({});
 

@@ -1,7 +1,7 @@
 {
   "name": "@lottuseducation/tailwind-base",
-  "version": "0.1.0",
-  "description": "A set of overrides and extensions for TailwindCSS based on Lottus's Design System ",
+  "version": "1.1.0-alpha.0",
+  "description": "A set of overrides and extensions for TailwindCSS based on Lottus's Design System",
   "main": "lib/tailwind-base.js",
   "module": "lib/esm/tailwind-base.js",
   "esnext": "lib/esnext/tailwind-base.js",
@@ -24,15 +24,10 @@
     "lib": "lib"
   },
   "files": [
-    "lib/",
-    "src/scripts"
+    "lib/"
   ],
   "dependencies": {
     "tailwindcss": "^3.3.2"
-  },
-  "peerDependencies": {
-    "axios": "^1.2.2",
-    "dotenv": "^16.3.1"
   },
   "devDependencies": {
     "rimraf": "^3.0.2",
@@ -48,5 +43,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "851ee13752b6f3241e5693237fbac91928499b20"
+  "gitHead": "9aee86c05c5c90515ab4c6a9e92c6b39dd7d2d26"
 }

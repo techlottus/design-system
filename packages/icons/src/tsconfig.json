@@ -1,8 +1,0 @@
-{
-  "extends": "../../../config/tsconfig.base",
-  "compilerOptions": {
-    "outDir": "../lib/esm",
-    "allowJs": true,
-    "jsx": "react-jsx"
-  }
-}

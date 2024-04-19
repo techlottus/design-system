@@ -4,8 +4,6 @@
 
 ## Usage
 
-
-
 ```
 const tailwindBase = require('tailwind-base');
 

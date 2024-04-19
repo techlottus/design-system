@@ -1,12 +1,11 @@
 import { myhref } from "../helpers/myrefHelper";
 import cn from "classnames";
 import SVGIcons from "../assets/SVGIcons";
-import { SocialMediaConfig, socialMediaItem } from "../Types/SocialMedia.types";
-import React from "react";
+
 const smClass = cn("cursor-pointer ");
 
-const SocialMedia: React.FC<SocialMediaConfig> = (props: SocialMediaConfig) => {
-  const { className = "", socialMedia } = props;
+const SocialMedia = (props: any) => {
+  const { className = "", socialMedia, svgClass = "" } = props;
   return (
     <div
       className={cn(
@@ -14,7 +13,7 @@ const SocialMedia: React.FC<SocialMediaConfig> = (props: SocialMediaConfig) => {
         "flex px-10 py-10 w-full justify-center space-x-2 "
       )}
     >
-      {socialMedia?.map((sm: socialMediaItem, index: number) => (
+      {socialMedia?.map((sm: any, index: any) => (
         <div
           className={cn(smClass)}
           id={sm?.alt}
@@ -23,7 +22,7 @@ const SocialMedia: React.FC<SocialMediaConfig> = (props: SocialMediaConfig) => {
           }}
           key={index}
         >
-          <SVGIcons name={sm?.socialName} />
+          <SVGIcons name={sm?.socialName} className={svgClass} />
         </div>
       ))}
     </div>
