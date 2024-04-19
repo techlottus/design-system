@@ -19,9 +19,9 @@ const Template = () => {
 
   const handleToggle = (index) => {
     if (clicked === index) {
-      setClicked(0);
+      setClicked(100);      
     }
-    setClicked(index);
+    else {setClicked(index)}
   };
   return (
     <AccordionList>
@@ -82,9 +82,9 @@ const Template2 = () => {
 
   const handleToggle = (index) => {
     if (clicked === index) {
-      setClicked(0);
+      setClicked(100);      
     }
-    setClicked(index);
+    else {setClicked(index)}
   };
   return (
     <AccordionList>
@@ -131,7 +131,6 @@ const Template3 = () => {
       setClicked(100);      
     }
     else {setClicked(index)}
-    console.log("click",clicked)
   };
   return (
     <div className="flex-col space-y-2 p-1">
