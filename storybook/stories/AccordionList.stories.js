@@ -218,17 +218,17 @@ const Template4 = () => {
         </AccordionList.Button>
         <AccordionList.Panel className="border-0 p-0" open={clicked==0}>
           <ul>
-            <li className="flex justify-between border-b border-surface-300 last:border-0 p-2">
-              <span className="font-texts text-surface-300">Fundamentos de matemáticas</span><span className="font-icons-solid text-surface-300">more_horiz</span>
+            <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
+              <span className="font-texts text-surface-500">Fundamentos de matemáticas</span><span className="font-icons-solid text-surface-500">more_horiz</span>
             </li>
-            <li className="flex justify-between border-b border-surface-300 last:border-0 p-2">
-              <span className="font-texts text-surface-300">Teoría general de la Administración</span><span className="font-icons-solid text-surface-300">more_horiz</span>
+            <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
+              <span className="font-texts text-surface-500">Teoría general de la Administración</span><span className="font-icons-solid text-surface-500">more_horiz</span>
             </li>
-            <li className="flex justify-between border-b border-surface-300 last:border-0 p-2">
-              <span className="font-texts text-surface-300">Interpretación de textos y contextos</span><span className="font-icons-solid text-surface-300">more_horiz</span>
+            <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
+              <span className="font-texts text-surface-500">Interpretación de textos y contextos</span><span className="font-icons-solid text-surface-500">more_horiz</span>
             </li>
-            <li className="flex justify-between border-b border-surface-300 last:border-0 p-2">
-              <span className="font-texts text-surface-300">Economía genera</span><span className="font-icons-solid text-surface-300">more_horiz</span>
+            <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
+              <span className="font-texts text-surface-500">Economía genera</span><span className="font-icons-solid text-surface-500">more_horiz</span>
             </li>
           </ul>       
         </AccordionList.Panel>
@@ -241,17 +241,17 @@ const Template4 = () => {
         </AccordionList.Button>
         <AccordionList.Panel className="p-0 border-0" open={clicked==0}>
           <ul>
-            <li className="flex justify-between border-b border-surface-300 last:border-0 p-2">
-              <span className="font-texts text-surface-300">Fundamentos de matemáticas</span><span className="font-icons-solid text-surface-300">more_horiz</span>
+            <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
+              <span className="font-texts text-surface-500">Fundamentos de matemáticas</span><span className="font-icons-solid text-surface-500">more_horiz</span>
             </li>
-            <li className="flex justify-between border-b border-surface-300 last:border-0 p-2">
-              <span className="font-texts text-surface-300">Teoría general de la Administración</span><span className="font-icons-solid text-surface-300">more_horiz</span>
+            <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
+              <span className="font-texts text-surface-500">Teoría general de la Administración</span><span className="font-icons-solid text-surface-500">more_horiz</span>
             </li>
-            <li className="flex justify-between border-b border-surface-300 last:border-0 p-2">
-              <span className="font-texts text-surface-300">Interpretación de textos y contextos</span><span className="font-icons-solid text-surface-300">more_horiz</span>
+            <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
+              <span className="font-texts text-surface-500">Interpretación de textos y contextos</span><span className="font-icons-solid text-surface-500">more_horiz</span>
             </li>
-            <li className="flex justify-between border-b border-surface-300 last:border-0 p-2">
-              <span className="font-texts text-surface-300">Economía genera</span><span className="font-icons-solid text-surface-300">more_horiz</span>
+            <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
+              <span className="font-texts text-surface-500">Economía genera</span><span className="font-icons-solid text-surface-500">more_horiz</span>
             </li>
           </ul>       
         </AccordionList.Panel>
@@ -264,17 +264,17 @@ const Template4 = () => {
         </AccordionList.Button>
         <AccordionList.Panel className="p-0 border-0" open={clicked==0}>
           <ul>
-            <li className="flex justify-between border-b border-surface-300 last:border-0 p-2">
-              <span className="font-texts text-surface-300">Fundamentos de matemáticas</span><span className="font-icons-solid text-surface-300">more_horiz</span>
+            <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
+              <span className="font-texts text-surface-500">Fundamentos de matemáticas</span><span className="font-icons-solid text-surface-500">more_horiz</span>
             </li>
-            <li className="flex justify-between border-b border-surface-300 last:border-0 p-2">
-              <span className="font-texts text-surface-300">Teoría general de la Administración</span><span className="font-icons-solid text-surface-300">more_horiz</span>
+            <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
+              <span className="font-texts text-surface-500">Teoría general de la Administración</span><span className="font-icons-solid text-surface-500">more_horiz</span>
             </li>
-            <li className="flex justify-between border-b border-surface-300 last:border-0 p-2">
-              <span className="font-texts text-surface-300">Interpretación de textos y contextos</span><span className="font-icons-solid text-surface-300">more_horiz</span>
+            <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
+              <span className="font-texts text-surface-500">Interpretación de textos y contextos</span><span className="font-icons-solid text-surface-500">more_horiz</span>
             </li>
-            <li className="flex justify-between border-b border-surface-300 last:border-0 p-2">
-              <span className="font-texts text-surface-300">Economía genera</span><span className="font-icons-solid text-surface-300">more_horiz</span>
+            <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
+              <span className="font-texts text-surface-500">Economía genera</span><span className="font-icons-solid text-surface-500">more_horiz</span>
             </li>
           </ul>       
         </AccordionList.Panel>
