@@ -45,7 +45,7 @@ const Template = (args) => {
 const Template2 = (args) => {
   return (
     <Accordion>
-        <Accordion.Button    iconOpen={<span className="font-icons-solid text-lg order-1">expand_less </span>} iconClosed={<span className="font-icons-solid text-lg order-1">expand_more </span>} {...args}>
+        <Accordion.Button    iconOpen={<span className="font-icons-solid text-lg order-1 pr-1">expand_less </span>} iconClosed={<span className="font-icons-solid text-lg order-1 pr-1">expand_more </span>} {...args}>
        <div className="flex space-x-2.5  order-2 w-full"> <span className="font-bold font-texts">Title</span></div>
        <div className="flex space-x-2.5 order-last">
          <span className="font-texts">Text</span></div>
