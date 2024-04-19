@@ -1,20 +1,17 @@
-import { AspectType, PaddingsType } from "../Types/Aspect.types";
 import { calculateAspectRatioPercentage } from "../helpers/calculateAspectPer";
-import React from "react";
 
-const defaultRatioPercentage: string = "50%";
-const fractionRegex: RegExp = /([1-9][0-9]*(.[0-9]*)?)\/[1-9][0-9]*(.[0-9]*)?/g;
+const defaultRatioPercentage = "50%"; // 2:1
+const fractionRegex = /([1-9][0-9]*(.[0-9]*)?)\/[1-9][0-9]*(.[0-9]*)?/g;
 
-const Aspect: React.FC<AspectType> = (props: AspectType) => {
+const Aspect = (props: any) => {
   const { children, ratio = "1/2" } = props;
-
-  const aspectRatioPercentage: string = calculateAspectRatioPercentage(
+  const aspectRatioPercentage = calculateAspectRatioPercentage(
     ratio,
     fractionRegex,
     defaultRatioPercentage
   );
 
-  const paddingStyles: PaddingsType = {
+  const paddingStyles = {
     paddingTop: aspectRatioPercentage,
   };
   return (

@@ -3,40 +3,46 @@ import Extensions from "../Extensions";
 import cn from "classnames";
 import Button from "../Button";
 import { getTextCount } from "../helpers/textHelper";
-import {
-  LeaderboardType,
-  LeaderboardTypeVariants,
-} from "../Types/Leaderboard.types";
-import React from "react";
-const variants: LeaderboardTypeVariants = {
-  light: "text-surface-100",
-  dark: "text-surface-900",
+const defaultValues = {
+  imgUrl: "",
+  title: "",
+  variant: "dark",
+  links: {},
+};
+const variants: any = {
+  light: "text-neutral-100",
+  dark: "text-neutral-900",
 };
 
-const LeaderBoard: React.FC<LeaderboardType> = (props: LeaderboardType) => {
-  const { imageUrl, title = "", variant = "dark", links, button } = props;
+const LeaderBoard = (props: any) => {
+  const {
+    imgUrl = defaultValues.imgUrl,
+    title = defaultValues.title,
+    variant = defaultValues.variant,
+    links = defaultValues.links,
+    button,
+  } = props;
   return (
     <div
       className={cn(
-        "w-full tablet:h-52 h-64 text-sm tablet:text-base relative overflow-hidden",
-        [variants[variant]]
+        "w-full md:h-52 h-64 text-sm md:text-base relative overflow-hidden",
+        {
+          [variants[variant]]: true,
+        }
       )}
     >
-      <img
-        src={imageUrl}
-        className="w-full h-full object-cover object-center"
-      />
-      <div className="absolute top-0 left-0 p-10 tablet:px-20 tablet:py-12 w-full h-full flex flex-col ">
+      <img src={imgUrl} className="w-full h-full object-cover object-center" />
+      <div className="absolute top-0 left-0 p-10 md:px-20 md:py-12 w-full h-full flex flex-col ">
         <span className="pb-4">
           <Heading
             title={getTextCount(title, 61)}
-            variant="h-4"
+            type="h-4"
             font="principal"
           />
         </span>
         {button ? (
           <div>
-            <span className="flex flex-col space-y-4 font-headings">
+            <span className="flex flex-col space-y-4 font-principal">
               <span>
                 {" "}
                 <Extensions {...links?.[0]} />
@@ -47,12 +53,12 @@ const LeaderBoard: React.FC<LeaderboardType> = (props: LeaderboardType) => {
             </span>
           </div>
         ) : (
-          <div className="flex tablet:flex-row tablet:space-x-4 flex-col space-y-4 tablet:space-y-1">
-            <span className="flex flex-col space-y-4 font-headings">
+          <div className="flex md:flex-row md:space-x-4 flex-col max-[775px]:space-y-4">
+            <span className="flex flex-col space-y-4 font-principal">
               <Extensions {...links?.[0]} />
               <Extensions {...links?.[1]} />
             </span>
-            <span className="flex flex-col space-y-4 font-headings ">
+            <span className="flex flex-col space-y-4 font-principal ">
               <Extensions {...links?.[2]} />
               <Extensions {...links?.[3]} />
             </span>

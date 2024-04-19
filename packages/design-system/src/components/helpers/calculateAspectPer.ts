@@ -1,13 +1,13 @@
 export const calculateAspectRatioPercentage = (
-  ratio: string,
-  fractionRegex: RegExp,
-  defaultRatioPercentage: string
+  ratio: any,
+  fractionRegex: any,
+  defaultRatioPercentage: any
 ) => {
   const containsValidFraction = fractionRegex.test(ratio);
 
   if (containsValidFraction) {
     const fraction = ratio.match(fractionRegex)
-      ? ratio.match(fractionRegex)?.[0]
+      ? ratio.match(fractionRegex)[0]
       : false;
     const numerator = Number(fraction ? fraction.split("/")[0] : 1);
     const denominator = Number(fraction ? fraction.split("/")[1] : 0);

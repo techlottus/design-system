@@ -1,29 +1,42 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import AccordionItem from "../AccordionItem/AccordionItem";
-import { AccordionItemType, AccordionType } from "../Types/Accordion.types";
 
-const Accordion: React.FC<AccordionType> = (props: AccordionType) => {
-  const { items, expandAll = false } = props;
+const Accordion = (props: any) => {
+  const { itemsData, oneItemOpen = false } = props;
 
   const [clicked, setClicked] = useState(0);
 
-  const handleToggle = (index: number) => {
+  const handleToggle = (index: any) => {
     if (clicked === index) {
-      setClicked(0);
-      return;
+      return setClicked(0);
     }
     setClicked(index);
   };
 
-  return (
+  return oneItemOpen ? (
     <ul className="">
-      {items?.map((item: AccordionItemType, index: number) => (
-        <li key={index} className="last:border-b border-surface-400">
+      {itemsData.map((item: any, index: any) => (
+        <li key={index}>
           <AccordionItem
+            data={item?.data}
             onToggle={() => handleToggle(index)}
-            open={clicked === index && !expandAll}
-            expandAll={expandAll}
-            {...item}
+            open={clicked === index}
+            borderDownOn={item?.borderDownOn}
+            ColorClass={item?.ColorClass}
+            oneItemOpen={true}
+          />
+        </li>
+      ))}
+    </ul>
+  ) : (
+    <ul className="">
+      {itemsData.map((item: any, index: any) => (
+        <li key={index}>
+          <AccordionItem
+            data={item?.data}
+            borderDownOn={item?.borderDownOn}
+            ColorClass={item?.ColorClass}
+            oneItemOpen={false}
           />
         </li>
       ))}
