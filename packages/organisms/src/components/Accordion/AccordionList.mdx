@@ -10,12 +10,18 @@ It consists of a series of collapsible sections or panels, where only one sectio
 closed. Users can click on the header of each section to expand it and view its content, which helps conserve screen space and 
 facilitates navigation in interfaces with extensive content.
 
-Within the @lottuseducation/organisms library, the AccordionList component comprises the following elements : "AccordionList.Button","AccordionList.Panel".
-By leveraging these components, a multitude of distinct designs for AccordionList can be crafted.
+Within the @lottuseducation/organisms library, the AccordionList component comprises the following elements : "AccordionList.Item","AccordionList.Button","AccordionList.Panel".
 
-- AccordionList: the main container of the accordion component
-- AccordionList.Button: The element actionable that open/close the information panels
-- AccordionList.Panel: each content for button accordion.
+By leveraging these versatile components, an array of unique designs for the AccordionList can be created:
+
+- AccordionList: serves as the primary container for the accordion list component.
+-- Props:  className,children.
+- AccordionList.Item: acts as the primary container for each item within the accordion list component.
+-- Props: className, children, HTMLLIElement props
+- AccordionList.Button: provides an actionable element responsible for opening and closing information panels.
+-- Props: className,children, onClick, variant:"outlined"|"solid", open:boolean,
+- AccordionList.Panel: houses the content associated with each accordion button.
+-- Props: children: React.ReactNode, className: string, open:boolean
 
 ## Installation and import
 To integrate this component, we install the @lottuseducation/organisms library.
@@ -48,7 +54,7 @@ To incorporate the AccordionList component into your code, follow the structure 
 To add functionality it is necessary use an onclick function with a state as shown bellow:
 
 ``` 
-...
+...// use a clicked state to control active accordion items
   const [clicked, setClicked] = useState(20);
 
   const handleToggle = (index) => {
@@ -117,8 +123,7 @@ you can see the result in the example 1.
 
 ### FAQ example code
 
-Here we show an example case for a FAQ Section using AccordionList:
-
+Below, we present an illustrative example of a FAQ section implemented with the AccordionList:
 ```
  <div className="flex-col space-y-2 p-1">
      <h3 className="fonts-texts text-lg">Preguntas frecuentes</h3> 
@@ -179,6 +184,89 @@ Here we show an example case for a FAQ Section using AccordionList:
            nuestro centro participa en cursos de nivelación para cada área de oportunidad.
         </AccordionList.Panel>
       </AccordionList.Item>
+
+    </AccordionList>
+</div>
+```
+
+### The Accordion List, distinguished by various colors.
+
+Below is an example showcasing an accordion list with distinct border colors:
+
+```
+ <div className="flex-col space-y-2 p-1">
+     <h3 className="fonts-texts text-lg font-bold">Contenido del curso</h3> 
+    <AccordionList>
+      <AccordionList.Item >
+        <AccordionList.Button  open={clicked==0} className="flex justify-between border-primary-500 " variant="outlined" onClick={()=>handleToggle(0)}>
+          <div className="text-surface-400">Área curricular</div>
+          <div >
+            {(clicked==0)?<span className="font-icons-solid w-6 h-6 bg-primary-500 text-surface-50 rounded-full">expand_less</span>:<span className="font-icons-solid w-6 h-6 bg-primary-500 text-surface-50 rounded-full">expand_more</span>}</div>
+        </AccordionList.Button>
+        <AccordionList.Panel className="border-x-0 border-b-0 py-0 px-0" open={clicked==0}>
+          <ul>
+            <li className="flex justify-between border-b border-surface-500  p-2">
+              <span className="font-texts text-surface-500">Fundamentos de matemáticas</span><span className="font-icons-solid text-surface-500">more_horiz</span>
+            </li>
+            <li className="flex justify-between border-b border-surface-500  p-2">
+              <span className="font-texts text-surface-500">Teoría general de la Administración</span><span className="font-icons-solid text-surface-500">more_horiz</span>
+            </li>
+            <li className="flex justify-between border-b border-surface-500  p-2">
+              <span className="font-texts text-surface-500">Interpretación de textos y contextos</span><span className="font-icons-solid text-surface-500">more_horiz</span>
+            </li>
+            <li className="flex justify-between border-b border-surface-500  p-2">
+              <span className="font-texts text-surface-500">Economía genera</span><span className="font-icons-solid text-surface-500">more_horiz</span>
+            </li>
+          </ul>       
+        </AccordionList.Panel>
+      </AccordionList.Item>
+      <AccordionList.Item >
+        <AccordionList.Button  open={clicked==1} className="flex justify-between border-warning-500 " variant="outlined" onClick={()=>handleToggle(1)}>
+          <div className="text-surface-400">Área disicplinar</div>
+          <div >
+            {(clicked==1)?<span className="font-icons-solid w-6 h-6 bg-warning-500 text-surface-50 rounded-full">expand_less</span>:<span className="font-icons-solid w-6 h-6 bg-warning-500 text-surface-50 rounded-full">expand_more</span>}</div>
+        </AccordionList.Button>
+        <AccordionList.Panel className="border-x-0 border-b-0 py-0 px-0" open={clicked==1}>
+          <ul>
+            <li className="flex justify-between border-b border-surface-500  p-2">
+              <span className="font-texts text-surface-500">Fundamentos de matemáticas</span><span className="font-icons-solid text-surface-500">more_horiz</span>
+            </li>
+            <li className="flex justify-between border-b border-surface-500  p-2">
+              <span className="font-texts text-surface-500">Teoría general de la Administración</span><span className="font-icons-solid text-surface-500">more_horiz</span>
+            </li>
+            <li className="flex justify-between border-b border-surface-500  p-2">
+              <span className="font-texts text-surface-500">Interpretación de textos y contextos</span><span className="font-icons-solid text-surface-500">more_horiz</span>
+            </li>
+            <li className="flex justify-between border-b border-surface-500  p-2">
+              <span className="font-texts text-surface-500">Economía genera</span><span className="font-icons-solid text-surface-500">more_horiz</span>
+            </li>
+          </ul>       
+        </AccordionList.Panel>
+      </AccordionList.Item>
+      <AccordionList.Item >
+        <AccordionList.Button  open={clicked==2} className="flex justify-between border-info-500 " variant="outlined" onClick={()=>handleToggle(2)}>
+          <div className="text-surface-400">Área profesional</div>
+          <div >
+            {(clicked==2)?<span className="font-icons-solid w-6 h-6 bg-info-500 text-surface-50 rounded-full">expand_less</span>:<span className="font-icons-solid w-6 h-6 bg-info-500 text-surface-50 rounded-full">expand_more</span>}</div>
+        </AccordionList.Button>
+        <AccordionList.Panel className="border-x-0 border-b-0 py-0 px-0" open={clicked==2}>
+          <ul>
+            <li className="flex justify-between border-b border-surface-500  p-2">
+              <span className="font-texts text-surface-500">Fundamentos de matemáticas</span><span className="font-icons-solid text-surface-500">more_horiz</span>
+            </li>
+            <li className="flex justify-between border-b border-surface-500  p-2">
+              <span className="font-texts text-surface-500">Teoría general de la Administración</span><span className="font-icons-solid text-surface-500">more_horiz</span>
+            </li>
+            <li className="flex justify-between border-b border-surface-500  p-2">
+              <span className="font-texts text-surface-500">Interpretación de textos y contextos</span><span className="font-icons-solid text-surface-500">more_horiz</span>
+            </li>
+            <li className="flex justify-between border-b border-surface-500  p-2">
+              <span className="font-texts text-surface-500">Economía genera</span><span className="font-icons-solid text-surface-500">more_horiz</span>
+            </li>
+          </ul>       
+        </AccordionList.Panel>
+      </AccordionList.Item>
+
 
     </AccordionList>
 </div>

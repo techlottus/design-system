@@ -2,10 +2,10 @@ import cn from "classnames"
 import { AccordionListType , ButtonType, ElementType, ItemType} from '../Types/Accordion.types';
 
 const AccordionList:AccordionListType = (props:AccordionListType)=>{
-  const {children}= props;
+  const {children,className}= props;
  
   return(
-    <div className='flex-col mobile:h-10 '>
+    <div className={cn('flex-col mobile:h-10 ',className)}>
       <ul className="space-y-2">
         {children}
       </ul>
@@ -15,10 +15,10 @@ const AccordionList:AccordionListType = (props:AccordionListType)=>{
 }
 
 const  Item = (props:ItemType )=> {
-  const {children,className,index}=props;
+  const {children,className}=props;
 
   return (
-      <li className={cn('',className)} key={index}>
+      <li className={cn('',className)} >
          {children}     
       </li>
   )

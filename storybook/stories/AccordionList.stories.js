@@ -12,6 +12,9 @@ export default {
       page: mdx,
     },
   },
+  args:{
+    
+  }
 };
 
 const Template = () => {
@@ -218,16 +221,16 @@ const Template4 = () => {
         </AccordionList.Button>
         <AccordionList.Panel className="border-x-0 border-b-0 py-0 px-0" open={clicked==0}>
           <ul>
-            <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
+            <li className="flex justify-between border-b border-surface-500  p-2">
               <span className="font-texts text-surface-500">Fundamentos de matemáticas</span><span className="font-icons-solid text-surface-500">more_horiz</span>
             </li>
-            <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
+            <li className="flex justify-between border-b border-surface-500  p-2">
               <span className="font-texts text-surface-500">Teoría general de la Administración</span><span className="font-icons-solid text-surface-500">more_horiz</span>
             </li>
-            <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
+            <li className="flex justify-between border-b border-surface-500  p-2">
               <span className="font-texts text-surface-500">Interpretación de textos y contextos</span><span className="font-icons-solid text-surface-500">more_horiz</span>
             </li>
-            <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
+            <li className="flex justify-between border-b border-surface-500  p-2">
               <span className="font-texts text-surface-500">Economía genera</span><span className="font-icons-solid text-surface-500">more_horiz</span>
             </li>
           </ul>       
@@ -241,16 +244,16 @@ const Template4 = () => {
         </AccordionList.Button>
         <AccordionList.Panel className="border-x-0 border-b-0 py-0 px-0" open={clicked==1}>
           <ul>
-            <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
+            <li className="flex justify-between border-b border-surface-500  p-2">
               <span className="font-texts text-surface-500">Fundamentos de matemáticas</span><span className="font-icons-solid text-surface-500">more_horiz</span>
             </li>
-            <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
+            <li className="flex justify-between border-b border-surface-500  p-2">
               <span className="font-texts text-surface-500">Teoría general de la Administración</span><span className="font-icons-solid text-surface-500">more_horiz</span>
             </li>
-            <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
+            <li className="flex justify-between border-b border-surface-500  p-2">
               <span className="font-texts text-surface-500">Interpretación de textos y contextos</span><span className="font-icons-solid text-surface-500">more_horiz</span>
             </li>
-            <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
+            <li className="flex justify-between border-b border-surface-500  p-2">
               <span className="font-texts text-surface-500">Economía genera</span><span className="font-icons-solid text-surface-500">more_horiz</span>
             </li>
           </ul>       
@@ -264,16 +267,16 @@ const Template4 = () => {
         </AccordionList.Button>
         <AccordionList.Panel className="border-x-0 border-b-0 py-0 px-0" open={clicked==2}>
           <ul>
-            <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
+            <li className="flex justify-between border-b border-surface-500  p-2">
               <span className="font-texts text-surface-500">Fundamentos de matemáticas</span><span className="font-icons-solid text-surface-500">more_horiz</span>
             </li>
-            <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
+            <li className="flex justify-between border-b border-surface-500  p-2">
               <span className="font-texts text-surface-500">Teoría general de la Administración</span><span className="font-icons-solid text-surface-500">more_horiz</span>
             </li>
-            <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
+            <li className="flex justify-between border-b border-surface-500  p-2">
               <span className="font-texts text-surface-500">Interpretación de textos y contextos</span><span className="font-icons-solid text-surface-500">more_horiz</span>
             </li>
-            <li className="flex justify-between border-b border-surface-500 last:border-0 p-2">
+            <li className="flex justify-between border-b border-surface-500  p-2">
               <span className="font-texts text-surface-500">Economía genera</span><span className="font-icons-solid text-surface-500">more_horiz</span>
             </li>
           </ul>       
