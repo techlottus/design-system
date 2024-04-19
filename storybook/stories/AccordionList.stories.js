@@ -128,10 +128,10 @@ const Template3 = () => {
 
   const handleToggle = (index) => {
     if (clicked === index) {
-      setClicked(100);
-      console.log("same",clicked)
+      setClicked(100);      
     }
-    else setClicked(index);
+    else {setClicked(index)}
+    console.log("click",clicked)
   };
   return (
     <div className="flex-col space-y-2 p-1">
