@@ -197,10 +197,99 @@ const Template3 = () => {
 </div>
   )
 };
+const Template4 = () => {
+  const [clicked, setClicked] = useState(20);
+
+  const handleToggle = (index) => {
+    if (clicked === index) {
+      setClicked(100);      
+    }
+    else {setClicked(index)}
+  };
+  return (
+    <div className="flex-col space-y-2 p-1">
+     <h3 className="fonts-texts text-lg font-bold">Contenido del curso</h3> 
+    <AccordionList>
+      <AccordionList.Item >
+        <AccordionList.Button  open={clicked==0} className="flex justify-between border-primary-500 " variant="outlined" onClick={()=>handleToggle(0)}>
+          <div className="text-surface-400">Área curricular</div>
+          <div >
+            {(clicked==0)?<span className="font-icons-solid w-6 h-6 bg-primary-500 text-surface-50">expand_less</span>:<span className="font-icons-solid w-6 h-6 bg-primary-500 text-surface-50">expand_more</span>}</div>
+        </AccordionList.Button>
+        <AccordionList.Panel className="border-0" open={clicked==0}>
+          <ul>
+            <li className="border-b border-surface-300 last:border-0 p-2">
+              <span className="font-texts text-surface-300">Fundamentos de matemáticas</span><span className="font-icons-solid text-surface-300">more_horiz</span>
+            </li>
+            <li className="border-b border-surface-300 last:border-0 p-2">
+              <span className="font-texts text-surface-300">Teoría general de la Administración</span><span className="font-icons-solid text-surface-300">more_horiz</span>
+            </li>
+            <li className="border-b border-surface-300 last:border-0 p-2">
+              <span className="font-texts text-surface-300">Interpretación de textos y contextos</span><span className="font-icons-solid text-surface-300">more_horiz</span>
+            </li>
+            <li className="border-b border-surface-300 last:border-0 p-2">
+              <span className="font-texts text-surface-300">Economía genera</span><span className="font-icons-solid text-surface-300">more_horiz</span>
+            </li>
+          </ul>       
+        </AccordionList.Panel>
+      </AccordionList.Item>
+      <AccordionList.Item >
+        <AccordionList.Button  open={clicked==0} className="flex justify-between border-warning-500 " variant="outlined" onClick={()=>handleToggle(0)}>
+          <div className="text-surface-400">Área disicplinar</div>
+          <div >
+            {(clicked==0)?<span className="font-icons-solid w-6 h-6 bg-warning-500 text-surface-50">expand_less</span>:<span className="font-icons-solid w-6 h-6 bg-warning-500 text-surface-50">expand_more</span>}</div>
+        </AccordionList.Button>
+        <AccordionList.Panel className="border-0" open={clicked==0}>
+          <ul>
+            <li className="border-b border-surface-300 last:border-0 p-2">
+              <span className="font-texts text-surface-300">Fundamentos de matemáticas</span><span className="font-icons-solid text-surface-300">more_horiz</span>
+            </li>
+            <li className="border-b border-surface-300 last:border-0 p-2">
+              <span className="font-texts text-surface-300">Teoría general de la Administración</span><span className="font-icons-solid text-surface-300">more_horiz</span>
+            </li>
+            <li className="border-b border-surface-300 last:border-0 p-2">
+              <span className="font-texts text-surface-300">Interpretación de textos y contextos</span><span className="font-icons-solid text-surface-300">more_horiz</span>
+            </li>
+            <li className="border-b border-surface-300 last:border-0 p-2">
+              <span className="font-texts text-surface-300">Economía genera</span><span className="font-icons-solid text-surface-300">more_horiz</span>
+            </li>
+          </ul>       
+        </AccordionList.Panel>
+      </AccordionList.Item>
+      <AccordionList.Item >
+        <AccordionList.Button  open={clicked==0} className="flex justify-between border-info-500 " variant="outlined" onClick={()=>handleToggle(0)}>
+          <div className="text-surface-400">Área profesional</div>
+          <div >
+            {(clicked==0)?<span className="font-icons-solid w-6 h-6 bg-info-500 text-surface-50">expand_less</span>:<span className="font-icons-solid w-6 h-6 bg-info-500 text-surface-50">expand_more</span>}</div>
+        </AccordionList.Button>
+        <AccordionList.Panel className="border-0" open={clicked==0}>
+          <ul>
+            <li className="border-b border-surface-300 last:border-0 p-2">
+              <span className="font-texts text-surface-300">Fundamentos de matemáticas</span><span className="font-icons-solid text-surface-300">more_horiz</span>
+            </li>
+            <li className="border-b border-surface-300 last:border-0 p-2">
+              <span className="font-texts text-surface-300">Teoría general de la Administración</span><span className="font-icons-solid text-surface-300">more_horiz</span>
+            </li>
+            <li className="border-b border-surface-300 last:border-0 p-2">
+              <span className="font-texts text-surface-300">Interpretación de textos y contextos</span><span className="font-icons-solid text-surface-300">more_horiz</span>
+            </li>
+            <li className="border-b border-surface-300 last:border-0 p-2">
+              <span className="font-texts text-surface-300">Economía genera</span><span className="font-icons-solid text-surface-300">more_horiz</span>
+            </li>
+          </ul>       
+        </AccordionList.Panel>
+      </AccordionList.Item>
+
+
+    </AccordionList>
+</div>
+  )
+};
 
 
 const AccordionExample = Template.bind();
 const AccordionExample2 = Template2.bind();
 const AccordionFAQ = Template3.bind();
+const AccordionCursos = Template4.bind();
 
-export { AccordionExample, AccordionExample2,AccordionFAQ};
+export { AccordionExample, AccordionExample2,AccordionFAQ,AccordionCursos};
