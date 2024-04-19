@@ -1,0 +1,51 @@
+import { Meta, Preview } from '@storybook/blocks';
+import SelectChip from './SelectChip'
+import RadioButtonActive from './RadioButtonActive/RadioButtonActive'
+import RadioButtonDefault from './RadioButtonDefault/RadioButtonDefault'
+
+<Meta title="MDX|SelectChip" component={SelectChip} />
+
+# SelectChip
+
+A radio button is used to select a single option from a list of multiple option.
+
+## Installation
+
+To begin, start the installation process of Headless UI using npm.
+
+`npm install @headlessui/react`
+
+Here are one examples showcasing the use cases for the SelectChip and its functionality:
+
+## SelectChip
+
+SelectChips are constructed using the RadioGroup and RadioGroup.Option components.
+
+Select an option by clicking on it, and when the SelectChip is focused, click again to uncheck the option.
+
+ <SelectChip
+            iconActive={<RadioButtonActive />}
+            iconInactive={<RadioButtonDefault />}
+            className="border-success-500 w-24"
+            active={true}
+            label="Label"
+        />
+```
+ <div className="w-full px-1 grid grid-cols-12">
+    <div className="col-span-5">
+        <RadioGroup>
+            <RadioGroup.Option value={active} onClick={() => setActive(!active)} className="flex bg-surface-100 w-24 h-9 cursor-pointer border-2 border-success-600 rounded py-1.5">
+                <>
+                    {active ?
+                        <RadioButtonActive size="sm" className="!ms-2 !me-3 my-auto fill-success-600" />
+                        : <RadioButtonDefault size="sm" className="!ms-2 !me-3 my-auto" />
+                    }
+                    <span className={active ? 'bg-surface-100' : ''}>Label</span>
+                </>
+            </RadioGroup.Option>
+        </RadioGroup>
+    </div>
+</div>
+``` 
+
+For further details, please visit <a className="cursor-pointer" href="https://headlessui.com/" target="_blank">https://headlessui.com/</a>
