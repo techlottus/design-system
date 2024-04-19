@@ -214,7 +214,7 @@ const Template4 = () => {
         <AccordionList.Button  open={clicked==0} className="flex justify-between border-primary-500 " variant="outlined" onClick={()=>handleToggle(0)}>
           <div className="text-surface-400">Área curricular</div>
           <div >
-            {(clicked==0)?<span className="font-icons-solid w-6 h-6 bg-primary-500 text-surface-50">expand_less</span>:<span className="font-icons-solid w-6 h-6 bg-primary-500 text-surface-50">expand_more</span>}</div>
+            {(clicked==0)?<span className="font-icons-solid w-6 h-6 bg-primary-500 text-surface-50 rounded-full">expand_less</span>:<span className="font-icons-solid w-6 h-6 bg-primary-500 text-surface-50 rounded-full">expand_more</span>}</div>
         </AccordionList.Button>
         <AccordionList.Panel className="border-0 p-0" open={clicked==0}>
           <ul>
@@ -237,7 +237,7 @@ const Template4 = () => {
         <AccordionList.Button  open={clicked==0} className="flex justify-between border-warning-500 " variant="outlined" onClick={()=>handleToggle(0)}>
           <div className="text-surface-400">Área disicplinar</div>
           <div >
-            {(clicked==0)?<span className="font-icons-solid w-6 h-6 bg-warning-500 text-surface-50">expand_less</span>:<span className="font-icons-solid w-6 h-6 bg-warning-500 text-surface-50">expand_more</span>}</div>
+            {(clicked==0)?<span className="font-icons-solid w-6 h-6 bg-warning-500 text-surface-50 rounded-full">expand_less</span>:<span className="font-icons-solid w-6 h-6 bg-warning-500 text-surface-50 rounded-full">expand_more</span>}</div>
         </AccordionList.Button>
         <AccordionList.Panel className="p-0 border-0" open={clicked==0}>
           <ul>
@@ -260,7 +260,7 @@ const Template4 = () => {
         <AccordionList.Button  open={clicked==0} className="flex justify-between border-info-500 " variant="outlined" onClick={()=>handleToggle(0)}>
           <div className="text-surface-400">Área profesional</div>
           <div >
-            {(clicked==0)?<span className="font-icons-solid w-6 h-6 bg-info-500 text-surface-50">expand_less</span>:<span className="font-icons-solid w-6 h-6 bg-info-500 text-surface-50">expand_more</span>}</div>
+            {(clicked==0)?<span className="font-icons-solid w-6 h-6 bg-info-500 text-surface-50 rounded-full">expand_less</span>:<span className="font-icons-solid w-6 h-6 bg-info-500 text-surface-50 rounded-full">expand_more</span>}</div>
         </AccordionList.Button>
         <AccordionList.Panel className="p-0 border-0" open={clicked==0}>
           <ul>
