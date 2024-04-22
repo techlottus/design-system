@@ -12,9 +12,9 @@ const TextArea: TextAreaType = (props: TextAreaType) => {
 
   return (
     <div>
-      <div className=" flex space-x-2.5">
+      <div className=" flex space-x-2.5 rounded py-2.5 pl-3 pr-2 border has-[:active]:border-surface-600 has-[:focus]:border-surface-600">
      
-        <textarea className={cn("py-2.5 pl-3 pr-2 resize-none block w-full text-base rounded overflow-y-scroll border active:border-surface-600 focus:border-surface-600  order-2",{
+        <textarea className={cn(" resize-none block w-full text-base  overflow-y-scroll  order-2",{
           "bg-surface-100": variant === "flat"
         })} placeholder={placeholder} {...restProps}>
         </textarea>
