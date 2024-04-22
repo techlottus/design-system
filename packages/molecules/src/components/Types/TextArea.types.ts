@@ -1,4 +1,6 @@
-export type  TextAreaType ={
+import { TextareaHTMLAttributes } from "react";
+
+export interface TextAreaType extends TextareaHTMLAttributes<HTMLTextAreaElement>{
     variant?: "outline" | "flat";
     placeholder?:string;
     children?: React.ReactNode;
