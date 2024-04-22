@@ -13,7 +13,7 @@ const TextArea: TextAreaType = (props: TextAreaType) => {
 
   return (
     <div>
-      <div tabIndex={0} className={cn("flex py-2 pr-2 space-x-2  focus-within:border-surface-600 ",{["border rounded"]:variant==="outline",["border-b rounded-t bg-surface-100"]:variant==="flat",["px-2"]:!children})}>
+      <div tabIndex={0} className={cn("flex py-2 pr-2 space-x-2",{["border rounded"]:variant==="outline",["border-b rounded-t bg-surface-100"]:variant==="flat",["px-2"]:!children,["focus-within:border-surface-600 "]:!disabled})}>
         <textarea className={cn("resize-none block w-full text-base overflow-y-auto outline-none",{
          ["bg-surface-100"]: variant === "flat",["pl-2"]:children, ["text-surface-300 pointer-events-none"]:disabled,
         })} placeholder={placeholder} {...restProps}>
