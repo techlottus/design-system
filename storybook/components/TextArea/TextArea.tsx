@@ -31,11 +31,14 @@ const RightElement= (props: ElementType) =>{
   </div>
 );
 } 
-const LeftElement = ({ children,className }: ElementType) => (
-  <div className={cn("absolute top-0 start-0 flex items-center pointer-events-none p-3",className)}>
+const LeftElement= (props: ElementType) =>{
+  const { children,className } = props;
+  return(
+    <div className={cn("absolute top-0 start-0 flex items-center pointer-events-none p-3",className)}>
     {children}
   </div>
 );
+} 
 
 TextArea.RightElement = RightElement;
 TextArea.LeftElement = LeftElement;
