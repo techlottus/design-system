@@ -66,3 +66,37 @@ You can customize it by adding elements to left or right side, or by adding clas
 <TextArea.LeftElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">people</span></TextArea.LeftElement>
 </TextArea>
 }
+
+To disable styles only add disabled=true in props:
+
+```
+<TextArea placeholder="placeholder" className="h-20" disabled>
+<RightElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6">people</span></RightElement>
+</TextArea>
+
+```
+
+{
+  <TextArea placeholder="placeholder" className="h-20" disabled>
+<TextArea.RightElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">favorite</span></TextArea.RightElement>
+<TextArea.LeftElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">people</span></TextArea.LeftElement>
+</TextArea>
+}
+
+### Variants 
+
+By defautl TextArea component shows outlined variant but you can change for flat variant:
+
+```
+<TextArea placeholder="placeholder" className="h-20" variant="flat">
+<RightElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6">people</span></RightElement>
+</TextArea>
+
+```
+
+{
+  <TextArea placeholder="placeholder" className="h-20" variant="flat">
+<TextArea.RightElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">favorite</span></TextArea.RightElement>
+<TextArea.LeftElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">people</span></TextArea.LeftElement>
+</TextArea>
+}

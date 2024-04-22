@@ -12,7 +12,8 @@ export default {
   },
   args: {
     placeholder: "Placeholder",
-    variant: "outlined"
+    variant: "outlined",
+    disabled:false
   },
   argTypes:{
     variant: {
