@@ -12,12 +12,12 @@ export default {
   },
   args: {
     placeholder: "Placeholder",
-    variant: "outlined",
+    variant: "outline",
     disabled:false
   },
   argTypes:{
     variant: {
-      options: ["outlined", "flat"],
+      options: ["outline", "flat"],
       control: { type: "select" },
     },
   }
