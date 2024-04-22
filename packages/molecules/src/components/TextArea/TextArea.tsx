@@ -13,11 +13,11 @@ const TextArea: TextAreaType = (props: TextAreaType) => {
   return (
     <div>
       <div className=" flex space-x-2.5">
-        <div>
-        <textarea className={cn("py-2.5 pl-3 pr-2 resize-none block w-full text-base rounded overflow-y-scroll border active:border-surface-600 focus:border-surface-600 ",{
+     
+        <textarea className={cn("py-2.5 pl-3 pr-2 resize-none block w-full text-base rounded overflow-y-scroll border active:border-surface-600 focus:border-surface-600  order-2",{
           "bg-surface-100": variant === "flat"
         })} placeholder={placeholder} {...restProps}>
-        </textarea></div>
+        </textarea>
         {children}
       </div>
     </div>
@@ -27,7 +27,7 @@ const TextArea: TextAreaType = (props: TextAreaType) => {
 const RightElement= (props: ElementType) =>{
   const { children,className } = props;
   return(
-    <div className={cn(" flex items-center pointer-events-none p-3 order-1",className)}>
+    <div className={cn(" flex items-center pointer-events-none p-3 order-first",className)}>
     {children}
   </div>
 );
