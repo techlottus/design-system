@@ -13,4 +13,4 @@ export type InputGroupType = {
   LeftElement?: React.FC<ElementType>;
 } & IInput;
 export type InputContainerType={children?: React.ReactNode, className: string, isValid?:boolean | null, disabled?:boolean}
-export type ElementType = { children?: React.ReactNode, className: string }
+export type ElementType = { children?: React.ReactNode, className?: string }

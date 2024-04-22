@@ -1,0 +1,52 @@
+import { Meta, Preview } from '@storybook/blocks';
+import TextArea from './TextArea'
+
+
+<Meta title="MDX|TextArea" component = { TextArea } />
+
+# TextArea
+
+The Textarea component is designed to enable users to input multiple lines of text and larger content, 
+in contrast to the Input Text component. Depending on the content, the component may automatically expand or remain fixed.
+
+It is primarily utilized in web forms, allowing users to input comments, notes, descriptions, and more.
+
+Within the @lottuseducation/molecules library, the TextArea component comprises the following optional elements : 
+"TextArea.LeftElement","TextArea.RightElement". By leveraging these components, a multitude of 
+distinct designs for TextArea can be crafted.
+
+- TextArea: The primary component that encompasses all elements within the TextArea.
+  - props: variant:"outlined"| "flat", children: reactNode, HTMLTextAreaElement props.
+- TextArea.LeftElement: Contains the children for the left side of the TextArea.
+- TextArea.RightElement: Contains the children for the Right side of the TextArea.
+
+## Installation and import
+
+To integrate this component, we leverage the @lottuseducation/molecules library. This library seamlessly combines unstyled
+yet fully accessible UI components into our projects, meticulously designed to complement Tailwind CSS integration.
+
+To get started, initiate the installation of @lottuseducation/molecules via npm:
+
+```
+   npm install @lottuseducation/molecules
+```
+
+
+After installing the library, you can import the component into your project as follows:
+
+`import TextArea from "@lottuseducation/molecules"`
+
+## Usage
+
+To incorporate the TextArea component into your code, follow the structure demonstrated below:
+
+```
+<TextArea placeholder="placeholder" className="h-20">
+</TextArea>
+
+```
+
+{
+  <TextArea placeholder="placeholder" className="h-20">
+</TextArea>
+}
