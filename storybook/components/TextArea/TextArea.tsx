@@ -13,7 +13,7 @@ const TextArea: TextAreaType = (props: TextAreaType) => {
   return (
     <div>
       <div className="relative">
-        <textarea className={cn("py-3 resize-none block w-full text-base rounded overflow-y-scroll border active:border-surface-950 focus:border-surface-900",{
+        <textarea className={cn("py-2.5 pl-3 pr-2 resize-none block w-full text-base rounded overflow-y-scroll border active:border-surface-950 focus:border-surface-900 ",{
           "bg-surface-100": variant === "flat"
         })} placeholder={placeholder} {...restProps}>
         </textarea>
