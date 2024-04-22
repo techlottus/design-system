@@ -12,10 +12,9 @@ const TextArea: TextAreaType = (props: TextAreaType) => {
 
   return (
     <div>
-      <div className=" flex space-x-2.5 rounded p-3 border has-[:active]:border-surface-600 has-[:focus]:border-surface-600">
-     
-        <textarea className={cn(" resize-none block w-full text-base  overflow-y-scroll  order-2",{
-          "bg-surface-100": variant === "flat"
+      <div tabIndex={0} className="flex p-2 border focus-within:border-surface-600 rounded">
+        <textarea className={cn("resize-none block w-full text-base overflow-y-scroll",{
+         ["bg-surface-100"]: variant === "flat",
         })} placeholder={placeholder} {...restProps}>
         </textarea>
         {children}
@@ -27,7 +26,7 @@ const TextArea: TextAreaType = (props: TextAreaType) => {
 const RightElement= (props: ElementType) =>{
   const { children,className } = props;
   return(
-    <div className={cn(" flex pointer-events-none order-first justify-center",className)}>
+    <div className={cn(" flex justify-center pointer-events-none order-last",className)}>
     {children}
   </div>
 );
@@ -35,7 +34,7 @@ const RightElement= (props: ElementType) =>{
 const LeftElement= (props: ElementType) =>{
   const { children,className } = props;
   return(
-    <div className={cn(" flex pointer-events-none  order-last justify-center",className)}>
+    <div className={cn(" flex justify-center pointer-events-none order-first",className)}>
     {children}
   </div>
 );
