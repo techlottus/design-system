@@ -3,7 +3,7 @@ import cn from "classnames";
 
 const TextArea: TextAreaType = (props: TextAreaType) => {
   const {
-    variant="outlined",
+    variant="outline",
     disabled=false,
     placeholder="",
     children,
