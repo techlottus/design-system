@@ -41,12 +41,28 @@ After installing the library, you can import the component into your project as 
 To incorporate the TextArea component into your code, follow the structure demonstrated below:
 
 ```
-<TextArea placeholder="placeholder" className="h-20">
+<TextArea placeholder="placeholder">
 </TextArea>
 
 ```
 
 {
   <TextArea placeholder="placeholder">
+</TextArea>
+}
+
+You can customize it by adding elements to left or right side, or by adding classes:
+
+```
+<TextArea placeholder="placeholder" className="h-20">
+<RightElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6">people</span></RightElement>
+</TextArea>
+
+```
+
+{
+  <TextArea placeholder="placeholder" className="h-20">
+<RightElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6">favorite</span></RightElement>
+<LeftElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6">people</span></LeftElement>
 </TextArea>
 }
