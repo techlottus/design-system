@@ -12,7 +12,7 @@ const TextArea: TextAreaType = (props: TextAreaType) => {
 
   return (
     <div>
-      <div className="relative">
+      <div className=" flex">
         <textarea className={cn("py-2.5 pl-3 pr-2 resize-none block w-full text-base rounded overflow-y-scroll border active:border-surface-600 focus:border-surface-600 ",{
           "bg-surface-100": variant === "flat"
         })} placeholder={placeholder} {...restProps}>
@@ -26,7 +26,7 @@ const TextArea: TextAreaType = (props: TextAreaType) => {
 const RightElement= (props: ElementType) =>{
   const { children,className } = props;
   return(
-    <div className={cn("absolute top-0 right-0 flex items-center pointer-events-none p-3",className)}>
+    <div className={cn(" flex items-center pointer-events-none p-3 order-1",className)}>
     {children}
   </div>
 );
@@ -34,7 +34,7 @@ const RightElement= (props: ElementType) =>{
 const LeftElement= (props: ElementType) =>{
   const { children,className } = props;
   return(
-    <div className={cn("absolute top-0 start-0 flex items-center pointer-events-none p-3",className)}>
+    <div className={cn(" flex items-center pointer-events-none p-3 order-last",className)}>
     {children}
   </div>
 );
