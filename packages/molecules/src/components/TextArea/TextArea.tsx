@@ -14,7 +14,7 @@ const TextArea: TextAreaType = (props: TextAreaType) => {
     <div>
       <div tabIndex={0} className="flex p-2 space-x-2 border focus-within:border-surface-600 rounded">
         <textarea className={cn("resize-none block w-full text-base overflow-y-auto outline-none",{
-         ["bg-surface-100"]: variant === "flat",
+         ["bg-surface-100"]: variant === "flat",["pl-2"]:children
         })} placeholder={placeholder} {...restProps}>
         </textarea>
         {children}
