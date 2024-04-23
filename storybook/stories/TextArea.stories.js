@@ -34,7 +34,7 @@ const ChildrensExample = (args) => (
 );
 const ErrorExample = (args) => (
   <div className="flex-col">
-  <TextArea className="border-b-error-500" {...args}><TextArea.RightElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">favorite</span></TextArea.RightElement>
+  <TextArea error {...args}><TextArea.RightElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">favorite</span></TextArea.RightElement>
   <TextArea.LeftElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">people</span></TextArea.LeftElement>
   </TextArea>
   <div className="flex justify-between"><span className="font-text text-error-500">Error text help</span> <span className="font-text text-surface-400">0/100</span></div>

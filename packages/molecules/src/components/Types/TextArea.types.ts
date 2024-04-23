@@ -2,6 +2,7 @@ import { TextareaHTMLAttributes } from "react";
 
 export interface TextAreaType extends TextareaHTMLAttributes<HTMLTextAreaElement>{
     variant?: "outline" | "flat";
+    error?:boolean;
     placeholder?:string;
     disabled?:boolean;
     children?: React.ReactNode;
