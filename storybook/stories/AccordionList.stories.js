@@ -300,7 +300,7 @@ const Template5 = () => {
      <h3 className="fonts-texts text-lg">Preguntas frecuentes</h3> 
     <AccordionList className="space-y-0">
       <AccordionList.Item >
-        <AccordionList.Button  open={clicked==0} className="flex justify-between " variant="solid" onClick={()=>handleToggle(0)}>
+        <AccordionList.Button  open={clicked==0} className="flex justify-between border-surface-300 rounded-none" variant="outlined" onClick={()=>handleToggle(0)}>
           <div><span className="font-texts">¿Cuándo inician mis clases?</span></div>
           <div >
             {(clicked==0)?<span className="font-icons-solid">expand_less</span>:<span className="font-icons-solid">expand_more</span>}</div>
@@ -314,7 +314,7 @@ const Template5 = () => {
         </AccordionList.Panel>
       </AccordionList.Item>
       <AccordionList.Item >
-        <AccordionList.Button  open={clicked==1} className="flex justify-between " variant="solid" onClick={()=>handleToggle(1)}>
+        <AccordionList.Button  open={clicked==1} className="flex justify-between border-surface-300 rounded-none" variant="outlined" onClick={()=>handleToggle(1)}>
           <div><span className="font-texts">¿Cuál navegador es el indicado para acceder la aula virtual ? </span></div>
           <div >
             {(clicked==1)?<span className="font-icons-solid">expand_less</span>:<span className="font-icons-solid">expand_more</span>}</div>
@@ -328,7 +328,7 @@ const Template5 = () => {
         </AccordionList.Panel>
       </AccordionList.Item>
       <AccordionList.Item >
-        <AccordionList.Button  open={clicked==2} className="flex justify-between " variant="solid" onClick={()=>handleToggle(2)}>
+        <AccordionList.Button  open={clicked==2} className="flex justify-between border-surface-300 rounded-none" variant="outlined" onClick={()=>handleToggle(2)}>
           <div><span className="font-texts">¿Hay una fecha límite para entregar mis actividades?, ¿Dónde puedo consultarla? </span></div>
           <div >
             {(clicked==2)?<span className="font-icons-solid">expand_less</span>:<span className="font-icons-solid">expand_more</span>}</div>
@@ -342,7 +342,7 @@ const Template5 = () => {
         </AccordionList.Panel>
       </AccordionList.Item>
       <AccordionList.Item >
-        <AccordionList.Button  open={clicked==3} className="flex justify-between " variant="solid" onClick={()=>handleToggle(3)}>
+        <AccordionList.Button  open={clicked==3} className="flex justify-between border-surface-300 rounded-none" variant="outlined" onClick={()=>handleToggle(3)}>
           <div><span className="font-texts">Tuve un problema con un profesor ¿Qué puedo hacer?  </span></div>
           <div >
             {(clicked==3)?<span className="font-icons-solid">expand_less</span>:<span className="font-icons-solid">expand_more</span>}</div>
