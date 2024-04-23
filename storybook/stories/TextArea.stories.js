@@ -38,7 +38,7 @@ const ErrorExample = (args) => (
   <TextArea error  {...args}><TextArea.RightElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">favorite</span></TextArea.RightElement>
   <TextArea.LeftElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">people</span></TextArea.LeftElement>
   </TextArea>
-  <div className="flex justify-between"><span className="font-text text-error-500">Error text help</span> <span className="font-text text-surface-400">0/100</span></div>
+  <div className="flex justify-between text-sm"><span className="font-text text-error-500">Error text help</span> <span className="font-text text-surface-400">0/100</span></div>
 </div>
 );
 const TextFieldExample = (args) => (
@@ -47,7 +47,7 @@ const TextFieldExample = (args) => (
   <TextArea error  {...args}><TextArea.RightElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">favorite</span></TextArea.RightElement>
   <TextArea.LeftElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">people</span></TextArea.LeftElement>
   </TextArea>
-  <div className="flex justify-between"><span className="font-text text-error-500">Text help</span> <span className="font-text text-surface-400">0/100</span></div>
+  <div className="flex justify-between text-sm"><span className="font-text text-error-500">Text help</span> <span className="font-text text-surface-400">0/100</span></div>
 </div>
 );
 
