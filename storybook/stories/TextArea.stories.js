@@ -23,46 +23,28 @@ export default {
   }
 };
 
-// const examples = (args) => (
-//   <table className="border border-primary-500 w-full">
-//     <thead className="bg-primary-400 text-surface-100">
-//       <tr className="font-principal  font-bold">
-//         <td className="pl-2">Only placeholder</td>
-//         <td className="pl-2">Flat variant</td>
-//         <td className="pl-2">Placeholder and children</td>
-//         <td className="pl-2">TextField</td>
-//       </tr>
 
-//     </thead>
-//     <tbody>
-//       <tr className="">
-//         <td className="p-2">
-//           <TextArea {...args}></TextArea>
-//         </td>
-//         <td className="p-2">
-//           <TextArea {...args} variant="flat"></TextArea>
-//         </td>
-//         <td className="p-2">
-//           <TextArea {...args}>
-//             <p className="material-icons">person</p>
-//           </TextArea>
-//         </td>
-//         <td className="p-2">
-//           <TextArea {...args} textField="textField">
-//             <p className="material-icons">person</p>
-//           </TextArea>
-//         </td>
-//       </tr>
-//     </tbody>
-
-
-//   </table>
-// );
 const standar = (args) => (
   <TextArea {...args}></TextArea>
 );
+const ChildrensExample = (args) => (
+  <TextArea {...args}><TextArea.RightElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">favorite</span></TextArea.RightElement>
+  <TextArea.LeftElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">people</span></TextArea.LeftElement>
+  </TextArea>
+);
+const ErrorExample = (args) => (
+  <div className="flex-col">
+  <TextArea className="border-b-error-500" {...args}><TextArea.RightElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">favorite</span></TextArea.RightElement>
+  <TextArea.LeftElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">people</span></TextArea.LeftElement>
+  </TextArea>
+  <div className="flex justify-between"><span className="font-text text-error-500">Error text help</span> <span className="font-text text-surface-400">0/100</span></div>
+</div>
+);
+
+
 
 const Standar = standar.bind({});
-// const Examples = examples.bind({});
+const ExampleElements = ChildrensExample.bind({});
+const ExampleError = ErrorExample.bind({});
 
-export { Standar };
+export { Standar , ExampleElements, ExampleError};
