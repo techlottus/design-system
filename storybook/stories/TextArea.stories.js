@@ -56,5 +56,6 @@ const TextFieldExample = (args) => (
 const Standar = standar.bind({});
 const ExampleElements = ChildrensExample.bind({});
 const ExampleError = ErrorExample.bind({});
+const ExampleTextField = TextFieldExample.bind({});
 
-export { Standar , ExampleElements, ExampleError};
+export { Standar , ExampleElements, ExampleError, ExampleTextField};
