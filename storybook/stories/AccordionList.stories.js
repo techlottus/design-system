@@ -27,7 +27,7 @@ const Template = () => {
     else {setClicked(index)}
   };
   return (
-    <AccordionList>
+    <AccordionList className="space-y-1">
       <AccordionList.Item >
         <AccordionList.Button  
         open={clicked==0} 
@@ -90,7 +90,7 @@ const Template2 = () => {
     else {setClicked(index)}
   };
   return (
-    <AccordionList>
+    <AccordionList className="space-y-1">
       <AccordionList.Item >
         <AccordionList.Button  open={clicked==0} className="flex justify-between " variant="solid" onClick={()=>handleToggle(0)}>
           <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
@@ -138,7 +138,7 @@ const Template3 = () => {
   return (
     <div className="flex-col space-y-2 p-1">
      <h3 className="fonts-texts text-lg">Preguntas frecuentes</h3> 
-    <AccordionList>
+    <AccordionList className="space-y-1">
       <AccordionList.Item >
         <AccordionList.Button  open={clicked==0} className="flex justify-between " variant="solid" onClick={()=>handleToggle(0)}>
           <div><span className="font-texts">¿Cuándo inician mis clases?</span></div>
@@ -212,7 +212,7 @@ const Template4 = () => {
   return (
     <div className="flex-col space-y-2 p-1">
      <h3 className="fonts-texts text-lg font-bold">Contenido del curso</h3> 
-    <AccordionList>
+    <AccordionList className="space-y-1">
       <AccordionList.Item >
         <AccordionList.Button  open={clicked==0} className="flex justify-between border-primary-500 " variant="outlined" onClick={()=>handleToggle(0)}>
           <div className="text-surface-400">Área curricular</div>
@@ -282,17 +282,89 @@ const Template4 = () => {
           </ul>       
         </AccordionList.Panel>
       </AccordionList.Item>
+    </AccordionList>
+</div>
+  )
+};
+const Template5 = () => {
+  const [clicked, setClicked] = useState(20);
 
+  const handleToggle = (index) => {
+    if (clicked === index) {
+      setClicked(100);      
+    }
+    else {setClicked(index)}
+  };
+  return (
+    <div className="flex-col space-y-2 p-1">
+     <h3 className="fonts-texts text-lg">Preguntas frecuentes</h3> 
+    <AccordionList className="space-y-0">
+      <AccordionList.Item >
+        <AccordionList.Button  open={clicked==0} className="flex justify-between " variant="solid" onClick={()=>handleToggle(0)}>
+          <div><span className="font-texts">¿Cuándo inician mis clases?</span></div>
+          <div >
+            {(clicked==0)?<span className="font-icons-solid">expand_less</span>:<span className="font-icons-solid">expand_more</span>}</div>
+        </AccordionList.Button>
+        <AccordionList.Panel open={clicked==0}>
+        Consideramos que todo aquél o aquella que haya terminado con éxito sus estudios de educación media superior,
+         tiene derecho a acceder a la educación superior, por lo cual no realizamos exámenes de admisión. Sin embargo, 
+         todos los alumnos de nuevo ingreso deben realizar una evaluación diagnóstica. Este diagnóstico nos permite identificar
+          las áreas de oportunidad en los ámbitos de la lógica matemática y en español. Una vez que el alumno logra la permanencia en
+           nuestro centro participa en cursos de nivelación para cada área de oportunidad.
+        </AccordionList.Panel>
+      </AccordionList.Item>
+      <AccordionList.Item >
+        <AccordionList.Button  open={clicked==1} className="flex justify-between " variant="solid" onClick={()=>handleToggle(1)}>
+          <div><span className="font-texts">¿Cuál navegador es el indicado para acceder la aula virtual ? </span></div>
+          <div >
+            {(clicked==1)?<span className="font-icons-solid">expand_less</span>:<span className="font-icons-solid">expand_more</span>}</div>
+        </AccordionList.Button>
+        <AccordionList.Panel open={clicked==1}>
+        Consideramos que todo aquél o aquella que haya terminado con éxito sus estudios de educación media superior,
+         tiene derecho a acceder a la educación superior, por lo cual no realizamos exámenes de admisión. Sin embargo, 
+         todos los alumnos de nuevo ingreso deben realizar una evaluación diagnóstica. Este diagnóstico nos permite identificar
+          las áreas de oportunidad en los ámbitos de la lógica matemática y en español. Una vez que el alumno logra la permanencia en
+           nuestro centro participa en cursos de nivelación para cada área de oportunidad.
+        </AccordionList.Panel>
+      </AccordionList.Item>
+      <AccordionList.Item >
+        <AccordionList.Button  open={clicked==2} className="flex justify-between " variant="solid" onClick={()=>handleToggle(2)}>
+          <div><span className="font-texts">¿Hay una fecha límite para entregar mis actividades?, ¿Dónde puedo consultarla? </span></div>
+          <div >
+            {(clicked==2)?<span className="font-icons-solid">expand_less</span>:<span className="font-icons-solid">expand_more</span>}</div>
+        </AccordionList.Button>
+        <AccordionList.Panel open={clicked==2}>
+        Consideramos que todo aquél o aquella que haya terminado con éxito sus estudios de educación media superior,
+         tiene derecho a acceder a la educación superior, por lo cual no realizamos exámenes de admisión. Sin embargo, 
+         todos los alumnos de nuevo ingreso deben realizar una evaluación diagnóstica. Este diagnóstico nos permite identificar
+          las áreas de oportunidad en los ámbitos de la lógica matemática y en español. Una vez que el alumno logra la permanencia en
+           nuestro centro participa en cursos de nivelación para cada área de oportunidad.
+        </AccordionList.Panel>
+      </AccordionList.Item>
+      <AccordionList.Item >
+        <AccordionList.Button  open={clicked==3} className="flex justify-between " variant="solid" onClick={()=>handleToggle(3)}>
+          <div><span className="font-texts">Tuve un problema con un profesor ¿Qué puedo hacer?  </span></div>
+          <div >
+            {(clicked==3)?<span className="font-icons-solid">expand_less</span>:<span className="font-icons-solid">expand_more</span>}</div>
+        </AccordionList.Button>
+        <AccordionList.Panel open={clicked==3}>
+        Consideramos que todo aquél o aquella que haya terminado con éxito sus estudios de educación media superior,
+         tiene derecho a acceder a la educación superior, por lo cual no realizamos exámenes de admisión. Sin embargo, 
+         todos los alumnos de nuevo ingreso deben realizar una evaluación diagnóstica. Este diagnóstico nos permite identificar
+          las áreas de oportunidad en los ámbitos de la lógica matemática y en español. Una vez que el alumno logra la permanencia en
+           nuestro centro participa en cursos de nivelación para cada área de oportunidad.
+        </AccordionList.Panel>
+      </AccordionList.Item>
 
     </AccordionList>
 </div>
   )
 };
 
-
 const AccordionExample = Template.bind();
 const AccordionExample2 = Template2.bind();
 const AccordionFAQ = Template3.bind();
+const AccordionFAQ2 = Template5.bind();
 const AccordionCursos = Template4.bind();
 
-export { AccordionExample, AccordionExample2,AccordionFAQ,AccordionCursos};
+export { AccordionExample, AccordionExample2,AccordionFAQ,AccordionFAQ2,AccordionCursos};
