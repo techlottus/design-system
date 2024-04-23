@@ -109,7 +109,7 @@ By defautl TextArea component shows outlined variant but you can change for flat
  For error messages you only add the error prop:
 
 ```
-  <div className="flex-col space-y-2.5">
+  <div className="flex-col space-y-2">
   <TextArea error ><TextArea.RightElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">favorite</span></TextArea.RightElement>
   <TextArea.LeftElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">people</span></TextArea.LeftElement>
   </TextArea>
@@ -118,8 +118,8 @@ By defautl TextArea component shows outlined variant but you can change for flat
 ```
 
 {
-  <div className="flex-col space-y-2.5">
-  <TextArea error ><TextArea.RightElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">favorite</span></TextArea.RightElement>
+  <div className="flex-col space-y-2">
+  <TextArea error placeholder="Comentarios" ><TextArea.RightElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">favorite</span></TextArea.RightElement>
   <TextArea.LeftElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">people</span></TextArea.LeftElement>
   </TextArea>
   <div className="flex justify-between text-sm"><span className="font-text text-error-500 text-sm">Error text help</span> <span className="font-text text-surface-400">0/100</span></div>
