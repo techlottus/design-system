@@ -6,7 +6,7 @@ module.exports = {
   important:true,
   content: [
     "./stories/**/*.stories.{js,jsx,ts,tsx}",
-    "./components/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx,mdx}",
     "./RadioGroup/**/*.{js,jsx,ts,tsx,mdx}",
     "./../packages/**/*.{js,jsx,ts,tsx,mdx}"
   ],

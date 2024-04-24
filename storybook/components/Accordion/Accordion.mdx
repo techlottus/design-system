@@ -1,0 +1,110 @@
+import { Meta, Preview } from '@storybook/blocks';
+import Accordion from './Accordion'
+
+<Meta title="MDX|Accordion" component = { Accordion } />
+
+# Accordion
+
+The "Accordion" component is a user interface element designed to efficiently organize and present content
+ in a condensed format. It comprises collapsible sections, enabling users to expand them by clicking on their headers 
+ to reveal content. This feature not only conserves screen real estate but also streamlines navigation, particularly in
+  interfaces housing extensive content.
+
+Within the @lottuseducation/organisms library, the Accordion component comprises the following elements : "Accordion.Button","Accordion.Panel".
+By leveraging these components, a multitude of distinct designs for Accordion can be crafted.
+
+* Accordion: the main container of the accordion component
+  * Props: children, as="div".
+* Accordion.Button: The element actionable that open/close the information panels
+  * Props:children, className, iconOpen, iconClosed, variant="solid"
+* Accordion.Panel: each content for button accordion.
+  * Props: children, className
+
+## Installation and import
+To integrate this component, we install the @lottuseducation/organisms library.
+This library seamlessly combines unstyled yet fully accessible UI components into our projects,
+ meticulously designed to complement Tailwind CSS integration.
+
+To get started, initiate the installation of @lottuseducation/organisms via npm:
+
+  ``` npm install @lottuseducation/organisms ```
+After installing the library, you can import the component into your project as follows:
+
+```import Accordion from "@lottuseducation/organisms" ```
+
+## Usage
+
+To incorporate the Accordion component into your code, follow the structure demonstrated below:
+
+```
+<Accordion>
+ <Accordion.Button>Accordion button</Accordion.Button>
+ <Accordion.Panel>Accordion Panel</Accordion.Panel>
+</Accordion>
+```
+The previous example showcases the simplest usage of the Accordion component, utilizing default props and rendering
+ an Accordion as illustrated below:
+{
+<Accordion>
+ <Accordion.Button>Accordion button</Accordion.Button>
+ <Accordion.Panel>Accordion Panel</Accordion.Panel>
+</Accordion>
+}
+
+### Props iconClosed and iconOpen
+
+You can add icons to open and close states with the props iconClose and iconOpen as shown below:
+```
+<Accordion>
+     <Accordion.Button className="flex justify-between border-surface-200" iconOpen={<span className="font-icons-solid text-lg order-12">open </span>} iconClosed={<span className="font-icons-solid text-lg order-12">close </span>}>
+       <div className="flex space-x-2.5  order-1 w-full"><span className="font-icons-outlined text-lg text-surface-300">person</span> <span className="font-bold font-texts">Title</span></div>
+       <div className="flex space-x-2.5 order-last">
+         <span className="font-texts">Text</span></div>
+     </Accordion.Button>
+     <Accordion.Panel>
+       Panel
+     </Accordion.Panel>
+   </Accordion>
+```
+
+{
+  <Accordion>
+     <Accordion.Button variant="solid" className="flex justify-between border-surface-200" iconOpen={<span className="font-icons-solid text-lg order-12">open </span>} iconClosed={<span className="font-icons-solid text-lg order-12">close </span>}>
+       <div className="flex space-x-2.5  order-1 w-full"><span className="font-bold font-texts">Title</span></div>
+       <div className="flex space-x-2.5 order-last">
+         <span className="font-texts">Text</span></div>
+     </Accordion.Button>
+     <Accordion.Panel>
+       Panel
+     </Accordion.Panel>
+   </Accordion>
+}
+
+### Props variant
+
+By default variant is seted to "solid" but you can change by "outlined" variant:
+```
+<Accordion>
+     <Accordion.Button variant="outlined" className="flex justify-between border-primary-500" iconOpen={<span className="font-icons-solid text-lg order-12">iconopen </span>} iconClosed={<span className="font-icons-solid text-lg order-12">iconclose </span>}>
+       <div className="flex space-x-2.5  order-1 w-full"><span className="font-bold font-texts">Title</span></div>
+       <div className="flex space-x-2.5 order-last">
+         <span className="font-texts">Text</span></div>
+     </Accordion.Button>
+     <Accordion.Panel>
+       Panel
+     </Accordion.Panel>
+   </Accordion>
+```
+
+{
+  <Accordion>
+     <Accordion.Button variant="outlined" className="flex justify-between border-primary-500" iconOpen={<span className="font-icons-solid text-lg order-12">open </span>} iconClosed={<span className="font-icons-solid text-lg order-12">close </span>}>
+       <div className="flex space-x-2.5  order-1 w-full"> <span className="font-bold font-texts">Title</span></div>
+       <div className="flex space-x-2.5 order-last">
+         <span className="font-texts">Text</span></div>
+     </Accordion.Button>
+     <Accordion.Panel>
+       Panel
+     </Accordion.Panel>
+   </Accordion>
+}
