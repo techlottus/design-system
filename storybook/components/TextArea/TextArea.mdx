@@ -1,0 +1,133 @@
+import { Meta, Preview } from '@storybook/blocks';
+import TextArea from './TextArea'
+
+
+<Meta title="MDX|TextArea" component = { TextArea } />
+
+# TextArea
+
+The Textarea component is designed to enable users to input multiple lines of text and larger content, 
+in contrast to the Input Text component. Depending on the content, the component may automatically expand or remain fixed.
+
+It is primarily utilized in web forms, allowing users to input comments, notes, descriptions, and more.
+
+Within the @lottuseducation/molecules library, the TextArea component comprises the following optional elements : 
+"TextArea.LeftElement","TextArea.RightElement". By leveraging these components, a multitude of 
+distinct designs for TextArea can be crafted.
+
+- TextArea: The primary component that encompasses all elements within the TextArea.
+  - props: variant:"outlined"| "flat", children: reactNode, HTMLTextAreaElement props.
+- TextArea.LeftElement: Contains the children for the left side of the TextArea.
+- TextArea.RightElement: Contains the children for the Right side of the TextArea.
+
+## Installation and import
+
+To integrate this component, we leverage the @lottuseducation/molecules library. This library seamlessly combines unstyled
+yet fully accessible UI components into our projects, meticulously designed to complement Tailwind CSS integration.
+
+To get started, initiate the installation of @lottuseducation/molecules via npm:
+
+```
+   npm install @lottuseducation/molecules
+```
+
+
+After installing the library, you can import the component into your project as follows:
+
+`import TextArea from "@lottuseducation/molecules"`
+
+## Usage
+
+To incorporate the TextArea component into your code, follow the structure demonstrated below:
+
+```
+<TextArea placeholder="placeholder">
+</TextArea>
+
+```
+
+{
+  <TextArea placeholder="placeholder">
+</TextArea>
+}
+
+## Side elements
+
+You can customize it by adding elements to left or right side, or by adding classes:
+
+```
+<TextArea placeholder="placeholder" className="h-20">
+<TextArea.RightElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">favorite</span></TextArea.RightElement>
+<TextArea.LeftElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">people</span></TextArea.LeftElement>
+</TextArea>
+
+```
+
+{
+  <TextArea placeholder="placeholder" className="h-20">
+<TextArea.RightElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">favorite</span></TextArea.RightElement>
+<TextArea.LeftElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">people</span></TextArea.LeftElement>
+</TextArea>
+}
+
+
+## Disabled styles
+
+To disable styles only add disabled=true in props:
+
+```
+ <TextArea placeholder="placeholder" className="h-20" disabled>
+<TextArea.RightElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">favorite</span></TextArea.RightElement>
+<TextArea.LeftElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">people</span></TextArea.LeftElement>
+</TextArea>
+
+```
+
+{
+  <TextArea placeholder="placeholder" className="h-20" disabled>
+<TextArea.RightElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">favorite</span></TextArea.RightElement>
+<TextArea.LeftElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">people</span></TextArea.LeftElement>
+</TextArea>
+}
+
+## Variants 
+
+By defautl TextArea component shows outlined variant but you can change for flat variant:
+
+```
+ <TextArea placeholder="placeholder" className="h-20" variant="flat">
+<TextArea.RightElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">favorite</span></TextArea.RightElement>
+<TextArea.LeftElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">people</span></TextArea.LeftElement>
+</TextArea>
+
+```
+
+{
+  <TextArea placeholder="placeholder" className="h-20" variant="flat">
+<TextArea.RightElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">favorite</span></TextArea.RightElement>
+<TextArea.LeftElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">people</span></TextArea.LeftElement>
+</TextArea>
+}
+
+
+## Error styles
+ For error messages you only add the error prop:
+
+```
+  <div className="flex-col space-y-2">
+  <TextArea error ><TextArea.RightElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">favorite</span></TextArea.RightElement>
+  <TextArea.LeftElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">people</span></TextArea.LeftElement>
+  </TextArea>
+  <div className="flex justify-between text-sm"><span className="font-text text-error-500">Error text help</span> <span className="font-text text-surface-400">0/100</span></div>
+</div>
+```
+
+{
+  <div className="flex-col space-y-2">
+  <TextArea error placeholder="Comentarios" ><TextArea.RightElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">favorite</span></TextArea.RightElement>
+  <TextArea.LeftElement><span className="font-icons-solid text-surface-300 text-lg h-6 w-6 text-center">people</span></TextArea.LeftElement>
+  </TextArea>
+  <div className="flex justify-between text-sm"><span className="font-text text-error-500 text-sm">Error text help</span> <span className="font-text text-surface-400">0/100</span></div>
+</div>
+
+}
