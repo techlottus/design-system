@@ -1,39 +1,43 @@
-import { useState, Fragment } from 'react'
 import { Listbox } from '@headlessui/react'
+import { ButtonType, OptionType, SelectOptionsType, SelectType } from '../Types/Select.types';
 
-const people = [
-  { id: 1, name: 'Durward Reynolds' },
-  { id: 2, name: 'Kenton Towne' },
-  { id: 3, name: 'Therese Wunsch' },
-  { id: 4, name: 'Benedict Kessler' },
-  { id: 5, name: 'Katelyn Rohan' },
-]
 
-const Select = ()=> {
-  const [selectedPerson, setSelectedPerson] = useState(people[0])
 
+const Select:SelectType = (props:SelectType)=> {
+  const {value,onChange,children,className,...restProps}=props;
   return (
-    <Listbox value={selectedPerson} onChange={setSelectedPerson}>
-      <Listbox.Button>{selectedPerson.name}</Listbox.Button>
-      <Listbox.Options>
-        {people.map((person) => (
-          /* Use the `active` state to conditionally style the active option. */
-          /* Use the `selected` state to conditionally style the selected option. */
-          <Listbox.Option key={person.id} value={person} as={Fragment}>
-            {({ active, selected }) => (
-              <li
-                className={`${
-                  active ? 'bg-blue-500 text-white' : 'bg-white text-black'
-                }`}
-              >
-                {selected && <span className='font-icons-solid text-lg '>checked</span>}
-                {person.name}
-              </li>
-            )}
-          </Listbox.Option>
-        ))}
-      </Listbox.Options>
+    <Listbox className={className} value={value} onChange={onChange} {...restProps}>
+   {children}
     </Listbox>
   )
 }
+
+const Button = (props:ButtonType) =>{
+  const { children,className} =props;
+  return (
+    <Listbox.Button className={className}>{children}</Listbox.Button>
+  )
+}
+
+const Options = (props:SelectOptionsType)=> {
+  const {children, className="", ...restProps}=props;
+  return (
+    <Listbox.Options className={className} {...restProps}>
+   {children}
+    </Listbox.Options>
+  )
+}
+
+const Option = (props:OptionType) =>{
+  const {className="", children,disabled=false, as='div',value} =props;
+  return (
+    <Listbox.Option className={className} disabled={disabled} as={as} value={value} >
+      {children}
+    </Listbox.Option>
+  )
+}
+
+Select.Button = Button;
+Select.Options = Options;
+Select.Option = Option;
 export default Select;
