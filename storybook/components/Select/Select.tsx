@@ -40,4 +40,5 @@ const Option = (props:OptionType) =>{
 Select.Button = Button;
 Select.Options = Options;
 Select.Option = Option;
+
 export default Select;
