@@ -1,5 +1,6 @@
 import { Listbox } from '@headlessui/react'
 import { ButtonType, OptionType, SelectOptionsType, SelectType } from '../Types/Select.types';
+import cn from "classnames"
 
 
 
@@ -13,9 +14,9 @@ const Select:SelectType = (props:SelectType)=> {
 }
 
 const Button = (props:ButtonType) =>{
-  const { children,className} =props;
+  const { children,className,placeholder} =props;
   return (
-    <Listbox.Button className={className}>{children}</Listbox.Button>
+    <Listbox.Button placeholder={placeholder} className={cn("px-3 py-2.5 border border-surface-300 rounded flex",className)}>{children}<span className='order-last font-icons-solid text-lg text-center p-2 rounded-s-none rounded-e bg-surface-300'>expand_more</span></Listbox.Button>
   )
 }
 

@@ -28,6 +28,7 @@ export type ButtonType = {
   children?: React.ReactNode;
   className?:string;
   disabled?:boolean;
+  placeholder?:string;
 }
 
 export type OptionType = {

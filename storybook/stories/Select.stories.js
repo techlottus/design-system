@@ -26,7 +26,7 @@ const standar = () => {
   
     return (
       <Select value={selectedPerson} onChange={setSelectedPerson}>
-        <Select.Button>{selectedPerson.name}</Select.Button>
+        <Select.Button placeholder="Label">{selectedPerson.name}</Select.Button>
         <Select.Options>
           {people.map((person) => (
             <Select.Option
