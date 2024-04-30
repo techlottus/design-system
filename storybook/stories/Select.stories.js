@@ -22,7 +22,7 @@ const standar = () => {
     { id: 5, name: 'Katelyn Rohan', unavailable: false },
   ]
   
-    const [selectedPerson, setSelectedPerson] = useState()
+    const [selectedPerson, setSelectedPerson] = useState("")
   
     return (
       <Select value={selectedPerson} onChange={setSelectedPerson}>
