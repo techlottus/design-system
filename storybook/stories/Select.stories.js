@@ -10,16 +10,10 @@ export default {
       page: mdx,
     },
   },
-  args: {
-
-  },
-  argTypes:{
-
-  }
 };
 
 
-const standar = (args) => {
+const standar = () => {
   const people = [
     { id: 1, name: 'Durward Reynolds', unavailable: false },
     { id: 2, name: 'Kenton Towne', unavailable: false },
