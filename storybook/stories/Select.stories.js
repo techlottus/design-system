@@ -25,10 +25,10 @@ const standar = () => {
     const [selectedPerson, setSelectedPerson] = useState("Name")
   
     return (
-      <div className="w-10">
+      <div className="w-52">
       <Select value={selectedPerson} onChange={setSelectedPerson}>
-        <Select.Button className="w-10">{selectedPerson.name}</Select.Button>
-        <Select.Options className="w-10">
+        <Select.Button >{selectedPerson.name}</Select.Button>
+        <Select.Options >
           {people.map((person) => (
             <Select.Option
               key={person.id}
