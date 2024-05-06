@@ -10,10 +10,13 @@ export default {
       page: mdx,
     },
   },
+  args: {
+    disabled:false,
+  },
 };
 
 
-const standar = () => {
+const standar = (args) => {
   const people = [
     { id: 1, name: 'Durward Reynolds', unavailable: false },
     { id: 2, name: 'Kenton Towne', unavailable: false },
@@ -26,8 +29,8 @@ const standar = () => {
   
     return (
       <div className="w-52">
-      <Select value={selectedPerson} onChange={setSelectedPerson}>
-        <Select.Button >{selectedPerson.name}</Select.Button>
+      <Select value={selectedPerson} onChange={setSelectedPerson} >
+        <Select.Button {...args} >{selectedPerson.name}</Select.Button>
         <Select.Options  className="h-40">
           {people.map((person) => (
             <Select.Option
