@@ -16,7 +16,7 @@ const Select:SelectType = (props:SelectType)=> {
 const Button = (props:ButtonType) =>{
   const { children,className,placeholder} =props;
   return (
-    <Listbox.Button placeholder={placeholder} className={cn("border border-surface-300 rounded flex focus:border-surface-500 h-10 w-full",className)}><div className='py-2.5 px-2'>{children}</div><span className='order-last font-icons-solid text-lg text-center h-10 p-2 rounded-s-none rounded-e bg-surface-300 focus-visible:border-surface-500'>expand_more</span></Listbox.Button>
+    <Listbox.Button placeholder={placeholder} className={cn("border border-surface-300 rounded flex focus:border-surface-500 h-10 w-full justify-between",className)}><div className='py-2.5 px-2'>{children}</div><span className='order-last font-icons-solid text-lg text-center h-10 p-2 rounded-s-none rounded-e bg-surface-100 focus-visible:border-surface-500'>expand_more</span></Listbox.Button>
   )
 }
 
@@ -32,7 +32,7 @@ const Options = (props:SelectOptionsType)=> {
 const Option = (props:OptionType) =>{
   const {className="", children,disabled=false, as='div',value} =props;
   return (
-    <Listbox.Option className={cn("font-texts p-3 hover:bg-surface-200",className)} disabled={disabled} as={as} value={value} >
+    <Listbox.Option className={cn("font-texts p-3 hover:bg-surface-100",className)} disabled={disabled} as={as} value={value} >
       {children}
     </Listbox.Option>
   )
