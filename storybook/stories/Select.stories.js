@@ -25,6 +25,7 @@ const standar = () => {
     const [selectedPerson, setSelectedPerson] = useState("Name")
   
     return (
+      <div className="w-10">
       <Select value={selectedPerson} onChange={setSelectedPerson}>
         <Select.Button className="w-10">{selectedPerson.name}</Select.Button>
         <Select.Options className="w-10">
@@ -38,7 +39,7 @@ const standar = () => {
             </Select.Option>
           ))}
         </Select.Options>
-      </Select>
+      </Select></div>
     )
   }
 
