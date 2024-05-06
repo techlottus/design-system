@@ -32,7 +32,7 @@ const Options = (props:SelectOptionsType)=> {
 const Option = (props:OptionType) =>{
   const {className="", children,disabled=false, as='div',value} =props;
   return (
-    <Listbox.Option className={cn("font-texts p-3 hover:bg-surface-100",className)} disabled={disabled} as={as} value={value} >
+    <Listbox.Option className={cn("font-texts p-3 hover:bg-surface-100 cursor-default",className)} disabled={disabled} as={as} value={value} >
       {children}
     </Listbox.Option>
   )
