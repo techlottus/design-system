@@ -16,7 +16,7 @@ const Select:SelectType = (props:SelectType)=> {
 const Button = (props:ButtonType) =>{
   const { children,className,placeholder} =props;
   return (
-    <Listbox.Button placeholder={placeholder} className={cn("group border border-surface-200 rounded flex focus:border-surface-500 h-10 w-full justify-between align-middle",className)}><div className='py-1.5 px-2 align-middle cursor-none'>{children}</div><span className='order-last font-icons-solid text-lg text-center h-fit p-2 rounded-s-none rounded-e bg-surface-100 group-focus:border-l-surface-500'>expand_more</span></Listbox.Button>
+    <Listbox.Button placeholder={placeholder} className={cn("group border border-surface-200 rounded flex focus:border-surface-500 h-10 w-full justify-between align-middle",className)}><div className='py-1.5 px-2 align-middle cursor-none'>{children}</div><span className='order-last font-icons-solid text-lg text-center h-fit p-2 rounded-s-none rounded-e bg-surface-100 border-l group-focus:border-surface-500'>expand_more</span></Listbox.Button>
   )
 }
 
