@@ -22,11 +22,11 @@ const standar = () => {
     { id: 5, name: 'Katelyn Rohan', unavailable: false },
   ]
   
-    const [selectedPerson, setSelectedPerson] = useState("")
+    const [selectedPerson, setSelectedPerson] = useState("Name")
   
     return (
       <Select value={selectedPerson} onChange={setSelectedPerson}>
-        <Select.Button placeholder="Label">{selectedPerson.name}</Select.Button>
+        <Select.Button>{selectedPerson.name}</Select.Button>
         <Select.Options>
           {people.map((person) => (
             <Select.Option
