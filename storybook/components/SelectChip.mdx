@@ -2,18 +2,19 @@ import { Meta, Preview } from '@storybook/blocks';
 import SelectChip from './SelectChip'
 import RadioButtonActive from './RadioButtonActive/RadioButtonActive'
 import RadioButtonDefault from './RadioButtonDefault/RadioButtonDefault'
+import { RadioGroup } from '@headlessui/react'
 
 <Meta title="MDX|SelectChip" component={SelectChip} />
 
 # SelectChip
 
-A radio button is used to select a single option from a list of multiple option.
+A SelectChip is used to select a single option from a list of multiple option.
 
 ## Installation
 
 To begin, start the installation process of Headless UI using npm.
 
-`npm install @headlessui/react`
+`npm install @lottuseducation/molecules`
 
 Here are one examples showcasing the use cases for the SelectChip and its functionality:
 
@@ -22,7 +23,7 @@ Here are one examples showcasing the use cases for the SelectChip and its functi
 SelectChips are constructed using the RadioGroup and RadioGroup.Option components.
 
 Select an option by clicking on it, and when the SelectChip is focused, click again to uncheck the option.
-
+<RadioGroup>
  <SelectChip
             iconActive={<RadioButtonActive />}
             iconInactive={<RadioButtonDefault />}
@@ -30,22 +31,14 @@ Select an option by clicking on it, and when the SelectChip is focused, click ag
             active={true}
             label="Label"
         />
+</RadioGroup>
 ```
- <div className="w-full px-1 grid grid-cols-12">
-    <div className="col-span-5">
-        <RadioGroup>
-            <RadioGroup.Option value={active} onClick={() => setActive(!active)} className="flex bg-surface-100 w-24 h-9 cursor-pointer border-2 border-success-600 rounded py-1.5">
-                <>
-                    {active ?
-                        <RadioButtonActive size="sm" className="!ms-2 !me-3 my-auto fill-success-600" />
-                        : <RadioButtonDefault size="sm" className="!ms-2 !me-3 my-auto" />
-                    }
-                    <span className={active ? 'bg-surface-100' : ''}>Label</span>
-                </>
-            </RadioGroup.Option>
-        </RadioGroup>
-    </div>
-</div>
+<RadioGroup.Option value={activeChip} onClick={() => setActiveChip(!activeChip)} className={cn("flex bg-surface-100 h-9 cursor-pointer border-2 rounded py-1.5 pr-1.5", className)}>
+        <div className="!ms-2 !me-2 my-auto">
+            { activeChip ? iconActive : iconInactive }
+        </div>
+        <span className="bg-surface-100 font-texts">{label}</span>
+</RadioGroup.Option>
 ``` 
 
 For further details, please visit <a className="cursor-pointer" href="https://headlessui.com/" target="_blank">https://headlessui.com/</a>
