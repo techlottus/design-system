@@ -29,6 +29,7 @@ export type ButtonType = {
   className?:string;
   disabled?:boolean;
   placeholder?:string;
+  error?:boolean;
 }
 
 export type OptionType = {

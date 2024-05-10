@@ -12,6 +12,7 @@ export default {
   },
   args: {
     disabled:false,
+    error: false,
   },
 };
 
