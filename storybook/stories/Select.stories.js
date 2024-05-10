@@ -36,7 +36,7 @@ const standar = (args) => {
             <Select.Option
               key={person.id}
               value={person}
-              disabled={!args[disabled]?person.unavailable : args[disabled]}
+              disabled={!args.disabled?person.unavailable : args.disabled}
             >
               {person.name}
             </Select.Option>
