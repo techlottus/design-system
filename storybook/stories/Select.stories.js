@@ -29,7 +29,7 @@ const standar = (args) => {
   
     return (
       <div className="w-52">
-      <Select value={selectedPerson} onChange={setSelectedPerson} >
+      <Select value={selectedPerson} onChange={args[disabled]==false && setSelectedPerson} >
         <Select.Button {...args} >{selectedPerson.name}</Select.Button>
         <Select.Options  className="h-40">
           {people.map((person) => (
