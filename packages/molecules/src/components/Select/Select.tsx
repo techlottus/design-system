@@ -23,7 +23,7 @@ const Button = (props:ButtonType) =>{
      ["focus:border-error-500 border-error-500"]:error ,
      ["text-surface-200 cursor-none"]:disabled && !error},className)}>
       <div className={cn('py-1.5 px-2 align-middle cursor-text',{["text-error-500"]:error})}>{children}</div>
-      <span className={cn('order-last font-icons-solid text-lg text-center h-fit p-2 rounded-s-none rounded-e border-l',{['group-focus:border-surface-500 bg-surface-100']:!disabled && !error,['border-surface-200 bg-surface-200 text-surface-900']:disabled && !error,[" group-focus:border-error-500 border-error-500 bg-error-100 "]:error})}>
+      <span className={cn('order-last font-icons-solid text-lg text-center h-fit p-2 rounded-s-none rounded-e border-l',{['group-focus:border-surface-500 bg-surface-100']:!disabled && !error,['border-surface-200 bg-surface-200 text-surface-900 opacity-50']:disabled && !error,[" group-focus:border-error-500 border-error-500 bg-error-100 "]:error})}>
         expand_more
       </span>
     </Listbox.Button>
