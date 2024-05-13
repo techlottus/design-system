@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Select from "../components/Select";
 import mdx from "../components/Select/Select.mdx"
-import CheckBoxActive from '../../components/CheckBoxActive/CheckBoxActive';
-import CheckBoxDefault from '../../components/CheckBoxDefault/CheckBoxDefault';
+import CheckBoxActive from '../components/CheckBoxActive/CheckBoxActive';
+import CheckBoxDefault from '../components/CheckBoxDefault/CheckBoxDefault';
 export default {
   title: "Molecules/Select",
   component: Select,
