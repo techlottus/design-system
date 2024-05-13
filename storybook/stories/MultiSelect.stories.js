@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Select from "../components/Select";
 import mdx from "../components/Select/Select.mdx"
 export default {
-  title: "Molecules/MultiSelect",
+  title: "Molecules/Select",
   component: Select,
   tags: ["autodocs"],
   parameters: {
@@ -51,7 +51,7 @@ const standar = (args) => {
 
 
 
-const Standar = standar.bind({});
+const MultiSelect = standar.bind({});
 
 
-export { Standar };
+export { MultiSelect };
