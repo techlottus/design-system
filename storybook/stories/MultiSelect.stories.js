@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Select from "../components/Select";
 import mdx from "../components/Select/Select.mdx"
+import CheckBoxActive from '../../components/CheckBoxActive/CheckBoxActive';
+import CheckBoxDefault from '../../components/CheckBoxDefault/CheckBoxDefault';
 export default {
   title: "Molecules/Select",
   component: Select,
@@ -39,7 +41,8 @@ const standar = (args) => {
            value={person} 
            className="data-[focus]:bg-blue-100"
            disabled={!args.disabled?person.unavailable : args.disabled} >
-            {person.name}
+            {selectedPerson==person?<CheckBoxActive size="md" className="!mx-2 cursor-pointer disabled:opacity-75" />
+                                : <CheckBoxDefault size="md" className="!mx-2 cursor-pointer" />}<span>{person.name}</span> 
           </Select.Option>
         ))}
       </Select.Options>
