@@ -39,7 +39,6 @@ const standar = (args) => {
           <Select.Option
            key={person.id} 
            value={person} 
-           
            className="data-[focus]:bg-blue-100"
            disabled={!args.disabled?person.unavailable : args.disabled} >
             <div className="flex space-x-1" tabIndex={-1} onClick={()=>{setActiveOp(person.id)}}>
