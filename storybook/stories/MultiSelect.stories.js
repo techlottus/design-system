@@ -29,7 +29,7 @@ const standar = (args) => {
   ]
   
     const [selectedPerson, setSelectedPerson] = useState(["Name"])
-  
+    const [ActiveOp,setActiveOp]=useState(0)
     return (
       <div className="w-52">
        <Select value={selectedPerson} onChange={setSelectedPerson} multiple>
@@ -39,10 +39,12 @@ const standar = (args) => {
           <Select.Option
            key={person.id} 
            value={person} 
+           onClick={()=>{setActiveOp(person.id)}}
            className="data-[focus]:bg-blue-100"
            disabled={!args.disabled?person.unavailable : args.disabled} >
-            {selectedPerson==person?<CheckBoxActive size="md" className="!mx-2 cursor-pointer disabled:opacity-75" />
-                                : <CheckBoxDefault size="md" className="!mx-2 cursor-pointer" />}<span>{person.name}</span> 
+            <div className="flex space-x-1">
+            {ActiveOp==person.id?<CheckBoxActive size="md" className="!mx-2 cursor-pointer disabled:opacity-75" />
+                                : <CheckBoxDefault size="md" className="!mx-2 cursor-pointer" />}<span>{person.name}</span> </div>
           </Select.Option>
         ))}
       </Select.Options>
