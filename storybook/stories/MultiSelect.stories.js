@@ -21,6 +21,7 @@ export default {
 
 const standar = (args) => {
   const people = [
+    { id: 0, name: 'Name', unavailable: true },
     { id: 1, name: 'Durward Reynolds', unavailable: false },
     { id: 2, name: 'Kenton Towne', unavailable: false },
     { id: 3, name: 'Therese Wunsch', unavailable: false },
@@ -28,12 +29,12 @@ const standar = (args) => {
     { id: 5, name: 'Katelyn Rohan', unavailable: false },
   ]
   
-    const [selectedPerson, setSelectedPerson] = useState(["Name"])
+    const [selectedPerson, setSelectedPerson] = useState(people[0].name)
     const [ActiveOp,setActiveOp]=useState(0)
     return (
       <div className="w-52">
        <Select value={selectedPerson} onChange={setSelectedPerson} multiple>
-      <Select.Button {...args}>{selectedPerson.map((person) => person.name).join(', ')}</Select.Button>
+      <Select.Button {...args}>{selectedPerson.map((person) => person.name).join(',')}</Select.Button>
       <Select.Options anchor="bottom">
         {people.map((person) => (
           <Select.Option
