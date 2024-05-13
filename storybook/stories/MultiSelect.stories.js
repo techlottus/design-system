@@ -42,8 +42,8 @@ const standar = (args) => {
            className="data-[focus]:bg-blue-100"
            disabled={!args.disabled?person.unavailable : args.disabled} >
             <div className="flex space-x-1" tabIndex={-1} onClick={()=>{setActiveOp(person.id)}}>
-            {ActiveOp==person.id?<CheckBoxActive size="sm" className="!mx-2 cursor-pointer disabled:opacity-75 bg-surface-300" />
-                                : <CheckBoxDefault size="sm" className="!mx-2 cursor-pointer border-surface-300" />}<span>{person.name}</span> </div>
+            {ActiveOp==person.id?<CheckBoxActive size="sm" className="!mx-2 cursor-pointer disabled:opacity-75 fill-surface-300" />
+                                : <CheckBoxDefault size="sm" className="!mx-2 cursor-pointer fill-surface-300" />}<span>{person.name}</span> </div>
           </Select.Option>
         ))}
       </Select.Options>
