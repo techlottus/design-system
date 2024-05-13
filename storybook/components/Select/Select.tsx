@@ -18,8 +18,8 @@ const Button = (props:ButtonType) =>{
   return (
     <Listbox.Button 
     placeholder={placeholder}
-     className={cn("group border  rounded flex  h-10 w-full justify-between align-middle",
-     {["focus:border-surface-500 border-surface-200"]:!disabled && !error,
+     className={cn("group border  rounded flex  h-10 w-full justify-between align-middle ",
+     {["focus:border-surface-500 border-surface-200 text-surface-700"]:!disabled && !error,
      ["focus:border-error-500 border-error-500"]:error ,
      ["text-surface-200 cursor-none"]:disabled && !error},className)}>
       <div className={cn('py-1.5 px-2 align-middle cursor-text  overflow-hidden truncate',{["text-error-500"]:error})}>{children}</div>
