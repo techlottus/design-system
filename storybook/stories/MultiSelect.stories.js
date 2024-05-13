@@ -39,10 +39,10 @@ const standar = (args) => {
           <Select.Option
            key={person.id} 
            value={person} 
-           onClick={()=>{setActiveOp(person.id)}}
+           
            className="data-[focus]:bg-blue-100"
            disabled={!args.disabled?person.unavailable : args.disabled} >
-            <div className="flex space-x-1">
+            <div className="flex space-x-1" tabIndex={-1} onClick={()=>{setActiveOp(person.id)}}>
             {ActiveOp==person.id?<CheckBoxActive size="md" className="!mx-2 cursor-pointer disabled:opacity-75" />
                                 : <CheckBoxDefault size="md" className="!mx-2 cursor-pointer" />}<span>{person.name}</span> </div>
           </Select.Option>
