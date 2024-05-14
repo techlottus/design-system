@@ -32,7 +32,7 @@ const standar = (args) => {
     const [selectedPerson, setSelectedPerson] = useState([people[0],people[1]])
     const [ActiveOp,setActiveOp]=useState(0)
     return (
-      <div className="w-52">
+      <div className="w-80">
        <Select value={selectedPerson} onChange={setSelectedPerson} multiple>
       <Select.Button {...args}>{selectedPerson.map((person) => person.name).join(',')}</Select.Button>
       <Select.Options anchor="bottom">
