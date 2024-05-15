@@ -32,7 +32,7 @@ const standar = (args) => {
     return (
       <div className="w-52">
       <Select value={selectedPerson} onChange={setSelectedPerson} >
-        <Select.Button {...args} >{selectedPerson.name}</Select.Button>
+        <Select.Button {...args} >{({value})=>value.name}</Select.Button>
         <Select.Options  className="h-40">
           {people.map((person) => (
             <Select.Option
