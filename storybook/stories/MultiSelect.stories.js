@@ -30,7 +30,7 @@ const standar = (args) => {
     { id: 5, name: 'Katelyn Rohan', unavailable: false },
   ]
   
-    const [selectedPerson, setSelectedPerson] = useState([people[0],people[1]])
+    const [selectedPerson, setSelectedPerson] = useState(people[0])
     const [ActiveOp,setActiveOp]=useState(0)
     
     return (
