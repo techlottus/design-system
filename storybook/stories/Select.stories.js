@@ -12,14 +12,14 @@ export default {
   },
   args: {
     disabled:false,
-    error: false,
-    defaultValue:"label"
+    error: false
   },
 };
 
 
 const standar = (args) => {
   const people = [
+    { id: 0, name: 'Name', unavailable: false },
     { id: 1, name: 'Durward Reynolds', unavailable: false },
     { id: 2, name: 'Kenton Towne', unavailable: false },
     { id: 3, name: 'Therese Wunsch', unavailable: false },
@@ -27,12 +27,12 @@ const standar = (args) => {
     { id: 5, name: 'Katelyn Rohan', unavailable: false },
   ]
   
-    const [selectedPerson, setSelectedPerson] = useState("Name")
+    const [selectedPerson, setSelectedPerson] = useState(people[0])
   
     return (
       <div className="w-52">
       <Select value={selectedPerson} onChange={setSelectedPerson} >
-        <Select.Button {...args} >{({value})=>value.name}</Select.Button>
+        <Select.Button {...args} >{selectedPerson.name}</Select.Button>
         <Select.Options  className="h-40">
           {people.map((person) => (
             <Select.Option
