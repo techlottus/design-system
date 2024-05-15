@@ -19,7 +19,7 @@ export default {
 
 const standar = (args) => {
   const people = [
-    { id: 0, name: 'Name', unavailable: false },
+    { id: 0, name: 'Name', unavailable: true },
     { id: 1, name: 'Durward Reynolds', unavailable: false },
     { id: 2, name: 'Kenton Towne', unavailable: false },
     { id: 3, name: 'Therese Wunsch', unavailable: false },
