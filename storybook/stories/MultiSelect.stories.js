@@ -35,7 +35,7 @@ const standar = (args) => {
     return (
       <div className="w-80">
        <Select value={selectedPerson} onChange={setSelectedPerson} multiple>
-      <Select.Button {...args}><span className="hidden active:flex">label</span><span className="active:hidden">{selectedPerson.map((person) => person.name).join(',')}</span></Select.Button>
+      <Select.Button {...args}>{selectedPerson.map((person) => person.name).join(',')}</Select.Button>
       <Select.Options anchor="bottom">
         {people.map((person) => (
           <Select.Option
