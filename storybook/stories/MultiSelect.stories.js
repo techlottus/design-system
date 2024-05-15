@@ -29,7 +29,7 @@ const standar = (args) => {
     { id: 5, name: 'Katelyn Rohan', unavailable: false },
   ]
   
-    const [selectedPerson, setSelectedPerson] = useState([people[0],people[1]])
+    const [selectedPerson, setSelectedPerson] = useState([people[0]])
     const [ActiveOp,setActiveOp]=useState([0])
     const handleSelect = (selectValue)=>{
       if (!selectedPerson.includes(selectValue) ){
@@ -49,7 +49,7 @@ const standar = (args) => {
            className="data-[focus]:bg-blue-100"
            disabled={!args.disabled?person.unavailable : args.disabled} >
             <div className="flex space-x-1 align-middle" tabIndex={-1} onClick={()=>{!args.disabled && setActiveOp(person.id)}}>
-            {ActiveOp==person.id?<CheckBoxActive size="sm" className=" cursor-pointer disabled:opacity-75 fill-surface-400" />
+            {ActiveOp.includes(person.id)?<CheckBoxActive size="sm" className=" cursor-pointer disabled:opacity-75 fill-surface-400" />
                                 : <CheckBoxDefault size="sm" className=" cursor-pointer fill-surface-400" />}<span>{person.name}</span> </div>
           </Select.Option>
         ))}
