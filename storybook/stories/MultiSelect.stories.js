@@ -49,7 +49,7 @@ const standar = (args) => {
            className="data-[focus]:bg-blue-100"
            disabled={!args.disabled?person.unavailable : args.disabled} >
             <div className="flex space-x-1 align-middle" tabIndex={-1} >
-            {selectedPerson.includes(person.name)?<CheckBoxActive size="sm" className=" cursor-pointer disabled:opacity-75 fill-surface-400" />
+            {selectedPerson.includes(person)?<CheckBoxActive size="sm" className=" cursor-pointer disabled:opacity-75 fill-surface-400" />
                                 : <CheckBoxDefault size="sm" className=" cursor-pointer fill-surface-400" />}<span>{person.name}</span> </div>
           </Select.Option>
         ))}
