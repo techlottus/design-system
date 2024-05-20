@@ -12,7 +12,8 @@ export default {
   },
   args: {
     disabled:false,
-    error: false
+    error: false,
+    placeholder:"Name"
   },
 };
 
