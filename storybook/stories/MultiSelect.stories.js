@@ -36,7 +36,7 @@ const standar = (args) => {
     <div className="w-80">
       <Select value={selectedPerson} onChange={setSelectedPerson} multiple>
         <Select.Button {...args} >{selectedPerson.map((person) => person.name).join(',')}</Select.Button>
-        <Select.Options >
+        <Select.Options  static>
           {people.map((person) => (
             <Select.Option
               key={person.id}

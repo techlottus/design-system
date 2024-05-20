@@ -13,7 +13,6 @@ export default {
   args: {
     disabled:false,
     error: false,
-    placeholder:"Name"
   },
 };
 
@@ -34,7 +33,7 @@ const standar = (args) => {
       <div className="w-52">
       <Select value={selectedPerson} onChange={setSelectedPerson} >
         <Select.Button {...args} >{selectedPerson.name}</Select.Button>
-        <Select.Options  className="h-40">
+        <Select.Options static className="h-40">
           {people.map((person) => (
             <Select.Option
               key={person.id}
