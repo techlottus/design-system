@@ -31,6 +31,7 @@ export type ButtonType = {
   error?:boolean;
   defaultValue?:string;
   placeholder?:string;
+  onClick?:()=>void;
 }
 
 export type OptionType = {

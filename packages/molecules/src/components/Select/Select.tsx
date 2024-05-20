@@ -14,11 +14,11 @@ const Select:SelectType = (props:SelectType)=> {
 }
 
 const Button = (props:ButtonType) =>{
-  const { children,className,disabled=false,error=false} =props;
+  const { children,className,disabled=false,error=false,onClick=()=>{}} =props;
 
   return (
 
-    <Listbox.Button 
+    <Listbox.Button onClick={onClick}
      className={cn("group border  rounded flex  h-10 w-full justify-between align-middle ",
      {["focus:border-surface-500 border-surface-200 text-surface-700"]:!disabled && !error,
      ["focus:border-error-500 border-error-500"]:error ,
