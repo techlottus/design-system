@@ -37,13 +37,13 @@ const standar = (args) => {
     return (
       <div className="w-52">
       <Select value={selectedPerson} 
-      onChange={setSelectedPerson & setOpen(false)} >
+      onChange={setSelectedPerson}  >
         <Select.Button {...args} onClick={handleclick} >{open? "Name" : selectedPerson.name}</Select.Button>
         <Select.Options static className={cn("h-40",{["hidden"]:!open })}>
           {people.map((person) => (
             <Select.Option
             onClick={()=>setOpen(false)}
-            tabindex={-1} 
+            tabindex={0} 
               key={person.id}
               value={person}
               disabled={!args.disabled?person.unavailable : args.disabled}
