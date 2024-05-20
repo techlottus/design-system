@@ -16,25 +16,16 @@ const Select:SelectType = (props:SelectType)=> {
 
 const Button = (props:ButtonType) =>{
   const { children,className,disabled=false,error=false,placeholder=""} =props;
-  const [open,setOpen]=useState(false)
-  const handleOnClick = ()=>{
-    if (open){
-      setOpen(false)
-    }
-    else{
-      setOpen(true)
-    }
-  }
+
   return (
 
     <Listbox.Button 
-     onClick={handleOnClick}
      className={cn("group border  rounded flex  h-10 w-full justify-between align-middle ",
      {["focus:border-surface-500 border-surface-200 text-surface-700"]:!disabled && !error,
      ["focus:border-error-500 border-error-500"]:error ,
      ["text-surface-200 cursor-none"]:disabled && !error},className)}>
        
-      <div className={cn('py-1.5 px-2 align-middle cursor-text  overflow-hidden truncate',{["text-error-500"]:error,["text-surface-400"]:open})}>{open? placeholder : children}</div>
+      <div className={cn('py-1.5 px-2 align-middle cursor-text  overflow-hidden truncate',{["text-error-500"]:error,["data-[focus]:text-surface-400"]:open})}>{children}</div>
       <span className={cn('order-last font-icons-solid text-lg text-center h-fit p-2 rounded-s-none rounded-e border-l',{['group-focus:border-surface-500 bg-surface-100']:!disabled && !error,['border-surface-200 bg-surface-200 text-surface-900 opacity-50']:disabled && !error,[" group-focus:border-error-500 border-error-500 bg-error-100 "]:error})}>
         expand_more
       </span>
