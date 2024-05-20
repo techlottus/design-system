@@ -33,14 +33,13 @@ const standar = (args) => {
       if(open){setOpen(false)}
       else {setOpen(true)}
     }
-    const handleChange = ()=>{
-      setSelectedPerson
-      setOpen(false)
 
-    }
     return (
       <div className="w-52">
-      <Select value={selectedPerson} onChange={handleChange} >
+      <Select value={selectedPerson} 
+      onChange={()=>{
+        setSelectedPerson
+        setOpen(false)} } >
         <Select.Button {...args} onClick={handleclick} >{open? "Name" : selectedPerson.name}</Select.Button>
         <Select.Options static className={cn("h-40",{["hidden"]:!open})}>
           {people.map((person) => (
