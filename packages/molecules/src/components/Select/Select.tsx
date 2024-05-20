@@ -28,7 +28,7 @@ const Button = (props:ButtonType) =>{
   return (
 
     <Listbox.Button 
-     onClick={()=>handleOnClick}
+     onClick={handleOnClick}
      className={cn("group border  rounded flex  h-10 w-full justify-between align-middle ",
      {["focus:border-surface-500 border-surface-200 text-surface-700"]:!disabled && !error,
      ["focus:border-error-500 border-error-500"]:error ,
