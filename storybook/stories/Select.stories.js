@@ -35,7 +35,7 @@ const standar = (args) => {
       <div className="w-52">
       <Select value={selectedPerson} 
       onChange={setSelectedPerson} >
-        <Select.Button {...args} onClick={handleclick} >{open? "Name" : selectedPerson.name}</Select.Button>
+        <Select.Button {...args}  >{open? "Name" : selectedPerson.name}</Select.Button>
         <Select.Options static className={cn("h-40",{["hidden"]:!open})}>
           {people.map((person) => (
             <Select.Option
