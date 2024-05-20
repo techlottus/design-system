@@ -27,7 +27,7 @@ const standar = (args) => {
     { id: 5, name: 'Katelyn Rohan', unavailable: false },
   ]
   
-    const [selectedPerson, setSelectedPerson] = useState("Name")
+    const [selectedPerson, setSelectedPerson] = useState({name:"Name"})
     const [open,setOpen]=useState(false)
     const handleclick = ()=>{
       if(open){setOpen(false)}
