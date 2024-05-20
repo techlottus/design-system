@@ -27,7 +27,7 @@ const standar = (args) => {
     { id: 5, name: 'Katelyn Rohan', unavailable: false },
   ]
   
-    const [selectedPerson, setSelectedPerson] = useState(people[0])
+    const [selectedPerson, setSelectedPerson] = useState("Name")
     const [open,setOpen]=useState(false)
     const handleclick = ()=>{
       if(open){setOpen(false)}
@@ -36,7 +36,7 @@ const standar = (args) => {
     return (
       <div className="w-52">
       <Select value={selectedPerson} onChange={setSelectedPerson} >
-        <Select.Button {...args} onClick={handleclick} >{selectedPerson.name}</Select.Button>
+        <Select.Button {...args} onClick={handleclick} >{open? "Name" : selectedPerson.name}</Select.Button>
         <Select.Options static className={cn("h-40",{["hidden"]:!open})}>
           {people.map((person) => (
             <Select.Option
