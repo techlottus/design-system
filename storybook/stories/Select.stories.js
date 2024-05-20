@@ -39,7 +39,7 @@ const standar = (args) => {
       <Select value={selectedPerson} 
       onChange={setSelectedPerson}  >
         <Select.Button {...args} className="peer" onClick={handleclick} >{open? "Name" : selectedPerson.name}</Select.Button>
-        <Select.Options static className={cn("h-40 peer-focus:visible peer-active:visible hidden",{["hidden "]:!open })}>
+        <Select.Options static className={cn("h-40 peer-focus:flex peer-active:flex hidden ")}>
           {people.map((person) => (
             <Select.Option
               key={person.id}
