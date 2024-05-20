@@ -3,6 +3,7 @@ import Select from "../components/Select";
 import mdx from "../components/Select/Select.mdx"
 import CheckBoxActive from '../components/CheckBoxActive/CheckBoxActive';
 import CheckBoxDefault from '../components/CheckBoxDefault/CheckBoxDefault';
+import cn from "classnames"
 export default {
   title: "Molecules/Select",
   component: Select,
@@ -31,12 +32,17 @@ const standar = (args) => {
 
   const [selectedPerson, setSelectedPerson] = useState(["Name"])
   const [ActiveOp, setActiveOp] = useState(0)
+  const [open,setOpen]=useState(false)
+  const handleclick = ()=>{
+    if(open){setOpen(false)}
+    else {setOpen(true)}
+  }
 
   return (
     <div className="w-80">
       <Select value={selectedPerson} onChange={setSelectedPerson} multiple>
-        <Select.Button {...args} >{selectedPerson.map((person) => person.name).join(',')}</Select.Button>
-        <Select.Options  static>
+        <Select.Button {...args} onClick={handleclick}>{selectedPerson.map((person) => person.name).join(',')}</Select.Button>
+        <Select.Options  static className={cn({["hidden"]:!open})}>
           {people.map((person) => (
             <Select.Option
               key={person.id}
