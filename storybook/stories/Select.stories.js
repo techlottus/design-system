@@ -28,14 +28,18 @@ const standar = (args) => {
   ]
   
     const [selectedPerson, setSelectedPerson] = useState({name:"Name"})
-
+    const [open,setOpen]=useState(false)
+    const handleclick = ()=>{
+      if(open){setOpen(false)}
+      else {setOpen(true)}
+    }
 
     return (
       <div className="w-52">
       <Select value={selectedPerson} 
       onChange={setSelectedPerson}  >
-        <Select.Button {...args} className="peer group"  >  <span className="group-focus:invisible  group-active:invisible visible">{selectedPerson.name}</span></Select.Button>
-        <Select.Options static className={cn("h-40 ")}>
+        <Select.Button {...args} className="group peer" onClick={handleclick} ><span className="group-focus:visible  group-active:visible invisible">Name</span>  <span className="group-focus:invisible  group-active:invisible visible">{selectedPerson.name}</span></Select.Button>
+        <Select.Options static className={cn("h-40 peer-focus:flex flex-col peer-active:flex hidden ")}>
           {people.map((person) => (
             <Select.Option
               key={person.id}
