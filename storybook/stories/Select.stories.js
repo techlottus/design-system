@@ -38,7 +38,7 @@ const standar = (args) => {
       <div className="w-52">
       <Select value={selectedPerson} 
       onChange={setSelectedPerson}  >
-        <Select.Button {...args} className="group peer" onClick={handleclick} ><span className="group-focus:visible  group-active:visible invisible">Name</span>  <span className="group-focus:invisible  group-active:invisible visible">{selectedPerson.name}</span></Select.Button>
+        <Select.Button {...args} className="group peer" onClick={handleclick} ><span className="group-focus:visible  group-active:visible invisible">Name</span>  <span className="group-focus:invisible  group-active:invisible visible">{open? 'Name' :selectedPerson.name}</span></Select.Button>
         <Select.Options static className={cn("h-40",{["hidden"]:!open})}>
           {people.map((person) => (
             <Select.Option
