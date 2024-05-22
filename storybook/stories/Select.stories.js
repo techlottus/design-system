@@ -35,7 +35,7 @@ const standar = (args) => {
       <Select value={selectedPerson} 
       onChange={setSelectedPerson}  >
         <Select.Button {...args} className="peer group"  >  <span className="group-focus:invisible  group-active:invisible visible">{selectedPerson.name}</span></Select.Button>
-        <Select.Options static className={cn("h-40 peer-focus:flex flex-col peer-active:flex hidden ")}>
+        <Select.Options  className={cn("h-40 peer-focus:flex flex-col peer-active:flex hidden ")}>
           {people.map((person) => (
             <Select.Option
               key={person.id}
