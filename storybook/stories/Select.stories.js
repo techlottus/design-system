@@ -14,6 +14,7 @@ export default {
   args: {
     disabled:false,
     error: false,
+    label: "Name"
   },
 };
 
@@ -28,18 +29,14 @@ const standar = (args) => {
   ]
   
     const [selectedPerson, setSelectedPerson] = useState({name:"Name"})
-    const [open,setOpen]=useState(false)
-    const handleclick = ()=>{
-      if(open){setOpen(false)}
-      else {setOpen(true)}
-    }
+
 
     return (
       <div className="w-52">
       <Select value={selectedPerson} 
       onChange={setSelectedPerson}  >
-        <Select.Button {...args} className="group peer" onClick={handleclick} ><span className="group-focus:visible  group-active:visible invisible">Name</span>  <span className="group-focus:invisible  group-active:invisible visible">{open? 'Name' :selectedPerson.name}</span></Select.Button>
-        <Select.Options static className={cn("h-40",{["hidden"]:!open})}>
+        <Select.Button {...args} ><span className="w-4 font-icons-solid text-surface-400 mr-2">people</span> {selectedPerson.name}</Select.Button>
+        <Select.Options  className={cn("h-40")}>
           {people.map((person) => (
             <Select.Option
               key={person.id}
@@ -57,7 +54,7 @@ const standar = (args) => {
 
 
 
-const Standar = standar.bind({});
+const SelectList = standar.bind({});
 
 
-export { Standar };
+export { SelectList };

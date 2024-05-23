@@ -32,6 +32,7 @@ export type ButtonType = {
   defaultValue?:string;
   placeholder?:string;
   onClick?:()=>void;
+  label?:string;
 }
 
 export type OptionType = {

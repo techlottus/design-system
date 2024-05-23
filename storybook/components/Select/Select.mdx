@@ -6,6 +6,20 @@ import Select from './Select'
 
 # Select
 
+The Select component is a user interface element that enables users to choose a predefined option from a drop-down list,
+commonly used in forms for selecting options.
+
+This component includes a selection box and a drop-down list containing available options. When a user clicks the selection box,
+the list of options appears, allowing the user to make a choice by clicking on an option. Once an option is selected, 
+the list closes, and the chosen option is displayed in the selection box.
+
+Within the @lottuseducation/molecules library, the select  component comprises the following elements : "Select.Button,"
+   "Select.Options" and "Select.Option". By leveraging these components, a multitude of distinct designs for select  can be crafted.
+   
+- Select: The primary component that encompasses all elements within the select .
+- Select.Button: The selection box .
+- Select.Options: The dropdown list container
+- Select.Option: Each option in dropdown list container
 
 
 ## Installation and import
@@ -29,22 +43,202 @@ After installing the library, you can import the component into your project as 
 To incorporate the TextArea component into your code, follow the structure demonstrated below:
 
 ```
- <div className="w-52">
-      <Select value={selectedPerson} onChange={setSelectedPerson}>
-        <Select.Button >{selectedPerson.name}</Select.Button>
-        <Select.Options className="h-40" >
+ import Select from "../components/Select";
+ <Select >
+        <Select.Button label="Ejemplo de select"> Valor elegido</Select.Button>
+        <Select.Options>
+            <Select.Option key="1" value="option1">
+              Opción 1
+            </Select.Option>
+            <Select.Option key="2" value="option2">
+              Opción 2
+            </Select.Option>
+        </Select.Options>
+ </Select>
+
+```
+
+{
+   <Select >
+        <Select.Button label="Ejemplo de select"> Valor elegido</Select.Button>
+        <Select.Options>
+            <Select.Option key="1" value="option1">
+              Opción 1
+            </Select.Option>
+            <Select.Option key="2" value="option2">
+              Opción 2
+            </Select.Option>
+        </Select.Options>
+ </Select>
+}
+
+## Error styles
+
+To show error styles, only add error prop in select.button component
+```
+ import Select from "../components/Select";
+ <Select >
+        <Select.Button label="Ejemplo de select" error> Valor elegido</Select.Button>
+        <Select.Options>
+            <Select.Option key="1" value="option1">
+              Opción 1
+            </Select.Option>
+            <Select.Option key="2" value="option2">
+              Opción 2
+            </Select.Option>
+        </Select.Options>
+ </Select>
+
+```
+
+{
+   <Select >
+        <Select.Button label="Ejemplo de select" error> Valor elegido</Select.Button>
+        <Select.Options>
+            <Select.Option key="1" value="option1">
+              Opción 1
+            </Select.Option>
+            <Select.Option key="2" value="option2">
+              Opción 2
+            </Select.Option>
+        </Select.Options>
+ </Select>
+}
+## Disabled styles
+
+To show disabled styles, only add disabled prop in select.button component and each of select.option
+```
+ import Select from "../components/Select";
+ <Select >
+        <Select.Button label="Ejemplo de select" disabled> Valor elegido</Select.Button>
+        <Select.Options>
+            <Select.Option key="1" value="option1" disabled>
+              Opción 1
+            </Select.Option>
+            <Select.Option key="2" value="option2" disabled>
+              Opción 2
+            </Select.Option>
+        </Select.Options>
+ </Select>
+
+```
+
+{
+   <Select >
+        <Select.Button label="Ejemplo de select" disabled> Valor elegido</Select.Button>
+        <Select.Options>
+            <Select.Option key="1" value="option1" disabled>
+              Opción 1
+            </Select.Option>
+            <Select.Option key="2" value="option2" disabled>
+              Opción 2
+            </Select.Option>
+        </Select.Options>
+ </Select>
+}
+
+If only some options are disabled :
+```
+ import Select from "../components/Select";
+ <Select >
+        <Select.Button label="Ejemplo de select" > Valor elegido</Select.Button>
+        <Select.Options>
+            <Select.Option key="1" value="option1">
+              Opción 1
+            </Select.Option>
+            <Select.Option key="2" value="option2" disabled>
+              Opción 2
+            </Select.Option>
+        </Select.Options>
+ </Select>
+
+```
+
+{
+   <Select >
+        <Select.Button label="Ejemplo de select" > Valor elegido</Select.Button>
+        <Select.Options>
+            <Select.Option key="1" value="option1" >
+              Opción 1
+            </Select.Option>
+            <Select.Option key="2" value="option2" disabled>
+              Opción 2
+            </Select.Option>
+        </Select.Options>
+ </Select>
+}
+
+## Adding icon 
+
+You can customize button by adding icons :
+
+```
+ import Select from "../components/Select";
+ <Select >
+        <Select.Button label="Ejemplo de select" > Valor elegido</Select.Button>
+        <Select.Options>
+            <Select.Option key="1" value="option1">
+              Opción 1
+            </Select.Option>
+            <Select.Option key="2" value="option2" >
+              Opción 2
+            </Select.Option>
+        </Select.Options>
+ </Select>
+
+```
+
+{
+   <Select >
+        <Select.Button label="Ejemplo de select" > <span className="w-4 font-icons-solid text-surface-400 mr-2">people</span> Valor elegido</Select.Button>
+        <Select.Options>
+            <Select.Option key="1" value="option1" >
+              Opción 1
+            </Select.Option>
+            <Select.Option key="2" value="option2" >
+              Opción 2
+            </Select.Option>
+        </Select.Options>
+ </Select>
+}
+
+## Using states to change value
+
+To add functionality in select, follow the example below:
+
+```
+const Ejemplo = (args) => {
+  const people = [
+    { id: 1, name: 'Durward Reynolds', unavailable: false },
+    { id: 2, name: 'Kenton Towne', unavailable: false },
+    { id: 3, name: 'Therese Wunsch', unavailable: false },
+    { id: 4, name: 'Benedict Kessler', unavailable: true },
+    { id: 5, name: 'Katelyn Rohan', unavailable: false },
+  ]
+  
+    const [selectedPerson, setSelectedPerson] = useState({name:"Name"})
+
+
+    return (
+      <div className="w-52">
+      <Select value={selectedPerson} 
+      onChange={setSelectedPerson}  >
+        <Select.Button {...args} ><span className="w-4 font-icons-solid text-surface-400 mr-2">people</span> {selectedPerson.name}</Select.Button>
+        <Select.Options  className={cn("h-40")}>
           {people.map((person) => (
             <Select.Option
               key={person.id}
               value={person}
-              disabled={person.unavailable}
+              disabled={!args.disabled?person.unavailable : args.disabled}
             >
               {person.name}
             </Select.Option>
           ))}
         </Select.Options>
       </Select></div>
+    )
+  }
+
 
 ```
-
-See the result in standar example.
+See result in selectList example.

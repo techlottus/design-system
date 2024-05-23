@@ -14,18 +14,18 @@ const Select:SelectType = (props:SelectType)=> {
 }
 
 const Button = (props:ButtonType) =>{
-  const { children,className,disabled=false,error=false,onClick=()=>{}} =props;
+  const { children,className,disabled=false,error=false,onClick=()=>{},label=""} =props;
 
   return (
 
     <Listbox.Button onClick={onClick}
-     className={cn("group border  rounded flex  h-10 w-full justify-between align-middle ",
+     className={cn("group border  rounded flex  h-10 w-full justify-between align-middle font-texts ",
      {["focus:border-surface-500 border-surface-200 text-surface-700"]:!disabled && !error,
      ["focus:border-error-500 border-error-500"]:error ,
      ["text-surface-200 cursor-none"]:disabled && !error},className)}>
        
-      <div className={cn('py-1.5 px-2 align-middle cursor-text  overflow-hidden truncate',{["text-error-500"]:error})}>{children}</div>
-      <span className={cn('order-last font-icons-solid text-lg text-center h-fit p-2 rounded-s-none rounded-e border-l',{['group-focus:border-surface-500 bg-surface-100']:!disabled && !error,['border-surface-200 bg-surface-200 text-surface-900 opacity-50']:disabled && !error,[" group-focus:border-error-500 border-error-500 bg-error-100 "]:error})}>
+      <div className={cn('py-1.5 px-2 align-middle h-full cursor-none overflow-hidden truncate font-texts ',{["text-error-500"]:error})}><span className=" group-aria-expanded:flex  hidden">{label}</span> <span className="group-active:hidden group-aria-expanded:hidden flex">{children}</span></div>
+      <span className={cn('order-last font-icons-solid text-lg text-center h-full p-2 rounded-s-none rounded-e border-l cursor-pointer ',{['group-focus:border-surface-500 bg-surface-100']:!disabled && !error,['border-surface-200 bg-surface-200 text-surface-900 opacity-50']:disabled && !error,[" group-focus:border-error-500 border-error-500 bg-error-100 "]:error})}>
         expand_more
       </span>
     </Listbox.Button>
@@ -35,7 +35,7 @@ const Button = (props:ButtonType) =>{
 const Options = (props:SelectOptionsType)=> {
   const {children, className="", ...restProps}=props;
   return (
-    <Listbox.Options className={cn("rounded w-full shadow overflow-auto",className)} {...restProps}>
+    <Listbox.Options className={cn("rounded w-full shadow overflow-auto font-texts p-0 my-0",className)} {...restProps}>
    {children}
     </Listbox.Options>
   )
