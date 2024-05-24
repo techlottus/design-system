@@ -16,49 +16,50 @@ export default {
         },
     },
     args: {
-        className: "",
-        size: "md"
+        className: "border-success-500",
+        label: "label",
+        active: true,
+        iconActive: <RadioButtonActive />,
+        iconInactive: <RadioButtonDefault />
     }
-
 };
 
-const standar = () => (
-    <div className="grid gap-3 w-1">
-        <RadioGroup>
+const standar = (args) => (
+    
+    <SelectChip {...args} />
+);
+
+const templateGroup = () => (
+
+    <RadioGroup className="grid gap-y-3 w-full">
+        <RadioGroup.Option value="">
             <SelectChip
                 iconActive={<RadioButtonActive />}
                 iconInactive={<RadioButtonDefault />}
                 className="border-success-500"
                 active={true}
-                label="Label"
+                label="Label One"
             />
-        </RadioGroup>
-    </div>
-);
+        </RadioGroup.Option>
+        <RadioGroup.Option>
+            <SelectChip
+                iconActive={<RadioButtonActive />}
+                iconInactive={<RadioButtonDefault />}
+                className="border-error-500"
+                active={false}
+                label="Label Two"
 
-const templateGroup = () => (
-    <RadioGroup className="grid gap-3 w-1">
-        <SelectChip
-            iconActive={<RadioButtonActive />}
-            iconInactive={<RadioButtonDefault />}
-            className="border-success-500"
-            active={true}
-            label="LabelOne"
-        />
-        <SelectChip
-            iconActive={<RadioButtonActive />}
-            iconInactive={<RadioButtonDefault />}
-            className="border-error-500"
-            active={false}
-            label="LabelTwo"
-        />
-        <SelectChip
-            iconActive={<RadioButtonActive />}
-            iconInactive={<RadioButtonDefault />}
-            className="border-secondary-500"
-            active={false}
-            label="LabelThree"
-        />
+            />
+        </RadioGroup.Option>
+        <RadioGroup.Option>
+            <SelectChip
+                iconActive={<RadioButtonActive />}
+                iconInactive={<RadioButtonDefault />}
+                className="border-secondary-500"
+                active={false}
+                label="Label Three"
+            />
+        </RadioGroup.Option>
     </RadioGroup>
 );
 

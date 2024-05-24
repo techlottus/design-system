@@ -8,13 +8,21 @@ import { RadioGroup } from '@headlessui/react'
 
 # SelectChip
 
-A SelectChip is used to select a single option from a list of multiple option.
+The Select Chip component enables users to choose from a list of options, selecting the one they prefer. It functions as a type of label that requires multiple Select Chips to be effective and meaningful.
+
+These components can be used both within forms and independently, whenever users need to select an item from a list of options.
 
 ## Installation
 
 To begin, start the installation process of Headless UI using npm.
 
 `npm install @lottuseducation/molecules`
+
+## Import
+
+You can utilize the SelectChip component by importing it as follows:
+
+`import SelectChip from "../components/SelectChip"`
 
 Here are one examples showcasing the use cases for the SelectChip and its functionality:
 
@@ -23,7 +31,7 @@ Here are one examples showcasing the use cases for the SelectChip and its functi
 SelectChips are constructed using the RadioGroup and RadioGroup.Option components.
 
 Select an option by clicking on it, and when the SelectChip is focused, click again to uncheck the option.
-<RadioGroup>
+
  <SelectChip
             iconActive={<RadioButtonActive />}
             iconInactive={<RadioButtonDefault />}
@@ -31,14 +39,82 @@ Select an option by clicking on it, and when the SelectChip is focused, click ag
             active={true}
             label="Label"
         />
+```
+ <SelectChip
+    iconActive={<RadioButtonActive />}
+    iconInactive={<RadioButtonDefault />}
+    className="border-success-500 w-24"
+    active={true}
+    label="Label"
+ />
+``` 
+
+## SelectChip Group
+
+SelectChips are constructed using the RadioGroup and RadioGroup.Option components.
+
+Select an option by clicking on it, and when the SelectChip is focused, click again to uncheck the option.
+
+<RadioGroup className="grid gap-3 w-1">
+    <RadioGroup.Option value="">
+        <SelectChip
+            iconActive={<RadioButtonActive />}
+            iconInactive={<RadioButtonDefault />}
+            className="border-success-500"
+            active={true}
+            label="LabelOne"
+        />
+    </RadioGroup.Option>
+    <RadioGroup.Option>
+        <SelectChip
+            iconActive={<RadioButtonActive />}
+            iconInactive={<RadioButtonDefault />}
+            className="border-error-500"
+            active={false}
+            label="LabelTwo"
+        />
+    </RadioGroup.Option>
+    <RadioGroup.Option>
+        <SelectChip
+            iconActive={<RadioButtonActive />}
+            iconInactive={<RadioButtonDefault />}
+            className="border-secondary-500"
+            active={false}
+            label="LabelThree"
+        />
+    </RadioGroup.Option>
 </RadioGroup>
 ```
-<RadioGroup.Option value={activeChip} onClick={() => setActiveChip(!activeChip)} className={cn("flex bg-surface-100 h-9 cursor-pointer border-2 rounded py-1.5 pr-1.5", className)}>
-        <div className="!ms-2 !me-2 my-auto">
-            { activeChip ? iconActive : iconInactive }
-        </div>
-        <span className="bg-surface-100 font-texts">{label}</span>
-</RadioGroup.Option>
+<RadioGroup">
+        <RadioGroup.Option value="">
+            <SelectChip
+                iconActive={<RadioButtonActive />}
+                iconInactive={<RadioButtonDefault />}
+                className="border-success-500"
+                active={true}
+                label="LabelOne"
+            />
+        </RadioGroup.Option>
+        <RadioGroup.Option>
+            <SelectChip
+                iconActive={<RadioButtonActive />}
+                iconInactive={<RadioButtonDefault />}
+                className="border-error-500"
+                active={false}
+                label="LabelTwo"
+
+            />
+        </RadioGroup.Option>
+        <RadioGroup.Option>
+            <SelectChip
+                iconActive={<RadioButtonActive />}
+                iconInactive={<RadioButtonDefault />}
+                className="border-secondary-500"
+                active={false}
+                label="LabelThree"
+            />
+        </RadioGroup.Option>
+</RadioGroup>
 ``` 
 
 For further details, please visit <a className="cursor-pointer" href="https://headlessui.com/" target="_blank">https://headlessui.com/</a>
