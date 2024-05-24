@@ -174,10 +174,10 @@ You can customize button by adding icons in rightElement property :
 
 ```
  import Select from "../components/Select";
- <Select >
-        <Select.Button label="Ejemplo de select" > Valor elegido</Select.Button>
+   <Select >
+        <Select.Button label="Ejemplo de select" rightElement={<span className="w-4 font-icons-solid text-surface-400 mr-2">people</span>} >  Valor elegido</Select.Button>
         <Select.Options>
-            <Select.Option key="1" value="option1">
+            <Select.Option key="1" value="option1" >
               Opción 1
             </Select.Option>
             <Select.Option key="2" value="option2" >
@@ -190,7 +190,7 @@ You can customize button by adding icons in rightElement property :
 
 {
    <Select >
-        <Select.Button label="Ejemplo de select" > <span className="w-4 font-icons-solid text-surface-400 mr-2">people</span> Valor elegido</Select.Button>
+        <Select.Button label="Ejemplo de select" rightElement={<span className="w-4 font-icons-solid text-surface-400 mr-2">people</span>} >  Valor elegido</Select.Button>
         <Select.Options>
             <Select.Option key="1" value="option1" >
               Opción 1
