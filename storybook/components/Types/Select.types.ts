@@ -33,6 +33,7 @@ export type ButtonType = {
   placeholder?:string;
   onClick?:()=>void;
   label?:string;
+  rightElement?:React.ReactNode;
 }
 
 export type OptionType = {
