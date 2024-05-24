@@ -41,4 +41,5 @@ export type OptionType = {
   value?:string|number|null;
   className?:string;
   children?: React.ReactNode;
+  onClick?:()=>void;
 }

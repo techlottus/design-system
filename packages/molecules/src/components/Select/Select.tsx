@@ -33,7 +33,7 @@ const Button = (props:ButtonType) =>{
 }
 
 const Options = (props:SelectOptionsType)=> {
-  const {children, className="", ...restProps}=props;
+  const {children, className="" , ...restProps}=props;
   return (
     <Listbox.Options className={cn("rounded w-full shadow overflow-auto font-texts p-0 my-0",className)} {...restProps}>
    {children}
@@ -42,9 +42,9 @@ const Options = (props:SelectOptionsType)=> {
 }
 
 const Option = (props:OptionType) =>{
-  const {className="", children,disabled=false, as='div',value} =props;
+  const {className="", children,disabled=false, as='div',value,onClick=()=>{}} =props;
   return (
-    <Listbox.Option className={cn("font-texts p-3 hover:bg-surface-100 cursor-default",{["text-surface-200"]:disabled,["text-surface-700"]:!disabled},className)} disabled={disabled} as={as} value={value} >
+    <Listbox.Option onClick={onClick} className={cn("font-texts p-3 hover:bg-surface-100 cursor-default",{["text-surface-200"]:disabled,["text-surface-700"]:!disabled},className)} disabled={disabled} as={as} value={value} >
       {children}
     </Listbox.Option>
   )

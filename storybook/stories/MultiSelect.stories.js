@@ -16,7 +16,7 @@ export default {
   args: {
     disabled: false,
     error: false,
-    placeholder:"Name"
+    label:"Name"
   },
 };
 
@@ -30,36 +30,34 @@ const standar = (args) => {
     { id: 5, name: 'Katelyn Rohan', disabled: false },
   ]
 
-  const [selectedPerson, setSelectedPerson] = useState(["Name"])
-  const [ActiveOp, setActiveOp] = useState(0)
-  const [open,setOpen]=useState(false)
-  const handleclick = ()=>{
-    if(open){setOpen(false)}
-    else {setOpen(true)}
+  const [personList,setPersonList]=useState([])
+  const handleClick= (person)=>{
+    if(personList.includes(person.name)){
+      setPersonList(personList => personList.filter(i=> i!==person.name))}
+    else{
+      setPersonList(personList=>[...personList,person.name])
+    }
   }
-
   return (
     <div className="w-80">
-      <Select value={selectedPerson} onChange={setSelectedPerson} multiple>
-        <Select.Button {...args} onClick={handleclick}>{selectedPerson.map((person) => person.name).join(',')}</Select.Button>
-        <Select.Options  static className={cn({["hidden"]:!open})}>
+      <Select multiple>
+        <Select.Button {...args} >{personList.length>0?personList.map((person) => person).join(','):args.label}</Select.Button>
+        <Select.Options   >
           {people.map((person) => (
             <Select.Option
               key={person.id}
               value={person}
-              className="data-[focus]:bg-blue-100"
-              disabled={!args.disabled ? person.disabled : args.disabled} >
-
-              <div className="flex space-x-1 align-middle group" tabIndex={-1} onClick={() => { !args.disabled && setActiveOp(person.id) }}>
-                {ActiveOp == person.id ? <CheckBoxActive size="sm" className=" cursor-pointer disabled:opacity-75 fill-surface-400 invisible group-data-[selected]:visible" />
-                  : <CheckBoxDefault size="sm" className=" cursor-pointer fill-surface-400 visible group-data-[selected]:invisible" />}
-                <span>{person.name}</span>
-              </div>
-              
+              disabled={!args.disabled ? person.disabled : args.disabled}
+              className="group/option"
+              onClick={()=>handleClick(person)}>
+              <div className={cn("flex space-x-1.5 items-center")}>
+                {personList.includes(person.name)?<CheckBoxActive className="fill-surface-400"/>:<CheckBoxDefault className="fill-surface-400"/>}<span>{person.name}</span>
+              </div>              
             </Select.Option>
           ))}
         </Select.Options>
       </Select>
+
     </div>
   )
 }
