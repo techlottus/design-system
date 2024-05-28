@@ -1,0 +1,37 @@
+import { Meta, Preview } from '@storybook/blocks';
+import SelectAutocomplete from './SelectAutocomplete'
+
+
+<Meta title="MDX|SelectAutocomplete" component = { SelectAutocomplete } />
+
+# SelectAutocomplete
+
+The Textarea component is designed to enable users to input multiple lines of text and larger content, 
+in contrast to the Input Text component. Depending on the content, the component may automatically expand or remain fixed.
+
+It is primarily utilized in web forms, allowing users to input comments, notes, descriptions, and more.
+
+Within the @lottuseducation/molecules library, the SelectAutocomplete component comprises the following optional elements : 
+"SelectAutocomplete.LeftElement","SelectAutocomplete.RightElement". By leveraging these components, a multitude of 
+distinct designs for SelectAutocomplete can be crafted.
+
+- SelectAutocomplete: The primary component that encompasses all elements within the SelectAutocomplete.
+  - props: variant:"outlined"| "flat", children: reactNode, HTMLSelectAutocompleteElement props.
+- SelectAutocomplete.LeftElement: Contains the children for the left side of the SelectAutocomplete.
+- SelectAutocomplete.RightElement: Contains the children for the Right side of the SelectAutocomplete.
+
+## Installation and import
+
+To integrate this component, we leverage the @lottuseducation/molecules library. This library seamlessly combines unstyled
+yet fully accessible UI components into our projects, meticulously designed to complement Tailwind CSS integration.
+
+To get started, initiate the installation of @lottuseducation/molecules via npm:
+
+```
+   npm install @lottuseducation/molecules
+```
+
+
+After installing the library, you can import the component into your project as follows:
+
+`import SelectAutocomplete from "@lottuseducation/molecules"`
