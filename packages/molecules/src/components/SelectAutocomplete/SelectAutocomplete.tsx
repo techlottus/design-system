@@ -17,28 +17,28 @@ const Input = (props: InputType) => {
   const { className, disabled = false, error = false, onChange = () => { }, label = "", rightElement = <></>, displayValue } = props;
   return (
 
-    <div
-      className={cn(" border  rounded flex  h-10 w-full justify-between align-middle font-texts ",
+    <div tabIndex={-1}
+      className={cn("group border  rounded flex  h-10 w-full justify-between align-middle font-texts ",
         {
-          [" has-[:focus]:border-surface-500 has-[:active]:border-surface-500 border-surface-200 text-surface-700"]: !disabled && !error,
+          [" focus:border-surface-500 has-[:active]:border-surface-500 border-surface-200 text-surface-700"]: !disabled && !error,
           ["border-error-500"]: error,
           ["text-surface-200 cursor-none"]: disabled && !error,
         }, className)}>
 
-      <div className={cn('py-1.5 px-2 align-middle h-full cursor-none overflow-hidden truncate font-texts ', { ["text-error-500"]: error })}>
-        <div className='flex'>
+      <div className={cn('py-1.5 px-2 align-middle h-full cursor-none overflow-hidden truncate font-texts  ', { ["text-error-500"]: error })}>
+        <div className='flex items-center'>
           {rightElement}
           <Combobox.Input onChange={onChange} placeholder={label} displayValue={displayValue} className="focus:outline-none w-full h-full" />
 
         </div>
       </div>
-      <Combobox.Button  className={cn('order-last font-icons-solid text-lg text-center h-full p-2 rounded-s-none rounded-e border-l cursor-pointer ',
+      <Combobox.Button  className={cn('order-last  text-center h-full p-2 rounded-s-none rounded-e border-l cursor-pointer ',
         {
-          ['focus:border-surface-500 active:border-surface-500 bg-surface-100']: !disabled && !error,
+          ['group-focus:border-surface-500 group-active:border-surface-500 bg-surface-100 ']: !disabled && !error,
           ['border-surface-200 bg-surface-200 text-surface-900 opacity-50']: disabled && !error,
           ["border-error-500 bg-error-100 "]: error,
         })} >
-        expand_more
+        <span className='font-icons-solid text-lg text-center cursor-none'>expand_more</span>
       </Combobox.Button>
 
     </div>

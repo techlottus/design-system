@@ -4,21 +4,16 @@ import SelectAutocomplete from './SelectAutocomplete'
 
 <Meta title="MDX|SelectAutocomplete" component = { SelectAutocomplete } />
 
-# SelectAutocomplete
+# Select Autocomplete
 
-The Textarea component is designed to enable users to input multiple lines of text and larger content, 
-in contrast to the Input Text component. Depending on the content, the component may automatically expand or remain fixed.
+The Select component is a user interface element that enables users to choose a predefined option from a drop-down list, commonly used in forms for selecting options.
+This component features a selection box and a drop-down list of available options. When the user clicks the selection box, the list of options appears, allowing the user to choose an option by clicking on it. Once an option is selected, the list closes, and the chosen option is displayed in the selection box. Additionally, the component supports autocomplete, enabling users to search for options by typing directly into the selection box.
+Within the @lottuseducation/molecules library, the select component comprises the following elements : "Select.Button," "Select.Options" and "Select.Option". By leveraging these components, a multitude of distinct designs for select can be crafted.
 
-It is primarily utilized in web forms, allowing users to input comments, notes, descriptions, and more.
-
-Within the @lottuseducation/molecules library, the SelectAutocomplete component comprises the following optional elements : 
-"SelectAutocomplete.LeftElement","SelectAutocomplete.RightElement". By leveraging these components, a multitude of 
-distinct designs for SelectAutocomplete can be crafted.
-
-- SelectAutocomplete: The primary component that encompasses all elements within the SelectAutocomplete.
-  - props: variant:"outlined"| "flat", children: reactNode, HTMLSelectAutocompleteElement props.
-- SelectAutocomplete.LeftElement: Contains the children for the left side of the SelectAutocomplete.
-- SelectAutocomplete.RightElement: Contains the children for the Right side of the SelectAutocomplete.
+Select: The primary component that encompasses all elements within the select .
+Select.Input: The selection box with input .
+Select.Options: The dropdown list container
+Select.Option: Each option in dropdown list container
 
 ## Installation and import
 
@@ -35,3 +30,238 @@ To get started, initiate the installation of @lottuseducation/molecules via npm:
 After installing the library, you can import the component into your project as follows:
 
 `import SelectAutocomplete from "@lottuseducation/molecules"`
+
+## Usage
+
+To incorporate the Select autocomplete component into your code, follow the structure demonstrated below:
+
+```
+import SelectAutocomplete from "@lottuseducation/molecules";
+
+<SelectAutocomplete >
+      <SelectAutocomplete.Input label="label"/>
+      <SelectAutocomplete.Options>
+          <SelectAutocomplete.Option key="1"  >
+              <li>
+                Option 1
+              </li>
+          </SelectAutocomplete.Option>
+      </SelectAutocomplete.Options>
+    </SelectAutocomplete>
+```
+{
+  <SelectAutocomplete >
+      <SelectAutocomplete.Input label="label"/>
+      <SelectAutocomplete.Options>
+          <SelectAutocomplete.Option key="1"  >
+              <li>
+                Option 1
+              </li>
+          </SelectAutocomplete.Option>
+      </SelectAutocomplete.Options>
+  </SelectAutocomplete>
+}
+
+## Error styles
+To show error styles, only add error prop in SelectAutocomplete.Input component
+
+```
+import SelectAutocomplete from "@lottuseducation/molecules";
+
+<SelectAutocomplete >
+      <SelectAutocomplete.Input label="label" error />
+      <SelectAutocomplete.Options>
+          <SelectAutocomplete.Option key="1"  >
+              <li>
+                Option 1
+              </li>
+          </SelectAutocomplete.Option>
+      </SelectAutocomplete.Options>
+    </SelectAutocomplete>
+```
+{
+  <SelectAutocomplete >
+      <SelectAutocomplete.Input label="label" error/>
+      <SelectAutocomplete.Options>
+          <SelectAutocomplete.Option key="1">
+              <li>
+                Option 1
+              </li>
+          </SelectAutocomplete.Option>
+      </SelectAutocomplete.Options>
+  </SelectAutocomplete>
+}
+
+## Disabled styles 
+
+To show disabled styles, only add disabled prop in SelectAutocomplete.Input component and each of SelectAutocomplete.option.
+
+```
+import SelectAutocomplete from "@lottuseducation/molecules";
+
+<SelectAutocomplete >
+      <SelectAutocomplete.Input label="label" disabled />
+      <SelectAutocomplete.Options>
+          <SelectAutocomplete.Option key="1" disabled >
+              <li>
+                Option 1
+              </li>
+          </SelectAutocomplete.Option>
+      </SelectAutocomplete.Options>
+    </SelectAutocomplete>
+```
+{
+  <SelectAutocomplete >
+      <SelectAutocomplete.Input label="label" disabled/>
+      <SelectAutocomplete.Options>
+          <SelectAutocomplete.Option key="1" disabled>
+              <li>
+                Option 1
+              </li>
+          </SelectAutocomplete.Option>
+      </SelectAutocomplete.Options>
+  </SelectAutocomplete>
+}
+
+If only some options are disabled :
+
+```
+import SelectAutocomplete from "@lottuseducation/molecules";
+
+<SelectAutocomplete >
+      <SelectAutocomplete.Input label="label"  />
+      <SelectAutocomplete.Options>
+          <SelectAutocomplete.Option key="1" disabled >
+              <li>
+                Option 1
+              </li>
+          </SelectAutocomplete.Option>
+          <SelectAutocomplete.Option key="1"  >
+              <li>
+                Option 1
+              </li>
+          </SelectAutocomplete.Option>
+      </SelectAutocomplete.Options>
+    </SelectAutocomplete>
+```
+{
+  <SelectAutocomplete >
+      <SelectAutocomplete.Input label="label" />
+      <SelectAutocomplete.Options>
+          <SelectAutocomplete.Option key="1" disabled>
+              <li>
+                Option 1
+              </li>
+          </SelectAutocomplete.Option>
+          <SelectAutocomplete.Option key="1" >
+              <li>
+                Option 1
+              </li>
+          </SelectAutocomplete.Option>
+      </SelectAutocomplete.Options>
+  </SelectAutocomplete>
+}
+
+## Adding icon
+
+You can customize Input by adding icons in rightElement property :
+
+```
+import SelectAutocomplete from "@lottuseducation/molecules";
+
+<SelectAutocomplete >
+      <SelectAutocomplete.Input label="label" rightElement={<span className="w-4 font-icons-solid text-surface-400 mr-2">people</span>} />
+      <SelectAutocomplete.Options>
+          <SelectAutocomplete.Option key="1"  >
+              <li>
+                Option 1
+              </li>
+          </SelectAutocomplete.Option>
+          <SelectAutocomplete.Option key="1"  >
+              <li>
+                Option 1
+              </li>
+          </SelectAutocomplete.Option>
+      </SelectAutocomplete.Options>
+    </SelectAutocomplete>
+```
+{
+  <SelectAutocomplete >
+      <SelectAutocomplete.Input label="label" rightElement={<span className="w-4 font-icons-solid text-surface-400 mr-2">people</span>} />
+      <SelectAutocomplete.Options>
+          <SelectAutocomplete.Option key="1" >
+              <li>
+                Option 1
+              </li>
+          </SelectAutocomplete.Option>
+          <SelectAutocomplete.Option key="1" >
+              <li>
+                Option 1
+              </li>
+          </SelectAutocomplete.Option>
+      </SelectAutocomplete.Options>
+  </SelectAutocomplete>
+}
+
+
+## Using states to change value
+
+To add functionality in select, follow the example below:
+
+```
+const Example = (args) => {
+  const people = [
+    { id: 1, name: 'Durward Reynolds' },
+    { id: 2, name: 'Kenton Towne' },
+    { id: 3, name: 'Therese Wunsch' },
+    { id: 4, name: 'Benedict Kessler' },
+    { id: 5, name: 'Katelyn Rohan' },
+    { id: 6, name: 'Durward Reynolds 2' },
+    { id: 7, name: 'Kenton Towne 2' },
+    { id: 8, name: 'Therese Wunsch 2' },
+    { id: 9, name: 'Benedict Kessler 2' },
+    { id: 10, name: 'Katelyn Rohan 2' },
+    { id: 11, name: 'Durward Reynolds 3' },
+    { id: 12, name: 'Kenton Towne 3' },
+    { id: 13, name: 'Therese Wunsch 3' },
+    { id: 14, name: 'Benedict Kessler 3' },
+    { id: 15, name: 'Katelyn Rohan 3' },
+    { id: 16, name: 'Durward Reynolds 3' },
+    { id: 17, name: 'Kenton Towne 3' },
+    { id: 18, name: 'Therese Wunsch 3' },
+    { id: 19, name: 'Benedict Kessler 3' },
+    { id: 20, name: 'Katelyn Rohan 3' },
+  ]
+  
+  const [selectedPerson, setSelectedPerson] = useState()
+  const [query, setQuery] = useState('')
+
+  const filteredPeople =
+    query === ''
+      ? people
+      : people.filter((person) => {
+          return person.name.toLowerCase().includes(query.toLowerCase())
+        })
+
+  return (
+    <SelectAutocomplete value={selectedPerson} onChange={setSelectedPerson}>
+      <SelectAutocomplete.Input {...args}
+        onChange={(event) => setQuery(event.target.value)}
+        displayValue={(person) => person.name}
+      />
+      <SelectAutocomplete.Options>
+        {filteredPeople.map((person) => (
+          <SelectAutocomplete.Option key={person.id} value={person}  disabled={args.disabled} >
+              <li>
+                {person.name}
+              </li>
+          </SelectAutocomplete.Option>
+        ))}
+      </SelectAutocomplete.Options>
+    </SelectAutocomplete>
+  )
+
+};
+
+```
+See result in SelectAutocomplete example

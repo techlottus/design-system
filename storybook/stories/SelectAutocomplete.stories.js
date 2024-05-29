@@ -70,7 +70,62 @@ const Template = (args) => {
   )
 
 };
+const Template2 = (args) => {
+  const people = [
+    { id: 1, name: 'Durward Reynolds' },
+    { id: 2, name: 'Kenton Towne' },
+    { id: 3, name: 'Therese Wunsch' },
+    { id: 4, name: 'Benedict Kessler' },
+    { id: 5, name: 'Katelyn Rohan' },
+    { id: 6, name: 'Durward Reynolds 2' },
+    { id: 7, name: 'Kenton Towne 2' },
+    { id: 8, name: 'Therese Wunsch 2' },
+    { id: 9, name: 'Benedict Kessler 2' },
+    { id: 10, name: 'Katelyn Rohan 2' },
+    { id: 11, name: 'Durward Reynolds 3' },
+    { id: 12, name: 'Kenton Towne 3' },
+    { id: 13, name: 'Therese Wunsch 3' },
+    { id: 14, name: 'Benedict Kessler 3' },
+    { id: 15, name: 'Katelyn Rohan 3' },
+    { id: 16, name: 'Durward Reynolds 3' },
+    { id: 17, name: 'Kenton Towne 3' },
+    { id: 18, name: 'Therese Wunsch 3' },
+    { id: 19, name: 'Benedict Kessler 3' },
+    { id: 20, name: 'Katelyn Rohan 3' },
+  ]
+  
+  const [selectedPerson, setSelectedPerson] = useState()
+  const [query, setQuery] = useState('')
 
-const Select = Template.bind({});
+  const filteredPeople =
+    query === ''
+      ? people
+      : people.filter((person) => {
+          return person.name.toLowerCase().includes(query.toLowerCase())
+        })
 
-export { Select};
+  return (
+    <div className="w-80">
+    <SelectAutocomplete value={selectedPerson} onChange={setSelectedPerson}>
+      <SelectAutocomplete.Input {...args} rightElement={<span className="w-4 font-icons-solid text-surface-400 mr-2">people</span>}
+        onChange={(event) => setQuery(event.target.value)}
+        displayValue={(person) => person.name}
+      />
+      <SelectAutocomplete.Options className="h-50">
+        {filteredPeople.map((person) => (
+          <SelectAutocomplete.Option key={person.id} value={person}  disabled={args.disabled} >
+              <li>
+                {person.name}
+              </li>
+          </SelectAutocomplete.Option>
+        ))}
+      </SelectAutocomplete.Options>
+    </SelectAutocomplete></div>
+  )
+
+};
+
+const SelectAutoExample = Template.bind({});
+const SelectAutoExampleIcon = Template2.bind({});
+
+export { SelectAutoExample,SelectAutoExampleIcon};
