@@ -26,9 +26,9 @@ const Input = (props: InputType) => {
         }, className)}>
 
       <div className={cn('py-1.5 px-2 align-middle h-full cursor-none overflow-hidden truncate font-texts  ', { ["text-error-500"]: error })}>
-        <div className='flex items-center'>
+        <div className='flex items-center align-items-center h-full'>
           {rightElement}
-          <Combobox.Input onChange={onChange} placeholder={label} displayValue={displayValue} className="focus:outline-none w-full h-full" />
+          <Combobox.Input onChange={onChange} placeholder={label} displayValue={displayValue} className="focus:outline-none w-full h-full align-middle" />
 
         </div>
       </div>
