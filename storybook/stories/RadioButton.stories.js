@@ -1,8 +1,6 @@
 import React from "react";
 import RadioButtonCard from "../RadioGroup/RadioButton/RadioButtonCard"
-import SelectChip from "../RadioGroup/RadioButton/SelectChip"
 import mdx from "../RadioGroup/RadioButton/RadioGroup.mdx"
-import { RadioGroup } from "@headlessui/react";
 
 /** Radio Button give you the same functionality as native HTML radio inputs, without any of the styling. They're perfect for building out custom UIs for selectors.*/
 export default {
@@ -26,20 +24,9 @@ const TemplateRadioButtonCard = (args) => (
   </RadioButtonCard>
 );
 
-const TemplateGroup = (args) => (
-  <RadioGroup>
-    <SelectChip {...args}>
-    </SelectChip>
-  </RadioGroup>
-);
-
 const RadioButtonCards = TemplateRadioButtonCard.bind({
 
 });
 
-const SelectChips = TemplateGroup.bind({
 
-});
-
-
-export { RadioButtonCards, SelectChips };
+export { RadioButtonCards };
