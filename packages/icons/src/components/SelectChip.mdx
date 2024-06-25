@@ -8,9 +8,9 @@ import { RadioGroup } from '@headlessui/react'
 
 # SelectChip
 
-The Select Chip component enables users to choose from a list of options, selecting the one they prefer. It functions as a type of label that requires multiple Select Chips to be effective and meaningful.
+The Select Chip component is used so that the user can choose from a list of options the one that suits them best. It's a kind of label that cannot be applied on its own; several Select Chips are required for the action's intent to become relevant.
 
-These components can be used both within forms and independently, whenever users need to select an item from a list of options.
+They can be used within forms and outside them when it's necessary for the user to choose an item from a list of several options.
 
 ## Installation
 
@@ -22,7 +22,7 @@ To begin, start the installation process of Headless UI using npm.
 
 You can utilize the SelectChip component by importing it as follows:
 
-`import SelectChip from "../components/SelectChip"`
+`import SelectChip from "@lottuseducation/molecules"`
 
 Here are one examples showcasing the use cases for the SelectChip and its functionality:
 
@@ -85,36 +85,27 @@ Select an option by clicking on it, and when the SelectChip is focused, click ag
     </RadioGroup.Option>
 </RadioGroup>
 ```
-<RadioGroup">
-        <RadioGroup.Option value="">
-            <SelectChip
-                iconActive={<RadioButtonActive />}
-                iconInactive={<RadioButtonDefault />}
-                className="border-success-500"
-                active={true}
-                label="LabelOne"
-            />
-        </RadioGroup.Option>
-        <RadioGroup.Option>
-            <SelectChip
-                iconActive={<RadioButtonActive />}
-                iconInactive={<RadioButtonDefault />}
-                className="border-error-500"
-                active={false}
-                label="LabelTwo"
-
-            />
-        </RadioGroup.Option>
-        <RadioGroup.Option>
-            <SelectChip
-                iconActive={<RadioButtonActive />}
-                iconInactive={<RadioButtonDefault />}
-                className="border-secondary-500"
-                active={false}
-                label="LabelThree"
-            />
-        </RadioGroup.Option>
-</RadioGroup>
+<SelectChip
+    iconActive={<RadioButtonActive />}
+    iconInactive={<RadioButtonDefault />}
+    className="border-success-500"
+    active={true}
+    label="LabelOne"
+/>
+<SelectChip
+    iconActive={<RadioButtonActive />}
+    iconInactive={<RadioButtonDefault />}
+    className="border-error-500"
+    active={false}
+    label="LabelTwo"
+/>
+<SelectChip
+    iconActive={<RadioButtonActive />}
+    iconInactive={<RadioButtonDefault />}
+    className="border-secondary-500"
+    active={false}
+    label="LabelThree"
+/>
 ``` 
 
 For further details, please visit <a className="cursor-pointer" href="https://headlessui.com/" target="_blank">https://headlessui.com/</a>
