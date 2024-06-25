@@ -1,5 +1,3 @@
-import { useState } from 'react'
-import { RadioGroup } from '@headlessui/react'
 import cn from "classnames";
 import React from "react";
 
@@ -14,15 +12,14 @@ interface SelectChipType {
 const SelectChip: React.FC = (props: SelectChipType) => {
 
     const { iconActive, iconInactive, active = false, className = "", label } = props;
-    const [activeChip, setActiveChip] = useState<boolean>(active)
 
     return (
-        <RadioGroup.Option value={activeChip} onClick={() => setActiveChip(!activeChip)} className={cn("flex align-baseline bg-surface-100 h-9 cursor-pointer border-2 rounded py-1.5 pr-1.5", className)}>
-            <div className="!ms-2 !me-2 !my-auto">
-                {activeChip ? iconActive : iconInactive}
+        <div className={cn("flex bg-surface-100 h-9 cursor-pointer border-2 rounded py-1.5 pr-1.5", className)}>
+            <div className="!ms-2 !me-2 my-auto">
+                {active ? iconActive : iconInactive}
             </div>
-            <span className="bg-surface-100 font-texts">{label}</span>
-        </RadioGroup.Option>
+            <span className="font-texts">{label}</span>
+        </div>
     )
 };
 
