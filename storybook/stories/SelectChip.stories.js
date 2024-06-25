@@ -16,7 +16,7 @@ export default {
         },
     },
     args: {
-        className: "border-success-500",
+        className: "border-success-500 w-20",
         label: "label",
         active: true,
         iconActive: <RadioButtonActive />,
@@ -25,7 +25,7 @@ export default {
 };
 
 const standar = (args) => (
-    
+
     <SelectChip {...args} />
 );
 
@@ -36,18 +36,18 @@ const templateGroup = () => (
             <SelectChip
                 iconActive={<RadioButtonActive />}
                 iconInactive={<RadioButtonDefault />}
-                className="border-success-500"
+                className="border-success-500 w-30"
                 active={true}
-                label="Label One"
+                label="LabelOne"
             />
         </RadioGroup.Option>
         <RadioGroup.Option>
             <SelectChip
                 iconActive={<RadioButtonActive />}
                 iconInactive={<RadioButtonDefault />}
-                className="border-error-500"
+                className="border-error-500 w-30"
                 active={false}
-                label="Label Two"
+                label="LabelTwo"
 
             />
         </RadioGroup.Option>
@@ -55,9 +55,9 @@ const templateGroup = () => (
             <SelectChip
                 iconActive={<RadioButtonActive />}
                 iconInactive={<RadioButtonDefault />}
-                className="border-secondary-500"
+                className="border-secondary-500 w-30"
                 active={false}
-                label="Label Three"
+                label="LabelThree"
             />
         </RadioGroup.Option>
     </RadioGroup>
