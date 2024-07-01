@@ -21,6 +21,7 @@ export type InputType = {
 
 export type optionsType = {
   children?: React.ReactNode;
+  disabled?:boolean;
   className?:string;
 }
 

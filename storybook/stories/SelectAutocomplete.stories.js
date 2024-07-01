@@ -41,7 +41,7 @@ const Template = (args) => {
     { id: 20, name: 'Katelyn Rohan 3' },
   ]
   
-  const [selectedPerson, setSelectedPerson] = useState()
+  const [selectedPerson, setSelectedPerson] = useState("")
   const [query, setQuery] = useState('')
 
   const filteredPeople =
@@ -55,11 +55,11 @@ const Template = (args) => {
     <SelectAutocomplete value={selectedPerson} onChange={setSelectedPerson}>
       <SelectAutocomplete.Input {...args}
         onChange={(event) => setQuery(event.target.value)}
-        displayValue={(person) => person.name}
+        displayValue={(person) => person?.name}
       />
-      <SelectAutocomplete.Options>
+      <SelectAutocomplete.Options disabled={args.disabled}>
         {filteredPeople.map((person) => (
-          <SelectAutocomplete.Option key={person.id} value={person}  disabled={args.disabled} >
+          <SelectAutocomplete.Option key={person.id} value={person}   >
               <li>
                 {person.name}
               </li>
@@ -94,7 +94,7 @@ const Template2 = (args) => {
     { id: 20, name: 'Katelyn Rohan 3' },
   ]
   
-  const [selectedPerson, setSelectedPerson] = useState()
+  const [selectedPerson, setSelectedPerson] = useState("")
   const [query, setQuery] = useState('')
 
   const filteredPeople =
@@ -109,9 +109,9 @@ const Template2 = (args) => {
     <SelectAutocomplete value={selectedPerson} onChange={setSelectedPerson}>
       <SelectAutocomplete.Input {...args} rightElement={<span className="w-4 font-icons-solid text-surface-400 mr-2">people</span>}
         onChange={(event) => setQuery(event.target.value)}
-        displayValue={(person) => person.name}
+        displayValue={(person) => person.name} disabled={args.disabled}
       />
-      <SelectAutocomplete.Options className="h-50">
+      <SelectAutocomplete.Options className="h-50" disabled={args.disabled} >
         {filteredPeople.map((person) => (
           <SelectAutocomplete.Option key={person.id} value={person}  disabled={args.disabled} >
               <li>
