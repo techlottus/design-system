@@ -28,8 +28,7 @@ const Input = (props: InputType) => {
       <div className={cn('py-1.5 px-2 align-middle h-full cursor-event-none overflow-hidden truncate font-texts  ', { ["text-error-500"]: error })}>
         <div className='flex items-center align-items-center h-full'>
           {rightElement}
-          <Combobox.Input onChange={onChange} placeholder={label} displayValue={displayValue} className={cn("focus:outline-none w-full h-full align-middle",{["cursor-event-none"]:disabled})} />
-
+          {disabled? <div>{label}</div>: <Combobox.Input onChange={onChange} placeholder={label} displayValue={ displayValue} className={cn("focus:outline-none w-full h-full align-middle",{["cursor-event-none"]:disabled})} />}
         </div>
       </div>
       <div  className={cn('order-last  text-center h-full p-2 rounded-s-none rounded-e border-l cursor-pointer ',

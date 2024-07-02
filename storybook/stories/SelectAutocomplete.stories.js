@@ -109,7 +109,7 @@ const Template2 = (args) => {
     <SelectAutocomplete value={selectedPerson} onChange={setSelectedPerson}>
       <SelectAutocomplete.Input {...args} rightElement={<span className="w-4 font-icons-solid text-surface-400 mr-2">people</span>}
         onChange={(event) => setQuery(event.target.value)}
-        displayValue={(person) => person.name} disabled={args.disabled}
+        displayValue={(person) => person?.name} disabled={args.disabled}
       />
       <SelectAutocomplete.Options className="h-50" disabled={args.disabled} >
         {filteredPeople.map((person) => (
